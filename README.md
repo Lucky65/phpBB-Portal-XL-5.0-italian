@@ -2,7 +2,7 @@
 
 ## Portal XL Italia
 Questo repository contiene le nostre versioni rilasciate ed aggiornate: Portal XL Plain per phpBB e Portal XL Premod per phpBB.
-Entrambe le versioni contengono anche le traduzioni italiane aggiornate. 
+Entrambe le versioni contengono codice sorgente e traduzioni italiane aggiornate. 
 
 ## Revisioni
 E' possibile inviare nuove revisioni o suggerimenti in qualunque momento, tramite GitHub o su www.portalxl.eu
