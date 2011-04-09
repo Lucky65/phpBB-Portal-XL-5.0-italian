@@ -1,4 +1,4 @@
-[![portalxl.eu](http://www.portalxl.eu/styles/prosilver/theme/headers/rotate.php)](http://www.portalxl.eu)
+[![portalxl.eu](http://www.portalxl.eu/styles/prosilver/theme/headers/portale0.jpg)](http://www.portalxl.eu)
 
 ## Portal XL Italia
 Questo repository contiene le nostre versioni rilasciate ed aggiornate: Portal XL Plain per phpBB e Portal XL Premod per phpBB.
