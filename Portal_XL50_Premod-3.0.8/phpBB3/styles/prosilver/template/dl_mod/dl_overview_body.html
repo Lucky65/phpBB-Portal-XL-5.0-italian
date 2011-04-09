@@ -1,0 +1,65 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2 class="solo">{PAGE_NAME}</h2>
+
+	<div class="forabg">
+		<div class="inner"><span class="corners-top"><span></span></span>
+	
+		<ul class="topiclist">
+			<li class="header">
+				<dl>
+					<dd class="posts">{L_STATUS}</dd>
+					<dt>{L_NAME}</dt>
+					<dd class="posts">{L_SIZE}</dd>
+					<dd class="extra">{L_KLICKS}<br />{L_OVERALL_KLICKS}</dd>
+					<dd class="time">{L_RATING}</dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist forums">
+			<!-- BEGIN downloads -->
+			<li class="row">
+				<dl>
+					<dd class="posts">{downloads.STATUS}</dd>
+					<dt><label><a href="{downloads.U_DL_LINK}">{downloads.DESCRIPTION}</a></label>&nbsp;<span>{downloads.HACK_VERSION}</span><br /><br /><a href="{downloads.U_CAT_VIEW}">{downloads.CAT_NAME}</a></dt>
+					<dd class="posts">{downloads.FILE_SIZE}</dd>
+					<dd class="extra">{downloads.FILE_KLICKS}<br />{downloads.FILE_OVERALL_KLICKS}</dd>
+					<dd class="time"><span class="small">
+						{downloads.RATING_IMG}<!-- IF downloads.RATINGS -->&nbsp;{downloads.RATINGS}<!-- ENDIF -->
+						<!-- IF downloads.U_RATING --><br /><a href="{downloads.U_RATING}" class="small">{L_RATING}</a><!-- ENDIF -->
+					</span></dd>
+				</dl>
+			</li>
+			<!-- END downloads -->
+		</ul>
+	
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<!-- IF PAGINATION -->
+	<ul class="linklist">
+		<li class="rightside pagination">
+			<span>{L_GOTO_PAGE}: {PAGINATION}</span>
+		</li>
+	</ul>
+	<!-- ENDIF -->
+	
+	<!-- IF S_SORT_OPTIONS -->
+	<form action="{S_FORM_ACTION}" method="post" name="dl_mod">
+	
+	<fieldset>
+	
+	<p align="center">
+		{L_SORT_BY}&nbsp;{S_SORT_BY}&nbsp;&nbsp;&nbsp;{L_ORDER}&nbsp;{S_ORDER}&nbsp;<input type="submit" class="button2" value="{L_GO}" />
+	</p>
+
+	</fieldset>
+	
+	</form>
+	<!-- ENDIF -->
+
+<br />
+
+<!-- INCLUDE dl_mod/dl_footer.html -->
+
+<!-- INCLUDE overall_footer.html -->

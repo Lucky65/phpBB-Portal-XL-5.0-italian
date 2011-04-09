@@ -1,0 +1,14 @@
+Subject: Promemoria da "{SITENAME}"! 
+
+Caro {USERNAME},
+
+Ti sei da poco registrato su {SITENAME}.
+
+Abbiamo pero' notato che ad oggi non hai ancora avuto occasione di partecipare attivamente alla vita della comunita' scrivendo nei forum a disposizione.
+
+Ti invitiamo quindi a prendere del tempo per dare un'occhiata agli ultimi argomenti che puoi trovare in {U_BOARD} e che potrebbero essere di tuo interesse.
+
+In alternativa non esitare ad aprire una nuova discussione, anche solo per presentarti al resto della comunita'. Questo e' in genere il metodo più semplice per "rompere il ghiaccio".
+
+
+{EMAIL_SIG}

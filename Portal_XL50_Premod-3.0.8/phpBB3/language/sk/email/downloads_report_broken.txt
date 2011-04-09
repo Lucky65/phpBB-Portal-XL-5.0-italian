@@ -1,0 +1,12 @@
+Subject: Chybný Download
+
+Ahoj {USERNAME},
+
+Dostal si tento meil kvôli tomu, že "{REPORTER}" oznámil chybný download v "{SITENAME}".
+Použi nasledujúci link pre skontrolovanie tejto správy:
+
+---------------------------
+{U_DOWNLOAD}
+---------------------------
+
+{BOARD_EMAIL}

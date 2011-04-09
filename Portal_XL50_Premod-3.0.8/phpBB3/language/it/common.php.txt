@@ -1,0 +1,18 @@
+Cerca:
+
+// phpbb Calendar Version 0.1.0
+
+Aggiungi sopra:
+
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN -> GYM Sitemaps
+$lang = array_merge($lang, array(
+   'GYM_LINKS' => 'Links',
+   'GYM_LINK' => 'Link',
+   'GYM_RSS_SLIDE_START' => 'Inizio scroller',
+   'GYM_RSS_SLIDE_STOP' => 'Fine scroller',
+   'GYM_RSS_SOURCE' => 'Fonte',
+));
+// www.phpBB-SEO.com SEO TOOLKIT END -> GYM Sitemaps
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN - Related Topics
+$lang['RELATED_TOPICS'] = 'Argomenti correlati';
+// www.phpBB-SEO.com SEO TOOLKIT END - Related Topics

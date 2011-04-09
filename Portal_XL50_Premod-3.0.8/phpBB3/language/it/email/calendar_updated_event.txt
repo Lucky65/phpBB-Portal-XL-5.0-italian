@@ -1,0 +1,14 @@
+Subject: Aggiornamento evento nel calendario
+
+Ciao {USERNAME},
+
+Aggiornamento evento avente come oggetto "{EVENT_SUBJECT}" aggiunto nel calendario.
+
+Per vedere il calendario visita il seguente link:
+{U_CALENDAR}, invece per vedere gli eventi visita il seguente link:
+{U_EVENT}
+
+Se non desideri piu' ricevere email per questi eventi clicca qui:
+{U_UNWATCH_CALENDAR}
+
+{EMAIL_SIG}

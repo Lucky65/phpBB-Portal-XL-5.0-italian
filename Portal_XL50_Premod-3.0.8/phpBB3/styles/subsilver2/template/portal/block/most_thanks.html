@@ -1,0 +1,22 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="2">{L_MOST_THANKS}</td>
+</tr>-->
+<tr>
+	<td class="cat" align="left" nowrap="nowrap"><span class="gensmall"><strong>{L_USERNAME}</strong></span></td>
+	<td class="cat" align="right" nowrap="nowrap"><span class="gensmall"><strong>{L_THANK_GIVEN}</strong></span>&nbsp;</td>
+	<td class="cat" align="right" nowrap="nowrap"><span class="gensmall"><strong>{L_THANK_RECEIVED}</strong></span></td>
+</tr>
+<!-- BEGIN most_thanks -->
+<tr>
+	<td class="<!-- IF most_thanks.S_ROW_COUNT is even -->row2 gensmall<!-- ELSE -->row1 gensmall<!-- ENDIF -->" align="left" valign="middle">
+    {most_thanks.THANKER_AV} 
+    <!-- IF FLAG_IMG -->{most_thanks.FLAG_IMG}<!-- ENDIF --> <br /> 
+    <strong><a href="{most_thanks.U_USERNAME}"><span<!-- IF most_thanks.USERNAME_COLOR -->{most_thanks.USERNAME_COLOR}<!-- ENDIF -->>{most_thanks.USERNAME}</span></a></strong><br /> 
+	<!-- IF most_thanks.U_WWW --><a href="{most_thanks.U_WWW}" title="{L_VISIT_WEBSITE}: {most_thanks.U_WWW}"><span>{L_WEBSITE}</span></a><!-- ENDIF --> <br /> 
+    <hr width="85%"></td>
+	<td class="<!-- IF most_thanks.S_ROW_COUNT is even -->row2 gensmall<!-- ELSE -->row1 gensmall<!-- ENDIF -->" align="right" nowrap="nowrap" valign="middle">{most_thanks.THANK_GIVEN}&nbsp;</td>
+	<td class="<!-- IF most_thanks.S_ROW_COUNT is even -->row2 gensmall<!-- ELSE -->row1 gensmall<!-- ENDIF -->" align="right" nowrap="nowrap" valign="middle">{most_thanks.THANK_RECEIVED}</td>
+</tr>
+<!-- END most_thanks -->
+</table>

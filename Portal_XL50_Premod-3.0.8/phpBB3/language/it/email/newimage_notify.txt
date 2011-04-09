@@ -1,0 +1,13 @@
+Subject: Notifica risposta immagine - "{ALBUM_NAME}"
+
+Ciao {USERNAME},
+
+Ricevi questa notifica perche' stai controllando l'album, "{ALBUM_NAME}" su "{SITENAME}". Su questo album e' stata aggiunta una nuova immagine dalla tua ultima vista, "{IMAGE_NAME}". Tramite i link seguenti puoi vedere il tuo album.
+
+{U_ALBUM}
+
+Se non desideri piu' controllare questo argomento puoi cliccare su "Annulla sottoscrizione" che trovi alla fine della pagina, o cliccando il link seguente:
+
+{U_STOP_WATCHING_ALBUM}
+
+{EMAIL_SIG}

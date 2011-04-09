@@ -1,0 +1,58 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th>{L_POST_A}</th>
+	</tr>
+	<tr>
+		<td class="row1">
+
+<form id="postform" name="postform" method="post" action="{S_POST_ACTION}" onsubmit="return checkForm(this);">
+<table class="tablebg" width="100%" cellspacing="1">
+<!-- IF S_DISPLAY_PREVIEW -->
+	<tr>
+		<td class="row1"><!-- INCLUDE calendar_post_preview.html --></td>
+	</tr>
+<!-- ENDIF -->
+	<tr>
+		<td class="row2">
+          &nbsp;<a href="{DAY_VIEW_URL}" title="{L_DAY}"><img src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" /></a>
+          &nbsp;<a href="{WEEK_VIEW_URL}" title="{L_WEEK}"><img src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" /></a>
+          &nbsp;<a href="{MONTH_VIEW_URL}" title="{L_MONTH}"><img src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" /></a>
+		</td>
+	</tr>
+	<tr>
+		<td class="row1"><!-- INCLUDE calendar_post_editor.html --></td>
+	</tr>
+	<tr>
+		<td class="row2">
+          &nbsp;<a href="{DAY_VIEW_URL}" title="{L_DAY}"><img src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" /></a>
+          &nbsp;<a href="{WEEK_VIEW_URL}" title="{L_WEEK}"><img src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" /></a>
+          &nbsp;<a href="{MONTH_VIEW_URL}" title="{L_MONTH}"><img src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" /></a>
+		</td>
+	</tr>
+	<tr>
+		<td class="cat" align="center">
+		<fieldset class="submit-buttons">
+			{S_HIDDEN_ADDRESS_FIELD}
+			{S_HIDDEN_FIELDS}
+			<!-- IF S_HAS_DRAFTS --><input type="submit" accesskey="d" tabindex="9" name="load" value="{L_LOAD}" class="btnmain" onclick="load_draft = true;" />&nbsp; <!-- ENDIF -->
+			<!-- IF S_SAVE_ALLOWED --><input type="submit" accesskey="k" tabindex="8" name="save" value="{L_SAVE}" class="btnmain" />&nbsp; <!-- ENDIF -->
+			<input type="submit" tabindex="5" name="preview" value="{L_PREVIEW}" class="btnmain"<!-- IF not S_PRIVMSGS --> onclick="document.getElementById('postform').action += '#preview';"<!-- ENDIF --> />&nbsp;
+			<input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="btnmain" />&nbsp;
+		</fieldset>
+        </td>
+	</tr>
+  </table>
+</form>
+
+		</td>
+	</tr>
+	<tr>
+		<td class="cat">&nbsp;</td>
+	</tr>
+  </table>
+
+<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

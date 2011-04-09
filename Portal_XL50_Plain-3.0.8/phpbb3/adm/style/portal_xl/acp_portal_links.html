@@ -1,0 +1,140 @@
+<!-- INCLUDE overall_header.html -->
+
+<script type="text/javascript">
+// <![CDATA[
+function update_icon(new_icon)
+{
+	document.getElementById('current_icon').src = (new_icon) ? "./../portal/images/icon_links/" + encodeURI(new_icon) : "./images/spacer.gif";
+}
+// ]]>
+</script>
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_PORTAL_LINKS_EDIT_HEADER}</legend>
+	<form id="acp_portal_links" method="post" action="{U_ACTION}">
+    
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_LINKS_EDIT_HEADER}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_URL_IMG_EXPLAIN}:</strong><br /><span>{L_URL_IMG_EXPLAIN2}</span></td>    
+   		<td class="row2" style="font-size:10px;" valign="top">    
+		<select name="links_img" class="post" onchange="update_icon(this.options[selectedIndex].value);">
+		<!-- BEGIN file_name -->	
+		<option value="{file_name.S_LINKS_IMG}" <!-- IF file_name.S_LINKS_IMG == LINKS_IMG -->selected="selected"<!-- ENDIF -->>{file_name.S_LINKS_IMG_NAME}</option>
+		<!-- END file_name -->	
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><span>{L_LINKS_FNAME_I_CHOSEN}</span></td>
+		<td class="row2" style="font-size:10px;">
+		<!-- IF MENU_IMG -->			
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_links/{LINKS_IMG}" id="current_icon" alt="" />
+		<!-- ELSE -->	
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_links/blank.gif" id="current_icon" alt="" />		
+		<!-- ENDIF -->		
+        </td>
+	</tr>
+    
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_LINKS_FNAME_INFO}:</strong><br /><span>{L_LINKS_FNAME_I_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px;">
+			<span class="imageline">
+			<!-- BEGIN img_file_name_icon -->
+				<!-- IF img_file_name_icon.S_BLOCK_FILE_ICON -->
+				{img_file_name_icon.S_BLOCK_FILE_ICON}
+				<!-- ENDIF -->
+			<!-- END img_file_name_icon --> 
+			</span>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><span>{L_NAME_URL_EXPLAIN}:</span></td>
+		<td class="row2" style="font-size:10px;"><input name="links_name" type="text" id="links_name" value="{LINKS_NAME}" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_URL_EXPLAIN}:</strong></label><br /><span>{L_URL_EXPLAIN_2}</span></td>
+		<td class="row2" style="font-size:10px;"><input name="links_url" type="text" id="links_url" value="{LINKS_URL}" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><span>{L_VIEW_BY_EXPLAIN}:</span></td>
+      	<td class="row2" style="font-size:10px;" width="50%">  
+        <div align="left"><select name="links_view" class="post">
+		<option value="0" <!-- IF LINKS_VIEW == "0" --> selected <!-- ENDIF -->>{L_NONE}</option>
+		<option value="1" <!-- IF LINKS_VIEW == "1" --> selected <!-- ENDIF -->>{L_ALL}</option>	
+		<option value="2" <!-- IF LINKS_VIEW == "2" --> selected <!-- ENDIF -->>{L_GUESTS}</option>
+		<option value="3" <!-- IF LINKS_VIEW == "3" --> selected <!-- ENDIF -->>{L_REG}</option>	
+		<option value="4" <!-- IF LINKS_VIEW == "4" --> selected <!-- ENDIF -->>{L_STAFF}</option>
+		<option value="5" <!-- IF LINKS_VIEW == "5" --> selected <!-- ENDIF -->>{L_MOD}</option>
+		<option value="6" <!-- IF LINKS_VIEW == "6" --> selected <!-- ENDIF -->>{L_ADMIN}</option>	
+		</select></div>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:10px;" colspan="2">  
+		<input name="links_order" type="hidden" id="links_order" value="{LINKS_ORDER}" size="10" />
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_LINKS}" /></center></td>
+ 		</tr>
+	</table>
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+	<form id="acp_portal_links" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_PORTAL_LINKS}</legend>
+	<table cellspacing="1">
+	<tr>
+		<th><center>{L_URL_IMG_2}</th>
+		<th><center>{L_NAME_LINK}</center></th>
+		<th><center>{L_URL_LINK}</center></th>
+		<th><center>{L_VIEW_BY}</center></th>
+		<th><center>{L_ACTION}</center></th>		
+	</tr>
+	<!-- BEGIN links -->
+		<!-- IF links.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align: center;"><img border="0" src="./../portal/images/icon_links/{links.LINKS_IMG}"></td>
+		<td style="text-align: left;">{links.MEU_NAME}</td>
+		<td style="text-align: left;">{links.LINKS_URL}</td>
+		<td style="text-align: center;"><div align="center">
+		  <!-- IF links.LINKS_VIEW == "0" -->{L_NONE}<!-- ENDIF -->
+		  <!-- IF links.LINKS_VIEW == "1" -->{L_ALL}<!-- ENDIF -->	
+		  <!-- IF links.LINKS_VIEW == "2" -->{L_GUESTS}<!-- ENDIF -->
+		  <!-- IF links.LINKS_VIEW == "3" -->{L_REG}<!-- ENDIF -->
+		  <!-- IF links.LINKS_VIEW == "4" -->{L_STAFF}<!-- ENDIF -->
+		  <!-- IF links.LINKS_VIEW == "5" -->{L_MOD}<!-- ENDIF -->
+		  <!-- IF links.LINKS_VIEW == "6" -->{L_ADMIN}<!-- ENDIF -->	  
+		</td>		
+		<td style="text-align: center;" width="100px">
+		<!-- IF links.S_FIRST_ROW -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{links.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;
+		<!-- IF links.S_LAST_ROW -->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{links.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->&nbsp;
+		<a href="{links.U_EDIT}">{ICON_EDIT}</a>&nbsp;			 
+		<a href="{links.U_DELETE}">{ICON_DELETE}</a>
+		</td>
+	</tr>
+	<!-- END links -->
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_URL}" />
+	</p>
+    
+	</fieldset>
+
+	</form>
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

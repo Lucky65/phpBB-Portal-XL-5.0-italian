@@ -1,0 +1,99 @@
+<!-- IF S_GP_HIGHSLIDE -->
+	<script type="text/javascript" src="{S_GP_HIGHSLIDE}highslide-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="{S_GP_HIGHSLIDE}highslide.css" />
+	<script type="text/javascript">
+    // <![CDATA[
+		hs.graphicsDir = '{S_GP_HIGHSLIDE}graphics/';
+		hs.align = 'center';
+		hs.transitions = ['expand', 'crossfade'];
+		hs.fadeInOut = true;
+		hs.dimmingOpacity = 0.8;
+		hs.wrapperClassName = 'borderless floating-caption';
+		hs.outlineType = 'rounded-white';
+		hs.captionEval = 'this.thumb.title';
+		hs.marginLeft = 100; // make room for the thumbstrip
+		hs.marginBottom = 80 // make room for the controls and the floating caption
+		hs.numberPosition = 'caption';
+		// This value needs to be set to false, to solve the issue with the highly increasing view counts.
+		hs.continuePreloading = false;
+	
+		// Add the slideshow providing the controlbar and the thumbstrip
+		if (hs.addSlideshow) hs.addSlideshow({
+			//slideshowGroup: 'group1',
+			interval: 5000,
+			repeat: false,
+			useControls: true,
+			overlayOptions: {
+				className: 'text-controls',
+				position: 'bottom center',
+				relativeTo: 'viewport',
+				offsetX: 50,
+				offsetY: -5
+	
+			},
+			thumbstrip: {
+				position: 'middle left',
+				mode: 'vertical',
+				relativeTo: 'viewport'
+			}
+		});
+		
+		// Add the simple close button
+		hs.registerOverlay({
+			html: '<div class="closebutton" onclick="return hs.close(this)" title="{L_HIGHSLIDE_CLOSETITLE}"></div>',
+			position: 'top right',
+			fade: 2 // fading the semi-transparent overlay looks bad in IE
+		});
+		
+		// Language strings
+		hs.lang = {
+			loadingText :     '{L_HIGHSLIDE_LOADINGTEXT}',
+			loadingTitle :    '{L_HIGHSLIDE_LOADINGTITLE}',
+			focusTitle :      '{L_HIGHSLIDE_FOCUSTITLE}',
+			fullExpandTitle : '{L_HIGHSLIDE_FULLEXPANDTITLE}',
+			fullExpandText :  '{L_HIGHSLIDE_FULLEXPANDTEXT}',
+			creditsText :     '{L_HIGHSLIDE_CREDITSTEXT}',
+			creditsTitle :    '{L_HIGHSLIDE_CREDITSTITLE}',
+			previousText :    '{L_HIGHSLIDE_PREVIOUSTEXT}',
+			previousTitle :   '{L_HIGHSLIDE_PREVIOUSTITLE}',
+			nextText :        '{L_HIGHSLIDE_NEXTTEXT}',
+			nextTitle :       '{L_HIGHSLIDE_NEXTTITLE}',
+			moveTitle :       '{L_HIGHSLIDE_MOVETITLE}',
+			moveText :        '{L_HIGHSLIDE_MOVETEXT}',
+			closeText :       '{L_HIGHSLIDE_CLOSETEXT}',
+			closeTitle :      '{L_HIGHSLIDE_CLOSETITLE}',
+			resizeTitle :     '{L_HIGHSLIDE_RESIZETITLE}',
+			playText :        '{L_HIGHSLIDE_PLAYTEXT}',
+			playTitle :       '{L_HIGHSLIDE_PLAYTITLE}',
+			pauseText :       '{L_HIGHSLIDE_PAUSETEXT}',
+			pauseTitle :      '{L_HIGHSLIDE_PAUSETITLE}',
+			restoreTitle :    '{L_HIGHSLIDE_RESTORETITLE}'
+		};
+	// ]] >
+	</script>
+<!-- ENDIF -->
+<!-- IF S_GP_LYTEBOX -->
+	<script type="text/javascript" src="{S_GP_LYTEBOX}lytebox.js"></script>
+	<link rel="stylesheet" type="text/css" href="{S_GP_LYTEBOX}lytebox.css" />
+	<script type="text/javascript">
+		if (window.addEventListener) {
+			window.addEventListener("load",initLytebox,false);
+		} else if (window.attachEvent) {
+			window.attachEvent("onload",initLytebox);
+		} else {
+			window.onload = function() {initLytebox();}
+		}
+		function initLytebox() {
+			var imgMaxWidth = 1280;
+			var imgWarning = '';
+			myLytebox = new LyteBox(imgMaxWidth, imgWarning);
+		}
+	</script>
+<!-- ENDIF -->
+<!-- IF S_GP_SHADOWBOX -->
+	<script type="text/javascript" src="{S_GP_SHADOWBOX}shadowbox.js"></script>
+	<link rel="stylesheet" type="text/css" href="{S_GP_SHADOWBOX}shadowbox.css" />
+	<script type="text/javascript">
+		Shadowbox.init();
+	</script>
+<!-- ENDIF -->

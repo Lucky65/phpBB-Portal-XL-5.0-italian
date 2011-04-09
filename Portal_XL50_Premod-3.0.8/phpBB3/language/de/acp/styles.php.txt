@@ -1,0 +1,44 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// phpbb Calendar Version 0.1.0
+$lang = array_merge($lang, array(
+   'IMG_BUTTON_CALENDAR_NEW'   => 'Neues Event',
+   'IMG_BUTTON_CALENDAR_DAY'   => 'Zeige Tag',
+   'IMG_BUTTON_CALENDAR_WEEK'   => 'Zeige Woche',
+   'IMG_BUTTON_CALENDAR_MONTH'   => 'Zeige Monat',
+   'IMG_ICON_CALENDAR_EDIT_ALL' => 'Bearbeite alle Beitr&auml;ge',
+   'IMG_ICON_CALENDAR_DELETE_ALL' => 'L&ouml;sche alle Beitr&auml;ge',
+));
+
+// AJAX checking
+$lang = array_merge($lang, array(
+   'IMG_ICON_AJAX_CHECKING'      => 'AJAX Check',
+   'IMG_ICON_AJAX_TRUE'         => 'AJAX wahr',
+   'IMG_ICON_AJAX_FALSE'         => 'AJAX falsch',
+   'IMG_ICON_AJAX_PASSWORD_STRENGTH_1'   => 'AJAX Passwort Sicherheit - Sehr schwach',
+   'IMG_ICON_AJAX_PASSWORD_STRENGTH_2'   => 'AJAX Passwort Sicherheit - Schwach',
+   'IMG_ICON_AJAX_PASSWORD_STRENGTH_3'   => 'AJAX Passwort Sicherheit - Akzeptabel',
+   'IMG_ICON_AJAX_PASSWORD_STRENGTH_4'   => 'AJAX Passwort Sicherheit - Sicher',
+));
+	
+// -- Gender MOD 1.0.1
+$lang = array_merge($lang, array(
+   'IMG_ICON_GENDER_X'   => 'Geschlecht: Keines ausgew&auml;hlt',
+   'IMG_ICON_GENDER_M'   => 'Geschlecht: M&auml;nnlich',
+   'IMG_ICON_GENDER_F'   => 'Geschlecht: Weiblich',
+));
+// -- Gender MOD 1.0.1
+
+// Start DM Video
+$lang = array_merge($lang, array(
+	'IMG_BUTTON_COMMENT_NEW'	=> 'New comment',
+	'IMG_BUTTON_VIDEO_NEW'		=> 'New Video',
+));
+// Start DM Video

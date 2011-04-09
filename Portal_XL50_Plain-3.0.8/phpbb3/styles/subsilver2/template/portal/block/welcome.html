@@ -1,0 +1,19 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_WELCOME}</td>
+</tr>-->  
+<!-- IF not S_IS_BOT and not S_USER_LOGGED_IN -->
+<!-- IF S_DISPLAY_WELCOME -->
+<tr>
+  <td class="row1" valign="top"><div align="center">{PORTAL_WELCOME_INTRO}</div></td>
+</tr>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<!-- IF S_DISPLAY_WELCOME_BACK -->
+<tr>
+  <td class="row2" valign="top"><div align="center">{PORTAL_WELCOME_BACK}</div></td>
+</tr>
+<!-- ENDIF -->
+<!-- ENDIF -->
+</table>

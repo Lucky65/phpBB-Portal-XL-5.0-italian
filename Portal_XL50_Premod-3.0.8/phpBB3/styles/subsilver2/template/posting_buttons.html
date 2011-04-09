@@ -1,0 +1,331 @@
+<!-- IF S_PORTAL_BBCODE_BOX_ENABLED --> 
+<tr valign="middle" align="{S_CONTENT_FLOW_BEGIN}">
+	<td colspan="2">
+	<script type="text/javascript">
+    // <![CDATA[
+    
+    // Define the bbCode tags
+    var bbcode = new Array();
+    var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);
+    var imageTag = false;
+    
+    // Helpline messages
+    var help_line = {
+        b: '{LA_BBCODE_B_HELP}',
+        i: '{LA_BBCODE_I_HELP}',
+        u: '{LA_BBCODE_U_HELP}',
+        q: '{LA_BBCODE_Q_HELP}',
+        c: '{LA_BBCODE_C_HELP}',
+        l: '{LA_BBCODE_L_HELP}',
+        o: '{LA_BBCODE_O_HELP}',
+        p: '{LA_BBCODE_P_HELP}',
+        w: '{LA_BBCODE_W_HELP}',
+        s: '{LA_BBCODE_S_HELP}',
+        f: '{LA_BBCODE_F_HELP}',
+        e: '{LA_BBCODE_E_HELP}',
+        d: '{LA_BBCODE_D_HELP}',
+        t: '{LA_BBCODE_T_HELP}',
+        tip: '{L_STYLES_TIP}',
+        // Additional bbcode Portal XL
+        fc: '{LA_BBCODE_FONTCOLOR_HELP}',
+        fsi: '{LA_BBCODE_FONTSIZE_HELP}',
+        ffa: '{LA_BBCODE_FONTFAMILY_HELP}',
+        table: '{LA_BBCODE_TABLE_HELP}'
+        <!-- BEGIN custom_tags -->
+            ,cb_{custom_tags.BBCODE_ID}: '{custom_tags.A_BBCODE_HELPLINE}'
+        <!-- END custom_tags -->
+    }
+
+    // ]]>
+    </script>
+    <script type="text/javascript" src="{T_TEMPLATE_PATH}/editor.js"></script>
+    <style type='text/css'>
+    .helpbox {
+      background-color: transparent;
+      border-style: none;
+      cursor: default;
+      color: #060;
+    }
+    
+    .buttonbox {
+      width: 22px !important;
+      height: 22px !important;
+      background-color: #FFF !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      margin: 6px 0px !important;
+      border: 1px solid #979797 !important;
+    }
+    
+    .buttonbox:hover {
+      background-color: #FFF !important;
+      border: 1px solid #BC2A4D !important;
+    }
+    </style>
+    
+
+<!-- IF S_BBCODE_ALLOWED -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" align="{S_CONTENT_FLOW_BEGIN}" valign="top"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif">
+    
+    <input type="button" class="buttonbox" accesskey="b" name="addbbcode0" value="" onclick="bbstyle(0)" title="{L_BBCODE_B_HELP}" onmouseover="helpline('b')" style="background-image: url('{T_IMAGESET_PATH}/bbcode_box/text_bold.png')" />
+    <input type="button" class="buttonbox" accesskey="i" name="addbbcode2" value="" onclick="bbstyle(2)" title="{L_BBCODE_I_HELP}" onmouseover="helpline('i')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_italic.png')" />
+    <input type="button" class="buttonbox" accesskey="u" name="addbbcode4" value="" onclick="bbstyle(4)" title="{L_BBCODE_U_HELP}" onmouseover="helpline('u')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_underline.png')" />
+    <!-- IF S_BBCODE_QUOTE -->
+        <input type="button" class="buttonbox" accesskey="q" name="addbbcode6" value="" onclick="bbstyle(6)" title="{L_BBCODE_Q_HELP}" onmouseover="helpline('q')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_signature.png')" />
+    <!-- ENDIF -->
+    <input type="button" class="buttonbox" accesskey="c" name="addbbcode8" value="" onclick="bbstyle(8)" title="{L_BBCODE_C_HELP}" onmouseover="helpline('c')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_columns.png')" />
+    <input type="button" class="buttonbox" accesskey="l" name="addbbcode10" value="" onclick="bbstyle(10)" title="{L_BBCODE_L_HELP}" onmouseover="helpline('l')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_list_bullets.png')" />
+    <input type="button" class="buttonbox" accesskey="o" name="addbbcode12" value="" onclick="bbstyle(12)" title="{L_BBCODE_O_HELP}" onmouseover="helpline('o')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_list_numbers.png')" />
+    <input type="button" class="buttonbox" accesskey="t" name="addlitsitem" value="" onclick="bbstyle(-1)" title="{L_BBCODE_LISTITEM_HELP}" onmouseover="helpline('li')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/text_padding_left.png')" />
+    <!-- IF S_BBCODE_IMG -->
+        <input type="button" class="buttonbox" accesskey="p" name="addbbcode14" value="" onclick="bbstyle(14)" title="{L_BBCODE_P_HELP}" onmouseover="helpline('p')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/photo_add.png')" />
+    <!-- ENDIF -->
+    <!-- IF S_LINKS_ALLOWED -->
+        <input type="button" class="buttonbox" accesskey="w" name="addbbcode16" value="" onclick="bbstyle(16)" title="{L_BBCODE_W_HELP}" onmouseover="helpline('w')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/world_add.png')" />
+    <!-- ENDIF -->
+    <!-- IF S_BBCODE_FLASH -->
+        <input type="button" class="buttonbox" accesskey="d" name="addbbcode18" value="" onclick="bbstyle(18)" title="{L_BBCODE_D_HELP}" onmouseover="helpline('d')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/film_add.png')" />
+    <!-- ENDIF -->
+     
+	  <select name="addbbcode20" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]');this.form.addbbcode20.selectedIndex = 2;" onmouseover="helpline('fsi');" onmouseout="helpline('tip');" title="{L_BBCODE_F_HELP}">
+		<option value="50">{L_FONT_TINY}</option>
+		<option value="85">{L_FONT_SMALL}</option>
+		<option value="100" selected="selected">{L_FONT_NORMAL}</option>
+		<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 150 -->
+			<option value="150">{L_FONT_LARGE}</option>
+			<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 200 -->
+				<option value="200">{L_FONT_HUGE}</option>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+      </select>
+      
+      <select name="addbbcode79" onchange="bbfontstyle('[color=' + this.form.addbbcode79.options[this.form.addbbcode79.selectedIndex].value + ']', '[/color]');this.form.addbbcode79.selectedIndex = 0;" onmouseover="helpline('fc');" onmouseout="helpline('tip');" title="{LA_BBCODE_FONTCOLOR_HELP}">
+        <option selected="selected" value="">{LA_BBCODE_FONTCOLOR_HELP}</option>
+        <option style="background-color:aquamarine" value="aquamarine">Aquamarine</option>
+        <option style="background-color:black" value="black">Black</option>
+        <option style="background-color:blue" value="blue">Blue</option>
+        <option style="background-color:blueviolet" value="blueviolet">Blueviolet</option>
+        <option style="background-color:brown" value="brown">Brown</option>
+        <option style="background-color:burlywood" value="burlywood">Burlywood</option>
+        <option style="background-color:cadetblue" value="cadetblue">Cadetblue</option>
+        <option style="background-color:chartreuse" value="chartreuse">Chartreuse</option>
+        <option style="background-color:chocolate" value="chocolate">Chocolate</option>
+        <option style="background-color:cornflowerblue" value="cornflowerblue">Cornflowerblue</option>
+        <option style="background-color:crimson" value="crimson">Crimson</option>
+        <option style="background-color:cyan" value="cyan">Cyan</option>
+        <option style="background-color:darkblue" value="darkblue">Darkblue</option>
+        <option style="background-color:darkcyan" value="darkcyan">Darkcyan</option>
+        <option style="background-color:darkgoldenrod" value="darkgoldenrod">Darkgoldenrod</option>
+        <option style="background-color:darkgray" value="darkgray">Darkgray</option>
+        <option style="background-color:darkgreen" value="darkgreen">Darkgreen</option>
+        <option style="background-color:darkkhaki" value="darkkhaki">Darkkhaki</option>
+        <option style="background-color:darkmagenta" value="darkmagenta">Darkmagenta</option>
+        <option style="background-color:darkolivegreen" value="darkolivegreen">Darkolivegreen</option>
+        <option style="background-color:darkorange" value="darkorange">Darkorange</option>
+        <option style="background-color:darkseagreen" value="darkseagreen">Darkseagreen</option>
+        <option style="background-color:darkslateblue" value="darkslateblue">Darkslateblue</option>
+        <option style="background-color:darkslategray" value="darkslategray">Darkslategray</option>
+        <option style="background-color:darkturquoise" value="darkturquoise">Darkturquoise</option>
+        <option style="background-color:deeppink" value="deeppink">Deeppink</option>
+        <option style="background-color:deepskyblue" value="deepskyblue">Deepskyblue</option>
+        <option style="background-color:dimgray" value="dimgray">Dimgray</option>
+        <option style="background-color:dodgerblue" value="dodgerblue">Dodgerblue</option>
+        <option style="background-color:forestgreen" value="forestgreen">Forestgreen</option>
+        <option style="background-color:gold" value="gold">Gold</option>
+        <option style="background-color:goldenrod" value="goldenrod">Goldenrod</option>
+        <option style="background-color:gray" value="gray">Gray</option>
+        <option style="background-color:green" value="green">Green</option>
+        <option style="background-color:greenyellow" value="greenyellow">Greenyellow</option>
+        <option style="background-color:hotpink" value="hotpink">Hotpink</option>
+        <option style="background-color:indianred" value="indianred">Indianred</option>
+        <option style="background-color:indigo" value="indigo">Indigo</option>
+        <option style="background-color:khaki" value="khaki">Khaki</option>
+        <option style="background-color:lightblue" value="lightblue">Lightblue</option>
+        <option style="background-color:lightcoral" value="lightcoral">Lightcoral</option>
+        <option style="background-color:lightgray" value="lightgray">Lightgray</option>
+        <option style="background-color:lightgreen" value="lightgreen">Lightgreen</option>
+        <option style="background-color:lightsalmon" value="lightsalmon">Lightsalmon</option>
+        <option style="background-color:lightseagreen" value="lightseagreen">Lightseagreen</option>
+        <option style="background-color:lightskyblue" value="lightskyblue">Lightskyblue</option>
+        <option style="background-color:lime" value="lime">Lime</option>
+        <option style="background-color:limegreen" value="limegreen">Limegreen</option>
+        <option style="background-color:magenta" value="magenta">magenta</option>
+        <option style="background-color:mediumaquamarine" value="mediumaquamarine">Mediumaquamarine</option>
+        <option style="background-color:mediumblue" value="mediumblue">Mediumblue</option>
+        <option style="background-color:mediumorchid" value="mediumorchid">Mediumorchid</option>
+        <option style="background-color:mediumpurple" value="mediumpurple">Mediumpurple</option>
+        <option style="background-color:mediumseagreen" value="mediumseagreen">Mediumseagreen</option>
+        <option style="background-color:mediumslateblue" value="mediumslateblue">Mediumslateblue</option>
+        <option style="background-color:mediumturquoise" value="mediumturquoise">Mediumturquoise</option>
+        <option style="background-color:mediumvioletred" value="mediumvioletred">Mediumvioletred</option>
+        <option style="background-color:midnightblue" value="midnightblue">Midnightblue</option>
+        <option style="background-color:navy" value="navy">Navy</option>
+        <option style="background-color:olive" value="olive">Olive</option>
+        <option style="background-color:olivedrab" value="olivedrab">Olivedrab</option>
+        <option style="background-color:orange" value="orange">Orange</option>
+        <option style="background-color:orchid" value="orchid">Orchid</option>
+        <option style="background-color:paleturquoise" value="paleturquoise">Paleturquoise</option>
+        <option style="background-color:palevioletred" value="palevioletred">Palevioletred</option>
+        <option style="background-color:peachpuff" value="peachpuff">Peachpuff</option>
+        <option style="background-color:peru" value="peru">Peru</option>
+        <option style="background-color:pink" value="pink">Pink</option>
+        <option style="background-color:plum" value="plum">Plum</option>
+        <option style="background-color:purple" value="purple">Purple</option>
+        <option style="background-color:rosybrown" value="rosybrown">Rosybrown</option>
+        <option style="background-color:royalblue" value="royalblue">Royalblue</option>
+        <option style="background-color:saddlebrown" value="saddlebrown">Saddlebrown</option>
+        <option style="background-color:sandybrown" value="sandybrown">Sandybrown</option>
+        <option style="background-color:seagreen" value="seagreen">Seagreen</option>
+        <option style="background-color:sienna" value="sienna">Sienna</option>
+        <option style="background-color:silver" value="silver">Silver</option>
+        <option style="background-color:slateblue" value="slateblue">Slateblue</option>
+        <option style="background-color:springgreen" value="springgreen">Springgreen</option>
+        <option style="background-color:steelblue" value="steelblue">Steelblue</option>
+        <option style="background-color:tan" value="tan">Tan</option>
+        <option style="background-color:teal" value="teal">Teal</option>
+        <option style="background-color:turquoise" value="turquoise">Turquoise</option>
+        <option style="background-color:violet" value="violet">Violet</option>
+        <option style="background-color:white" value="white">White</option>
+        <option style="background-color:yellow" value="yellow">Yellow</option>
+        <option style="background-color:yellowgreen" value="yellowgreen">Yellowgreen</option>
+      </select>
+    
+      <select name="addbbcode77" onchange="bbfontstyle('[font=' + this.form.addbbcode77.options[this.form.addbbcode77.selectedIndex].value + ']', '[/font]');this.form.addbbcode77.selectedIndex = 0;" onmouseover="helpline('ffa');" onmouseout="helpline('tip');" title="{LA_BBCODE_FONTFAMILY_HELP}">
+        <option selected="selected" value="">{LA_BBCODE_FONTFAMILY_HELP}</option>
+        <option style="font-family: Arial Black" value="Arial Black">Arial Black</option>
+        <option style="font-family: Arial" value="Arial">Arial</option>
+        <option style="font-family: Century Gothic" value="Century Gothic">Century Gothic</option>
+        <option style="font-family: Comic Sans MS" value="Comic Sans MS">Comic Sans MS</option>
+        <option style="font-family: Courier New" value="Courier New">Courier New</option>
+        <option style="font-family: Georgia" value="Georgia">Georgia</option>
+        <option style="font-family: Impact" value="Impact">Impact</option>
+        <option style="font-family: Times New Roman" value="Times New Roman">Times New Roman</option>
+        <option style="font-family: Trebuchet MS" value="Trebuchet MS">Trebuchet MS</option>
+        <option style="font-family: Verdana" value="Verdana">Verdana</option>
+      </select>
+    
+    </td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" valign="bottom" align="{S_CONTENT_FLOW_END}"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+  </tr>
+  <tr height="28">
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" align="{S_CONTENT_FLOW_BEGIN}" valign="top"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif">
+    
+      <input type="button" class="buttonbox" name="tablemaker" id="tablemaker" value="" onclick="var smallwindow = window.open('tablemaker/tablemaker.php', '_blank', 'width=500,height=430, left=0,top=0, resizable=no,status=no,menubar=no, location=no,scrollbars=no,toolbar=no')" title="{LA_BBCODE_TABLE_HELP}" onmouseover="helpline('table')" style="background: url('{T_IMAGESET_PATH}/bbcode_box/table.png')" />
+    
+    <!-- BEGIN custom_tags -->
+      <input type="button" class="buttonbox" name="addbbcode{custom_tags.BBCODE_ID}" value="" style="background: url('{T_IMAGESET_PATH}/bbcode_box/{custom_tags.BBCODE_TAG}.png'); height:16px; width:16px;" onclick="bbstyle({custom_tags.BBCODE_ID})" title="{custom_tags.BBCODE_HELPLINE}" onmouseover="helpline('cb_{custom_tags.BBCODE_ID}')" />
+    <!-- END custom_tags -->    
+     
+    </td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" valign="bottom" align="{S_CONTENT_FLOW_END}"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+  </tr>
+  <tr height="28">
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" align="{S_CONTENT_FLOW_BEGIN}" valign="top"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" valign="middle">
+    
+    <input class="helpbox" size="80" type="text" name="helpbox" value="{L_STYLES_TIP}" />
+    
+    </td>
+    <td background="{T_IMAGESET_PATH}/bbcode_box/bg.gif" valign="middle" align="{S_CONTENT_FLOW_END}"><img src="{T_IMAGESET_PATH}/bbcode_box/dots.gif" style="margin: 9px 5px 5px 5px;"></td>
+  </tr>
+</table>
+<!-- ENDIF -->
+
+<!-- ELSE -->
+
+<tr valign="middle" align="{S_CONTENT_FLOW_BEGIN}">
+	<td colspan="2">
+		<script type="text/javascript">
+		// <![CDATA[
+		
+		// Define the bbCode tags
+		var bbcode = new Array();
+		var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);
+		var imageTag = false;
+		
+		// Helpline messages
+		var help_line = {
+			b: '{LA_BBCODE_B_HELP}',
+			i: '{LA_BBCODE_I_HELP}',
+			u: '{LA_BBCODE_U_HELP}',
+			q: '{LA_BBCODE_Q_HELP}',
+			c: '{LA_BBCODE_C_HELP}',
+			l: '{LA_BBCODE_L_HELP}',
+			o: '{LA_BBCODE_O_HELP}',
+			p: '{LA_BBCODE_P_HELP}',
+			w: '{LA_BBCODE_W_HELP}',
+			s: '{LA_BBCODE_S_HELP}',
+			f: '{LA_BBCODE_F_HELP}',
+			e: '{LA_BBCODE_E_HELP}',
+			d: '{LA_BBCODE_D_HELP}',
+			t: '{LA_BBCODE_T_HELP}',
+			tip: '{L_STYLES_TIP}'
+			<!-- BEGIN custom_tags -->
+				,cb_{custom_tags.BBCODE_ID}: '{custom_tags.A_BBCODE_HELPLINE}'
+			<!-- END custom_tags -->
+		}
+
+		// ]]>
+		</script>
+		<script type="text/javascript" src="{T_TEMPLATE_PATH}/editor.js"></script>
+
+<!-- IF S_BBCODE_ALLOWED -->
+		<input type="button" class="btnbbcode" accesskey="b" name="addbbcode0" value=" B " style="font-weight:bold; width: 30px;" onclick="bbstyle(0)" onmouseover="helpline('b')" onmouseout="helpline('tip')" />
+		<input type="button" class="btnbbcode" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic; width: 30px;" onclick="bbstyle(2)" onmouseover="helpline('i')" onmouseout="helpline('tip')" />
+		<input type="button" class="btnbbcode" accesskey="u" name="addbbcode4" value=" u " style="text-decoration: underline; width: 30px;" onclick="bbstyle(4)" onmouseover="helpline('u')" onmouseout="helpline('tip')" />
+		<!-- IF S_BBCODE_QUOTE -->
+			<input type="button" class="btnbbcode" accesskey="q" name="addbbcode6" value="Quote" style="width: 50px" onclick="bbstyle(6)" onmouseover="helpline('q')" onmouseout="helpline('tip')" />
+		<!-- ENDIF -->
+		<input type="button" class="btnbbcode" accesskey="c" name="addbbcode8" value="Code" style="width: 40px" onclick="bbstyle(8)" onmouseover="helpline('c')" onmouseout="helpline('tip')" />
+		<input type="button" class="btnbbcode" accesskey="l" name="addbbcode10" value="List" style="width: 40px" onclick="bbstyle(10)" onmouseover="helpline('l')" onmouseout="helpline('tip')" />
+		<input type="button" class="btnbbcode" accesskey="o" name="addbbcode12" value="List=" style="width: 40px" onclick="bbstyle(12)" onmouseover="helpline('o')" onmouseout="helpline('tip')" />
+		<input type="button" class="btnbbcode" accesskey="y" name="addlitsitem" value="[*]" style="width: 40px" onclick="bbstyle(-1)" onmouseover="helpline('e')" onmouseout="helpline('tip')" />				
+		<!-- IF S_BBCODE_IMG -->
+			<input type="button" class="btnbbcode" accesskey="p" name="addbbcode14" value="Img" style="width: 40px" onclick="bbstyle(14)" onmouseover="helpline('p')" onmouseout="helpline('tip')" />
+		<!-- ENDIF -->
+		<!-- IF S_LINKS_ALLOWED -->
+			<input type="button" class="btnbbcode" accesskey="w" name="addbbcode16" value="URL" style="text-decoration: underline; width: 40px" onclick="bbstyle(16)" onmouseover="helpline('w')" onmouseout="helpline('tip')" />
+		<!-- ENDIF -->
+		<!-- IF S_BBCODE_FLASH -->
+			<input type="button" class="btnbbcode" accesskey="d" name="addbbcode18" value="Flash" onclick="bbstyle(18)" onmouseover="helpline('d')" onmouseout="helpline('tip')" />
+		<!-- ENDIF -->
+		<span class="genmed nowrap">{L_FONT_SIZE}: <select class="gensmall" name="addbbcode20" onchange="bbfontstyle('[size=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/size]');this.form.addbbcode20.selectedIndex = 2;" onmouseover="helpline('f')" onmouseout="helpline('tip')">
+			<option value="50">{L_FONT_TINY}</option>
+			<option value="85">{L_FONT_SMALL}</option>
+			<option value="100" selected="selected">{L_FONT_NORMAL}</option>
+			<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 150 -->
+				<option value="150">{L_FONT_LARGE}</option>
+				<!-- IF not MAX_FONT_SIZE or MAX_FONT_SIZE >= 200 -->
+					<option value="200">{L_FONT_HUGE}</option>
+				<!-- ENDIF -->
+			<!-- ENDIF -->
+		</select></span>
+<!-- ENDIF -->
+	</td>
+</tr>
+<!-- IF S_BBCODE_ALLOWED and .custom_tags -->
+	<tr valign="middle" align="{S_CONTENT_FLOW_BEGIN}">
+		<td colspan="2">
+        <select name="addbbcode_custom" onchange="bbstyle(this.form.addbbcode_custom.options[this.form.addbbcode_custom.selectedIndex].value*1);this.form.addbbcode_custom.selectedIndex = 0;">
+            <option value="#" selected="selected">Custom BBCodes</option>
+            <!-- BEGIN custom_tags -->
+            <option value="{custom_tags.BBCODE_ID}" title="{custom_tags.BBCODE_HELPLINE}">{custom_tags.BBCODE_TAG}</option>
+            <!-- END custom_tags -->   
+        </select>
+		</td>
+	</tr>
+<!-- ENDIF -->
+<!-- IF S_BBCODE_ALLOWED -->
+<tr>
+	<td<!-- IF $S_SIGNATURE or S_EDIT_DRAFT --> colspan="2"<!-- ENDIF -->><input type="text" readonly="readonly" name="helpbox" style="width:100%" class="helpline" value="{L_STYLES_TIP}" /></td>
+	<!-- IF not $S_SIGNATURE and not S_EDIT_DRAFT -->
+		<td class="genmed" align="center">{L_FONT_COLOR}</td>
+	<!-- ENDIF -->
+</tr>
+<!-- ENDIF -->
+            
+<!-- ENDIF -->

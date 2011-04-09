@@ -1,0 +1,42 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+<tr>
+  <td class="row1" valign="top">
+  
+    <center>
+        <img style="border: 2px solid #333; padding: 5px;" src="{T_THEME_PATH}/images/no_avatar.gif" title="{L_LOGIN_LOGOUT_GALLERY}" />
+    </center>
+    <br />
+    
+    <table width="100%" align="center" border="0" cellpadding="2" cellspacing="1">
+      <tr>
+        <td align="center"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></td>
+      </tr>
+      <!-- ENDIF -->
+      <!-- IF S_USER_LOGGED_IN -->
+      <tr>
+        <td class="row1" valign="top">
+        
+            <table width="100%" cellpadding="2" cellspacing="5" border="0" class="forumline">
+            <tr>
+              <td class="row1"><div><center>
+                    <a href="{PIC_IMAGE}">{PIC_THUMBNAIL}</a><br />
+                  </center></div></td>
+            </tr>
+          </table>
+
+          </td>
+      <tr>
+        <td class="row1"><table width="100%" align="center" border="0" cellpadding="2" cellspacing="1">
+            <tr>
+              <td valign="top" align="center"><span class="gensmall">{L_PIC_TITLE}: <a href="{U_PIC_LINK}"><strong>{PIC_TITLE}</strong></a></span></td>
+            </tr>
+            <tr>
+                <td colspan="{S_COLS}" class="row1" align="center"><span class="gensmall">[ <a href="{U_GALLERY_MOD}" title="{L_GALLERY}" target="_self">{L_GALLERY}</a> ]</span></td>
+            </tr>
+            <!-- ENDIF -->
+          </table>
+          
+        </td>
+      </tr>
+    </table>

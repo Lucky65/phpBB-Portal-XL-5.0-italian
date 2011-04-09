@@ -1,0 +1,41 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+   <th colspan="1">{L_RND_MEMBER}</td>
+</tr>-->
+<tr>
+    <td class="row1" align="center" valign="top" style="margin: 1px;">
+         <!-- BEGIN random_member -->
+         <table width="100%" cellspacing="1" width="100%">
+                <tr>
+               <td class="bg1" width="100%" style="border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+                  <span style="float: left;">
+                  <a href="{random_member.U_USERNAME}"><span <!-- IF random_member.USERNAME_COLOR -->{random_member.USERNAME_COLOR}<!-- ENDIF -->>{random_member.USERNAME}</span></a></span>
+                  <br /><br />
+                  <div align="center">
+                     <!-- IF random_member.USER_AVATAR -->{random_member.USER_AVATAR} <!-- ELSE -->{random_member.NO_USER_AVATAR}<!-- ENDIF -->
+                  </div>
+                  <br />
+                  <table class="tablebg" cellspacing="1" width="100%">
+                    <tr>
+                      <td class="bg2" style="border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+                         <span style="float: left;">{L_RND_JOIN}:</span><span style="float: right;">{random_member.JOINED}</span><br />
+                         <span style="float: left;">{L_RND_POSTS}:</span><span style="float: right;"><a href="{random_member.S_SEARCH_ACTION}">{random_member.USER_POSTS}</a></span><br />
+                         <!-- IF random_member.USER_OCC -->
+                         <span style="float: left;">{L_RND_OCC}:</span><span style="float: right;">{random_member.USER_OCC}</span><br />
+                         <!-- ENDIF -->
+                         <!-- IF random_member.USER_FROM -->
+                         <span style="float: left;">{L_RND_FROM}:</span><span style="float: right;">{random_member.USER_FROM}</span><br />
+                         <!-- ENDIF -->
+                         <!-- IF random_member.U_WWW -->
+                         <span style="float: left;">{L_RND_WWW}:</span><span style="float: right;"><a href="{random_member.U_WWW}" title="{random_member.U_WWW}" target="_blank">{L_RND_WWW}</a></span><br />
+                         <!-- ENDIF -->
+                      </td>
+                    </tr>
+                  </table>
+               </td>
+            </tr>
+        </table>
+        <!-- END random_member -->
+    </td>
+  </tr>
+</table>

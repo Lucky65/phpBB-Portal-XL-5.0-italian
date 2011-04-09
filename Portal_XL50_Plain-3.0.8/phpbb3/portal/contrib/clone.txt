@@ -1,0 +1,13 @@
+copy clone.php to folder /styles/ before running.
+
+This tutorial explains how to clone phpBB 3 style. 
+Cloning phpBB style is needed when you want to create a new style based on some other style.
+
+On line 3 replace "prosilver" with name of style you are copying from, 
+on line 4 replace "test1" with name of style you are copying to.
+
+Make sure script can write to directory "templates". 
+Best way to do it is to run this script on test forum on your own computer instead of remote
+server.
+
+Then run that script once. It will copy all files and rename it.

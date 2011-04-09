@@ -1,0 +1,21 @@
+Subject: Secondo Promemoria da "{SITENAME}"! 
+
+Caro {USERNAME},
+
+Ti abbiamo scritto di recente in merito alla ridotta partecipazione su {SITENAME}.
+
+Non ci risultano variazioni di attivita' da parte tua dalla nostra ultima email. Vorremmo quindi segnalarti che stiamo considerando la rimozione del tuo account vista la mancanza di interesse nella comunita' su {SITENAME}.
+
+In caso tu abbia smarrito i dettagli del tuo account, li riportiamo qui sotto per tua comodita':
+----------------------------
+ Utente: {USERNAME}
+ Password: *
+
+ Indirizzo: {U_BOARD}
+----------------------------
+
+* Prego notare che la password e'stata criptata nel nostro database e non ci e' possibile recuperarla. Se hai dimenticato la password puoi richiederne una nuova che sara' attivata come hai gia' fatto per la precedente.
+
+Ti aspettiamo quanto prima su {SITENAME}.
+
+{EMAIL_SIG}

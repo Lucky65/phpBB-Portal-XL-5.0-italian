@@ -1,0 +1,47 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<div class="forabg">
+  <div class="inner"> <span class="corners-top"><span></span></span>
+    <ul class="topiclist">
+      <li class="header">
+        <dl class="icon">
+          <dt>{L_COUNTRY_FLAGS}</dt>
+        </dl>
+      </li>
+    </ul>
+    <ul class="topiclist forums">
+      <li style="padding-right:5px;">
+        <dl>
+          <dd class="posts_portal" style="width: 100%;">
+
+<table class="tablebg" width="100%" cellspacing="1">
+<!--	<tr>
+		<td class="cat" colspan="4"><h4>{L_COUNTRY_FLAGS}</h4></td>
+	</tr>
+ -->	<tr>
+		<th>{L_FLAG_IMAGE}</th>
+		<th>{L_FLAG_COUNTRY}</th>
+		<th>{L_FLAG_CODE}</th>
+		<th>{L_TOTAL_USERS}</th>
+	</tr>
+	<!-- BEGIN flags -->
+	<!-- IF flags.S_ROW_COUNT is even --><tr class="row2"><!-- ELSE --><tr class="row1"><!-- ENDIF -->
+		<td class="genmed" align="center"><img src="{flags.FLAG_IMAGE}" alt="{flags.FLAG_COUNTRY} ({flags.FLAG_CODE})" title="{flags.FLAG_COUNTRY} ({flags.FLAG_CODE})" /></td>
+		<td class="genmed" align="center">{flags.FLAG_COUNTRY}</td>
+		<td class="genmed" align="center">{flags.FLAG_CODE}</td>
+		<td class="genmed" align="center">{flags.USED_BY}</td>
+	</tr>
+	<!-- END flags -->
+</table>
+
+		  </dd>
+        </dl>
+      </li>
+    </ul>
+    <span class="corners-bottom"><span></span></span> </div>
+</div>
+
+<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,10 @@
+Subject: Žiadosť o prijatie do Vašej uživateľskej skupiny
+
+Vážený/á {USERNAME},
+
+Užívateľ "{REQUEST_USERNAME}" požiadal o vstup do skupiny "{GROUP_NAME}", ktorú moderujete na "{SITENAME}".
+Ak si prajete túto žiadosť o členstvo v danej skupine schváliť, poprípade zamietnuť, navštívte prosím nasledujúci odkaz:
+
+{U_PENDING}
+
+{EMAIL_SIG}

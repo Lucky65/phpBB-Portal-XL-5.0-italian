@@ -1,0 +1,48 @@
+<!-- INCLUDE overall_header.html -->
+
+<div class="page-content">
+
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr>
+		<th nowrap="nowrap">{L_NAME}</th>
+		<th nowrap="nowrap">{L_DL_DESCRIPTION}</th>
+		<th nowrap="nowrap" colspan="3">{L_DL_HACK_AUTHOR}</th>
+	</tr>
+	<!-- BEGIN listrow -->
+	<tr valign="middle">
+		<td class="row1" align="center"><p class="topicdetails"><b>{listrow.HACK_NAME}</b></p></td>
+		<td class="row1" align="center">
+			<p class="topicdetails"><u>{listrow.CAT_NAME}</u></p>
+			<p class="topicdetails">{listrow.HACK_DESCRIPTION}</p>
+		</td>
+		<td class="row1" align="center"><p class="topicauthor">{listrow.HACK_AUTHOR}</p></td>
+		<td class="row1" align="center"><p class="topicdetails">{listrow.HACK_AUTHOR_WEBSITE}</p></td>
+		<td class="row1" align="center"><p class="topicdetails">{listrow.HACK_DL_URL}</p></td>
+	</tr>
+	<!-- END listrow -->
+	</table>
+	
+	<form action="{S_FORM_ACTION}" method="post" id="hacklist">
+	
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr>
+		<td align="center">
+			<span class="genmed">{L_SORT_BY}&nbsp;{S_SORT_BY}&nbsp;&nbsp;&nbsp;{L_ORDER}&nbsp;{S_ORDER}</span>
+			<input type="submit" class="btnlite" value="{L_GO}" />
+		</td>
+	</tr>
+	</table>
+	
+	</form>
+	
+	<div align="right">{PAGINATION}</div>
+	
+	<!-- INCLUDE breadcrumbs.html -->
+	
+	<br clear="all" />
+	
+	<div align="left"><!-- INCLUDE jumpbox.html --></div>
+	
+</div>
+
+<!-- INCLUDE overall_footer.html -->

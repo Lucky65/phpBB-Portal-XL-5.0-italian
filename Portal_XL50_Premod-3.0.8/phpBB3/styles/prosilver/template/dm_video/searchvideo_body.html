@@ -1,0 +1,53 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<h2>{L_DMV_SEARCH}</h2>
+<!-- <p>{SEARCH_RESULTS}</p> -->
+<br />
+<div class="rules">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	{SEARCH_MATCHES}<br />
+	{SEARCH_RESULTS}<br /><br />
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<br />
+<!-- BEGIN results -->
+	<!-- IF results.S_FIRST_ROW -->
+	<div class="forabg">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl>
+						<dd class="dmv-title">{L_DMV_TITLE}</dd>
+						<dd class="dmv-singer">{L_DMV_FROM}</dd>
+						<dd class="dmv-views">{L_DMV_DURATION}</dd>
+					</dl>
+				</li>
+			</ul>
+			<ul class="topiclist topics">
+	<!-- ENDIF -->
+				<li class="row<!-- IF results.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+					<dl>
+						<dd class="dmv-title">&nbsp;<a href="{results.U_SHOW_VIDEO}" class="topictitle">{results.TITLE}</a></dd>
+						<dd class="dmv-singer">{results.SINGER}</dd>
+						<dd class="dmv-views">{results.DURATION}</dd>
+					</dl>
+				</li>
+	<!-- IF results.S_LAST_ROW -->
+			</ul>
+			<span class="corners-bottom"><span></span></span>
+		</div>
+	</div>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+	<!-- IF results.S_ROW_COUNT == 0 -->
+		<div class="panel">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<br /><strong>{NO_RESULTS}</strong><br /><br />
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	<!-- ENDIF -->
+<!-- END results -->
+<br />
+<a href="{RETURN_MAIN}">{L_DMV_RETURN_MAIN}</a>
+<br /><br />
+<!-- INCLUDE dm_video/video_footer.html -->

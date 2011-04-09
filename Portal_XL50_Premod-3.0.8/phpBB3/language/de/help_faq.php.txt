@@ -1,0 +1,77 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+$help = array(    		
+	array(
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+/*
+* The following global is needed by Download MOD to display icons in the help texts
+*/
+global $user, $phpbb_root_path;
+
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+	array(
+		0 => 'Kann ich eine &Uuml;bersicht all meiner Dateianh&auml;nge erhalten?',
+		1 => 'Um eine Liste all deiner Dateianh&auml;nge zu erhalten, gehe in den pers&ouml;nlichen Bereich. Dort findest du unter „Einstieg“ einen Punkt „Dateianh&auml;nge verwalten“, &uuml;ber den du eine Liste deiner Dateianh&auml;nge erhalten und diese verwalten kannst.'
+	),
+
+#
+#-----[ AFTER ADD ]---------------------------------------------
+#
+
+	array(
+	0 => '--',
+	1 => 'Downloads'
+	),
+	array(
+		0 => 'Wo finde ich den Downloadbereich?',
+		1 => 'Verweise zum Downloadbereich befinden sich in der Navigationsleiste. Direktlink: [<a href="' . append_sid("{$phpbb_root_path}downloads.$phpEx") . '">Downloads</a>]'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_blue') . '?',
+		1 => 'Kein Download m&ouml;glich. Der festgelegte Gesamttraffic des Downloadbereiches oder der angezeigten Kategorie ist f&uuml;r den laufenden Monat verbraucht.'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_red') . '?',
+		1 => 'Kein Download m&ouml;glich. Dieses kann mehrere Ursachen haben:<br />- Der Download ist vom Administrator gesperrt.<br />- Der Benutzer ist nicht eingeloggt, der Download aber nur registrierten Benutzern gestattet.<br />- Das Traffickonto des Benutzers weist kein/nicht mehr ausreichenden Traffic auf.<br />- Der Administrator hat eine min. Beitragsgrenze (Forenbeitr&auml;ge) festgelegt, welche der Benutzer noch nicht erreicht hat.<br />- Das vom Administrator festgelegte max. Trafficlimit f&uuml;r eine Datei ist verbraucht.'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_grey') . '?',
+		1 => 'Externe Quelle. Der Download erfolgt von einem externen Server. Ansonsten &auml;hnliche Regeln wie bei ' . $user->img('dl_green') . '. Es erfolgt kein Abzug von Gesamttraffic des Downloadbereiches.'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_white') . '?',
+		1 => 'Wie auch ' . $user->img('dl_green.png') . ' erfolgt hier kein Abzug vom Benutzerkonto. Jedoch k&ouml;nnen diese Downloads nur registrierte Benutzer frei herunterladen. Es erfolgt dazu auch ein Abzug von Gesamttraffic des Downloadbereiches.'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_yellow') . '?',
+		1 => 'Download mit Einschr&auml;nkungen m&ouml;glich. Der Download ist nur registierten Benutzern gestattet. Der Benutzer muss eingeloggt sein. Es erfolgt ein Trafficabzug vom Benutzerkonto und vom Gesamttraffic des Downloadbereiches.'
+	),
+	array(
+		0 => 'Was bedeutet ' . $user->img('dl_green') . '?',
+		1 => 'Download frei verf&uuml;gbar. Der Download unterliegt keinen Restriktionen. Die Datei kann von G&auml;sten heruntergeladen werden. Ein Login ist nicht erforderlich. Es erfolgt kein Trafficabzug vom Benutzerkonto, jedoch vom Gesamttraffic des Downloadbereiches.'
+	),
+	
+	array(
+		0 => 'Warum kann ich keine Dateien herunterladen?',
+		1 => 'Dieses kann mehrere Gr&uuml;nde haben. Siehe unter ' . $user->img('dl_blue') . ' und ' . $user->img('dl_red')
+	),
+	array(
+		0 => 'Wann und wie wird meinem Konto wieder Traffic gutgeschrieben?',
+		1 => 'Nach dem allerersten Login des Benutzers wird ein Zeitstempel gesetzt. Jeweils am ersten Tag eines Monats, an dem ein Benutzer den Downloadbereich betritt, wird automatisch das Traffickonto wieder aufgef&uuml;llt. Frage den Administrator, wieviel Du erh&auml;lst.'
+	),
+	array(
+		0 => 'Ich m&ouml;chte noch eine weitere Datei herunterladen, habe aber keinen Traffic mehr?',
+		1 => 'In diesem Fall frage den Administrator. Nur er kann entscheiden, ob einem Benutzer vor Ablauf des Monats zus&auml;tzlicher Traffic zugewiesen wird.'
+	),
+	array(
+		0 => 'Wie kann ich einen Download bewerten?',
+		1 => 'Bei jedem Download innerhalb einer Kategorie oder in der Detailbeschreibung befindet sich ein Block f&uuml;r Bewertungen.<br />Mit einem Klick auf "Bewerten" kann der registrierte Benutzer nach einem Punktesystem den Download mit 1 Punkt (sehr schlecht) bis 10 Punkte (sehr gut) bewerten. Du kannst einen Download nur einmal bewerten.'
+	),

@@ -1,0 +1,58 @@
+<!-- INCLUDE simple_header.html -->
+<h3>{RATING_TITLE}</h3>
+<br  />
+<!-- IF S_RATED_SUCCESSFUL -->
+<div class="panel bg2">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		{L_DMV_RATED_SUCCESSFUL}
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ELSE -->
+<form method="post" action="{U_ACTION}">
+<input type="hidden" name="id" value="{ID}" />
+<div class="forabg">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="icon">
+						<dd>{VIDEO_TITLE} {L_DMV_FROM} {VIDEO_SINGER}</dd>
+					</dl>
+				</li>
+	        </ul>
+			<ul class="topiclist forums">
+				<li>
+					<dl class="details">
+						<!-- IF S_HAS_PERM_RATE -->
+								<dt>
+								<br /><br /><b>{L_DMV_RATING_VIDEO}:</b> {VIDEO_RATING_SELECT}
+							<br /><br /><br /></dt>
+						<!-- ENDIF -->
+						</dt>
+					</dl>
+				</li>
+			</ul>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+
+<div class="panel bg2">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<fieldset class="submit-buttons">
+		<input type="submit" accesskey="s" tabindex="6" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;
+		{S_HIDDEN_FIELDS}
+		{S_FORM_TOKEN}
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+<br />
+<center>
+<script type="text/javascript" language="JavaScript">
+<!--
+if (window.opener)
+document.write('<a href="#" onclick="self.close();">{L_CLOSE_WINDOW}</a>');
+//-->
+</script>
+<br /><br />

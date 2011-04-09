@@ -1,0 +1,9 @@
+Subject: {FORUM_NAME} Toplist sito aggiunto!
+
+Caro {USERNAME},
+
+Grazie per avere aggiunto "{TOPLIST_SITE_NAME}" alla nostra toplist su {FORUM_NAME}. Il prossimo passo da fare è aggiungere il codice sul tuo sito. L'amministratore del forum potrebbe avere attivato i controlli automatici del codice sul tuo sito, se il codice non viene trovato il tuo sito sarà disattivato automaticamente. Per evitare questo assicurati che il codice sia disponibile e visibile a tutti sul tuo sito.
+
+{TOPLIST_SITE_CODE}
+
+{EMAIL_SIG}

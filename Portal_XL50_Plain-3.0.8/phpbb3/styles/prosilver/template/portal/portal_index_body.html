@@ -1,0 +1,468 @@
+<!-- DEFINE $PORTALXL = 'index_forum' -->
+<!-- INCLUDE overall_header.html -->
+  
+<!-- Require basic Easy Widgets -->
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $.fn.EasyWidgets({
+    behaviour : {
+      useCookies 		: true // Use cookies to store positions and states
+    },
+    cookies : {
+	  expires 			: 365, // Cookie expiration time in days
+      closeName 		: 'portal_xl_index-close', // Cookie name for close Widgets
+      disableName 		: 'portal_xl_index-disable', // Cookie name for enable/disable Widgets
+      positionName 		: 'portal_xl_index-position', // Cookie name for positined Widgets
+      collapseName 		: 'portal_xl_index-collapse' // Cookie name for collapsed Widgets
+    },
+    selectors : {
+      container 		: 'div'
+    },
+    effects : {
+      effectDuration 	: 250,
+      widgetClose 		: 'fade',
+      widgetExtend 		: 'fade',
+      widgetCollapse 	: 'fade'
+    },
+    i18n : {
+      editText 			: '{L_WIDG_EDIT_TEXT}', // Widget edit link text
+//      closeText 		: '{L_WIDG_CLOSE_TEXT}', // Widget close link text
+//      extendText 		: '{L_WIDG_EXTENT_TEXT}', // Widget extend link text
+//      collapseText 	: '{L_WIDG_COLLAPSE_TEXT}', // Widget collapse link text
+      cancelEditText 	: '{L_WIDG_CANCEL_TEXT}', // Widget cancel edit link text
+      editTitle 		: '{L_WIDG_EDIT}', // Widget edition link title
+      closeTitle 		: '{L_WIDG_CLOSE}', // Widget close link title
+      confirmMsg 		: '{L_WIDG_REMOVE}', // Widget confirmation dialog message
+      cancelEditTitle 	: '{L_WIDG_CANCEL}', // Widget cancel edit link title
+      extendTitle 		: '{L_WIDG_EXTENT}', // Widget extend link title
+      collapseTitle 	: '{L_WIDG_COLLAPSE}', // Widget collapse link title
+	  
+      collapseText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/collapse.png" alt="{L_WIDG_COLLAPSE_TEXT}" />',
+      extendText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/extend.png" alt="{L_WIDG_EXTENT_TEXT}" />',
+      closeText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/close.png" alt="{L_WIDG_CLOSE_TEXT}" />'
+    }
+	
+  });
+});
+// ]]>
+</script>
+
+<!-- IF S_HAS_REPORTS or S_HAS_UNAPPROVED_POSTS -->
+<div id="message" class="rules">
+    <div class="inner"><span class="corners-top"><span></span></span>
+        <strong>{L_INFORMATION}:</strong> 
+        <!-- IF S_HAS_REPORTS --><a href="{U_MCP_REPORTS}">{L_REPORTS_TOTAL}</a><!-- ENDIF -->
+        <!-- IF S_HAS_REPORTS and S_HAS_UNAPPROVED_POSTS --> &bull; <!-- ENDIF -->
+        <!-- IF S_HAS_UNAPPROVED_POSTS --><a href="{U_MCP_QUEUE}">{L_UNAPPROVED_TOTAL}</a><!-- ENDIF -->
+    <span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<div id="portal_container">
+
+<!-- [+] top block area -->
+<!-- IF PORTAL_INDEX_PAGE -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- IF $PORTALXL_TOP_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+  <div class="<!-- IF top_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+        
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a>&nbsp;{top_block_files.TOP_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+         <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+<!-- ELSE -->
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{top_block_files.TOP_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+               <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+<!-- [-] top block area -->
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<!-- IF SI_DISPLAY_INDEX_LEFT -->
+<tr>
+<!-- [+] left block area -->
+	<td width="{PORTAL_INDEX_LEFT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- IF $PORTALXL_LEFT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+  <div class="<!-- IF left_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+                  
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a>&nbsp;{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF left_block_files.LEFT_BLOCKS-->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+         <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+<!-- ELSE -->
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                     <a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF left_block_files.LEFT_BLOCKS -->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+               <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+<!-- ENDIF -->
+
+	</td>
+<!-- [-] left block area -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- ENDIF -->
+<!-- [+] center block area -->
+	<td valign="top">
+<!-- ENDIF -->
+
+
+<!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
+<ul class="linklist">
+	<!-- IF S_DISPLAY_SEARCH -->
+		<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a><!-- IF S_LOAD_UNREADS --> &bull; <a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a><!-- ENDIF --><!-- IF S_USER_LOGGED_IN --> &bull; <a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a><!-- ENDIF --> &bull; <a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>
+	<!-- ENDIF -->
+	<!-- IF not S_IS_BOT and U_MARK_FORUMS --><li class="rightside"><a href="{U_MARK_FORUMS}" accesskey="m">{L_MARK_FORUMS_READ}</a></li><!-- ENDIF -->
+</ul>
+<!-- ENDIF -->
+
+<!-- IF $PORTALXL_CENTRE_INDEX_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN center_block_files -->
+<div class="widget-place" id="widget-place-{center_block_files.CENTER_BLOCK_ID}-centre">
+    <div class="widget collapsable removable closeconfirm" id="block-{center_block_files.CENTER_BLOCK_ID}-centre">
+
+  <div class="<!-- IF center_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{center_block_files.CENTER_BLOCK_ID}">{center_block_files.CENTER_BLOCKS_IMG}</a>&nbsp;{center_block_files.CENTER_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF center_block_files.CENTER_BLOCKS-->{center_block_files.CENTER_BLOCKS}<!-- ENDIF -->
+         <!-- IF center_block_files.CENTER_BLOCKS_CONTENT -->{center_block_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END center_block_files -->	
+<!-- ELSE -->
+<!-- BEGIN center_block_files -->
+<div class="widget-place" id="widget-place-{center_block_files.CENTER_BLOCK_ID}-centre">
+    <div class="widget collapsable removable closeconfirm" id="block-{center_block_files.CENTER_BLOCK_ID}-centre">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{center_block_files.CENTER_BLOCK_ID}">{center_block_files.CENTER_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{center_block_files.CENTER_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF center_block_files.CENTER_BLOCKS-->{center_block_files.CENTER_BLOCKS}<!-- ENDIF -->
+               <!-- IF center_block_files.CENTER_BLOCKS_CONTENT -->{center_block_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END center_block_files -->	
+<!-- ENDIF -->
+
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+	<h3><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h3>
+		<fieldset class="quick-login">
+			<label for="username">{L_USERNAME}:</label>&nbsp;<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" />
+			<label for="password">{L_PASSWORD}:</label>&nbsp;<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" />
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+				| <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" name="autologin" id="autologin" /></label>
+			<!-- ENDIF -->
+			<input type="submit" name="login" value="{L_LOGIN}" class="button2" />
+			{S_LOGIN_REDIRECT}
+		</fieldset>
+	</form>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+	<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+	<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></p>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+	<h3>{L_BIRTHDAYS}</h3>
+	<p><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p>
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+	<h3>{L_STATISTICS}</h3>
+	<p>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}</p>
+<!-- ENDIF -->
+
+
+
+
+
+<!-- IF PORTAL_INDEX_PAGE -->
+	</td>
+<!-- [-] center block area -->
+<!-- IF SI_DISPLAY_INDEX_RIGHT -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- [+] right block area -->
+	<td width="{PORTAL_INDEX_RIGHT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- IF $PORTALXL_RIGHT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+  <div class="<!-- IF right_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a>&nbsp;{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+         <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+<!-- ELSE -->
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+               <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+<!-- ENDIF -->	
+    
+	<!-- ENDIF -->	
+	</td>
+<!-- [-] right block area -->
+</tr>
+</table>
+
+<!-- [+] bottom block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- IF $PORTALXL_BOTTOM_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+  <div class="<!-- IF bottom_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a>&nbsp;{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF bottom_block_files.BOTTOM_BLOCKS-->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+         <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+<!-- ELSE -->
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                <a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF bottom_block_files.BOTTOM_BLOCKS-->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+               <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+<!-- [-] bottom block area -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

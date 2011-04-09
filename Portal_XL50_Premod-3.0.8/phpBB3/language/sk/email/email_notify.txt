@@ -1,0 +1,17 @@
+Subject: “{SITENAME}” — Email od priateľa
+
+Vážený/á {TO_USERNAME},
+
+Tento email Vám bol poslaný z “{SITENAME}” uživateľom {FROM_USERNAME}, ktorý je názoru, že by ste mohli mať záujem o tému:
+
+{TOPIC_NAME}
+
+Nájdete ju na:
+
+{U_TOPIC}
+
+Môže nasledovať správa od {FROM_USERNAME}. Prosím, berte na vedomie, že túto správu administrátori fóra neschválili a ani nevideli. Ak sa chcete sťažovať, že ste tento email obdržali, kontaktujte administrátora na {BOARD_EMAIL}. Nezabudnite citovať hlavičky tejto správy.
+
+----------
+
+{MESSAGE}

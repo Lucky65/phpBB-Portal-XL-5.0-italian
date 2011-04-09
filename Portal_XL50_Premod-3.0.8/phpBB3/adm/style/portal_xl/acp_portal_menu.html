@@ -1,0 +1,152 @@
+<!-- INCLUDE overall_header.html -->
+
+<script type="text/javascript">
+// <![CDATA[
+function update_icon(new_icon)
+{
+	document.getElementById('current_icon').src = (new_icon) ? "./../portal/images/icon_menu/" + encodeURI(new_icon) : "./images/spacer.gif";
+}
+// ]]>
+</script>
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_PORTAL_MENUS_EDIT_HEADER}</legend>
+	<form id="acp_portal_menu" method="post" action="{U_ACTION}">
+    
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_MENUS_EDIT_HEADER}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_URL_IMG_EXPLAIN}:</strong><br /><span>{L_URL_IMG_EXPLAIN2}</span></td>    
+   		<td class="row2" style="font-size:10px;" valign="top">    
+		<select name="menu_img" class="post" onchange="update_icon(this.options[selectedIndex].value);">
+		<!-- BEGIN file_name -->	
+		<option value="{file_name.S_MENU_IMG}" <!-- IF file_name.S_MENU_IMG == MENU_IMG -->selected="selected"<!-- ENDIF -->>{file_name.S_MENU_IMG_NAME}</option>
+		<!-- END file_name -->	
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><span>{L_MENU_FNAME_I_CHOSEN}</span></td>
+		<td class="row2" style="font-size:10px;">
+		<!-- IF MENU_IMG -->			
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_menu/{MENU_IMG}" id="current_icon" alt="" />
+		<!-- ELSE -->	
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_menu/blank.gif" id="current_icon" alt="" />		
+		<!-- ENDIF -->		
+        </td>
+	</tr>
+    
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_MENU_FNAME_INFO}:</strong><br /><span>{L_MENU_FNAME_I_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px;">
+			<span class="imageline">
+			<!-- BEGIN img_file_name_icon -->
+				<!-- IF img_file_name_icon.S_BLOCK_FILE_ICON -->
+				{img_file_name_icon.S_BLOCK_FILE_ICON}
+				<!-- ENDIF -->
+			<!-- END img_file_name_icon --> 
+			</span>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><span>{L_NAME_URL_EXPLAIN}:</span></td>
+		<td class="row2" style="font-size:10px;"><input name="menu_name" type="text" id="menu_name" value="{MENU_NAME}" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_URL_EXPLAIN}:</strong></label><br /><span>{L_URL_EXPLAIN_2}</span></td>
+		<td class="row2" style="font-size:10px;"><input name="menu_url" type="text" id="menu_url" value="{MENU_URL}" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><span>{L_VIEW_BY_EXPLAIN}:</span></td>
+      	<td class="row2" style="font-size:10px;" width="50%">  
+        <div align="left"><select name="menu_view" class="post">
+		<option value="0" <!-- IF MENU_VIEW == "0" --> selected <!-- ENDIF -->>{L_NONE}</option>
+		<option value="1" <!-- IF MENU_VIEW == "1" --> selected <!-- ENDIF -->>{L_ALL}</option>	
+		<option value="2" <!-- IF MENU_VIEW == "2" --> selected <!-- ENDIF -->>{L_GUESTS}</option>
+		<option value="3" <!-- IF MENU_VIEW == "3" --> selected <!-- ENDIF -->>{L_REG}</option>	
+		<option value="4" <!-- IF MENU_VIEW == "4" --> selected <!-- ENDIF -->>{L_STAFF}</option>
+		<option value="5" <!-- IF MENU_VIEW == "5" --> selected <!-- ENDIF -->>{L_MOD}</option>
+		<option value="6" <!-- IF MENU_VIEW == "6" --> selected <!-- ENDIF -->>{L_ADMIN}</option>	
+		</select></div>
+        </td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_OPEN_IN}:</strong><br /><span>{L_OPEN_IN_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%">
+		<input type="radio" class="radio" name="menu_open" value="1"<!-- IF MENU_OPEN --> id="menu_open" checked="checked"<!-- ENDIF --> /> {L_YES}
+		<input type="radio" class="radio" name="menu_open" value="0"<!-- IF not MENU_OPEN --> id="menu_open" checked="checked"<!-- ENDIF --> /> {L_NO}
+		</td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:10px;" colspan="2">  
+		<input name="menu_order" type="hidden" id="menu_order" value="{MENU_ORDER}" size="10" />
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_MENU}" /></center></td>
+ 		</tr>
+	</table>
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+	<form id="acp_portal_menu" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_PORTAL_MENU}</legend>
+	<table cellspacing="1">
+	<tr>
+		<th><center>{L_URL_IMG_2}</th>
+		<th><center>{L_NAME_LINK}</center></th>
+		<th><center>{L_URL_LINK}</center></th>
+		<th><center>{L_VIEW_BY}</center></th>
+		<th><center>{L_OPEN_IN}</center></th>
+		<th><center>{L_ACTION}</center></th>		
+	</tr>
+	<!-- BEGIN menu -->
+		<!-- IF menu.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align: center;"><img border="0" src="./../portal/images/icon_menu/{menu.MENU_IMG}"></td>
+		<td style="text-align: center;">{menu.MEU_NAME}</td>
+		<td style="text-align: center;">{menu.MENU_URL}</td>
+		<td style="text-align: center;"><div align="center">
+		  <!-- IF menu.MENU_VIEW == "0" -->{L_NONE}<!-- ENDIF -->
+		  <!-- IF menu.MENU_VIEW == "1" -->{L_ALL}<!-- ENDIF -->	
+		  <!-- IF menu.MENU_VIEW == "2" -->{L_GUESTS}<!-- ENDIF -->
+		  <!-- IF menu.MENU_VIEW == "3" -->{L_REG}<!-- ENDIF -->
+		  <!-- IF menu.MENU_VIEW == "4" -->{L_STAFF}<!-- ENDIF -->
+		  <!-- IF menu.MENU_VIEW == "5" -->{L_MOD}<!-- ENDIF -->
+		  <!-- IF menu.MENU_VIEW == "6" -->{L_ADMIN}<!-- ENDIF -->	  
+		</td>		
+		<td style="text-align: center;">
+		<!-- IF menu.MENU_OPEN -->{L_OPEN_IN_BLANK}<!-- ENDIF -->
+		<!-- IF not menu.MENU_OPEN -->{L_OPEN_IN_SAME}<!-- ENDIF -->
+        </td>
+		<td style="text-align: center;" width="100px">
+		<!-- IF menu.S_FIRST_ROW -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{menu.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;
+		<!-- IF menu.S_LAST_ROW -->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{menu.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->&nbsp;
+		<a href="{menu.U_EDIT}">{ICON_EDIT}</a>&nbsp;			 
+		<a href="{menu.U_DELETE}">{ICON_DELETE}</a>
+		</td>
+	</tr>
+	<!-- END menu -->
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_URL}" />
+	</p>
+    
+	</fieldset>
+
+	</form>
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

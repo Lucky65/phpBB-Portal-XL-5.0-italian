@@ -1,0 +1,74 @@
+<!-- IF S_DISPLAY_SHOUTBOX -->
+    <script type="text/javascript" src="{U_SHOUT_STATIC}"></script>
+    <script type="text/javascript" src="{T_TEMPLATE_PATH}/editor.js"></script>
+    <script type="text/javascript" src="{U_SHOUT}"></script>
+<!-- ENDIF -->
+
+<!-- IF S_CAN_VIEW_AS -->
+<style type='text/css'>
+#msg > li.row1 {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	height: auto;
+	width:98%;
+	float: left;
+}
+
+#msg > li.row2 {
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	height: auto;
+	width:98%;
+	float: left;
+}
+
+#msg > li > dl{
+	vertical-align: middle;
+	width: 100%;
+}
+
+#msg > li > dl > dt{
+	width: auto !important;
+	white-space: normal;
+	margin-right: 2px;
+}
+
+#msg > li > dl > dd > input{
+	margin: 3px;
+}
+
+#msg > li > dl > dd#msgbody{
+	display: inline;
+	padding: 3px 0 1px 0px !important;
+	vertical-align: middle;
+	float:none !important;
+}
+
+#base_ul
+{
+	list-style:none;
+	margin-left: 0;
+}
+</style>
+
+<table class="tablebg" width="100%" cellspacing="1">
+<!-- <tr>
+        <th><h4>{L_SHOUTBOX}</h4></td>
+    </tr>
+ -->    
+    <tr>
+        <td class="row1" valign="top">
+			<span id="shoutbox"></span>
+        </td>
+    </tr>
+</table>
+<br />
+<script type="text/javascript">
+//<![CDATA[
+display_shoutbox = true;
+load_shout();
+//]]>
+</script>
+<!-- ENDIF -->

@@ -1,0 +1,11 @@
+Subject: Pripomienka - aktivácia účtu
+
+Vážený/á {USERNAME},
+
+Dňa {REGISTER_DATE} ste si zaregistrovali nový účet na “{SITENAME}”. Zatiaľ ste si Váš účet neaktivovali. Prihlásiť sa však môžete až po úspešnej aktivácii. Aby sme Vám to uľahčili, nasleduje odkaz na aktiváciu.
+
+{U_ACTIVATE}
+
+Ďakujeme Vám za registráciu na “{SITENAME}”, tešíme sa na Vašu účasť.
+
+{EMAIL_SIG}

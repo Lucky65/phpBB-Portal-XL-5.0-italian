@@ -1,0 +1,35 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+  <tr>
+      <th colspan="5">{PAGE_TITLE}</th>
+  </tr>
+  <tr>
+      <td class="cat">{L_GROUP_NAME}</td>
+      <td class="cat">{L_GROUP_RANK}</td>
+      <td class="cat">{L_GROUP_AVATAR}</td>
+      <td class="cat">{L_GROUP_DESC}</td>
+      <td class="cat" style="width:15%;">{L_GROUP_MEMBERS}</th>
+  </tr>
+  <!-- BEGIN group_row -->
+  <tr class="<!-- IF group_row.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+      <td><!-- IF group_row.S_BOT_GROUP --><!-- IF group_row.GROUP_COLOR --><span style="color:#{group_row.GROUP_COLOR};"><!-- ENDIF -->{group_row.GROUP_NAME}<!-- IF group_row.GROUP_COLOR --></span><!-- ENDIF --><!-- ELSE --><a href="{group_row.U_GROUP}"><!-- IF group_row.GROUP_COLOR --><span style="color:#{group_row.GROUP_COLOR};"><!-- ENDIF -->{group_row.GROUP_NAME}<!-- IF group_row.GROUP_COLOR --></span><!-- ENDIF --></a><!-- ENDIF --><br /><em>{group_row.GROUP_TYPE}</em></td>
+      <td><!-- IF group_row.RANK_IMG --><span class="rank-img">{group_row.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{group_row.RANK_TITLE}</span><!-- ENDIF --></td>
+      <td><!-- IF group_row.AVATAR_IMG -->{group_row.AVATAR_IMG}<!-- ENDIF --></td>
+      <td><!-- IF group_row.GROUP_DESC -->{group_row.GROUP_DESC}<!-- ENDIF --></td>
+      <td style="text-align:center;">{group_row.GROUP_COUNT}</td>
+  </tr>
+  <!-- END group_row -->
+  <tr>
+    <td class="cat" colspan="5" height="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="1" /></td>
+  </tr>
+</table>
+	
+<!-- INCLUDE breadcrumbs.html -->
+	
+	<br clear="all" />
+	<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+	<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,121 @@
+<!-- INCLUDE overall_header.html -->
+
+<div>
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<ul class="linklist">
+	<!-- IF DL_MODCP --><li class="leftside"><span>[ {DL_MODCP} ]</span></li><!-- ENDIF -->
+		<li class="rightside"><!-- IF S_DL_UPLOAD -->{DL_UPLOAD}&nbsp;&bull;&nbsp;<!-- ENDIF -->{U_DL_SEARCH}&nbsp;&nbsp;</li>
+	</ul>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- IF S_CAT_TRAFFIC -->
+<div class="panel bg3">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<span><strong>{CAT_TRAFFIC}</strong></span>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->	
+
+<!-- IF S_CAT_RULE -->
+<div class="rules">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<span>{CAT_RULE}</span>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF S_SUBCATS --><!-- INCLUDE dl_mod/view_dl_subcat_body.html --><!-- ENDIF -->
+
+<br />
+
+<!-- IF S_DOWNLOAD_ROWS -->
+<div class="forabg">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<ul class="topiclist">
+		<li class="header">
+			<dl>
+				<dt>{L_INFO}&nbsp;{L_NAME}<br />{L_DESCRIPTION}</dt>
+				<dd class="posts">{L_SIZE}</dd>
+				<dd class="extra">{L_KLICKS}<br />{L_OVERALL_KLICKS}</dd>
+				<!-- BEGIN comment_header -->
+				<dd class="extra">{comment_header.L_COMMENTS}</dd>
+				<!-- END comment_header -->
+				<dd class="time">{L_RATING}</dd>
+			</dl>
+		</li>
+	</ul>
+	<ul class="topiclist forums">
+		<!-- BEGIN downloads -->
+		<li class="row">
+			<dl>
+				<dt>
+					{downloads.STATUS}&nbsp;<a href="{downloads.U_FILE}" class="forumtitle">{downloads.DESCRIPTION}</a>&nbsp;{downloads.HACK_VERSION}&nbsp;{downloads.MINI_IMG}
+					<br /><span class="small">{downloads.LONG_DESC}</span>
+				</dt>
+				<dd class="posts"><span>{downloads.FILE_SIZE}</span></dd>
+				<dd class="extra"><span>{downloads.FILE_KLICKS}<br />{downloads.FILE_OVERALL_KLICKS}</span></dd>
+				<!-- BEGIN comments -->
+				<dd class="extra">
+					<a href="{downloads.comments.U_COMMENT_POST}" class="postdetails">{downloads.comments.L_COMMENT_POST}</a>
+					<!-- IF downlods.comments.U_COMMENT_SHOW -->{downloads.comments.BREAK}
+					<a href="{downloads.comments.U_COMMENT_SHOW}">{downloads.comments.L_COMMENT_SHOW}</a><!-- ENDIF -->
+				</dd>
+				<!-- END comments -->
+				<dd class="time"><span class="small">
+					{downloads.RATING_IMG}<!-- IF downloads.RATINGS -->&nbsp;{downloads.RATINGS}<!-- ENDIF -->
+					<!-- IF downloads.L_RATING --><br /><a href="{downloads.U_RATING}" class="small">{downloads.L_RATING}</a><!-- ENDIF -->
+				</span></dd>
+			</dl>
+		</li>
+		<!-- END downloads -->
+	</ul>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF S_EMPTY_CATEGORY -->
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<strong>{L_EMPTY_CATEGORY}</strong>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF PAGE_NUMBER -->
+<ul class="linklist">
+	<li class="rightside pagination">
+		<span>{PAGE_NUMBER} &bull; {L_GOTO_PAGE}: {PAGINATION}</span>
+	</li>
+</ul>
+<!-- ENDIF -->
+
+<br />
+
+<!-- IF S_SORT_OPTIONS -->
+<form action="{U_DOWNLOADS}" method="post" name="dl_mod">
+
+<fieldset>
+
+<p align="center">
+	{L_SORT_BY}&nbsp;{S_SORT_BY}&nbsp;&nbsp;&nbsp;{L_ORDER}&nbsp;{S_ORDER}&nbsp;<input type="submit" class="button2" value="{L_GO}" />
+</p>
+
+</fieldset>
+
+</form>
+<!-- ENDIF -->
+
+<br />
+
+<!-- INCLUDE dl_mod/dl_footer.html -->
+
+<!-- INCLUDE overall_footer.html -->

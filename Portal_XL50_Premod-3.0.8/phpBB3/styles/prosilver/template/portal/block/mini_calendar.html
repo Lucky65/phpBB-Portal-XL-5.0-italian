@@ -1,0 +1,115 @@
+<table class="tablebg" cellspacing="1" width="100%">
+  <tr>
+    <td class="row1">
+
+      <table cellspacing="5" width="100%">
+        <tr>
+          <td align="left" class="row1"><!-- IF CALENDAR_PREV_MINI -->{CALENDAR_PREV_MINI}</a><!-- ENDIF --></td>
+          <td align="center" class="row1">{CALENDAR_HEADER_MINI}</td>
+          <td align="right" class="row1"><!-- IF CALENDAR_NEXT_MINI -->{CALENDAR_NEXT_MINI}</a><!-- ENDIF --></td>
+        </tr>
+      </table>
+      
+      <table class="table_minical" cellspacing="1" cellpadding="0">
+        <!--<tr>
+          <th colspan="7">{L_MINI_CAL_CALENDAR}</td>
+      </tr>-->
+        <tr>
+          <td align="center" width="5%" class="bg4">{SUNDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{MONDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{TUESDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{WEDNESDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{THURSDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{FRIDAY_MINI}</td>
+          <td align="center" width="5%" class="bg4">{SATURDAY_MINI}</td>
+        </tr>
+        <!-- BEGIN mini_calendar_days -->
+        <!-- IF mini_calendar_days.START_WEEK -->
+        <tr>
+          <!-- ENDIF -->
+          <!-- IF mini_calendar_days.DUMMY_DAY -->
+          <td valign="top" class="bg3_calMon">&nbsp;</td>
+          <!-- ELSE -->
+          <td valign="top" class="{mini_calendar_days.DAY_CLASS}">
+            <table cellpadding="0" cellspacing="1" border="0" width="100%">
+              <tr>
+                <td class="{mini_calendar_days.HEADER_CLASS}">
+                  <!-- IF mini_calendar_days.ADD_LINK -->
+                  <a href="{mini_calendar_days.ADD_LINK}">{mini_calendar_days.NUMBER}</a>
+                  <!-- ELSE -->
+                            {mini_calendar_days.NUMBER}
+                  <!-- ENDIF -->
+                  <br />
+                </td>
+              </tr>
+            </table></td>
+          <!-- ENDIF -->
+          <!-- IF mini_calendar_days.END_WEEK -->
+        </tr>
+        <!-- ENDIF -->
+        <!-- END mini_calendar_days -->
+      </table>
+      
+      <table class="table_minical" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="row1" align="center">
+          <div class="buttons" style="background: transparent; border: 0;">
+              <!-- IF mini_calendar_days.ADD_LINK -->
+              <div class="calendar-new-icon"><a href="{mini_calendar_days.ADD_LINK}" title="{L_NEW_EVENT}"><img name="{L_NEW_EVENT}" src="{T_IMAGESET_LANG_PATH}/calendar_new_star_icon.gif" alt="{L_NEW_EVENT}" />&nbsp;</a></div>
+              <!-- ENDIF -->
+              <div class="calendar-day-icon"><a href="{mini_calendar_days.DAY_VIEW_URL}" title="{L_DAY}"><img name="{L_DAY}" src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" alt="{L_DAY}" />&nbsp;</a></div>
+              <!-- IF mini_calendar_days.WEEK_VIEW_URL -->
+              <div class="calendar-week-icon"><a href="{mini_calendar_days.WEEK_VIEW_URL}" title="{L_WEEK}"><img name="{L_WEEK}" src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" alt="{L_WEEK}" />&nbsp;</a></div>
+              <!-- ENDIF -->
+              <!-- IF mini_calendar_days.MONTH_VIEW_URL -->
+              <div class="calendar-month-icon"><a href="{mini_calendar_days.MONTH_VIEW_URL}" title="{L_MONTH}"><img name="{L_MONTH}" src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" alt="{L_MONTH}" />&nbsp;</a></div>
+              <!-- ENDIF -->
+          </div>
+          </td>
+        </tr>
+      </table>
+      
+        <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+            <tr>
+                <td class="row2" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('boxminical','btnminical')">
+                <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btnminical" /></a></td>
+                <td align="left" class="row2">{L_UPCOMING_EVENTS}</td>
+            </tr>
+        </table>
+        <table id="boxminical" style="display:none; margin-bottom:5px;" class="table_minical" cellspacing="0" width="100%">
+        <tr>
+          <td class="row1">
+      <!-- BEGIN mini_calendar_days -->
+            <!-- IF mini_calendar_days.BIRTHDAYS -->{mini_calendar_days.BIRTHDAYS}<br /><!-- ENDIF -->
+            <!-- BEGIN events -->
+            <!-- IF mini_calendar_days.events.S_FIRST_ROW -->
+            <!-- IF mini_calendar_days.BIRTHDAYS --><hr><!-- ENDIF -->
+            <!-- ELSE --><hr><!-- ENDIF -->
+            <a href="{mini_calendar_days.events.DAY_VIEW_URL}"><!-- IF mini_calendar_days.events.COLOR --><span style="color:#{mini_calendar_days.events.COLOR}"><!-- ENDIF -->
+            [{mini_calendar_days.events.NUMBER}]<!-- IF mini_calendar_days.events.COLOR --></span><!-- ENDIF --></a>
+            <a href="{mini_calendar_days.events.EVENT_URL}" title="{mini_calendar_days.events.EVENT_SUBJECT}">
+            <!-- IF mini_calendar_days.events.COLOR --><span style="color:#{mini_calendar_days.events.COLOR}"><!-- ENDIF -->
+            <!-- IF mini_calendar_days.events.DISPLAY_BOLD --><strong><!-- ENDIF -->
+            <!-- IF mini_calendar_days.events.IMAGE --><img src="{mini_calendar_days.events.IMAGE}" title="{mini_calendar_days.events.ETYPE_DISPLAY_NAME}" height="12" /><!-- ENDIF -->
+            <!-- IF mini_calendar_days.events.ETYPE_DISPLAY_NAME -->{mini_calendar_days.events.ETYPE_DISPLAY_NAME}:<!-- ENDIF -->
+            {mini_calendar_days.events.EVENT_SUBJECT}
+            <!-- IF mini_calendar_days.events.DISPLAY_BOLD --></strong><!-- ENDIF -->
+            <!-- IF mini_calendar_days.events.SHOW_TIME --><br /><!-- IF mini_calendar_days.events.ALL_DAY -->{L_ALL_DAY}<!-- ELSE -->
+            {L_FROM_TIME}: {mini_calendar_days.events.START_TIME} <br />{L_TO_TIME}: {mini_calendar_days.events.END_TIME}<!-- ENDIF -->
+            <!-- ENDIF -->
+            <!-- IF mini_calendar_days.events.COLOR --></span><!-- ENDIF --></a><br />
+            <!-- END events -->
+      <!-- END mini_calendar_days -->
+          </td>
+        </tr>
+      </table>
+      
+      <table cellspacing="1" width="100%">
+        <tr>
+          <td class="row1" align="center"><a href="{U_CALENDAR}" title="{L_CALENDAR}">{L_CALENDAR}</a></td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+</table>

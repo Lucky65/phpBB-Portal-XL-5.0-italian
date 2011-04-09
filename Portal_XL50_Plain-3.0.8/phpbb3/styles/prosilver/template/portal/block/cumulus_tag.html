@@ -1,0 +1,35 @@
+<style type='text/css'>
+.cumulus {
+  width: 100%;
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+  <tr class="row1">
+    <td class="gensmall" align="left" valign="middle">
+      <div class="cumulus" align="center">
+      
+        <div id="cumuluscontent" class="cumulus">
+          <p>Please download <noindex><a href="http://www.adobe.com/go/getflashplayer" target="_blank" rel="nofollow">Flash Player 10</a></noindex> or higher to view this content.</p>
+          <p><noindex><a href="http://www.roytanck.com/2008/05/19/how-to-repurpose-my-tag-cloud-flash-movie/" target="_blank" rel="nofollow">How to repurpose Roy Tanck's tag cloud Flash movie</a></noindex></p>
+        </div>
+        
+		<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/swfobject.js"></script>
+        <script type="text/javascript">
+            var cumulus = new SWFObject("{T_TEMPLATE_PATH}/portal/src/tagcloud.swf", "tagcloud",  "130", "130", "7", "#ffffff");
+            var cumulus_temp = encodeURIComponent("<tags><!-- BEGIN clouds_loop --><a href='{clouds_loop.TAGS_SEARCH_URL}' style='{clouds_loop.TAGS_FONT_SIZE}'>{clouds_loop.TAGS}</a><!-- END clouds_loop --></tags>");
+            cumulus.addParam("wmode", "transparent");     
+            cumulus.addParam("allowScriptAccess", "always");
+            cumulus.addVariable("tcolor", "0x4b73d4");
+            cumulus.addVariable("hicolor", "ff0000");
+            cumulus.addVariable("tspeed", "100");
+            cumulus.addVariable("distr", "true");
+            cumulus.addVariable("mode", "tags");
+            cumulus.addVariable("tagcloud", cumulus_temp);
+            cumulus.write("cumuluscontent");
+        </script>
+       
+     </div>
+    </td>
+  </tr>
+</table>

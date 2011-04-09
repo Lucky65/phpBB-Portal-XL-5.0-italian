@@ -1,0 +1,41 @@
+<table class="tablebg" cellspacing="1" width="100%">
+  <!--<tr>
+	<th>{L_FCATEGORIES}</td>
+</tr>-->
+  <tr>
+    <td class="row1" valign="top">
+
+<!-- BEGIN forumrow -->
+
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+		<dt><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></dt>
+	<!-- ENDIF -->
+
+	<!-- IF not forumrow.S_IS_CAT -->
+    <ul class="topiclist">
+		<li>
+			<dl class="icon" style="background-image: url({forumrow.FORUM_FOLDER_IMG_SRC});">
+				<dt>
+					<!-- IF forumrow.FORUM_IMAGE --><div style="float: left; padding-top: 5px; margin-right: 5px;">{forumrow.FORUM_IMAGE}</div><!-- ENDIF -->
+					<a href="{forumrow.U_VIEWFORUM}" class="forumtitle"<!-- IF forumrow.S_IS_LINK --> target="_blank"<!-- ENDIF -->>{forumrow.FORUM_NAME}</a><br />
+					<!-- IF forumrow.SUBFORUMS --><br /><strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}<!-- ENDIF -->
+				</dt>
+				<!-- IF forumrow.CLICKS -->
+					<dd class="redirect"><span>{L_REDIRECTS}: {forumrow.CLICKS}</span></dd>
+				<!-- ENDIF -->
+			</dl>
+		</li>
+    </ul>
+	<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_NO_FORUMS}</strong>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- END forumrow -->
+      
+      </td>
+  </tr>
+</table>

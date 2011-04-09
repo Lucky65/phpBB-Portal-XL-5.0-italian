@@ -1,0 +1,30 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_THE_TEAM}</td>
+</tr>-->
+<tr>
+    <td class="cat"><strong>{L_ADMINISTRATORS}</strong></td>
+</tr>
+<!-- BEGIN admin -->
+<tr>
+	<td class="<!-- IF admin.S_ROW_COUNT is even -->row1 gensmall<!-- ELSE -->row2 gensmall<!-- ENDIF -->" align="left" valign="middle"><img src="./portal/images/member.gif" /> <strong>{admin.USERNAME_FULL}</strong></td>
+</tr>
+<!-- BEGINELSE -->
+<tr>
+	<td class="row1" align="center"><span class="gensmall">{L_NO_ADMINISTRATORS_P}</span></td>
+</tr>
+<!-- END admin -->
+
+<tr>
+	<td class="cat"><strong>{L_MODERATORS}</strong></td>
+</tr>
+<!-- BEGIN mod -->
+<tr>
+	<td class="<!-- IF mod.S_ROW_COUNT is even -->row1 gensmall<!-- ELSE -->row2 gensmall<!-- ENDIF -->" align="left" valign="middle"><img src="./portal/images/member.gif" /> <strong>{mod.USERNAME_FULL}</strong></td>
+</tr>
+<!-- BEGINELSE -->
+<tr>
+	<td class="row1" align="center" nowrap="nowrap"><span class="gensmall">{L_NO_MODERATORS_P}</span></td>
+</tr>
+<!-- END mod -->
+</table>

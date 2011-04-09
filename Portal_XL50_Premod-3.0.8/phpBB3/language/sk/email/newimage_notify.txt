@@ -1,0 +1,13 @@
+Subject: Oznámenie, Nová téma - "{ALBUM_NAME}"
+
+Hello {USERNAME},
+
+Dostal ste toto oznámenie nako¾ko sledujete album, "{ALBUM_NAME}" v "{SITENAME}". Do albumu bol pridanı novı obrázok od vašej poslednej návštevy, "{IMAGE_NAME}". Môete poui nasledujúci odkaz pre zobrazenie albumu.
+
+{U_ALBUM}
+
+Ak si u neeláte sledova tento album môete kliknú na "Odhlási sa zo sledovania albumu" odkaz nájdenı v albume vyššie, alebo kliknutím na nasledujúci odkaz:
+
+{U_STOP_WATCHING_ALBUM}
+
+{EMAIL_SIG}

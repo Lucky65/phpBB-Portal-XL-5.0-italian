@@ -1,0 +1,15 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+	'UNLOCKED'			=> 'Unlocked',
+));
+
+#
+#-----[ BELOW ADD ]---------------------------------------------
+#
+
+//Support Ticket System MOD Beginn
+$lang = array_merge($lang, array(
+	'STS_ENABLE'		=> 'Enable the SupportTicket Assistant',
+));
+	

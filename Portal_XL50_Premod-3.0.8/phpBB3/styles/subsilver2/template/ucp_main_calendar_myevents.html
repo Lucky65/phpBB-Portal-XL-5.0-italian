@@ -1,0 +1,35 @@
+<!-- INCLUDE ucp_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+		<form method="post" action="{U_COUNT_ACTION}" name="count_form" id="count_form">
+		{L_DISPLAY_EVENTS_DAYCOUNT} <input type="number" name="daycount" id="daycount" value="{DAYCOUNT}">
+		<input type="submit" name="post" value="{L_SUBMIT}" class="button1" />
+		</form><br />
+	<!-- IF .myevents -->
+			<tr>
+						<th>{L_MY_EVENTS}</th>
+						<th style="width:16%">{L_INVITE_INFO}</th>
+			</tr>
+			<!-- BEGIN myevents -->
+					<tr class="row2">
+						<td <!-- IF myevents.IMAGE --> style="background-image: url({myevents.IMAGE}); background-repeat: no-repeat;"<!-- ENDIF -->>
+										<!-- IF myevents.U_DELETE or myevents.U_EDIT --><span style="float: right;">
+															<!-- IF myevents.U_EDIT --><a href="{myevents.U_EDIT}"><img src="{T_IMAGESET_LANG_PATH}/icon_post_edit.gif" alt="{L_EDIT_POST}" title="{L_EDIT_POST}" /></a>&nbsp;<!-- ENDIF -->
+															<!-- IF myevents.U_EDIT_ALL --><a href="{myevents.U_EDIT_ALL}"><img src="{T_IMAGESET_LANG_PATH}/icon_calendar_edit_all.gif" alt="{L_EDIT_ALL_EVENTS}" title="{L_EDIT_ALL_EVENTS}" /></a>&nbsp;<!-- ENDIF -->
+															<!-- IF myevents.U_DELETE --><a href="{myevents.U_DELETE}"><img src="{T_IMAGESET_LANG_PATH}/icon_post_delete.gif" alt="{L_DELETE_POST}" title="{L_DELETE_POST}"></a>&nbsp;<!-- ENDIF -->
+															<!-- IF myevents.U_DELETE_ALL --><a href="{myevents.U_DELETE_ALL}"><img src="{T_IMAGESET_LANG_PATH}/icon_calendar_delete_all.gif" alt="{L_DELETE_ALL_EVENTS}" title="{L_DELETE_ALL_EVENTS}" /></a>&nbsp;<!-- ENDIF --></span>
+													<!-- ENDIF -->						
+								<a href="{myevents.EVENT_URL}" title="<!-- IF myevents.ETYPE_DISPLAY_NAME -->{myevents.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{myevents.FULL_SUBJECT}">
+									<span style="<!-- IF myevents.COLOR -->color:#{myevents.COLOR};<!-- ENDIF --> font-weight: bold;">
+										<!-- IF myevents.ETYPE_DISPLAY_NAME -->{myevents.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{myevents.SUBJECT}</span><br /><!-- IF myevents.ALL_DAY -->{L_ALL_DAY} {myevents.START_TIME}<!-- ELSE -->{myevents.START_TIME} {L_TO_TIME} {myevents.END_TIME}<!-- ENDIF --></a>
+										<!-- IF myevents.IS_RECURRING --><br />{L_OCCURS_EVERY}: {myevents.RECURRING_TXT}<br /><br /><!-- ELSE --><br /><br /><!-- ENDIF -->
+								</td>
+								<td style="width:16%; padding-left:5px;" class="lastpost">{myevents.INVITED}</td>
+			</tr>
+								<!-- END myevents -->
+
+	<!-- ENDIF -->
+
+</table>
+
+<!-- INCLUDE ucp_footer.html -->

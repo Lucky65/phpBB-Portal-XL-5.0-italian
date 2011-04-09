@@ -1,0 +1,125 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT_ACRONYM -->
+<form id="acp_portal_acronyms" method="post" action="{U_ACTION_COLUMN}">
+<fieldset>
+	<legend>{L_BLOCK_ACRONYM_SETTINGS}</legend>
+    
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_BLOCK_ACRONYM_SETTINGS}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ACRONYM_ACTIVE}:</strong><br /><span>{L_ACRONYM_ACTIVE_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px;" valign="top" width="50%">
+		<input type="radio" class="radio" name="portal_acronyms_allow" value="1"<!-- IF ACRONYM_ALLOW --> id="portal_acronyms_allow" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+		<input type="radio" class="radio" name="portal_acronyms_allow" value="0"<!-- IF not ACRONYM_ALLOW --> id="portal_acronyms_allow" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:11px;" colspan="2">  
+		<input type="hidden" name="action" value="saveacronyms" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_CANCEL}" /></center>
+        </td>
+ 	</tr>
+	</table>
+</form>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF not S_EDIT_ACRONYM  -->	
+<fieldset>
+	<legend>{L_BLOCK_ACRONYM_SETTINGS}</legend>
+	<table cellspacing="1">
+	<tr>
+		<th><center>{L_ACRONYM_ALLOW}</center></th>
+		<th><center>{L_ACTION}</center></th>		
+	</tr>
+	<!-- BEGIN portal_column -->
+	<tr>
+		<td style="text-align: center;">{portal_column.ACRONYM_SHOW}</td>
+		<td style="text-align: center;"><a href="{portal_column.U_EDIT_ACRONYM}">{ICON_EDIT}</a></td>
+	</tr>
+	<!-- END portal_column -->
+	</table>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_PORTAL_ACRONYMS_EDIT_HEADER}</legend>
+	<form id="acp_portal_acronyms" method="post" action="{U_ACTION}">
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_ACRONYMS_EDIT_HEADER}</th>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_ACRONYM_INFO}:</strong><br /><span>{L_ACRONYM_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;" width="60%"><input name="acronym" type="text" id="acronym" value="{ACRONYM}" size="60" /></td>
+	</tr>																	  
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_DESCRIPTION_INFO}:</strong><br /><span>{L_DESCRIPTION_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="description" type="text" id="description" value="{DESCRIPTION}" size="60" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_ACRONYM_URL_INFO}:</strong><br /><span>{L_ACRONYM_URL_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="acronym_url" type="text" id="acronym_url" value="{ACRONYM_URL}" size="60" /></td>
+	</tr>
+	</table>
+    
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_ACRONYM}" /></center>
+	</p>
+    
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+<form id="acp_portal_acronyms" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_ACRONYM_EXPLAIN}</legend>
+    
+	<table cellspacing="1">
+	<thead>
+	<tr>
+
+		<th>{L_ACRONYM}</th>
+		<th>{L_DESCRIPTION}</th>
+		<th>{L_ACRONYM_URL}</th>
+		<th>{L_ACTION}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN acronym -->
+		<!-- IF acronym.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align:left;">{acronym.ACRONYM}</td>
+		<td style="text-align:left;">{acronym.DESCRIPTION}</td>
+		<td style="text-align:left;">{acronym.ACRONYM_URL}</td>
+		<td style="text-align:center;"><a href="{acronym.U_EDIT}">{ICON_EDIT}</a> <a href="{acronym.U_DELETE}">{ICON_DELETE}</a></td>
+	</tr>
+	<!-- END acronym -->
+	</tbody>
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_ACRONYM}" />
+	</p>
+    
+	</fieldset>
+
+</form>
+
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

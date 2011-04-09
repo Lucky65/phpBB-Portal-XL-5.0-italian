@@ -1,0 +1,13 @@
+Subject: Nová téma - "{IMAGE_NAME}"
+
+Hello {USERNAME},
+
+Dostal ste toto oznámenie nakoľko sledujete obrázky, "{IMAGE_NAME}" v "{SITENAME}". Tento obrázok bol pridaný ako komentár od vašej poslednej návštevy. Môžete použiť nasledujúci odkaz pre zobrazenie tohoto komentára.
+
+{U_IMAGE}
+
+Ak si už neprajete sledovať toto fórum môžete kliknúť na "Odhlásiť sa zo sledovana" odkaz na fórum vyššie, alebo kliknutím na nasledujúci odkaz:
+
+{U_STOP_WATCHING_IMAGE}
+
+{EMAIL_SIG}

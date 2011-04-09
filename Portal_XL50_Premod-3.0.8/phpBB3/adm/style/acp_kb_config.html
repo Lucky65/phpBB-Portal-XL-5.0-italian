@@ -1,0 +1,76 @@
+<!-- INCLUDE overall_header.html -->
+<h1>{L_ACP_CONFIG}</h1>
+<p>{L_ACP_CONFIG_DESC}</p>
+<form method="post" action="{U_ACTION}">
+	<fieldset>
+	<legend>{L_ACP_CONFIG}</legend>
+	<dl>
+		<dt><label for="kb_title">{L_KB_NAME}:</label><br /><span>{L_KB_NAME_DESC}</span></dt>
+		<dd><input type="text" name="kb_title" size="41" value="{KB_TITLE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="kb_description">{L_DESCRIPTION}:</label><br /><span>{L_KB_DECRIPTION_DESC}</span></dt>
+		<dd><textarea rows="9" name="kb_description" cols="52">{KB_DESCRIPTION}</textarea></dd>
+	</dl>
+	<dl>
+		<dt><label for="index_topics">{L_INDEX_POSTS}:</label><br /><span>{L_INDEX_POSTS_DESC}</span></dt>
+		<dd><select size="1" name="index_topics">{INDEX_TOPICS}</select></dd>
+	</dl>
+	<dl>
+		<dt><label for="kb_mode">{L_MODE}:</label><br /><span>{L_MODE_DESC}</span></dt>
+		<dd><label><input type="radio" name="kb_mode" value="0" {KB_MODE0} /> {L_MODE_MODERN}</label><label><input type="radio" name="kb_mode" value="1" {KB_MODE1} /> {L_MODE_CLASSIC}</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="cache_time">{L_CACHE_TIME}:</label><br /><span>{L_CACHE_TIME_DESC}</span></dt>
+		<dd><input type="text" name="cache_time" size="5" value="{CACHE_TIME}" /> {L_SECONDS}</dd>
+	</dl>
+	<dl>
+		<dt><label for="activ_types">{L_ACTIVATE_TYPES}:</label><br /><span>{L_ACTIVATE_TYPES_DESC}</span></dt>
+		<dd><label><input type="radio" name="activ_types" value="1" {ACTIV_TYPES1} /> {L_YES}</label><label><input type="radio" name="activ_types" value="0" {ACTIV_TYPES0} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="activ_types">{L_SORT_ORDER}:</label><br /><span>{L_SORT_ORDER_DESC}</span></dt>
+		<dd><label><select size="1" name="sort_order">{SORT_ORDER}</select><label><input type="radio" name="sort_order_dir" value="DESC" {ORDER_DESC} /> {L_DESCENDING}</label><label><input type="radio" name="sort_order_dir" value="ASC" {ORDER_ASC} /> {L_ASCENDING}</label></dd>
+	</dl>
+	</fieldset>
+	<fieldset>
+	<legend>{L_POST_TEMPLATE}</legend>
+	<dl>
+		<dt><label for="post_subject">{L_POST_SUBJECT}:</label><br /><span>{L_POST_SUBJECT_DESC}</span></dt>
+		<dd><input type="text" name="post_subject" size="41" value="{POST_SUBJECT}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="post_message">{L_POST_MESSAGE}:</label><br /><span>{L_POST_MESSAGE_DESC}</span></dt>
+		<dd><textarea rows="9" name="post_message" cols="52">{POST_MESSAGE}</textarea></dd>
+	</dl>
+	<dl>
+		<dt><label for="post_user">{L_POST_USER}:</label><br /><span>{L_POST_USER_DESC}</span></dt>
+		<dd><input type="text" name="post_user" size="3" value="{POST_USER}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="topic_type-0">{L_POST_TOPIC_AS}:</label><br /><span>{L_POST_TOPIC_AS_DESC}</span></dt>
+		<dd>
+		<label for="topic_type_global"><input type="radio" name="topic_type" id="topic_type_global" value="3"{S_POST_TOPIC_GLOBAL} />{L_POST_TOPIC_GLOBAL}</label> 
+		<label for="topic_type_announcement"><input type="radio" name="topic_type" id="topic_type_announcement" value="2"{S_POST_TOPIC_ANNOUNCEMENT} />{L_POST_ANNOUNCEMENT}</label> 
+		<label for="topic_type_sticky"><input type="radio" name="topic_type" id="topic_type_sticky" value="1"{S_POST_TOPIC_STICKY} />{L_POST_STICKY}</label> 
+		<label for="topic_type_normal"><input type="radio" name="topic_type" id="topic_type_normal" value="0"{S_POST_TOPIC_NORMAL} />{L_POST_NORMAL}</label> 
+		</dd>
+	</dl>
+	<dl>
+		<dt><label for="update_post">{L_UPDATE_POST}:</label><br /><span>{L_UPDATE_POST_DESC}</span></dt>
+		<dd><label><input type="radio" name="update_post" value="1" {UPDATE_POST1} /> {L_YES}</label><label><input type="radio" name="update_post" value="0" {UPDATE_POST0} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label for="update_post">{L_SHOW_POST_EDIT}:</label><br /><span>{L_SHOW_POST_EDIT_DESC}</span></dt>
+		<dd><label><input type="radio" name="show_post_edit" value="1" {SHOW_POST_EDIT1} /> {L_YES}</label><label><input type="radio" name="show_post_edit" value="0" {SHOW_POST_EDIT0} /> {L_NO}</label></dd>
+	</dl>
+	</fieldset> 
+	<fieldset class="submit-buttons">
+	<legend>{L_SUBMIT}</legend>
+	<input class="button1" id="submit" name="submit" value="{L_SUBMIT}" type="submit" />&nbsp;
+	<input class="button2" id="reset" name="reset" value="{L_RESET}" type="reset" />
+	</fieldset>
+</form>
+
+<br />
+<!-- INCLUDE overall_footer.html -->

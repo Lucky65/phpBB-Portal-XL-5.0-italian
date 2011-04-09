@@ -1,0 +1,20 @@
+Subject: Vitajte na "{SITENAME}"
+
+{WELCOME_MSG}
+
+Prosím Vás, ponechajte si tento email pre budúcu potrebu. Údaje o Vašom účte sú nasledovné:
+
+----------------------------
+Užívateľ: {USERNAME}
+----------------------------
+
+Vaše heslo bolo v našej databáze zašifrované. V prípade, že zabudnete Vaše heslo, môžete požiadať o nové, ktoré bude aktivované rovnakým spôsobom ako tento účet.
+
+Váš účet nie je momentálne aktívny. Aktiváciu uskutočníte návštevou nasledujúceho odkazu:
+
+{U_ACTIVATE}
+
+
+Ďakujeme Vám za registráciu.
+
+{EMAIL_SIG}

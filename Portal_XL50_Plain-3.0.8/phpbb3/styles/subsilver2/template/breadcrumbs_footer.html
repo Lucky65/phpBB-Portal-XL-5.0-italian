@@ -1,0 +1,24 @@
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+<tr>
+    <td class="row1">
+      <p class="breadcrumbs">
+        <!-- IF PORTAL --><a class="icon-home" href="{U_PORTAL}" accesskey="h">{L_PORTAL}</a> <strong>&#8249;</strong><!-- ENDIF -->
+        <!-- IF PORTAL_INDEX_PAGE --> <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ELSE -->
+        <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ENDIF --> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --><!-- BEGIN dl_nav --> <strong>&#8249;</strong> <a href="{dl_nav.U_DOWNLOAD}">{dl_nav.L_DOWNLOAD}</a><!-- END dl_nav --></li>
+      </p>
+      <br /><hr />		
+      <p class="searchbar">
+        <span style="float: {S_CONTENT_FLOW_BEGIN};">{CURRENT_TIME}&nbsp;|&nbsp;{S_TIMEZONE}</span>
+        <span style="float: {S_CONTENT_FLOW_END};"><!-- IF not S_IS_BOT --><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a>&nbsp;|&nbsp;<!-- ENDIF --><a href="{U_TEAM}">{L_THE_TEAM}</a>&nbsp;|
+          <!-- IF SCRIPT_NAME eq 'viewtopic' -->
+          <a href="{U_VIEW_TOPIC}#top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></span>
+          <!-- ELSEIF SCRIPT_NAME eq 'viewforum' -->
+          <a href="{U_VIEW_FORUM}#top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></span>
+          <!-- ELSE -->
+          <a href="#top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></span>
+          <!-- ENDIF -->
+        </span>
+      </p>
+    </td>
+</tr>
+</table>

@@ -1,0 +1,50 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_DMV_EDIT}</h1>
+
+<p>{L_ACP_DMV_EDIT_EXPLAIN}</p>
+
+<table cellspacing="1" style="clear:both;">
+	<thead>
+		<tr>
+			<th style="text-align: center;">{L_DMV_TITLE}</th>
+			<th style="text-align: center;">{L_DMV_SINGER}</th>
+	        <th style="text-align: center;">{L_DMV_USERNAME}</th>
+			<th style="text-align: center;">{L_DMV_CAT_NAME}</th>
+	        <th style="text-align: center;">{L_DMV_APPROVAL}</th>
+			<th style="text-align: center;">{L_ACTION}</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN videos -->
+		<!-- IF videos.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+			<td style="width: 30%;"><strong><a href="{videos.U_VIDEO_PLAY}" onclick="window.open(this.href); return false;">{videos.TITLE}</a></strong></td>
+			<td style="width: 30%;">{videos.SINGER} </td>
+			<td style="width: 25%;">{videos.USERNAME} </td>
+			<td style="width: 15%;">{videos.CATNAME} </td>
+	   		<td style="width: 10%;">{videos.APPROVAL}</td>
+			<td style="width: 10%;">&nbsp;<a href="{videos.U_EDIT}">{ICON_EDIT}</a> <a href="{videos.U_DEL}">{ICON_DELETE}</a>&nbsp;</td>
+		</tr>
+	<!-- BEGINELSE -->
+		<tr class="row1">
+			<td colspan="6">{L_ACP_NO_ITEMS}</td>
+		</tr>		
+	<!-- END videos -->
+	</tbody>
+</table>
+
+<!-- IF PAGINATION or TOTAL_VIDEOS -->
+	<div class="pagination">
+		{TOTAL_VIDEOS}<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+	</div>
+<!-- ENDIF -->
+
+<form action="{S_VIDEO_ACTION}" method="post">
+<fieldset class="display-options">
+	{L_SORT_BY}: &nbsp;{S_SELECT_SORT_KEY} &nbsp;{S_SELECT_SORT_DIR}
+	<input class="button2" type="submit" value="{L_GO}" name="sort" />
+	{S_FORM_TOKEN}
+</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

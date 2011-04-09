@@ -1,0 +1,96 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_PORTAL_MOD_EDIT_HEADER}</legend>
+	<form id="acp_portal_mods" method="post" action="{U_ACTION}">
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_MOD_EDIT_HEADER}</th>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_TITLE}:</strong><br /><span>{L_MOD_TITLE_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_title" type="text" id="mod_title" value="{MOD_TITLE}" maxlength="150" size="60"  /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_VERSION}:</strong><br /><span>{L_MOD_VERSION_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_version" type="text" id="mod_version" value="{MOD_VERSION}" maxlength="10" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_VERSION_TYPE}:</strong><br /><span>{L_MOD_VERSION_TYPE_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_version_type" type="text" id="mod_version_type" value="{MOD_VERSION_TYPE}" maxlength="10" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_DESC}:</strong><br /><span>{L_MOD_DESC_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><textarea id="mod_desc" name="mod_desc" cols="60" rows="8">{MOD_DESC}</textarea></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_AUTHOR}:</strong><br /><span>{L_MOD_AUTHOR_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_author" type="text" id="mod_author" value="{MOD_AUTHOR}" maxlength="50" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_URL}:</strong><br /><span>{L_MOD_URL_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_url" type="text" id="mod_url" value="{MOD_URL}" maxlength="250" size="40" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_MOD_DOWNLOAD}:</strong><br /><span>{L_MOD_DOWNLOAD_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="mod_download" type="text" id="mod_download" value="{MOD_DOWNLOAD}" maxlength="250" size="40" /></td>
+	</tr>
+	</table>
+    
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_MOD}" /></center>
+	</p>
+    
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+<form id="acp_portal_mods" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_MOD_EXPLAIN}</legend>
+    
+	<table cellspacing="1">
+	<tr>
+		<th>{L_MOD_TITLE}</th>
+		<th>{L_MOD_VERSION}</th>
+		<th>{L_MOD_DESC}</th>
+		<th>{L_MOD_AUTHOR}</th>
+		<th>{L_MOD_URL}</th>
+		<th>{L_MOD_DOWNLOAD}</th>
+		<th>{L_ACTION}</th>
+	</tr>
+	<!-- BEGIN mod_desc -->
+		<!-- IF mod_desc.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align: left; width: 20%;">{mod_desc.MOD_TITLE}</td>
+		<td style="text-align: left; width: 10%; white-space: nowrap;">&nbsp;{mod_desc.MOD_VERSION}&nbsp;{mod_desc.MOD_VERSION_TYPE}</td>
+		<td style="text-align: left; width: 30%; ">{mod_desc.MOD_DESC}&nbsp;</td>
+		<td style="text-align: left; width: 10%;">&nbsp;{mod_desc.MOD_AUTHOR}&nbsp;</td>
+		<td style="text-align: left; width: 10%; "><!-- IF mod_desc.MOD_URL --><a href="{mod_desc.MOD_URL}" title="{L_VISIT_WEBSITE}: {mod_desc.MOD_URL}" target="_blank"><span>{L_WEBSITE}</span></a>&nbsp;<!-- ENDIF --></td>
+		<td style="text-align: left; width: 10%; "><!-- IF mod_desc.MOD_DOWNLOAD --><a href="{mod_desc.MOD_DOWNLOAD}" title="{L_MOD_DOWNLOAD}: {mod_desc.MOD_DOWNLOAD}" target="_blank"><span>{L_MOD_DOWNLOAD}</span></a>&nbsp;<!-- ENDIF --></td>
+		<td style="text-align:center;"><a href="{mod_desc.U_EDIT}">{ICON_EDIT}</a> <a href="{mod_desc.U_DELETE}">{ICON_DELETE}</a></td>
+	</tr>
+	<!-- END mod_desc -->
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_MOD}" />
+	</p>
+    
+	</fieldset>
+
+</form>
+
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

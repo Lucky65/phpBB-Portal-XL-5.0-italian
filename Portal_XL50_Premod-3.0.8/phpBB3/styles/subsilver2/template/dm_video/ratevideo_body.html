@@ -1,0 +1,47 @@
+<!-- INCLUDE simple_header.html -->
+<h3>{RATING_TITLE}</h3>
+<br  />
+<!-- IF S_RATED_SUCCESSFUL -->
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr class="row1">
+		<td width="90%" align="center" valign="top">
+			{L_DMV_RATED_SUCCESSFUL}
+		</td>
+	</tr>
+</table>
+<!-- ELSE -->
+<form method="post" action="{U_ACTION}">
+<input type="hidden" name="id" value="{ID}" />
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<th colspan="2">{VIDEO_TITLE} {L_DMV_FROM} {VIDEO_SINGER}</th>
+	</tr>
+	<tr class="row1">
+		<td width="90%" align="center" valign="top">
+		<!-- IF S_HAS_PERM_RATE -->
+				<br /><br /><b>{L_DMV_RATING_VIDEO}:</b> {VIDEO_RATING_SELECT}
+			<br /><br /><br />
+		<!-- ENDIF -->
+		</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2" class="cat">
+			<fieldset class="submit-buttons">
+				<input type="submit" accesskey="s" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;
+				{S_HIDDEN_FIELDS}
+				{S_FORM_TOKEN}
+			</fieldset>
+		</td>
+	</tr>
+</table>
+</form>
+<!-- ENDIF -->
+<br />
+<center>
+<script type="text/javascript" language="JavaScript">
+<!--
+if (window.opener)
+document.write('<a href="#" onclick="self.close();">{L_CLOSE_WINDOW}</a>');
+//-->
+</script>
+<br /><br />

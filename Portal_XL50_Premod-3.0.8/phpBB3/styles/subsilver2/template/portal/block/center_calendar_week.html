@@ -1,0 +1,84 @@
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th colspan="7"><a href="{U_CALENDAR}" title="{L_CALENDAR}">{L_CALENDAR}</a></th>
+	</tr>
+	<tr>
+		<td class="row1" colspan="7">
+        
+        <table cellspacing="1" width="100%">
+          <tr>
+            <td class="row1" style="text-align: left"><!-- IF CALENDAR_PREV_CENTER -->{CALENDAR_PREV_CENTER}</a><!-- ENDIF --></td>
+            <td class="row1" style="text-align: center"><h4>{CALENDAR_HEADER_CENTER}</h4></td>
+            <td class="row1" style="text-align: right"><!-- IF CALENDAR_NEXT_CENTER -->{CALENDAR_NEXT_CENTER}</a><!-- ENDIF --></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="text-align: center">
+              <form id="viewOpts" method="post" action="{S_POST_ACTION_CENTER}">
+                <p><br />{CALENDAR_VIEW_OPTIONS}
+                  <input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1" />
+                </p>
+              </form></td>
+          </tr>
+        </table>
+
+        <table class="table1" cellspacing="1" cellpadding="0">
+          <tr>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{SUNDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{MONDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{TUESDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{WEDNESDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{THURSDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{FRIDAY}</td>
+            <td style="width: 14%; height: 24px; text-align: center" class="bg4">{SATURDAY}</td>
+          </tr>
+          <!-- BEGIN calendar_days -->
+          <!-- IF calendar_days.START_WEEK --><tr style="height: 100px"><!-- ENDIF -->
+            <!-- IF calendar_days.DUMMY_DAY --><td  valign="top" class="bg3_calMon">&nbsp;</td><!-- ELSE --><td valign="top" class="<!-- IF calendar_days.DAY_CLASS eq 'highlight' -->bg2_calMon<!-- ELSE -->bg1_calMon<!-- ENDIF -->"><table style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td class="<!-- IF calendar_days.HEADER_CLASS eq 'highlight' -->bg4_calMonH<!-- ELSE -->bg3_calMonH<!-- ENDIF -->"><!-- IF calendar_days.ADD_LINK --><a href="{calendar_days.ADD_LINK}">{calendar_days.NUMBER}</a><!-- ELSE -->{calendar_days.NUMBER}<!-- ENDIF --><br />
+              <div class="buttons">
+              <!-- IF calendar_days.ADD_LINK -->
+              <div class="calendar-new-icon"><a href="{calendar_days.ADD_LINK}" title="{L_NEW_EVENT}"><span><img name="{L_NEW_EVENT}" src="{T_IMAGESET_LANG_PATH}/calendar_new_star_icon.gif" alt="{L_NEW_EVENT}" /></span></a></div>
+              <!-- ENDIF -->
+              <div class="calendar-day-icon"><a href="{calendar_days.DAY_VIEW_URL}" title="{L_DAY}"><span><img name="{L_DAY}" src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" alt="{L_DAY}" /></span></a></div>
+              <!-- IF calendar_days.WEEK_VIEW_URL -->
+              <div class="calendar-week-icon"><a href="{calendar_days.WEEK_VIEW_URL}" title="{L_WEEK}"><span><img name="{L_WEEK}" src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" alt="{L_WEEK}" /></span></a></div>
+              <!-- ENDIF -->
+              <!-- IF calendar_days.MONTH_VIEW_URL -->
+              <div class="calendar-month-icon"><a href="{calendar_days.MONTH_VIEW_URL}" title="{L_MONTH}"><span><img name="{L_MONTH}" src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" alt="{L_MONTH}" /></span></a></div>
+              <!-- ENDIF -->
+              </div>
+                </td></tr></table><br />
+      
+                <!-- IF calendar_days.BIRTHDAYS -->{calendar_days.BIRTHDAYS}<!-- ENDIF -->
+      
+                  <!-- BEGIN events -->
+                      <!-- IF calendar_days.events.S_FIRST_ROW --><!-- IF calendar_days.BIRTHDAYS --><hr class="hrCal"><!-- ENDIF --><!-- ELSE --><hr class="hrCal"><!-- ENDIF -->
+                      <a href="{calendar_days.events.EVENT_URL}">
+                          <!-- IF calendar_days.events.COLOR --><span style="color:#{calendar_days.events.COLOR}"><!-- ENDIF -->
+                          <!-- IF calendar_days.events.DISPLAY_BOLD --><strong><!-- ENDIF -->
+                          <!-- IF calendar_days.events.IMAGE --><img src="{calendar_days.events.IMAGE}" alt="{calendar_days.events.ETYPE_DISPLAY_NAME}" /> <!-- ENDIF -->
+                          <!-- IF calendar_days.events.ETYPE_DISPLAY_NAME -->{calendar_days.events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{calendar_days.events.EVENT_SUBJECT}
+                          <!-- IF calendar_days.events.DISPLAY_BOLD --></strong><!-- ENDIF -->
+                              <!-- IF calendar_days.events.SHOW_TIME --><br /><span class="smCalText">
+                                  <!-- IF calendar_days.events.ALL_DAY -->{L_ALL_DAY}
+                                  <!-- ELSE -->{L_FROM_TIME}: {calendar_days.events.START_TIME}
+                                  <br />{L_TO_TIME}: {calendar_days.events.END_TIME}
+                                  <!-- ENDIF --></span>
+                              <!-- ENDIF -->
+                          <!-- IF calendar_days.events.COLOR --></span><!-- ENDIF -->
+                      </a>
+                  <!-- END events -->
+            </td>
+            <!-- ENDIF -->
+          <!-- IF calendar_days.END_WEEK --></tr><!-- ENDIF -->
+      
+          <!-- END calendar_days -->
+        </table>
+
+      </td>
+  </tr>
+  <tr>
+      <td class="cat" colspan="7">&nbsp;</td>
+  </tr>
+</table>
+<br />

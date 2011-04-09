@@ -1,0 +1,64 @@
+<!-- INCLUDE overall_header.html -->
+
+<div class="navbar">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h5>{L_MEDIA_PLAYER_VERSION}</h5>
+	<hr align="left" />
+
+<script type="text/javascript" src="{PATH}/swfobject.js"></script>
+
+<div align="center" valign="top">
+<p id="player1"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+<script type="text/javascript">
+	var s1 = new SWFObject("{PATH}/mediaplayer.swf","playlist","600","350","7");
+	s1.addParam("allowfullscreen","true");
+	s1.addParam('allowscriptaccess','always');	
+	s1.addVariable("file","{PATH}/get_media_files_pop.php");
+    s1.addVariable("backcolor","0xcadceb");
+    s1.addVariable("frontcolor","0x007677");
+    s1.addVariable("lightcolor","0xFFD3A6");
+    s1.addVariable("displayheight","100");
+	s1.addVariable("height","350");  
+	s1.addVariable("width","600");  	 
+    s1.addVariable("showeq","true");
+    s1.addVariable("thumbsinplaylist","true");
+    s1.addVariable("showdigits","true");
+    s1.addVariable("repeat","true");
+    s1.addVariable("autostart","true");
+    s1.addVariable("shuffle","true");
+    s1.addVariable("volume","40");
+    s1.addVariable("autoscroll","true");
+    s1.addVariable("showicons","true");
+    s1.write("player1");
+</script>
+</div>
+
+<!--
+<div align="center" valign="top">
+<object width="100%" height="250" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+<param name="movie" value="{PATH}/mediaplayer.swf?config={PATH}/default/config.xml&file={PATH}/get_media_files_pop.php" />
+<param name="menu" value="true" />
+<param name="quality" value="low" />
+<param name="bgcolor" value="#000000" />
+<param name="flashvars" value="file={PATH}/get_media_files_pop.php&autostart=true" />
+<embed src="{PATH}/mediaplayer.swf" width="100%" height="250" menu="false" quality="low" bgcolor="#ff0000" flashvars="file={PATH}/get_media_files_pop.php&autostart=true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+</div>
+ -->
+ 
+<!-- 
+<div align="center">
+	<a href="{U_UPLOAD_DIR}">{L_MEDIA_UPLOAD}</a>
+</div> -->
+ 
+<div align="center">
+	<a class="button2" value="{L_CLOSE_WINDOW}" href="#" onClick="window.close(); return false;">{L_CLOSE_WINDOW}</a>
+</div>
+
+
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

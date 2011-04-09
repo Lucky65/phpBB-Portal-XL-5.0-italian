@@ -1,0 +1,18 @@
+Oggetto: Download modificato
+
+Ciao {USERNAME},
+
+ricevi questa email come notifica di un cambiamento del download su {SITENAME} nella categoria "{CATEGORY}":
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Se vuoi controllare il download clicca sul seguente link:
+
+{U_CATEGORY}
+
+Ricorda che puoi scegliere di non ricevere le notifiche relative ai nuovi o modificati downloads modificando le impostazioni del tuo profilo.
+
+{BOARD_EMAIL}

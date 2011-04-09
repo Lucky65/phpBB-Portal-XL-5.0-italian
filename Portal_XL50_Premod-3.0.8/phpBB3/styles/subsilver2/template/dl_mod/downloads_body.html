@@ -1,0 +1,113 @@
+<!-- INCLUDE overall_header.html -->
+
+	<!-- IF DL_MODCP -->
+	<table width="100%" cellpadding="3" cellspacing="1" border="0" class="table1">	
+	<tr>
+		<td align="right">[ {DL_MODCP} ]</td>
+	</tr>
+	</table>
+
+	<br />
+	<!-- ENDIF -->
+
+	<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
+	<tr>
+		<td align="right" style="width: 50%"><!-- IF S_DL_UPLOAD -->{DL_UPLOAD}&nbsp;&bull;&nbsp;<!-- ENDIF -->{U_DL_SEARCH}</td>
+	</tr>
+	<!-- IF S_CAT_TRAFFIC -->
+	<tr>
+		<td colspan="2" class="row3"><span> &bull; <b>{CAT_TRAFFIC}</b> &bull; </span></td>
+	</tr>
+	<!-- ENDIF -->
+	<!-- IF S_CAT_RULE -->
+	<tr>
+		<td colspan="2" style="background-color: #ddbbdd; color: #aa0000;"><span>{CAT_RULE}</span></td>
+	</tr>
+	<!-- ENDIF -->
+	</table>
+
+	<!-- IF S_SUBCATS --><!-- INCLUDE dl_mod/view_dl_subcat_body.html --><!-- ENDIF -->
+
+	<br />
+
+	<!-- IF S_DOWNLOAD_ROWS -->
+	<table width="100%" cellpadding="3" cellspacing="1" border="0" class="table1">
+	<thead>
+	<tr>
+		<th>{L_INFO}</th>
+		<th>{L_NAME}</th>
+		<th>{L_DESCRIPTION}</th>
+		<th>{L_SIZE}</th>
+		<th nowrap="nowrap">{L_KLICKS}<br />{L_OVERALL_KLICKS}</th>
+		<!-- BEGIN comment_header -->
+		<th>{comment_header.L_COMMENTS}</th>
+		<!-- END comment_header -->
+		<th nowrap="nowrap">{L_RATING}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN downloads -->
+	<tr>
+		<td class="row1" align="center">{downloads.STATUS}</td>
+		<td class="row1"><span><a href="{downloads.U_FILE}" class="nav">{downloads.DESCRIPTION}</a>&nbsp;{downloads.HACK_VERSION}</span>&nbsp;{downloads.MINI_IMG}</td>
+		<td class="row1" align="left"><span>{downloads.LONG_DESC}</span></td>
+		<td class="row1" align="right"><span>{downloads.FILE_SIZE}</span></td>
+		<td class="row1" align="center"><span>{downloads.FILE_KLICKS} / {downloads.FILE_OVERALL_KLICKS}</span></td>
+		<!-- BEGIN comments -->
+		<td class="row1" align="center"><span>
+			<a href="{downloads.comments.U_COMMENT_POST}" class="postdetails">{downloads.comments.L_COMMENT_POST}</a><!-- IF downloads.comments.U_COMMENT_SHOW -->{downloads.comments.BREAK}<a href="{downloads.comments.U_COMMENT_SHOW}" class="postdetails">{downloads.comments.L_COMMENT_SHOW}</a><!-- ENDIF -->
+		</span></td>
+		<!-- END comments -->
+		<td class="row1" nowrap="nowrap"><span>
+			{downloads.RATING_IMG}<!-- IF downloads.RATINGS -->&nbsp;{downloads.RATINGS}<!-- ENDIF -->
+			<!-- IF downloads.U_RATING --><br /><a href="{downloads.U_RATING}" class="small">{downloads.L_RATING}</a><!-- ENDIF --></span>
+		</td>
+	</tr>
+	<!-- END downloads -->
+	</tbody>
+	</table>
+	<!-- ENDIF -->
+
+	<!-- IF S_EMPTY_CATEGORY -->
+	<table width="100%" cellpadding="3" cellspacing="1" border="0">	
+	<tr>
+		<td align="center" class="row1"><strong>{L_EMPTY_CATEGORY}</strong></td>
+	</tr>
+	</table>
+	<!-- ENDIF -->
+
+	<!-- IF S_MODCP or PAGE_NUMBER -->
+	<table width="100%" cellpadding="3" cellspacing="1" border="0" class="table1">	
+	<tr>
+		<!-- IF S_MODCP -->
+		<td>{DL_MODCP}</td>
+		<!-- ENDIF -->
+		<!-- IF PAGE_NUMBER -->
+		<td align="right">{PAGE_NUMBER}&nbsp;&bull;&nbsp;{L_GOTO_PAGE}: {PAGINATION}</td>
+		<!-- ENDIF -->
+	</tr>
+	</table>
+	<!-- ENDIF -->
+
+	<br />
+
+	<!-- IF S_SORT_OPTIONS -->
+	<form action="{U_DOWNLOADS}" method="post" id="dl_mod">
+
+	<table width="100%" cellspacing="10" cellpadding="0" border="0">
+	<tr>
+		<td align="right">
+			<span class="genmed">{L_SORT_BY}&nbsp;{S_SORT_BY}&nbsp;&nbsp;&nbsp;{L_ORDER}&nbsp;{S_ORDER}</span>&nbsp;
+			<input type="submit" class="liteoption" value="{L_GO}" />
+		</td>
+	</tr>
+	</table>
+
+	</form>
+	<!-- ENDIF -->
+
+<br />
+	
+<!-- INCLUDE dl_mod/dl_footer.html -->
+
+<!-- INCLUDE overall_footer.html -->

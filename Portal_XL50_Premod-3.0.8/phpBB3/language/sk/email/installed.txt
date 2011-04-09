@@ -1,0 +1,19 @@
+Subject: phpBB nainštalované
+
+Gratulujeme,
+
+Inštalácia phpBB na Váš server prebehla úspešne.
+
+Tento email obsahuje dôležité informácie týkajúce sa Vašej inštalácie. Mali by ste si ich bezpečne uschovať. Heslo bolo v databáze zašifrované a neexistuje možnosť, ako ho zistiť. V prípade, že zabudnete Vaše heslo, môžete požiadať o nové.
+
+----------------------------
+Užívateľ: {USERNAME}
+
+
+URL fóra: {U_BOARD}
+----------------------------
+
+Za účelom bezpečnosti fóra, odporúčame držať krok s vývojom softvéru, čo ľahko dosiahnete prihlásením sa na prijímanie emailu týkajuceho sa phpBB.
+Prihlásiť sa môťete na - http://www.phpbb.com/support/    prípadne českej podpory - http://www.phpbb.cz   slovenskej podpory -  http://www.phpbb3.sk 
+
+{EMAIL_SIG}

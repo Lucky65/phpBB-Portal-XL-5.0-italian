@@ -1,0 +1,93 @@
+<!-- INCLUDE overall_header.html -->
+</br />
+<form action="{ACTION}" method="post">
+<fieldset class="fields1">
+    <table class="tablebg" cellspacing="0" width="100%" cellpadding="0" border="0">
+        <tr><th colspan="2"><!-- BEGIN toplist_edit -->
+	{L_TOPLIST_EDIT_WEBSITE}
+	<!-- END toplist_edit -->
+	<!-- BEGIN toplist_add -->
+	{L_TOPLIST_ADD_WEBSITE}
+	<!-- END toplist_add --></th></tr>
+	<tr class="row1">
+		<td><label for="site_name">{L_TOPLIST_NAME}:</label></td>
+		<td><!-- BEGIN toplist_name_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_name_error --><input type="text" name="site_name" id="site_name" size="90" maxlength="255" tabindex="1" value="{NAME}" class="inputbox autowidth" /></td>
+	</tr>
+	<tr class="row2">
+		<td><label for="site_info">{L_TOPLIST_INFO}:</label></td>
+		<td><!-- BEGIN toplist_info_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_info_error --><div id="site_info-box">
+		<textarea name="site_info" id="site_info" rows="15" cols="76" tabindex="2" class="inputbox">{INFO}</textarea>
+	</div></td></tr>
+	<tr class="row1">
+		<td><label for="site_link">{L_TOPLIST_SITE_URL}:</label></td>
+		<td><!-- BEGIN toplist_url_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_url_error --><!-- BEGIN toplist_url_exists_error --><p class="error">{L_TOPLIST_EDIT_ERROR_SITE}</p><!-- END toplist_url_exists_error --><input type="text" name="site_link" id="site_link" size="90" maxlength="255" tabindex="5" value="{LINK}" class="inputbox autowidth" /></td>
+	</tr>
+	<tr class="row2">
+		<td><label for="site_name">{L_TOPLIST_BANNER_URL}:</label></td>
+		<td><input type="text" name="site_banner" id="site_banner" size="90" maxlength="255" tabindex="4" value="{BANNER}" class="inputbox autowidth" /></td>
+	</tr>
+    <tr><td colspan="2" class="cat">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" value="L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+    </td></tr></fieldset>
+<!-- BEGIN toplist_image_error -->
+			<tr>
+				<td></dt>
+				<td><p class="error">{L_TOPLIST_EDIT_ERROR}</p></td>
+			</tr>
+<!-- END toplist_image_error -->
+<tr><th class="tablebg" colspan="2">{L_TOPLIST_PLAIN}</th></tr>
+<!-- BEGIN image -->
+<tr>
+        <td class="row2"><input type="radio" name="image" value="{image.FILENAME}" {image.SELECTED}/></td>
+        <td class="row2"><img border="0" src="{image.URL}" alt="" /></td>
+</tr>
+<!-- END image -->
+    <tr><td colspan="2" class="cat">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" value="L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+    </td></tr>
+<!-- BEGIN gd_installed -->
+<tr><th class="tablebg" colspan="2">{L_TOPLIST_GD_OPTIONS}</th></tr>
+<!-- END gd_installed -->
+<!-- BEGIN gdimage -->
+<tr>
+        <td class="row1"><input type="radio" name="image" value="SimpleGD:{gdimage.FILENAME}" {image.SELECTED}/></td>
+        <td class="row2"><img border="0" src="{gdimage.URL}" alt="" /></td>
+</tr>
+<!-- END gdimage -->
+<!-- BEGIN gd_installed -->
+    <tr><td colspan="2" class="cat">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" value="L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+    </td></tr>
+<!-- END gd_installed -->
+<!-- BEGIN toplist_edit -->
+<tr>
+    <th colspan="2" class="tablebg">{L_TOPLIST_CODE_DP}</th>
+</tr><tr><td class="row1" colspan="2"><textarea name="code_info" id="code_info" rows="2" cols="76" tabindex="2" class="inputbox"><a href="{CODE_BASE}mods/toplist_mod/dload.php?id={CODE_ID}"><img src="{CODE_BASE}mods/toplist_mod/image.php?id={CODE_ID}" style="border:0px;" /></a></textarea>
+</td></tr>
+    <tr><td colspan="2" class="cat">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" value="L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+    </td></tr>
+<!-- END toplist_edit -->
+</table>
+</form>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,44 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// phpbb Calendar
+$lang = array_merge($lang, array(
+	'IMG_BUTTON_CALENDAR_NEW'	=> 'New Event',
+	'IMG_BUTTON_CALENDAR_DAY'	=> 'View Day',
+	'IMG_BUTTON_CALENDAR_WEEK'	=> 'View Week',
+	'IMG_BUTTON_CALENDAR_MONTH'	=> 'View Month',
+));
+
+// AJAX checking
+$lang = array_merge($lang, array(
+	'IMG_ICON_AJAX_CHECKING'		=> 'AJAX checking',
+	'IMG_ICON_AJAX_TRUE'			=> 'AJAX true',
+	'IMG_ICON_AJAX_FALSE'			=> 'AJAX false',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_1'	=> 'AJAX password strength - Very weak',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_2'	=> 'AJAX password strength - Weak',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_3'	=> 'AJAX password strength - Acceptable',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_4'	=> 'AJAX password strength - Strong',
+));
+
+// -- Gender MOD 1.0.1
+$lang = array_merge($lang, array(
+	'IMG_ICON_GENDER_X'	=> 'Gender: None specified',
+	'IMG_ICON_GENDER_M'	=> 'Gender: Male',
+	'IMG_ICON_GENDER_F'	=> 'Gender: Female',
+));
+// -- Gender MOD 1.0.1
+
+// Start DM Video
+$lang = array_merge($lang, array(
+	'IMG_BUTTON_COMMENT_NEW'	=> 'New comment',
+	'IMG_BUTTON_VIDEO_NEW'		=> 'New Video',
+));
+// Start DM Video
+
+

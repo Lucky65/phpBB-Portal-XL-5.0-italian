@@ -1,0 +1,13 @@
+Subject: Notifica risposta commento - "{IMAGE_NAME}"
+
+Ciao {USERNAME},
+
+Ricevi questa notifica perche' stai controllando l'immagine, "{IMAGE_NAME}" su "{SITENAME}". Questa immagine ha ricevuto un nuovo commento dalla tua ultima visita. Tramite i link seguenti puoi vedere tutti i commenti;
+
+{U_IMAGE}
+
+Se non desideri piu' controllare questo argomento puoi cliccare su "Annulla sottoscrizione" che trovi alla fine della pagina, o cliccando il link seguente:
+
+{U_STOP_WATCHING_IMAGE}
+
+{EMAIL_SIG}

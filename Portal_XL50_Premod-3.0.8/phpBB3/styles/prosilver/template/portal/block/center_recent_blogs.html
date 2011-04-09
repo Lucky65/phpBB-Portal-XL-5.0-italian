@@ -1,0 +1,85 @@
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$("#recent_blog-accordion").accordion({
+		collapsible : true,
+		header		: 'h5',
+		active      : 0,
+		autoHeight	: false,
+		icons: {
+			header: 'ui-icon-circle-arrow-e',
+			headerSelected: 'ui-icon-circle-arrow-s'
+		}
+	});
+});
+// ]]>
+</script>
+
+<style type='text/css'>
+.recent_blog-accordion-content {
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 1.6em;
+}
+.recent_blog-accordion-content th {
+	font-weight: normal;
+	font-style: italic;
+	padding-bottom: 2px;
+}
+.recent_blog-accordion-topictitle {
+	font-weight: bold;
+}
+#recent_blog-accordion h5 {
+	font-weight: normal;
+	font-size: 11px;
+}
+</style>
+
+<div id="recent_blog-accordionResizer">
+  <div id="recent_blog-accordion">
+    <!-- IF .recent_blogs -->
+    <!-- BEGIN recent_blogs -->
+    <h5><a href="{recent_blogs.U_VIEW}">{recent_blogs.TITLE}</a></h5>
+    <div class="recent_blog-accordion-content">
+      <table class="tablebg" cellspacing="1" width="100%">
+        <!--<tr>
+        <th>{L_RECENT_BLOGS}</th>
+      </tr>-->
+       <!-- IF recent_blogs.S_UNAPPROVED or recent_blogs.S_REPORTED -->
+        <!-- IF recent_blogs.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+          <td valign="top" width="100%">
+              <p class="rules">
+              <!-- IF recent_blogs.S_UNAPPROVED -->
+              {UNAPPROVED_IMG} <a href="{recent_blogs.U_APPROVE}"><strong>{L_UNAPPROVED}</strong></a>
+              <!-- ENDIF -->
+              <!-- IF recent_blogs.S_REPORTED -->
+              {REPORTED_IMG} <a href="{recent_blogs.U_REPORT}"><strong>{L_REPORTED_SHORT}</strong></a>
+              <!-- ENDIF -->
+            </p>
+          </td>
+        </tr>
+       <!-- ENDIF -->
+        <!-- IF recent_blogs.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+          <td valign="top" width="100%">
+            <!-- IF recent_blogs.S_HAS_POLL -->
+            <img src="{T_THEME_PATH}/images/blog/icon_poll.gif" style="float: right;" alt="" />
+            <!-- ENDIF -->
+            <a href="{recent_blogs.U_VIEW}"><strong>{recent_blogs.TITLE}</strong></a> {L_POST_BY_AUTHOR} <strong>{recent_blogs.USER_FULL}</strong> {L_POSTED_ON_DATE} {recent_blogs.DATE} <br />
+            <div style="margin:5px;">{recent_blogs.MESSAGE}</div>
+            
+            <!-- IF recent_blogs.S_HAS_ATTACHMENTS -->
+            <br style="clear: both" />
+            <div class="attachwrapper">
+              <div class="attachtitle">{L_ATTACHMENTS}</div>
+            </div>
+            <!-- ENDIF -->
+            
+            <div> <span class="num_replies">{recent_blogs.REPLIES}</span> {recent_blogs.VIEWS} </div>
+            </td>
+        </tr>
+      </table>
+    </div>
+    <!-- END recent_blogs -->
+    <!-- ENDIF -->
+  </div>
+</div>

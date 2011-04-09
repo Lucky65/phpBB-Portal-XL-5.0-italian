@@ -1,0 +1,35 @@
+<a name="attachpage"></a><a name="att={attach.ATTACH_ID}"></a>    
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="2">{L_ATTACHMENTS}</td>
+</tr>-->  
+  <tr>
+    <th>{L_TOP_FILENAME}</th>
+    <th>{L_TOP_DATE}</th>
+    <th>{L_TOP_FILESIZE}</th>
+    <th>{L_TOP_COUNT}</th>
+  </tr>
+<!-- BEGIN attach -->
+  <tr>
+    <td align="left" valign="middle" class="<!-- IF attach.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><a href="{attach.U_FILELINK}" target="_blank"><img src="portal/images/icon_topic_attach.gif" /></a> <a href="{attach.U_FILE}" target="_blank">{attach.REAL_FILENAME}</a></td>
+    <td align="right" nowrap="nowrap" valign="middle" class="<!-- IF attach.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{attach.ATTACH_DATE}</td>
+    <td align="right" nowrap="nowrap" valign="middle" class="<!-- IF attach.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{attach.FILESIZE}</td>
+    <td align="right" nowrap="nowrap" valign="middle" class="<!-- IF attach.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{attach.ATTACH_COUNT}&nbsp;{L_TOP_X}</td>
+  </tr>
+<!-- END attach -->
+</table>
+
+<table width="100%" cellspacing="1">
+  <tr>
+	<td valign="bottom">
+    
+<!-- IF ATTACH_PAGE_NUMBER -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{L_TOTAL_ATTACHMENTS} {ATTACH_TOTAL_ATTACHMENTS}
+<!-- IF ATTACH_PAGINATION --><span class="gensmall">&bull; {ATTACH_PAGE_NUMBER}  &bull; {ATTACH_PAGINATION}<!-- ELSE --> &bull; {ATTACH_PAGE_NUMBER}</span><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+
+    </td>
+  </tr>
+</table>

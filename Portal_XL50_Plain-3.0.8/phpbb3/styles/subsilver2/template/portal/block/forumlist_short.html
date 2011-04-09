@@ -1,0 +1,28 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="1">{L_FCATEGORIES}</td>
+</tr>-->  
+  <!-- BEGIN forumrow -->
+  <!-- IF forumrow.S_IS_CAT -->
+  <tr>
+    <td class="row1"><a href="{forumrow.U_VIEWFORUM}"><b>&#8226;&nbsp;<font color="{forumrow.FORUM_NAME_COLOR}">{forumrow.FORUM_NAME}</font></b></a></td>
+  </tr>
+  <tr>
+    <td class="row2">&nbsp;&nbsp;&nbsp;{forumrow.FORUM_DESC} </td>
+  </tr>
+  <!-- ELSEIF forumrow.S_IS_LINK -->
+  <tr>
+    <!-- IF forumrow.CLICKS -->
+    <td class="row1"><!-- ENDIF -->
+      <a href="{forumrow.U_VIEWFORUM}">&#8226;&nbsp;<font color="{forumrow.FORUM_NAME_COLOR}">{forumrow.FORUM_NAME}</font></a> <br>
+      <!-- IF forumrow.CLICKS -->
+      &nbsp;&nbsp;&nbsp;<span class="genmed">{L_REDIRECTS}: {forumrow.CLICKS}</span></td>
+    <!-- ENDIF -->
+  </tr>
+  <!-- ENDIF -->
+  <!-- BEGINELSE -->
+  <tr>
+    <td class="row1" colspan="5" align="center"><p class="genmed">{L_NO_FORUMS}</p></td>
+  </tr>
+  <!-- END forumrow -->
+</table>

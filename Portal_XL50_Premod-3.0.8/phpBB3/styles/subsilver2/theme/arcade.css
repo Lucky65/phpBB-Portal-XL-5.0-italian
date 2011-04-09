@@ -1,0 +1,43 @@
+/**
+*
+* @package arcade
+* @version $Id: arcade.css 726 2009-01-04 19:05:37Z JRSweets $
+* @copyright (c) 2008 http://www.JeffRusso.net
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+*
+*/
+
+/*
+* Tooltip to display the game description
+*/
+a.tooltip {
+	font-weight: bold;
+	position: relative;
+	text-decoration: none;
+}
+
+a.tooltip span {
+	position: absolute;
+	font-weight: normal;
+	border: 1px solid black;
+	background-color: #ECECEC;
+	padding: 10px;		
+	color: black;
+	width: 225px;
+	margin-top: 18px;
+	left: -9999em;
+}
+
+a.tooltip:hover {
+	visibility: visible;
+	z-index: 100;
+}
+
+a.tooltip:hover span, a.tooltip:focus span {
+	left: 60px;
+	text-decoration: none;
+}
+
+a.tooltip span.aheader {
+	width: 200px;
+}

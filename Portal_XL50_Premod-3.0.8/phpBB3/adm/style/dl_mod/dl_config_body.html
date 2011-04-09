@@ -1,0 +1,341 @@
+<h1>{L_DL_CONFIG}</h1>
+
+<p>{L_DL_CONFIG_EXPLAIN}</p>
+
+<form id="acp_dl_config" method="post" action="{S_CONFIG_ACTION}">
+
+	<fieldset>
+
+	<dl>
+		<dt><label style="color: #FF0000;">{L_DL_ACTIVE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_ACTIVE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_active" value="1" {DL_ACTIVE_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_active" value="0" {DL_ACTIVE_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_OFF_HIDE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_OFF_HIDE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_off_hide" value="1" {DL_OFF_HIDE_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_off_hide" value="0" {DL_OFF_HIDE_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_OFF_NOW_TIME}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_OFF_NOW_TIME_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_off_now_time" value="1" {DL_OFF_NOW_TIME_YES} /> {L_DL_OFF_NOW}</label><label><input type="radio" class="radio" name="dl_off_now_time" value="0" {DL_OFF_NOW_TIME_NO} /> {L_DL_OFF_TIME}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_OFF_PERIOD}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_OFF_TIME_PERIOD_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="text" class="input autowidth" size="5" maxlength="5" name="dl_off_from" value="{DL_OFF_FROM}" /></label> - <label><input type="text" class="input autowidth" size="5" maxlength="5" name="dl_off_till" value="{DL_OFF_TILL}" /></label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_ON_ADMINS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_ON_ADMINS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_on_admins" value="1" {DL_ON_ADMINS_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_on_admins" value="0" {DL_ON_ADMINS_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DOWNLOAD_PATH}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_PATH_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" size="20" maxlength="255" name="dl_download_dir" value="{DL_PATH}" /></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_METHOD}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_METHOD_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{S_DL_METHOD_SELECT}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_METHOD_QUOTA}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_METHOD_QUOTA_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_method_quota" value="{DL_METHOD_QUOTA}" />&nbsp;{S_DL_METHOD_QUOTA_RANGE}</dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_TRAFFIC_OFF}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TRAFFIC_OFF_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_traffic_off" value="1" {TRAFFIC_OFF_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_traffic_off" value="0" {TRAFFIC_OFF_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_USE_HACKLIST}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_USE_HACKLIST_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_use_hacklist" value="1" {USE_HACKLIST_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_use_hacklist" value="0" {USE_HACKLIST_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	<dl>
+		<dt><label>{L_DL_USE_EXT_BLACKLIST}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_USE_EXT_BLACKLIST_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_use_ext_blacklist" value="1" {USE_EXT_BLACKLIST_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_use_ext_blacklist" value="0" {USE_EXT_BLACKLIST_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_STOP_UPLOADS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_STOP_UPLOADS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_stop_uploads" value="1" {STOP_UPLOADS_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_stop_uploads" value="0" {STOP_UPLOADS_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_UPLOAD_TRAFFIC_COUNT}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_UPLOAD_TRAFFIC_COUNT_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_upload_traffic_count" value="1" {UPLOAD_TRAFFIC_COUNT_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_upload_traffic_count" value="0" {UPLOAD_TRAFFIC_COUNT_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_ANTISPAM}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_ANTISPAM_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{L_DL_ANTISPAM_POSTS}&nbsp;<input type="text" class="post" size="5" maxlength="10" name="dl_antispam_posts" value="{DL_ANTISPAM_POSTS}" />&nbsp;&nbsp;{L_DL_ANTISPAM_HOURS}&nbsp;<input type="text" class="post" size="5" maxlength="10" name="dl_antispam_hours" value="{DL_ANTISPAM_HOURS}" /></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset class="quick">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</fieldset>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_ICON_FREE_FOR_REG}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_ICON_FREE_FOR_REG_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_icon_free_for_reg" value="1" {ICON_FREE_FOR_REG_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_icon_free_for_reg" value="0" {ICON_FREE_FOR_REG_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_NEW_TIME}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_NEW_TIME_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_new_time" size="3" maxlength="4" value="{DL_NEW_TIME}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_EDIT_TIME}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_EDIT_TIME_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_edit_time" size="3" maxlength="4" value="{DL_EDIT_TIME}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_EDIT_OWN_DOWNLOADS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_EDIT_OWN_DOWNLOADS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_edit_own_downloads" value="1" {EDIT_OWN_DOWNLOADS_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_edit_own_downloads" value="0" {EDIT_OWN_DOWNLOADS_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_SHOW_FOOTER_LEGEND}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_SHOW_FOOTER_LEGEND_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_show_footer_legend" value="1" {SHOW_FOOTER_LEGEND_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_show_footer_legend" value="0" {SHOW_FOOTER_LEGEND_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_SHOW_FOOTER_STAT}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_SHOW_FOOTER_STATS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_show_footer_stat" value="1" {SHOW_FOOTER_STATS_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_show_footer_stat" value="0" {SHOW_FOOTER_STATS_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_SHOW_REAL_FILETIME}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_SHOW_REAL_FILETIME_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_show_real_filetime" value="1" {SHOW_REAL_FILETIME_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_show_real_filetime" value="0" {SHOW_REAL_FILETIME_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_SHORTEN_EXTERN_LINKS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_SHORTEN_EXTERN_LINKS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_shorten_extern_links" size="3" maxlength="4" value="{SHORTEN_EXTERN_LINKS}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_LIMIT_DESC_ON_INDEX}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_LIMIT_DESC_ON_INDEX_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_limit_desc_on_index" size="5" maxlength="10" value="{LIMIT_DESC_ON_INDEX}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_EXT_NEW_WINDOW}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_EXT_NEW_WINDOW_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_ext_new_window" value="1" {EXT_NEW_WINDOW_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_ext_new_window" value="0" {EXT_NEW_WINDOW_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_VISUAL_CONFIRMATION}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DOWNLOAD_VC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_download_vc" value="1" {DOWNLOAD_VC_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_download_vc" value="0" {DOWNLOAD_VC_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_REPORT_BROKEN}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_REPORT_BROKEN_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{S_REPORT_BROKEN_SELECT}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_REPORT_BROKEN_LOCK}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_REPORT_BROKEN_LOCK_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_report_broken_lock" value="1" {REPORT_BROCKEN_LOCK_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_report_broken_lock" value="0" {REPORT_BROCKEN_LOCK_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_REPORT_BROKEN_MESSAGE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_REPORT_BROKEN_MESSAGE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" name="dl_report_broken_message" value="1" {REPORT_BROCKEN_MESSAGE_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_report_broken_message" value="0" {REPORT_BROCKEN_MESSAGE_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_REPORT_BROKEN_VC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_REPORT_BROKEN_VC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_report_broken_vc" value="1" {REPORT_BROCKEN_VC_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_report_broken_vc" value="0" {REPORT_BROCKEN_VC_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_LINKS_PER_PAGE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_LINKS_PER_PAGE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_links_per_page" size="3" maxlength="4" value="{DL_LINKS_PER_PAGE}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_SORT_PREFORM}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_SORT_PREFORM_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{S_SORT_PREFORM_SELECT}</dd>
+	</dl>
+	<!-- IF S_PORTAL_BLOCK -->
+	<dl>
+		<dt><label>{L_NUMBER_RECENT_DL_ON_PORTAL}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_RECENT_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_recent_downloads" size="3" maxlength="4" value="{DL_RECENT}" /></dd>
+	</dl>
+	<!-- ENDIF -->
+	<dl>
+		<dt><label>{L_DL_LATEST_COMMENTS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_LATEST_COMMENTS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_latest_comments" size="3" maxlength="4" value="{LATEST_COMMENTS}" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_POSTS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_POSTS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_posts" size="3" maxlength="4" value="{DL_POSTS}" /></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_PHYSICAL_QUOTA}</label><br /><span>{L_DL_PHYSICAL_QUOTA_SECOND}</span></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_PHYSICAL_QUOTA_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_physical_quota" value="{PHYSICAL_QUOTA}" />&nbsp;{S_PHYSICAL_QUOTA_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_OVERALL_TRAFFIC}</label><br /><span>{REMAINING_OVERALL_TRAFFIC}</span></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_OVERALL_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_overall_traffic" value="{OVERALL_TRAFFIC}" />&nbsp;{S_OVERALL_TRAFFIC_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_OVERALL_GUEST_TRAFFIC}</label><br /><span>{REMAINING_OVERALL_GUEST_TRAFFIC}</span></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_OVERALL_GUEST_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_overall_guest_traffic" value="{OVERALL_GUEST_TRAFFIC}" />&nbsp;{S_OVERALL_GUEST_TRAFFIC_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_USER_TRAFFIC_ONCE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_USER_TRAFFIC_ONCE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_user_traffic_once" value="1" {USER_TRAFFIC_ONCE_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_user_traffic_once" value="0" {USER_TRAFFIC_ONCE_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_ENABLE_POST_TRAFFIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_ENABLE_POST_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_enable_post_dl_traffic" value="1" {ENABLE_POST_TRAFFIC_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_enable_post_dl_traffic" value="0" {ENABLE_POST_TRAFFIC_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_NEWTOPIC_TRAFFIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_NEWTOPIC_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_newtopic_traffic" value="{NEWTOPIC_TRAFFIC}" />&nbsp;{S_NEWTOPIC_TRAFFIC_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_REPLY_TRAFFIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_REPLY_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" class="post" size="10" maxlength="20" name="dl_reply_traffic" value="{REPLY_TRAFFIC}" />&nbsp;{S_REPLY_TRAFFIC_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_DROP_TRAFFIC_POSTDEL}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DROP_TRAFFIC_POSTDEL_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_drop_traffic_postdel" value="1" {DROP_TRAFFIC_POSTDEL_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_drop_traffic_postdel" value="0" {DROP_TRAFFIC_POSTDEL_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_DELAY_AUTO_TRAFFIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_DELAY_AUTO_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_delay_auto_traffic" size="3" maxlength="4" value="{DELAY_AUTO_TRAFFIC}" />&nbsp;{L_DL_DAYS}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_DELAY_POST_TRAFFIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_DELAY_POST_TRAFFIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input class="post" type="text" name="dl_delay_post_traffic" size="3" maxlength="4" value="{DELAY_POST_TRAFFIC}" />&nbsp;{L_DAYS}</dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_THUMB_MAX_SIZE}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_THUMBSNAIL_SIZE_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" size="10" class="post" maxlength="20" name="dl_thumb_fsize" value="{THUMB_FSIZE}" />&nbsp;{S_THUMBS_FSIZE_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_THUMB_MAX_DIM}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_THUMBSNAIL_DIM_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<input type="text" size="5" maxlength="5" class="post" name="dl_thumb_xsize" value="{THUMB_XSIZE}" />&nbsp;*&nbsp;
+						<input type="text" size="5" maxlength="5" class="post" name="dl_thumb_ysize" value="{THUMB_YSIZE}" /></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_DISABLE_EMAIL}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_DISABLE_EMAIL_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_disable_email" value="1" {DISABLE_EMAIL_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_disable_email" value="0" {DISABLE_EMAIL_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_DISABLE_POPUP}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_DISABLE_POPUP_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_disable_popup" value="1" {DISABLE_POPUP_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_disable_popup" value="0" {DISABLE_POPUP_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_DISABLE_POPUP_NOTIFY}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_DISABLE_POPUP_NOTIFY_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_disable_popup_notify" value="1" {DISABLE_POPUP_NOTIFY_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_disable_popup_notify" value="0" {DISABLE_POPUP_NOTIFY_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_STAT_PERM}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_STATS_PERM_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{S_STATS_PERM_SELECT}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_GUEST_STATS_SHOW}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_GUEST_STATS_SHOW_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_guest_stats_show" value="1" {GUEST_STATS_SHOW_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_guest_stats_show" value="0" {GUEST_STATS_SHOW_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_PREVENT_HOTLINK}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_PREVENT_HOTLINK_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_prevent_hotlink" value="1" {PREVENT_HOTLINK_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_prevent_hotlink" value="0" {PREVENT_HOTLINK_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_HOTLINK_ACTION}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_HOTLINK_ACTION_EXPLAIN}')">(?)</a>&nbsp;&nbsp;{S_HOTLINK_ACTION_SELECT}</dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_ENABLE_TOPIC}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_ENABLE_TOPIC_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_enable_dl_topic" value="1" {ENABLE_DL_TOPIC_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_enable_dl_topic" value="0" {ENABLE_DL_TOPIC_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_TOPIC_USER}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TOPIC_USER_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label>{S_DL_DIFF_TOPIC_USER}</label>&nbsp;&nbsp;<input type="text" size="10" name="dl_topic_user" value="{DL_TOPIC_USER}" class="inputbox autowidth" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_TOPIC_FORUM}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TOPIC_FORUM_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label>{S_DL_TOPIC_FORUM}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_TOPIC_TEXT}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TOPIC_TEXT_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><textarea cols="75" rows="5" class="inputbox autowidth" name="dl_topic_text">{DL_TOPIC_TEXT}</textarea></label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_TOPIC_DETAILS}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TOPIC_DETAILS_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label>{S_TOPIC_MORE_DETAILS}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset>
+
+	<dl>
+		<dt><label>{L_DL_TODO_LINK}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_TODO_LINK_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_todo_link_onoff" value="1" {TODO_LINK_OFF_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_todo_link_onoff" value="0" {TODO_LINK_OFF_NO} /> {L_NO}</label></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_DL_UCONF_LINK}</label></dt>
+		<dd><a href="javascript:void(0)" onclick="javascript:help_popup('{L_DL_UCONF_LINK_EXPLAIN}')">(?)</a>&nbsp;&nbsp;<label><input type="radio" class="radio" name="dl_uconf_link_onoff" value="1" {U_CONFIG_OFF_YES} /> {L_YES}</label><label><input type="radio" class="radio" name="dl_uconf_link_onoff" value="0" {U_CONFIG_OFF_NO} /> {L_NO}</label></dd>
+	</dl>
+
+	</fieldset>
+
+	<fieldset class="quick">
+		<input class="button1" type="submit" id="submit2" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset2" name="reset" value="{L_RESET}" />
+		{S_FORM_TOKEN}
+	</fieldset>
+
+</form>
+
+<br />

@@ -1,0 +1,36 @@
+<!-- IF .events -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th colspan="5">&nbsp;</th>
+	</tr>
+	<tr>
+		<td class="row1" colspan="5">
+        
+		<table class="tablebg" width="100%" cellspacing="1">
+			<tr>
+				<td class="cat" align="left" colspan="2"><h4>{L_UPCOMING_EVENTS}</h4></td>
+				<td class="cat" width="16%"><h4>{L_INVITE_INFO}</h4></td>
+				<td class="cat" width="16%"><h4>{L_EVENT_CREATED_BY}</h4></td>
+					</tr>
+			<!-- BEGIN events -->
+			<tr>
+					<td valign="middle" class="<!-- IF events.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><!-- IF events.IMAGE -->&nbsp;<img src="{events.IMAGE}" alt="" />&nbsp;<!-- ENDIF --></td>
+						<td class="<!-- IF events.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><a href="{events.EVENT_URL}" title="<!-- IF events.ETYPE_DISPLAY_NAME -->{events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{events.FULL_SUBJECT}">
+							<span style="<!-- IF events.COLOR -->color:#{events.COLOR};<!-- ENDIF --> font-weight: bold;">
+								<!-- IF events.ETYPE_DISPLAY_NAME -->{events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{events.SUBJECT}</span><br /><!-- IF events.ALL_DAY -->{L_ALL_DAY} {events.START_TIME}<!-- ELSE -->{events.START_TIME} {L_TO_TIME} {events.END_TIME}<!-- ENDIF --></a>
+						</td>
+						<td width="16%" class="<!-- IF events.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{events.INVITED}</td>
+						<td width="16%" class="<!-- IF events.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{events.POSTER}</td>
+					</tr>
+			<!-- END events -->
+        </table>
+        
+		</td>
+	</tr>
+	<tr>
+		<td class="cat" colspan="5">&nbsp;</td>
+	</tr>
+  </table>
+        
+<!-- ENDIF -->

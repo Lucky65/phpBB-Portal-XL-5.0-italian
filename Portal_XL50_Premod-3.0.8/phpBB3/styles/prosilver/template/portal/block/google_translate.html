@@ -1,0 +1,64 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_GOOGLE_TRANSLATE}</td>
+</tr>-->
+  <tr>
+    <td align="center" class="row1">
+
+<!-- Google transaltion bar disabled
+<center>
+<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&up_source_language=en&w=160&h=60&title=&border=&output=js"></script>
+<br>
+Google transaltion bar disabled -->
+ 
+<form action="http://www.google.com/translate" target="_blank">
+<script language="JavaScript">
+             var u = location.href;
+             var r = new RegExp("u=(.*)", "");
+             if (r.test(location.href)) {
+               r = r.exec(location.href);
+               u = RegExp.$1;
+             }
+             document.write ("<input name='u' value="+u+" type='hidden'>")
+</script> 
+<noscript>
+<input name="u" value="{GOOGLE_TRANSLATE_URL}" type="hidden" />
+</noscript>
+<input value="en" name="hl" type="hidden"/>
+<input value="UTF8" name="ie" type="hidden"/>
+<input value="" name="langpair" type="hidden"/>
+<input onclick="this.form.langpair.value=this.value" title="Français" value="en|fr" type="image" height="11" src="images/flags/fr.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="Deutsch" value="en|de" type="image" height="11" src="images/flags/de.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="Italiano" value="en|it" type="image" height="11" src="images/flags/it.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="Português" value="en|pt" type="image" height="11" src="images/flags/pt.png" align="absbottom" width="16" name="langpair"/>
+<br clear="all" />
+<input onclick="this.form.langpair.value=this.value" title="Español" value="en|es" type="image" height="11" src="images/flags/es.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="日本語 (にほんご／にっぽんご)" value="en|ja" type="image" height="11" src="images/flags/jp.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="한국어 (韓國語); 조선말 (朝鮮語)" value="en|ko" type="image" height="11" src="images/flags/kr.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="中文, 汉语, 漢語" value="en|zh-CN" type="image" height="11" src="images/flags/cn.png" align="absbottom" width="16" name="langpair"/>
+<br clear="all" />
+<input onclick="this.form.langpair.value=this.value" title="العربية" value="en|ar" type="image" height="11" src="images/flags/sa.png" align="absbottom" width="16" name="langpair2"/>
+<input onclick="this.form.langpair.value=this.value" title="中文, 汉语, 漢語" value="en|zh-TW" type="image" height="11" src="images/flags/tw.png" align="absbottom" width="16" name="langpair2"/>
+<input onclick="this.form.langpair.value=this.value" title="Nederlands" value="en|nl" type="image" height="11" src="images/flags/nl.png" align="absbottom" width="16" name="langpair2"/>
+<input onclick="this.form.langpair.value=this.value" title="русский язык" value="en|ru" type="image" height="11" src="images/flags/ru.png" align="absbottom" width="16" name="langpair2"/>
+<br clear="all" />
+<input onclick="this.form.langpair.value=this.value" title="română" value="en|ro" type="image" height="11" src="images/flags/ro.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="polski" value="en|pl" type="image" height="11" src="images/flags/pl.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="Norsk" value="en|no" type="image" height="11" src="images/flags/no.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="Ελληνικά" value="en|el" type="image" height="11" src="images/flags/gr.png" align="absbottom" width="16" name="langpair"/>
+<br clear="all" />
+<input onclick="this.form.langpair.value=this.value" title="Hrvatski" value="en|hr" type="image" height="11" src="images/flags/hr.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="suomen kieli" value="en|fi" type="image" height="11" src="images/flags/fi.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="česky" value="en|cs" type="image" height="11" src="images/flags/cz.png" align="absbottom" width="16" name="langpair"/>
+<input onclick="this.form.langpair.value=this.value" title="हिन्दी; हिंदी" value="en|hi" type="image" height="11" src="images/flags/in.png" align="absbottom" width="16" name="langpair"/>
+<br clear="all" />
+<input onclick="this.form.langpair.value=this.value" title="български език" value="en|bg" type="image" height="11" src="images/flags/bg.png" align="absbottom" width="16" name="langpair"/>
+<br clear="all" />
+<br clear="all" />
+<input type="button" class="btnmain" title="{L_GOOGLE_BACK_TO_ENGLISH}" value="{L_GOOGLE_BACK_TO_ENGLISH}" onClick="parent.location='{GOOGLE_TRANSLATE_URL}'" tabindex="5">
+</form>
+</center>
+
+    </td>
+  </tr>
+</table>

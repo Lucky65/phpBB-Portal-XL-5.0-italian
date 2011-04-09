@@ -1,0 +1,46 @@
+Subject: Vitajte na "{SITENAME}"
+
+{WELCOME_MSG}
+
+V súlade s nariadením COPPA, nie je Váš účet momentálne aktívny.
+
+Prosím, vytlačte si túto správu a dajte ju vyplniť a podpísať Vášmu rodičovi, poprípade právnemu zástupcovi.
+Potom ju pošlite faxom na:
+
+{FAX_INFO}
+
+Alebo ju odošlite na adresu:
+
+{MAIL_INFO}
+
+Potom vám príde email aktivujúci váš účet
+
+------------------------------ TU ODSTRIHNÚŤ ------------------------------
+Povolenie k prístupu na "{SITENAME}" - {U_BOARD}
+
+Uživateľ: {USERNAME}
+
+Email: {EMAIL_ADDRESS}
+
+PREČÍTAL SOM INFORMÁCIE, KTORÉ MI MOJE DIEŤA POSKYTLO A TÝMTO UDEĽUJEM POVOLENIE "{SITENAME}" NA ARCHIVÁCIU TEJTO INFORMÁCIE.
+SOM SI VEDOMÝ TOHO, ŽE TÁTO INFORMÁCIA MÔŽE BYŤ KEDYKOĽVEK ZMENENÁ VLOŽENÍM HESLA
+SOM SI VEDOMÝ TOHO, ŽE MÔŽEM KEDYKOĽVEK POŽIADAŤ O ODSTRÁNENIE TEJTO INFORMÁCIE Z "{SITENAME}".
+
+
+Rodič, alebo právny zástupca
+(vytlačte sem svoje meno): _____________________
+
+(podpíšte sem): __________________
+
+Dátum: _______________
+
+------------------------------ TU ODSTRIHNÚŤ ------------------------------
+
+
+Akonáhle administrátor obdrží tento formulár faxom, alebo poštou, bude Váš účet aktivovaný.
+
+Prosím Vás, dobre si zapamätajte Vaše heslo. V našej databáze bude zašifrované a nebudeme Vám ho môcť preposlať. V prípade, že zabudnete Vaše heslo, môžete požiadať o nové, ktoré bude aktivované rovnakým spôsobom ako tento účet.
+
+Ďakujeme Vám za registráciu.
+
+{EMAIL_SIG}

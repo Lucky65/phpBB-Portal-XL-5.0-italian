@@ -1,0 +1,372 @@
+<!-- DEFINE $PORTALXL = 'portal_pages' -->
+<!-- INCLUDE overall_header.html -->
+  
+<!-- Require basic Easy Widgets -->
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $.fn.EasyWidgets({
+    behaviour : {
+      useCookies 		: true // Use cookies to store positions and states
+    },
+    cookies : {
+	  expires 			: 365, // Cookie expiration time in days
+      closeName 		: 'portal_xl_pages-close', // Cookie name for close Widgets
+      disableName 		: 'portal_xl_pages-disable', // Cookie name for enable/disable Widgets
+      positionName 		: 'portal_xl_pages-position', // Cookie name for positined Widgets
+      collapseName 		: 'portal_xl_pages-collapse' // Cookie name for collapsed Widgets
+    },
+    selectors : {
+      container 		: 'div'
+    },
+    effects : {
+      effectDuration 	: 250,
+      widgetClose 		: 'fade',
+      widgetExtend 		: 'fade',
+      widgetCollapse 	: 'fade'
+    },
+    i18n : {
+      editText 			: '{L_WIDG_EDIT_TEXT}', // Widget edit link text
+//      closeText 		: '{L_WIDG_CLOSE_TEXT}', // Widget close link text
+//      extendText 		: '{L_WIDG_EXTENT_TEXT}', // Widget extend link text
+//      collapseText 	: '{L_WIDG_COLLAPSE_TEXT}', // Widget collapse link text
+      cancelEditText 	: '{L_WIDG_CANCEL_TEXT}', // Widget cancel edit link text
+      editTitle 		: '{L_WIDG_EDIT}', // Widget edition link title
+      closeTitle 		: '{L_WIDG_CLOSE}', // Widget close link title
+      confirmMsg 		: '{L_WIDG_REMOVE}', // Widget confirmation dialog message
+      cancelEditTitle 	: '{L_WIDG_CANCEL}', // Widget cancel edit link title
+      extendTitle 		: '{L_WIDG_EXTENT}', // Widget extend link title
+      collapseTitle 	: '{L_WIDG_COLLAPSE}', // Widget collapse link title
+	  
+      collapseText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/collapse.png" alt="{L_WIDG_COLLAPSE_TEXT}" />',
+      extendText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/extend.png" alt="{L_WIDG_EXTENT_TEXT}" />',
+      closeText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/close.png" alt="{L_WIDG_CLOSE_TEXT}" />'
+    }
+	
+  });
+});
+// ]]>
+</script>
+
+<div id="portal_container">
+
+<!-- [+] top block area -->
+<!-- IF PORTAL_PAGES_PAGE -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- BEGIN top_page_files -->
+<div class="widget-place" id="widget-place-{top_page_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_page_files.TOP_BLOCK_ID}-top">
+
+  <div class="<!-- IF top_page_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+                  
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{top_page_files.TOP_BLOCK_ID}">{top_page_files.TOP_BLOCKS_IMG}</a>&nbsp;{top_page_files.TOP_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF top_page_files.TOP_BLOCKS -->{top_page_files.TOP_BLOCKS}<!-- ENDIF -->
+         <!-- IF top_page_files.TOP_BLOCKS_CONTENT -->{top_page_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END top_page_files -->
+    </td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<!-- IF SI_DISPLAY_PAGES_LEFT -->
+<tr>
+<!-- [+] left block area -->
+	<td valign="top" width="{PORTAL_PAGES_LEFT_COLLUMN_WIDTH}">
+    
+<!-- IF $PORTALXL_LEFT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN left_page_files -->
+<div class="widget-place" id="widget-place-{left_page_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_page_files.LEFT_BLOCK_ID}-left">
+
+  <div class="<!-- IF left_page_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{left_page_files.LEFT_BLOCK_ID}">{left_page_files.LEFT_BLOCKS_IMG}</a>&nbsp;{left_page_files.LEFT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+        <!-- IF left_page_files.LEFT_BLOCKS-->{left_page_files.LEFT_BLOCKS}<!-- ENDIF -->
+        <!-- IF left_page_files.LEFT_BLOCKS_CONTENT -->{left_page_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END left_page_files -->
+<!-- ELSE -->
+<!-- BEGIN left_page_files -->
+<div class="widget-place" id="widget-place-{left_page_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_page_files.LEFT_BLOCK_ID}-left">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                     <a href="#" title="#{left_page_files.LEFT_BLOCK_ID}">{left_page_files.LEFT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{left_page_files.LEFT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF left_page_files.LEFT_BLOCKS -->{left_page_files.LEFT_BLOCKS}<!-- ENDIF -->
+               <!-- IF left_page_files.LEFT_BLOCKS_CONTENT -->{left_page_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END left_page_files -->
+<!-- ENDIF -->
+    
+	</td>
+<!-- [-] left block area -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- ENDIF -->
+<!-- [+] center block area -->
+	<td valign="top">
+<!-- ENDIF -->
+    
+    
+
+
+<!-- IF $PORTALXL_CENTRE_PAGE_PANEL == '0' --> 
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$("#center_page_files").accordion({
+		collapsible : true,
+		header		: 'h5',
+		active      : 0,
+		autoHeight	: false,
+//		clearStyle  : true,
+		icons: {
+			header: 'ui-icon-circle-arrow-e',
+			headerSelected: 'ui-icon-circle-arrow-s'
+		}
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+.center_page_files-content {
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 1.6em;
+	font-family: "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	color: #333333;
+}
+
+.center_page_files-content th {
+	font-weight: normal;
+	font-size: 1em;
+	font-style: italic;
+	color:#666;
+	padding-bottom: 2px;
+}
+
+.center_page_files-topictitle {
+	font-weight: bold;
+	color: #066;
+}
+
+#center_page_files h5 {
+	font-weight: normal;
+	font-size: 1.1em;
+}
+</style>
+       
+<div id="center_page_filesResizer">
+    <div id="center_page_files">
+<!-- BEGIN center_page_files -->
+<h5><a name="center_page{center_page_files.CENTER_BLOCK_ID}">{center_page_files.CENTER_BLOCKS_ALIAS}</a></h5>
+  <table class="tablebg" cellspacing="1" width="100%">
+    <tr>
+      <td class="row1" valign="top"><a name="center_page_files-top"></a>
+        <div class="center_page_files-content">
+             <!-- IF center_page_files.CENTER_BLOCKS-->{center_page_files.CENTER_BLOCKS}<!-- ENDIF -->
+             <!-- IF center_page_files.CENTER_BLOCKS_CONTENT -->{center_page_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+             <div style="margin-top: 10px; margin-bottom: 5px;"><span class="gensmall">{L_PAGES_VIEW_FULL}: [ <a href="{center_page_files.U_PAGES}">{center_page_files.CENTER_BLOCKS_ALIAS}</a> ] 
+             <a href="#center_page{center_page_files.CENTER_BLOCK_ID}" title="{L_BACK_TO_TOP}"><img src="{T_THEME_PATH}/images/top.gif" width="10" height="10" alt="{L_BACK_TO_TOP}" /></a></span></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+<!-- END center_page_files -->	
+    </div>
+</div>
+<!-- ELSE -->
+<!-- BEGIN center_page_files -->
+<div class="widget-place" id="widget-place-{center_page_files.CENTER_BLOCK_ID}-centre">
+    <div class="widget collapsable removable closeconfirm" id="block-{center_page_files.CENTER_BLOCK_ID}-centre">
+
+  <div class="<!-- IF center_page_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{center_page_files.CENTER_BLOCK_ID}">{center_page_files.CENTER_BLOCKS_IMG}</a>&nbsp;{center_page_files.CENTER_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF center_page_files.CENTER_BLOCKS-->{center_page_files.CENTER_BLOCKS}<!-- ENDIF -->
+         <!-- IF center_page_files.CENTER_BLOCKS_CONTENT -->{center_page_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+         <div style="margin-top: 10px; margin-bottom: 5px;">{L_PAGES_VIEW_FULL}: [ <a href="{center_page_files.U_PAGES}">{center_page_files.CENTER_BLOCKS_ALIAS}</a> ]</div>          
+        </div>
+
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END center_page_files -->	
+<!-- ENDIF -->
+
+
+
+
+
+<!-- IF PORTAL_PAGES -->
+	</td>
+<!-- [-] center block area -->
+<!-- IF SI_DISPLAY_PAGES_RIGHT -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- [+] right block area -->
+	<td valign="top" width="{PORTAL_PAGES_RIGHT_COLLUMN_WIDTH}">
+    
+<!-- IF $PORTALXL_RIGHT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN right_page_files -->
+<div class="widget-place" id="widget-place-{right_page_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_page_files.RIGHT_BLOCK_ID}-right">
+
+  <div class="<!-- IF right_page_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+                  
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{right_page_files.RIGHT_BLOCK_ID}">{right_page_files.RIGHT_BLOCKS_IMG}</a>&nbsp;{right_page_files.RIGHT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF right_page_files.RIGHT_BLOCKS -->{right_page_files.RIGHT_BLOCKS}<!-- ENDIF -->
+         <!-- IF right_page_files.RIGHT_BLOCKS_CONTENT -->{right_page_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END right_page_files -->
+<!-- ELSE -->
+<!-- BEGIN right_page_files -->
+<div class="widget-place" id="widget-place-{right_page_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_page_files.RIGHT_BLOCK_ID}-right">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{right_page_files.RIGHT_BLOCK_ID}">{right_page_files.RIGHT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{right_page_files.RIGHT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF right_page_files.RIGHT_BLOCKS -->{right_page_files.RIGHT_BLOCKS}<!-- ENDIF -->
+               <!-- IF right_page_files.RIGHT_BLOCKS_CONTENT -->{right_page_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END right_page_files -->
+<!-- ENDIF -->	
+    
+	<!-- ENDIF -->	
+	</td>
+<!-- [-] right block area -->
+</tr>
+</table>
+
+<!-- [+] bottom block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- BEGIN bottom_page_files -->
+<div class="widget-place" id="widget-place-{bottom_page_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_page_files.BOTTOM_BLOCK_ID}-bottom">
+
+  <div class="<!-- IF bottom_page_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{bottom_page_files.BOTTOM_BLOCK_ID}">{bottom_page_files.BOTTOM_BLOCKS_IMG}</a>&nbsp;{bottom_page_files.BOTTOM_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF bottom_page_files.BOTTOM_BLOCKS-->{bottom_page_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+         <!-- IF bottom_page_files.BOTTOM_BLOCKS_CONTENT -->{bottom_page_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END bottom_page_files -->
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+<!-- [-] bottom block area -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

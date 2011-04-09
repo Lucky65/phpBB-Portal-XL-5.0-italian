@@ -1,0 +1,44 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+		'user_group'	=> 'Users &amp; Groups',
+
+#-----[ AFTER ADD ]-----------------------------------------------------
+#
+
+		'downloads'		=> 'Download Panel',		
+
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// Download MOD Permissions
+$lang = array_merge($lang, array(
+	'acl_a_dl_overview'		=> array('lang' => 'Môže vidiet úvodnú stránku', 'cat' => 'downloads'),
+	'acl_a_dl_config'		=> array('lang' => 'Môže prestavovat hlavné nastavenia', 'cat' => 'downloads'),
+	'acl_a_dl_traffic'		=> array('lang' => 'Môže prestavovat limit obmedzenia', 'cat' => 'downloads'),
+	'acl_a_dl_categories'	=> array('lang' => 'Môže prestavovat kategórie', 'cat' => 'downloads'),
+	'acl_a_dl_files'		=> array('lang' => 'Môže prestavovat downloady', 'cat' => 'downloads'),
+	'acl_a_dl_permissions'	=> array('lang' => 'Môže prestavovat oprávnenia', 'cat' => 'downloads'),
+	'acl_a_dl_stats'		=> array('lang' => 'Môže prezerat a prestavovat štatistiku', 'cat' => 'downloads'),
+	'acl_a_dl_banlist'		=> array('lang' => 'Môže prestavovat zoznam zakázaných', 'cat' => 'downloads'),
+	'acl_a_dl_blacklist'	=> array('lang' => 'Môže prestavovat prípony súborov', 'cat' => 'downloads'),
+	'acl_a_dl_toolbox'		=> array('lang' => 'Môže použivat tabulku nastrojov', 'cat' => 'downloads'),
+    'acl_a_dl_fields'		=> array('lang' => 'Can manage user defined fields', 'cat' => 'downloads'),   
+));
+
+// PM Spy mod
+$lang = array_merge($lang, array(
+	'acl_a_pm_spy'	=> array('lang'	=> 'Môže si prezerat SS užívatelov', 'cat' => 'misc'),
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'acl_a_flags'	        => array('lang' => 'Môže spravovat vlajky krajín', 'cat' => 'user_group'),
+    'acl_a_country_flags'   => array('lang' => 'Môže spravovat vlajky krajín', 'cat' => 'misc'),
+));

@@ -1,0 +1,11 @@
+Subject: Cancellazione dell'account su "{SITENAME}"! 
+
+Caro {USERNAME},
+
+Dovresti aver ricevuto di recente due promemoria da parte nostra.
+
+Vista l'assenza di interesse ed azioni da parte tua nel partecipare alle attivita' su {SITENAME} e' stata decisa la cancellazione del tuo account dal nostro sito.
+
+Ricorda che il tuo account non potra' piu' essere recuperato in futuro, e nel caso tu volessi tornare ad essere attivo dovrai provvedere ad una nuova registrazione.
+
+{EMAIL_SIG}

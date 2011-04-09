@@ -1,0 +1,87 @@
+/*****[PORTAL XL 5.0 PLAIN : UPGRADE]************************************
+ Questo file contiene IMPORTANTI NOTE per l'aggiornamento delle versioni 
+ Plain in italiano - Da eseguire solo su versioni italiane -
+ Copyright 2009 - 2010 Lucky - http://www.portaxl.eu 
+ 
+ ************************************************************************\
+
+ ========================================================================
+                   PORTAL XL 5.0 PLAIN 0.2  VERSIONE BASE
+ ========================================================================
+
+
+Prima di aggiornare o installare il pacchetto Portal XL Plain 0.2, assicuratevi 
+che il vostro forum sia aggiornato alla versione più recente di phpBB, alla data attuale 
+24/11/2010 phpBB 3.0.8 
+
+Procedura di aggiornamento a phpbb 3.0.8
+
+Fate una copia di backup prima di fare qualunque cosa.
+
+Per aggiornare alla versione phpBB 3.0.8 scaricate una copia di phpBB recente, installatela
+sul vostro server sovracrivendo i files esistenti, ed aggiornate il database scrivendo sul vostro
+browser /install/database_update.php
+Aggiornate gli stili e la cache.
+
+
+
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+18/04/2010 Eseguire le seguenti query nel database solo se avete una vecchia versione (ovvero se la vostra versione è antecedente al 18/04/2010).
+
+Per l'aggiornamento del database dei mods eseguire queste query nel vostro db:
+
+**Inizio query
+
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =1;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =2;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =3;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =4;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =5;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =6;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =7;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =8;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =9;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =10;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =11;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =12;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =13;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.nl/forum/',`mod_download` = 'http://www.portalxl.nl/forum/' WHERE `phpbb_portal_mods`.`mod_id` =14;
+UPDATE `phpbb_portal_mods` SET `mod_url` = 'http://www.portalxl.eu',`mod_download` = 'http://www.portalxl.eu/downloads.php' WHERE `phpbb_portal_mods`.`mod_id` =20;
+
+**Fine query
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+Eseguire le seguenti query nel database solo se avete una vecchia versione (ovvero se la vostra versione è antecedente al 31/10/2010).
+
+Per l'aggiornamento del database dei mods eseguire queste query nel vostro db:
+
+**Inizio query
+
+UPDATE `phpbb_portal_acronyms` SET `acronym` = 'JQUERY' WHERE `phpbb_portal_acronyms`.`acronym_id` =28;
+
+**Fine query
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+N.B. Solo per chi ha una versione Plain già installata precedente all'attuale versione del 24/10/2010  può eseguire l'aggiornamento 
+dopo aver aggiornato a phpBB 3.0.8) alla nuova versione plain 3.0.8.
+Per aggiornare basta sovrascrivere l'intero contenuto di Portal_XL50_Plain_files_3.0.7-PL1_to_3.0.8.rar sul forum.
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+
+/*****[PORTAL XL 5.0 PLAIN : UPGRADE]*****************************
+ Questo file contiene IMPORTANTI NOTE per l'aggiornamento delle versioni 
+ Plain & Premod in italiano - Da eseguire solo su versioni italiane -
+ Copyright 2009 - 2010  Lucky - http://www.portaxl.eu
+ 
+ ************************************************************************\
+
+ ========================================================================
+   PORTAL XL 5.0 PLAIN :  RELEASE 5.0 UPGRADE DATABASE - END
+ ========================================================================
+

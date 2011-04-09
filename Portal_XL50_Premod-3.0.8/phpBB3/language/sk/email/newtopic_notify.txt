@@ -1,0 +1,13 @@
+Subject: Bola založená nová téma — “{FORUM_NAME}”
+
+Vážený/á {USERNAME},
+
+Obdržali ste túto správu, pretože sledujete fórum, “{FORUM_NAME}” na “{SITENAME}”. Od Vašej poslednej návštevy, bola v tomto fóre založená nová téma, “{TOPIC_TITLE}”. Najbližší oznam Vám bude poslaný, až po Vašej návšteve daného fóra.
+
+{U_FORUM}
+
+Ak si už neželáte sledovať toto fórum, môžete buď kliknúť na odkaz “Prestať sledovať fórum”, ktorý nájdete na vyššie spomínanom fóre, alebo návštevou nasledujúceho odkazu:
+
+{U_STOP_WATCHING_FORUM}
+
+{EMAIL_SIG}

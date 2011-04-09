@@ -1,0 +1,29 @@
+<h2>{L_DMV_NEWEST_VIDEOS}</h2>
+<!-- BEGIN newest -->
+	<!-- IF newest.S_FIRST_ROW -->
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<th width="35%">{L_DMV_TITLE}</th>
+				<th width="15%" align="center">{L_DMV_FROM}</th>
+				<th width="10%" align="center">{L_DMV_DURATION}</th>
+				<th width="10%" align="center">{L_DMV_RATING_LIST}</th>
+				<th width="10%" align="center">{L_DMV_VIDEO_VIEWS}</th>
+				<th width="20%">{L_DMV_AUTHOR}</th>
+			</tr>
+	<!-- ENDIF -->
+			<tr class="<!-- IF newest.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+				<td>&nbsp;<a href="{newest.U_SHOW_VIDEO}" class="topictitle">{newest.TITLE}</a></td>
+				<td align="center">{newest.SINGER}</td>
+				<td align="center">{newest.DURATION}</td>
+				<td align="center">{newest.RATING}</td>
+				<td align="center">{newest.VIEWS}</td>
+				<td>
+						&nbsp;{L_POST_BY_AUTHOR} {newest.POST_AUTHOR_FULL}<br />
+						&nbsp;{L_POSTED_ON_DATE} {newest.POST_TIME}<br />
+				</td>
+			</tr>
+	<!-- IF newest.S_LAST_ROW -->
+		</table>
+	<!-- ENDIF -->
+<!-- END newest -->
+<br /><br />

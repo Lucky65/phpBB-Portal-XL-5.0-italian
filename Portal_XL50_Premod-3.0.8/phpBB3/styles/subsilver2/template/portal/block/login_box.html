@@ -1,0 +1,183 @@
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+<form action="{S_LOGIN_ACTION}" method="post">
+
+<table class="tablebg" width="100%" cellspacing="1">
+<tr>
+	<!-- IF LOGIN_EXPLAIN -->
+		<td class="row1" colspan="2" align="center"><strong>{LOGIN_EXPLAIN}</strong></td>
+	<!-- ELSE -->
+		<td class="row1" colspan="2" align="center"><strong>{L_LOGIN}</strong></td>
+	<!-- ENDIF -->
+</tr>
+<!-- IF not S_PORTAL_DRAG_DROP -->
+<tr>
+	<td class="row1" align="center"><span><!-- INCLUDE portal/portal_visitor_welcome.html --></span></td>
+</tr>
+<!-- ELSE -->
+<br />
+<!-- ENDIF -->
+<!-- IF LOGIN_ERROR -->
+<tr>
+    <td class="row2" colspan="2" align="center"><span class="gensmall">{LOGIN_ERROR}</span></td>
+</tr>
+<!-- ENDIF -->
+<tr>
+	<td <!-- IF not S_ADMIN_AUTH -->class="row2"<!-- ELSE -->class="row1"<!-- ENDIF -->>
+	
+		<table align="center" cellspacing="1" cellpadding="4" style="width: 100%;">
+		<!-- IF LOGIN_ERROR -->
+			<tr>
+				<td class="gensmall" colspan="2" align="center"><span class="error">{LOGIN_ERROR}</span></td>
+			</tr>
+		<!-- ENDIF -->
+
+		<tr>
+			<td valign="top" <!-- IF S_ADMIN_AUTH -->style="width: 50%; text-align: {S_CONTENT_FLOW_END};"<!-- ENDIF -->><b class="gensmall">{L_USERNAME}:</b><br />
+			<input class="post" type="text" name="{USERNAME_CREDENTIAL}" size="10" value="{USERNAME}" tabindex="1" />
+				<!-- IF not S_ADMIN_AUTH and S_REGISTER_ENABLED -->
+					<br /><a class="gensmall" href="{U_REGISTER}">{L_REGISTER}</a>
+				<!-- ENDIF -->
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" <!-- IF S_ADMIN_AUTH -->style="width: 50%; text-align: {S_CONTENT_FLOW_END};"<!-- ENDIF -->><b class="gensmall">{L_PASSWORD}:</b><br />
+				<input class="post" type="password" name="{PASSWORD_CREDENTIAL}" size="10" tabindex="2" />
+				<!-- IF U_SEND_PASSWORD --><br /><a class="gensmall" href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a><!-- ENDIF -->
+				<!-- IF U_RESEND_ACTIVATION and not S_ADMIN_AUTH --><br /><a class="gensmall" href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a><!-- ENDIF -->
+			</td>
+		</tr>
+		<!-- IF S_DISPLAY_FULL_LOGIN -->
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+			<tr>
+				<td><input type="checkbox" class="radio" name="autologin" tabindex="3" /> <span class="gensmall">{L_LOG_ME_IN}</span></td>
+			</tr>
+			<!-- ENDIF -->
+			<tr>
+				<td><input type="checkbox" class="radio" name="viewonline" tabindex="4" /> <span class="gensmall">{L_HIDE_ME}</span></td>
+			</tr>
+		<!-- ENDIF -->
+		</table>
+        
+	</td>
+</tr>
+
+<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+</table>
+<table class="tablebg" width="100%" cellspacing="1">
+		
+	<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+<!-- ENDIF -->
+
+{S_LOGIN_REDIRECT}
+<tr>
+	<td class="row2" <!-- IF not S_ADMIN_AUTH or S_CONFIRM_CODE -->colspan="2"<!-- ENDIF --> align="center">{S_HIDDEN_FIELDS}<input type="submit" name="login" class="btnmain" value="{L_LOGIN}" tabindex="5" /></td>
+</tr>
+</table>
+{S_FORM_TOKEN}
+</form>
+
+
+<!-- IF not S_ADMIN_AUTH and S_REGISTER_ENABLED -->
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+    <tr>
+        <td class="row2" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('box14','btn14')">
+        <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btn14" /></a></td>
+        <td align="left" class="row2">{L_M_TERMS}</td>
+    </tr>
+</table>
+<table id="box14" style="display:none; margin-bottom:5px;" class="tablebg" cellspacing="1" width="100%">
+<tr>
+	<td class="row1">
+		<p class="genmed">{L_LOGIN_INFO}</p>
+
+		<p class="genmed" align="center">
+			<a href="{U_TERMS_USE}">{L_TERMS_USE}</a> | <a href="{U_PRIVACY}">{L_PRIVACY}</a>
+		</p>
+	</td>
+</tr>
+</table>
+<!-- ENDIF -->
+<!-- ENDIF -->
+
+
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_USER_MENU}</th>
+</tr>-->
+<!-- IF not S_PORTAL_DRAG_DROP -->
+<tr>
+	<td class="row1" align="center"><span><!-- INCLUDE portal/portal_visitor_welcome.html --></span></td>
+</tr>
+<!-- ELSE -->
+<br />
+<!-- ENDIF -->
+<!-- IF FLAG_IMG -->
+<tr>
+	<td class="row1">
+		<div align="center"><!--{FLAG_TITLE}<br /> -->{FLAG_IMG}</div>
+	</td>
+</tr>
+<!-- ENDIF -->
+<tr>
+	<td class="row1">
+		<div align="center"><br /><a href="{U_PROFILE}"><!-- IF USER_AVATAR -->{USER_AVATAR} <!-- ELSE -->{NO_USER_AVATAR}<!-- ENDIF --></a></div>
+	</td>
+</tr>
+<!-- IF RANK_IMG -->
+<tr>
+	<td class="row1">
+		<div align="center"><br />{RANK_TITLE}<br />{RANK_IMG}</div>
+	</td>
+</tr>
+<!-- ENDIF -->
+<tr>
+	<td class="row1">
+		<div align="center">{LAST_VISIT_DATE}</div><br />
+	</td>
+</tr>
+<tr>
+	<td class="row1">
+		<div align="center">{CURRENT_TIME}</div><br />
+	</td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="'{U_SEARCH_NEW}'">&bull; <a href="{U_SEARCH_NEW}" title="{L_SEARCH_NEW}">{L_SEARCH_NEW}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="'{U_SEARCH_SELF}'">&bull; <a href="{U_SEARCH_SELF}" title="{L_SEARCH_SELF}">{L_SEARCH_SELF}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='U_BOOKMARKS'">&bull; <a href="{U_BOOKMARKS}" title="{L_UM_BOOKMARKS}">{L_UM_BOOKMARKS}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SUBSCRIBED}'">&bull; <a href="{U_SUBSCRIBED}" title="{L_UM_MAIN_SUBSCRIBED}">{L_UM_MAIN_SUBSCRIBED}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_PRIVATEMSGS}'"><!-- IF S_DISPLAY_PM -->&bull; <a href="{U_PRIVATEMSGS}" title="{L_PRIVATE_MESSAGES}">{L_PRIVATE_MESSAGES}</a><!-- ENDIF --></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_USERNAME}'">&bull; <a href="{U_USERNAME}" title="{L_READ_PROFILE}">{L_READ_PROFILE}</a></td>
+</tr>
+<tr>
+	<td class="row1" align="center"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></td>
+</tr>
+</table>
+<!-- ENDIF -->
+
+<script type="text/javascript">
+// <![CDATA[
+	(function()
+	{
+		var elements = document.getElementsByName("{USERNAME_CREDENTIAL}");
+		for (var i = 0; i < elements.length; ++i)
+		{
+			if (elements[i].tagName.toLowerCase() == 'input')
+			{
+				elements[i].focus();
+				break;
+			}
+		}
+	})();
+// ]]>
+</script>

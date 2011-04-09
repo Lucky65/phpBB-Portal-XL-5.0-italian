@@ -1,0 +1,13 @@
+Subject: Bola v kalendári aktualizovaná udalosť
+
+Dear {USERNAME},
+
+Udalosť "{EVENT_SUBJECT}" v kalendáry bola aktualizovaná.
+
+Ak chcete aby som zobrazil túto udalosť, kliknite na nasledujúci odka:
+{U_EVENT}
+
+Ak si už neželáte dostávať maily o tejto zaležitosti, kliknite na nasledujúci odkaz:
+{U_UNWATCH_EVENT}
+
+{EMAIL_SIG}

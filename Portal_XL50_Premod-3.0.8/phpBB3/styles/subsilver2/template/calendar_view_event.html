@@ -1,0 +1,166 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th colspan="5"><a href="{U_CALENDAR}">{L_CALENDAR_TITLE}</a></th>
+	</tr>
+	<tr>
+		<td class="row1">
+
+        <!-- IF U_DELETE or U_EDIT -->
+        <table width="100%" cellspacing="1">
+          <tr>
+              <td class="row1">
+                <div align="{S_CONTENT_FLOW_END}">
+                  <!-- IF U_EDIT --><a href="{U_EDIT}" title="{L_EDIT_POST}"><img src="{T_IMAGESET_LANG_PATH}/icon_post_edit.gif" alt="{L_EDIT_POST}" /></a><!-- ENDIF -->
+                  <!-- IF U_EDIT_ALL --><a href="{U_EDIT_ALL}" title="{L_EDIT_ALL_EVENTS}"><img src="{T_IMAGESET_LANG_PATH}/icon_calendar_edit_all.gif" alt="{L_EDIT_ALL_EVENTS}" /></a><!-- ENDIF -->
+                  <!-- IF U_DELETE --><a href="{U_DELETE}" title="{L_DELETE_POST}"><img src="{T_IMAGESET_LANG_PATH}/icon_post_delete.gif" alt="{L_DELETE_POST}" /></a><!-- ENDIF -->
+                  <!-- IF U_DELETE_ALL --><a href="{U_DELETE_ALL}" title="{L_DELETE_ALL_EVENTS}"><img src="{T_IMAGESET_LANG_PATH}/icon_calendar_delete_all.gif" alt="{L_DELETE_ALL_EVENTS}" /></a><!-- ENDIF -->
+               </div>
+             </td>
+          </tr>
+        </table>
+        <!-- ENDIF -->
+
+	<div class="postbody">
+    
+        <table width="100%" cellspacing="1">
+          <tr>
+              <td class="row1">
+                <div align="{S_CONTENT_FLOW_BEGIN}">
+                  <h3><!-- IF EVENT_COLOR --><span style="color:#{EVENT_COLOR}"><!-- ENDIF -->
+                  <!-- IF EVENT_IMAGE --><img src="{EVENT_IMAGE}" /> <!-- ENDIF -->
+                  <!-- IF ETYPE_DISPLAY_NAME -->{ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{SUBJECT}
+                  <!-- IF EVENT_COLOR --></span><!-- ENDIF -->
+                  </h3>
+               </div>
+             </td>
+          </tr>
+        </table>
+
+        <table width="100%" cellspacing="1">
+        <!-- IF ALL_DAY -->
+         <tr>
+              <td class="row1">
+                <div align="{S_CONTENT_FLOW_BEGIN}">
+                  <h5>{L_ALL_DAY}: {START_DATE}<!-- IF IS_RECURRING --><br />&nbsp;<br />{L_OCCURS_EVERY}: {RECURRING_TXT}<!-- ENDIF --></h5>
+               </div>
+             </td>
+          </tr>
+         <!-- ELSE -->
+         <tr>
+              <td class="row2">
+                <div align="{S_CONTENT_FLOW_BEGIN}">
+                  <h5>{L_FROM_TIME}: {START_DATE}<br />
+                  {L_TO_TIME}: {END_DATE}<!-- IF IS_RECURRING --><br />&nbsp;<br />{L_OCCURS_EVERY}: {RECURRING_TXT}<!-- ENDIF --></h5>
+               </div>
+             </td>
+          </tr>
+       <!-- ENDIF -->
+       </table>
+      <br />
+
+      <table class="tablebg" width="100%" cellspacing="1">
+         <tr>
+            <td class="row1"><div class="content">{L_INVITE_INFO}: {INVITED}</div></td>
+        </tr>
+         <tr>
+            <td class="row1"><div class="content">{MESSAGE}</div></td>
+        </tr>
+      </table>
+      
+	</div>
+
+      <!-- IF S_CALENDAR_RSVPS -->
+          <!-- IF S_RSVP_HEADCOUNT -->
+          <h3>{L_HOW_MANY_PEOPLE}</h3>
+          <table class="tablebg" width="100%" cellspacing="1">
+              <tr style="font-weight: bold;"><td align="center" width="60">{L_YES}</td><td align="center" width="60">{L_NO}</td><td align="center" width="60">{L_MAYBE}</td></tr>
+              <tr><td align="center">{CURR_YES_COUNT}</td><td align="center">{CURR_NO_COUNT}</td><td align="center">{CURR_MAYBE_COUNT}</td></tr>
+          </table>
+          <br />
+      <!-- ENDIF -->
+          
+      <!-- IF S_CURRENT_RSVP -->
+      <form method="post" action="{S_RSVP_MODE_ACTION}" name="rsvp_form" id="rsvp_form">
+        <h2 class="solo">{L_CALENDAR_RESPOND} : {CURR_POSTER_URL}</h2>
+        <table width="100%" class="tablebg">
+          <tr class="row3">
+            <td>{L_CALENDAR_WILL_ATTEND}</td>
+            <td>{SEL_ATTEND}</td>
+          </tr>
+          <!-- IF S_ALLOW_GUESTS -->
+          <tr class="row3">
+            <td>{L_CALENDAR_NUMBER_ATTEND}<br />
+              {L_CALENDAR_NUMBER_ATTEND_EXPLAIN}</td>
+            <td><input type="number" name="rsvp_count" id="rsvp_count" value="{CURR_RSVP_COUNT}"></td>
+          </tr>
+          <!-- ENDIF -->
+          <tr class="row3">
+            <td>&nbsp;<br />
+              {L_COMMENTS}</td>
+            <td><textarea name="rsvp_detail" id="rsvp_detail" rows="4" cols="25">{CURR_RSVP_DETAIL}</textarea></td>
+            <!-- IF !S_ALLOW_GUESTS -->
+            <td><input type="hidden" name="rsvp_count" id="rsvp_count" value="1"></td>
+            <!-- ENDIF -->
+          </tr>
+          <tr class="row3">
+            <td><input type="hidden" name="rsvp_id" id="rsvp_id" value="{CURR_RSVP_ID}" /></td>
+            <td><input type="submit" name="post" value="{L_SUBMIT}" class="button1" /></td>
+          </tr>
+        </table>
+      </form>
+      <br />
+      <!-- ENDIF -->
+
+      <!-- IF S_RSVP_DETAILS -->
+          <h3>{L_DETAILS}</h3>
+          <table class="sortable" >
+              <tr id='head' style="font-weight: bold;">
+                  <td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="17%"><a >{L_USERNAME}</a></td>
+                  <!-- IF S_ALLOW_GUESTS --><td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="6%"><a >{L_COL_HEADCOUNT}</a></td><!-- ENDIF -->
+                  <td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="9%"><a >{L_COL_WILL_ATTEND}</a></td>
+                  <td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="35%"><a >{L_COMMENTS}</a></td>
+                  <td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="25%"><a >{L_POST_TIME}</a></td>
+                  <!-- IF S_EDIT_RSVP --><td valign="bottom" style="border-bottom-style: solid; border-bottom-width: 1px;" align="left" width="8%"><a >{L_EDIT}</a></td><!-- ENDIF -->
+              </tr>
+              <!-- BEGIN rsvps -->
+              <tr>
+                  <td align="left"><span style="display: none">{rsvps.POSTER}</span>{rsvps.POSTER_URL}</td>
+                  <!-- IF S_ALLOW_GUESTS --><td align="left">{rsvps.HEADCOUNT}</td><!-- ENDIF -->
+                  <td align="left">{rsvps.VALUE_TXT}</td>
+                  <td align="left">{rsvps.DETAILS}</td>
+                  <td align="left"><span style="display: none">{rsvps.POST_TIMESTAMP}</span>{rsvps.POST_TIME}</td>
+                  <!-- IF S_EDIT_RSVP --><td align="left"><a href="{rsvps.U_EDIT}">{L_EDIT}</a></td><!-- ENDIF -->
+              </tr>
+              <!-- END rsvps -->
+          <br />
+          <!-- ENDIF -->&nbsp;<br />
+      <!-- ENDIF -->
+        
+        <tr>
+            <td class="row1"><div class="content">{L_EVENT_CREATED_BY}: {POSTER}</div></td>
+        </tr>
+        <tr>
+            <td class="row2">
+              <!-- IF ADD_LINK --><a href="{ADD_LINK}" title="{L_NEW_EVENT}"><img src="{T_IMAGESET_LANG_PATH}/calendar_new_star_icon.gif" /></a><!-- ENDIF -->
+              &nbsp;<a href="{DAY_VIEW_URL}" title="{L_DAY}"><img src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" /></a>
+              &nbsp;<a href="{WEEK_VIEW_URL}" title="{L_WEEK}"><img src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" /></a>
+              &nbsp;<a href="{MONTH_VIEW_URL}" title="{L_MONTH}"><img src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="cat" align="center">
+              <!-- IF U_WATCH_EVENT --><a href="{U_WATCH_EVENT}" title="{L_WATCH_EVENT}">{L_WATCH_EVENT}</a><!-- ENDIF -->
+              <!-- IF U_WATCH_CALENDAR -->&nbsp;|&nbsp;<a href="{U_WATCH_CALENDAR}" title="{L_WATCH_CALENDAR}">{L_WATCH_CALENDAR}</a><!-- ENDIF -->
+            </td>
+        </tr>
+      </table>
+
+		</td>
+	</tr>
+  </table>
+
+<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,15 @@
+Subject: Máte novú súkromnú správu
+
+Vážený/á {USERNAME},
+
+Obdržali ste novú súkromnú správu od “{AUTHOR_NAME}” na Vašom účte na “{SITENAME}” s nasledujúcim predmetom:
+
+{SUBJECT}
+
+Ak si prajete zobraziť správu, navštívte nasledujúci odkaz:
+
+{U_INBOX}
+
+Požiadali ste, aby ste na túto udalosť boli upozornení. Nezabúdajte, že upozornenia na nové správy si môžete zrušiť v nastaveniach vo Vašom profile.
+
+{EMAIL_SIG}

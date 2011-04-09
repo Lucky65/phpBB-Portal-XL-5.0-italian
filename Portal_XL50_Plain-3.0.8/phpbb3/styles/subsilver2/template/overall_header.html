@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}" />
+<meta http-equiv="content-language" content="{S_USER_LANG}" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+{META}
+{PORTAL_META_HTTP_EQUIV_TAGS}
+{PORTAL_META_TAGS}
+<title>{SITENAME} &bull; <!-- IF S_IN_MCP -->{L_MCP} &bull; <!-- ELSEIF S_IN_UCP -->{L_UCP} &bull; <!-- ENDIF -->{PAGE_TITLE}</title>
+
+<!-- IF S_ENABLE_FEEDS -->
+	<!-- IF S_ENABLE_FEEDS_OVERALL --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {SITENAME}" href="{U_FEED}" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_NEWS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_NEWS}" href="{U_FEED}?mode=news" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_FORUMS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_ALL_FORUMS}" href="{U_FEED}?mode=forums" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_TOPICS --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_NEW}" href="{U_FEED}?mode=topics" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_TOPICS_ACTIVE --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FEED_TOPICS_ACTIVE}" href="{U_FEED}?mode=topics_active" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_FORUM and S_FORUM_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_FORUM} - {FORUM_NAME}" href="{U_FEED}?f={S_FORUM_ID}" /><!-- ENDIF -->
+	<!-- IF S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_TOPIC} - {TOPIC_TITLE}" href="{U_FEED}?f={S_FORUM_ID}&amp;t={S_TOPIC_ID}" /><!-- ENDIF -->
+<!-- ENDIF -->
+  
+<link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" />
+
+<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Portal" href="./portal/syndicate.php" />
+<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Attachments" href="./portal/syndicate_attachments.php" />
+<link rel="stylesheet" media="all" type="text/css" href="{T_THEME_PATH}/portal_adds.css" />
+
+<script type="text/javascript">
+// <![CDATA[
+<!-- IF S_USER_PM_POPUP -->
+	if ({S_NEW_PM})
+	{
+		popup('{UA_POPUP_PM}', 400, 225, '_phpbbprivmsg');
+	}
+<!-- ENDIF -->
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('{LA_JUMP_PAGE}:', '{ON_PAGE}');
+	var per_page = '{PER_PAGE}';
+	var base_url = '{A_BASE_URL}';
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+<!-- IF ._file -->
+
+	/**
+	* Play quicktime file by determining it's width/height
+	* from the displayed rectangle area
+	*
+	* Only defined if there is a file block present.
+	*/
+	function play_qt_file(obj)
+	{
+		var rectangle = obj.GetRectangle();
+
+		if (rectangle)
+		{
+			rectangle = rectangle.split(',')
+			var x1 = parseInt(rectangle[0]);
+			var x2 = parseInt(rectangle[2]);
+			var y1 = parseInt(rectangle[1]);
+			var y2 = parseInt(rectangle[3]);
+
+			var width = (x1 < 0) ? (x1 * -1) + x2 : x2 - x1;
+			var height = (y1 < 0) ? (y1 * -1) + y2 : y2 - y1;
+		}
+		else
+		{
+			var width = 200;
+			var height = 0;
+		}
+
+		obj.width = width;
+		obj.height = height + 16;
+
+		obj.SetControllerVisible(true);
+
+		obj.Play();
+	}
+<!-- ENDIF -->
+
+// ]]>
+</script>
+
+<!--[if IE]>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/pngfix.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery.min.js"></script>
+<link rel="stylesheet" href="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.css"type="text/css" />
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="{T_TEMPLATE_PATH}/portal/src/jquery.easywidgets.min.css"type="text/css" />
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery.easywidgets.min.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+function doCollapseExpand(id,img){
+	var b = document.getElementById(id);
+		if (b.style.display=='none'){
+		b.style.display='';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_up.gif'; 
+} else {
+		b.style.display='none';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_down.gif';
+} return false; }
+// ]] >
+</script>
+
+<!-- IF S_TOOL_TIPS_ENABLED --> 
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/tooltips.js"></script>
+<!-- ENDIF -->        
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript">
+// <![CDATA[
+var rmw_max_width 	= '{PORTAL_PICTURE_RESIZE}';
+var rmw_border_1 	= '1px solid #666666';
+var rmw_border_2 	= '1px solid #ff0000';
+var rmw_image_title = '{L_IMG_CLICK_HERE}';
+// ]] >
+</script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/resize_image.js"></script>
+	
+<script type="text/javascript" src="{T_THEME_PATH}/highslide/highslide-full.js"></script>
+<link rel="stylesheet" type="text/css" href="{T_THEME_PATH}/highslide/highslide.css" />
+<script type="text/javascript">
+// <![CDATA[
+	hs.graphicsDir = '{T_THEME_PATH}/highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.fadeInOut = true;
+	hs.dimmingOpacity = 0.8;
+	hs.wrapperClassName = 'borderless floating-caption';
+	hs.outlineType = 'rounded-white';
+	hs.captionEval = 'this.thumb.alt';
+	hs.marginLeft = 100; // make room for the thumbstrip
+	hs.marginBottom = 80 // make room for the controls and the floating caption
+	hs.numberPosition = 'caption';
+	// This value needs to be set to false, to solve the issue with the highly increasing view counts.
+	hs.continuePreloading = false;
+
+	// Add the controlbar
+	if (hs.addSlideshow) hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		overlayOptions: {
+			className: 'text-controls',
+			position: 'bottom center',
+			relativeTo: 'viewport',
+			offsetX: 50,
+			offsetY: -5
+
+		},
+		thumbstrip: {
+			position: 'middle left',
+			mode: 'vertical',
+			relativeTo: 'viewport'
+		}
+	});
+	
+	// Add the simple close button
+	hs.registerOverlay({
+		html: '<div class="closebutton" onclick="return hs.close(this)" title="{L_HIGHSLIDE_CLOSETITLE}"></div>',
+		position: 'top right',
+		fade: 2 // fading the semi-transparent overlay looks bad in IE
+	});
+	
+	// Language strings
+	hs.lang = {
+		loadingText :     '{L_HIGHSLIDE_LOADINGTEXT}',
+		loadingTitle :    '{L_HIGHSLIDE_LOADINGTITLE}',
+		focusTitle :      '{L_HIGHSLIDE_FOCUSTITLE}',
+		fullExpandTitle : '{L_HIGHSLIDE_FULLEXPANDTITLE}',
+		fullExpandText :  '{L_HIGHSLIDE_FULLEXPANDTEXT}',
+		creditsText :     '{L_HIGHSLIDE_CREDITSTEXT}',
+		creditsTitle :    '{L_HIGHSLIDE_CREDITSTITLE}',
+		previousText :    '{L_HIGHSLIDE_PREVIOUSTEXT}',
+		previousTitle :   '{L_HIGHSLIDE_PREVIOUSTITLE}',
+		nextText :        '{L_HIGHSLIDE_NEXTTEXT}',
+		nextTitle :       '{L_HIGHSLIDE_NEXTTITLE}',
+		moveTitle :       '{L_HIGHSLIDE_MOVETITLE}',
+		moveText :        '{L_HIGHSLIDE_MOVETEXT}',
+		closeText :       '{L_HIGHSLIDE_CLOSETEXT}',
+		closeTitle :      '{L_HIGHSLIDE_CLOSETITLE}',
+		resizeTitle :     '{L_HIGHSLIDE_RESIZETITLE}',
+		playText :        '{L_HIGHSLIDE_PLAYTEXT}',
+		playTitle :       '{L_HIGHSLIDE_PLAYTITLE}',
+		pauseText :       '{L_HIGHSLIDE_PAUSETEXT}',
+		pauseTitle :      '{L_HIGHSLIDE_PAUSETITLE}',
+		restoreTitle :    '{L_HIGHSLIDE_RESTORETITLE}'
+	};
+// ]] >
+</script>
+
+</head>
+<body class="{S_CONTENT_DIRECTION}">
+
+<a name="top"></a>
+<a name="wrap"></a>
+
+<div id="wrapheader">
+
+	<div id="logodesc">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td><a href="{U_INDEX}" title="{L_INDEX}" id="logo"><!-- IF PORTAL -->{SITE_LOGO_IMGAGE}<!-- ELSE -->{SITE_LOGO_IMG}<!-- ENDIF --></a></td>
+			<td width="<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->75%<!-- ELSE -->100%<!-- ENDIF -->" align="center"><h1>{SITENAME}</h1><span class="gen">{SITE_DESCRIPTION}</span></td>
+			<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+			<td width="25%" align="right">
+              <form action="{U_SEARCH}" method="post" id="search" name="search">
+                <input name="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" /> 
+                <input value="{L_SEARCH}" type="submit" /> {S_SEARCH_HIDDEN_FIELDS}<br />
+              </form>
+			</td>
+			<!-- ENDIF -->
+		</tr>
+		</tr>
+		</table>
+	</div>
+
+	<div id="menubar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="genmed"><!-- INCLUDE navigation_menu.html --></td>
+		</tr>
+		</table>
+	</div>
+
+</div>
+
+<div id="wrapcentre">
+
+	<!-- IF S_DISPLAY_SEARCH -->
+	<p class="searchbar">
+		<span style="float: {S_CONTENT_FLOW_BEGIN};"><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a> | <a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></span>
+		<!-- IF S_USER_LOGGED_IN -->
+		<span style="float: {S_CONTENT_FLOW_END};"><a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a> | <a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a> | <a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></span>
+		<!-- ENDIF -->
+	</p>
+	<!-- ENDIF -->
+
+	<br style="clear: both;" />
+
+	<!-- INCLUDE breadcrumbs.html -->
+
+	<br />

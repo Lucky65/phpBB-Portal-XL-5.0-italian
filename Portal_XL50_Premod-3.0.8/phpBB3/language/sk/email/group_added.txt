@@ -1,0 +1,11 @@
+Subject: Boli ste prijatý do tejto uživateľskej skupiny
+
+Gratulujeme,
+
+Boli ste pridaný do “{GROUP_NAME}” na stránke “{SITENAME}”.
+Túto akciu vykonal moderátor skupiny alebo administrátor. Kontaktujte ich pre viac informácií.
+
+Informácie o svojej skupine si môžete prezrieť tu:
+{U_GROUP}
+
+{EMAIL_SIG}

@@ -1,0 +1,96 @@
+<script type="text/javascript" language="javascript" charset="utf-8">
+// <![CDATA[
+  var effect_1 = null;
+// ]]>
+</script>
+
+<style type="text/css">
+<!--
+#Menu,
+#Menu ul {
+	list-style : none;
+}
+#Menu a {
+	display : block;
+	font-weight : bold;
+	padding : 0.2em 1em;
+}
+#Menu ul a {
+	color : #55614c;
+	font-weight : normal;
+}
+//-->
+</style>
+
+<div class="navbar">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <a href="#" onclick="Effect.toggle('left_lft_1','BLIND'); return false;">
+          <h5><img src="./portal/images/icons/layout.png" height="11" width="11" />&nbsp;{L_M_MENU}</h5></a>
+          <div id="left_lft_1" style="display: block;">
+	       <hr align="left" />
+
+<ul id="Menu">
+
+<li><a href="#" onclick="Effect.toggle('m0','slide'); return false;"><strong><img src="portal/images/icons/folder.png" />&nbsp;{L_M_CONTENT}</strong></a> 
+<div id="m0" style="display:block;">
+		<ul>
+			<li><a class="nav" href="{U_INDEX}"><img src="./portal/images/icons/folder_go.png" />&nbsp;{L_INDEX}</a></li>
+			<li><a class="nav" href="{U_CHAT}"><img src="./portal/images/icons/folder_user.png" />&nbsp;{L_CHAT}</a></li>
+			<li><a class="nav" href="{U_MEDIA_PLAYER}" onClick="window.open('','popup','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,width=800,height=600,left=100,screenX=210,top=60,screenY=60')" Target="popup"><img src="./portal/images/icons/folder_user.png" />&nbsp;{L_MEDIA_PLAYER}</a></li>
+			<li><a class="nav" href="{U_ATTACHMENT_INDEX}"><img src="./portal/images/icons/folder_user.png" />&nbsp;{L_ATTACHMENTS}</a></li>
+            
+            <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+            <li><a class="nav" href="{U_REGISTER}"><img src="./portal/images/icons/folder_add.png" />&nbsp;{L_REGISTER}</a></li>
+            <!-- ENDIF -->
+      		<!-- IF S_USER_LOGGED_IN -->                        
+            <li><a class="nav" href="{U_MEMBERLIST}"><img src="./portal/images/icons/folder_user.png" />&nbsp;{L_MEMBERLIST}</a></li>
+            <li><a class="nav" href="{U_TEAM}"><img src="./portal/images/icons/folder_lightbulb.png" />&nbsp;{L_THE_TEAM}</a></li>
+            <!-- ENDIF -->
+            <!-- IF U_MCP -->
+            <li><a class="nav" href="{U_MCP}"><img src="./portal/images/icons/folder_wrench.png" />&nbsp;{L_MCP}</a></li>
+            <!-- ENDIF -->
+            <!-- IF U_ACP -->
+            <li><a class="nav" href="{U_ACP}"><img src="./portal/images/icons/folder_wrench.png" />&nbsp;{L_M_ACP}</a></li>
+            <!-- ENDIF -->
+		</ul>
+</div>
+	</li>
+
+    
+	<hr align="left" width="85%" />
+<li><a href="#" onclick="Effect.toggle('m1','slide'); return false;"><strong><img src="portal/images/icons/folder.png" />&nbsp;{L_M_SEARCH}</strong></a> 
+<div id="m1" style="display:none;">
+		<ul>
+            <li><a class="nav" href="{U_SEARCH}"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_SEARCH}</a></li>
+            <li><a class="nav" href="{U_SEARCH_NEW}"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_SEARCH_NEW}</a></li>
+            <li><a class="nav" href="{U_SEARCH_UNANSWERED}"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_SEARCH_UNANSWERED}</a></li>
+            <li><a class="nav" href="{U_SEARCH_ACTIVE_TOPICS}"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_SEARCH_ACTIVE_TOPICS}</a></li>
+      		<!-- IF S_USER_LOGGED_IN -->                        
+            <li><a class="nav" href="{U_SEARCH_SELF}"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_SEARCH_SELF}</a></li>
+            <li><a class="nav" href="ucp.php?i=main&mode=bookmarks"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_UM_BOOKMARKS}</a></li>
+            <li><a class="nav" href="ucp.php?i=main&mode=subscribed"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_UM_MAIN_SUBSCRIBED}</a></li>
+            <li><a class="nav" href="ucp.php?i=pm&folder=inbox"><img src="./portal/images/icons/folder_explore.png" />&nbsp;{L_PRIVATE_MESSAGES}</a></li>
+      		<!-- ENDIF -->
+		</ul>
+</div>
+	</li>
+    
+	<hr align="left" width="85%" />
+<li><a href="#" onclick="Effect.toggle('m2','slide'); return false;"><strong><img src="portal/images/icons/folder.png" />&nbsp;{L_M_HELP}</strong></a> 
+<div id="m2" style="display:none;">
+		<ul>
+            <li><a class="nav" href="{U_FAQ}"><img src="./portal/images/icons/folder_table.png" />&nbsp;{L_FAQ}</a></li>
+            <li><a class="nav" href="faq.php?mode=bbcode"><img src="./portal/images/icons/folder_table.png" />&nbsp;{L_M_BBCODE}</a></li>
+            <li><a class="nav" href="ucp.php?mode=terms"><img src="./portal/images/icons/folder_table.png" />&nbsp;{L_M_TERMS}</a></li>
+            <li><a class="nav" href="ucp.php?mode=privacy"><img src="./portal/images/icons/folder_table.png" />&nbsp;{L_M_PRV}</a></li>
+		</ul>
+</div>
+	</li>
+    
+</ul>
+
+         </div>
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>

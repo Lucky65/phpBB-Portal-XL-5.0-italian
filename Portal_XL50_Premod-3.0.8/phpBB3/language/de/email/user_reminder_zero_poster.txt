@@ -1,0 +1,13 @@
+Subject: Erinnerung von "{SITENAME}"! 
+
+Hallo {USERNAME},
+
+Du hast dich vor einiger Zeit auf {SITENAME} registriert. 
+
+Wir haben festgestellt, dass du dich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben hast.
+
+Nimm dir doch bitte kurz Zeit, um einen Blick auf unsere aktuellen Themen im Forum unter {U_BOARD} zu werfen. Vielleicht findest du ja ein Thema interessant und wirst darin mit einbezogen.
+
+Anderenfalls zögere nicht, dein eigenes Thema zu erstellen, selbst wenn es auch zur Vorstellung an den Rest der Community dient. Dies bricht gewöhnlich das Eis.
+
+{EMAIL_SIG}

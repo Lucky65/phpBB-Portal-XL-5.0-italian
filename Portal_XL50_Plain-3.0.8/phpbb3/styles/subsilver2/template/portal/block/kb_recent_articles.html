@@ -1,0 +1,74 @@
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$('#kbaccordion').accordion({
+		collapsible : true,
+		header		: 'h5',
+		active      : false,
+		clearStyle  : true,
+		icons: {
+			header: 'ui-icon-circle-arrow-e',
+			headerSelected: 'ui-icon-circle-arrow-s'
+		}
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+.kbaccordion-content {
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 14px;
+}
+
+.kbaccordion-content th {
+	font-weight: normal;
+	font-size: 12px;
+	font-style: italic;
+	padding-bottom: 2px;
+}
+
+.kbaccordion-topictitle {
+	font-weight: bold;
+}
+
+#kbaccordion h5 {
+	font-weight: normal;
+	font-size: 12px;
+}
+</style>
+
+<div id="kbaccordionResizer">
+    <div id="kbaccordion">
+    
+  <!-- BEGIN kb_recent_artikel -->
+	<h5><a href="{kb_recent_artikel.U_ARTIKEL}">{kb_recent_artikel.TITLE}</a></h5>
+	<div class="kbaccordion-content">
+    
+        <table class="tablebg" cellspacing="1" width="100%">
+        <!--<tr>
+            <th colspan="1">{L_KB_RECENT_ARTICLES}</td>
+        </tr>--> 
+          <tr>
+            <td class="<!-- IF kb_recent_artikel.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" valign="top">
+              {kb_recent_artikel.DESCRIPTION}<br />
+            </td>
+          </tr>
+          <tr>
+            <td class="<!-- IF kb_recent_artikel.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" valign="top">
+              <div class="leftside" style="float: left;"> <span class="gensmall">{L_ON} {kb_recent_artikel.TIME} {L_FROM}: <a href="{kb_recent_artikel.U_USERNAME}">{kb_recent_artikel.POST_AUTHOR_FULL}</a></span> </div>
+              <div class="rightside" style="float: right;"> <span class="gensmall">{L_HITS}: {kb_recent_artikel.HITS}</span> </div><hr />
+            </td>
+          </tr>
+          <tr>
+            <td class="<!-- IF kb_recent_artikel.S_ROW_COUNT is not even -->row1<!-- ELSE -->row2<!-- ENDIF -->" valign="top">
+                <div style="margin:15px;">{kb_recent_artikel.ARTIKEL}</div>
+            </td>
+          </tr>
+        </table>
+
+	</div>
+  <!-- END kb_recent_artikel -->
+    
+    </div>
+</div>

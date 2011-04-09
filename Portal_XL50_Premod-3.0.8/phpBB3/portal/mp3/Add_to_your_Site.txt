@@ -1,0 +1,77 @@
+Flash mp3 Player block for use with portal 4.0
+
+If your path to your flash_mp3_player directory is different than "portal/mp3/" 
+change this in the code below to suit your needs! 
+
+
+Prosilver
+
+<script type="text/javascript" src="./portal/mp3/swfobject.js"></script>
+
+<div class="navbar">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h5>{L_MP3_PLAYER}</h5>
+	<hr align="left" />
+
+            <div align="center">
+
+<p id="player2"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+<script type="text/javascript">
+     var s2 = new SWFObject("./portal/mp3/mp3player.swf", "playlist", "150", "135", "7");
+     s2.addVariable("file","./portal/mp3/playlist.xml");
+     s2.addVariable("backcolor","0xcadceb");
+     s2.addVariable("frontcolor","0x007677");
+     s2.addVariable("lightcolor","0xFFD3A6");
+     s2.addVariable("displayheight","0");
+     s2.addVariable("showeq","true");
+     s2.addVariable("thumbsinplaylist","true");
+     s2.addVariable("showdigits","false");
+     s2.addVariable("repeat","false");
+     s2.addVariable("autostart","true");
+     s2.addVariable("shuffle","true");
+     s2.addVariable("volume","40");
+     s2.addVariable("autoscroll","true");
+     s2.addVariable("showicons","true");
+     s2.write("player2");
+</script>
+
+            </div>
+
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+Subsilver
+
+<script type="text/javascript" src="portal/flash_mp3_player/swfobject.js"></script>
+
+  <table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+  		<tr> 
+    		<th colspan="3" nowrap="nowrap">Playing Now</th> 
+  		</tr> 
+  		<tr> 
+    		<td class="row1" align="center" valign="middle" nowrap="nowrap"> 
+
+<p id="player2"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+<script type="text/javascript">
+	var s2 = new SWFObject("portal/flash_mp3_player/mp3player.swf", "playlist", "150", "135", "7");
+	s2.addVariable("file","portal/flash_mp3_player/playlist.xml");
+	s2.addVariable("backcolor","0x00000");
+	s2.addVariable("frontcolor","0xEECCDD");
+	s2.addVariable("lightcolor","0xCC0066");
+	s2.addVariable("displayheight","0");
+	s2.addVariable("repeat","true");
+	s2.addVariable("showdigits","false");
+	s2.write("player2");
+</script>
+
+			</td> 
+  		</tr> 
+    <tr>
+      <td colspan="4" height="1" class="spaceRow"><img src="{SPACER}" alt="" width="1" height="1" /></td>
+    </tr>
+	</table>
+{TPL_FTR}

@@ -1,0 +1,1167 @@
+/* --------------------------------------------------------------
+* @name portal_adds.css
+* @package phpBB3 Portal XL 5.0 Premod
+* @version $Id: portal_adds.css for prosilver related styles ,v 2.0 2009/08/23 damysterious Exp $
+*
+* @copyright (c) 2007, 2009 Portal XL Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+    --------------------------------------------------------------
+*/
+
+/* --------------------------------------------------------------
+   additional added due to mod changes
+   -------------------------------------------------------------- */
+.rtl .icon-download, .rtl .icon-hacklist, .rtl .icon-tracker, .rtl .icon-gallery, .rtl .icon-toplist {
+	background-position: 100% 50%;
+	padding: 1px 17px 0 0;
+}
+
+.icon-contact, .icon-kb, .icon-download, .icon-hacklist, .icon-tracker, .icon-toplist {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding: 1px 0 0 17px;
+}
+
+.icon-contact					{ background-image: url("{T_THEME_PATH}/images/icon_contact.gif"); }
+.icon-download					{ background-image: url("{T_THEME_PATH}/images/icon_dl.gif"); }
+.icon-hacklist					{ background-image: url("{T_THEME_PATH}/images/icon_hl.gif"); }
+.icon-tracker					{ background-image: url("{T_THEME_PATH}/images/icon_bt.gif"); }
+.icon-kb						{ background-image: url("{T_THEME_PATH}/images/icon_kb.gif"); }
+.icon-toplist					{ background-image: url("{T_THEME_PATH}/images/icon_toplist.gif"); }
+
+/* GYM Sitemaps & RSS - www.phpbb-seo.com */
+div.gymsublist {
+	display:block;
+	position:relative;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-right:0;
+	margin:0;
+}
+div.gymsublist ul {
+	display:block;
+	position:relative;
+	height:1%;
+	padding-left:30px;
+}
+div.gymsublist ul li {
+	display:block;
+	position:relative;
+	line-height:18px;
+	font-size:11px;
+}
+/* GYM Sitemaps & RSS - www.phpbb-seo.com */
+
+/* Quote block */
+blockquote {
+	border: 1px double #DBDBCE;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+/* Code block */
+dl.codebox {
+	border: 1px double #C9D2D8;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+/* Attachments
+----------------------------------------*/
+.attachbox {
+	border: 1px double #C9D2D8;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+/* --------------------------------------------------------------
+   additional added due to mod changes
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   added due to Portal XL additions
+   -------------------------------------------------------------- */
+/*  
+.row1, .row2, .row3 {
+filter:alpha(opacity=50);
+-moz-opacity: 0.5; 
+opacity: 0.5;
+-khtml-opacity: 0.5;
+}
+*/
+
+a {
+	outline: none;
+}
+
+select, input, select, option, textarea, a.button1, input.button1, input.button3, a.button2, input.button2 {
+	font-size: 11px;
+	font-weight: normal;
+	padding: 1px;
+}
+
+h5 {
+	/* Forum and topic list titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	font-size: 1.1em;
+	color: #115098;
+}
+
+h6 {
+	/* Forum and topic list titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	color: #115098;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 1.05em;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	padding-bottom: 2px;
+}
+
+.portal_block_header {
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.icon-portal {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding: 1px 0 0 17px;
+	background-image: url("{T_THEME_PATH}/images/icon_portal_home.gif");	
+}
+
+.icon-portal_menu_sep {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding: 1px 0 0 15px;
+	background-image: url("{T_THEME_PATH}/images/menu_sep.png");	
+}
+
+div#portal_container{
+	border: 0px solid #ccc;
+}
+
+div#toolTip {
+	background-color: #CADCEB;
+	border: 1px solid #fff;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	opacity: 0.85; /* Current standard in CSS */
+	-moz-opacity: 0.85; /* Old school versions like Netscape Navigator */
+	-khtml-opacity: 0.85; /* Old versions of Safari (1.x) */
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; /* IE8 first! */
+	filter: alpha(opacity=85); /* IE IE5-7 second! */
+	zoom: 1; /* hasLayout for IE6 and IE7 */
+	padding: 5px;
+	position: absolute;
+	-webkit-border-radius: 5px;
+	width: auto;
+	z-index: 30000;
+}
+
+div#toolTip p {
+	color: #000;
+	font: 11px/12px verdana,arial,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.acronym, .acronym a:link {
+	border-bottom: 1px #BD5121 dashed;
+	color: #459B37;
+	cursor: help;
+	font-style: italic;
+}
+/* --------------------------------------------------------------
+   added due to Portal XL additions
+   -------------------------------------------------------------- */
+   
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+.attachtitle {
+	border: solid 1px #cadceb;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 10px 5px 0px 5px;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	padding: 2px 4px;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.attachcontent {
+	border-color: #cadceb;
+	border-style: solid;
+	border-width: 0px 1px 1px 1px;
+	/*	font-family: "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif; */
+	color: #EEE;
+	font-size: 0.85em;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin: 0px 5px 10px 5px;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	overflow: auto;
+	overflow-x: auto;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.attachwrapper {
+	background: #ECF3F7 url("{T_THEME_PATH}/images/archive.png") center left no-repeat;
+	border: solid 1px #CEE7E4;
+	clear: both;
+	margin: 5px 5px;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	padding-left: 35px;
+	-webkit-border-radius: 5px;
+}
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   additional proSilver Markup Styles
+   -------------------------------------------------------------- */
+
+/* CSS Inner Round Corners center portal pages inner block background
+----------------------------------------*/
+.xldown_box { background: white; border-left: 1px solid #888; border-right: 1px solid #888; }
+.xldown_box div { margin: 0px 5px 0px 5px; }
+.xldown_head { background: white; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.xldown_head h4 { padding-bottom: 3px; }
+.xldown1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.xldown1_top, .xldown2_top, .xldown3_top, .xldown4_top, .xldown2_bottom, .xldown3_bottom, .xldown4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.xldown2_bottom, .xldown3_bottom, .xldown4_bottom { background: white; }
+.xldown2_top, .xldown2_bottom { background: white; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.xldown3_top, .xldown3_bottom { background: white; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.xldown4_top, .xldown4_bottom { background: white; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.announce_box { background: #E1ECE1; border-left: 1px solid #888; border-right: 1px solid #888; }
+.announce_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.announce_head { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.announce_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.announce1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.announce1_top, .announce2_top, .announce3_top, .announce4_top, .announce2_bottom, .announce3_bottom, .announce4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.announce2_bottom, .announce3_bottom, .announce4_bottom { background: #E1ECE1; }
+.announce2_top, .announce2_bottom { background: #A3C5C7; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.announce3_top, .announce3_bottom { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.announce4_top, .announce4_bottom { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center news block
+----------------------------------------*/
+.news_box { background: #FFFCE8; border-left: 1px solid #888; border-right: 1px solid #888; }
+.news_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.news_head { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.news_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.news1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.news1_top, .news2_top, .news3_top, .news4_top, .news2_bottom, .news3_bottom, .news4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.news2_bottom, .news3_bottom, .news4_bottom { background: #FFFCE8; }
+.news2_top, .news2_bottom { background: #F0E68C; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.news3_top, .news3_bottom { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.news4_top, .news4_bottom { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center news compact block
+----------------------------------------*/
+.news_compact_box { background: #FFFFF0; border-left: 1px solid #888; border-right: 1px solid #888; }
+.news_compact_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.news_compact_head { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.news_compact_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.news_compact1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.news_compact1_top, .news_compact2_top, .news_compact3_top, .news_compact4_top, .news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom { background: #FFFFF0; }
+.news_compact2_top, .news_compact2_bottom { background: #89B2D2; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.news_compact3_top, .news_compact3_bottom { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.news_compact4_top, .news_compact4_bottom { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.attach_box { background: #F1F1E0; border-left: 1px solid #888; border-right: 1px solid #888; }
+.attach_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.attach_head { background: #E9E8CD; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.attach_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.attach1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.attach1_top, .attach2_top, .attach3_top, .attach4_top, .attach2_bottom, .attach3_bottom, .attach4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.attach2_bottom, .attach3_bottom, .attach4_bottom { background: #F1F1E0; }
+.attach2_top, .attach2_bottom { background: #E9E8CD; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.attach3_top, .attach3_bottom { background: #E9E8CD; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.attach4_top, .attach4_bottom { background: #E9E8CD; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center recent latest_topics block
+----------------------------------------*/
+.latest_topics_box { background: #FFFCE8; border-left: 1px solid #888; border-right: 1px solid #888; }
+.latest_topics_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.latest_topics_head { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.latest_topics_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.latest_topics1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.latest_topics1_top, .latest_topics2_top, .latest_topics3_top, .latest_topics4_top, .latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom { background: #FFFCE8; }
+.latest_topics2_top, .latest_topics2_bottom { background: #F0E68C; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.latest_topics3_top, .latest_topics3_bottom { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.latest_topics4_top, .latest_topics4_bottom { background: #F0E68C; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center recent latest_hot block
+----------------------------------------*/
+.latest_hot_box { background: #F1F1E0; border-left: 1px solid #888; border-right: 1px solid #888; }
+.latest_hot_box div { line-height: 1.5em; margin: 0px 5px 0px 5px; }
+.latest_hot_head { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.latest_hot_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.latest_hot1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.latest_hot1_top, .latest_hot2_top, .latest_hot3_top, .latest_hot4_top, .latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom { background: #F1F1E0; }
+.latest_hot2_top, .latest_hot2_bottom { background: #89B2D2; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.latest_hot3_top, .latest_hot3_bottom { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.latest_hot4_top, .latest_hot4_bottom { background: #89B2D2; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* CSS Inner Round Corners center recent latest block
+----------------------------------------*/
+.latest_box { background: #E1ECE1; border-left: 1px solid #888; border-right: 1px solid #888; }
+.latest_head { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; }
+.latest_head h4 { margin: 0px 10px 0px 10px; padding-bottom: 3px; }
+.latest1_top { background: #aaa; height: 1px; margin: 0 5px; }
+.latest1_top, .latest2_top, .latest3_top, .latest4_top, .latest2_bottom, .latest3_bottom, .latest4_bottom{ display: block; font-size: 1px; overflow: hidden; }
+.latest2_bottom, .latest3_bottom, .latest4_bottom { background: #E1ECE1; }
+.latest2_top, .latest2_bottom { background: #A3C5C7; border-left: 2px solid #aaa; border-right: 2px solid #aaa; height: 1px; margin: 0 3px; }
+.latest3_top, .latest3_bottom { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 1px; margin: 0 2px; }
+.latest4_top, .latest4_bottom { background: #A3C5C7; border-left: 1px solid #aaa; border-right: 1px solid #aaa; height: 2px; margin: 0 1px; }
+
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+   
+/* - white - */
+div.white {
+	background-color: #FFFFFF;
+	font-size: 11px;
+	color: black;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.white a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+div.white th {
+	color: black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.white h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: black;
+}
+
+div.white p {
+	font-size: 11px;
+	color: black;
+}
+
+/* - green - */
+div.green {
+	background-color: #8fbca6;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.green a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.green th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.green h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.green p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - blue - */
+div.blue {
+	background-color: #6495ed;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.blue a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.blue th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.blue h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.blue p {
+	font-size: 11px;
+	color: white;
+}
+
+/* - darkgreen - */
+div.darkgreen {
+	background-color: #C6DDC6;
+	color: #669966;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.darkgreen a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #669966;
+}
+
+div.darkgreen th {
+	color: #669966;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.darkgreen h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #669966;
+}
+
+div.darkgreen p {
+	font-size: 11px;
+	color: #669966;
+}
+
+/* - brown - */
+div.brown {
+	background-color: #ECD9C8;
+	color: #9C6834;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.brown a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.brown th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.brown h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.brown p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - khaki - */
+div.khaki {
+	background-color: #F0E68C;
+	color: Black;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.khaki a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.khaki th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.khaki h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.khaki p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - yellow - */
+div.yellow {
+	background-color: #FFFFCE;
+	color: Black;
+	font-size: 11px;;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.yellow a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.yellow th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.yellow h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.yellow p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - orange - */
+div.orange {
+	background-color: #ff8c00;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.orange a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.orange th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.orange h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.orange p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - red - */
+div.red {
+	background-color: #C30;
+	color: #FFFFFF;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.red a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+div.red th {
+	color: #FFFFFF;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.red h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #FFFFFF;
+}
+
+div.red p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+/* - gray - */
+div.gray {
+	background-color: #dcdcdc;
+	color: #464646;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.gray a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #464646;
+}
+
+div.gray th {
+	color: #464646;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.gray h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #464646;
+}
+
+div.gray p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+dl.extra-box {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	font-size: 1em; 
+	display: block;
+	height: 77px;
+	width: 210px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+dl.extra-box dd a {
+	color: #FFFFFF !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding-left: 10px;
+	padding-right: 50px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dd.fileformat { padding-left: 10px; padding-top: 5px; }
+
+dl.extra-box dd.fileformat label { font-size: 1.1em; color: #FFF; }
+
+dl.extra-box dt a {
+	color: #333333 !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding: 10px 0 5px 10px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dt a:hover { font-size: 1.1em; color: #000000 !important; text-decoration: none; }
+
+dl.extra-box-images {
+	font-size: 1em; 
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 5px;
+}
+
+dl.text dt { font-weight: bold; font-size: 1em; margin-top: 1.1em; }
+
+dl.text, ul.download-update { font-size: 1em; }
+
+/* Menu  listing */
+ul.menu { border-top: 1px solid #FFFFFF; list-style: none; }
+
+ul.menu li {
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0;
+	padding: 5px 0 4px 0;
+}
+
+ul.menu li.last { border-bottom: none; }
+
+.head1 { font-size: 1.1em; padding: 10px 0 0 10px; }
+
+.head2 { font-size: 1.1em; padding: 15px 0 0 5px; }
+
+/* Extras column */
+#extras {
+	font-size: 1em; 
+	float: right;
+	margin: 0px;
+	text-align: left;
+	width: 215px;
+}
+
+dl.linkblue {
+	background-image: url("{T_THEME_PATH}/images/bg_link_blue.png");
+}
+
+dl.linkred {
+	background-image: url("{T_THEME_PATH}/images/bg_link_red.png");
+}
+
+dl.download {
+	background-image: url("{T_THEME_PATH}/images/bg_download_blue.png");
+}
+	
+dl.download2 {
+	background-image: url("{T_THEME_PATH}/images/bg_download_orange.png");
+}
+
+dl.downloadr {
+	background-image: url("{T_THEME_PATH}/images/bg_download_green.png");
+}
+
+dl.downloadred {
+	background-image: url("{T_THEME_PATH}/images/bg_download_red.png");
+}
+	
+dl.downloadb {
+	background-image: url("{T_THEME_PATH}/images/bg_download_green.png");
+}
+
+dl.download-contrib {
+	background-image: url("{T_THEME_PATH}/images/bg_download_orange.png");
+}
+
+div.mini-panel {
+	font-size: 1em; 
+	color: #333333;
+	background-color: #ebebeb;
+	margin-bottom: 5px;
+	padding: 0 5px;
+	width: 200px;
+	float: right;
+}
+
+div.mini-panel h3 {
+	font-size: 1em; 
+	color: #333333;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+}
+
+div.mini-panel p { font-size: 1em; margin: 3px 0; }
+
+div.mini-panel span.corners-top, div.mini-panel span.corners-bottom { margin: 0 -10px; }
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   phpbb Calendar Version 0.1.0
+   -------------------------------------------------------------- */
+   
+/* uses border-top-color = .bg3 background-color
+ (the line between events in the month display) */
+hr.hrCal { 
+	border-top-color: #cadceb;
+}
+
+/* uses color from h1
+   (calendar header previous and next links) */
+.calH1 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 200%;
+}
+
+/* The from and to times take up a lot of 
+  space in the calendar display.
+  Use this to shrink them */
+.smCalText{ font-size:85%; }
+
+/* bg4 is just slightly darker then bg3 
+  (used in calendar headers) */
+.bg4 { background-color: #3399CC; font-weight: bold; color: #FFF; }
+
+/* uses background-color of .bg3
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg3_calMonH{ 
+	background-color: #cadceb;
+	font-size: 10px;
+}
+
+/* uses background-color of .bg4
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg4_calMonH{ 
+	background-color: #8DB8DE;
+	font-size: 10px;
+}
+
+table.table_minical {
+	width: 99%;		/* IE < 6 browsers */
+	/* Tantek hack */
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: 100%;
+}
+
+/* uses background-color of .bg1
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg1_calMon {
+	background-color: #ECF3F7;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+/* uses background-color of .bg2
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg2_calMon {
+	background-color: #e1ebf2;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+/* uses background-color of .bg3
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg3_calMon {
+	background-color: #cadceb;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/* uses background-color of .bg1
+   uses border-top-color = .forumbg background-color
+   (used to display events in calendar day view) */ 
+table.table1 tbody td.bg1_calDay {
+	background-color: #ECF3F7;
+	border-top-color: #12A3EB;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+/* uses background-color of .bg3
+   uses border-top-color = .forumbg background-color
+   (used to display negative space in calendar day view) */ 
+table.table1 tbody td.bg3_calDay {
+	background-color: #cadceb;
+	border-top-color: #12A3EB;
+}
+
+ul.profile-icons li.edit-all-icon	{ width: {IMG_ICON_CALENDAR_EDIT_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_EDIT_ALL_HEIGHT}px; }
+ul.profile-icons li.delete-all-icon	{ width: {IMG_ICON_CALENDAR_DELETE_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_DELETE_ALL_HEIGHT}px; }
+
+.edit-all-icon, .edit-all-icon a			{ background-image: url("{IMG_ICON_CALENDAR_EDIT_ALL_SRC}"); }
+.delete-all-icon, .delete-all-icon a			{ background-image: url("{IMG_ICON_CALENDAR_DELETE_ALL_SRC}"); }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span 	{ background: transparent none 0 0 no-repeat; }
+.calendar-day-icon span 	{ background: transparent none 0 0 no-repeat; }
+.calendar-week-icon span 	{ background: transparent none 0 0 no-repeat; }
+.calendar-month-icon span 	{ background: transparent none 0 0 no-repeat; }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+   
+   Note the "text-align: left" was added because there were a few instances where the icons were cut in half... 
+   adding the text align property helps reserve enough space to fully display the icon.
+*/
+.buttons div.calendar-new-icon 		{ width: {IMG_BUTTON_CALENDAR_NEW_WIDTH}px; height: {IMG_BUTTON_CALENDAR_NEW_HEIGHT}px; text-align: left; float: left; }
+.buttons div.calendar-day-icon 		{ width: {IMG_BUTTON_CALENDAR_DAY_WIDTH}px; height: {IMG_BUTTON_CALENDAR_DAY_HEIGHT}px; text-align: left; float: left; }
+.buttons div.calendar-week-icon		{ width: {IMG_BUTTON_CALENDAR_WEEK_WIDTH}px; height: {IMG_BUTTON_CALENDAR_WEEK_HEIGHT}px; text-align: left; float: left; }
+.buttons div.calendar-month-icon 	{ width: {IMG_BUTTON_CALENDAR_MONTH_WIDTH}px; height: {IMG_BUTTON_CALENDAR_MONTH_HEIGHT}px; text-align: left; float: left; }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span 	{ background-image: url("{IMG_BUTTON_CALENDAR_NEW_SRC}") ;}
+.calendar-day-icon span     { background-image: url("{IMG_BUTTON_CALENDAR_DAY_SRC}") ;}
+.calendar-week-icon span    { background-image: url("{IMG_BUTTON_CALENDAR_WEEK_SRC}") ;}
+.calendar-month-icon span   { background-image: url("{IMG_BUTTON_CALENDAR_MONTH_SRC}") ;}
+/* --------------------------------------------------------------
+   phpbb Calendar Version 0.1.0
+   -------------------------------------------------------------- */
+   
+/* --------------------------------------------------------------
+   additional added custom bbcode css
+   -------------------------------------------------------------- */
+table.stoker {
+	background-color: #ffffe0;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: auto;
+}
+
+table.stoker td {
+	background-color: #CCC;
+	border: 1px #fff solid;
+	color: #000;
+	padding: 4px 20px 4px 20px;
+	text-align: left;
+}
+
+table.stoker td.headline {
+	background-color: #007901;
+	border-bottom: 2px #fff solid;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 4px;
+	text-align: center;
+}
+
+table.stoker td.headline:hover {
+	background-color: #005501;
+	color: #fff;
+	text-decoration: none;
+}
+
+table.stoker td:hover {
+	background-color: #556b2f;
+	color: #FFF;
+	text-decoration: underline;
+}
+/* --------------------------------------------------------------
+   additional added custom bbcode css
+   -------------------------------------------------------------- */
+   
+/* --------------------------------------------------------------
+   Guest Hide BBCode MOD version 1.4.0 of 14.04.2009
+   -------------------------------------------------------------- */
+/* FOR USER */
+.HideBlockA {
+  background-color: #FFFFCC;
+  border: 2px dotted #DEDEDE;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* FOR GUEST */
+.HideBlockB {
+  background-color: #F2F2F2;
+  border: 2px dotted #DEDEDE;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* LINE */
+hr.HideBlockLine {
+  margin: 3px 0px 3px 0px;
+  height: 2px;
+  background-color: #DEDEDE;
+  border-width: 0px;
+  color: #DEDEDE; /* IE6 fix */
+}
+/* --------------------------------------------------------------
+   Guest Hide BBCode MOD version 1.4.0 of 14.04.2009
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Arcade tooltip copyright (c) 2008 http://www.JeffRusso.net
+   -------------------------------------------------------------- */
+a.tooltip {
+	font-weight: bold;
+	position: relative;
+	text-decoration: none;
+}
+
+a.tooltip span {
+	position: absolute;
+	font-weight: normal;
+	border: 1px solid black;
+	background-color: #ECECEC;
+	padding: 10px;		
+	color: black;
+	width: 225px;
+	margin-top: 18px;
+	left: -9999em;
+}
+
+a.tooltip:hover {
+	visibility: visible;
+	z-index: 100;
+}
+
+a.tooltip:hover span, a.tooltip:focus span {
+	left: 60px;
+	text-decoration: none;
+}
+
+a.tooltip span.aheader {
+	width: 200px;
+}
+/* --------------------------------------------------------------
+   Arcade tooltip copyright (c) 2008 http://www.JeffRusso.net
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Offline icon
+   -------------------------------------------------------------- */
+.offline {
+	background-image: none;
+	background-position: 100% 0;
+	background-repeat: no-repeat;
+}
+
+.rtl .offline {
+	background-position: 0 0;
+}
+
+.offline {
+	background-image: url("{T_IMAGESET_LANG_PATH}/icon_user_offline.gif");
+}
+/* --------------------------------------------------------------
+   Offline icon
+   -------------------------------------------------------------- */

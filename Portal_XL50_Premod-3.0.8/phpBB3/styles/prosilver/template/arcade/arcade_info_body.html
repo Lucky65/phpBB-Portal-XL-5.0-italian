@@ -1,0 +1,14 @@
+<!-- IF S_IN_ARCADE -->
+	<!-- IF (S_ARCADE_DISABLED and S_USER_LOGGED_IN and U_ACP) or (S_ARCADE_REPORTS and S_ARCADE_REPORTS_OPEN) or (S_ARCADE_CAT_TEST_MODE)-->
+	<div id="message" class="rules">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<strong>{L_INFORMATION}:</strong>
+				<!-- IF S_ARCADE_DISABLED and S_USER_LOGGED_IN and U_ACP -->{L_ARCADE_DISABLED}<!-- ENDIF -->
+				<!-- IF (S_ARCADE_DISABLED and S_USER_LOGGED_IN and U_ACP) and (S_ARCADE_REPORTS and S_ARCADE_REPORTS_OPEN) -->&nbsp;<!-- ENDIF -->
+				<!-- IF S_ARCADE_REPORTS and S_ARCADE_REPORTS_OPEN --><a href="{U_ARCADE_REPORTS_OPEN}" >{ARCADE_REPORTS_OPEN}</a><!-- ENDIF -->
+				<!-- IF ((S_ARCADE_DISABLED and S_USER_LOGGED_IN and U_ACP) or (S_ARCADE_REPORTS and S_ARCADE_REPORTS_OPEN)) and S_ARCADE_CAT_TEST_MODE -->&nbsp;<!-- ENDIF -->
+				<!-- IF S_ARCADE_CAT_TEST_MODE -->{L_ARCADE_CAT_TEST_MODE}<!-- ENDIF -->
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<!-- ENDIF -->
+<!-- ENDIF -->

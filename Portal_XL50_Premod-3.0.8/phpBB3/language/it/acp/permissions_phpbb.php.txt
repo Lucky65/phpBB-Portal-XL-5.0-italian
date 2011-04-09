@@ -1,0 +1,44 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+		'user_group'	=> 'Users &amp; Groups',
+
+#-----[ AFTER ADD ]-----------------------------------------------------
+#
+
+		'downloads'		=> 'Download Panel',		
+
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// Download MOD Permissions
+$lang = array_merge($lang, array(
+	'acl_a_dl_overview'		=> array('lang' => 'Può gestire la pagina iniziale', 'cat' => 'downloads'),
+	'acl_a_dl_config'		=> array('lang' => 'Può gestire la configurazione generale', 'cat' => 'downloads'),
+	'acl_a_dl_traffic'		=> array('lang' => 'Può gestire il traffico', 'cat' => 'downloads'),
+	'acl_a_dl_categories'	=> array('lang' => 'Può gestire le categorie', 'cat' => 'downloads'),
+	'acl_a_dl_files'		=> array('lang' => 'Può gestire i downloads', 'cat' => 'downloads'),
+	'acl_a_dl_permissions'	=> array('lang' => 'Può gestire i permessi', 'cat' => 'downloads'),
+	'acl_a_dl_stats'		=> array('lang' => 'Può leggere e gestire le statistiche', 'cat' => 'downloads'),
+	'acl_a_dl_banlist'		=> array('lang' => 'Può gestire la lista ban', 'cat' => 'downloads'),
+	'acl_a_dl_blacklist'	=> array('lang' => 'Può gestire l’estensione dei file non permessi', 'cat' => 'downloads'),
+	'acl_a_dl_toolbox'		=> array('lang' => 'Può usare il toolbox', 'cat' => 'downloads'),
+   'acl_a_dl_fields'		=> array('lang' => 'Can manage user defined fields', 'cat' => 'downloads'),   
+));
+
+// PM Spy mod
+$lang = array_merge($lang, array(
+	'acl_a_pm_spy'	=> array('lang'	=> 'Può gestire i messaggi privati degli utenti', 'cat' => 'misc'),
+));
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'acl_a_flags'	        => array('lang' => 'Può gestire le bandiere nazionali', 'cat' => 'user_group'),
+	'acl_a_country_flags'	=> array('lang' => 'Può gestire le bandiere nazionali', 'cat' => 'misc'),
+	
+));

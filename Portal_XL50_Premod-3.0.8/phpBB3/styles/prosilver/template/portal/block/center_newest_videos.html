@@ -1,0 +1,23 @@
+<!-- BEGIN newest_videos -->
+  <!-- IF newest_videos.S_FIRST_ROW -->
+  <table class="tablebg" cellspacing="1" width="100%">
+      <tr>
+          <th align="center" colspan="4">{L_DMV_NEWEST_VIDEOS}</th>
+      </tr>
+      <tr>
+          <td width="40%">{L_DMV_TITLE}</td>
+          <td width="20%" align="center">{L_DMV_FROM}</td>
+          <td width="15%" align="center">{L_DMV_RATING_LIST}</td>
+          <td width="10%" align="center">{L_DMV_VIDEO_VIEWS}</td>
+      </tr>
+  <!-- ENDIF -->
+      <tr class="<!-- IF newest_videos.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+          <td><img src="{T_THEME_PATH}/images/arrow_user_select.gif" alt="{newest_videos.TITLE}" title="{newest_videos.TITLE}" height="10" width="10" />&nbsp;<a href="{newest_videos.U_SHOW_VIDEO}" class="topictitle">{newest_videos.TITLE}</a></td>
+          <td>{newest_videos.SINGER}</td>
+          <td align="center">{newest_videos.RATING}</td>
+          <td align="center">{newest_videos.VIEWS}</td>
+      </tr>
+  <!-- IF newest_videos.S_LAST_ROW -->
+  </table>
+  <!-- ENDIF -->
+<!-- END newest_videos -->

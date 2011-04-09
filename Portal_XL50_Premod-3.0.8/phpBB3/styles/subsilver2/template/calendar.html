@@ -1,0 +1,115 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th colspan="5">&nbsp;</th>
+	</tr>
+	<tr>
+		<td class="row1" colspan="5">
+        
+<table style="width: 100%; text-align: center;margin-left: auto; margin-right: auto;" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="text-align: center; width: 16%"><span class="calH1"><a href="{CALENDAR_PREV}">&lt;&lt;</a></span></td>
+    <td style="width: 8%">&nbsp;</td>
+    <td style="width: 32%"><h1 style="text-align: center;margin-left: auto; margin-right: auto;">{CALENDAR_HEADER}</h1></td>
+    <td style="width: 8%">&nbsp;</td>
+    <td style="text-align: center; width: 16%"><span class="calH1"><a href="{CALENDAR_NEXT}">&gt;&gt;</span></a></span></td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align: center">
+      <form id="viewOpts" method="post" action="{S_POST_ACTION}">
+        <p><br />{CALENDAR_VIEW_OPTIONS}
+          <input type="submit" accesskey="s" tabindex="6" name="post" value="{L_SUBMIT}" class="button1" />
+        </p>
+      </form></td>
+  </tr>
+</table>
+
+		</td>
+	</tr>
+	<tr>
+		<td class="cat" colspan="5">&nbsp;</td>
+	</tr>
+  </table>
+<br />
+
+<table class="tablebg" width="100%" cellspacing="0">
+    <tr>
+       <th align="left"><a href="{CALENDAR_PREV}"><span>&lt;&lt;</span></a></th>
+       <th align="center" colspan="5">{CALENDAR_HEADER}</th>
+       <th align="right"><a href="{CALENDAR_NEXT}"><span>&gt;&gt;</span></a></th>
+    </tr>
+	<tr>
+		<td class="row1" colspan="7">
+        
+<table class="tablebg" border="0" cellpadding="3" cellspacing="1" width="100%">
+    <tr>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{SUNDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{MONDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{TUESDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{WEDNESDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{THURSDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{FRIDAY}</b></td>
+      <td style="width: 14%; height: 24px; text-align: center" class="cat"><b class="genmed">{SATURDAY}</b></td>
+    </tr>
+    <!-- BEGIN calendar_days -->
+    <!-- IF calendar_days.START_WEEK --><tr style="height: 100px"><!-- ENDIF -->
+      <!-- IF calendar_days.DUMMY_DAY --><td valign="top" class="row1">&nbsp;</td><!-- ELSE --><td valign="top" class="<!-- IF calendar_days.DAY_CLASS eq 'highlight' -->row3<!-- ELSE -->row1<!-- ENDIF -->">
+      
+          <table style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td align="left" class="<!-- IF calendar_days.HEADER_CLASS eq 'highlight' -->todaybg<!-- ELSE -->row2<!-- ENDIF -->"><!-- IF calendar_days.ADD_LINK -->
+                <a href="{calendar_days.ADD_LINK}"><b class="gen">{calendar_days.NUMBER}</b></a>
+                <!-- ELSE -->
+                {calendar_days.NUMBER}
+                <!-- ENDIF --></td>
+              <td align="right" class="<!-- IF calendar_days.HEADER_CLASS eq 'highlight' -->todaybg<!-- ELSE -->row2<!-- ENDIF -->"><!-- IF calendar_days.ADD_LINK -->
+                <a href="{calendar_days.ADD_LINK}"><img src="{T_IMAGESET_LANG_PATH}/calendar_new_star_icon.gif" alt="{L_NEW_EVENT}" title="{L_NEW_EVENT}" /><span></span></a>
+                <!-- ENDIF -->
+                <a href="{calendar_days.DAY_VIEW_URL}"><img src="{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif" alt="{L_DAY}" title="{L_DAY}" /><span></span></a>
+                <!-- IF calendar_days.WEEK_VIEW_URL -->
+                <a href="{calendar_days.WEEK_VIEW_URL}"><img src="{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif" alt="{L_WEEK}" title="{L_WEEK}" /><span></span></a>
+                <!-- ENDIF -->
+                <!-- IF calendar_days.MONTH_VIEW_URL -->
+                <a href="{calendar_days.MONTH_VIEW_URL}"><img src="{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif" alt="{L_WEEJ}" title="{L_MONTH}" /><span></span></a>
+                <!-- ENDIF --></td>
+            </tr>
+          </table>
+          <br />
+
+          <!-- IF calendar_days.BIRTHDAYS -->{calendar_days.BIRTHDAYS}<!-- ENDIF -->
+
+ 			<!-- BEGIN events -->
+          		<!-- IF calendar_days.events.S_FIRST_ROW --><!-- IF calendar_days.BIRTHDAYS --><hr><!-- ENDIF --><!-- ELSE --><hr><!-- ENDIF -->
+          		<a href="{calendar_days.events.EVENT_URL}" title="<!-- IF calendar_days.events.ETYPE_DISPLAY_NAME -->{calendar_days.events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{calendar_days.events.FULL_SUBJECT}">
+          			<!-- IF calendar_days.events.COLOR --><span style="color:#{calendar_days.events.COLOR}"><!-- ENDIF -->
+          			<!-- IF calendar_days.events.DISPLAY_BOLD --><strong><!-- ENDIF -->
+          			<!-- IF calendar_days.events.IMAGE --><img src="{calendar_days.events.IMAGE}" alt="{calendar_days.events.ETYPE_DISPLAY_NAME}" /><!-- ENDIF -->
+          			<!-- IF calendar_days.events.ETYPE_DISPLAY_NAME -->{calendar_days.events.ETYPE_DISPLAY_NAME}: <!-- ENDIF --><span class="gensmall">{calendar_days.events.EVENT_SUBJECT}</span>
+          			<!-- IF calendar_days.events.DISPLAY_BOLD --></strong><!-- ENDIF -->
+          				<!-- IF calendar_days.events.SHOW_TIME --><br /><span class="gensmall">
+          					<!-- IF calendar_days.events.ALL_DAY -->{L_ALL_DAY}
+          					<!-- ELSE -->{L_FROM_TIME}: {calendar_days.events.START_TIME}
+          					<br />{L_TO_TIME}: {calendar_days.events.END_TIME}
+          					<!-- ENDIF --></span>
+          				<!-- ENDIF -->
+          			<!-- IF calendar_days.events.COLOR --></span><!-- ENDIF -->
+          		</a>
+          	<!-- END events -->
+      </td>
+      <!-- ENDIF -->
+    <!-- IF calendar_days.END_WEEK --></tr><!-- ENDIF -->
+
+    <!-- END calendar_days -->
+  </table>
+
+		</td>
+	</tr>
+	<tr>
+		<td class="cat" colspan="7" align="center"><!-- IF U_WATCH_CALENDAR --><a href="{U_WATCH_CALENDAR}" title="{L_WATCH_CALENDAR}">{L_WATCH_CALENDAR}</a><!-- ENDIF --></td>
+	</tr>
+  </table>
+
+<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

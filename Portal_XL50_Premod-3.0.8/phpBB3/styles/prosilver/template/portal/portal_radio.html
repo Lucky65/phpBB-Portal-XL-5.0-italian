@@ -1,0 +1,60 @@
+<!-- INCLUDE simple_header.html -->
+
+<h2>{L_TITLE}</h2>
+
+<div class="forabg">
+  <div class="inner"> <span class="corners-top"><span></span></span>
+
+<div class="content" style="width:auto; padding:4px;">
+<table class="table1" cellspacing="1" width="100%">
+  <thead>
+    <tr>
+      <th colspan="2"><!-- IF RADIO neq 0 -->{L_LISTENING_TO}: <strong><u>{NP_NAME}</u></strong><!-- ELSE -->{L_NO_CHOICE_MADE_YET}<!-- ENDIF --></th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="bg1">
+<td valign="top" width="40%">
+<div style="padding-left:8px; padding-right:10px; height:300px; overflow:auto;">
+<span style="font-size:11px;">  
+     <!-- BEGIN xmllist -->
+        <span class="gensmall"><a href="radio.php?station={xmllist.NUM}">{xmllist.NAME}</a></span><br />
+     <!-- END xmllist -->
+ </span>
+</div>
+</td>
+<td valign="top" align="center" width="100%">
+<!-- IF NP_TYPE eq "RM" -->
+	<object id="video1" classid="clsid:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA" height="60" width="{WIDTH}">
+		<param name="controls" value="ControlPanel,StatusBar" />
+		<param name="console" value="Clip1" />
+		<param name="autostart" value="true" />
+		<param name="src" value="{NP_URL}" />
+		<span style="color:#FF0000;">ActiveX Control: You must be using Internet Explorer and Real Player 5.0</span> 
+		<embed src="{NP_URL}" console="Clip1" controls="ControlPanel,StatusBar" height="60" width="{WIDTH}" autostart="true"></embed>
+	</object>
+<!-- ELSE -->
+	<object id="player" name="player" width="{WIDTH}" height="{HEIGHT}" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701" standby="Loading Microsoft Windows Media player components..." type="application/x-oleobject">
+		<param name="url" value="{NP_URL}" />
+		<param name="uiMode" value="full" />
+		<param name="autoStart" value="true" />
+		<param name="loop" value="true" />
+		<embed type="application/x-mplayer2" pluginspage="http://microsoft.com/windows/mediaplayer/en/download/" showcontrols="true" uimode="full" width="{WIDTH}" height="{HEIGHT}" src="{NP_URL}" autostart="true" loop="true"></embed>
+	</object>
+<!-- ENDIF -->
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+
+    <span class="corners-bottom"><span></span></span> </div>
+</div>
+
+<table width="100%" cellspacing="1" cellpadding="5" border="0">
+  <tr>
+      <td align="center" valign="middle"><a class="nav" href="#" onclick="window.close(); return false;"><strong>{L_CLOSE_WINDOW}</strong></a></td>
+  </tr>
+</table>
+
+<!-- INCLUDE simple_footer.html -->

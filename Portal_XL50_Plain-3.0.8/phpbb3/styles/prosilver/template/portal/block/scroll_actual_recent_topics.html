@@ -1,0 +1,19 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="1">{L_RECENT_ACTUAL_TOPIC}</td>
+</tr>--> 
+ <tr>
+    <td class="row1"><span>
+		<marquee behavior="scroll" direction="left" height="20" scrolldelay="50" scrollamount="2" OnMouseOver="this.stop()" OnMouseOut="this.start()">
+		<!-- BEGIN scroll_actual_recent_topics -->
+        {scroll_actual_recent_topics.MINI_POST_IMG}{scroll_actual_recent_topics.S_POSTTIME}
+		<a href="{scroll_actual_recent_topics.U_TITLE}" > - 
+        <span style="font-size: 10px;"><b>{scroll_actual_recent_topics.L_TITLE}</b></span></a> - 
+		<span style="font-size: 10px;">
+		{L_POSTED_BY}: <a href="{scroll_actual_recent_topics.U_POSTER}" >{scroll_actual_recent_topics.S_POSTER}</a>
+		</span> &#8226; 
+		<!-- END scroll_actual_recent_topics -->
+		</marquee>
+    </span></td>
+  </tr>
+</table>

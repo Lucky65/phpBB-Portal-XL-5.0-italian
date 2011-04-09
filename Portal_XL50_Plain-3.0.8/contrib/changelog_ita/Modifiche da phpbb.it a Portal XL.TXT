@@ -1,0 +1,206 @@
+Queste sono solo le modifiche dei language modificati da phpbb.it a portal xl.
+
+Apri language/it/common.php
+
+Cerca:
+
+?>
+
+Aggiungi prima:
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Database Mods',
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Clicca qui per ridimensionare!',
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Contatore visite',
+	'COUNTER_STARTDATE' => 'Visite dal %s',
+	'HITS_PER_DAY'		=> 'Maggiori visite giorno',
+	'HITS_PER_HOUR'		=> 'Maggiori visite ora',
+	'HITS_PER_MONTH'	=> 'Maggiori visite mese',
+	'HITS_PER_USER'		=> 'Maggiori visite utente',
+	'HITS_PER_WEEK'		=> 'Maggiori visite settimana',
+	'HITS_PER_YEAR'		=> 'Maggiori visite anno',
+	'IP_TRACKING_NO' 	=> '[Nessun IP monitorato]',
+	'IP_TRACKING_YES' 	=> '[Monitoraggio IP]',
+	'TRANSLATION_INFO' 	=> 'Traduzione Italiana PhpBB <a href="http://www.phpbb.it/">phpBB.it</a> - Per Portal XL <a href="http://www.portalxl.eu/">portalxl.eu</a>'
+	
+));
+
+
+
+Apri language/it/acp/common.php
+
+Cerca:
+
+?>
+
+Sostituisci con:
+
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portale',
+   	'ACP_CAT_PORTAL'           				=> 'Portale',
+   	'ACP_PORTAL'           					=> 'Portale',
+   	'ACP_PORTAL_ADMIN'           			=> 'Generale',
+   	'ACP_PORTAL_INFO'           			=> 'Generale',
+    'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Annunci',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'News',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Messaggi recenti',
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Paroliere',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Allegati',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Ultimi utenti',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Sondaggi',
+    'ACP_PORTAL_BOTS_INFO'                  => 'Visite Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Maggiori autori',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Banners casuali',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Benvenuto',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Meteo',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Info',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Messaggio scorrevole',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Gestione Portale',
+
+	// Portal XL portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Blocchi portale',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Blocchi e pagine portale',
+	'ACP_PORTAL_BLOCKS'						=> 'Blocchi portale',
+	'ACP_MANAGE_BLOCKS'						=> 'Gestione blocchi portale',
+
+	// Portal XL index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Blocchi forum',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Blocchi forum',
+	'ACP_PORTAL_INDEX_BLOCKS'				=> 'Blocchi forum',
+	'ACP_MANAGE_INDEX_BLOCKS'				=> 'Gestione blocchi forum',
+
+	// Portal XL portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Menu',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Menu',
+	'ACP_PORTAL_MENUS'						=> 'Menu',
+	'ACP_MANAGE_MENUS'						=> 'Gestione menu',
+
+	// Portal XL portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Citazioni',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Citazioni',
+	'ACP_PORTAL_QUOTES'						=> 'Citazioni',
+	'ACP_MANAGE_QUOTES'						=> 'Gestione citazioni',
+
+	// Portal XL portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Gestione banners',
+	'ACP_MANAGE_BANNERS'					=> 'Gestione banners 88x31',
+
+	// Portal XL portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners orizzontali',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners orizzontali e verticali',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners orizzontali',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Gestione banners 400x60',
+
+	// Portal XL portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners verticali',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners verticali',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners verticali',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Gestione Banners 130x600',
+
+	// Portal XL portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Links',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Links',
+	'ACP_PORTAL_LINKS'							=> 'Links',
+	'ACP_MANAGE_LINKS'							=> 'Gestione Links',
+
+	// Portal XL portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mods',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mods',
+	'ACP_PORTAL_MODS'							=> 'Mods',
+	'ACP_MANAGE_MODS'							=> 'Gestione Mods',
+
+	// Portal XL portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Pubblicità forum',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Pubblicità forum',
+	'ACP_PORTAL_ADDS'							=> 'Pubblicità forum',
+	'ACP_MANAGE_ADDS'							=> 'Gestione pubblicità',
+
+	// Portal XL portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Pagine portale',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Pagine portale',
+	'ACP_PORTAL_PAGES'							=> 'Pagine portale',
+	'ACP_MANAGE_PAGES'							=> 'Gestione pagine portale',
+
+	// Portal XL portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Feeds portale',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Feeds portale',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Feeds portale',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Gestione Feeds',
+
+	// Portal XL portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Acronimi portale',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Acronimi portale',
+	'ACP_PORTAL_ACRONYMS'						=> 'Acronimi portale',
+	'ACP_MANAGE_ACRONYMS'						=> 'Gestione acronimi',
+
+	// Portal XL portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Impressioni portale',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Impressioni portale',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Impressioni portale',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Gestione impressioni',
+
+	// Portal XL portal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portale generale salvato</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Annunci portale salvati</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>News portale salvate</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Messaggi recenti portale salvati</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Wordgraph portale salvato</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Salvata larghezza della colonna portale</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Paypal portale salvato</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Allegati portale salvati</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Utenti portale salvati</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Sondaggi portale salvati</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Visite bots portale salvate</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Maggiori autori portale salvati</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Random portale salvati</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Benvenuto portale salvato</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Meteo portale salvato</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Info portale salvato</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Indice forum portale salvato</strong>',
+  	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Messaggi scorrevoli portale salvati</strong>',
+	'LOG_CONFIG_METATAGS'      		=> '<strong>Configurazione meta tags salvata</strong>',
+
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>Portal XL installato</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>Portal XL disinstallato</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>Portal XL database aggiornato</strong>',
+
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'ACP_COUNTER_SETTINGS'	=> 'Configurazione contatore',
+	'COUNTER_STARTED'		=> 'Contatore iniziato',
+	'HITS_PER_DAY'			=> 'Maggiori visite per giorno',
+	'LOG_CONFIG_COUNTER'	=> '<strong>Configurazione contatore alterata</strong>',
+	'LOG_RESET_COUNTER'		=> '<strong>Contatore azzerato: azzerati data e valori</strong>',
+	'NUMBER_HITS'			=> 'Numero di visite',
+	'RESET_COUNTER'			=> 'Azzera contatore',
+	'RESET_COUNTER_CONFIRM'	=> 'Sei sicuro di voler azzerare il contatore?',
+	'RESET_COUNTER_EXPLAIN'	=> 'Azzera tutti dati del contatore: azzera data e totale visite.',
+));
+
+?>

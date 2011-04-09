@@ -1,0 +1,54 @@
+<!-- INCLUDE overall_header.html -->
+
+	<div class="forabg">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="topiclist">
+			<li class="header">
+				<dl>
+					<dd class="info">{L_USERNAME}</dd>
+					<dt>{L_MESSAGE}</dt>
+					<dd class="time">{L_OPTIONS}</dd>
+				</dl>
+			</li>
+		</ul>
+	
+		<ul class="topiclist topics">
+			<!-- BEGIN comment_row -->
+			<li class="row<!-- IF searchresults.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+				<dl>
+					<dd class="info"><label>{comment_row.POSTER}</label><br /><span class="small">{comment_row.POST_TIME}</span></dd>
+					<dt><span>{comment_row.MESSAGE}<!-- IF comment_row.EDITED_BY --></span><br /><br /><span class="notice"><!-- ENDIF -->{comment_row.EDITED_BY}</span></dt>
+					<dd class="time">&nbsp;<!-- BEGIN action_button --><a href="{comment_row.U_EDIT_COMMENT}">{ICON_EDIT}</a>&nbsp;&bull;&nbsp;<a href="{comment_row.U_DELETE_COMMENT}">{ICON_DELETE}</a><!-- END action_button -->&nbsp;</dd>
+				</dl>
+			</li>
+			<!-- END comment_row -->
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<!-- IF S_COMMENT_BUTTON -->
+	<form action="{S_FORM_ACTION}" method="post" id="comments_view">
+
+	<fieldset class="submit-buttons">
+		<input type="submit" name="post" value="{L_POST_COMMENT}" class="button2" />
+		{S_HIDDEN_FIELDS}
+	</fieldset>
+	
+	</form>
+	<!-- ENDIF -->
+	
+	<!-- IF PAGINATION -->
+	<ul class="linklist">
+		<li class="rightside pagination">
+			<span>{L_GOTO_PAGE}: {PAGINATION}</span>
+		</li>
+	</ul>
+	<!-- ENDIF -->
+
+<br />
+
+<!-- INCLUDE dl_mod/dl_footer.html -->
+
+<!-- INCLUDE overall_footer.html -->

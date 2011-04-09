@@ -1,0 +1,14 @@
+
+Nasledujúcu správu Vám poslal administrátor “{SITENAME}”. Ak tento email považujete za spam, obsahuje poznámky, ktoré sa Vám zdajú byť neprístojné, alebo Vás istým spôsbom uráža, prosím kontaktujte webmastera fóra na nasledujúcej adrese:
+
+{CONTACT_EMAIL}
+
+Nezabudnite priložiť aj tento celý email (hlavne hlavičky).
+
+Nasleduje samotná správa:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{MESSAGE}
+
+
+{EMAIL_SIG}

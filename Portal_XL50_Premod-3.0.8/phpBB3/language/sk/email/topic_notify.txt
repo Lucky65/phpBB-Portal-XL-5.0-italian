@@ -1,0 +1,20 @@
+Subject: Nový príspevok v téme “{TOPIC_TITLE}”
+
+Vážený/á {USERNAME},
+
+Obdržali ste túto správu, pretože sledujete tému - “{TOPIC_TITLE}” na “{SITENAME}”. V tejto téme pribudli nové príspevky od Vašej poslednej návštevy. Ďalšia správa oznamujúca nové príspevky Vám bude poslaná, až po Vašej návšteve tejto témy.
+
+Ak si prajete zobraziť najnovšie príspevky od Vašej poslednej návštevy, navštívte nasledujúci odkaz:
+{U_NEWEST_POST}
+
+Ak si prajete zobraziť tému “{TOPIC_TITLE}”, navštívte nasledujúci odkaz:
+{U_TOPIC}
+
+Ak si už neželáte sledovať túto tému, môžete buď kliknúť na odkaz “Prestať sledovať tému”, ktorý nájdete na konci vyššie spomínanej témy, alebo návštevou nasledujúceho odkazu:
+{U_FORUM}
+
+Ak si naďalej neželáte sledovať túto tému, môžete kliknúť na "odznačiť tému" odkaz nájdete na konci správy, alebo kliknutím na odkaz:
+
+{U_STOP_WATCHING_TOPIC}
+
+{EMAIL_SIG}

@@ -1,0 +1,72 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.marquee.min.js'></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+  $("#marquee-gallery_vertical_scroll_body").marquee({
+		yScroll: "top",
+		showSpeed: 850,
+		scrollSpeed: 10,
+		pauseSpeed: 5000,
+		pauseOnHover: true,
+		loop: -1,
+		fxEasingScroll: "linear",
+		/* define the class statements */
+		cssShowing: "marquee-gallery-vertical-scroll-body"
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+ul.marquee-gallery-vertical-scroll-body {
+	display: block;
+	height: 200px;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	margin: 1px;
+}
+
+ul.marquee-gallery-vertical-scroll-body li {
+	display: inline-table;
+	position: absolute;
+	overflow: hidden;
+	top: -999em;
+	width: 100%;
+	overflow: hidden; 
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="1">{L_RANDOM_PIC}</td>
+</tr>-->
+  <!-- BEGIN no_pics -->
+  <tr>
+    <td class="row1" align="center" colspan="{S_COLS}" height="50"><span class="gen">{L_NO_PICS}</span></td>
+  </tr>
+  <!-- END no_pics -->
+  <tr>
+    <td class="row2" align="center" valign="top">
+
+        <div align="center">
+        <ul id="marquee-gallery_vertical_scroll_body" class="marquee-gallery-vertical-scroll-body">
+          <!-- BEGIN image_random_scroll_col -->
+             <li>
+                <table width="100%" cellpadding="2" cellspacing="5" class="forumline">
+                    <tr>
+                        <td class="row1" width="100%" align="center" style="height: {S_THUMBNAIL_SIZE}px;">
+                          <a href="{image_random_scroll_col.U_PIC}">{image_random_scroll_col.THUMBNAIL}</a></td>
+                  </tr>
+                </table>
+            </li>
+          <!-- END image_random_scroll_col -->
+        </ul>
+        </div>
+
+      </td>
+  </tr>
+  <tr>
+    <td align="center" class="row1"><span class="gensmall">[ <a href="{U_GALLERY_MOD}" title="{L_GALLERY}" target="_self">{L_GALLERY}</a> ]</span></td>
+  </tr>
+</table>

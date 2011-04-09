@@ -1,0 +1,11 @@
+Subject: Erinnerung von "{SITENAME}"! 
+
+Hallo {USERNAME},
+
+Wir haben festgestellt, dass du dich seit einiger Zeit nicht auf {SITENAME} eingeloggt hast.
+
+Schau doch bitte mal wieder auf {U_BOARD} vorbei um einen Blick auf unsere aktuellen Themen im Forum zu werfen. 
+
+Wir freuen uns dich bald wieder bei uns zu sehen.
+
+{EMAIL_SIG}

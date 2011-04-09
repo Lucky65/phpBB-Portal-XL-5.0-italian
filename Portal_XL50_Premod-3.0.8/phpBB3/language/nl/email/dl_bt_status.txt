@@ -1,0 +1,16 @@
+Subject: Nieuwe status voor bug rapport op {SITENAME}
+
+Hallo {USERNAME},
+
+Je hebt deze mail ontvangen, omdat de status van het door jou aangemaakte bug rapport {REPORT_TITLE} op {SITENAME} is gewijzigd.
+Nieuwe status: {STATUS}.
+
+{STATUS_TEXT}
+
+Voor meer informatie kun je onderstaande link bezoeken:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

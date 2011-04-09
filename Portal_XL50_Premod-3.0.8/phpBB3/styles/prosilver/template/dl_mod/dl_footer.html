@@ -1,0 +1,117 @@
+{S_DL_JUMPBOX}
+
+<!-- IF S_DL_MOD_OFFLINE_ADMINS -->
+<br />
+
+<div class="rules">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_DL_OFF_MESSAGE_ADMIN}</strong>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- BEGIN approve -->
+<br />
+
+<div class="panel" style="background-color: #FFAA44;">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<a href="{approve.U_APPROVE_DOWNLOADS}" class="forumtitle">{approve.L_APPROVE_DOWNLOADS}</a>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- END approve -->
+<!-- BEGIN approve_comments -->
+<br />
+
+<div class="panel" style="background-color: #FFAA44;">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<a href="{approve_comments.U_APPROVE_COMMENTS}" class="forumtitle">{approve_comments.L_APPROVE_COMMENTS}</a>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- END approve_comments -->
+
+<br />
+
+<!-- IF S_FOOTER_NAV_ON -->
+<div class="panel bg3">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<table class="table2" width="100%" cellspacing="0">
+	<tr>
+		<td align="center"><a href="{U_OVERALL_VIEW}"><strong>{L_DL_OVERVIEW}</strong></a></td>
+		<!-- IF S_STATS_VIEW_ON --><td align="center"><a href="{U_STATS}"><strong>{L_DL_STATS}</strong></a></td><!-- ENDIF -->
+		<!-- IF S_TODO_LINK --><td align="center"><a href="{U_TODOLIST}"><strong>{L_DL_MOD_TODO}</strong></a></td><!-- ENDIF -->
+		<!-- IF S_U_CONFIG_LINK --><td align="center"><a href="{U_CONFIG}"><strong>{L_DL_CONFIG}</strong></a></td><!-- ENDIF -->
+	</tr>
+	</table>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<br />
+
+<!-- IF S_FOOTER_LEGEND -->
+
+<ul class="topiclist">
+<!-- IF S_DL_TRAFFIC_OFF -->
+	<li>
+		<dl class="icon">
+			<dd class="extra">{IMG_RED}</dd><dd class="lastpost">{L_DL_RED_EXPLAIN}</dd>
+			<dd class="extra">{IMG_GREEN}</dd><dd class="lastpost">{L_DL_GREEN_EXPLAIN}</dd>
+		</dl>
+		<dl class="icon">
+			<dd class="extra">{IMG_GREY}</dd><dd class="lastpost">{L_DL_GREY_EXPLAIN}</dd>
+			<dd class="extra">{IMG_WHITE}</dd><dd class="lastpost">{L_DL_WHITE_EXPLAIN}</dd>
+		</dl>
+		<dl class="icon">
+			<dd class="extra">{IMG_NEW_DL}</dd><dd class="lastpost">{L_DL_NEW}</dd>
+			<dd class="extra">{IMG_EDIT_DL}</dd><dd class="lastpost">{L_DL_EDIT}</dd>
+		</dl>
+	</li>
+<!-- ELSE -->
+	<li>
+		<dl class="icon">
+			<dd class="extra">{IMG_BLUE}</dd><dd class="lastpost">{L_DL_BLUE_EXPLAIN_FOOT}</dd>
+			<dd class="extra">{IMG_RED}</dd><dd class="lastpost">{L_DL_RED_EXPLAIN}</dd>
+		</dl>
+		<dl class="icon">
+			<dd class="extra">{IMG_GREY}</dd><dd class="lastpost">{L_DL_GREY_EXPLAIN}</dd>
+			<dd class="extra">{IMG_WHITE}</dd><dd class="lastpost">{L_DL_WHITE_EXPLAIN}</dd>
+		</dl>
+		<dl class="icon">
+			<dd class="extra">{IMG_YELLOW}</dd><dd class="lastpost">{L_DL_YELLOW_EXPLAIN}</dd>
+			<dd class="extra">{IMG_GREEN}</dd><dd class="lastpost">{L_DL_GREEN_EXPLAIN}</dd>
+		</dl>
+		<dl class="icon">
+			<dd class="extra">{IMG_NEW_DL}</dd><dd class="lastpost">{L_DL_NEW}</dd>
+			<dd class="extra">{IMG_EDIT_DL}</dd><dd class="lastpost">{L_DL_EDIT}</dd>
+		</dl>
+	</li>
+<!-- ENDIF -->
+</ul>
+<!-- ENDIF -->
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<div class="small" style="text-align: center;">
+			<!-- IF L_CAN_DOWNLOAD_AGAIN -->{L_CAN_DOWNLOAD_AGAIN}<br /><!-- ENDIF -->
+			<!-- BEGIN userdata -->&nbsp;{userdata.ACCOUNT_TRAFFIC}<!-- END userdata -->
+			<!-- BEGIN remain_traffic --><br />&nbsp;{remain_traffic.REMAIN_TRAFFIC}<!-- END remain_traffic -->
+			<!-- BEGIN no_remain_traffic --><br />&nbsp;<b><u>{no_remain_traffic.NO_OVERALL_TRAFFIC}</u></b><!-- END no_remain_traffic -->
+			<!-- BEGIN remain_guest_traffic --><br />&nbsp;{remain_guest_traffic.REMAIN_GUEST_TRAFFIC}<!-- END remain_guest_traffic -->
+			<!-- BEGIN no_remain_guest_traffic --><br />&nbsp;<b><u>{no_remain_guest_traffic.NO_OVERALL_GUEST_TRAFFIC}</u></b><!-- END no_remain_guest_traffic -->
+			<!-- BEGIN total_stat --><!-- IF not S_HIDE_FOOTER_DATA --><br /><!-- ENDIF -->{total_stat.TOTAL_STAT}<!-- END total_stat -->
+			<!-- IF not S_HIDE_FOOTER_DATA --><br /><!-- ENDIF --><br /><strong>{DL_MOD_RELEASE}</strong>
+			<!-- IF S_DL_TRANSLATION --><br />{L_DL_TRANSLATION}<!-- ENDIF -->
+		</div>
+	<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function help_popup(help_key)
+{
+	window.open('{U_HELP_POPUP}' + help_key, '_blank', 'height=400,resizable=yes,width=550');;
+}
+//-->
+</script>

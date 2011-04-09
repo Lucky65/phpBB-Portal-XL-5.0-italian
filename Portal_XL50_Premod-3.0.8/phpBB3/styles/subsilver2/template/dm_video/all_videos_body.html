@@ -1,0 +1,59 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<h2>{L_DMV_ALL_VIDEOS_LIST}</h2>
+<br />
+<a href="{U_BACK}">{L_DMV_BACK}</a>
+
+<!-- IF PAGINATION or TOTAL_VIDEOS -->
+<div class="pagination">
+	{TOTAL_VIDEOS}<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+<div class="clear"></div>
+<br />
+<!-- BEGIN newest -->
+	<!-- IF newest.S_FIRST_ROW -->
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<th width="40%">{L_DMV_TITLE}</th>
+				<th width="15%" align="center">{L_DMV_FROM}</th>
+				<th width="10%" align="center">{L_DMV_DURATION}</th>
+				<th width="10%" align="center">{L_DMV_RATING_LIST}</th>
+				<th width="10%" align="center">{L_DMV_VIDEO_VIEWS}</th>
+				<th width="15%">{L_DMV_AUTHOR}</th>
+			</tr>
+	<!-- ENDIF -->
+			<tr class="<!-- IF newest.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+				<td>&nbsp;<a href="{newest.U_SHOW_VIDEO}" class="topictitle">{newest.TITLE}</a><br />&nbsp;{newest.CAT_NAME}</td>
+				<td align="center">{newest.SINGER}</td>
+				<td align="center">{newest.DURATION}</td>
+				<td align="center">{newest.RATING}</td>
+				<td align="center">{newest.VIEWS}</td>
+				<td>
+						&nbsp;{L_POST_BY_AUTHOR} {newest.POST_AUTHOR_FULL}<br />
+						&nbsp;{L_POSTED_ON_DATE} {newest.POST_TIME}<br />
+				</td>
+			</tr>
+	<!-- IF newest.S_LAST_ROW -->
+		</table>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+	<!-- IF newest.S_ROW_COUNT == 0 -->
+		<br />
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<td class="row3" align="center"><strong>{L_DMV_NO_VIDEOS_IN_CAT}</strong></td>
+			</tr>
+		</table>
+		<br />
+	<!-- ENDIF -->
+<!-- END newest -->
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<td class="cat" colspan="{S_COLS}" align="center" height="28">
+			<form action="{S_VIDEO_ACTION}" method="post"><span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" name="sort" value="{L_GO}" /></form>
+		</td>
+	</tr>
+</table>
+<br />
+<!-- INCLUDE dm_video/video_footer.html -->

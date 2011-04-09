@@ -1,0 +1,309 @@
+/*****[PORTAL XL 5.0 PREMOD: UPGRADE]*****************************
+ Questo file contiene IMPORTANTI NOTE per l'aggiornamento delle versioni 
+ Premod in italiano - Da eseguire solo su versioni italiane -
+ Aggiornamenti effettuati dal 08/05/10 in poi 
+ 
+ Copyright 2009 - 2011 Lucky - htpp://www.portalxl.eu 
+  
+ ************************************************************************\
+
+ ========================================================================
+       PORTAL XL 5.0  PREMOD:  RELEASE 5.0 UPGRADE DATABASE
+ ========================================================================
+
+Questo archivio contiene Portal XL 5.0 Premod versione phpBB 3.0.8, di seguito le istruzioni per una nuova installazione o per un aggiornamento da una versione precedente.
+
+
+Prima installazione:
+1 - Scaricate una copia recente di phpBB ed inviatela al vostro server (rispettando la struttura)
+2 - Scrivete sulla barra del browser ad es. http://localhost/install/index.php per installare prima di tutto il forum phpBB 3.0.8, non loggatevi ancora!
+3 - Scrivete sulla barra del browser ad es. http://localhost/install/install_portal/index.php per installare la Portal XL 5.0 Premod, seguendo le istruzioni online
+
+Aggiornamento da un'esistente versione di phpBB 3.0.7 pl1 e Portal XL 5.0 Premod:
+1 - Caricate/Sovrascrivete il contenuto della cartella Portal XL 5.0 Premod 0.3 phpBB 3.0.7-pl1 to 3.0.8 pubblicata sul forum (rispettando la struttura)
+    Aprite il file / includes / constants.php ed eliminare temporaneamente le voci sotto:
+	// Additional tables
+	
+	In particolare devono temporaneamente essere eliminate le seguenti voci:
+	    // Additional tables
+
+    /*
+    *
+    * @package define database tables for phpBB3 Portal XL 5.0
+    * @copyright (c) 2007 Portal XL 5.0 Group
+    * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+    *
+    */
+    define('PORTAL_CONFIG_TABLE',         $table_prefix . 'portal_config');
+    define('PORTAL_BLOCK_TABLE',         $table_prefix . 'portal_block');
+    define('PORTAL_BLOCK_INDEX_TABLE',      $table_prefix . 'portal_block_index');
+    define('PORTAL_MENU_TABLE',            $table_prefix . 'portal_menu');
+    define('PORTAL_QUOTE_TABLE',           $table_prefix . 'portal_quote');
+    define('PORTAL_PARTNERS_TABLE',        $table_prefix . 'portal_partners');
+    define('PORTAL_BANNER_HO_TABLE',       $table_prefix . 'portal_banners_ho');
+    define('PORTAL_BANNER_VE_TABLE',       $table_prefix . 'portal_banners_ve');
+    define('PORTAL_LINKS_TABLE',          $table_prefix . 'portal_links');
+    define('PORTAL_MODS_TABLE',            $table_prefix . 'portal_mods');
+    define('PORTAL_FORUMADDS_TABLE',      $table_prefix . 'portal_forumadds');
+    define('PORTAL_PAGES_TABLE',            $table_prefix .   'portal_pages');
+    define('PORTAL_NEWSFEEDS_TABLE',        $table_prefix . 'portal_newsfeeds');
+    define('PORTAL_ACRONYMS_TABLE',        $table_prefix . 'portal_acronyms');
+    define('PORTAL_THANKS_TABLE',          $table_prefix . 'portal_thanks');
+    define('PORTAL_USER_SETTINGS_TABLE',    $table_prefix . 'portal_user_settings');
+    define('PORTAL_PAGE', true);
+    define('PORTAL_PAGES', true);
+    define('PORTAL_PAGES_PAGE', true);
+    define('PORTAL_INDEX', true);
+
+    // Animate Digits IP Tracking Counter
+    define('COUNTER_NONE', 0);
+    define('COUNTER_IMAGE', 1);
+    define('COUNTER_TEXT', 2);
+
+    // Download MOD 6
+    define('DL_AUTH_TABLE',            $table_prefix . 'dl_auth');
+    define('DL_CAT_TABLE',            $table_prefix . 'downloads_cat');
+    define('DL_REM_TRAF_TABLE',         $table_prefix . 'dl_rem_traf');
+    define('DL_CAT_TRAF_TABLE',         $table_prefix . 'dl_cat_traf');
+    define('DL_EXT_BLACKLIST',         $table_prefix . 'dl_ext_blacklist');
+    define('DL_RATING_TABLE',         $table_prefix . 'dl_ratings');
+    define('DOWNLOADS_TABLE',         $table_prefix . 'downloads');
+    define('DL_STATS_TABLE',         $table_prefix . 'dl_stats');
+    define('DL_COMMENTS_TABLE',         $table_prefix . 'dl_comments');
+    define('DL_BANLIST_TABLE',         $table_prefix . 'dl_banlist');
+    define('DL_FAVORITES_TABLE',      $table_prefix . 'dl_favorites');
+    define('DL_NOTRAF_TABLE',         $table_prefix . 'dl_notraf');
+    define('DL_HOTLINK_TABLE',         $table_prefix . 'dl_hotlink');
+    define('DL_BUGS_TABLE',            $table_prefix . 'dl_bug_tracker');
+    define('DL_BUG_HISTORY_TABLE',      $table_prefix . 'dl_bug_history');
+    define('DL_VERSIONS_TABLE',         $table_prefix . 'dl_versions');
+    define('DL_FIELDS_TABLE',         $table_prefix . 'dl_fields');
+    define('DL_FIELDS_DATA_TABLE',      $table_prefix . 'dl_fields_data');
+    define('DL_FIELDS_LANG_TABLE',      $table_prefix . 'dl_fields_lang');
+    define('DL_LANG_TABLE',            $table_prefix . 'dl_lang');
+
+    define('DL_INSTALLED', true);
+
+    define('KB_ARTICLE_TABLE',            $table_prefix . 'kb_article');
+    define('KB_CATEGORIE_TABLE',         $table_prefix . 'kb_categorie');
+    define('KB_CONFIG_TABLE',            $table_prefix . 'kb_config');
+    define('KB_LOG_TABLE',               $table_prefix . 'kb_changelog');
+    define('KB_TYPES_TABLE',            $table_prefix . 'kb_types');
+    define('KB_REPORTS_TABLE',            $table_prefix . 'kb_reports');
+    define('KB_FOLDER',                  'knowledge');
+
+    // phpbb Calendar Version 0.1.0
+    define('CALENDAR_CONFIG_TABLE',            $table_prefix . 'calendar_config');
+    define('CALENDAR_EVENTS_TABLE',            $table_prefix . 'calendar_events');
+    define('CALENDAR_EVENT_TYPES_TABLE',      $table_prefix . 'calendar_event_types');
+    define('CALENDAR_RSVP_TABLE',            $table_prefix . 'calendar_rsvps');
+    define('CALENDAR_RECURRING_EVENTS_TABLE',   $table_prefix . 'calendar_recurring_events');
+    define('CALENDAR_EVENTS_WATCH',            $table_prefix . 'calendar_events_watch');
+    define('CALENDAR_WATCH',               $table_prefix . 'calendar_watch');
+
+    // Ajax ShoutBox Version 1.2 RC1
+    define('SHOUTBOX_TABLE',             $table_prefix . 'shoutbox');
+
+    // Prime Post Revisions
+    define('POST_REVISIONS_TABLE',         $table_prefix . 'post_revisions');
+
+    // lefty74 Announcement Centre
+    define('ANNOUNCEMENTS_CENTRE_TABLE',   $table_prefix . 'announcement_centre');
+    define('GROUPS_ONLY', 0);
+    define('EVERYONE', 1);
+    define('GUESTS_ONLY', 2);
+
+    // Imprint 0.1.6
+    define('IMPRESSUM_TABLE',            $table_prefix . 'impressum');
+
+    // phpBB Gallery integration
+    define('GALLERY_ROOT_PATH', 'gallery/');
+
+    define('GALLERY_ALBUMS_TABLE',         $table_prefix . 'gallery_albums');
+    define('GALLERY_ATRACK_TABLE',         $table_prefix . 'gallery_albums_track');
+    define('GALLERY_COMMENTS_TABLE',      $table_prefix . 'gallery_comments');
+    define('GALLERY_CONFIG_TABLE',         $table_prefix . 'gallery_config');
+    define('GALLERY_CONTESTS_TABLE',      $table_prefix . 'gallery_contests');
+    define('GALLERY_FAVORITES_TABLE',      $table_prefix . 'gallery_favorites');
+    define('GALLERY_IMAGES_TABLE',         $table_prefix . 'gallery_images');
+    define('GALLERY_MODSCACHE_TABLE',      $table_prefix . 'gallery_modscache');
+    define('GALLERY_PERMISSIONS_TABLE',      $table_prefix . 'gallery_permissions');
+    define('GALLERY_RATES_TABLE',         $table_prefix . 'gallery_rates');
+    define('GALLERY_REPORTS_TABLE',         $table_prefix . 'gallery_reports');
+    define('GALLERY_ROLES_TABLE',         $table_prefix . 'gallery_roles');
+    define('GALLERY_USERS_TABLE',         $table_prefix . 'gallery_users');
+    define('GALLERY_WATCH_TABLE',         $table_prefix . 'gallery_watch');
+
+    // Toplist MOD
+    define('TOPLIST_TABLE',             $table_prefix.'toplist');
+    define('TOPLIST_COMMENTS_TABLE',       $table_prefix.'toplist_comments');
+    define('TOPLIST_FLOOD_CONTROL_TABLE',    $table_prefix.'toplist_flood_control');
+    define('TOPLIST_RATE_TABLE',          $table_prefix.'toplist_rate');
+    define('TOPLIST_HASH_TABLE',          $table_prefix.'toplist_hash');
+
+    // WPM 2.2.5
+    define('WPM_CONFIG_ID', 1);
+    define('WPM_TABLE',                   $table_prefix . 'wpm');
+
+    // Country Flags Version 3.0.6
+    define('COUNTRY_FLAGS_TABLE',         $table_prefix . 'country_flags');
+
+    // -- Gender MOD 1.0.1
+    define('GENDER_F', 2); // Ladies first ;)
+    define('GENDER_X', 0);
+    define('GENDER_M', 1);
+
+    // Contact Admin version 1.0.7
+    define('CONTACT_CONFIG_TABLE',          $table_prefix . 'contact_config');
+
+    // User Reminder Version 1.0.5
+    define('ENABLED', 1);
+    define('AUTOMATIC', 0);
+    define('OVERRIDE', 1);
+    define('RETAIN_POSTS', 1);
+    define('DELETE_POSTS', 0);
+
+    // AdvancedBlockMOD 1.0.3
+    define('DNSBL_TABLE',               $table_prefix . 'dnsbl');
+    define('LOG_BLOCK', 6);
+    define('WEIGHT_ZERO', 0);
+    define('WEIGHT_ONE', 1);
+    define('WEIGHT_TWO', 2);
+    define('WEIGHT_THREE', 3);
+    define('WEIGHT_FOUR', 4);
+    define('WEIGHT_FIVE', 5);
+
+    // Toplist MOD
+    define('TOPLIST_TABLE',             $table_prefix.'toplist');
+    define('TOPLIST_COMMENTS_TABLE',       $table_prefix.'toplist_comments');
+    define('TOPLIST_FLOOD_CONTROL_TABLE',    $table_prefix.'toplist_flood_control');
+    define('TOPLIST_RATE_TABLE',          $table_prefix.'toplist_rate');
+    define('TOPLIST_HASH_TABLE',          $table_prefix.'toplist_hash');
+
+    // DM Video
+    define('DM_VIDEO_CATS_TABLE',         $table_prefix . 'dm_video_cat');
+    define('DM_VIDEO_COMMENT_TABLE',       $table_prefix . 'dm_video_comment');
+    define('DM_VIDEO_CONFIG_TABLE',        $table_prefix . 'dm_video_config');
+    define('DM_VIDEO_TABLE',            $table_prefix . 'dm_video');
+    define('DM_VIDEO_RATE_TABLE',         $table_prefix . 'dm_video_rating');
+
+	
+
+2 - Scrivete sulla barra del browser ad es. http://localhost/install/database_update.php per aggiornare il database a phpBB 3.0.8
+3 - Reinserire le voci eliminate dal punto 1
+4 - Aggiornate la cache
+
+
+Nel caso qualcosa non dovesse funzionare nella procedura di agggiornamento è anche prevista una procedura per eliminare il portale e procedere ad una nuova
+installazione, questa è una procedura di emergenza, tutte le info in inglese qui  http://www.portalxl.nl/forum/kb.php?a=98
+
+E' inoltre previsto un'aggiornamento htaccess per la mod gallery e phpBB Seo
+
+Per gli htaccess esistenti e se il forum è nella root, cercate:
+
+    # FIX RELATIVE PATHS : FILES
+    RewriteRule ^.+/(style\.php|ucp\.php|mcp\.php|faq\.php|download/file.php)$ $1 [QSA,L,NC,R=301]
+
+Sostituite con:
+
+    # FIX RELATIVE PATHS : FILES
+    RewriteRule ^(?!gallery)/(style\.php|ucp\.php|mcp\.php|faq\.php|download/file.php)$ $2 [QSA,L,NC,R=301]
+    #RewriteRule ^.+/(style\.php|ucp\.php|mcp\.php|faq\.php|download/file.php)$ $1 [QSA,L,NC,R=301]
+
+Su alcuni server si potrebbero creare problemi, in tal caso sostituire con:
+
+    # FIX RELATIVE PATHS : FILES
+    RewriteRule ^forum/(gallery)/(style\.php|ucp\.php|mcp\.php|faq\.php|download/file.php)$ /forum/$1 [QSA,L,NC,R=301]
+    # RewriteRule ^forum/.+/(styles/.*|images/.*)/$ /forum/$1 [QSA,L,NC,R=301]
+
+ 
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+30/11/2010 Aggiornamento mod Arcade, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+    UPDATE `phpbb_portal_mods` SET `mod_version` = '1.1',
+    `mod_version_type` = 'RC1' WHERE `phpbb_portal_mods`.`mod_id` =74;
+
+//fine query//
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+25/12/2010 Aggiornamento mod downloads, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+    UPDATE phpbb_portal_mods SET mod_version = '6.4.4',mod_version_type = '' WHERE phpbb_portal_mods.mod_id =22 LIMIT 1 ;
+
+//fine query//
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+01/01/2011 Aggiornamento mod downloads, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+    UPDATE phpbb_portal_mods SET mod_version = '6.4.5',mod_version_type = '' WHERE phpbb_portal_mods.mod_id =22 LIMIT 1 ;
+
+//fine query//
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+12/02/2011 Aggiornamento mod downloads con relative traduzioni, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+    UPDATE phpbb_portal_mods SET mod_version = '6.4.6',mod_version_type = '' WHERE phpbb_portal_mods.mod_id =22 LIMIT 1 ;
+
+//fine query//
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+ Aggiornamento mod downloads con relative traduzioni, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+    UPDATE phpbb_portal_mods SET mod_version = '6.4.7',mod_version_type = '' WHERE phpbb_portal_mods.mod_id =22 LIMIT 1 ;
+
+//fine query//
+
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+#######################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
+
+ Aggiornamento mod downloads con relative traduzioni, per l'aggiornamento del database mods eseguire questa query:
+
+//inizio query//
+
+        UPDATE `phpbb_portal_mods` SET `mod_version` = '1.0.6' WHERE `phpbb_portal_mods`.`mod_id` =60;
+
+//fine query//		
+
+
+/*****[PORTAL XL 5.0 PREMOD: UPGRADE]*****************************
+ Questo file contiene IMPORTANTI NOTE per l'aggiornamento delle versioni 
+ Premod in italiano - Da eseguire solo su versioni italiane -
+ Copyright 2009 - 2011 - Lucky - htpp://www.portalxl.eu 
+ 
+ ************************************************************************\
+
+ ========================================================================
+   PORTAL XL 5.0 PREMOD:  RELEASE 5.0 UPGRADE DATABASE - END
+ ========================================================================
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2009 Portal XL Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="phpBB3 Portal XL Installation and updating informations" />
+<title>phpBB3 Portal XL &bull; Installation</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+</head>
+<body id="phpbb" class="section-docs" style="margin-left: 50px; margin-right: 50px;">
+<div id="wrap"> <a id="top" name="top" accesskey="t"></a>
+  <div id="page-header">
+    <div class="headerbar">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div id="doc-description"> <a href="../index.php" id="logo"><img src="site_logo.gif" alt="" /></a>
+          <h1>Portal XL Install</h1>
+          <p>Portal XL  Installation und Update Informationen</p>
+          <p style="display: none;"><a href="#start_here">Skip</a></p>
+        </div>
+        <div id="doc-description" style="width: 100%;">
+          <span style="float: right; margin-right: 5px;"><a href="PORTAL_XL_INSTALL.html" title="English"><span style="color:#FFF;">English</span></a> - <a href="PORTAL_XL_INSTALL_DE.html" title="German"><span style="color:#FFF;">German</span></a> - <a href="PORTAL_XL_INSTALL_EL.html" title="Greek"><span style="color:#FFF;">Greek</span></a> - <a href="PORTAL_XL_INSTALL_IT.html" title="Italian"><span style="color:#FFF;">Italian</span></a> - <a href="PORTAL_XL_INSTALL_NL.html" title="Dutch"><span style="color:#FFF;">Dutch</span></a></span>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+  </div>
+  <a name="start_here"></a>
+  <div id="page-body">
+    <!-- BEGIN DOCUMENT -->
+    <p><strong>Dieses Dokument sollte AUFMERKSAM gelesen werden, und das bevor mit der Installation oder einem Update gestartet wird!</strong></p>
+    <p>Du findest hier die wichtigsten Informationen zur Neu-Installation, Aktualisierung oder dem Konvertieren.</p>
+    <p style="color:#990000;">Wichtige Information f&uuml;r User die keine englische Installation machen, respektive deren Board z.B. auf deutsch l&auml;uft:</p>
+              <p><strong>ACHTUNG</strong>: Wenn keine Englische Installation vorgenommen wird kopiere aus dem entpackten Install-Ordner die  \language\de\acp\portal_xl_install.php in das Verzeichnis (vom Hauptverzeichnis ausgehend) mit Deiner Sprache. z.B. nach language\de\acp\. Vergisst Du diesen vorab-Schritt, wird es keine Installationstexte geben, da die ben&ouml;tigten Texte nicht gefunden werden k&ouml;nnen. Aus vorgegebenen Gr&uuml;nden ist dies nur so zu l&ouml;sen!</p>
+    <h1>Installation</h1>
+    <div class="paragraph menu">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <ol>
+            <li><a href="#quickinstall">Der schnelle Einstieg</a></li>
+            <li><a href="#require">Was Du brauchst</a></li>
+            <li><a href="#install">Neuinstallation</a></li>
+            <li><a href="#update">Update von einer vorherigen phpBB3 Portal XL Version</a>
+            <li><a href="#disclaimer">Rechtserl&auml;uterung</a></li>
+          </ol>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="quickinstall"></a>
+    <h2>1. Der schnelle Einstieg</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Wenn Du schon etwas Basiswissen (auch in FTP) mitbringst, und Du sicher bist, dass phpBB3 Portal XL auf deinem Server lauff&auml;hig ist, starte sogleich mit dem Schnelleinsteig.</p>
+          <ol>
+            <li>Entpacke das Portal_XL50_Plain-3.0.8.rar Archiv in einen Ordner auf deinem Rechner.</li>
+            <li>In dem entpackten Ordner ist das Verzeichnis \root\. Den Inhalt dieses Verzeichnisses &uuml;bertrage nun via FTP in das Root Verzeichnis deiner phpBB3 installation auf deinem Server. Beachte, das die Ordnerstrukturen exakt eingehalten werden und alle anwesenden Dateien &uuml;berschrieben werden.</li>
+            <li>Die Zugriffsrechte (CHMOD 777 or -rwxrwxrwx) musst Du f&uuml;r folgende Ordner/Dateien mit Hilfe deines FTP-Clienten setzen:<br />
+              <code>store/</code>, <code>cache/</code>, <code>files/</code>, <code>images/upload/avartars/</code>, <code>/config.php</code> und <code>/images/counter/ip.txt</code>.</li>
+            <li>Nun begeben wir uns mit dem Browser Deiner Wahl zum Installationsort. Die Adresse sollte dann in etwa so aussehen: install/index.php, e.g. http://www.mydomain.com/phpBB3/install/index.php, http://www.mydomain.com/forum/install/index.php etc.</li>
+            <li>Klicke nach erreichen der Seite oben auf den <em>INSTALL</em> tab, folge nun den angezeigten Schritten (Steps).</li>
+            <li>phpBB3 Portal XL sollte nun bereit sein.</li>
+          </ol>
+          <p>Sollte es wiedererwarten zu Problemen kommen, kann der Schritt: <a href="#refresh_cache">Zwischenspreicher erneuern</a> Abhilfe schaffen.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="require"></a>
+    <h2>2. Was ist zu Installation erforderlich?</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>phpBB3 Portal XL ben&ouml;tigt zur Installation einige wichtige Dinge, ohne die eine Installation nicht m&ouml;glich ist.</p>
+          <ul>
+            <li>Ein Webserver oder web hosting Konto oder &auml;hnliches Betriebssystem (z.B. XAMPP unter WINDOWS) welches PHP unterst&uuml;tzt</li>
+            <li>Ein SQL DatenbankSystem:
+              <ul>
+                <li>MySQL 3.23 oder H&ouml;her (MySQLi unterstützt)</li>
+              </ul>
+            </li>
+            <li><strong>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible))</strong> mit unterst&uuml;tzung f&uuml;r Dein DatenbankSystem.</li>
+            <li>getimagesize() Function muss aktiviert sein.</li>
+            <li>Wenn zuvor genannte Anforderungen nicht gegeben sind, ist der Betrieb des phpBB3 Portal XL nicht m&ouml;glich.            </li>
+            <li>Folgende Optionen sind f&uuml;r den erfolgreichen sehr hilfreich, aber nicht unbedingt erforderlich.
+              <ul>
+                <li>zlib Compression Unterst&uuml;tzung</li>
+                <li>Remote FTP Unterstützung</li>
+                <li>XML Unterstützung</li>
+                <li>Imagemagick Unterstützung</li>
+                <li>GD Unterstützung</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="install"></a>
+    <h2>3. Neuinstallation</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Es gibt zwei Pakete des Portals, Plain und Premod. Nachdem Du Dich nun f&uuml;r eines entschieden hast (Portal XL 5 Plain) und mit der Installation starten m&ouml;chtest, solltest Du vorab folgende Schritte tun. <strong>WICHTIG</strong>: Vor der Installation empfehlen wir Dir ein <em>komplettes Backup deiner jetzigen phpBB3 Datenbank sowie der gesamten phpBB3 Dateien</em> die auf deinem Server liegen! Wenn Du unsicher bist, wie das richtig funktioniert, wende Dich an Deinen Provider, der sicherlich gerne eine Hilfestellung gibt. <strong>ACHTUNG!</strong> Sollte Dein phpBB3 bereits mit anderen Mods oder Ver&auml;nderungen modifiziert sein, sind diese nach der Portal XL Installation verloren!</p>
+          <a name="install_full"></a>
+          <h3>3. Portal XL 5.0 Plain Paket</h3>
+          <p><br />
+            Die Schritte zum phpBB3 + Portal XL:<br />
+          </p>
+          <p>- Besorge Dir die aktuelle phpBB3.0.1 Forumsversion auf <a href="http://www.phpbb.de" target="_blank">phpbb.de (deutsch)</a> oder <a href="http://www.phpbb.com/downloads/" target="_blank">phpbb.com (englisch)</a> sofern dies noch nicht geschehen ist. Wenn schon installiert gehts hier weiter: <a href="#creating_portal">Portal installalieren</a><br />
+            - Enpacke phpBB 3.0.x in ein Verzeichnis auf Deinem Rechner<br />
+            - Den Inhalt des Verzeichnisses in das Root des Servers laden<br />
+            - Rufe die install auf z.B. http://your-domain/install/ und der Installer wird Dich durch die Installation f&uuml;hren<br />
+            - L&ouml;sche oder benenne der Ordner /install/ um, wenn die Installation beendet ist.</p>
+          <p><a name="creating_portal"></a></p>
+          <p>Nun installieren wir das Portal.</p>
+          <p>- Entpacke das Archiv Portal_XL50_Plain-3.0.8.rar in ein Verzeichnis auf Deinem Rechner (falls noch nicht geschehen)<br />
+            - Den gesamten Inhalt des Root-Ordner (/root/) lade nun in das Hauptverzeichnis (oder dein phpBB3 Verzeichnis) deines Servers hoch. Versichere Dich, das alles hochgeladen wurde und auch das die Ordnerstrukturen eingehalten wurden. Fragen nach &uuml;berschreiben vorhandener Dateien ist mit JA zu beantworten.<br /><br />
+                          <strong>ACHTUNG</strong>: Wenn keine Englische Installation vorgenommen wird kopiere aus dem entpackten Install-Ordner die  \language\de\acp\portal_xl_install.php in das Verzeichnis (vom Rootverzeichnis ausgehend) mit Deiner Sprache. z.B. nach language\de\acp\.  Vergisst Du diesen vorab-Schritt, wird es keine Installationstexte geben, da die ben&ouml;tigten Texte nicht gefunden werden k&ouml;nnen. Aus vorgegebenen Gr&uuml;nden ist dies nur so zu l&ouml;sen!<br /><br />
+            - Rufe nun die Install im Browser auf: \install\index.php . Das Installationsscript wird geladen und Du klickst auf den TAB &quot;Install&quot;.</p>
+          <p>- War die Installation Erfolgreich, so l&ouml;sche den Ordner \install\ oder benenne ihn um, sofern dies nicht schon beim installieren automatisch passiert ist.</p>
+          <p><a name="refresh_cache"></a></p>
+          <p>- Nach der Installation begib Dich ins ACP und mache folgendes:</p>
+          <p>- Tab Styles -&gt; Style Komponenten -&gt; Templates -&gt; prosilver -&gt; aktualisieren<br />
+            - Tab Styles -&gt; Style Komponenten -&gt; Themes -&gt; prosilver -&gt; aktualisieren<br />
+            - Tab Styles -&gt; Style Komponenten -&gt; Grafiksammlung -&gt; prosilver -&gt; aktualisieren<br />
+            -  Tab Allgemein-&gt;  In diesem Fenster -&gt;Zwischenspeicher leeren<br />
+            - Aktualisiere Deinen Browser und/oder leere dessen Zwischenspeicher ebenfalls.</p>
+          <p>Fertig!</p>
+          <p>PS: Besuche auch unsere NEUE Style Demo/Download Ecke f&uuml;r Portal XL 5.0 ~ Plain <a href="http://www.portalxl.nl/stylesplain/" target="_blank">styles</a>.<br />
+            Viel Spass mit dem Portal XL 5.0 ~ Plain ~ Das total irrsinnige Portal system f&uuml;r phpBB 3.0.x</p>
+
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="update"></a>
+    <h2>4. Update eines vorhandenen phpBB3 Portal XL</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Wenn Du bereits eine funktionierende Portal-Version am laufen hast, kann ein Update die neue Version installiert werden. Es gibt zwei Pakete des Portals, Plain und Premod. Nachdem Du Dich nun f&uuml;r eines entschieden hast (Portal XL 5 Plain) und mit dem Update starten m&ouml;chtest, solltest Du vorab folgende Schritte tun. <strong>WICHTIG</strong>: Vor der Installation empfehlen wir Dir ein <em>komplettes Backup deiner jetzigen phpBB3 Portal XL5 Plain Datenbank sowie der gesamten phpBB3 Portal XL5 Dateien</em>! Wenn Du unsicher bist, wie das richtig funktioniert, wende Dich an Deinen Provider, der sicherlich gerne eine Hilfestellung gibt. <strong>ACHTUNG!</strong> Sollte Dein phpBB3 bereits mit anderen Mods oder Ver&auml;nderungen modifiziert sein, sind diese nach der Portal XL Installation verloren!</p>
+<p><a name="update_full"></a></p>
+          <h3>4. Portal XL 5.0 Plain Paket</h3>
+          <p><br />
+            Die Einzelschritte:<br />
+          </p>
+            <p>Du hast die Update M&ouml;glichkeit ausgew&auml;hlt, darum ist davon auszugehen, das sich bereits ein funktionierendes phpBB3 + Portal XL Plain auf dem Server befindet.<br /></p>
+            
+          <p>ACHTUNG!<br />
+            Um ein ordentliches Update auf die neue Version zu machen, sind folgende Schritte notwendig.<br />
+            In diesen Schritten l&ouml;schen wir einige nicht mehr ben&ouml;tigte Dateien, respektive Dateien, die in der neuen Portal XL5 Plain Version verschoben wurden in andere Ordner.<br />
+            Solltest Du diese Schritte &uuml;bergehen, so kann es zu ungew&uuml;nschten &Uuml;berraschungen kommen (falsche Bl&ouml;cke, Bl&ouml;cke sind doppelt, anderes Blocklayout etc.).<br />
+            - L&Ouml;SCHE das Verzeichnis /portal/* aus dem root-Verzeichnis<br />
+            - L&Ouml;SCHE  <em>, nur f&uuml;r diese Version, </em> in \language\en\<strong>portal.php</strong>, in \language\en\acp\<strong>portal_*.php</strong>, in \language\en\mods\<strong>average_statistics.php</strong>, in \adm\style\<strong>acp_portal*.html</strong> (diese Dateien wurden in andere Ordner verschoben).</p>
+          <p>- Entpacke das Archiv Portal_XL50_Plain-3.0.8.rar in ein Verzeichnis auf Deinem Rechner (falls noch nicht geschehen)<br />
+            - Den gesamten Inhalt des Root-Ordner (/root/) lade nun in das Hauptverzeichnis (oder dein phpBB3 Verzeichnis) deines Servers hoch. Versichere Dich, das alles hochgeladen wurde und auch das die Ordnerstrukturen eingehalten wurden. Fragen nach &uuml;berschreiben vorhandener Dateien ist mit JA zu beantworten.<br /><br />
+            <strong>ACHTUNG</strong>: Wenn keine Englische Installation vorgenommen wird kopiere aus dem entpackten Install-Ordner die  \language\de\acp\portal_xl_install.php in das Verzeichnis (vom Rootverzeichnis ausgehend) mit Deiner Sprache. z.B. nach language\de\acp\.  Vergisst Du diesen vorab-Schritt, wird es keine Installationstexte geben, da die ben&ouml;tigten Texte nicht gefunden werden k&ouml;nnen. Aus vorgegebenen Gr&uuml;nden ist dies nur so zu l&ouml;sen!<br /><br />
+            - Rufe nun die Install im Browser auf: \install\index.php . Das Installationsscript wird geladen und Du klickst auf den TAB &quot;Update&quot;.</p>
+          <p>- War die Installation Erfolgreich, so l&ouml;sche den Ordner \install\ oder benenne ihn um, sofern dies nicht schon beim installieren automatisch passiert ist.</p>
+          <p><a name="refresh_cache"></a></p>
+          <p>- Nach der Installation begib Dich ins ACP und mache folgendes:</p>
+          <p>- Tab Styles -&gt; Style Komponenten -&gt; Templates -&gt; prosilver -&gt; aktualisieren<br />
+            - Tab Styles -&gt; Style Komponenten -&gt; Themes -&gt; prosilver -&gt; aktualisieren<br />
+            - Tab Styles -&gt; Style Komponenten -&gt; Grafiksammlung -&gt; prosilver -&gt; aktualisieren<br />
+            -  Tab Allgemein-&gt;  In diesem Fenster -&gt;Zwischenspeicher leeren<br />
+            - Aktualisiere Deinen Browser und/oder leere dessen Zwischenspeicher ebenfalls.</p>
+          <p>Fertig!</p>
+          <p>PS: Besuche auch unsere NEUE Style Demo/Download Ecke f&uuml;r Portal XL 5.0 ~ Plain <a href="http://www.portalxl.nl/stylesplain/" target="_blank">styles</a>.<br />
+Viel Spass mit dem Portal XL 5.0 ~ Plain ~ Das total irrsinnige Portal system f&uuml;r phpBB 3.0.x</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="convert"></a>
+    <hr />
+    <a name="disclaimer"></a>
+    <h2>7. Copyright und Haftungsausschluss</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Diese Anwendung ist opensource software ver&ouml;ffentlicht unter der Lizenzbedingung: <a href="http://opensource.org/licenses/gpl-license.php">GPL</a>. In den Source-Codes des Dokumentenordners findest Du weitere Details. Das Paket unterliegt dem Copyright (c) 2007, 2008 <a href="http://www.portalxl.nl/forum/" target="_blank">Portal XL Group</a>, Alle Rechte vorbehalten. Deutsche &Uuml;bersetzung durch <a href="http://www.content-world.de">CONTENT-WORLD</a> f&uuml;r <a href="http://www.portalxl.nl/forum/">Portal XL</a>.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Back to Top</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <!-- END DOCUMENT -->
+    <div id="page-footer">
+      <div class="version">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<div> <a id="bottom" name="bottom" accesskey="z"></a> </div>
+</body>
+</html>

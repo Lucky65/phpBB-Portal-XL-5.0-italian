@@ -1,0 +1,83 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<script type="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=600,height=250');
+return false;
+}
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function popup2(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=520,height=480');
+return false;
+}
+//-->
+</script>
+<h2>{L_DMV_SHOW_VIDEO}: {VIDEO_TITLE}</h2>
+<br />
+<p>{L_DMV_SHOW_VIDEO_EXPLAIN}</p>
+<br  />
+
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<th colspan="2">{VIDEO_TITLE} {L_DMV_FROM} {VIDEO_SINGER}</th>
+	</tr>
+	<tr class="row1">
+		<td width="50%" align="center" valign="top">
+		
+			<div class="gensmall" style="float: right;">
+				<!-- IF S_EDIT_VIDEO --><a href="{U_EDIT_VIDEO}" title="{L_EDIT_VIDEO}">{EDIT_IMG}</a><!-- ENDIF -->
+				<!-- IF S_DELETE_VIDEO --><a href="{U_DELETE_VIDEO}" title="{L_DELETE_POST}">{DELETE_IMG}</a><!-- ENDIF -->
+				<!-- IF S_REPORT_VIDEO --><a href="{U_REPORT_VIDEO}">{REPORT_IMG}</a> <!-- ENDIF --> 
+			</div>
+			<br />
+
+			<br /><br />
+			{VIDEO_URL}
+			<br /><br />
+			{L_DMV_AUTHOR}: <strong>{VIDEO_ADDED_BY}</strong> {L_DMV_ON} {VIDEO_TIME}<br />
+			{VIDEO_CLICKS}
+			<br /><br />
+			{VIDEO_RATING_IMG}<br />
+			<!-- IF S_HAS_PERM_RATE -->
+				<a href="{U_RATE_VIDEO}" onclick="return popup(this, 'notes')">{L_DMV_RATING}</a>
+				<br /><br />
+			<!-- ENDIF -->
+			<!-- IF S_SHOW_COMMENTS -->
+			{L_DMV_COMMENT}: <a href="{U_COMMENT_VIDEO}">{CC}</a><br /><br />
+			<!-- ENDIF -->
+			<a href="{U_SHOW_POPUP}" onclick="return popup2(this, 'showpopup')">{L_DMV_SHOW_POPUP}</a>
+			<br /><br />
+		</td>
+		<td width="50%" align="center" valign="top">
+			<br /><br />
+			<img src="{VIDEO_IMAGE}" alt="" />
+			<br /><br />
+			{VIDEO_SONGTEXT}
+			<br /><br />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="cat">&nbsp;</td>
+	</tr>
+</table>
+<br />
+
+<!-- INCLUDE dm_video/video_footer.html -->

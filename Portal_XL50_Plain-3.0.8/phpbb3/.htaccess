@@ -1,0 +1,11 @@
+DirectoryIndex portal.php index.php index.html index.htm
+
+<Files "config.php">
+Order Allow,Deny
+Deny from All
+</Files>
+
+<Files "common.php">
+Order Allow,Deny
+Deny from All
+</Files>

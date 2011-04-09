@@ -1,0 +1,135 @@
+<script type="text/javascript">
+// Topic Hover Preview 0.3.0 by raptor5001. This is a modified version of:
+//
+// Ajax Userinfo 0.1.0 by tas2580 (http://www.seo-phpbb.org)
+//
+// Thanks to Jhong (http://www.wp-united.com) for some ideas in the JavaScript
+
+//var lockAnimP;
+//lockAnimP = false;
+
+function show_preview(header, body) {
+/*   chOpacP(0, 'preview');
+   if (!lockAnimP) {
+      lockAnimP = true;
+      opacAnimP('preview', 0, 100, 500);
+   }*/
+   document.onmousemove = snapdivP;
+   document.getElementById('tpheader').innerHTML = header;
+   document.getElementById('tpbody').innerHTML = body;
+   document.getElementById('preview').style.display ='block';
+}
+
+function close_preview() {
+/*   if (!lockAnimP) {
+      lockAnimP = true;
+      opacAnimP('preview', 100, 0, 500);
+   } else {*/
+      document.getElementById('preview').style.display ='none';
+      setDefaultsP();
+//   }
+}
+
+function setDefaultsP() {
+   document.getElementById('tpheader').innerHTML = '';
+   document.getElementById('tpbody').innerHTML = '';
+   document.onmousemove = '';
+}
+
+function snapdivP(e) {      
+   var docX, docY;
+   if(e)
+   {
+      if(typeof(e.pageX) == 'number') { docX = e.pageX; docY = e.pageY;}
+      else {docX = e.clientX; docY = e.clientY;}
+   }
+   else 
+   {
+      e = window.event;
+      docX = e.clientX; docY = e.clientY;
+      if(document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) 
+      {
+         docX += document.documentElement.scrollLeft; docY += document.documentElement.scrollTop;
+      }
+      else if(document.body && (document.body.scrollTop || document.body.scrollLeft)) 
+      {
+         docX += document.body.scrollLeft; docY += document.body.scrollTop;
+      }
+   }
+   if (docX > document.body.offsetWidth - 400) 
+   {
+      document.getElementById('preview').style.left = (docX - 390) + "px";
+   } 
+   else 
+   {
+      document.getElementById('preview').style.left = (docX - 10) + "px";
+   }
+   document.getElementById('preview').style.top    = (docY + 20) + "px";
+}
+
+function opacAnimP(id, opacStart, opacEnd, millisec) {
+   lockAnimP = true;
+   var speed = Math.round(millisec / 100);
+   var timer = 0; var i = 0;
+   if (opacEnd>opacStart) 
+   {
+      for (i = opacStart+1; i <= opacEnd; i=i+2) 
+      {
+         i= (i==99)?100:i;
+         setTimeout("chOpacP(" + i + ",'" + id + "')",(timer * speed));
+         timer++;
+      }      
+   } 
+   else 
+   {
+      for (i = opacStart-1; i >= opacEnd; i--) 
+      {
+         setTimeout("chOpacP(" + i + ",'" + id + "')",(timer * speed));
+         timer++;
+      }
+   }
+}
+
+function chOpacP(opacity, id) 
+{
+   var object = document.getElementById(id).style;
+   object.filter = "alpha(opacity:" + opacity + ")";
+   object.opacity = object.MozOpacity = object.KhtmlOpacity = (opacity / 100);
+   if ((opacity <= 0) || (opacity >= 100)) 
+   {
+      lockAnimP = false;
+      if (opacity <= 0) {
+         document.getElementById(id).style.display='none';setDefaultsP();
+      }
+   }
+}
+</script>
+
+<style type="text/css">
+.preview {
+   z-index: 60;
+   position: absolute;
+   display: none;
+   font-size: 10px;
+   width: 350px;
+   overflow: hidden;
+}
+</style>
+
+<div class="preview forabg" id="preview" style="display: none;">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+      <ul class="topiclist fullwidth">
+         <li class="header" style="width: 100%; white-space: nowrap;"><dl><dt><span id="tpheader"></span></dt></dl></li>
+      </ul>
+      <ul class="topiclist forums">
+         <li><dl>
+            <dd class="posts_portal">
+              <span id="tpbody"></span>
+              <br style="clear: both;">
+            </dd>
+         </dl></li>
+      </ul>
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>

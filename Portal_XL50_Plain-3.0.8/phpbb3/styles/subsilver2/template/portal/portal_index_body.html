@@ -1,0 +1,338 @@
+<!-- DEFINE $PORTALXL = 'index_forum' -->
+<!-- INCLUDE overall_header.html -->
+  
+<!-- Require basic Easy Widgets -->
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $.fn.EasyWidgets({
+    behaviour : {
+      useCookies 		: true // Use cookies to store positions and states
+    },
+    cookies : {
+	  expires 			: 365, // Cookie expiration time in days
+      closeName 		: 'portal_xl_index-close', // Cookie name for close Widgets
+      disableName 		: 'portal_xl_index-disable', // Cookie name for enable/disable Widgets
+      positionName 		: 'portal_xl_index-position', // Cookie name for positined Widgets
+      collapseName 		: 'portal_xl_index-collapse' // Cookie name for collapsed Widgets
+    },
+    selectors : {
+      container 		: 'div'
+    },
+    effects : {
+      effectDuration 	: 250,
+      widgetClose 		: 'fade',
+      widgetExtend 		: 'fade',
+      widgetCollapse 	: 'fade'
+    },
+    i18n : {
+      editText 			: '{L_WIDG_EDIT_TEXT}', // Widget edit link text
+//      closeText 		: '{L_WIDG_CLOSE_TEXT}', // Widget close link text
+//      extendText 		: '{L_WIDG_EXTENT_TEXT}', // Widget extend link text
+//      collapseText 	: '{L_WIDG_COLLAPSE_TEXT}', // Widget collapse link text
+      cancelEditText 	: '{L_WIDG_CANCEL_TEXT}', // Widget cancel edit link text
+      editTitle 		: '{L_WIDG_EDIT}', // Widget edition link title
+      closeTitle 		: '{L_WIDG_CLOSE}', // Widget close link title
+      confirmMsg 		: '{L_WIDG_REMOVE}', // Widget confirmation dialog message
+      cancelEditTitle 	: '{L_WIDG_CANCEL}', // Widget cancel edit link title
+      extendTitle 		: '{L_WIDG_EXTENT}', // Widget extend link title
+      collapseTitle 	: '{L_WIDG_COLLAPSE}', // Widget collapse link title
+	  
+      collapseText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/collapse.png" alt="{L_WIDG_COLLAPSE_TEXT}" />',
+      extendText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/extend.png" alt="{L_WIDG_EXTENT_TEXT}" />',
+      closeText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/close.png" alt="{L_WIDG_CLOSE_TEXT}" />'
+    }
+	
+  });
+});
+// ]]>
+</script>
+
+<!-- IF S_HAS_REPORTS or S_HAS_UNAPPROVED_POSTS -->
+<div class="forumrules">
+    <h3>{L_INFORMATION}</h3><br />
+    <!-- IF S_HAS_REPORTS --><a href="{U_MCP_REPORTS}">{L_REPORTS_TOTAL}</a><!-- ENDIF -->
+    <!-- IF S_HAS_REPORTS and S_HAS_UNAPPROVED_POSTS --> &bull; <!-- ENDIF -->
+    <!-- IF S_HAS_UNAPPROVED_POSTS --><a href="{U_MCP_QUEUE}">{L_UNAPPROVED_TOTAL}</a><!-- ENDIF -->
+</div>
+<br clear="all" />
+<!-- ENDIF -->
+
+<div id="portal_container">
+
+<!-- IF PORTAL_INDEX_PAGE -->
+
+<!-- [+] top block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td valign="top">
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a>&nbsp;{top_block_files.TOP_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1">
+         <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+               <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+               <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+         </div>
+     </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+    </td>
+  </tr>
+</table>
+<!-- [-] top block area -->
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<!-- IF SI_DISPLAY_INDEX_LEFT -->
+<tr>
+<!-- [+] left block area -->
+	<td width="{PORTAL_INDEX_LEFT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a>&nbsp;{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr >
+    <td class="row1"> 
+      <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+           <!-- IF left_block_files.LEFT_BLOCKS -->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+           <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+      </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+    
+	</td>
+<!-- [-] left block area -->
+	<td width="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="30" /></td>
+<!-- ENDIF -->
+<!-- [+] center block area -->
+	<td valign="top">
+<!-- ENDIF -->
+
+<!-- BEGIN center_block_files -->
+<div class="widget-place" id="widget-place-{center_block_files.CENTER_BLOCK_ID}-centre">
+    <div class="widget collapsable removable closeconfirm" id="block-{center_block_files.CENTER_BLOCK_ID}-centre">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{center_block_files.CENTER_BLOCK_ID}">{center_block_files.CENTER_BLOCKS_IMG}</a>&nbsp;{center_block_files.CENTER_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF center_block_files.CENTER_BLOCKS-->{center_block_files.CENTER_BLOCKS}<!-- ENDIF -->
+             <!-- IF center_block_files.CENTER_BLOCKS_CONTENT -->{center_block_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+       </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END center_block_files -->	
+
+<!-- IF not S_IS_BOT or U_TEAM -->
+<span class="gensmall"><!-- IF not S_IS_BOT --><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a><!-- ENDIF --><!-- IF not S_IS_BOT and U_TEAM --> | <!-- ENDIF --><!-- IF U_TEAM --><a href="{U_TEAM}">{L_THE_TEAM}</a><!-- ENDIF --></span><br />
+<!-- ENDIF -->
+
+<br clear="all" />
+
+<!-- INCLUDE breadcrumbs.html -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<br clear="all" />
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat" colspan="2"><!-- IF U_VIEWONLINE --><h4><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h4><!-- ELSE --><h4>{L_WHO_IS_ONLINE}</h4><!-- ENDIF --></td>
+	</tr>
+	<tr>
+	<!-- IF LEGEND -->
+		<td class="row1" rowspan="2" align="center" valign="middle"><img src="{T_THEME_PATH}/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" /></td>
+	<!-- ELSE -->
+		<td class="row1" align="center" valign="middle"><img src="{T_THEME_PATH}/images/whosonline.gif" alt="{L_WHO_IS_ONLINE}" /></td>
+	<!-- ENDIF -->
+		<td class="row1" width="100%"><span class="genmed">{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /><br />{LOGGED_IN_USER_LIST}</span></td>
+	</tr>
+	<!-- IF LEGEND -->
+		<tr>
+			<td class="row1"><b class="gensmall">{L_LEGEND} :: {LEGEND}</b></td>
+		</tr>
+	<!-- ENDIF -->
+	</table>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+	<br clear="all" />
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat" colspan="2"><h4>{L_BIRTHDAYS}</h4></td>
+	</tr>
+	<tr>
+		<td class="row1" align="center" valign="middle"><img src="{T_THEME_PATH}/images/whosonline.gif" alt="{L_BIRTHDAYS}" /></td>
+		<td class="row1" width="100%"><p class="genmed"><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <b>{BIRTHDAY_LIST}</b><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p></td>
+	</tr>
+	</table>
+<!-- ENDIF -->
+
+<br clear="all" />
+
+<table class="tablebg" width="100%" cellspacing="1">
+<tr>
+	<td class="cat" colspan="2"><h4>{L_STATISTICS}</h4></td>
+</tr>
+<tr>
+	<td class="row1"><img src="{T_THEME_PATH}/images/whosonline.gif" alt="{L_STATISTICS}" /></td>
+	<td class="row1" width="100%" valign="middle"><p class="genmed">{TOTAL_POSTS} | {TOTAL_TOPICS} | {TOTAL_USERS} | {NEWEST_USER}</p></td>
+</tr>
+</table>
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<br clear="all" />
+
+	<form method="post" action="{S_LOGIN_ACTION}">
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat"><h4><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a></h4></td>
+	</tr>
+	<tr>
+		<td class="row1" align="center"><span class="genmed">{L_USERNAME}:</span> <input class="post" type="text" name="username" size="10" />&nbsp; <span class="genmed">{L_PASSWORD}:</span> <input class="post" type="password" name="password" size="10" />&nbsp; <!-- IF S_AUTOLOGIN_ENABLED --> <span class="gensmall">{L_LOG_ME_IN}</span> <input type="checkbox" class="radio" name="autologin" /><!-- ENDIF -->&nbsp; <input type="submit" class="btnmain" name="login" value="{L_LOGIN}" /></td>
+	</tr>
+	</table>
+	{S_LOGIN_REDIRECT}
+	{S_FORM_TOKEN}
+	</form>
+<!-- ENDIF -->
+
+<br clear="all" />
+
+<table class="legend">
+<tr>
+	<td width="20" align="center">{FORUM_UNREAD_IMG}</td>
+	<td><span class="gensmall">{L_UNREAD_POSTS}</span></td>
+	<td>&nbsp;&nbsp;</td>
+	<td width="20" align="center">{FORUM_IMG}</td>
+	<td><span class="gensmall">{L_NO_UNREAD_POSTS}</span></td>
+	<td>&nbsp;&nbsp;</td>
+	<td width="20" align="center">{FORUM_LOCKED_IMG}</td>
+	<td><span class="gensmall">{L_FORUM_LOCKED}</span></td>
+</tr>
+</table>
+
+
+
+
+<!-- IF PORTAL_INDEX_PAGE -->
+	</td>
+<!-- [-] center block area -->
+<!-- IF SI_DISPLAY_INDEX_RIGHT -->
+	<td width="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="30" /></td>
+<!-- [+] right block area -->
+	<td width="{PORTAL_INDEX_RIGHT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a>&nbsp;{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+             <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+    
+	<!-- ENDIF -->	
+	</td>
+<!-- [-] right block area -->
+</tr>
+</table>
+<!-- ENDIF -->
+
+
+<!-- [+] bottom block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td valign="top">
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a>&nbsp;{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF bottom_block_files.BOTTOM_BLOCKS -->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+             <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+    </td>
+  </tr>
+</table>
+<!-- [-] bottom block area -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

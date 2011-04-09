@@ -1,0 +1,21 @@
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+<table class="tablebg" cellspacing="1" width="100%">
+  <tr>
+    <td class="row1 gensmall" colspan="2"><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}"><strong>{L_WHO_IS_ONLINE}</strong></a><!-- ELSE -->{L_WHO_IS_ONLINE}:<!-- ENDIF --></td>
+  </tr>
+  <tr>
+    <!-- IF S_USER_LOGGED_IN and USER_AVATAR -->
+    <td class="row1 gensmall" rowspan="2" align="center" valign="middle"><!-- IF S_USER_LOGGED_IN and USER_AVATAR -->{USER_AVATAR}<!-- ENDIF --></td>
+    <!-- ENDIF -->
+    <td class="row1 gensmall">
+      <div>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />
+        {RECORD_USERS}<br /><br />
+        {LOGGED_IN_USER_LIST}</div>
+        <hr align="left" />
+        <div>{TOTAL_USERS_LASTVISIT}<br /> <br />{LASTVISIT_USER_LIST}<br />
+        <!-- IF LEGEND --><br />{L_LEGEND}: <em>{LEGEND}</em><!-- ENDIF --></div>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->

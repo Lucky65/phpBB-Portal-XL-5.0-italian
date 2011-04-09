@@ -1,0 +1,40 @@
+/* phpbb3-tablemaker - subsilver2 */
+
+body {
+	background: #ECECEC;
+}
+table.maintable {
+	height: 430px;
+}
+
+td.left {
+	width:250px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+td.right {
+	width:250px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+td.oben {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+td.unten {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.Stil7 {
+	font-size: 12px;
+	color: #333333;
+}
+.Stil10 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #666666;
+}
+input.butts {
+    background-color: #DCE1E5;
+	border: 1px solid darkgrey;
+}

@@ -1,0 +1,23 @@
+<table class="tablebg" cellspacing="1" width="100%" align="center">
+  <tr>
+    <th colspan="{S_COLS}">{L_RANDOM_PIC}</th>
+  </tr>
+  <!-- BEGIN no_pics -->
+  <tr>
+    <td class="row1" align="center" colspan="{S_COLS}" height="50"><span class="gen">{L_NO_PICS}</span></td>
+  </tr>
+  <!-- END no_pics -->
+  <!-- BEGIN rand_pics -->
+  <tr>
+    <!-- BEGIN rand_col -->
+    <td class="row1" width="{S_COL_WIDTH}" align="center">
+        <a href="{rand_pics.rand_col.U_PIC}">{rand_pics.rand_col.THUMBNAIL}</a><br />
+        <a href="{rand_pics.rand_col.U_IMAGE}">{rand_pics.rand_col.IMAGE_NAME}</a>
+    </td>
+    <!-- END rand_col -->
+  </tr>
+  <!-- END rand_pics -->
+  <tr>
+	<td colspan="{S_COLS}" class="cat" align="center"><span class="gensmall">[ <a href="{U_GALLERY_MOD}" title="{L_GALLERY}" target="_self">{L_GALLERY}</a> ]</span></td>
+  </tr>
+</table>

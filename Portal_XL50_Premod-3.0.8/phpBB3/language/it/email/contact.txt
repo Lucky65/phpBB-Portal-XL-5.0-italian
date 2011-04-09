@@ -1,0 +1,12 @@
+Subject: {SUBJECT}
+
+Ciao {ADM_USERNAME},
+
+Un utente con "{USERNAME}" con indirizzo email "{USER_EMAIL}" e indirizzo IP "{USER_IP}" il "{DATE}" per la seguente motivazione "{REASON}" ha inviato il seguente messaggio:
+
+{MESSAGE}
+
+usando il modulo contatti su  "{SITENAME}".
+
+
+{EMAIL_SIG}

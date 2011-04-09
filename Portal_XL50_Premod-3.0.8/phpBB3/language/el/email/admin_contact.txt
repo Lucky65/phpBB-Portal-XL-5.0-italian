@@ -1,0 +1,10 @@
+Subject: {SUBJECT}
+
+Γεια σας {ADM_USERNAME},
+
+"{USERNAME} / {USER_EMAIL}" έχει γίνει εισαγωγή ενός μηνύματος στην φόρμα επικοινωνίας της ιστοσελίδας "{SITENAME}":
+
+{MESSAGE}
+
+
+{EMAIL_SIG}

@@ -1,0 +1,2018 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.phpbb.com/mods/xml/modx-1.2.1.xsd">
+  <header>
+    <license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+    <title lang="en-gb">Portal XL 5.0 ~ Plain (Basic)</title>
+    <description lang="en-gb">Your insane crazy ass-kicking portal system for use with phpBB 3.0.x.</description>
+    <author-group>
+      <author>
+        <realname>DaMysterious</realname>
+        <email>mysterio@xs4all.nl</email>
+        <username>DaMysterious</username>
+        <homepage>http://www.portalxl.nl/forum/</homepage>
+        <contributions />
+      </author>
+      <author>
+        <realname>Torstein Hønsi</realname>
+        <email>torstein.hoensi@gmail.com</email>
+        <username>Torstein Hønsi</username>
+        <homepage>http://highslide.com/</homepage>
+        <contributions></contributions>
+      </author>
+    </author-group>
+    <author-notes lang="en-gb">Tested with phpBB 3.0.8
+All files contribute XHTML and UTF-8. 
+Demo, development and bug board is: http://www.portalxl.nl/forum/. 
+Dutch, German, English promotion, feature, about site is: http://www.portalxl.nl/forum/. 
+phpBB3 Portal XL 5.0 supports following languages: English. 
+
+This package includes pre-modded files of the recent phpBB3 distribution! 
+
+Using this package you are able to create a Portal for your running phpBB3 site (includes all necessary files). 
+Simply upload/copy/overwrite from this package if you use a former Portal XL 5.0 version. 
+Run our installer on your phpBB3 database to create or update all entries needed by the portal. 
+
+Only MYSQL and MYSQLi is supported!
+
+ATTENTION! CHMOD to 755 or 777 (read/write access) on *nix systems: images/counter/ip.txt
+
+No support by e-mail/pm! Post your questions in the applicable forum please.
+
+This version includes Highslide JS.
+Please note, Highslide JS has a different license: Highslide JS is licensed under a Creative Commons Attribution-NonCommercial 2.5 License. 
+This means you need the author's permission to use Highslide JS on commercial websites. 
+Visit http://highslide.com/#licence for more detailed info.
+Creative Commons Attribution-NonCommercial 2.5 License http://creativecommons.org/licenses/by-nc/2.5/</author-notes>
+    <mod-version>Portal XL 5.0 ~ Plain (Basic)</mod-version>
+    <installation>
+      <level>intermediate</level>
+      <time>7200</time>
+      <target-version>3.0.8</target-version>
+    </installation>
+    <history>
+      <entry>
+        <date>2007-04-06</date>
+        <rev-version>1.0.2b</rev-version>
+        <changelog lang="en-gb">
+          <change>Actually phpBB 3.0.0.RC1 Released 2007-05-20 in use!
+
+</change>
+          <change>A new portal block 'forums' is added!
+</change>
+          <change>Added tabbed display of recent topics in portal!
+</change>
+          <change>A new portal block 'attachments' is added!
+</change>
+          <change>Added display user's avatar in random user portal block!</change>
+          <change>Added attachments stats in portal stats block!
+</change>
+          <change>Added portal welcome message for registered users!</change>
+          <change>Added different random banner display by java script!</change>
+          <change>Added new block Google Adds!</change>
+          <change>Almost all blocks are configurable (switchable) by portal/config.php now!</change>
+          <change>Added text based visit counter (CHMOD counter.txt and ip.txt to 777 in folder portal) !</change>
+          <change>Announcement bug fixed (did not show the corresponding block)!</change>
+          <change>Portal where made ACP (Admincenter) aware, all settings can be done in your ACP now!</change>
+          <change>Lightbox Animated Image Loading MOD</change>
+          <change>Added wordgraph block, admincenter is restyled completely</change>
+          <change>More approvements made to the statistics block</change>
+          <change>Added ranks center block combined with wordgraph and attachments, further ACP improvements</change>
+          <change>Corrected e-mail bug Paypalsettings (entering a paypal account ends up in error message) in ACP!</change>
+          <change>Comments link at bottom in portal news messages corrected (leading as expected to last comment)</change>
+          <change>Fixed/cleaned up missing language entry "Portal settings" in ACP</change>
+          <change>Added display of views counts on announcement and news items</change>
+          <change>XML installation guide added</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-04-29</date>
+        <rev-version>0.3.B5</rev-version>
+        <changelog lang="en-gb">
+          <change>Config file removed
+</change>
+          <change>Welcome text made database aware (text is placed in database via ACP)</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-04-30</date>
+        <rev-version>0.3.B6</rev-version>
+        <changelog lang="en-gb">
+          <change>Chatbox added including full ACP operations</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-05-09</date>
+        <rev-version>0.3.B7</rev-version>
+        <changelog lang="en-gb">
+          <change>Minical added including full ACP operations</change>
+          <change>IE6 portal display bug fixed</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-05-24</date>
+        <rev-version>0.3.B8</rev-version>
+        <changelog lang="en-gb">
+          <change>Portal XL 4.0 portal code shared to Angelside from phpbb3portal.com, permission is given to use improvements made by DaMysterious in phpBB3 Portal XL 4.0 v0.3.B7, and from this described version only, in his phpBB3 Portal 1.03b to continue Angelside's own development, which suffers several month, as appreciation for the great work he did before. We leave phpBB3 Portal behind us with this release, due to more than thousand and thousand code changes through the borrowed code.
+</change>
+          <change>Weather forecast block added including full ACP operations</change>
+          <change>Welcome messages are made html aware (html in message is allowed)</change>
+          <change>Cleaned up some core code</change>
+          <change>Added syndication block (collect forum information via RDF/RSS from messages and attachments)</change>
+          <change>Folder lightbox moved from /styles/theme/ to /portal/lightbox/ to save space (delete that folder from prosilver and subsilver2)</change>
+          <change>Cleaned up portal.php for future use</change>
+          <change>Added drag &amp; drop of portal blocks (jquery used)</change>
+          <change>Added users last visit to who is online block</change>
+          <change>Complete rework of all random banner blocks (jquery plugin used)</change>
+          <change>Additional portal index page created (switchable left or right display of columns)</change>
+          <change>Added drag &amp; drop of portal blocks (jquery used)</change>
+          <change>To avoid future software conflicts all relations to bb3portal named files/folders where renamed to simply portal as this will overcome any intolerance between both versions. Please remove any file and folder named bb3portal before using/installing this v0.3.B8 release.
+</change>
+          <change>upgraded to phpBB 3.0.0.RC1</change>
+          <change>upgrade Ajax chatbox to latest version</change>
+          <change>styles prosilver and subsilver2 optimized for drag and drop of blocks</change>
+          <change>Install description (.txt and .xml) optimized</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-06-01</date>
+        <rev-version>0.3.B9</rev-version>
+        <changelog lang="en-gb">
+          <change>Uploaded/remote avatar which was not shown in random user-/user- and most poster block for phpBB3 RC1 fixed now</change>
+          <change>User avatar added to display in most poster block</change>
+          <change>Due to upgraded chatbox mod changes where made to ACP's chatbox (unused entries removed from database)</change>
+          <change>Some tweaks added from http://www.easytutorials.org/ to make future phpBB3 life easier</change>
+          <change>Added globally switch to enable/disable portal's drag and drop blocks feature</change>
+          <change>Added Display of linked poster, comments and views in tabbed recent topics block</change>
+          <change>IE6 display issues on tabbed blocks corrected for prosilver</change>
+          <change>Hopefully corrected phrasing of bbcode and smiles in portal messages</change>
+          <change>Removed Lightbox Animated Image Loading MOD to overcome collisions with internal attachments (remove folder /portal/lightbox from your server)</change>
+          <change>Complete rework of all random banner blocks (jquery plugin used)</change>
+          <change>Chatbox made ready for proper display in IE</change>
+          <change>Wrapper for prosilver added, many code clean-ups</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-06-13</date>
+        <rev-version>0.4.B0</rev-version>
+        <changelog lang="en-gb">
+          <change>Portal link added to ACP's index page</change>
+          <change>Added portal blocks in viewforum and viewtopic fully switchable, enable/disable of whole portal by switch so you have a plain phpBB3 if disabled</change>
+          <change>Poll options extended, choose poll from forum- and message ID now</change>
+          <change>Drag and Drop of portal blocks removed from all styles</change>
+          <change>General clean up of all available styles</change>
+          <change>Added function to randomize header logo automatically</change>
+          <change>portal.php and portal_index.php cleaned up, blocks and variables moved to portal_blocks.php to centralize</change>
+          <change>Changed all random banner functions, moved to apart blocks</change>
+          <change>portal_index.php (portal index page) can be switched on/off in ACP</change>
+          <change>Removed jquery script to favor of scriptaculous (remove all jquery from /portal/includes/)</change>
+          <change>flash_mp3_player as extra add-on added to portal</change>
+          <change>censor text added to announcements and news on portal, announcement forum bug removed</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-06-25</date>
+        <rev-version>0.4.B1</rev-version>
+        <changelog lang="en-gb">
+          <change>drop down's bug fixed on portal center column, news.php reworked</change>
+          <change>Simple Quick Reply 0.1.3 added</change>
+          <change>Welcome messages are made html aware (html in message is allowed)</change>
+          <change>duplicate poll fixed in viewtopic</change>
+          <change>WYSIWYG - Rich Text Editor for posting HTML message added</change>
+          <change>viewtopic bug fixed, no increase of viewcounters</change>
+          <change>clickable names in recent block fixed, leading to users profile now</change>
+          <change>missing language definitions for ACP portal log added</change>
+          <change>portal's functions.php cleaned up</change>
+          <change>flash player removed, added next version media player which plays most possible formats</change>
+          <change>blocks google/partner adds reworked, made ready for google script</change>
+          <change>due to issues on long text, quote and code, WYSIWYG - Rich Text Editor removed</change>
+          <change>phpBB3 Portal XL 4.0 full install, portal ACP finished (own portal tab after installation)</change>
+          <change>portal index removed, combined into index.php </change>
+          <change>full install version made ready for use on phpBB3 RC2</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-07-04</date>
+        <rev-version>0.4.B2</rev-version>
+        <changelog lang="en-gb">
+          <change>block switches reacting through blocks, if disabled a block is bypassed then hopefully</change>
+          <change>portal stand alone version dropped</change>
+          <change>ACP language definitions changed for better understanding</change>
+          <change>many bugs and glitches removed due to switching to phpBB3 RC2 </change>
+          <change>link us banner added to corresponding block, further improvements made to random banner blocks (files in all banner folders needed to be deleted as the name format of those files must be changed to make them clickable)</change>
+          <change>viewtopic bug fixed, no increase of viewcounters</change>
+          <change>available styles prepared for 0.4B2, new style ProBrushed created  </change>
+          <change>picture gallery block added with help of Highslide</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-08-03</date>
+        <rev-version>0.4.B3</rev-version>
+        <changelog lang="en-gb">
+          <change>found a bug in portal's functions.php which caused a distorted display of news items on portal's page if bbcodes where processed before shortening the message according to given value in ACP</change>
+          <change>index/viewforum blocks enclosed in switches which are specified in ACP already, if a certain block is disabled it will not load then anymore I hope</change>
+          <change>portal blocks enclosed in switches which are specified in ACP already, if a certain block is disabled it will not load then anymore I hope</change>
+          <change>two new blocks added, displaying recent actual and recent hot topics in scroll block (ACP needs to be done...)</change>
+          <change>Core code and ACP ready to pull/save data from/to database table phpbb_portal_config</change>
+          <change>recent and ranks center block as RE-Requested: Tab-based again </change>
+          <change>install routine and installation guide made ready for new database table situation</change>
+          <change>further improvements to portal's functions.php</change>
+          <change>lots of optimizations made to core code and styles, text areas created in acp where needed...</change>
+          <change>missing switches added</change>
+          <change>start adding acp's block management...</change>
+          <change>all database relations to table phpbb_config where removed, portal uses a own database table from on now</change>
+          <change>core code upgrade to phpBB3 RC4</change>
+          <change>install_plusxl40-portal.txt and install_plusxl40-portal.xml reworked for better understanding</change>
+          <change>dynamical signature added, use = [img]http://your.site.com/sig.php[/img], sig.php reside in the root of your site</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-09-16</date>
+        <rev-version>0.4.B4</rev-version>
+        <changelog lang="en-gb">
+          <change>added, quotes of the day fully acp aware</change>
+          <change>acp's menu management bridged to portal, this menu replaces our former "normal menu", dhtml menu stays available to choose from</change>
+          <change>user color bug in random user- and user- block fixed.</change>
+          <change>acp's language definitions expanded to have a more descriptive textual definition of most of the features</change>
+          <change>portal's block management integrated completely</change>
+          <change>quotes of the day reworked</change>
+          <change>portal's index block management integrated completely</change>
+          <change>made all banner adds database aware</change>
+          <change>marquee scroll option added</change>
+          <change>meta tag support added</change>
+          <change>links management added</change>
+          <change>code clean up for core code and styles</change>
+          <change>new portal installer scores progress</change>
+          <change>portal made phpBB3 RC5 aware</change>
+          <change>portal's mod's database added</change>
+          <change>styles ready made for use with XL 4.0</change>
+          <change>portal's viewtopic advertisement management added</change>
+          <change>acp's block management optimized</change>
+          <change>several phpBB3 styles ready made to work with XL 4.0 ~ 0.4B4</change>
+          <change>got the style changer to work</change>
+          <change>Portal XL 4.0 v0.4B4 (open Beta) FULL PRE-MODDED RC5 is released!</change>
+          <change>Portal XL 4.0 v0.4B4 (open Beta) CHANGED RC5 is released!</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-11-19</date>
+        <rev-version>0.4.B5</rev-version>
+        <changelog lang="en-gb">
+          <change>user flags and gender mod added</change>
+          <change>undefined indexes as far as possible removed</change>
+          <change>portal pages skeleton added</change>
+          <change>portal/includes/functions.php optimized for RC5 of phpBB3</change>
+          <change>portal made phpBB3 RC6 aware</change>
+          <change>portal made phpBB3 RC7 aware</change>
+          <change>I decided not to write down daily changes anymore but will maintain code changes</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-11-19</date>
+        <rev-version>RC1</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 4.0 ~ RC1</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2007-12-16</date>
+        <rev-version>RC2</rev-version>
+        <changelog lang="en-gb">
+          <change>update to phpBB3 Gold 3.0</change>
+          <change>release of Portal XL 4.0 ~ RC2</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-01-01</date>
+        <rev-version>RC3</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 4.0 ~ RC3</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-02-26</date>
+        <rev-version>RC4-Plain</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 4.0 ~ RC4-Plain derived from our Premod version on users request</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-02-26</date>
+        <rev-version>Final</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 update to phpBB 3.0.2</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-05-31</date>
+        <rev-version>Plain 0.1</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.1</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-10-31</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-11-15</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.3</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2008-12-13</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.4</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2009-06-01</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.5</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2009-11-24</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.6</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2010-03-02</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.7</change>
+        </changelog>
+      </entry>
+      <entry>
+        <date>2010-11-21</date>
+        <rev-version>Plain 0.2</rev-version>
+        <changelog lang="en-gb">
+          <change>release of Portal XL 5.0 Plain 0.2 update to phpBB 3.0.8</change>
+        </changelog>
+      </entry>
+    </history>
+    <meta name="generator" content="Phpbb.ModTeam.Tools (c#)" />
+  </header>
+  <action-group>
+    <sql><![CDATA[# Table: 'phpbb_portal_acronyms
+CREATE TABLE phpbb_portal_acronyms (
+  acronym_id mediumint(9) NOT NULL auto_increment,
+  acronym varchar(80) binary NOT NULL default '',
+  description varchar(255) binary NOT NULL default '',
+  acronym_url varchar(150) NOT NULL default '',
+  PRIMARY KEY  (acronym_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_banners_ho'
+CREATE TABLE phpbb_portal_banners_ho (
+  banners_id smallint(5) unsigned NOT NULL auto_increment,
+  banners_url varchar(255) binary NOT NULL,
+  banners_img_hor varchar(255) binary NOT NULL,
+  banners_description varchar(255) binary default NULL,
+  PRIMARY KEY  (banners_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_banners_ve'
+CREATE TABLE phpbb_portal_banners_ve (
+  banners_id smallint(5) unsigned NOT NULL auto_increment,
+  banners_url varchar(255) binary NOT NULL,
+  banners_img_ver varchar(255) binary NOT NULL,
+  banners_description varchar(255) binary default NULL,
+  PRIMARY KEY  (banners_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_block'
+CREATE TABLE phpbb_portal_block (
+  block_id mediumint(8) unsigned NOT NULL auto_increment,
+  block_index tinyint(1) NOT NULL default '0',
+  block_edit mediumint(8) unsigned NOT NULL default '0',
+  block_name varchar(255) binary NOT NULL default '',
+  block_alias varchar(255) binary NOT NULL default '',
+  block_disable mediumint(8) unsigned NOT NULL default '0',
+  block_order tinyint(8) unsigned default NULL,
+  block_position char(2) binary NOT NULL default '',
+  block_last_position char(2) binary NOT NULL default '',
+  block_view varchar(20) binary NOT NULL default '0',
+  block_img varchar(150) binary NOT NULL,
+  block_content text,
+  PRIMARY KEY  (block_id,block_index),
+  KEY config_value (block_order)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_block_index'
+CREATE TABLE phpbb_portal_block_index (
+  block_id mediumint(8) unsigned NOT NULL auto_increment,
+  block_index tinyint(1) NOT NULL default '0',
+  block_edit mediumint(8) unsigned NOT NULL default '0',
+  block_name varchar(255) binary NOT NULL default '',
+  block_alias varchar(255) binary NOT NULL default '',
+  block_disable mediumint(8) unsigned NOT NULL default '0',
+  block_order tinyint(8) unsigned default NULL,
+  block_position char(2) binary NOT NULL default '',
+  block_last_position char(2) binary NOT NULL default '',
+  block_view varchar(20) binary NOT NULL default '0',
+  block_img varchar(150) binary NOT NULL,
+  block_content text,
+  PRIMARY KEY  (block_id,block_index),
+  KEY config_value (block_order)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_config'
+CREATE TABLE phpbb_portal_config (
+  config_name varchar(255) binary NOT NULL default '',
+  config_value text NOT NULL,
+  is_dynamic tinyint(1) unsigned NOT NULL default '0',
+  PRIMARY KEY  (config_name),
+  KEY is_dynamic (is_dynamic)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_forumadds'
+CREATE TABLE phpbb_portal_forumadds (
+  adds_id int(11) NOT NULL auto_increment,
+  adds_name varchar(255) binary NOT NULL,
+  adds_code text NOT NULL,
+  adds_show_forums int(11) NOT NULL default '0',
+  adds_show_all_forums int(11) NOT NULL default '0',
+  adds_active int(11) NOT NULL default '0',
+  adds_views int(11) NOT NULL default '0',
+  adds_max_views int(11) NOT NULL default '0',
+  adds_position int(11) NOT NULL default '0',
+  PRIMARY KEY  (adds_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_links'
+CREATE TABLE phpbb_portal_links (
+  links_id mediumint(8) unsigned NOT NULL auto_increment,
+  links_img varchar(150) binary NOT NULL default '',
+  links_name varchar(150) binary NOT NULL default '',
+  links_url varchar(150) binary NOT NULL default '',
+  links_view varchar(20) binary NOT NULL default '',
+  links_order mediumint(8) unsigned NOT NULL default '0',
+  PRIMARY KEY  (links_id),
+  KEY links_order (links_order)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_menu'
+CREATE TABLE phpbb_portal_menu (
+  menu_id mediumint(8) unsigned NOT NULL auto_increment,
+  menu_img varchar(150) binary NOT NULL default '',
+  menu_name varchar(150) binary NOT NULL default '',
+  menu_url varchar(150) binary NOT NULL default '',
+  menu_view varchar(20) binary NOT NULL default '',
+  menu_order mediumint(8) unsigned NOT NULL default '0',
+  menu_open mediumint(8) unsigned NOT NULL default '0',
+  PRIMARY KEY  (menu_id),
+  KEY menu_order (menu_order)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_mods'
+CREATE TABLE phpbb_portal_mods (
+  mod_id smallint(5) unsigned NOT NULL auto_increment,
+  mod_title varchar(50) binary NOT NULL,
+  mod_version varchar(10) binary NOT NULL,
+  mod_version_type varchar(10) binary NOT NULL,
+  mod_desc text,
+  mod_url varchar(100) binary default NULL,
+  mod_author varchar(50) binary default NULL,
+  mod_download varchar(255) binary default NULL,
+  PRIMARY KEY  (mod_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_newsfeeds'
+CREATE TABLE phpbb_portal_newsfeeds (
+  feed_id mediumint(8) NOT NULL auto_increment,
+  feed_title varchar(255) binary NOT NULL default '',
+  feed_show tinyint(1) NOT NULL default '1',
+  feed_url text NOT NULL,
+  feed_position tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (feed_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_pages'
+CREATE TABLE phpbb_portal_pages (
+  page_id mediumint(8) NOT NULL auto_increment,
+  page_index tinyint(1) NOT NULL default '0',
+  page_edit mediumint(8) unsigned NOT NULL default '0',
+  page_title varchar(255) binary NOT NULL default '',
+  page_alias varchar(255) binary NOT NULL default '',
+  page_disable mediumint(8) unsigned NOT NULL default '0',
+  page_order tinyint(8) unsigned default NULL,
+  page_position char(2) binary NOT NULL default '',
+  page_last_position char(2) binary NOT NULL default '',
+  page_view varchar(20) binary NOT NULL default '0',
+  page_img varchar(150) binary NOT NULL,
+  page_content text,
+  enable_bbcode tinyint(1) unsigned NOT NULL default '1',
+  enable_smilies tinyint(1) unsigned NOT NULL default '1',
+  PRIMARY KEY  (page_id,page_index),
+  KEY config_value (page_order)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_partners'
+CREATE TABLE phpbb_portal_partners (
+  partners_id smallint(5) unsigned NOT NULL auto_increment,
+  partners_url varchar(255) binary NOT NULL,
+  partners_img varchar(255) binary NOT NULL,
+  partners_description varchar(255) binary default NULL,
+  PRIMARY KEY  (partners_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+
+# Table 'phpbb_portal_quote'
+CREATE TABLE phpbb_portal_quote (
+  quote_id smallint(5) unsigned NOT NULL auto_increment,
+  quote text NOT NULL,
+  quote_author varchar(150) binary NOT NULL,
+  PRIMARY KEY  (quote_id)
+) CHARACTER SET `utf8` COLLATE `utf8_bin`;
+]]></sql>
+    <sql><![CDATA[# -- phpbb_portal_config
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_attachments_number', '10', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_right_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_left_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_max_online_friends', '8', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_max_most_poster', '8', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_max_last_member', '10', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_poll_topic_id', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_last_visited_bots_number', '8', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pay_acc', 'your@paypal.com', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pay_s_block', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pay_c_block', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_recent_title_limit', '30', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_max_topics', '10', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_news_forum', '1,2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_news_length', '550', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_number_of_news', '4', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_number_of_announcments', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_announcments_day', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_announcments_length', '600', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_global_announcments_forum', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_word_graph_word_counts', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_word_graph_max_words', '50', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_word_graph_ratio', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_version', 'Plain 0.2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_welcome_intro', '&lt;img src=&quot;images/Behinde.gif&quot; width=&quot;100&quot; height=&quot;75&quot; vspace=&quot;10&quot;  hspace=&quot;10&quot; align=&quot;left&quot;&gt;&lt;div align=&quot;left&quot;&gt;&lt;center&gt;Welcome to &lt;b&gt;phpBB3 Portal XL 5.0&lt;/b&gt;&lt;/center&gt;&lt;br /&gt;We aim to make phpBB3 Portal XL 5.0 as fast, user friendly and error free as possible! At the same time, we will offer a quick and efficient alternative to other phpBB3 related portals... because we believe open source matters.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Portal XL 5.0 &lt;/b&gt; installed successfully.&lt;br /&gt;Please visit you Admincenter for finetuning now.&lt;br&gt;&lt;br&gt;Thank you, and enjoy!', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_welcome_back', '&lt;img src=&quot;images/Behinde.gif&quot; width=&quot;100&quot; height=&quot;75&quot; vspace=&quot;10&quot;  hspace=&quot;10&quot; align=&quot;left&quot;&gt;&lt;div align=&quot;left&quot;&gt;We are excited to have you join our community. We have given you many options to choose from, all with the goal of allowing you to communicate with other community members. You can expect as much help as you need and plenty of personal attention to help make sure your Portal XL 5.0 is as successfull as possible.&lt;br /&gt;&lt;br /&gt;Be sure to check this website as often as possible. We will be posting changes and additions throughout the week. Thank you for your time, and we hope you will bookmark this site! This text comes out of the database!&lt;/div&gt;', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_drag_drop', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_visit_counter', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_weather_zipcode', '41334', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_weather_alternate_url1', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_weather_alternate_url', '&lt;a href=&quot;http://weerkamer.nl/&quot; target=&quot;_BLANK&quot;&gt;&lt;img src=&quot;http://weerkamer.nl/weer/weeranimatie/weeranimatie.fpl&quot; width=&quot;110&quot; height=&quot;69&quot; border=&quot;0&quot;&gt;&lt;/a&gt;', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_weather_ger', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_weather_alternate_url2', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_forum_block', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_left_column', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_left_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_right_column', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_right_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_poll_forum_id', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_poll_post_id', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_index_layout', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_max_lastvisits', '5', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_display', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_fontcolor', '#ff0000', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_fontsize', '11', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_direction', 'left', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_speed', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_text', 'Database driven 8O &lt;b&gt;marquee&lt;/b&gt; text includes chosable color, fontsize, scroll- direction and speed 8). Up to 1000 characters plain text is possible, html is allowed ;). Configuration comlete Portal''s ACP aware ...', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_scrolldelay', '2', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_align', 'middle', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_behavior', 'scroll', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_bgcolor', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_height', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_width', '90%', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_hspace', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_vspace', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_scroll_message_marquee_loop', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_redirect_url_time', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_redirect_url_adress', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_refresh', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_pragma', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_keywords', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_description', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_picture_resize', '450', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_layout', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_author', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_identifier_url', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_reply_to', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_revisit_after', '15', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_category', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_copyright', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_generator', '', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_robots', 'index, follow, noodp', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_distribution', 'Global', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_creation_year', '2007', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_creation_month', '05', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_creation_day', '01', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_revision_year', '2007', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_revision_month', '08', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_meta_date_revision_day', '21', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_feeds_cache_time', '3600', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_feeds_items_limit', '5', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, 
+) VALUES ('portal_feeds_random_limit', '4', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_acronyms_allow', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pages_left_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pages_right_collumn_width', '180', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_partners_display_value', '3', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_left_column', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_right_column', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pages_layout', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pages_left_column', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_pages_right_column', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_ip_logfile', 'images/counter/ip.txt', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_digits_ani_path', 'images/counter/digits_ani', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_digits_path', 'images/counter/digits', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_block_ip', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_digits_height', '22', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_digits_width', '16', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_digits_number', '6', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_block_time', '60', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_display_mode', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_counter_display_stats', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_news_show_last_post', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_show_tool_tips', '1', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_news_repository', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_news_permissions', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_show_all_news', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_announcement_repository', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_announcements_permissions', '0', 0);
+INSERT INTO phpbb_portal_config (config_name, config_value, is_dynamic) VALUES ('portal_show_all_announcements', '0', 0);
+
+# -- phpbb_portal_forumadds
+INSERT INTO phpbb_portal_forumadds (adds_id, adds_name, adds_code, adds_show_forums, adds_show_all_forums, adds_active, adds_views, adds_max_views, adds_position) VALUES (1, 'Curabitur ac lorem et', 'This is a big joke which appears after every first message for guest users, switchable of cource... :).', 2, 1, 3, 1, 500, 1);
+INSERT INTO phpbb_portal_forumadds (adds_id, adds_name, adds_code, adds_show_forums, adds_show_all_forums, adds_active, adds_views, adds_max_views, adds_position) VALUES (2, 'Lorem ipsum dolor sit amet', 'This joke is much bigger and will be displayed after every message visible for guest only. Should it switchable too? ;).', 2, 1, 3, 1, 500, 2);
+
+# -- phpbb_portal_links
+INSERT INTO phpbb_portal_links (links_id, links_img, links_name, links_url, links_view, links_order) VALUES (1, 'square_orange.gif', 'phpBB Worldwide', 'http://www.phpbb.com/', '1', 2);
+INSERT INTO phpbb_portal_links (links_id, links_img, links_name, links_url, links_view, links_order) VALUES (2, 'square_red.gif', 'Easy Tutorials', 'http://www.easytutorials.org/', '1', 15);
+INSERT INTO phpbb_portal_links (links_id, links_img, links_name, links_url, links_view, links_order) VALUES (3, 'square_brown.gif', 'DaMysterious Portal XL 5.0', 'http://www.portalxl.nl/forum/', '1', 17);]]></sql>
+    <sql><![CDATA[# -- phpbb_portal_menu
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (1, 'icon_menu_004.gif', 'Portal', 'portal.php', '1', 1);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (2, 'icon_menu_014.png', 'Forum', 'index.php', '1', 2);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (3, 'icon_menu_001.gif', 'Memberlist', 'memberlist.php', '3', 26);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (4, 'icon_menu_027.gif', 'Staff', 'memberlist.php?mode=leaders', '3', 25);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (5, 'icon_menu_013.png', 'Bookmarks', 'ucp.php?i=main&amp;mode=bookmarks', '3', 24);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (6, 'icon_menu_019.png', 'Profile', 'ucp.php', '3', 23);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (8, 'icon_menu_012.png', 'Media Player', 'portal/block/mp3_player_popup.php', '1', 5);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (9, 'icon_menu_009.png', 'FAQ', 'faq.php', '1', 6);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (10, 'icon_menu_021.gif', 'BBCode FAQ', 'faq.php?mode=bbcode', '1', 7);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (11, 'icon_menu_001.gif', 'Term of use', 'ucp.php?mode=terms', '1', 8);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (12, 'icon_menu_024.gif', 'Privacy policy', 'ucp.php?mode=privacy', '1', 9);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (13, 'icon_menu_020.gif', 'Search', 'search.php', '1', 10);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (14, 'icon_menu_009.png', 'New posts', 'search.php?search_id=newposts', '3', 22);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (15, 'icon_menu_005.gif', 'Subscribed', 'ucp.php?i=main&amp;mode=subscribed', '3', 27);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (16, 'icon_menu_017.png', 'Private messages', 'ucp.php?i=pm&amp;folder=inbox', '3', 28);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (17, 'icon_menu_028.gif', 'Mod''s', 'portal/portal_mods.php', '1', 11);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (18, 'icon_menu_022.gif', 'Portal pages', 'portal_pages.php', '1', 14);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (19, 'icon_menu_011.gif', 'Acronyms', 'portal/portal_acronyms.php', '1', 20);
+INSERT INTO phpbb_portal_menu (menu_id, menu_img, menu_name, menu_url, menu_view, menu_order) VALUES (20, 'information.png', 'Recent Topics', 'portal/portal_recent_topics.php', '1', 5);
+
+# -- phpbb_portal_mods
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (1, 'Manage Mods Database', '1.0', '', 'Manage Mods Database for XL 5.0 Portal, create/edit/delete Mods fully ACP aware.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (2, 'phpBB3 Portal XL 5.0', 'Plain', '', 'phpBB3 Portal XL 5.0 ~ Your insane crazy portal system for phpBB3 which is fully ACP aware. Thank you for choosing phpBB3 Portal XL 5.0. ACP settings by DaMysterious 2007.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (3, 'Manage Partners 88x31', '1.0', '', 'Manage Partner banner exchange, banner size 88x31. You can create/edit/delete a partners Items. Max image size 88x31 pixel, bigger images will be resized to that value in the portal block. You can add as much partners as you like to show in this block, but there is a limit for random display of 6 logo''s simultaneously to not overload the server.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (4, 'Manage Banners 400x60', '1.0', '', 'Manage banner exchange, banner size 400x60. You can create/edit/delete a partners Items. Max image size 400x60 pixel, bigger images will be resized to that value in the portal block. You can add as much banners as you like to show in this block, but there is a limit for random display of 1 logo.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (5, 'Manage Banners 130x600', '1.0', '', 'Manage banner exchange, banner size 130x600. You can create/edit/delete a partners Items. Max image size 130x600 pixel, bigger images will be resized to that value in the portal block. You can add as much banners as you like to show in this block, but there is a limit for random display of 1 logo.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (6, 'Navigation Menu management', '1.0', '', 'You can create/edit/move/delete a custom Menu Item. This menu block can be switched on/off. Path is relative to the forums root directory, i.e. &quot;http://www.yourdomain.com/&quot; for a external link. Internal links can be added like &quot;portal.php&quot; to call a certain file from your site, or &quot;memberlist.php?mode=leaders&quot; to call a certain function of your forum from out of the navigation menu. ', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (7, 'Quotation management', '1.0', '', 'You can create/edit/delete Quotes. This menu block can be switched on/off. You can add as much quotations as you like to show in this block, but there is a limit for random display of 1 quote set.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (8, 'Links management', '1.0', '', 'You can create/edit/move/delete a custom link Item. This menu block can be switched on/off. Path is relative to the forums root directory, i.e. &quot;http://www.yourdomain.com/&quot; for a external link.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (9, 'Scroll Message', '1.0', '', 'The marquee tag is a non-standard HTML markup element type which causes text onscreen to scroll from right to left across the screen. The default width of the MARQUEE element is equal to the width of its parent element.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (10, 'META Tags', '1.0', '', 'Welcome to the META Tags managment. These tags allow you to give a description of your website to the search engine to allow them indexing your site.\nIt is why, you should take attention.\nFurthermore of referencing, these tags allow other options such as automatic redirect to another URL.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (11, 'RSS syndication messages', '1.0', '', 'RSS (which, in its most recent format, stands for &quot;Really Simple Syndication&quot;). RSS content can be read using software called a &quot;feed reader&quot; or an &quot;aggregator.&quot; The user subscribes to a feed by entering the feed''s link into the reader or by clicking an RSS icon in a browser that initiates the subscription process. The reader checks the user''s subscribed feeds regularly for new content, downloading any updates that it finds. ', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (12, 'RSS syndication attachments', '1.0', '', 'RSS (which, in its most recent format, stands for &quot;Really Simple Syndication&quot;). RSS content can be read using software called a &quot;feed reader&quot; or an &quot;aggregator.&quot; The user subscribes to a feed by entering the feed''s link into the reader or by clicking an RSS icon in a browser that initiates the subscription process. The reader checks the user''s subscribed feeds regularly for new content, downloading any updates that it finds. ', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (13, 'Forum Adds Management', '1.0', '', 'Displays advertisements in the viewtopic screen. You can choose the forums where the advertisement will be shown, you can even choose who can see the advertisement (guest or registered). You can set where the advertisemt appears (top, bottom or after every post). Furthermore all adds will be displayed randomly.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (14, 'Portal Pages', '1.0', '', 'This MOD allows the admin to add custom pages using phpBB3''s Portal ACP. The entries can be edited, as they are stored into the database.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (15, 'Tooltip control', '1.0', '', 'Show the title attribute in a tooltip popup div.', 'http://www.pragt.info/html/techniek9e.php', 'H.M. Pragt', 'http://www.pragt.info/html/techniek9e.php');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (16, 'JavaScript-based PNG fix', 'v1.0', '', 'Correctly handle PNG transparency in Win IE 5.5 &amp; 6.', 'http://homepage.ntlworld.com/bobosola', 'Bob Osola', 'http://homepage.ntlworld.com/bobosola');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (17, 'lastRSS', '0.9.1', '', 'Simple yet powerfull PHP class to parse RSS files. Database bridge to Portal XL 5.0 by DaMysterious 2007.', 'http://lastrss.webdot.cz/', 'Vojtech Semecky', 'http://lastrss.webdot.cz/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (18, 'Portal Acronyms', '1.0', '', 'Give you the ability to have a table with words and descriptions, who can be displayed as a lexicon and also can be used to automatic insert acronyms with Tooltips to all posts. Based on Acronym Mod from CodeMonkeyX using phpBB3''s Portal ACP.', 'http://www.portalxl.nl/forum/', 'DaMysterious', 'http://www.portalxl.nl/forum/');
+INSERT INTO phpbb_portal_mods (mod_id, mod_title, mod_version, mod_version_type, mod_desc, mod_url, mod_author, mod_download) VALUES (19, 'Animate Digits IP Tracking Counter', '0.4.0', '', 'This MOD adds a digits visit counter for your phpBB with following features:\n+ Enable/Disable IP Tracking (with IP tracking, we have &quot;IP Visit Counter&quot;, with no IP tracking, we have &quot;Hits Visit Counter&quot; :p).\n+ Set number of digits for counter (from 1 to maximize).\n+ Reset counter (started date time &amp; hits value) from ACP.\n+ Animate effect from counter images when reload (if you select display as images in counter display mode from ACP).\n+ Custom display mode of counter: No display/Display as images/Display as text\n+ Enable/Disable display counter statistics.\n+ With some other settings in ACP...', 'http://www.vinabb.com', 'nedka', 'http://www.vinabb.com');
+
+# -- phpbb_portal_newsfeeds
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (1, 'Next Generation', 1, 'http://www.next-gen.biz/rss.xml', 2);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (2, 'Tom''s Hardware', 1, 'http://www.tomshardware.com/motherboard/headlines.rss', 2);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (3, 'Tom''s Hardware', 1, 'http://www.tomshardware.com/cpu/headlines.rss', 1);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (4, 'ign.com', 1, 'http://scripts.ign.com/rss/ign.Xbox360.2.0.xml', 2);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (5, 'ign.com', 1, 'http://scripts.ign.com/rss/ign.PC.2.0.xml', 1);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (6, 'BBC News Front Page UK Edition', 1, 'http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml', 1);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (7, 'CNN World', 1, 'http://rss.cnn.com/rss/cnn_world.rss', 1);
+INSERT INTO phpbb_portal_newsfeeds (feed_id, feed_title, feed_show, feed_url, feed_position) VALUES (8, 'Discovery headlines', 1, 'http://dsc.discovery.com/news/xml/top-stories.xml', 2);
+
+# -- phpbb_portal_pages
+INSERT INTO phpbb_portal_pages (page_id, page_index, page_edit, page_title, page_alias, page_disable, page_order, page_position, page_last_position, page_view, page_img, page_content, enable_bbcode, enable_smilies) VALUES (1, 0, 0, 'login_box.html', 'Login/Out', 0, 1, '3', '', '1', 'user.png', '', 1, 1);
+INSERT INTO phpbb_portal_pages (page_id, page_index, page_edit, page_title, page_alias, page_disable, page_order, page_position, page_last_position, page_view, page_img, page_content, enable_bbcode, enable_smilies) VALUES (2, 0, 0, 'portal_pages.html', 'Portal XL 5.0 ~ Plain', 0, 34, '2', '', '1', 'folder_link.png', '&lt;br&gt;\r\nPortal XL 5.0 ~ Plain along phpBB 3.0.x is released!\r\n&lt;br&gt;\r\n&lt;p&gt;Our latest FILE release is version ~ 5.0 and comes along &lt;a href=&quot;http://www.phpbb.com/downloads/&quot; class=&quot;external text&quot; title=&quot;http://www.phpbb.com/downloads/&quot; rel=&quot;nofollow&quot;&gt;phpBB 3.0.x&lt;/a&gt;.\r\n&lt;/p&gt;\r\n&lt;div align=&quot;center&quot;&gt;&lt;br /&gt;\r\n  &lt;table width=&quot;100%&quot; border=&quot;0&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;\r\n &lt;tr&gt;\r\n &lt;td width=&quot;50%&quot;&gt;&lt;div align=&quot;center&quot;&gt;&lt;a href=&quot;http://www.portalxl.nl/forum/&quot; class=&quot;image&quot; title=&quot;portalxl40_suite.png&quot;&gt;&lt;img src=&quot;portal/images/portalxl40_suite.png&quot; alt=&quot;portalxl40_suite.png&quot; width=&quot;280&quot; height=&quot;295&quot; hspace=&quot;10&quot; vspace=&quot;10&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;\r\n      &lt;td width=&quot;50%&quot; valign=&quot;top&quot;&gt;&lt;div align=&quot;left&quot;&gt;Portal XL 5.0 is a phpBB3 value-add that provides a portal frontend to the phpBB3 forum application. Portal XL 5.0 is tested to phpBB3.\r\n The portal is a flexible and powerful portal solution which is dynamic, advanced and complete in features and configuration via phpBB3''s ACP in a quick and efficient way. &lt;/div&gt;&lt;/td&gt;\r\n &lt;/tr&gt;\r\n &lt;/table&gt;\r\n &lt;/p&gt;\r\n&lt;/div&gt;', 1, 1);]]></sql>
+    <sql><![CDATA[# -- phpbb_portal_partners
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (1, 'http://www.phpbb.com/', 'portal/images/banners/88x31/phpBB_88a.gif', 'phpBB Home site');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (2, 'http://www.zymic.com/', 'portal/images/banners/88x31/zymic.gif', 'Zymic');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (3, 'http://www.apachefriends.org/en/index.html', 'portal/images/banners/88x31/xampp.gif', 'XAMPP');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (4, 'http://www.portalxl.nl/forum/', 'portal/images/banners/88x31/poweredby_portalXL40_88x31.png', 'Home site of Portal XL 5.0');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (5, 'http://awstats.sourceforge.net/', 'portal/images/banners/88x31/awstats.png', 'AWStats');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (6, 'http://www.mylimages.com/prive/portal.php', 'portal/images/banners/88x31/sgo_logo.gif', 'Mylimages par SGo');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (7, 'http://www.mysql.com/', 'portal/images/banners/88x31/my_sql_database_engine.bmp', 'MySql Database Engine');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (8, 'http://www.openssl.org/', 'portal/images/banners/88x31/openssl_button.gif', 'OpenSSL');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (9, 'http://zinloosgeweld.nl', 'portal/images/banners/88x31/ikbentegenzinloosgeweld88x31.gif', 'Ik Ben Tegen Zinloos Geweld');
+INSERT INTO phpbb_portal_partners (partners_id, partners_url, partners_img, partners_description) VALUES (10, 'http://www.portalxl.nl/forum/', 'portal/images/banners/88x31/damysterious_logo.gif', 'Home site of Portal XL 5.0');
+
+# -- phpbb_portal_quote
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (1, 'Marriage is one of the chief causes of divorce...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (2, 'Women are like hurricanes: when they come they are wet and wild, and when they leave they take the house and the car...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (3, 'There is two theories to aruguing with women. Neither one works...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (4, 'Some people are funny. They spend money they do not have, to buy things they do not need, to impress people they do not like...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (5, 'Sometimes i think i understand everything. Then i regain consciousness...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (6, 'Life is what happens to us while we are making other plans...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (7, 'Masturbation is nothing to be ashamed of. It is nothing to be particularly proud of, either...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (8, 'You can go a long way with a smile. You can go a lot farther with a smile and a gun...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (9, 'A friend: someone who likes you even after they know you...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (10, 'Creativity is great, but plagiarism is faster...', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (15, 'A friend is one who knows us, but loves us anyway.', 'Fr. Jerome Cummings');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (16, 'Remember, the greatest gift is not found in a store nor under a tree, but in the hearts of true friends.', 'Cindy Lew');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (17, 'Who finds a faithful friend, finds a treasure.', 'Jewish Saying');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (18, 'Love is like a booger.  You keep picking at it until you get it, then wonder what to do with it.', 'Unknown');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (19, 'My father used to play with my brother and me in the yard.  Mother would come out and say, &quot;You''re tearing up the grass.&quot;  &quot;We''re not raising grass,&quot; Dad would reply.  &quot;We''re raising boys.&quot;', 'Harmon Killebrew');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (20, 'It is not flesh and blood but the heart which makes us fathers and sons.', 'Johann Schiller');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (21, 'With men he can be rational and unaffected, but when he has ladies to please, every feature works.', 'Jane Austen');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (22, 'As Homer would say, Woo-hoo!', 'Simpsons');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (23, 'The truth that makes men free is for the most part the truth which men prefer not to hear.', 'Herbert Agar');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (24, 'What greater thing is there for two human souls that to feel that they are joined... to strengthen each other... to be at one with each other in silent unspeakable memories.', 'George Eliot');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (25, 'In the arithmetic of love, one plus one equals everything, and two minus one equals nothing.', 'Mignon McLaughlin');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (26, 'For one human being to love another that is perhaps the most difficult of our tasks; the ultimate, the last test and proof; the work for which all other work is but preparation.', 'Rainer Maria Rilke');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (27, 'Love works in miracles every day: such as weakening the strong, and stretching the weak; making fools of the wise, and wise men of fools; favouring the passions, destroying reason, and in a word, turning everything topsy-turvy.', 'Marguerite De Valois');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (28, 'The truth [is] that there is only one terminal dignity-love.  And the story of a love is not important-what is important is that one is capable of love. It is perhaps the only glimpse we are permitted of eternity.', 'Helen Hayes');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (29, 'Happiness isn''t something you experience; it''s something you remember.', 'Oscar Levant');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (30, 'Saying what we think gives us a wider conversational range than saying what we know.', 'Cullen Hightower');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (31, 'If you pick up a starving dog and make him prosperous, he will not bite you. This is the principal difference between a dog and a man.', 'Mark Twain');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (32, 'An author is a fool who, not content with boring those he lives with, insists on boring future generations.', 'Charles de Montesquieu');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (33, 'People often say that ''beauty is in the eye of the beholder'', and I say that the most liberating thing about beauty is realizing that you are the beholder. This empowers us to find beauty in places where others have not dared to look, including inside ourselves.', 'Salma Hayek');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (34, 'A dog will look up on you; a cat will look down on you; however, a pig will see you eye to eye and know it has found an equal.', 'Churchill');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (35, 'Computers make it easier to do a lot of things, but most of the things they make it easier to do don''t need to be done.', 'Andy Rooney');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (36, 'If language is not correct, then what is said is not what is meant; if what is said is not what is meant, then what must be done remains undone; if this remains undone, morals and art will deteriorate; if justice goes astray, the people will stand about in helpless confusion. Hence there must be no arbitrariness in what is said. This matters above everything.', 'Confucius');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (37, 'Don''t do things half-assed. If a thing is worth doing at all, it''s worth doing as well as you can possibly do it. Pick out something you think is worthwhile and do it or work at it with passion. Do it with all your might.', 'Hugh Young');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (38, 'Better stop short than fill to the brim. Oversharpen the blade, and the edge will soon blunt. Amass a store of gold and jade, and no one can protect it. Claim wealth and titles, and disaster will follow. Retire when the work is done. This is the way of heaven.', 'Tao Te Ching');
+INSERT INTO phpbb_portal_quote (quote_id, quote, quote_author) VALUES (39, 'I know that most men, including those at ease with problems of the greatest complexity, can seldom accept even the simplest and most obvious truth if it be such as would oblige them to admit the falsity of conlusions which they have delighted in explaining to colleages, which they have proudly taught to others, and which they have woven, thread by thread, into the fabric of their lives.', 'Leo Tolstoy');
+
+# -- phpbb_portal_acronyms
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (1, 'MOD', 'Modification');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (2, 'Modlist', 'List of modifications');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (3, 'phpBB', 'php Bulletin Board version I');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (4, 'phpBB2', 'php Bulletin Board  version II');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (5, 'Schei&szlig;e', '- we don''t need such insults here -');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (6, 'Fuck you', '- we don''t need such words here -');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (7, '24/7', '24 hours a day, 7 days a week');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (8, 'AAMOF', 'As A Matter Of Fact');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (9, 'ACP', 'Administrative Control Panel');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (10, 'AFAIAA', 'As Far As I Am Aware');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (11, 'AFAIK', 'As Far As I Know');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (12, 'AI', 'Artificial Intelligence');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (13, 'ASAP', 'As Soon As Possible');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (14, 'b/c', 'because');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (15, 'BS', 'Bull Shit');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (16, 'btw', 'By The Way');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (17, 'CMX', 'CodeMonkeyX');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (18, 'FAQ', 'Frequently Asked Question');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (19, 'FNA', 'ForumNews Advance');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (20, 'FTP', 'File Transfer Protocol');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (21, 'KB', 'Knowledge Base');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (22, 'LOI', 'Lack Of Interest');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (23, 'LOL', 'Laughing Out Loud');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (24, 'LOLAROTG', 'Laughing Out Loud And Rolling On The Ground');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (25, 'M$', 'Micro');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (26, 'OSM', 'OpenSiteManager');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (27, 'PEBCAK', 'Problem Exists Between Chair And Keyboard');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (28, 'POS', 'Piece Of ***');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (29, 'PS', 'Post Scriptum');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (30, 'ROFL', 'Rolling On Floor Laughing');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (31, 'TTM', 'To The Moderator');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (32, 'w/', 'with');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (33, 'w/o', 'without');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (34, 'wywiwyg', 'What You Write Is What You Get');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (35, 'styles', 'Skins for your running script');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (36, '2S2D', 'Double Sided Double Density');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (37, '3GPP', 'Third Generation Partnership Project');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (38, '4CC', 'Four-character Code');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (39, 'AA', 'Ascii Art');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (40, 'AAA', 'Automatic Artwork Alignment');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (41, 'A&amp;B bit signaling', 'Procedure used in T1 transmission facilities in which each of the 24 T1 subchannels devotes 1 bit of every sixth frame to the carrying of supervisory signaling information. Also called 24th channel signaling.');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (42, 'access server', 'Communications processor that connects asynchronous devices to a LAN or WAN through network and terminal emulation software. Performs both synchronous and asynchronous routing of supported protocols. Sometimes called a network access server.');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (43, 'active hub', 'A multiported device that amplifies LAN transmission signals.');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (44, '2L8', 'Too late');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (45, '2U2', 'To you too');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (46, '4GM', 'Forgive me');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (47, 'AFK', 'Away from keyboard');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (48, 'ASL', 'Age, sex, location?');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (49, 'ASLP', 'Age, sex, location, picture?');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (50, 'ATM', 'At the moment');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (51, 'ATYS', 'Anything you say');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (52, 'AWA', 'As well as');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (53, 'B4', 'Before');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (54, 'B4N', 'Bye for now');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (55, 'CHMOD', ' A UNIX command that changes the mode of a file. There are three modes a file can have turned on or off: read ability, write ability, and execute ability. Each mode can be set for either the owner, the members of the owner''s group, or all users.');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (56, 'NAN', 'No Answer Needed');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (57, 'BTW', 'By the way');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (58, 'XL 5.0', 'phpBB3 Portal XL 5.0 ~ Your insane crazy portal system for phpBB3');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (59, 'mod', 'Modification');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (60, 'Acronym', 'Acronyms and initialisms are abbreviations, such as NATO, laser, and IBM, that are formed using the initial letters of words or word parts in a phrase or name.');
+INSERT INTO phpbb_portal_acronyms (acronym_id, acronym, description) VALUES (61, 'phpBB3', 'php Bulletin Board version III');
+
+# -- phpbb_portal_banners_ho
+INSERT INTO phpbb_portal_banners_ho (banners_id, banners_url, banners_img_hor, banners_description) VALUES (1, 'http://www.portalxl.nl/forum/', 'portal/images/banners/400x60/damysterious.xs4all.nl.gif', 'Home of phpBB3 Portal XL 5.0');
+INSERT INTO phpbb_portal_banners_ho (banners_id, banners_url, banners_img_hor, banners_description) VALUES (2, 'http://www.portalxl.nl/forum/', 'portal/images/banners/400x60/damysterious.xs4all.nl.jpg', 'Home of phpBB3 Portal XL 5.0');
+
+# -- phpbb_portal_banners_ve
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (1, 'http://www.doom3.com/', 'portal/images/banners/130x600/portal_doom3.jpg', 'Doom 3 science fiction horror first-person shooter computer game');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (2, 'http://www.ryzom.com/', 'portal/images/banners/130x600/portal_SagaOfRyzom.jpg', 'Ryzom - Science-Fantasy MMORPG Emphasising Universe, Freedom, Roleplay and Community');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (3, 'http://www.portalxl.nl/forum/', 'portal/images/banners/130x600/portal_sandman.jpg', 'Home of phpBB3 Portal XL 5.0');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (4, 'http://www.electronicarts.co.uk/games/349/', 'portal/images/banners/130x600/portal_easpawn.jpg', 'A dark hero, troubled with the dual aspects of good and evil found in all people.');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (5, '', 'portal/images/banners/130x600/portal_jbond.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (6, '', 'portal/images/banners/130x600/portal_starwars.gif', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (7, '', 'portal/images/banners/130x600/portal_wowbanner.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (8, 'http://www.portalxl.nl/forum/', 'portal/images/banners/130x600/portal_skulls.jpg', 'Home of phpBB3 Portal XL 5.0');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (9, '', 'portal/images/banners/130x600/portal_redfaction.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (10, '', 'portal/images/banners/130x600/portal_praetorians.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (11, '', 'portal/images/banners/130x600/portal_matrix.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (12, '', 'portal/images/banners/130x600/portal_lotrtt.gif', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (13, '', 'portal/images/banners/130x600/portal_lotr.jpg', '');
+INSERT INTO phpbb_portal_banners_ve (banners_id, banners_url, banners_img_ver, banners_description) VALUES (14, '', 'portal/images/banners/130x600/portal_guildwars.jpg', '');
+
+# -- phpbb_portal_block
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (1, 0, 0, 'welcome.html', 'Welcome', 0, 2, '2', '', '1', 'heart.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (2, 0, 0, 'login_box.html', 'Login/Out', 0, 1, '3', '', '1', 'user.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (3, 0, 0, 'main_menu.html', 'Navigation', 0, 1, '1', '', '1', 'folder_find.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (4, 0, 0, 'clock.html', 'Clock', 0, 2, '1', '', '1', 'layout.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (5, 0, 0, 'center_recent.html', 'Recent News', 0, 3, '2', '', '1', 'folder_page.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (6, 0, 0, 'banners_horizontal.html', 'Banners', 0, 1, '2', '', '5', 'folder_link.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (7, 0, 0, 'quotes.html', 'Quotes of the day', 0, 4, '2', '', '1', 'folder_page.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (8, 0, 0, 'center_news.html', 'News', 0, 7, '2', '', '1', 'page_edit.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (9, 0, 0, 'link_us.html', 'Link to us', 0, 3, '1', '', '1', 'folder_link.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (10, 0, 0, 'partners.html', 'Affiliates', 0, 4, '1', '', '1', 'folder_link.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (11, 0, 0, 'stat_adv.html', 'Statistics', 0, 2, '3', '', '2', 'chart_bar.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (12, 0, 0, 'banners_vertical.html', 'Banners', 0, 3, '3', '', '1', 'folder_link.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (13, 0, 0, 'syndicate.html', 'Syndicate', 0, 4, '3', '', '1', 'page_white_text.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (14, 0, 0, 'google_adds_top.html', 'Google Top', 1, 1, '4', '', '5', 'chart_bar.png', '');
+INSERT INTO phpbb_portal_block (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (15, 0, 0, 'google_adds_bottom.html', 'Google Bottom', 1, 1, '5', '', '5', 'chart_bar.png', '');
+
+# -- phpbb_portal_block_index
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (5, 0, 0, 'login_box.html', 'Login/Out', 0, 24, '3', '', '1', 'user_add.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (6, 0, 0, 'clock.html', 'Clock', 0, 36, '1', '', '2', 'layout.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (8, 0, 0, 'google_adds_top.html', 'Google Top', 1, 12, '4', '', '1', 'chart_bar.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (9, 0, 0, 'google_adds_bottom.html', 'Google Bottom', 1, 9, '5', '', '1', 'chart_bar.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (10, 0, 0, 'main_menu.html', 'Main Menu', 0, 29, '1', '', '1', 'key_add.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (11, 0, 0, 'banners_horizontal.html', 'Banners', 0, 6, '2', '', '1', 'folder_link.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (13, 0, 0, 'quotes.html', 'Quotes of the day', 0, 20, '2', '', '1', 'folder_page.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (49, 0, 0, 'main_menu.html', 'Main Menu', 0, 32, '3', '', '1', 'key_go.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (30, 0, 0, 'link_us.html', 'Link to us', 0, 42, '1', '', '1', 'folder_link.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (35, 0, 0, 'partners.html', 'Affiliates', 0, 51, '1', '', '1', 'folder_link.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (38, 0, 0, 'stat_adv.html', 'Statistics', 0, 42, '3', '', '2', 'chart_bar.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (46, 0, 0, 'banners_vertical.html', 'Banners', 1, 43, '3', '', '1', 'folder_link.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (47, 0, 0, 'syndicate.html', 'Syndicate', 0, 44, '3', '', '1', 'page_white_text.png', NULL);
+INSERT INTO phpbb_portal_block_index (block_id, block_index, block_edit, block_name, block_alias, block_disable, block_order, block_position, block_last_position, block_view, block_img, block_content) VALUES (48, 0, 0, 'center_forumblock.html', 'Forum', 0, 22, '2', '', '1', 'page_edit.png', NULL);]]></sql>
+    <copy>
+      <file from="all from archive directory phpbb3/*.*" to="your forums main directory e.g. phpbb3/*.*"></file>
+    </copy>
+    <open src="adm/index.php">
+      <edit>
+        <find>		'S_CONTENT_ENCODING'	=&gt; 'UTF-8',
+		'S_CONTENT_FLOW_BEGIN'	=&gt; ($user-&gt;lang['DIRECTION'] == 'ltr') ? 'left' : 'right',
+		'S_CONTENT_FLOW_END'	=&gt; ($user-&gt;lang['DIRECTION'] == 'ltr') ? 'right' : 'left',
+	));
+</find>
+        <action type="after-add"><![CDATA[	if(defined('PORTAL'))
+	{			
+		$template->assign_vars(array(
+			'PORTAL'		=> true,
+   			'L_ACP_PORTAL' 	=> $user->lang['ACP_PORTAL'],
+			'U_PORTAL'		=> append_sid("{$phpbb_root_path}portal.$phpEx")
+			));
+	}
+]]></action>
+      </edit>
+      <edit>
+        <find><![CDATA[				// the column is a VARCHAR
+				$validator[$max] = (isset($validator[$max])) ? min(255, $validator[$max]) : 255;
+]]></find>
+        <action type="after-add"><![CDATA[				if(defined('PORTAL'))
+				{			
+					$validator[$max] = ($config_name == "portal_welcome_intro") ? 2000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_welcome_back") ? 2000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_scroll_message_text") ? 1000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_meta_keywords") ? 1000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_meta_copyright") ? 500 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_weather_alternate_url") ? 1000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_weather_alternate_url1") ? 1000 : $validator[$max];
+					$validator[$max] = ($config_name == "portal_weather_alternate_url2") ? 1000 : $validator[$max];
+				}
+]]></action>
+      </edit>
+    </open>
+    <open src="adm/style/overall_header.html">
+      <edit>
+        <find><![CDATA[		<p><a href="{U_ADM_INDEX}">{L_ADMIN_INDEX}</a> &bull; <a href="{U_INDEX}">{L_FORUM_INDEX}</a></p>
+]]></find>
+        <action type="replace-with"><![CDATA[		<p><a href="{U_ADM_INDEX}">{L_ADMIN_INDEX}</a> &bull; <a href="{U_INDEX}">{L_FORUM_INDEX}</a> <!-- IF PORTAL -->&bull; <a href="{U_PORTAL}">{L_ACP_PORTAL}</a><!-- ENDIF --></p>
+]]></action>
+      </edit>
+    </open>
+    <open src="index.php">
+      <edit>
+        <find><![CDATA[// Output page
+page_header($user->lang['INDEX']);
+]]></find>
+        <action type="after-add"><![CDATA[/*
+* include portal block management if portal index/viewtopic is active
+*/
+if (defined('PORTAL_INDEX_PAGE')) {
+	$user->setup('mods/portal_xl');
+	include_once($phpbb_root_path . 'portal/includes/functions.'.$phpEx);
+	include_once($phpbb_root_path . 'portal/includes/functions_acronym.' . $phpEx);
+	include_once($phpbb_root_path . 'portal/includes/index_blocks.' . $phpEx);
+	include_once($phpbb_root_path . 'portal/includes/functions_blocks_index.' . $phpEx);
+}
+]]></action>
+        <find><![CDATA[$template->set_filenames(array(
+	'body' => 'index_body.html')
+);
+]]></find>
+        <action type="replace-with"><![CDATA[/*
+* switch template if the portal index/viewtopic is active
+*/
+if (defined('PORTAL_INDEX_PAGE'))
+{
+$template->set_filenames(array(
+	'body' => 'portal/portal_index_body.html',
+	));
+}
+else
+{
+$template->set_filenames(array(
+	'body' => 'index_body.html',
+	));
+}
+]]></action>
+      </edit>
+    </open>
+    <open src="common.php">
+      <edit>
+        <find><![CDATA[// Grab global variables, re-cache if necessary
+$config = $cache->obtain_config();
+]]></find>
+        <action type="after-add"><![CDATA[// Grab global portal variables, re-cache if necessary
+$portal_config = $cache->obtain_portal_config();
+]]></action>
+      </edit>
+    </open>
+    <open src="config.php">
+      <edit>
+        <find><![CDATA[@define('PHPBB_INSTALLED', true);
+// @define('DEBUG', true);
+// @define('DEBUG_EXTRA', true);
+]]></find>
+        <action type="replace-with"><![CDATA[@define('PHPBB_INSTALLED', true);
+// @define('DEBUG', true);
+// @define('DEBUG_EXTRA', true);
+@define('PORTAL', true);	// true/false = enable/disable whole portal so you have a plain phpBB3 if false
+@define('PORTAL_INDEX_PAGE', true);	// true/false = enable/disable whole index page so you have a plain phpBB3 if false
+]]></action>
+      </edit>
+    </open>
+    <open src="ucp.php">
+      <edit>
+        <find>		meta_refresh(3, append_sid("{$phpbb_root_path}index.$phpEx"));
+
+		$message = $message . '&lt;br /&gt;&lt;br /&gt;' . sprintf($user-&gt;lang['RETURN_INDEX'], '&lt;a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '"&gt;', '&lt;/a&gt; ');
+
+</find>
+        <action type="replace-with"><![CDATA[     	if(defined('PORTAL'))
+      	{
+			$user->setup('mods/portal_xl');
+
+			meta_refresh(3, append_sid("{$phpbb_root_path}portal.$phpEx"));
+			$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_PORTAL'], '<a href="' . append_sid("{$phpbb_root_path}portal.$phpEx") . '">', '</a> ');
+		}
+      	else
+		{
+			meta_refresh(3, append_sid("{$phpbb_root_path}index.$phpEx"));
+			$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a> ');
+		}
+
+	$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a> ');
+]]></action>
+      </edit>
+    </open>
+    <open src="viewtopic.php">
+      <edit>
+        <find>// Replace naughty words in title
+$topic_data['topic_title'] = censor_text($topic_data['topic_title']);
+</find>
+        <action type="after-add"><![CDATA[// Start output Addvertisements
+$active = ($user->data['user_id'] != ANONYMOUS) ? '1' : '3';
+$adds_id = '';
+
+$sql = "SELECT adds_code, adds_name, adds_id, adds_position 
+    FROM " . PORTAL_FORUMADDS_TABLE ." 
+	WHERE (adds_active = '" . $active . "' OR adds_active = '1')
+	AND (adds_max_views >= adds_views OR adds_max_views = '0')
+	AND (FIND_IN_SET('" . $forum_id . "', adds_show_forums) > 0 OR adds_show_all_forums = '1')
+	ORDER BY rand()";
+$result = $db->sql_query($sql);
+
+while($row = $db->sql_fetchrow($result))
+{
+	$addscode[$row['adds_position']] = html_entity_decode($row['adds_code']);
+	$addsname[$row['adds_position']] = html_entity_decode($row['adds_name']);
+	$adds_id[$row['adds_position']]['adds_id'] = $row['adds_id'];
+}	
+
+// update views for every Ad
+for ($i = 1; $i <= 4; $i++)
+{
+   if (isset($adds_id[$i]['adds_id']))
+   {
+      $db->sql_query('UPDATE ' . PORTAL_FORUMADDS_TABLE . ' SET adds_views = adds_views +1 WHERE adds_id = ' . $adds_id[$i]['adds_id']);
+   }
+}
+// End output Ad
+
+// Send vars to template
+$template->assign_vars(array(
+	'ADVERTISEMENT1'  		=> isset($addscode[1]) ? $addscode[1] : '',
+	'ADVERTISEMENT2'  		=> isset($addscode[2]) ? $addscode[2] : '',
+	'ADVERTISEMENT3'  		=> isset($addscode[3]) ? $addscode[3] : '',
+	'ADVERTISEMENT4'  		=> isset($addscode[4]) ? $addscode[4] : '',
+	'ADVERTISEMENT_NAME1'  	=> isset($addsname[1]) ? $addsname[1] : '',
+	'ADVERTISEMENT_NAME2'  	=> isset($addsname[2]) ? $addsname[2] : '',
+	'ADVERTISEMENT_NAME3'  	=> isset($addsname[3]) ? $addsname[3] : '',
+	'ADVERTISEMENT_NAME4'  	=> isset($addsname[4]) ? $addsname[4] : '',
+	));
+// End output Addvertisements
+]]></action>
+        <find><![CDATA[$update		= request_var('update', false);
+
+$s_can_vote = false;
+]]></find>
+        <action type="after-add"><![CDATA[if (defined('PORTAL_INDEX_PAGE')) {
+	include($phpbb_root_path . 'portal/includes/functions.'.$phpEx);
+	include_once($phpbb_root_path . 'portal/includes/viewforum_blocks.' . $phpEx);
+	include_once($phpbb_root_path . 'portal/includes/functions_blocks_index.' . $phpEx);
+}
+]]></action>
+        <find><![CDATA[$template->set_filenames(array(
+	'body' => ($view == 'print') ? 'viewtopic_print.html' : 'viewtopic_body.html')
+);
+]]></find>
+        <action type="after-add"><![CDATA[/*
+* switch template if the portal index/viewtopic is active
+*/
+if (defined('PORTAL_INDEX_PAGE'))
+{
+	$template->set_filenames(array(
+		'body' => ($view == 'print') ? 'portal/portal_viewtopic_print.html' : 'portal/portal_viewtopic_body.html',
+		));
+}
+else
+{
+	$template->set_filenames(array(
+		'body' => ($view == 'print') ? 'viewtopic_print.html' : 'viewtopic_body.html',
+		));
+}
+]]></action>
+        <find><![CDATA[				$user_sig = $row['user_sig'];
+]]></find>
+        <action type="replace-with"><![CDATA[				$user_sig = $row['user_sig'];
+				// $user_sig ='<fieldset style="border: 1px solid #D7D7D7; margin: 15px 0; padding: 10px;"><legend>'.$user->lang['SIGNATURE'].'</legend>'.$row ['user_sig'].'</fieldset>';
+]]></action>
+        <find><![CDATA[	// Parse the message and subject
+	$message = censor_text($row['post_text']);
+]]></find>
+        <action type="after-add"><![CDATA[    if ($portal_config['portal_acronyms_allow'] == true)
+    {
+		include_once($phpbb_root_path . 'portal/includes/functions_acronym.' . $phpEx);
+    	$message = acronym_pass($message);
+    }
+]]></action>
+      </edit>
+    </open>
+    <open src="viewforum.php">
+      <edit>
+        <find><![CDATA[	$template->assign_var('S_HAS_SUBFORUM', false);
+	if ($config['load_moderators'])
+	{
+		get_moderators($moderators, $forum_id);
+	}
+]]></find>
+        <action type="after-add"><![CDATA[if (defined('PORTAL_INDEX_PAGE'))
+{
+	include($phpbb_root_path . 'portal/includes/functions.'.$phpEx);
+	include_once($phpbb_root_path . 'portal/includes/viewforum_blocks.' . $phpEx);
+	include_once($phpbb_root_path . 'portal/includes/functions_blocks_index.' . $phpEx);
+}
+]]></action>
+        <find><![CDATA[$template->set_filenames(array(
+	'body' => 'viewforum_body.html')
+);
+]]></find>
+        <action type="replace-with"><![CDATA[// $template->set_filenames(array(
+// 	'body' => 'viewforum_body.html')
+// );
+
+/*
+* switch template if the portal index/viewtopic is active
+*/
+if (defined('PORTAL_INDEX_PAGE'))
+{
+	$template->set_filenames(array(
+		'body' => './portal/portal_viewforum_body.html',
+		));
+}
+else
+{
+	$template->set_filenames(array(
+		'body' => 'viewforum_body.html',
+		));
+}
+]]></action>
+      </edit>
+    </open>
+    <open src="viewonline.php">
+      <edit>
+        <find><![CDATA[		default:
+			$location = $user->lang['INDEX'];
+			$location_url = append_sid("{$phpbb_root_path}index.$phpEx");
+		break;]]></find>
+        <action type="before-add"><![CDATA[		case 'portal':
+			$location = $user->lang['VIEWING_PORTAL'];
+			$location_url = append_sid("{$phpbb_root_path}portal.$phpEx");
+		break;]]></action>
+      </edit>
+    </open>
+    <open src="includes/bbcode.php">
+      <edit>
+        <find><![CDATA[				'img'		=> '<img src="$1" alt="' . $user->lang['IMAGE'] . '" />',
+]]></find>
+        <action type="replace-with"><![CDATA[//				'img'		=> '<img src="$1" alt="' . $user->lang['IMAGE'] . '" />',
+//				'img'		=> '<img resizemod="on" onload="rmw_img_loaded(this)" src="$1" alt="' . $user->lang['IMAGE'] . '"  class="resize_me"/>',
+				'img'       => '<a class="highslide" href="$1" onclick="return hs.expand(this)"><img src="$1" resizemod="on" onload="rmw_img_loaded(this)" alt="' . $user->lang['IMAGE'] . '" /></a> <div class="highslide-heading"></div>',]]></action>
+      </edit>
+    </open>
+    <open src="includes/cache.php">
+      <edit>
+        <find><![CDATA[			$this->put('config', $cached_config);
+		}
+	
+		return $config;
+	}
+]]></find>
+        <action type="after-add"><![CDATA[	/**
+	* Obtain portal config
+	*/
+	function obtain_portal_config()
+	{
+		global $db, $cache;
+	
+		if (($portal_config = $cache->get('portal_config')) !== true)
+		{
+			$portal_config = $cached_portal_config = array();
+	
+			$sql = 'SELECT config_name, config_value
+				FROM ' . PORTAL_CONFIG_TABLE;
+			$result = $db->sql_query($sql);
+	
+			while ($row = $db->sql_fetchrow($result))
+			{
+				$cached_portal_config[$row['config_name']] = $row['config_value'];
+				$portal_config[$row['config_name']] = $row['config_value'];
+			}
+			$db->sql_freeresult($result);
+	
+			$cache->put('portal_config', $cached_portal_config);
+		}
+	
+		return $portal_config;
+	}]]></action>
+      </edit>
+    </open>
+    <open src="includes/constants.php">
+      <edit>
+        <find><![CDATA[// Additional tables
+]]></find>
+        <action type="after-add"><![CDATA[
+/*
+*
+* @package define database tables for phpBB3 Portal XL 5.0
+* @copyright (c) 2007 Portal XL 5.0 Group
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+*
+*/
+define('PORTAL_CONFIG_TABLE',			$table_prefix . 'portal_config');
+define('PORTAL_BLOCK_TABLE',			$table_prefix . 'portal_block');
+define('PORTAL_BLOCK_INDEX_TABLE',		$table_prefix . 'portal_block_index');
+define('PORTAL_MENU_TABLE',         	$table_prefix . 'portal_menu');
+define('PORTAL_QUOTE_TABLE',        	$table_prefix . 'portal_quote');
+define('PORTAL_PARTNERS_TABLE',     	$table_prefix . 'portal_partners');
+define('PORTAL_BANNER_HO_TABLE',    	$table_prefix . 'portal_banners_ho');
+define('PORTAL_BANNER_VE_TABLE',    	$table_prefix . 'portal_banners_ve');
+define('PORTAL_LINKS_TABLE',    		$table_prefix . 'portal_links');
+define('PORTAL_MODS_TABLE',				$table_prefix . 'portal_mods');
+define('PORTAL_FORUMADDS_TABLE',		$table_prefix . 'portal_forumadds');
+define('PORTAL_PAGES_TABLE', 	        $table_prefix .	'portal_pages');
+define('PORTAL_NEWSFEEDS_TABLE',  		$table_prefix . 'portal_newsfeeds');
+define('PORTAL_ACRONYMS_TABLE',  		$table_prefix . 'portal_acronyms');
+define('PORTAL_PAGE', true);
+define('PORTAL_PAGES', true);
+define('PORTAL_PAGES_PAGE', true);
+define('PORTAL_INDEX', true);
+
+// Animate Digits IP Tracking Counter
+define('COUNTER_NONE', 0);
+define('COUNTER_IMAGE', 1);
+define('COUNTER_TEXT', 2);
+]]></action>
+      </edit>
+    </open>
+    <open src="includes/functions.php">
+      <edit>
+        <find><![CDATA[	header('Pragma: no-cache');
+]]></find>
+        <action type="after-add"><![CDATA[
+	// [+] phpBB3 Portal XL
+	portal_init();
+	// [-] phpBB3 Portal XL
+
+]]></action>
+        <find><![CDATA[function page_footer($run_cron = true)
+{
+	global $db, $config, $template, $user, $auth, $cache, $starttime, $phpbb_root_path, $phpEx;
+]]></find>
+        <action type="after-add"><![CDATA[
+	// [+] phpBB3 Portal XL footer
+	global $portal_init;
+	if (defined('PORTAL')) {
+		portal_end();
+	}
+	// [-] phpBB3 Portal XL footer
+
+]]></action>
+        <find><![CDATA[		meta_refresh(3, $redirect);
+]]></find>
+        <action type="before-add"><![CDATA[
+			if ($admin)
+			{
+				redirect($redirect);
+			}
+			
+]]></action>
+      </edit>
+    </open>
+    <open src="includes/session.php">
+      <edit>
+        <find><![CDATA[		if (!empty($_GET['style']) && $auth->acl_get('a_styles'))
+]]></find>
+        <action type="replace-with"><![CDATA[		// if (!empty($_GET['style']) && $auth->acl_get('a_styles'))
+		if (!empty($_GET['style'])) 
+]]></action>
+      </edit>
+    </open>
+    <open src="language/en/common.php">
+      <edit>
+        <find><![CDATA[?>
+]]></find>
+        <action type="before-add"><![CDATA[
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Mods Database',	
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Click here to view full size of this image!',
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Visit counter',
+	'COUNTER_STARTDATE' => 'Counted from %s',
+	'HITS_PER_DAY'		=> 'Hits per day',
+	'HITS_PER_HOUR'		=> 'Hits per hour',
+	'HITS_PER_MONTH'	=> 'Hits per month',
+	'HITS_PER_USER'		=> 'Hits per user',
+	'HITS_PER_WEEK'		=> 'Hits per week',
+	'HITS_PER_YEAR'		=> 'Hits per year',
+	'IP_TRACKING_NO' 	=> '[No IP Tracking]',
+	'IP_TRACKING_YES' 	=> '[IP Tracking]',
+));
+
+]]></action>
+      </edit>
+    </open>
+    <open src="language/en/acp/common.php">
+      <edit>
+        <find><![CDATA[?>
+]]></find>
+        <action type="before-add"><![CDATA[
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portal',
+   	'ACP_CAT_PORTAL'           				=> 'Portal',
+   	'ACP_PORTAL'           					=> 'Portal',
+   	'ACP_PORTAL_ADMIN'           			=> 'General',
+   	'ACP_PORTAL_INFO'           			=> 'General',	
+    'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Announcements',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'News',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Recent Topics',	
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Wordgraph',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',	
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Attachments',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Latest Members',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Polls',	
+    'ACP_PORTAL_BOTS_INFO'                  => 'Visiting Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Most Poster',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Random Banners',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Welcome',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Weather',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Syndication',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Scroll Message',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Manage Portal',
+
+	// Portal XL portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Portal Blocks',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Portal Blocks',
+	'ACP_PORTAL_BLOCKS'						=> 'Portal Blocks',
+	'ACP_MANAGE_BLOCKS'						=> 'Manage Portal Blocks',
+
+	// Portal XL index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Index Blocks',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Index Blocks',
+	'ACP_PORTAL_INDEX_BLOCKS'				=> 'Index Blocks',
+	'ACP_MANAGE_INDEX_BLOCKS'				=> 'Manage Index Blocks',
+
+	// Portal XL portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Menus',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Menus',
+	'ACP_PORTAL_MENUS'						=> 'Menus',
+	'ACP_MANAGE_MENUS'						=> 'Manage Menus',
+		
+	// Portal XL portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Quotes',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Quotations',
+	'ACP_PORTAL_QUOTES'						=> 'Quotes',
+	'ACP_MANAGE_QUOTES'						=> 'Manage Quotes',
+		
+	// Portal XL portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Manage Banners',
+	'ACP_MANAGE_BANNERS'					=> 'Manage Banners 88x31',
+		
+	// Portal XL portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners horizontal',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners horizontal 400x60',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners horizontal',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Manage Banners 400x60',
+
+	// Portal XL portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners vertical',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners vertical 130x600',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners vertical',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Manage Banners 130x600',
+
+	// Portal XL portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Links',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Links',
+	'ACP_PORTAL_LINKS'							=> 'Links',
+	'ACP_MANAGE_LINKS'							=> 'Manage Links',
+		
+	// Portal XL portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mod\'s',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mod\'s',
+	'ACP_PORTAL_MODS'							=> 'Mod\'s',
+	'ACP_MANAGE_MODS'							=> 'Manage Mod\'s',
+		
+	// Portal XL portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Forum Ad\'s',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Forum Ad\'s',
+	'ACP_PORTAL_ADDS'							=> 'Forum Ad\'s',
+	'ACP_MANAGE_ADDS'							=> 'Manage Forum Ad\'s',
+		
+	// Portal XL portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Portal Pages',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Portal Pages',
+	'ACP_PORTAL_PAGES'							=> 'Portal Pages',
+	'ACP_MANAGE_PAGES'							=> 'Manage Portal Pages',
+		
+	// Portal XL portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Portal News Feeds',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Portal News Feeds',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Portal News Feeds',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Manage News Feeds',
+		
+	// Portal XL portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Portal Acronyms',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Portal Acronyms',
+	'ACP_PORTAL_ACRONYMS'						=> 'Portal Acronyms',
+	'ACP_MANAGE_ACRONYMS'						=> 'Manage Acronyms',
+		
+	// Portal XL portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Portal Imprint',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Portal Imprint',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Portal Imprint',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Manage Imprint',
+		
+	// Portal XL portal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portal general saved</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Portal announcements saved</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>Portal news saved</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Portal recent topics saved</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Portal wordgraph saved</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Portal column width saved</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Portal paypal saved</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Portal attachments saved</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Portal members saved</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Portal poll saved</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Portal visiting bots saved</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Portal most poster saved</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Portal random saved</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Portal welcome saved</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Portal weather saved</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Portal sydication saved</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Portal board/viewtopic index saved</strong>',
+  	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Portal scroll message saved</strong>',
+	
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>Portal XL installed</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>Portal XL uninstalled</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>Portal XL datase update</strong>',
+	
+));
+  
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'ACP_COUNTER_SETTINGS'	=> 'Counter settings',
+	'COUNTER_STARTED'		=> 'Counter started',
+	'HITS_PER_DAY'			=> 'Hits per day',
+	'LOG_CONFIG_COUNTER'	=> '<strong>Altered counter settings</strong>',
+	'LOG_RESET_COUNTER'		=> '<strong>Reseted counter: started date time and hits value</strong>',
+	'NUMBER_HITS'			=> 'Number of hits',
+	'RESET_COUNTER'			=> 'Reset counter',
+	'RESET_COUNTER_CONFIRM'	=> 'Are you sure you wish to reset all data of the counter?',
+	'RESET_COUNTER_EXPLAIN'	=> 'Reset all data of the counter: started date time and total hits.',
+));
+
+]]></action>
+      </edit>
+    </open>
+    <open src="styles/subsilver2/template/overall_header.html">
+      <edit>
+        <find><![CDATA[<a href="{U_INDEX}">{SITE_LOGO_IMG}</a>]]></find>
+        <action type="replace-with"><![CDATA[<a href="{U_INDEX}" title="{L_INDEX}" id="logo"><!-- IF PORTAL -->{SITE_LOGO_IMGAGE}<!-- ELSE -->{SITE_LOGO_IMG}<!-- ENDIF --></a>]]></action>
+        <find>&lt;meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /&gt;
+{META}</find>
+        <action type="replace-with"><![CDATA[<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+{META}
+{PORTAL_META_HTTP_EQUIV_TAGS}
+{PORTAL_META_TAGS}]]></action>
+        <find>&lt;title&gt;{SITENAME} &amp;bull; &lt;!-- IF S_IN_MCP --&gt;{L_MCP} &amp;bull; &lt;!-- ELSEIF S_IN_UCP --&gt;{L_UCP} &amp;bull; &lt;!-- ENDIF --&gt;{PAGE_TITLE}&lt;/title&gt;
+</find>
+        <action type="after-add"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Portal" href="./portal/syndicate.php" />
+<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Attachments" href="./portal/syndicate_attachments.php" />
+]]></action>
+        <find>&lt;link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" /&gt;
+</find>
+        <action type="after-add"><![CDATA[<link rel="stylesheet" media="all" type="text/css" href="{T_THEME_PATH}/portal_adds.css" />
+]]></action>
+        <find><![CDATA[		obj.width = width;
+		obj.height = height + 16;
+
+		obj.SetControllerVisible(true);
+
+		obj.Play();
+	}
+<!-- ENDIF -->
+
+// ]]]]><![CDATA[>
+</script>
+]]></find>
+        <action type="after-add"><![CDATA[<!--[if lt IE 7]>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/pngfix.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery.min.js"></script>
+<link rel="stylesheet" href="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.css"type="text/css" />
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+function doCollapseExpand(id,img){
+	var b = document.getElementById(id);
+		if (b.style.display=='none'){
+		b.style.display='';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_up.gif'; 
+} else {
+		b.style.display='none';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_down.gif';
+} return false; }
+// ]] >
+</script>
+
+<!-- IF S_TOOL_TIPS_ENABLED --> 
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/tooltips.js"></script>
+<!-- ENDIF -->        
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript">
+// <![CDATA[
+var rmw_max_width 	= '{PORTAL_PICTURE_RESIZE}';
+var rmw_border_1 	= '1px solid #666666';
+var rmw_border_2 	= '1px solid #ff0000';
+var rmw_image_title = '{L_IMG_CLICK_HERE}';
+// ]] >
+</script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/resize_image.js"></script>
+	
+<script type="text/javascript" src="{T_THEME_PATH}/highslide/highslide-full.js"></script>
+<link rel="stylesheet" type="text/css" href="{T_THEME_PATH}/highslide/highslide.css" />
+<script type="text/javascript">
+// <![CDATA[
+	hs.graphicsDir = '{T_THEME_PATH}/highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.fadeInOut = true;
+	hs.dimmingOpacity = 0.8;
+	hs.wrapperClassName = 'borderless floating-caption';
+	hs.outlineType = 'rounded-white';
+	hs.captionEval = 'this.thumb.alt';
+	hs.marginLeft = 100; // make room for the thumbstrip
+	hs.marginBottom = 80 // make room for the controls and the floating caption
+	hs.numberPosition = 'caption';
+	// This value needs to be set to false, to solve the issue with the highly increasing view counts.
+	hs.continuePreloading = false;
+
+	// Add the controlbar
+	if (hs.addSlideshow) hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		overlayOptions: {
+			className: 'text-controls',
+			position: 'bottom center',
+			relativeTo: 'viewport',
+			offsetX: 50,
+			offsetY: -5
+
+		},
+		thumbstrip: {
+			position: 'middle left',
+			mode: 'vertical',
+			relativeTo: 'viewport'
+		}
+	});
+	
+	// Add the simple close button
+	hs.registerOverlay({
+		html: '<div class="closebutton" onclick="return hs.close(this)" title="{L_HIGHSLIDE_CLOSETITLE}"></div>',
+		position: 'top right',
+		fade: 2 // fading the semi-transparent overlay looks bad in IE
+	});
+	
+	// Language strings
+	hs.lang = {
+		loadingText :     '{L_HIGHSLIDE_LOADINGTEXT}',
+		loadingTitle :    '{L_HIGHSLIDE_LOADINGTITLE}',
+		focusTitle :      '{L_HIGHSLIDE_FOCUSTITLE}',
+		fullExpandTitle : '{L_HIGHSLIDE_FULLEXPANDTITLE}',
+		fullExpandText :  '{L_HIGHSLIDE_FULLEXPANDTEXT}',
+		creditsText :     '{L_HIGHSLIDE_CREDITSTEXT}',
+		creditsTitle :    '{L_HIGHSLIDE_CREDITSTITLE}',
+		previousText :    '{L_HIGHSLIDE_PREVIOUSTEXT}',
+		previousTitle :   '{L_HIGHSLIDE_PREVIOUSTITLE}',
+		nextText :        '{L_HIGHSLIDE_NEXTTEXT}',
+		nextTitle :       '{L_HIGHSLIDE_NEXTTITLE}',
+		moveTitle :       '{L_HIGHSLIDE_MOVETITLE}',
+		moveText :        '{L_HIGHSLIDE_MOVETEXT}',
+		closeText :       '{L_HIGHSLIDE_CLOSETEXT}',
+		closeTitle :      '{L_HIGHSLIDE_CLOSETITLE}',
+		resizeTitle :     '{L_HIGHSLIDE_RESIZETITLE}',
+		playText :        '{L_HIGHSLIDE_PLAYTEXT}',
+		playTitle :       '{L_HIGHSLIDE_PLAYTITLE}',
+		pauseText :       '{L_HIGHSLIDE_PAUSETEXT}',
+		pauseTitle :      '{L_HIGHSLIDE_PAUSETITLE}',
+		restoreTitle :    '{L_HIGHSLIDE_RESTORETITLE}'
+	};
+// ]] >
+</script>
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/subsilver2/template/overall_footer.html">
+      <edit>
+        <find><![CDATA[	<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> &copy; 2000, 2002, 2005, 2007 phpBB Group
+]]></find>
+        <action type="after-add"><![CDATA[    <!-- IF S_PORTAL_COPY --><br /><a href="{U_PORTAL_MODS}" target="_blank">{L_PORTAL_MODS}</a><!-- ENDIF -->        
+]]></action>
+        <find><![CDATA[</body>
+</html>
+]]></find>
+        <action type="before-add"><![CDATA[<div style="display:none" id="resizemod"></div>
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/subsilver2/template/breadcrumbs.html">
+      <edit>
+        <find><![CDATA[			<p class="breadcrumbs"><a href="{U_INDEX}">{L_INDEX}</a><!-- BEGIN navlinks --> &#187; <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></p>
+			<p class="datetime">{S_TIMEZONE}</p>
+]]></find>
+        <action type="replace-with"><![CDATA[			<p class="breadcrumbs">
+                <!-- IF PORTAL --><a class="icon-home" href="{U_PORTAL}" accesskey="h">{L_PORTAL}</a> <strong>&#8249;</strong><!-- ENDIF -->
+                <!-- IF PORTAL_INDEX_PAGE --> <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ELSE -->
+                <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ENDIF --> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+            </p>
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/subsilver2/template/attachment.html">
+      <edit>
+        <find><![CDATA[		<!-- IF _file.S_THUMBNAIL -->
+			<a href="{_file.U_DOWNLOAD_LINK}"><img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" /></a><br />
+			<span class="gensmall">{_file.DOWNLOAD_NAME} [ {_file.FILESIZE} {_file.SIZE_LANG} | {_file.L_DOWNLOAD_COUNT} ]</span>
+		<!-- ENDIF -->
+
+		<!-- IF _file.S_IMAGE -->
+			<img src="{_file.U_INLINE_LINK}" alt="{_file.DOWNLOAD_NAME}" /><br />
+			<span class="gensmall">{_file.DOWNLOAD_NAME} [ {_file.FILESIZE} {_file.SIZE_LANG} | {_file.L_DOWNLOAD_COUNT} ]</span>
+		<!-- ENDIF -->
+]]></find>
+        <action type="replace-with"><![CDATA[		<!-- IF _file.S_THUMBNAIL -->
+            <div class="highslide-gallery">
+            <a href="{_file.U_DOWNLOAD_LINK}" class="highslide" onclick="return hs.expand(this)"><img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" title="<!-- IF _file.COMMENT_CLEAN -->{_file.COMMENT_CLEAN} / {_file.DOWNLOAD_NAME}<!-- ELSE -->{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}<!-- ENDIF -->"/></a><br />
+            <div class="highslide-heading"></div>
+            <br />
+                <span class="gensmall">{_file.DOWNLOAD_NAME} [ {_file.FILESIZE} {_file.SIZE_LANG} | {_file.L_DOWNLOAD_COUNT} ]</span>
+            </div>
+		<!-- ENDIF -->
+
+		<!-- IF _file.S_IMAGE -->
+		<div class="highslide-gallery">
+			<a href="{_file.U_INLINE_LINK}" class="highslide" onclick="return hs.expand(this)"><img src="{_file.U_INLINE_LINK}" alt="{_file.DOWNLOAD_NAME}" title="<!-- IF _file.COMMENT_CLEAN -->{_file.COMMENT_CLEAN} / <!-- ENDIF -->{_file.DOWNLOAD_NAME}" onclick="viewableArea(this);" resizemod="on" onload="rmw_img_loaded(this)" /></a> <div class="highslide-heading"></div>
+            <div class="highslide-heading"></div>
+            <br />
+			<span class="gensmall">{_file.DOWNLOAD_NAME} [ {_file.FILESIZE} {_file.SIZE_LANG} | {_file.L_DOWNLOAD_COUNT} ]</span>
+		</div>
+		<!-- ENDIF -->
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/subsilver2/template/bbcode.html">
+      <edit>
+        <find>&lt;!-- BEGIN img --&gt;&lt;img src="{URL}" alt="{L_IMAGE}" /&gt;&lt;!-- END img --&gt;
+</find>
+        <action type="replace-with"><![CDATA[<!-- BEGIN img --><a href="{URL}" onclick="return hs.expand(this)"><img src="{URL}" alt="{L_IMAGE}" onclick="viewableArea(this);" resizemod="on" onload="rmw_img_loaded(this)" /></a><!-- END img -->
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/prosilver/template/overall_header.html">
+      <edit>
+        <find><![CDATA[<head>]]></find>
+        <action type="after-add"><![CDATA[<!-- INCLUDE portal/_portal_config.html --> ]]></action>
+        <find><![CDATA[<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+{META}]]></find>
+        <action type="replace-with"><![CDATA[<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+{META}
+{PORTAL_META_HTTP_EQUIV_TAGS}
+{PORTAL_META_TAGS}]]></action>
+        <find><![CDATA[<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>]]></find>
+        <action type="replace-with"><![CDATA[<a href="{U_INDEX}" title="{L_INDEX}" id="logo"><!-- IF PORTAL -->{SITE_LOGO_IMGAGE}<!-- ELSE -->{SITE_LOGO_IMG}<!-- ENDIF --></a>]]></action>
+        <find>&lt;!-- IF S_CONTENT_DIRECTION eq 'rtl' --&gt;
+	&lt;link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" /&gt;
+&lt;!-- ENDIF --&gt;
+</find>
+        <action type="after-add"><![CDATA[<!--[if lt IE 7]>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/pngfix.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery.min.js"></script>
+<link rel="stylesheet" href="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.css"type="text/css" />
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+function doCollapseExpand(id,img){
+	var b = document.getElementById(id);
+		if (b.style.display=='none'){
+		b.style.display='';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_up.gif'; 
+} else {
+		b.style.display='none';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_down.gif';
+} return false; }
+// ]] >
+</script>
+
+<!-- IF S_TOOL_TIPS_ENABLED --> 
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/tooltips.js"></script>
+<!-- ENDIF -->        
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript">
+// <![CDATA[
+var rmw_max_width 	= '{PORTAL_PICTURE_RESIZE}';
+var rmw_border_1 	= '1px solid #666666';
+var rmw_border_2 	= '1px solid #ff0000';
+var rmw_image_title = '{L_IMG_CLICK_HERE}';
+// ]] >
+</script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/portal/src/resize_image.js"></script>
+	
+<script type="text/javascript" src="{T_THEME_PATH}/highslide/highslide-full.js"></script>
+<link rel="stylesheet" type="text/css" href="{T_THEME_PATH}/highslide/highslide.css" />
+<script type="text/javascript">
+// <![CDATA[
+	hs.graphicsDir = '{T_THEME_PATH}/highslide/graphics/';
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.fadeInOut = true;
+	hs.dimmingOpacity = 0.8;
+	hs.wrapperClassName = 'borderless floating-caption';
+	hs.outlineType = 'rounded-white';
+	hs.captionEval = 'this.thumb.alt';
+	hs.marginLeft = 100; // make room for the thumbstrip
+	hs.marginBottom = 80 // make room for the controls and the floating caption
+	hs.numberPosition = 'caption';
+	// This value needs to be set to false, to solve the issue with the highly increasing view counts.
+	hs.continuePreloading = false;
+
+	// Add the controlbar
+	if (hs.addSlideshow) hs.addSlideshow({
+		//slideshowGroup: 'group1',
+		interval: 5000,
+		repeat: false,
+		useControls: true,
+		overlayOptions: {
+			className: 'text-controls',
+			position: 'bottom center',
+			relativeTo: 'viewport',
+			offsetX: 50,
+			offsetY: -5
+
+		},
+		thumbstrip: {
+			position: 'middle left',
+			mode: 'vertical',
+			relativeTo: 'viewport'
+		}
+	});
+	
+	// Add the simple close button
+	hs.registerOverlay({
+		html: '<div class="closebutton" onclick="return hs.close(this)" title="{L_HIGHSLIDE_CLOSETITLE}"></div>',
+		position: 'top right',
+		fade: 2 // fading the semi-transparent overlay looks bad in IE
+	});
+	
+	// Language strings
+	hs.lang = {
+		loadingText :     '{L_HIGHSLIDE_LOADINGTEXT}',
+		loadingTitle :    '{L_HIGHSLIDE_LOADINGTITLE}',
+		focusTitle :      '{L_HIGHSLIDE_FOCUSTITLE}',
+		fullExpandTitle : '{L_HIGHSLIDE_FULLEXPANDTITLE}',
+		fullExpandText :  '{L_HIGHSLIDE_FULLEXPANDTEXT}',
+		creditsText :     '{L_HIGHSLIDE_CREDITSTEXT}',
+		creditsTitle :    '{L_HIGHSLIDE_CREDITSTITLE}',
+		previousText :    '{L_HIGHSLIDE_PREVIOUSTEXT}',
+		previousTitle :   '{L_HIGHSLIDE_PREVIOUSTITLE}',
+		nextText :        '{L_HIGHSLIDE_NEXTTEXT}',
+		nextTitle :       '{L_HIGHSLIDE_NEXTTITLE}',
+		moveTitle :       '{L_HIGHSLIDE_MOVETITLE}',
+		moveText :        '{L_HIGHSLIDE_MOVETEXT}',
+		closeText :       '{L_HIGHSLIDE_CLOSETEXT}',
+		closeTitle :      '{L_HIGHSLIDE_CLOSETITLE}',
+		resizeTitle :     '{L_HIGHSLIDE_RESIZETITLE}',
+		playText :        '{L_HIGHSLIDE_PLAYTEXT}',
+		playTitle :       '{L_HIGHSLIDE_PLAYTITLE}',
+		pauseText :       '{L_HIGHSLIDE_PAUSETEXT}',
+		pauseTitle :      '{L_HIGHSLIDE_PAUSETITLE}',
+		restoreTitle :    '{L_HIGHSLIDE_RESTORETITLE}'
+	};
+// ]] >
+</script>
+]]></action>
+        <find><![CDATA[			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}">{L_FAQ}</a></li>
+				<!-- IF not S_IS_BOT -->
+					<!-- IF S_DISPLAY_MEMBERLIST --><li class="icon-members"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">{L_MEMBERLIST}</a></li><!-- ENDIF -->
+					<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED --><li class="icon-register"><a href="{U_REGISTER}">{L_REGISTER}</a></li><!-- ENDIF -->
+					<li class="icon-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></li>
+				<!-- ENDIF -->
+			</ul>]]></find>
+        <action type="after-add"><![CDATA[		 	<!-- IF S_USER_LOGGED_IN --> 
+			<div class="clear"></div>
+			<!-- ENDIF -->
+      		<ul class="linklist leftside">
+				<li class="icon-pages">
+					<!-- IF PORTAL and PORTAL_INDEX_PAGE --><a href="#" onclick="return doCollapseExpand('portal_container','portal_container1')" title="{L_OPEN_CLOSE_COLUMNS}">[ +/- ]</a><!-- ENDIF -->
+					<!-- IF S_USER_LOGGED_IN --> [ {LAST_VISIT_DATE} ] <!-- ELSE --> [ {CURRENT_TIME} ]<!-- ENDIF -->
+				    <!-- IF U_MCP --> [ <a href="{U_MCP}" title="{L_MCP}">{L_MCP}</a> ] <!-- ENDIF -->
+					<!-- IF U_ACP --> [ <a href="{U_ACP}" title="{L_ACP}">{L_ACP}</a> ]<!-- ENDIF -->
+                </li>
+			</ul>]]></action>
+        <find><![CDATA[	      The phpBB Group is not responsible for the content of this page and forum. For more information
+	      about phpBB please visit http://www.phpbb.com
+-->
+]]></find>
+        <action type="after-add"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Portal" href="./portal/syndicate.php" />
+<link rel="alternate" type="application/rss+xml" title="{SITENAME} RSS-Attachments" href="./portal/syndicate_attachments.php" />
+]]></action>
+        <find><![CDATA[</head>
+
+<body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
+]]></find>
+        <action type="after-add"><![CDATA[<div class="outside">
+	<div class="top-left"></div><div class="top-center"></div><div class="top-right"></div>
+		<div class="inside">
+			<div class="notopgap">
+]]></action>
+        <find><![CDATA[			<div id="site-description">
+				<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
+				<h1>{SITENAME}</h1>
+				<p>{SITE_DESCRIPTION}</p>
+				<p style="display: none;"><a href="#start_here">{L_SKIP}</a></p>
+			</div>
+]]></find>
+        <action type="replace-with"><![CDATA[			<div id="site-description">
+				<a href="{U_INDEX}" title="{L_INDEX}" id="logo"><!-- IF PORTAL -->{SITE_LOGO_IMGAGE}<!-- ELSE -->{SITE_LOGO_IMG}<!-- ENDIF --></a>
+				<h1>{SITENAME}</h1>
+				<p>{SITE_DESCRIPTION}</p>
+				<p style="display: none;"><a href="#start_here">{L_SKIP}</a></p>
+			</div>
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off prosilver you have installed. I use 'prosilver' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/prosilver/template/overall_footer.html">
+      <edit>
+        <find><![CDATA[			<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a></li>
+]]></find>
+        <action type="replace-with"><![CDATA[				<li>
+                <!-- IF PORTAL --><a class="icon-home" href="{U_PORTAL}" accesskey="h">{L_PORTAL}</a> <strong>&#8249;</strong><!-- ENDIF -->
+                <!-- IF PORTAL_INDEX_PAGE --> <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ELSE -->
+                <a href="{U_INDEX}" accesskey="h">{L_INDEX}</a><!-- ENDIF --> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+                </li>
+ 		</ul>
+		<ul class="linklist">
+]]></action>
+        <find><![CDATA[			<li class="rightside"><a href="{U_TEAM}">{L_THE_TEAM}</a> &bull; <!-- IF not S_IS_BOT --><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a> &bull; <!-- ENDIF -->{S_TIMEZONE}</li>
+]]></find>
+        <action type="replace-with"><![CDATA[			<li class="rightside"><!-- IF PORTAL --><a href="{U_PORTAL_MODS}" target="_blank">{L_PORTAL_MODS}</a> &bull; <!-- ENDIF --><a href="{U_TEAM}">{L_THE_TEAM}</a> &bull; <!-- IF not S_IS_BOT --><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a><!-- ENDIF --> {S_TIMEZONE} <a href="#wrap" title="{L_BACK_TO_TOP}"><img src="{T_THEME_PATH}/images/top.gif" width="11" height="11" alt="{L_BACK_TO_TOP}" /></a></li>
+]]></action>
+        <find><![CDATA[<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+</div>
+]]></find>
+        <action type="after-add"><![CDATA[				</div>
+			<div class="nobottomgap"></div>
+		</div>
+	<div class="bottom-left"></div><div class="bottom-center"></div><div class="bottom-right">
+</div>
+
+<div style="display:none" id="resizemod"></div>
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off prosilver you have installed. I use 'prosilver' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/prosilver/template/attachment.html">
+      <edit>
+        <find>		&lt;!-- IF _file.S_THUMBNAIL --&gt;
+		&lt;dl class="thumbnail"&gt;
+			&lt;dt&gt;&lt;a href="{_file.U_DOWNLOAD_LINK}"&gt;&lt;img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" title="{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}" /&gt;&lt;/a&gt;&lt;/dt&gt;
+			&lt;!-- IF _file.COMMENT --&gt;&lt;dd&gt; {_file.COMMENT}&lt;/dd&gt;&lt;!-- ENDIF --&gt;
+		&lt;/dl&gt;
+		&lt;!-- ENDIF --&gt;
+
+
+		&lt;!-- IF _file.S_IMAGE --&gt;
+		&lt;dl class="file"&gt;
+			&lt;dt class="attach-image"&gt;&lt;img src="{_file.U_INLINE_LINK}" alt="{_file.DOWNLOAD_NAME}" onclick="viewableArea(this);" /&gt;&lt;/dt&gt;
+			&lt;!-- IF _file.COMMENT --&gt;&lt;dd&gt;&lt;em&gt;{_file.COMMENT}&lt;/em&gt;&lt;/dd&gt;&lt;!-- ENDIF --&gt;
+			&lt;dd&gt;{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}&lt;/dd&gt;
+		&lt;/dl&gt;
+		&lt;!-- ENDIF --&gt;
+</find>
+        <action type="replace-with"><![CDATA[       <!-- IF _file.S_THUMBNAIL -->
+          <div class="highslide-gallery">
+          <dl class="thumbnail">
+             <dt>
+                <a href="{_file.U_DOWNLOAD_LINK}/{_file.DOWNLOAD_NAME}" class="highslide" onclick="return hs.expand(this)"><img src="{_file.THUMB_IMAGE}" alt="{_file.DOWNLOAD_NAME}" title="{_file.DOWNLOAD_NAME}" /></a>
+                <div class="highslide-caption"><!-- IF _file.COMMENT_CLEAN -->{_file.COMMENT_CLEAN} / {_file.DOWNLOAD_NAME}<!-- ELSE -->{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) [ {_file.L_DOWNLOAD_COUNT} ]<!-- ENDIF --></div>
+                <br />{_file.L_DOWNLOAD_COUNT}
+             </dt>
+			<!-- IF _file.COMMENT --><dd><em>{_file.COMMENT}</em></dd><!-- ENDIF -->
+          </dl>
+          </div>
+          <!-- ENDIF -->
+          
+		<!-- IF _file.S_IMAGE -->
+		<div class="highslide-gallery">
+		<dl class="file">
+			<dt class="attach-image">
+              <a href="{_file.U_INLINE_LINK}" class="highslide" onclick="return hs.expand(this)"><img src="{_file.U_INLINE_LINK}" alt="{_file.DOWNLOAD_NAME}" title="{_file.DOWNLOAD_NAME}" onclick="viewableArea(this);" resizemod="on" onload="rmw_img_loaded(this)" /></a>
+              <div class="highslide-caption"><!-- IF _file.COMMENT_CLEAN -->{_file.COMMENT_CLEAN} / {_file.DOWNLOAD_NAME}<!-- ELSE -->{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) [ {_file.L_DOWNLOAD_COUNT} ]<!-- ENDIF --></div>
+              <br />{_file.L_DOWNLOAD_COUNT}
+            </dt>
+			<!-- IF _file.COMMENT --><dd><em>{_file.COMMENT}</em></dd><!-- ENDIF -->
+			<dd>{_file.DOWNLOAD_NAME} ({_file.FILESIZE} {_file.SIZE_LANG}) {_file.L_DOWNLOAD_COUNT}</dd>
+		</dl>
+		</div>
+		<!-- ENDIF -->
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/prosilver/template/bbcode.html">
+      <edit>
+        <find>&lt;!-- BEGIN img --&gt;&lt;img src="{URL}" alt="{L_IMAGE}" /&gt;&lt;!-- END img --&gt;
+</find>
+        <action type="replace-with"><![CDATA[<!-- BEGIN img --><a href="{URL}" onclick="return hs.expand(this)"><img src="{URL}" alt="{L_IMAGE}" onclick="viewableArea(this);" resizemod="on" onload="rmw_img_loaded(this)" /></a><!-- END img -->
+]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off subsilver2 you have installed. I use 'subsilver2' as an example.</comment>
+      </edit>
+    </open>
+    <open src="styles/prosilver/theme/stylesheet.css">
+      <edit>
+        <find><![CDATA[@import url("colours.css");]]></find>
+        <action type="after-add"><![CDATA[@import url("highslide/highslide.css");
+@import url("portal_adds.css");]]></action>
+        <comment lang="en">NOTE: You will have to make this change to ALL themes based off prosilver you have installed. I use 'prosilver' as an example.</comment>
+      </edit>
+    </open>
+    <diy-instructions lang="en-gb"><![CDATA[DON'T forget to copy file styles/prosilver/theme/portal_adds.css from the distribution to styles/custom-style/theme/ directory, or copy the content of that file into your actual stylesheet.css. If you have problems adding code of this document manually enclosed file install_portal_xl50.txt will always carry out the latest changes.
+
+#
+#-----[ FRESH/NEW INSTALLTION on a plain phpBB 3.0.x using enclosed pre-modificated files ]------
+#
+
+Portal XL 5.0 Plain FRESH/NEW INSTALLATION on a plain/existing phpBB 3.0.x is released! 
+This version can be used to create Portal XL 5.0 along a running plain/clean phpBB 3.0.x. 
+
+Steps to do:
+Have a recent backup of your forum and database first!
+
+- Get your own copy of phpBB 3.0.x from here http://www.phpbb.com/downloads/
+- Unpack phpBB 3.0.x to a temporary directory
+- Upload folder phpBB3 to your forum root
+- Browse to eg. http://your-domain/install/ and the installer will activate
+- Remove folder /install/ when installation is ready
+
+The next steps will creating your portal.
+
+- unpack archive Portal_XL50_Plain-3.0.6.rar to a temporary directory
+- copy/uload all content from the package directory \root\ to your forum root and be sure all is in place.
+- browse to \install\index.php to start the installation script.
+
+- After installtion enter the ACP and do all the steps below:
+
+- Tab Styles -> Style components -> Templates -> prosilver -> Refresh
+- Tab Styles -> Style components -> Themes -> prosilver -> Refresh
+- Tab Styles -> Style components -> Imagesets -> prosilver -> Refresh
+- General Tab -> In main screen -> Purge the cache
+- Refresh your browsers cache
+
+More Portal XL related items here http://www.portalxl.nl/forum/knowledge/index.php
+
+Ready!
+
+#
+# EoM
+]]></diy-instructions>
+  </action-group>
+</mod>

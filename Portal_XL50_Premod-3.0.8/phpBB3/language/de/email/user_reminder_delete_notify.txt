@@ -1,0 +1,11 @@
+Subject: Löschung Deines Benutzerkontos auf "{SITENAME}"! 
+
+Hallo {USERNAME},
+
+In letzter Zeit hast Du mindestens 2 Erinnerungen von uns bekommen. 
+
+Da Du jedoch kein Interesse zeigst, dich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Dein Benutzerkonto zu löschen.
+
+Die Löschung Deines Kontos kann nicht mehr rückgängig gemacht werden. Solltest Du Dich doch irgendwann entschließen Dich wieder bei uns zu beteiligen, müsstest Du Dich erneut registrieren.
+
+{EMAIL_SIG}

@@ -1,0 +1,76 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.marquee.min.js'></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+  $("#marquee-arcade_newest_games").marquee({
+		yScroll: "top",
+		scrollSpeed: 10,
+		pauseSpeed: 2500,
+		pauseOnHover: true,
+		loop: -1,
+		fxEasingShow: "swing",
+		// define the class statements
+		cssShowing: "marquee-arcade_newest_games"
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+ul.marquee-arcade_newest_games {
+	display: block;
+	height: 80px;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	margin: 1px;
+}
+
+ul.marquee-arcade_newest_games li {
+	display: block;
+	position: absolute;
+	top: -999em;
+	width: 100%;
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th style="text-align:left;" colspan="2">{L_NEW_GAMES}</td>
+</tr>-->
+<tr>
+    <td class="bg2" align="center" valign="top" style="border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+    
+    <!-- BEGIN newest_games_no -->
+    <table cellspacing="1" width="100%">
+      <tr class="bg1">
+        <td align="center"><span class="gensmall">{newest_games_no.LOGIN_VIEWARCADE}</span></td>
+      </tr>
+    </table>
+    <!-- END newest_games_no -->
+    
+    <ul id="marquee-arcade_newest_games" class="marquee-arcade_newest_games">
+    <!-- BEGIN newest_games -->
+        <li>
+        <table width="100%" cellpadding="2" cellspacing="5" class="forumline">
+          <tr>
+             <td width="100%" style="overflow: hidden; border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;" class="bg1">
+             <span class="gensmall">
+              <!-- IF newest_games.GAME_IMAGE -->
+              <a href="{newest_games.U_GAME_PLAY}" title="{newest_games.GAME_IMAGE_ALT}"><img src="{newest_games.GAME_IMAGE}" alt="{newest_games.GAME_IMAGE_ALT}" width="20" height="20" style="vertical-align: middle;" /></a>
+              <!-- ENDIF -->
+              &nbsp;{newest_games.GAME_NAME}
+            </span>
+            </td>
+          </tr>
+        </table>
+      </li>
+    <!-- END newest_games -->
+   </ul>
+    
+    </td>
+</tr>
+<tr>
+	<td class="row1" align="center"><a href="{U_ARCADE}" title="{L_ARCADE_EXPLAIN}">{L_ARCADE}</a></td>
+</tr>
+</table>

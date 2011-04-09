@@ -1,0 +1,16 @@
+Oggetto: Nuovo commento download
+
+ Ciao {USERNAME},
+
+ricevi questa email come notifica di un nuovo commento o modifica del commento per {DOWNLOAD} su {SITENAME} nella categoria {CATEGORY}.
+
+Se vuoi approvarlo clicca sul link di seguito:
+
+{U_APPROVE}
+
+Se invece vuoi leggere questo commento, usa il secondo link:
+
+{U_DOWNLOAD}
+
+
+{BOARD_EMAIL}

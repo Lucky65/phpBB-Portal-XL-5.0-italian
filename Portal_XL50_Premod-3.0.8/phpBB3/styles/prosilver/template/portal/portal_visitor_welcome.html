@@ -1,0 +1,19 @@
+<script type="text/javascript">
+// <![CDATA[
+  var now = new Date(); //create a Date object named: now
+  var hourOfDay = now.getHours(); //hours range from 0 to 23.
+  
+  if (now.getHours() < 12)
+   var welcome = ('{L_WELCOME_MORNING}');
+  else if (now.getHours() < 18)
+   var welcome =('{L_WELCOME_AFTERNOON}');
+  else if (now.getHours() > 18)
+   var welcome = ('{L_WELCOME_EVENING}');
+  else
+   var welcome = ('{L_WELCOME_GENERAL}');
+  
+  var message = welcome
+  
+  document.write(message);
+// ]]>
+</script>

@@ -1,0 +1,11 @@
+Subject: Promemoria da "{SITENAME}"! 
+
+Caro {USERNAME},
+
+Ti stiamo scrivendo perchè abbiamo notato che e' qualche tempo che non ti colleghi su {SITENAME}.
+
+Ti invitiamo quindi a dare un'occhiata all'indirizzo {U_BOARD} per controllare gli ultimi argomenti aggiunti al nostro sito e partecipare alle attivita' della nostra comunita'.
+
+Speriamo di rivederti presto tra di noi.
+
+{EMAIL_SIG}

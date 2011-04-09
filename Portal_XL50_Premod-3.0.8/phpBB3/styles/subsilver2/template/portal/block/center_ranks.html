@@ -1,0 +1,18 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>L_BR_RANKS_PAGE_TITLE</td>
+</tr>-->
+	<tr>
+		<td align="center"><h4>{L_BR_RANKS_IMAGE}</h4></td>
+		<td align="center"><h4>{L_BR_RANKS_TITLE}</h4></td>
+		<td align="center"><h4>{L_BR_RANKS_MINIMUM}</h4></td>
+	</tr>
+	<!-- BEGIN ranks -->
+		<tr>
+		<td class="<!-- IF ranks.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" style="text-align: center; height: 25px;"><!-- IF ranks.S_RANK_IMAGE --><img src="{ranks.RANK_IMAGE}" alt="{ranks.RANK_TITLE}" title="{ranks.RANK_TITLE}" /><!-- ELSE -->&nbsp; - &nbsp;<!-- ENDIF --></td>
+		<td class="<!-- IF ranks.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" style="text-align: center; height: 25px;">{ranks.RANK_TITLE}</td>
+		<td class="<!-- IF ranks.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" style="text-align: center; height: 25px;"><!-- IF ranks.S_SPECIAL_RANK -->&nbsp; - &nbsp;<!-- ELSE -->{ranks.MIN_POSTS}<!-- ENDIF --></td>
+	</tr>
+	<!-- END ranks -->
+</table>
+

@@ -1,0 +1,14 @@
+Subject: Aktivácia účtu uživateľa
+
+Zdravíčko,
+
+Účet patriaci uživateľovi "{USERNAME}" bol deaktivovaný, alebo novovytvorený. Mali by ste skontrolovať podrobnosti o tomto uživateľovi (ak je to nevyhnutné) a patrične s tým naložiť.
+
+Odkaz na zobrazenie uživateľovho profilu:
+{U_USER_DETAILS}
+
+Odkaz na aktiváciu uživateľovho účtu:
+{U_ACTIVATE}
+
+
+{EMAIL_SIG}

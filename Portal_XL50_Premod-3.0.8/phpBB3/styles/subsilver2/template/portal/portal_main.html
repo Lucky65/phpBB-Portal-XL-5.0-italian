@@ -1,0 +1,247 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF S_TOPIC_HOVER_PREVIEW_ENABLED --> 
+<!-- INCLUDE portal/portal_topic_hover_preview.html -->
+<!-- ENDIF -->      
+  
+<!-- Require basic Easy Widgets -->
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $.fn.EasyWidgets({
+    behaviour : {
+      useCookies 		: true // Use cookies to store positions and states
+    },
+    cookies : {
+	  expires 			: 365, // Cookie expiration time in days
+      closeName 		: 'portal_xl_main-close', // Cookie name for close Widgets
+      disableName 		: 'portal_xl_main-disable', // Cookie name for enable/disable Widgets
+      positionName 		: 'portal_xl_main-position', // Cookie name for positined Widgets
+      collapseName 		: 'portal_xl_main-collapse' // Cookie name for collapsed Widgets
+    },
+    selectors : {
+      container 		: 'div'
+    },
+    effects : {
+      effectDuration 	: 250,
+      widgetClose 		: 'fade',
+      widgetExtend 		: 'fade',
+      widgetCollapse 	: 'fade'
+    },
+    i18n : {
+      editText 			: '{L_WIDG_EDIT_TEXT}', // Widget edit link text
+//      closeText 		: '{L_WIDG_CLOSE_TEXT}', // Widget close link text
+//      extendText 		: '{L_WIDG_EXTENT_TEXT}', // Widget extend link text
+//      collapseText 	: '{L_WIDG_COLLAPSE_TEXT}', // Widget collapse link text
+      cancelEditText 	: '{L_WIDG_CANCEL_TEXT}', // Widget cancel edit link text
+      editTitle 		: '{L_WIDG_EDIT}', // Widget edition link title
+      closeTitle 		: '{L_WIDG_CLOSE}', // Widget close link title
+      confirmMsg 		: '{L_WIDG_REMOVE}', // Widget confirmation dialog message
+      cancelEditTitle 	: '{L_WIDG_CANCEL}', // Widget cancel edit link title
+      extendTitle 		: '{L_WIDG_EXTENT}', // Widget extend link title
+      collapseTitle 	: '{L_WIDG_COLLAPSE}', // Widget collapse link title
+	  
+      collapseText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/collapse.png" alt="{L_WIDG_COLLAPSE_TEXT}" />',
+      extendText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/extend.png" alt="{L_WIDG_EXTENT_TEXT}" />',
+      closeText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/close.png" alt="{L_WIDG_CLOSE_TEXT}" />'
+    }
+	
+  });
+});
+// ]]>
+</script>
+
+<!-- IF S_HAS_REPORTS or S_HAS_UNAPPROVED_POSTS -->
+<div class="forumrules">
+    <h3>{L_INFORMATION}</h3><br />
+    <!-- IF S_HAS_REPORTS --><a href="{U_MCP_REPORTS}">{L_REPORTS_TOTAL}</a><!-- ENDIF -->
+    <!-- IF S_HAS_REPORTS and S_HAS_UNAPPROVED_POSTS --> &bull; <!-- ENDIF -->
+    <!-- IF S_HAS_UNAPPROVED_POSTS --><a href="{U_MCP_QUEUE}">{L_UNAPPROVED_TOTAL}</a><!-- ENDIF -->
+</div>
+<br clear="all" />
+<!-- ENDIF -->
+
+<div id="portal_container">
+
+<!-- [+] top block area -->
+<!-- IF PORTAL_PAGE -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td valign="top">
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a>&nbsp;{top_block_files.TOP_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1">
+         <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+               <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+               <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+         </div>
+     </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+    </td>
+  </tr>
+</table>
+<!-- [-] top block area -->
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<!-- IF S_DISPLAY_PORTAL_LEFT -->
+<tr>
+<!-- [+] left block area -->
+	<td valign="top" width="{PORTAL_LEFT_COLLUMN_WIDTH}">
+    
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a>&nbsp;{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr >
+    <td class="row1"> 
+      <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+           <!-- IF left_block_files.LEFT_BLOCKS -->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+           <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+      </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+    
+	</td>
+<!-- [-] left block area -->
+	<td width="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="30" /></td>
+<!-- ENDIF -->
+<!-- [+] center block area -->
+	<td valign="top">
+<!-- ENDIF -->
+
+<!-- BEGIN center_block_files -->
+<div class="widget-place" id="widget-place-{center_block_files.CENTER_BLOCK_ID}-centre">
+    <div class="widget collapsable removable closeconfirm" id="block-{center_block_files.CENTER_BLOCK_ID}-centre">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{center_block_files.CENTER_BLOCK_ID}">{center_block_files.CENTER_BLOCKS_IMG}</a>&nbsp;{center_block_files.CENTER_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF center_block_files.CENTER_BLOCKS-->{center_block_files.CENTER_BLOCKS}<!-- ENDIF -->
+             <!-- IF center_block_files.CENTER_BLOCKS_CONTENT -->{center_block_files.CENTER_BLOCKS_CONTENT}<!-- ENDIF -->
+       </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END center_block_files -->	
+
+<!-- IF PORTAL_PAGE -->
+	</td>
+<!-- [-] center block area -->
+<!-- IF S_DISPLAY_PORTAL_RIGHT -->
+	<td width="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="30" /></td>
+<!-- [+] right block area -->
+	<td width="{PORTAL_RIGHT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a>&nbsp;{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+             <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+    
+	<!-- ENDIF -->	
+	</td>
+<!-- [-] right block area -->
+</tr>
+</table>
+
+
+<!-- [+] bottom block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td valign="top">
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th> 
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span><a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a>&nbsp;{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+        </div>
+    </th>
+  </tr>
+  <tr>
+    <td class="row1"> 
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+             <!-- IF bottom_block_files.BOTTOM_BLOCKS -->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+             <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+    </td>
+  </tr>
+</table>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+<!-- [-] bottom block area -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

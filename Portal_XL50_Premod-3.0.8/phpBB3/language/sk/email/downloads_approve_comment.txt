@@ -1,0 +1,16 @@
+Subject: Nový komentár v downloadoch
+
+Ahoj {USERNAME},
+
+Dostal si tento meil kvôli novému alebo editovanému prispevku komentára v downloade "{DOWNLOAD}" ďalej "{SITENAME}" v kategórii "{CATEGORY}" ktorý musí byť schválený
+
+Ak chceš schváliť toto zadanie klikni na túto linku:
+
+{U_APPROVE}
+
+Ak chceš môžeš sa pozrieť zadania kliknutím na túto linku:
+
+{U_DOWNLOAD}
+
+
+{BOARD_EMAIL}

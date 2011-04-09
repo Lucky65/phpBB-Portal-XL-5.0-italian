@@ -1,0 +1,18 @@
+Subject: Zmenený Download
+
+Ahoj {USERNAME},
+
+Dostal si tento meil kvôli nasledujúcemu downloadu "{SITENAME}" v kategórii "{CATEGORY}" ide o to že bol zmenený::
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Ak sa chceš pozrieť na tento download klikni na nasledujúcu linku:
+
+{U_CATEGORY}
+
+Toto upozorňovanie o nových alebo editovaných downloadoch si môžeš vždy zmeniť prestavením zadaní v tvojom profile Downloady
+
+{BOARD_EMAIL}

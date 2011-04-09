@@ -1,0 +1,425 @@
+<!-- INCLUDE overall_header.html -->
+
+<script type="text/javascript">
+// <![CDATA[
+function update_icon(new_icon)
+{
+	document.getElementById('current_icon').src = (new_icon) ? "./../portal/images/icon_block/" + encodeURI(new_icon) : "./images/spacer.gif";
+}
+// ]]>
+</script>
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<!-- IF S_EDIT_COLUMN -->
+<h1>{L_TITLE_BLOCKS}</h1>
+<p>{L_TITLE_BLOCKS_COLUMN_EXPLAIN}</p>
+
+<form id="acp_portal_blocks" method="post" action="{U_ACTION_COLUMN}">
+<fieldset>
+	<legend>{L_BLOCK_EDIT_COLUMN_SETTINGS}</legend>
+    
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_BLOCK_EDIT_COLUMN_SETTINGS}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_LAYOUT_ACTIVE}:</strong><br /><span>{L_PORTAL_LAYOUT_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%">
+		<input type="radio" class="radio" name="portal_layout" value="1" <!-- IF PORTAL_LAYOUT_ACTIVE -->id="portal_layout" checked="checked"<!-- ENDIF --> /> {L_YES}
+		<input type="radio" class="radio" name="portal_layout" value="0" <!-- IF not PORTAL_LAYOUT_ACTIVE -->id="portal_layout" checked="checked"<!-- ENDIF --> /> {L_NO}
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_LEFT_COLLUMN_WIDTH}:</strong><br /><span>{L_PORTAL_LEFT_COLLUMN_WIDTH_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%"><input name="portal_left_collumn_width" type="text" id="portal_left_collumn_width" value="{LEFT_WIDTH}" size="10" /></td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_LEFT_COLLUMN_ACTIVE}:</strong><br /><span>{L_PORTAL_LEFT_COLLUMN_ACTIVE_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%">
+		<input type="radio" class="radio" name="portal_left_column" value="1" <!-- IF LEFT_COLLUMN_ACTIVE -->id="portal_left_column" checked="checked"<!-- ENDIF --> /> {L_YES}
+		<input type="radio" class="radio" name="portal_left_column" value="0" <!-- IF not LEFT_COLLUMN_ACTIVE -->id="portal_left_column" checked="checked"<!-- ENDIF --> /> {L_NO}
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_RIGHT_COLLUMN_WIDTH}:</strong><br /><span>{L_PORTAL_RIGHT_COLLUMN_WIDTH_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%"><input name="portal_right_collumn_width" type="text" id="portal_right_collumn_width" value="{RIGHT_WIDTH}" size="10" /></td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_RIGHT_COLLUMN_ACTIVE}:</strong><br /><span>{L_PORTAL_RIGHT_COLLUMN_ACTIVE_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%">
+		<input type="radio" class="radio" name="portal_right_column" value="1" <!-- IF RIGHT_COLLUMN_ACTIVE -->id="portal_right_column" checked="checked"<!-- ENDIF --> /> {L_YES}
+		<input type="radio" class="radio" name="portal_right_column" value="0" <!-- IF not RIGHT_COLLUMN_ACTIVE -->id="portal_right_column" checked="checked"<!-- ENDIF --> /> {L_NO}
+		</td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:11px;" colspan="2">  
+		<input type="hidden" name="action" value="savecolumn" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_CANCEL}" /></center>
+        </td>
+ 	</tr>
+	</table>
+</form>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF not S_EDIT_COLUMN  -->	
+
+<h1>{L_TITLE_BLOCKS}</h1>
+<p>{L_TITLE_BLOCKS_EXPLAIN}</p>
+
+<!-- BEGIN portal_column -->
+<fieldset>
+	<legend>{L_BLOCK_COLUMN_SETTINGS}</legend>
+	<table cellspacing="1">
+	<tr>
+		<th><center>{L_PORTAL_LEFT_COLLUMN_WIDTH}</center></th>
+		<th><center>{L_PORTAL_LEFT_COLLUMN_ACTIVE}</center></th>
+		<th><center>{L_PORTAL_RIGHT_COLLUMN_WIDTH}</center></th>
+		<th><center>{L_PORTAL_RIGHT_COLLUMN_ACTIVE}</center></th>		
+		<th><center>{L_PORTAL_LAYOUT}</center></th>		
+		<th><center>{L_ACTION}</center></th>		
+	</tr>
+	<tr>
+		<td style="text-align: center;">{portal_column.LEFT_WIDTH} {L_PIXEL}</td>
+		<td style="text-align: center;">
+		<!-- IF portal_column.LEFT_COLLUMN_ACTIVE -->{L_YES}<!-- ENDIF -->
+		<!-- IF not portal_column.LEFT_COLLUMN_ACTIVE -->{L_NO}<!-- ENDIF -->
+        </td>
+ 		<td style="text-align: center;">{portal_column.RIGHT_WIDTH} {L_PIXEL}</td>
+		<td style="text-align: center;">
+		<!-- IF portal_column.RIGHT_COLLUMN_ACTIVE -->{L_YES}<!-- ENDIF -->
+		<!-- IF not portal_column.RIGHT_COLLUMN_ACTIVE -->{L_NO}<!-- ENDIF -->
+        </td>
+ 		<td style="text-align: center;">
+		<!-- IF portal_column.PORTAL_LAYOUT_ACTIVE -->{L_YES}<!-- ENDIF -->
+		<!-- IF not portal_column.PORTAL_LAYOUT_ACTIVE -->{L_NO}<!-- ENDIF -->
+        </td>
+		<td style="text-align: center;"><a href="{portal_column.U_EDIT_COLUMN}">{ICON_EDIT}</a></td>
+	</tr>
+	</table>
+</fieldset>
+<!-- END portal_column -->
+
+<!-- IF S_EDIT -->
+<form id="acp_portal_blocks" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_BLOCK_EDIT_HEADER}</legend>
+
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_BLOCK_EDIT_HEADER}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_BLOCK_NAME}:</strong><br /><span>{L_BLOCK_NAME_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%"><input name="block_alias" type="text" id="block_alias" value="{BLOCK_ALIAS}" size="30" /></td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_URL_IMG_EXPLAIN}:</strong><br /><span>{L_URL_IMG_EXPLAIN2}</span></td>    
+   		<td class="row2" style="font-size:10px;" valign="top" width="50%">    
+		<select id="block_img" name="block_img" class="post" onchange="update_icon(this.options[selectedIndex].value);">
+		<!-- BEGIN file_name -->	
+		<option value="{file_name.S_BLOCK_IMG}" <!-- IF file_name.S_BLOCK_IMG == BLOCK_IMG -->selected="selected"<!-- ENDIF -->>{file_name.S_BLOCK_IMG_NAME}</option>
+		<!-- END file_name -->	
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:10px;" valign="top"><span>{L_BLOCK_FNAME_I_CHOSEN}</span></td>
+		<td class="row2" style="font-size:10px;" width="50%">
+		<!-- IF BLOCK_IMG -->			
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_block/{BLOCK_IMG}" id="current_icon" alt="" />
+		<!-- ELSE -->	
+		&nbsp;&nbsp;<img border="0" src="./../portal/images/icon_block/blank.gif" id="current_icon" alt="" />		
+		<!-- ENDIF -->		
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_BLOCK_FNAME_INFO}:</strong><br /><span>{L_BLOCK_FNAME_I_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px;" width="50%">
+			<span class="imageline">
+			<!-- BEGIN img_file_name_icon -->
+				<!-- IF img_file_name_icon.S_BLOCK_FILE_ICON -->
+				{img_file_name_icon.S_BLOCK_FILE_ICON}
+				<!-- ENDIF -->
+			<!-- END img_file_name_icon --> 
+			</span>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_BLOCK_CONTENT}:</strong><br /><span>{L_BLOCK_CONTENT_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:12px; text-align:left;" width="50%"><textarea style="height:200px; width: 100%;" id="block_content" name="block_content">{BLOCK_CONTENT}</textarea></td>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_BLOCK_HTML}:</strong><br /><span>{L_BLOCK_HTML_EXPLAIN}</span></td>    
+		<td class="row2" style="font-size:11px;" width="50%">
+		<select id="block_name" name="block_name" class="post">
+		<!-- BEGIN block_name -->			
+		<option value="{block_name.S_BLOCK_HTML}" <!-- IF block_name.S_BLOCK_HTML == BLOCK_HTML -->selected="selected"<!-- ENDIF -->>{block_name.S_BLOCK_HTML_NAME}</option>
+		<!-- END block_name -->			
+		</select>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_BLOCK_POS}:</strong><br /><span>{L_BLOCK_ORD_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px;" width="50%">
+		<select name="block_position" class="post">
+		<!-- IF BLOCK_POS === "1" -->{L_BLOCK_LEFT}:<!-- ENDIF --> <option value="1" <!-- IF BLOCK_POS === "1" -->selected="selected"<!-- ENDIF -->>{L_BLOCK_LEFT}</option>			
+		<!-- IF BLOCK_POS === "2" -->{L_BLOCK_CENTER}:<!-- ENDIF --> <option value="2" <!-- IF BLOCK_POS === "2" -->selected="selected"<!-- ENDIF -->>{L_BLOCK_CENTER}</option>
+		<!-- IF BLOCK_POS === "3" -->{L_BLOCK_RIGHT}:<!-- ENDIF --> <option value="3" <!-- IF BLOCK_POS === "3" -->selected="selected"<!-- ENDIF -->>{L_BLOCK_RIGHT}</option>
+		<!-- IF BLOCK_POS === "4" -->{L_BLOCK_TOP}:<!-- ENDIF --> <option value="4" <!-- IF BLOCK_POS === "4" -->selected="selected"<!-- ENDIF -->>{L_BLOCK_TOP}</option>  
+		<!-- IF BLOCK_POS === "5" -->{L_BLOCK_BOTTOM}:<!-- ENDIF --> <option value="5" <!-- IF BLOCK_POS === "5" -->selected="selected"<!-- ENDIF -->>{L_BLOCK_BOTTOM}</option>				
+		</select>
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PERMISSION}:</strong></label><br /><span>{L_PERMISSION_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:11px;" width="50%">
+		<select name="block_view" class="post">
+		<!-- IF BLOCK_VIEW === "1" -->{L_ALL}:<!-- ENDIF --> <option value="1" <!-- IF BLOCK_VIEW === "1" -->selected="selected"<!-- ENDIF -->>{L_ALL}</option>	
+		<!-- IF BLOCK_VIEW === "2" -->{L_REG}:<!-- ENDIF --> <option value="2" <!-- IF BLOCK_VIEW === "2" -->selected="selected"<!-- ENDIF -->>{L_REG}</option>	
+		<!-- IF BLOCK_VIEW === "3" -->{L_MOD}:<!-- ENDIF --> <option value="3" <!-- IF BLOCK_VIEW === "3" -->selected="selected"<!-- ENDIF -->>{L_MOD}</option>
+		<!-- IF BLOCK_VIEW === "4" -->{L_ADMIN}:<!-- ENDIF --> <option value="4" <!-- IF BLOCK_VIEW === "4" -->selected="selected"<!-- ENDIF -->>{L_ADMIN}</option>	
+        <!-- IF BLOCK_VIEW === "5" -->{L_GUESTS}:<!-- ENDIF --> <option value="5" <!-- IF BLOCK_VIEW === "5" -->selected="selected"<!-- ENDIF -->>{L_GUESTS}</option>
+		</select>		
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_BLOCK_ACTIV}:</strong></label><br /><span>{L_BLOCK_ACTIV_EXPLAIN}</span></td>
+      	<td class="row2" style="font-size:11px;" width="50%">  
+        {L_DISABLE_BLOCK}: <input type="radio" class="radio" name="block_disable" value="0" <!-- IF not BLOCK_DISABLE -->checked="checked"<!-- ENDIF --> />
+		{L_ENABLE_BLOCK}: <input type="radio" class="radio" name="block_disable" value="1" <!-- IF BLOCK_DISABLE -->checked="checked"<!-- ENDIF --> />
+        </td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:11px;" colspan="2">  
+		<input type="hidden" name="action" value="save" /><input type="hidden" name="block_order" value="{BLOCK_ORDER}" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_CANCEL}" /></center>
+        </td>
+ 		</tr>
+	</table>
+
+</fieldset>
+</form>
+	
+<!-- ELSE -->
+
+<fieldset>
+	<legend>{L_BLOCK_EDIT_HEADER_MAIN}</legend>
+
+<form id="acp_portal_blocks" method="post" action="{U_ACTION}">
+<table cellspacing="1">
+<tr>
+    <td colspan="3" class="row2" valign="top">
+    <center><strong>{L_BLOCK_TOP}</strong></center>
+<!-- BEGIN block --><!-- IF block.BLOCK_POS == "4" -->
+<center>
+		<div id="acp2">
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<div class="panel2">
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<div class="panel3">
+		<!-- ENDIF -->
+		<div id="content2">
+		{block.BLOCK_ALIAS}<br><br>
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_EDIT}">{ICON_EDIT}</a>
+		<!-- ENDIF -->
+		&nbsp;		
+		<!-- IF block.BLOCK_ID == "1" -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;
+		<!-- IF block.BLOCK_ID == block.BLOCK_TOTAL_TOP-->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->
+		&nbsp;
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_DISABLE}"><img border="0" src="images/offline.png" alt="{L_DISABLE_BLOCK}" title="{L_DISABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_ENABLE}"><img border="0" src="images/online.png" alt="{L_ENABLE_BLOCK}" title="{L_ENABLE_BLOCK}" /></a>
+		<!-- ENDIF -->
+		&nbsp;		
+		<a href="{block.U_MOVE_BOTTOM}"><img border="0" src="images/icon_move_bottom.gif" alt="{L_MOVE_BOTTOM}" title="{L_MOVE_BOTTOM}" /></a>
+		&nbsp;
+		<a href="{block.U_MOVE_BOTTOM_DIRECT}"><img border="0" src="images/icon_move_bottom_direct.gif" alt="{L_ICON_MOVE_BOTTOM_DIRECT}" title="{L_ICON_MOVE_BOTTOM_DIRECT}" /></a>		
+		&nbsp;
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_DELETE}" ><img border="0" src="images/icon_delete.gif" alt="{L_DELETE}" title="{L_DELETE}" /></a>
+		<!-- ENDIF -->		
+	   </div>
+	 </div>
+	</div>			
+</center>	
+<!-- ENDIF --><!-- END block -->		
+	</td>
+  </tr>
+  <tr>
+    <td width="25%" class="row2" valign="top">
+    <center><strong>{L_BLOCK_LEFT}</strong></center>
+<!-- BEGIN block --><!-- IF block.BLOCK_POS == "1" -->
+<center>
+		<div id="acp2">
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<div class="panel2">
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<div class="panel3">
+		<!-- ENDIF -->
+		<div id="content2">
+		{block.BLOCK_ALIAS}<br><br>
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_EDIT}">{ICON_EDIT}</a>
+		<!-- ENDIF -->		
+		<!-- IF block.BLOCK_ID == "1" -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;<!-- IF block.BLOCK_ID == block.BLOCK_TOTAL_LEFT -->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_DISABLE}"><img border="0" src="images/offline.png" alt="{L_DISABLE_BLOCK}" title="{L_DISABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_ENABLE}"><img border="0" src="images/online.png" alt="{L_ENABLE_BLOCK}" title="{L_ENABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<a href="{block.U_MOVE_RIGHT}"><img border="0" src="images/icon_move_right.gif" alt="{L_MOVE_RIGHT}" title="{L_MOVE_RIGHT}" /></a>
+		<a href="{block.U_MOVE_RIGHT_DIRECT}"><img border="0" src="images/icon_move_right_direct.gif" alt="{L_MOVE_RIGHT_DIRECT}" title="{L_MOVE_RIGHT_DIRECT}" /></a>		
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_DELETE}" ><img border="0" src="images/icon_delete.gif" alt="{L_DELETE}" title="{L_DELETE}" /></a>
+		<!-- ENDIF -->		
+	   </div>
+	 </div>
+	</div>				
+</center>	
+<!-- ENDIF --><!-- END block -->	
+	</td>
+    <td width="50%" class="row2" valign="top">
+    <center><strong>{L_BLOCK_CENTER}</strong></center>
+<!-- BEGIN block --><!-- IF block.BLOCK_POS == "2" -->
+<center>
+		<div id="acp2">
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<div class="panel2">
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<div class="panel3">
+		<!-- ENDIF -->
+		<div id="content2">
+		{block.BLOCK_ALIAS}<br><br>
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_EDIT}">{ICON_EDIT}</a>
+		<!-- ENDIF -->
+		&nbsp;		
+		<a href="{block.U_MOVE_LEFT}"><img border="0" src="images/icon_move_left.gif" alt="{L_MOVE_LEFT}" title="{L_MOVE_LEFT}" /></a>
+		&nbsp;		
+		<!-- IF block.BLOCK_ID == "1" -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;
+		<!-- IF block.BLOCK_ID == block.BLOCK_TOTAL_CENTER-->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->
+		&nbsp;			
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_DISABLE}"><img border="0" src="images/offline.png" alt="{L_DISABLE_BLOCK}" title="{L_DISABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_ENABLE}"><img border="0" src="images/online.png" alt="{L_ENABLE_BLOCK}" title="{L_ENABLE_BLOCK}" /></a>
+		<!-- ENDIF -->			
+		&nbsp;
+		<a href="{block.U_MOVE_CENTER_TOP}"><img border="0" src="images/icon_move_top.gif" alt="{L_MOVE_TOP}" title="{L_MOVE_TOP}" /></a>
+		&nbsp;
+		<a href="{block.U_MOVE_CENTER_BOTTOM}"><img border="0" src="images/icon_move_bottom.gif" alt="{L_MOVE_BOTTOM}" title="{L_MOVE_BOTTOM}" /></a>		
+		&nbsp;		
+		<a href="{block.U_MOVE_RIGHT}"><img border="0" src="images/icon_move_right.gif" alt="{L_MOVE_RIGHT}" title="{L_MOVE_RIGHT}" /></a>
+		&nbsp;		
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_DELETE}" ><img border="0" src="images/icon_delete.gif" alt="{L_DELETE}" title="{L_DELETE}" /></a>
+		<!-- ENDIF -->		
+	   </div>
+	 </div>
+	</div>				
+</center>	
+<!-- ENDIF --><!-- END block -->	
+	</td>
+    <td width="25%" class="row2" valign="top">
+    <center><strong>{L_BLOCK_RIGHT}</strong></center>
+<!-- BEGIN block --><!-- IF block.BLOCK_POS == "3" -->
+<center>
+		<div id="acp2">
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<div class="panel2">
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<div class="panel3">
+		<!-- ENDIF -->
+		<div id="content2">
+		{block.BLOCK_ALIAS}<br><br>
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_EDIT}">{ICON_EDIT}</a>
+		<!-- ENDIF -->		
+		<a href="{block.U_MOVE_LEFT_DIRECT}"><img border="0" src="images/icon_move_left_direct.gif" alt="{L_MOVE_LEFT_DIRECT}" title="{L_MOVE_LEFT_DIRECT}" /></a>
+		<a href="{block.U_MOVE_LEFT}"><img border="0" src="images/icon_move_left.gif" alt="{L_MOVE_LEFT}" title="{L_MOVE_LEFT}" /></a>			
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_DISABLE}"><img border="0" src="images/offline.png" alt="{L_DISABLE_BLOCK}" title="{L_DISABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_ENABLE}"><img border="0" src="images/online.png" alt="{L_ENABLE_BLOCK}" title="{L_ENABLE_BLOCK}" /></a>
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_ID == "1" -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;<!-- IF block.BLOCK_ID ==  block.BLOCK_TOTAL_RIGHT -->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_DELETE}" ><img border="0" src="images/icon_delete.gif" alt="{L_DELETE}" title="{L_DELETE}" /></a>
+		<!-- ENDIF -->		
+	   </div>
+	 </div>
+	</div>				
+</center>	
+<!-- ENDIF --><!-- END block -->	
+	</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="row2" valign="top">
+    <center><strong>{L_BLOCK_BOTTOM}</strong></center>
+<!-- BEGIN block --><!-- IF block.BLOCK_POS == "5" -->
+<center>
+		<div id="acp2" colspan="3">
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<div class="panel2">
+		<!-- ENDIF -->
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<div class="panel3">
+		<!-- ENDIF -->
+		<div id="content2">
+		{block.BLOCK_ALIAS}<br><br>
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_EDIT}">{ICON_EDIT}</a>
+		<!-- ENDIF -->
+		&nbsp;		
+		<!-- IF block.BLOCK_ID == "1" -->{ICON_MOVE_UP_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_UP}">{ICON_MOVE_UP}</a><!-- ENDIF -->&nbsp;
+		<!-- IF block.S_LAST_ROW -->{ICON_MOVE_DOWN_DISABLED}<!-- ELSE --><a href="{block.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a><!-- ENDIF -->
+		&nbsp;
+		<!-- IF block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_DISABLE}"><img border="0" src="images/offline.png" alt="{L_DISABLE_BLOCK}" title="{L_DISABLE_BLOCK}" /></a>
+		<!-- ENDIF -->		
+		<!-- IF not block.BLOCK_DISABLE_IMG -->
+		<a href="{block.U_ENABLE}"><img border="0" src="images/online.png" alt="{L_ENABLE_BLOCK}" title="{L_ENABLE_BLOCK}" /></a>
+		<!-- ENDIF -->
+		&nbsp;		
+		<a href="{block.U_MOVE_TOP}"><img border="0" src="images/icon_move_top.gif" alt="{L_MOVE_TOP}" title="{L_MOVE_TOP}" /></a>
+		&nbsp;
+		<a href="{block.U_MOVE_TOP_DIRECT}"><img border="0" src="images/icon_move_top_direct.gif" alt="{L_MOVE_TOP_DIRECT}" title="{L_MOVE_TOP_DIRECT}" /></a>		
+		&nbsp;
+		<!-- IF block.BLOCK_EDIT == "0" -->
+		<a href="{block.U_DELETE}" ><img border="0" src="images/icon_delete.gif" alt="{L_DELETE}" title="{L_DELETE}" /></a>
+		<!-- ENDIF -->
+	   </div>
+	 </div>
+	</div>				
+</center>	
+<!-- ENDIF --><!-- END block -->
+	</td>
+  </tr>
+</table>
+
+	<p align="center"><br />
+		<input class="button2" name="add" type="submit" value="{L_ADD_BLOCK}" />
+	</p>
+	</form>
+    
+	</fieldset>
+<!-- ENDIF -->
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

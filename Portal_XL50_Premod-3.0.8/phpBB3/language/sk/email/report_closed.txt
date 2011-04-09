@@ -1,0 +1,8 @@
+Subject: Hlásenie uzavrené — “{POST_SUBJECT}”
+
+Vážený/á {USERNAME},
+
+Obdržali ste túto správu, pretože Vami podané hlásenie na príspevok “{POST_SUBJECT}” v “{TOPIC_TITLE}” na “{SITENAME}” bolo spracované moderátorom, alebo administrátorom. Potom bolo hlásenie uzavrené. S ďaľšími otázkami sa obráťte na {CLOSER_NAME}.
+
+
+{EMAIL_SIG}

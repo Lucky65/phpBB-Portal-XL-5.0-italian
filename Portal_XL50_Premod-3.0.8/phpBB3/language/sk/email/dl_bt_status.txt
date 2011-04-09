@@ -1,0 +1,16 @@
+Subject: Je tu nový stav Správa Chýb v "{SITENAME}"
+
+Ahoj {USERNAME},
+
+Dostal si tento meil kvôli stavu v správe chýb "{REPORT_TITLE}" v {SITENAME} ide o to že stav bol zmenený.
+Nový stav: {STATUS}.
+
+{STATUS_TEXT}
+
+Pre viac detailov o tomto sledovaní použi tieto linky:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

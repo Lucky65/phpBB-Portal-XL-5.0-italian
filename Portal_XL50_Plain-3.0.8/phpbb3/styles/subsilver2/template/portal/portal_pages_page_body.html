@@ -1,0 +1,59 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<a name="pagetop"></a>
+<table width="100%" cellspacing="1">
+  <tr>
+	<td valign="bottom">
+    
+<!-- IF PAGE_PAGES_NUMBER -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{L_TOTAL_PAGE_PAGES} {PAGE_PAGES_TOTAL}
+<!-- IF PAGE_PAGES_PAGINATION --> &bull; {PAGE_PAGES_NUMBER}<br style="clear: both" /> 
+<span>{PAGE_PAGES_PAGINATION}</span><!-- ELSE --> &bull; {PAGE_PAGES_NUMBER}<!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+
+    </td>
+  </tr>
+</table>
+
+<!-- BEGIN pagepage -->
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <th>{pagepage.PAGEPAGE_TITLE} <!-- IF pagepage.U_PRINT_PAGES -->~ <a href="{pagepage.U_PRINT_PAGES}" title="{L_PRINT_TOPIC}">{L_PRINT_TOPIC}</a><!-- ENDIF --></th>
+  </tr>
+  <tr>
+    <td class="row1"><div class="content">{pagepage.PAGEPAGE_CONTENT}</div></td>
+  </tr>
+  <tr>
+    <td class="cat">&nbsp;</td>
+  </tr>
+</table>
+<!-- END pagepage -->
+
+<!-- BEGIN switch_no_pages -->
+<table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+  <tr>
+    <td class="row1" align="center" height="28"><span class="gen"><i>{L_NO_TOPICS}</i></span></td>
+  </tr>
+</table>
+<!-- END switch_no_pages -->
+
+<table width="100%" cellspacing="1">
+  <tr>
+	<td valign="bottom">
+    
+<!-- IF PAGE_PAGES_NUMBER -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{L_TOTAL_PAGE_PAGES} {PAGE_PAGES_TOTAL}
+<!-- IF PAGE_PAGES_PAGINATION --> &bull; {PAGE_PAGES_NUMBER}<br style="clear: both" /> 
+<span>{PAGE_PAGES_PAGINATION}</span><!-- ELSE --> &bull; {PAGE_PAGES_NUMBER}<!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+
+    </td>
+  </tr>
+</table>
+
+<!-- INCLUDE overall_footer.html -->

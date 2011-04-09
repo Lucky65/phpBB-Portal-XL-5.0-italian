@@ -1,0 +1,29 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_FRIENDS}</td>
+</tr> -->
+<tr>
+	<td class="row2" colspan="2"><strong class="genmed" style="color:green">{L_FRIENDS_ONLINE}</strong></td>
+</tr>
+<tr>
+	<td class="row1 gensmall" align="left" valign="middle">
+	<!-- BEGIN friends_online -->
+		<img src="portal/images/member.gif" /> <strong>{friends_online.USERNAME_FULL}</strong><br />
+		<!-- BEGINELSE -->
+		<center>{L_NO_FRIENDS_ONLINE}</center>
+	<!-- END friends_online -->
+	</td>
+</tr>
+<tr>
+	<td class="row2" colspan="2"><strong class="genmed" style="color:red">{L_FRIENDS_OFFLINE}</strong></td>
+</tr>
+<tr>
+	<td class="row1 gensmall" align="left" valign="middle">
+	<!-- BEGIN friends_offline -->
+		<img src="portal/images/member.gif" /> <strong>{friends_offline.USERNAME_FULL}</strong><br />
+		<!-- BEGINELSE -->
+		<center>{L_NO_FRIENDS_OFFLINE}</center>
+	<!-- END friends_offline -->
+	</td>
+</tr>
+</table>

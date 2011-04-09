@@ -1,0 +1,93 @@
+<!-- INCLUDE overall_header.html -->
+
+<script language="javascript" type="text/javascript">
+<!--
+<!-- INCLUDE pm_spy.js -->
+//-->
+</script>
+
+<link href="style/pm_spy.css" rel="stylesheet" type="text/css" media="screen" />
+
+<a name="maincontent"></a>
+
+<h2>{L_PM_SPY_READ}</h2>
+
+<p>{L_PM_SPY_READ_EXPLAIN}</p>
+
+<!-- IF S_INSTALL_CHECK -->
+	<div class="errorbox">
+		<p>{L_INSTALL_NOT_DELETED}</p>
+	</div>
+<!-- ENDIF -->
+
+<form id="pm_spy" method="post" action="{U_ACTION}">
+
+<hr />
+
+<div class="pagination">
+	[ {L_PM_COUNT} : {MESSAGE_COUNT} ] 
+	<!-- IF PAGINATION -->&bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{S_ON_PAGE}</a> &bull; <span>{PAGINATION}</span>
+	<!-- ENDIF -->
+</div>
+
+<fieldset class="display-options">
+	<strong>{L_SORT_BY} :</strong> {S_SORT_KEY} {S_SORT_DIR}
+	<input class="button2" type="submit" value="{L_GO}" name="sort" />
+</fieldset>
+
+<table cellspacing="1">
+<thead>
+
+	<tr>
+		<th>{L_MARK}</th>
+		<th>{L_SUBJECT}</th>
+		<th>{L_FROM}</th>
+		<th>{L_TO}</th>
+		<th>{L_BCC}</th>
+		<th>&nbsp;</th>
+		<th>{L_PM_BOX}</th>
+		<th>{L_AUTHOR_IP}</th>
+		<th>{L_DATE}</th>
+	</tr>
+</thead>
+
+<tbody>
+	<!-- BEGIN pm_row -->
+	<!-- IF pm_row.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align: center;"><input type="checkbox" class="radio" name="mark[]" value="{pm_row.PM_ID}" /></td>
+		<td class="cursor" onclick="ShowHide('{pm_row.PM_KEY}')">{pm_row.PM_SUBJECT}</td>
+		<td>{pm_row.FROM}<br />{pm_row.LAST_VISIT_FROM}</td>
+		<td>{pm_row.TO}<br />{pm_row.LAST_VISIT_TO}</td>
+		<td>{pm_row.BCC}</td>
+		<td>{pm_row.IS_GROUP}</td>
+		<td>{pm_row.FOLDER}</td>
+		<td>{pm_row.AUTHOR_IP}</td>
+		<td>{pm_row.DATE}</td>
+	</tr>
+
+	<!-- IF pm_row.S_ROW_COUNT is even --><tr class="row2" id="{pm_row.PM_KEY}" style="display: none;"><!-- ELSE --><tr class="row1" id="{pm_row.PM_KEY}" style="display: none;"><!-- ENDIF -->
+		<td>&nbsp;</td>
+		<td colspan="8" class="content">{pm_row.PM_TEXT}</td>
+	</tr>
+	<!-- END pm_row -->
+</tbody>
+</table>
+
+<br />
+	
+<input class="button2" type="submit" value="{L_DELETE_PMS}" name="delete" />
+<p class="small"><a href="#" onclick="marklist('pm_spy', 'mark', true); return false;">{L_MARK_ALL}</a> &bull; <a href="#" onclick="marklist('pm_spy', 'mark', false); return false;">{L_UNMARK_ALL}</a></div>
+
+<!-- IF PAGINATION -->
+<div class="pagination">
+	<a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{S_ON_PAGE}</a> &bull; <span>{PAGINATION}</span>
+</div>
+
+<br />
+<!-- ENDIF -->
+
+<hr />
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

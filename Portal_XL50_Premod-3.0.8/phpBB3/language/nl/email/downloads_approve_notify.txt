@@ -1,0 +1,18 @@
+Subject: Nieuwe Download
+
+Hallo {USERNAME},
+
+Je hebt deze mail ontvangen, omdat er een nieuwe of bewerkte download is geplaatst op {SITENAME} in de categorie {CATEGORY} die nog goedgekeurd moet worden:
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Als je de download goed wilt keuren gebruik dan de volgende link:
+
+{U_APPROVE}
+
+Als je deze mail niet meer wilt ontvangen kun je de instellingen aanpassen in je download profiel.
+
+{BOARD_EMAIL}

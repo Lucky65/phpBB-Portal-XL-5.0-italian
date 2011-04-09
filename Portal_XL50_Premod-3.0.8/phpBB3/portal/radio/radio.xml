@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+Types for Radio Stations:
+wm for Windows Media (mms://, .asx),
+rm for Real Media and Winamp Playlists (.ram, .ra, .pls)
+-->
+<livestreamradio>
+  <!-- Italian Radio Stations -->
+  <station>
+    <num>1</num>
+    <name>I ~ Love FM</name>
+    <url>http://www.streamsolution.it/onair/lovefm.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>2</num>
+    <name>I ~ Lolli Italia</name>
+    <url>http://www.lolliradio.net/streaming/italia.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>3</num>
+    <name>I ~ Lolli Happy</name>
+    <url>http://www.lolliradio.net/streaming/happy.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>4</num>
+    <name>I ~ Lolli Soft</name>
+    <url>http://www.lolliradio.net/streaming/soft.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>5</num>
+    <name>I ~ Lolli Dance</name>
+    <url>http://www.lolliradio.net/streaming/dance.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>6</num>
+    <name>I ~ Lolli Hits</name>
+    <url>http://www.lolliradio.net/streaming/hits.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>7</num>
+    <name>I ~ Lolli Oldies</name>
+    <url>http://www.lolliradio.net/streaming/hits.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>8</num>
+    <name>I ~ Golden 80</name>
+    <url>http://www.goldenradio.it/128.wax</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>9</num>
+    <name>I ~ Golden Hits</name>
+    <url>http://www.goldenradio.it/hitradio/hr128.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>10</num>
+    <name>I ~ Golden Italia</name>
+    <url>http://www.goldenradio.it/italia/italia.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>11</num>
+    <name>I ~ Radio Skypper</name>
+    <url>http://radioskipper.com/128.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>12</num>
+    <name>I ~ Radio Capital</name>
+    <url>mms://wm.streaming.kataweb.it/reflector:44434</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <station>
+    <num>13</num>
+    <name>I ~ Radio Mela</name>
+    <url>http://www.radiomela.it/vintage+.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Italian Language</genre>
+  </station>
+  <!-- Italian Radio Stations -->
+  <!-- Dutch Radio Stations -->
+  <station>
+    <num>16</num>
+    <name>NL ~ Radio 538</name>
+    <url>http://ms.stream.garnierprojects.com/radio538?MSWMExt=.asf</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>17</num>
+    <name>NL ~ 100% NL</name>
+    <url>http://wm1.streaming.castor.nl/100pctnl=wm2</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>18</num>
+    <name>NL ~ Sky Radio</name>
+    <url>http://217.196.35.12/asx/skyradio.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>19</num>
+    <name>NL ~ Arrow Rock</name>
+    <url>http://www.garnierstreamingmedia.com/asx/streamerswitch.asp?stream=205</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>20</num>
+    <name>NL ~ Arrow Jazz</name>
+    <url>http://www.garnierstreamingmedia.com/asx/streamerswitch.asp?stream=204</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>21</num>
+    <name>NL ~ Radio Decibel</name>
+    <url>http://www.radio-decibel.nl/live/decibel.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>22</num>
+    <name>NL ~ Fresh FM</name>
+    <url>http://www.fresh.fm/media/audio/FreshFM.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>23</num>
+    <name>NL ~ Gigant FM</name>
+    <url>http://www.gigantfm.nl/listen/listen.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>24</num>
+    <name>NL ~ Sky Lovesongs</name>
+    <url>http://217.196.35.12/asx/thevalentinestation.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>25</num>
+    <name>NL ~ Sky Radio</name>
+    <url>http://217.196.35.12/asx/skyradio.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>26</num>
+    <name>NL ~ Slam!FM</name>
+    <url>http://www.true.nl/streams/slamfmlivestream.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>27</num>
+    <name>NL ~ TMF Radio</name>
+    <url>http://217.196.35.12/asx/tmfradio.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>28</num>
+    <name>NL ~ Veronica FM</name>
+    <url>http://217.196.35.12/asx/radioveronica.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>29</num>
+    <name>NL ~ Wild FM Hitradio</name>
+    <url>http://www.wildfm.nl/wildfm.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <station>
+    <num>30</num>
+    <name>NL ~ Q-Music</name>
+    <url>http://www.q-music.nl/asx/q-music.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>Dutch Language</genre>
+  </station>
+  <!-- Dutch Radio Stations -->
+  <!-- German Radio Stations -->
+  <station>
+    <num>31</num>
+    <name>DE ~ WDR Eins Live</name>
+    <url>http://www.wdr.de/wdrlive//media/einslive-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>32</num>
+    <name>DE ~ WDR2</name>
+    <url>http://www.wdr.de/wdrlive/media/wdr2-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>33</num>
+    <name>DE ~ WDR3</name>
+    <url>http://www.wdr.de/wdrlive/media/wdr3-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>34</num>
+    <name>DE ~ WDR4</name>
+    <url>http://www.wdr.de/wdrlive/media/wdr4-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>35</num>
+    <name>DE ~ WDR5</name>
+    <url>http://www.wdr.de/wdrlive/media/wdr5-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>36</num>
+    <name>DE ~ 1LIVE</name>
+    <url>http://www.wdr.de/wdrlive/media/einslive-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>37</num>
+    <name>DE ~ 1LIVE diggi</name>
+    <url>http://www.wdr.de/wdrlive/media/einslivedigi-wm32.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>38</num>
+    <name>DE ~ MDR JUMP</name>
+    <url>http://mdr.streamfarm.net/cms/_v/radios/mdr/live/jump/mp3.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>39</num>
+    <name>DE ~ YOU FM</name>
+    <url>http://metafiles.gl-systemhaus.de/hr/youfm_1.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>40</num>
+    <name>DE ~ HR1</name>
+    <url>http://metafiles.gl-systemhaus.de/hr/hr1_1.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>41</num>
+    <name>DE ~ HR2</name>
+    <url>http://metafiles.gl-systemhaus.de/hr/hr2_1.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>42</num>
+    <name>DE ~ HR3</name>
+    <url>http://metafiles.gl-systemhaus.de/hr/hr3_1.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>43</num>
+    <name>DE ~ Club</name>
+    <url>http://club-high.rautemusik.fm/listen.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>44</num>
+    <name>DE ~ BigCityBeats</name>
+    <url>http://bcb-high.rautemusik.fm/listen.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <station>
+    <num>45</num>
+    <name>DE ~ Goldies</name>
+    <url>http://goldies-high.rautemusik.fm/listen.asx</url>
+    <broadband></broadband>
+    <type>wm</type>
+    <genre>German Language</genre>
+  </station>
+  <!-- German Radio Stations -->
+</livestreamradio>

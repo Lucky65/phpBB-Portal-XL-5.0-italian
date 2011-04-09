@@ -1,0 +1,906 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF S_TOPIC_HOVER_PREVIEW_ENABLED --> 
+<!-- INCLUDE portal/portal_topic_hover_preview.html -->
+<!-- ENDIF -->        
+  
+<!-- Require basic Easy Widgets -->
+<script type="text/javascript">
+// <![CDATA[
+$(function(){
+  $.fn.EasyWidgets({
+    behaviour : {
+      useCookies 		: true // Use cookies to store positions and states
+    },
+    cookies : {
+	  expires 			: 365, // Cookie expiration time in days
+      closeName 		: 'portal_xl_viewtopic-close', // Cookie name for close Widgets
+      disableName 		: 'portal_xl_viewtopic-disable', // Cookie name for enable/disable Widgets
+      positionName 		: 'portal_xl_viewtopic-position', // Cookie name for positined Widgets
+      collapseName 		: 'portal_xl_viewtopic-collapse' // Cookie name for collapsed Widgets
+    },
+    selectors : {
+      container 		: 'div'
+    },
+    effects : {
+      effectDuration 	: 250,
+      widgetClose 		: 'fade',
+      widgetExtend 		: 'fade',
+      widgetCollapse 	: 'fade'
+    },
+    i18n : {
+      editText 			: '{L_WIDG_EDIT_TEXT}', // Widget edit link text
+//      closeText 		: '{L_WIDG_CLOSE_TEXT}', // Widget close link text
+//      extendText 		: '{L_WIDG_EXTENT_TEXT}', // Widget extend link text
+//      collapseText 	: '{L_WIDG_COLLAPSE_TEXT}', // Widget collapse link text
+      cancelEditText 	: '{L_WIDG_CANCEL_TEXT}', // Widget cancel edit link text
+      editTitle 		: '{L_WIDG_EDIT}', // Widget edition link title
+      closeTitle 		: '{L_WIDG_CLOSE}', // Widget close link title
+      confirmMsg 		: '{L_WIDG_REMOVE}', // Widget confirmation dialog message
+      cancelEditTitle 	: '{L_WIDG_CANCEL}', // Widget cancel edit link title
+      extendTitle 		: '{L_WIDG_EXTENT}', // Widget extend link title
+      collapseTitle 	: '{L_WIDG_COLLAPSE}', // Widget collapse link title
+	  
+      collapseText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/collapse.png" alt="{L_WIDG_COLLAPSE_TEXT}" />',
+      extendText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/extend.png" alt="{L_WIDG_EXTENT_TEXT}" />',
+      closeText 		: '<img src="{T_TEMPLATE_PATH}/portal/src/images/close.png" alt="{L_WIDG_CLOSE_TEXT}" />'
+    }
+	
+  });
+});
+// ]]>
+</script>
+
+<div id="portal_container">
+
+<!-- IF PORTAL_INDEX_PAGE -->
+
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- IF $PORTALXL_TOP_COLLUMN_PANEL_VIEWTOPIC == '1' -->        
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+  <div class="<!-- IF top_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+        
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a>&nbsp;{top_block_files.TOP_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+         <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+<!-- ELSE -->
+<!-- BEGIN top_block_files -->
+<div class="widget-place" id="widget-place-{top_block_files.TOP_BLOCK_ID}-top">
+    <div class="widget collapsable removable closeconfirm" id="block-{top_block_files.TOP_BLOCK_ID}-top">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{top_block_files.TOP_BLOCK_ID}">{top_block_files.TOP_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{top_block_files.TOP_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF top_block_files.TOP_BLOCKS -->{top_block_files.TOP_BLOCKS}<!-- ENDIF -->
+               <!-- IF top_block_files.TOP_BLOCKS_CONTENT -->{top_block_files.TOP_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END top_block_files -->
+<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<!-- IF SI_DISPLAY_INDEX_LEFT -->
+<tr>
+<!-- [+] left block area -->
+	<td width="{PORTAL_INDEX_LEFT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- IF $PORTALXL_LEFT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+  <div class="<!-- IF left_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+                  
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a>&nbsp;{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF left_block_files.LEFT_BLOCKS-->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+         <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+<!-- ELSE -->
+<!-- BEGIN left_block_files -->
+<div class="widget-place" id="widget-place-{left_block_files.LEFT_BLOCK_ID}-left">
+    <div class="widget collapsable removable closeconfirm" id="block-{left_block_files.LEFT_BLOCK_ID}-left">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                     <a href="#" title="#{left_block_files.LEFT_BLOCK_ID}">{left_block_files.LEFT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{left_block_files.LEFT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF left_block_files.LEFT_BLOCKS -->{left_block_files.LEFT_BLOCKS}<!-- ENDIF -->
+               <!-- IF left_block_files.LEFT_BLOCKS_CONTENT -->{left_block_files.LEFT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END left_block_files -->
+<!-- ENDIF -->
+
+	</td>
+<!-- [-] left block area -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- ENDIF -->
+<!-- [+] center block area -->
+	<td valign="top">
+<!-- ENDIF -->
+
+
+
+
+<!-- IF ADVERTISEMENT3 -->
+<div class="khaki" style="margin: 5px 0px 5px 0px; border: none;">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<div align="center"><h3>{ADVERTISEMENT_NAME3}</h3>{ADVERTISEMENT3}</div>
+  <span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF U_MCP --><p>[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ENDIF -->
+<h2><a href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<!-- IF FORUM_DESC --><div style="display: none !important;">{FORUM_DESC}<br /></div><!-- ENDIF -->
+
+<!-- IF MODERATORS or U_MCP -->
+	<p>
+		<!-- IF MODERATORS -->
+			<strong><!-- IF S_SINGLE_MODERATOR -->{L_MODERATOR}<!-- ELSE -->{L_MODERATORS}<!-- ENDIF -->:</strong> {MODERATORS}
+		<!-- ENDIF -->
+
+	</p>
+<!-- ENDIF -->
+
+<!-- IF S_FORUM_RULES -->
+	<div class="rules">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<!-- IF U_FORUM_RULES -->
+			<a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
+		<!-- ELSE -->
+			<strong>{L_FORUM_RULES}</strong><br />
+			{FORUM_RULES}
+		<!-- ENDIF -->
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- ENDIF -->
+
+	<div class="gray" style="border:none;">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+			<strong>{L_COMMON_SEARCH_TERMS}</strong><br />
+            <em>{META_KEY_DISPLAY}</em>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+<div class="topic-actions">
+
+	<div class="buttons">
+	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+		<div class="<!-- IF S_IS_LOCKED -->locked-icon<!-- ELSE -->reply-icon<!-- ENDIF -->"><a href="{U_POST_REPLY_TOPIC}" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->"><span></span><!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED_SHORT}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF --></a></div>
+	<!-- ENDIF -->
+	</div>
+
+	<!-- IF S_DISPLAY_SEARCHBOX -->
+		<div class="search-box">
+			<form method="post" id="topic-search" action="{S_SEARCHBOX_ACTION}">
+			<fieldset>
+				<input class="inputbox search tiny"  type="text" name="keywords" id="search_keywords" size="20" value="{L_SEARCH_TOPIC}" onclick="if(this.value=='{LA_SEARCH_TOPIC}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_TOPIC}';" />
+				<input class="button2" type="submit" value="{L_SEARCH}" />
+				<input type="hidden" value="{TOPIC_ID}" name="t" />
+				<input type="hidden" value="msgonly" name="sf" />
+			</fieldset>
+			</form>
+		</div>
+	<!-- ENDIF -->
+
+	<!-- IF PAGINATION or TOTAL_POSTS -->
+		<div class="pagination">
+            <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a> &bull; <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp;
+			<!-- IF U_VIEW_UNREAD_POST and not S_IS_BOT --><a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a> &bull; <!-- ENDIF -->{TOTAL_POSTS}
+			<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+		</div>
+	<!-- ENDIF -->
+
+</div>
+<div class="clear"></div>
+
+<!-- IF S_TOPIC_DELETED -->
+	<div id="p0" class="post bg2 deleted_topic">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<div class="postbody">
+			<h3 class="first">{L_PRIME_TOPIC_DELETED_MSG}</h3>
+			<div class="ignore">
+				{DELETED_MSG}
+			</div>
+		</div>
+		<div class="back2top"><a href="{U_VIEW_TOPIC}#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+		<!-- start mod view or mark unread posts (and end mod too) ... added preceding line -->
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+<!-- ENDIF -->
+
+<!-- IF S_HAS_POLL -->
+	<form method="post" action="{S_POLL_ACTION}">
+
+	<div class="panel">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="content">
+			<h2>{POLL_QUESTION}</h2>
+			<p class="author">{L_POLL_LENGTH}<!-- IF S_CAN_VOTE and L_POLL_LENGTH --><br /><!-- ENDIF --><!-- IF S_CAN_VOTE -->{L_MAX_VOTES}<!-- ENDIF --></p>
+
+			<fieldset class="polls">
+			<!-- BEGIN poll_option -->
+				<dl class="<!-- IF poll_option.POLL_OPTION_VOTED -->voted<!-- ENDIF -->"<!-- IF poll_option.POLL_OPTION_VOTED --> title="{L_POLL_VOTED_OPTION}"<!-- ENDIF -->>
+					<dt><!-- IF S_CAN_VOTE --><label for="vote_{poll_option.POLL_OPTION_ID}">{poll_option.POLL_OPTION_CAPTION}</label><!-- ELSE -->{poll_option.POLL_OPTION_CAPTION}<!-- ENDIF --></dt>
+					<!-- IF S_CAN_VOTE --><dd style="width: auto;"><!-- IF S_IS_MULTI_CHOICE --><input type="checkbox" name="vote_id[]" id="vote_{poll_option.POLL_OPTION_ID}" value="{poll_option.POLL_OPTION_ID}"<!-- IF poll_option.POLL_OPTION_VOTED --> checked="checked"<!-- ENDIF --> /><!-- ELSE --><input type="radio" name="vote_id[]" id="vote_{poll_option.POLL_OPTION_ID}" value="{poll_option.POLL_OPTION_ID}"<!-- IF poll_option.POLL_OPTION_VOTED --> checked="checked"<!-- ENDIF --> /><!-- ENDIF --></dd><!-- ENDIF -->
+					<!-- IF S_DISPLAY_RESULTS --><dd class="resultbar"><div class="<!-- IF poll_option.POLL_OPTION_PCT < 20 -->pollbar1<!-- ELSEIF poll_option.POLL_OPTION_PCT < 40 -->pollbar2<!-- ELSEIF poll_option.POLL_OPTION_PCT < 60 -->pollbar3<!-- ELSEIF poll_option.POLL_OPTION_PCT < 80 -->pollbar4<!-- ELSE -->pollbar5<!-- ENDIF -->" style="width:{poll_option.POLL_OPTION_PERCENT};">{poll_option.POLL_OPTION_RESULT}</div></dd>
+					<dd><!-- IF poll_option.POLL_OPTION_RESULT == 0 -->{L_NO_VOTES}
+                      <!-- ELSE -->{poll_option.POLL_OPTION_PERCENT}
+                      
+                       <!-- IF MODERATORS or U_MCP -->
+                        <span style="padding-left: 5px;">
+                          <a href="#" onclick="return doCollapseExpand('box{poll_option.POLL_OPTION_ID}','btn{poll_option.POLL_OPTION_ID}')"> 
+                          <img src="{T_THEME_PATH}/images/arrow_user_down.gif" alt="{L_TOTAL_HAVE_VOTED}" title="{L_TOTAL_HAVE_VOTED}" height="11" width="11" name="btn{poll_option.POLL_OPTION_ID}" /></a>
+                        </span>
+                        <span id="box{poll_option.POLL_OPTION_ID}" style="display:none; font-weight:normal;">
+                          <select>
+                            <option>{L_TOTAL_HAVE_VOTED}</option>
+                            {poll_option.POLL_OPTION_VOTERS}
+                          </select>
+                        </span>
+                       <!-- ENDIF -->
+                     
+                      <!-- ENDIF -->
+                    </dd><!-- ENDIF -->
+				</dl>
+			<!-- END poll_option -->
+
+			<!-- IF S_DISPLAY_RESULTS -->
+				<dl>
+					<dt>&nbsp;</dt>
+					<dd class="resultbar">{L_TOTAL_VOTES} : {TOTAL_VOTES}</dd>
+				</dl>
+			<!-- ENDIF -->
+
+			<!-- IF S_CAN_VOTE -->
+				<dl style="border-top: none;">
+					<dt>&nbsp;</dt>
+					<dd class="resultbar"><input type="submit" name="update" value="{L_SUBMIT_VOTE}" class="button1" /></dd>
+				</dl>
+			<!-- ENDIF -->
+
+			<!-- IF not S_DISPLAY_RESULTS -->
+				<dl style="border-top: none;">
+					<dt>&nbsp;</dt>
+					<dd class="resultbar"><a href="{U_VIEW_RESULTS}">{L_VIEW_RESULTS}</a></dd>
+				</dl>
+			<!-- ENDIF -->
+			</fieldset>
+		</div>
+
+		<span class="corners-bottom"><span></span></span></div>
+		{S_FORM_TOKEN}
+		{S_HIDDEN_FIELDS}
+	</div>
+
+
+	</form>
+	<hr />
+<!-- ENDIF -->
+
+<!-- BEGIN postrow -->
+	<!-- IF postrow.S_FIRST_UNREAD --><a id="unread"></a><!-- ENDIF -->
+	<div id="p{postrow.POST_ID}" class="post <!-- IF postrow.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF postrow.S_UNREAD_POST --> unreadpost<!-- ENDIF --><!-- IF postrow.S_POST_REPORTED --> reported<!-- ENDIF --><!-- IF postrow.S_DELETED --> deleted_post<!-- ENDIF -->">
+		<div class="inner"><span class="corners-top"><span style="float:right;"><!-- IF postrow.ONLINE_IMG -->{postrow.ONLINE_IMG}<!-- ENDIF --></span></span>
+
+		<div class="postbody">
+			<!-- IF postrow.S_IGNORE_POST -->
+				<div class="ignore">{postrow.L_IGNORE_POST}</div>
+			<!-- ELSE -->
+
+		<!-- IF not S_IS_BOT -->
+			<!-- IF postrow.U_QUOTE or postrow.U_INFO or postrow.U_DELETE or postrow.U_EDIT -->
+				<ul class="profile-icons">
+					<!-- IF postrow.U_EDIT --><li class="edit-icon"><a href="{postrow.U_EDIT}" title="{L_EDIT_POST}"><span>{L_EDIT_POST}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_DELETE --><li class="delete-icon"><a href="{postrow.U_DELETE}" title="{L_DELETE_POST}"><span>{L_DELETE_POST}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_REPORT --><li class="report-icon"><a href="{postrow.U_REPORT}" title="{L_REPORT_POST}"><span>{L_REPORT_POST}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_WARN --><li class="warn-icon"><a href="{postrow.U_WARN}" title="{L_WARN_USER}"><span>{L_WARN_USER}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_INFO --><li class="info-icon"><a href="{postrow.U_INFO}" title="{L_INFORMATION}"><span>{L_INFORMATION}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_QUOTE --><li class="quote-icon"><a href="{postrow.U_QUOTE}" title="{L_REPLY_WITH_QUOTE}"><span>{L_REPLY_WITH_QUOTE}</span></a></li><!-- ENDIF -->
+					<br />
+                    <!-- IF postrow.S_SHARE_ON_FIRST_POST and postrow.S_SO_STATUS and not postrow.S_SO_USERLOGGEDIN-->
+                        <!-- IF postrow.S_SO_FACEBOOK --><li class="facebook-icon"><a href="{postrow.U_FACEBOOK}" target="_blank" title="{L_SHARE_ON_FACEBOOK}"><span>{L_SHARE_ON_FACEBOOK}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_TWITTER --><li class="twitter-icon"><a href="{postrow.U_TWITTER}" target="_blank" title="{L_SHARE_ON_TWITTER}"><span>{L_SHARE_ON_TWITTER}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_ORKUT --><li class="orkut-icon"><a href="javascript:(function(){var d=document,l=d.location,e=encodeURIComponent,u='http://promote.orkut.com/preview?src=bkmrklt&v=1&nt=orkut.com&du='+e(l.href)+'&tt='+e(d.title),s='&rdrinl=1';if(!window.open(u,'','height=575,width=700,directories=0,location=1,menubar=0,resizable=0,scrollbars=1,status=1,toolbar=0'))l.href=u+s;})();" title="{L_SHARE_ON_ORKUT}"><span>{L_SHARE_ON_ORKUT}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_DIGG --><li class="digg-icon"><a href="{postrow.U_DIGG}" target="_blank" title="{L_SHARE_ON_DIGG}"><span>{L_SHARE_ON_DIGG}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_MYSPACE --><li class="myspace-icon"><a href="{postrow.U_MYSPACE}" target="_blank" title="{L_SHARE_ON_MYSPACE}"><span>{L_SHARE_ON_MYSPACE}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_DELICIOUS --><li class="delicious-icon"><a href="{postrow.U_DELICIOUS}" target="_blank" title="{L_SHARE_ON_DELICIOUS}"><span>{L_SHARE_ON_DELICIOUS}</span></a></li><!-- ENDIF -->
+                        <!-- IF postrow.S_SO_TECHNORATI --><li class="technorati-icon"><a href="{postrow.U_TECHNORATI}" target="_blank" title="{L_SHARE_ON_TECHNORATI}"><span>{L_SHARE_ON_TECHNORATI}</span></a></li><!-- ENDIF -->
+                    <!-- ENDIF -->
+				</ul>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+
+			<h3 <!-- IF postrow.S_FIRST_ROW -->class="first"<!-- ENDIF -->><!-- IF postrow.POST_ICON_IMG --><img src="{T_ICONS_PATH}{postrow.POST_ICON_IMG}" width="{postrow.POST_ICON_IMG_WIDTH}" height="{postrow.POST_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="{U_VIEW_TOPIC}#p{postrow.POST_ID}">{postrow.POST_SUBJECT}</a></h3>
+			<p class="author"><!-- IF S_IS_BOT -->{postrow.MINI_POST_IMG}<!-- ELSE --><a href="{U_VIEW_TOPIC}#p{postrow.POST_ID}">{postrow.MINI_POST_IMG}</a><!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong> &raquo; {postrow.POST_DATE} </p>
+
+			<!-- IF postrow.S_POST_UNAPPROVED or postrow.S_POST_REPORTED -->
+				<p class="rules">
+					<!-- IF postrow.S_POST_UNAPPROVED -->{UNAPPROVED_IMG} <a href="{postrow.U_MCP_APPROVE}"><strong>{L_POST_UNAPPROVED}</strong></a><!-- ENDIF -->
+					<!-- IF postrow.S_POST_REPORTED -->{REPORTED_IMG} <a href="{postrow.U_MCP_REPORT}"><strong>{L_POST_REPORTED}</strong></a><!-- ENDIF -->
+				</p>
+			<!-- ENDIF -->
+
+            <div class="content">{postrow.MESSAGE}</div>
+                  
+            <!-- IF postrow.S_HAS_ATTACHMENTS -->
+            <br style="clear: both" />
+                <div class="attachwrapper">
+                <div class="attachtitle">{L_ATTACHMENTS}:</div>
+                <!-- BEGIN attachment -->
+                <div class="attachcontent">{postrow.attachment.DISPLAY_ATTACHMENT}</div>
+                <!-- END attachment -->
+                </div>
+            <!-- ENDIF -->
+
+			<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
+			<!-- IF postrow.EDITED_MESSAGE or postrow.EDIT_REASON -->
+				<div class="notice">{postrow.EDITED_MESSAGE}
+					<!-- IF postrow.EDIT_REASON --><br /><strong>{L_REASON}:</strong> <em>{postrow.EDIT_REASON}</em><!-- ENDIF -->
+				</div>
+			<!-- ENDIF -->
+
+			<!-- IF postrow.BUMPED_MESSAGE --><div class="notice">{postrow.BUMPED_MESSAGE}</div><!-- ENDIF -->
+			<!-- IF postrow.SIGNATURE and postrow.DISABLE_FIRST_POST_SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
+		<!-- ENDIF -->
+
+		</div>
+
+		<!-- IF not postrow.S_IGNORE_POST -->
+			<dl class="postprofile" id="profile{postrow.POST_ID}">
+			<dt>
+				<!-- IF postrow.POSTER_AVATAR -->
+					<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{postrow.POSTER_AVATAR}</a><!-- ELSE -->{postrow.POSTER_AVATAR}<!-- ENDIF --><br />
+				<!-- ENDIF -->
+				<!-- IF not postrow.U_POST_AUTHOR --><strong>{postrow.POST_AUTHOR_FULL}</strong><!-- ELSE -->{postrow.POST_AUTHOR_FULL}<!-- ENDIF -->
+			</dt>
+
+			<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG --><dd><b class="postauthor"<!-- IF postrow.POST_AUTHOR_COLOUR --> style="color: {postrow.POST_AUTHOR_COLOUR}" <!-- ENDIF -->>{postrow.RANK_TITLE}</b><!-- IF postrow.RANK_TITLE and postrow.RANK_IMG --><br /><!-- ENDIF -->{postrow.RANK_IMG}</dd><!-- ENDIF -->
+
+		<dd>&nbsp;</dd>
+
+        <dl style="padding-left:5px;">
+       <!-- IF postrow.U_POST_AUTHOR -->
+        <a href="#" onclick="return doCollapseExpand('box{postrow.POST_ID}','btn{postrow.POST_ID}')"> 
+        <img src="{T_THEME_PATH}/images/arrow_user_down.gif" alt="{L_USERS_INFORMATION}" title="{L_USERS_INFORMATION}" height="11" width="11" name="btn{postrow.POST_ID}" /></a>
+            <!-- ENDIF -->
+            {L_USERS_INFORMATION}     
+        </dl>
+        <dl id="box{postrow.POST_ID}" style="display:none; margin-top:15px; margin-bottom:5px;">
+
+		<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
+		<!-- IF postrow.POSTER_JOINED --><dd><strong>{L_JOINED}:</strong> {postrow.POSTER_JOINED}</dd><!-- ENDIF -->
+		<!-- IF postrow.POSTER_FROM --><dd><strong>{L_LOCATION}:</strong> {postrow.POSTER_FROM}</dd><!-- ENDIF -->
+        <!-- IF postrow.POSTER_GROUP --><dd><strong>{L_GROUP}:</strong> {postrow.POSTER_GROUP}</dd><!-- ENDIF -->        
+		<!-- IF postrow.POSTER_GENDER --><dd><strong>{L_GENDER}:</strong> {postrow.POSTER_GENDER_IMG}</dd><!-- ENDIF -->
+        <!-- IF S_PORTAL_ZODIACS_ENABLED -->
+            <!-- IF postrow.POSTER_ZODIAC --><dd><strong>{L_ZODIAC}:</strong> {postrow.POSTER_ZODIAC}&nbsp;{postrow.POSTER_ZODIAC_CHINESE}&nbsp;{postrow.POSTER_ZODIAC_INDIAN}</dd><!-- ENDIF -->
+        <!-- ENDIF -->
+		<!-- IF postrow.FLAG_IMG --><dd><strong>{L_COUNTRY}:</strong> {postrow.FLAG_IMG}</dd><!-- ENDIF -->
+        <!-- IF postrow.GALLERY_IMAGES != '' --><dd><strong>{L_IMAGES}:</strong> <!-- IF postrow.U_GALLERY_SEARCH --><a href="{postrow.U_GALLERY_SEARCH}">{postrow.GALLERY_IMAGES}</a><!-- ELSE -->{postrow.GALLERY_IMAGES}<!-- ENDIF --></dd><!-- ENDIF -->
+
+        <!-- IF S_USER_LOGGED_IN and not S_IS_BOT -->
+        <!-- IF postrow.POSTER_AGE --><dd><strong>{L_AGE}:</strong> {postrow.POSTER_AGE}</dd><!-- ENDIF -->
+		<!-- IF S_PORTAL_SHOW_THANKS -->
+            <!-- IF postrow.U_PROFILE --><dd><strong>{L_GIVEN}:</strong> {postrow.POSTER_GIVE_COUNT} {L_THANKS}</dd><!-- ENDIF -->
+            <!-- IF postrow.U_PROFILE --><dd><strong>{L_RECEIVED}:</strong> {postrow.POSTER_RECEIVE_COUNT} {L_THANKS}</dd><!-- ENDIF -->
+        <!-- ENDIF -->
+		<!-- IF postrow.POSTER_THEME --><dd><strong>{L_FORUM_STYLE}:</strong> {postrow.POSTER_THEME}</dd><!-- ENDIF -->
+        <!-- IF postrow.S_GROUP_LIST --><dd><strong>{L_GROUPS}:</strong> {postrow.S_GROUP_LIST}</dd><!-- ENDIF -->
+ 		<!-- IF postrow.S_HAS_HIGHSCORES --><dd><strong>{L_ARCADE_HIGHSCORES}:</strong> <a href="{postrow.U_ARCADE_STATS}">{postrow.TOTAL_HIGHSCORES}</a></dd><!-- ENDIF -->
+        <!-- ENDIF -->
+
+		<!-- IF postrow.S_PROFILE_FIELD1 -->
+			<!-- Use a construct like this to include admin defined profile fields. Replace FIELD1 with the name of your field. -->
+			<dd><strong>{postrow.PROFILE_FIELD1_NAME}:</strong> {postrow.PROFILE_FIELD1_VALUE}</dd>
+		<!-- ENDIF -->
+
+		<!-- BEGIN custom_fields -->
+			<dd><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</dd>
+		<!-- END custom_fields -->
+
+        </dl>
+
+		<dd>&nbsp;</dd>
+		<!-- IF not S_IS_BOT -->
+		<!-- IF postrow.U_PM or postrow.U_EMAIL or postrow.U_WWW or postrow.U_MSN or postrow.U_ICQ or postrow.U_YIM or postrow.U_AIM or postrow.U_JABBER -->
+			<dd>
+				<ul class="profile-icons">
+					<!-- IF postrow.U_PM --><li class="pm-icon"><a href="{postrow.U_PM}" title="{L_PRIVATE_MESSAGE}"><span>{L_PRIVATE_MESSAGE}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_EMAIL --><li class="email-icon"><a href="{postrow.U_EMAIL}" title="{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}"><span>{L_SEND_EMAIL_USER} {postrow.POST_AUTHOR}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_WWW --><li class="web-icon"><a href="{postrow.U_WWW}" {EXTERNAL_LINK_TARGET} title="{L_VISIT_WEBSITE}: {postrow.U_WWW}"><span>{L_WEBSITE}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_MSN --><li class="msnm-icon"><a href="{postrow.U_MSN}" onclick="popup(this.href, 550, 320); return false;" title="{L_MSNM}"><span>{L_MSNM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_ICQ --><li class="icq-icon"><a href="{postrow.U_ICQ}" onclick="popup(this.href, 550, 320); return false;" title="{L_ICQ}"><span>{L_ICQ}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_YIM --><li class="yahoo-icon"><a href="{postrow.U_YIM}" onclick="popup(this.href, 780, 550); return false;" title="{L_YIM}"><span>{L_YIM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_AIM --><li class="aim-icon"><a href="{postrow.U_AIM}" onclick="popup(this.href, 550, 320); return false;" title="{L_AIM}"><span>{L_AIM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_JABBER --><li class="jabber-icon"><a href="{postrow.U_JABBER}" onclick="popup(this.href, 550, 320); return false;" title="{L_JABBER}"><span>{L_JABBER}</span></a></li><!-- ENDIF -->
+                    <!-- IF postrow.U_GALLERY --><li class="gallery-icon"><a href="{postrow.U_GALLERY}" title="{L_PERSONAL_ALBUM}"><span>{L_PERSONAL_ALBUM}</span></a></li><!-- ENDIF -->
+				</ul>
+			</dd>
+		<!-- ENDIF -->
+		<!-- ENDIF -->
+
+		</dl>
+	<!-- ENDIF -->
+
+		<div class="back2top"><a href="{U_VIEW_TOPIC}#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a><!-- IF S_INC_UNREAD_LINK --><a href="{postrow.U_MARK_UNREAD}" class="post" title="{L_MARK_POST_UNREAD}">{L_MARK_POST_UNREAD}</a><!-- ENDIF --></div>
+		<!-- start mod view or mark unread posts (and end mod too) ... added preceding line -->
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<!-- IF ADVERTISEMENT2 -->
+	<div class="orange" style="border: none;">
+		<div class="inner"><span class="corners-top"><span style="float:right;"><!-- IF postrow.ONLINE_IMG -->{postrow.ONLINE_IMG}<!-- ENDIF --></span></span>
+		<div class="postbody" style="margin-left: 5px;">
+			<h3>{ADVERTISEMENT_NAME2}</h3>
+			<div class="content">{ADVERTISEMENT2}</div>
+		</div>
+		<dl class="postprofile" id="profile{postrow.POST_ID}">
+			<dd>&nbsp;</dd>
+		</dl>
+		<div class="back2top"><a href="{U_VIEW_TOPIC}#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<!-- ENDIF -->
+	
+	<!-- IF postrow.S_FIRST_ROW == 2 --> 
+	<!-- IF ADVERTISEMENT1 -->
+	<div class="green" style="border: none;">
+		<div class="inner"><span class="corners-top"><span style="float:right;"><!-- IF postrow.ONLINE_IMG -->{postrow.ONLINE_IMG}<!-- ENDIF --></span></span>
+		<div class="postbody" style="margin-left: 5px;">
+			<h3>{ADVERTISEMENT_NAME1}</h3>
+			<div class="content">{ADVERTISEMENT1}</div>
+		</div>
+		<dl class="postprofile" id="profile{postrow.POST_ID}">
+			<dd>&nbsp;</dd>
+		</dl>
+		<div class="back2top"><a href="{U_VIEW_TOPIC}#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<!-- ENDIF -->
+	<!-- ENDIF -->
+    
+  <!-- IF S_PORTAL_SHOW_THANKS -->
+	<!-- IF not S_USER_LOGGED_IN and not postrow.THANKS -->
+	<!-- ELSEIF postrow.S_IS_OWN_POST and not postrow.THANKS -->
+	<!-- ELSE -->
+	<div class="post bg3">
+		<div class="inner"><span class="corners-top"><span></span></span>
+        
+        <table width="100%" cellspacing="0">
+            <!-- IF postrow.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+            <td style="text-align: center;">
+              <!-- IF S_USER_LOGGED_IN and not postrow.S_IS_OWN_POST and not S_IS_BOT -->
+              <a href="{postrow.THANKS_LINK}"><img src="{postrow.THANKS_IMG}" alt="{postrow.THANK_ALT}{postrow.POST_AUTHOR}{postrow.THANK_ALT2}" /></a>
+              <!-- ENDIF -->
+            </td>
+            <td valign="top" style="padding-left: 4px;">
+            
+            <!-- IF postrow.THANKS -->
+            <table width="100%" align="center" cellspacing="0" style="margin-bottom:5px; font-size:11px;">
+              <tr>
+                <td>{postrow.THANK_TEXT}{postrow.POST_AUTHOR_FULL}{postrow.THANKS_GENDER}:&nbsp;
+                <a href="#" onclick="return doCollapseExpand('box-thanks{postrow.POST_ID}','btn-thanks{postrow.POST_ID}')"><img src="{T_THEME_PATH}/images/arrow_user_down.gif" alt="{L_USERS_INFORMATION}" title="{L_USERS_INFORMATION}" height="12" width="12" name="btn-thanks{postrow.POST_ID}" /></a></td>
+              </tr>
+            </table>
+            <table id="box-thanks{postrow.POST_ID}" style="display:none; margin-top:10px; margin-bottom:5px; text-align:{S_CONTENT_FLOW_BEGIN}; font-size:11px;" cellspacing="0" width="100%">
+              <tr>
+                <td class="row1">{postrow.THANKS}</td>
+              </tr>
+            </table>
+            <!-- ENDIF -->
+             
+            </td>
+          </tr>
+        </table>
+            
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<hr class="divider" />
+	<!-- ENDIF -->
+  <!-- ENDIF -->
+  
+<!-- IF postrow.S_FIRST_ROW and postrow.S_SO_USERLOGGEDIN -->
+    <div class="panel">
+        <div class="inner">
+            <span class="corners-top"><span></span></span>
+            <h3>{L_SHARE_ON}</h3>
+            <table width="100%">
+                <tr>
+                   <!-- IF postrow.S_SO_FACEBOOK --><td align="center"><a href="{postrow.U_FACEBOOK}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_facebook.png" alt="{L_SHARE_ON_FACEBOOK}" title="{L_SHARE_ON_FACEBOOK}"/></a></td>
+                   <td><a href="{postrow.U_FACEBOOK}" class="topictitle" target="_blank">{L_SHARE_FACEBOOK}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_TWITTER --><td align="center"><a href="{postrow.U_TWITTER}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_twitter.png" alt="{L_SHARE_ON_TWITTER}" title="{L_SHARE_ON_TWITTER}"/></a></td>
+                   <td><a href="{postrow.U_TWITTER}" class="topictitle" target="_blank">{L_SHARE_TWITTER}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_ORKUT --><td align="center"><a href="javascript:(function(){var d=document,l=d.location,e=encodeURIComponent,u='http://promote.orkut.com/preview?src=bkmrklt&v=1&nt=orkut.com&du='+e(l.href)+'&tt='+e(d.title),s='&rdrinl=1';if(!window.open(u,'','height=575,width=700,directories=0,location=1,menubar=0,resizable=0,scrollbars=1,status=1,toolbar=0'))l.href=u+s;})();"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_orkut.gif" alt="{L_SHARE_ON_ORKUT}" title="{L_SHARE_ON_ORKUT}"/></a></td>
+                   <td><a href="javascript:(function(){var d=document,l=d.location,e=encodeURIComponent,u='http://promote.orkut.com/preview?src=bkmrklt&v=1&nt=orkut.com&du='+e(l.href)+'&tt='+e(d.title),s='&rdrinl=1';if(!window.open(u,'','height=575,width=700,directories=0,location=1,menubar=0,resizable=0,scrollbars=1,status=1,toolbar=0'))l.href=u+s;})();" class="topictitle">{L_SHARE_ORKUT}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_DIGG --><td align="center"><a href="{postrow.U_DIGG}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_digg.gif" alt="{L_SHARE_ON_DIGG}" title="{L_SHARE_ON_DIGG}"/></a></td>
+                   <td><a href="{postrow.U_DIGG}" class="topictitle" target="_blank">{L_SHARE_DIGG}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_MYSPACE --><td align="center"><a href="{postrow.U_MYSPACE}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_myspace.png" alt="{L_SHARE_ON_MYSPACE}" title="{L_SHARE_ON_MYSPACE}"/></a></td>
+                   <td><a href="{postrow.U_MYSPACE}" class="topictitle" target="_blank">{L_SHARE_MYSPACE}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_DELICIOUS --><td align="center"><a href="{postrow.U_DELICIOUS}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_delicious.gif" alt="{L_SHARE_ON_DELICIOUS}" title="{L_SHARE_ON_DELICIOUS}"/></a></td>
+                   <td><a href="{postrow.U_DELICIOUS}" class="topictitle" target="_blank">{L_SHARE_DELICIOUS}</a></td> <!-- ENDIF -->
+                   
+                   <!-- IF postrow.S_SO_TECHNORATI --><td align="center"><a href="{postrow.U_TECHNORATI}" target="_blank"><img src="{T_IMAGESET_LANG_PATH}/share_on_buttons/shareon_technorati.png" alt="{L_SHARE_ON_TECHNORATI}" title="{L_SHARE_ON_TECHNORATI}"/></a></td>
+                   <td><a href="{postrow.U_TECHNORATI}" class="topictitle" target="_blank">{L_SHARE_TECHNORATI}</a></td>	<!-- ENDIF -->				   
+                </tr>   			
+            </table>
+            <span class="corners-bottom"><span></span></span>
+        </div>
+    </div>
+<!-- ENDIF -->
+    
+<!-- END postrow -->
+
+	<!-- IF ADVERTISEMENT4 -->
+	<div class="khaki" style="margin: 5px 0px 5px 0px; border: none;">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<div align="center"><h3>{ADVERTISEMENT_NAME4}</h3>{ADVERTISEMENT4}</div>
+  		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<!-- ENDIF -->
+
+<!-- IF S_QUICK_REPLY -->
+	<!-- INCLUDE quickreply_editor.html -->
+<!-- ENDIF -->
+<!-- IF QUICK_REPLY_ALLOWED -->
+    <!-- INCLUDE prime_quick_reply.html -->
+<!-- ENDIF -->
+
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+	<form id="viewtopic" method="post" action="{S_TOPIC_ACTION}">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
+		<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
+		<!-- IF not S_IS_BOT -->
+		<label>{L_DISPLAY_POSTS}: {S_SELECT_SORT_DAYS}</label>
+		<label>{L_SORT_BY} {S_SELECT_SORT_KEY}</label> <label>{S_SELECT_SORT_DIR} <input type="submit" name="sort" value="{L_GO}" class="button2" /></label>
+		<!-- ENDIF -->
+	</fieldset>
+
+	</form>
+	<hr />
+<!-- ENDIF -->
+
+<div class="topic-actions">
+	<div class="buttons">
+	<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+		<div class="<!-- IF S_IS_LOCKED -->locked-icon<!-- ELSE -->reply-icon<!-- ENDIF -->"><a href="{U_POST_REPLY_TOPIC}" title="<!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF -->"><span></span><!-- IF S_IS_LOCKED -->{L_TOPIC_LOCKED_SHORT}<!-- ELSE -->{L_POST_REPLY}<!-- ENDIF --></a></div>
+	<!-- ENDIF -->
+	</div>
+
+	<!-- IF PAGINATION or TOTAL_POSTS -->
+		<div class="pagination">
+            <a href="{U_VIEW_OLDER_TOPIC}">{L_VIEW_PREVIOUS_TOPIC}</a> &bull; <a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC}</a>&nbsp; 
+			{TOTAL_POSTS}
+			<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+		</div>
+	<!-- ENDIF -->
+</div>
+
+<!-- IF S_RELATED_RESULTS -->
+<div class="forumbg">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="icon">
+					<dt>{L_RELATED_TOPICS}</dt>
+					<dd class="posts">{L_REPLIES}</dd>
+					<dd class="views">{L_VIEWS}</dd>
+					<dd class="lastpost"><span>{L_LAST_POST}</span></dd>
+				</dl>
+			</li>
+		</ul>
+
+	<ul class="topiclist forums">
+	<!-- BEGIN related -->
+	<li class="row bg1<!-- IF related.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF related.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF related.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
+		<dl class="icon" style="background-image: url({related.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
+			<dt <!-- IF related.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{related.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF -->><!-- IF related.S_UNREAD_TOPIC --><a href="{related.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF --><a class="topictitle" href="{related.U_TOPIC}" title="{related.TOPIC_TITLE} : {related.FORUM}">{related.TOPIC_TITLE}</a>
+			<!-- IF related.S_TOPIC_UNAPPROVED --><a href="{related.U_MCP_QUEUE}">{UNAPPROVED_IMG}</a> <!-- ENDIF -->
+			<!-- IF related.S_TOPIC_REPORTED --><a href="{related.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />
+			<!-- IF related.PAGINATION --><strong class="pagination"><span>{related.PAGINATION}</span></strong><!-- ENDIF -->
+			<!-- IF related.ATTACH_ICON_IMG -->{related.ATTACH_ICON_IMG} <!-- ENDIF -->{L_POST_BY_AUTHOR} {related.TOPIC_AUTHOR_FULL} &raquo; {related.FIRST_POST_TIME}
+			</dt>
+			<dd class="posts">{related.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
+			<dd class="views">{related.VIEWS} <dfn>{L_VIEWS}</dfn></dd>
+			<dd class="lastpost"><span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {related.LAST_POST_AUTHOR_FULL}
+				<a href="{related.U_LAST_POST}">{LAST_POST_IMG}</a><br />{related.LAST_POST_TIME}
+				<!-- IF related.U_FORUM and not related.S_POST_GLOBAL --><br /><a class="topictitle" href="{related.U_FORUM}" title="{related.FORUM}">{related.FORUM}</a><!-- ENDIF --></span></dd>
+		</dl>
+	</li>
+	<!-- END related -->
+	</ul>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF .similar -->
+<h3>{L_SIMILAR_TOPICS}</h3>
+<div class="post bg1">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<table width="100%">
+			<tr>
+				<!-- BEGIN similar -->
+				<td valign="top">
+                    <a href="{similar.U_TOPIC}" class="topictitle">{similar.TOPIC_TITLE}</a><br />
+					{L_FORUM}: <a href="{similar.U_FORUM}">{similar.FORUM}</a><br />
+					{L_AUTHOR}: {similar.USER}<br />
+					{L_REPLIES}: {similar.REPLIES}<br />
+				</td>
+				<!-- END similar -->
+			</tr>
+			</table>
+			<div class="back2top"><a href="{U_VIEW_TOPIC}#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+<!-- ENDIF -->
+
+<!-- INCLUDE jumpbox.html -->
+
+<!-- IF S_TOPIC_MOD -->
+	<form method="post" action="{S_MOD_ACTION}">
+	<fieldset class="quickmod">
+		<label for="quick-mod-select">{L_QUICK_MOD}:</label> {S_TOPIC_MOD} <input type="submit" value="{L_GO}" class="button2" />
+		{S_FORM_TOKEN}
+	</fieldset>
+	</form>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+	<h3><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
+	<p>{LOGGED_IN_USER_LIST}</p>
+<!-- ENDIF -->
+
+
+
+
+<!-- IF PORTAL_INDEX_PAGE -->
+	</td>
+<!-- [-] center block area -->
+<!-- IF SI_DISPLAY_INDEX_RIGHT -->
+	<td width="5"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="5" height="30" /></td>
+<!-- [+] right block area -->
+	<td width="{PORTAL_INDEX_RIGHT_COLLUMN_WIDTH}" valign="top">
+    
+<!-- IF $PORTALXL_RIGHT_COLLUMN_PANEL == '1' -->        
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+  <div class="<!-- IF right_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a>&nbsp;{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+         <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+<!-- ELSE -->
+<!-- BEGIN right_block_files -->
+<div class="widget-place" id="widget-place-{right_block_files.RIGHT_BLOCK_ID}-right">
+    <div class="widget collapsable removable closeconfirm" id="block-{right_block_files.RIGHT_BLOCK_ID}-right">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                 <a href="#" title="#{right_block_files.RIGHT_BLOCK_ID}">{right_block_files.RIGHT_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{right_block_files.RIGHT_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF right_block_files.RIGHT_BLOCKS -->{right_block_files.RIGHT_BLOCKS}<!-- ENDIF -->
+               <!-- IF right_block_files.RIGHT_BLOCKS_CONTENT -->{right_block_files.RIGHT_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END right_block_files -->
+<!-- ENDIF -->	
+    
+	<!-- ENDIF -->	
+	</td>
+<!-- [-] right block area -->
+</tr>
+</table>
+
+<!-- [+] bottom block area -->
+<table width="100%" cellspacing="1">
+  <tr>
+    <td>
+<!-- IF $PORTALXL_BOTTOM_COLLUMN_PANEL_VIEWTOPIC == '1' -->        
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+  <div class="<!-- IF bottom_block_files.S_ROW_COUNT is even -->navbar<!-- ELSE -->panel bg2<!-- ENDIF -->">
+     <div class="inner">
+        <span class="corners-top"><span></span></span>
+
+        <div class="widget-header" align="{S_CONTENT_FLOW_BEGIN}">
+             <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};"><a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a>&nbsp;{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+        </div>
+        <div class="widget-content" align="{S_CONTENT_FLOW_BEGIN}">
+         <!-- IF bottom_block_files.BOTTOM_BLOCKS-->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+         <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+        </div>
+        
+        <span class="corners-bottom"><span></span></span>
+     </div>
+  </div>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+<!-- ELSE -->
+<!-- BEGIN bottom_block_files -->
+<div class="widget-place" id="widget-place-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+    <div class="widget collapsable removable closeconfirm" id="block-{bottom_block_files.BOTTOM_BLOCK_ID}-bottom">
+
+    <div class="forabg">
+      <div class="inner"> <span class="corners-top"><span></span></span>
+      
+        <ul class="topiclist">
+          <li class="header">
+            <dl class="icon">
+              <dt style="width: {$PORTALXL_DD-DT-WIDTH};">
+                <div class="widget-header">
+                <a href="#" title="#{bottom_block_files.BOTTOM_BLOCK_ID}">{bottom_block_files.BOTTOM_BLOCKS_IMG}</a> <span style="color:{$PORTALXL_FONTCOLOUR-HEADER};">{bottom_block_files.BOTTOM_BLOCKS_ALIAS}</span>
+                </div>
+              </dt>
+            </dl>
+          </li>
+        </ul>
+        <ul class="topiclist forums widget-content">
+          <li class="<!-- IF $PORTALXL_LI-ROW == '1' -->row<!-- ENDIF -->">
+            <dl class="icon">
+              <dd style="width: {$PORTALXL_DD-DT-WIDTH};">
+               <!-- IF bottom_block_files.BOTTOM_BLOCKS-->{bottom_block_files.BOTTOM_BLOCKS}<!-- ENDIF -->
+               <!-- IF bottom_block_files.BOTTOM_BLOCKS_CONTENT -->{bottom_block_files.BOTTOM_BLOCKS_CONTENT}<!-- ENDIF -->
+              </dd>
+            </dl>
+          </li>
+        </ul>
+        
+        <span class="corners-bottom"><span></span></span> </div>
+    </div>
+
+    </div>
+</div>
+<!-- END bottom_block_files -->
+<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+<!-- [-] bottom block area -->
+
+</div>
+
+<!-- INCLUDE overall_footer.html -->

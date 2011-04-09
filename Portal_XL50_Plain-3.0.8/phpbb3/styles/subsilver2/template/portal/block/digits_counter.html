@@ -1,0 +1,38 @@
+<!-- IF S_COUNTER -->
+<table width="100%" cellspacing="1" class="tablebg">
+    <tr>
+        <td class="row2" >{L_COUNTER}<!-- IF S_COUNTER_TEXT --> : {COUNTER} <!-- ENDIF --></td>
+    </tr>
+    <!-- IF S_COUNTER_IMAGE -->
+    <tr>
+        <td class="row1" align="center" colspan="3">{COUNTER}</td>
+    </tr>
+    <!-- ENDIF -->
+    <!-- IF S_COUNTER_STATS -->
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_USER}: <strong>{HITS_PER_USER}</strong></td>
+    </tr>
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_HOUR}: <strong>{HITS_PER_HOUR}</strong></td>
+    </tr>
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_DAY}: <strong>{HITS_PER_DAY}</strong></td>
+    </tr>
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_WEEK}: <strong>{HITS_PER_WEEK}</strong></td>
+    </tr>
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_MONTH}: <strong>{HITS_PER_MONTH}</strong></td>
+    </tr>
+    <tr>
+        <td class="row1" align="{S_CONTENT_FLOW_BEGIN}">{L_HITS_PER_YEAR}: <strong>{HITS_PER_YEAR}</strong></td>
+    </tr>
+    <!-- ENDIF -->
+    <tr>
+        <td class="row1" align="center" colspan="3"><br />{COUNTER_STARTDATE}</td>
+    </tr>
+    <tr>
+        <td class="row1" align="center" colspan="3"><strong>{IP_TRACKING_INFO}</strong></td>
+    </tr>
+</table>
+<!-- ENDIF -->

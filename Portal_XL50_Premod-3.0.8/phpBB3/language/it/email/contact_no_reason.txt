@@ -1,0 +1,12 @@
+Oggetto: {SUBJECT}
+
+Ciao {ADM_USERNAME},
+
+Una persona con nome utente "{USERNAME}" con indirizzo email "{USER_EMAIL}" e indirizzo IP "{USER_IP}" il "{DATE}" ha inviato il seguente messaggio:
+
+{MESSAGE}
+
+usando il modulo Contatti su "{SITENAME}".
+
+
+{EMAIL_SIG}

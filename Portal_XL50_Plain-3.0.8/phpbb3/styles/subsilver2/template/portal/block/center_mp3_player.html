@@ -1,0 +1,44 @@
+<script type="text/javascript" src="./portal/mp3/swfobject.js"></script>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+   <th>{L_MEDIA_PLAYER}</td>
+</tr>--> 
+<tr>
+   <td class="row1" align="center">
+   
+<p id="player2"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</p>
+<script type="text/javascript">
+var so = new SWFObject("{PATH}/mp3player.swf", "playlist", "360", "120", "7");
+so.addVariable("file","{PATH}/playlist.xml");
+
+so.addParam('allowfullscreen','true');
+so.addParam('allowscriptaccess','always');
+
+so.addVariable('height','120');
+so.addVariable('width','360');
+so.addVariable('displaywidth','100');
+so.write('player2');
+</script>
+
+<!--
+<div align="center" valign="top">
+<object width="100%" height="250" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+<param name="movie" value="{PATH}/mediaplayer.swf?config={PATH}/default/config.xml&file={PATH}/get_media_files_pop.php" />
+<param name="menu" value="true" />
+<param name="quality" value="low" />
+<param name="bgcolor" value="#000000" />
+<param name="flashvars" value="file={PATH}/get_media_files_pop.php&autostart=true" />
+<embed src="{PATH}/mediaplayer.swf" width="100%" height="250" menu="false" quality="low" bgcolor="#ff0000" flashvars="file={PATH}/get_media_files_pop.php&autostart=true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+</div>
+-->
+
+   </td>
+</tr>
+<tr>
+   <td class="row1" align="center">
+   <a href="{U_MEDIA_PLAYER}" onClick="window.open('','popup','toolbar=0,location=0,status=0,menubar=0,scrollbars=1,fullscreen=yes')" Target="popup">Open in a PopUp</a>
+   </td>
+</tr>
+</table>

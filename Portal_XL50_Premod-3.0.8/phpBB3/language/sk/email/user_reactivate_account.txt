@@ -1,0 +1,19 @@
+Subject: Reaktivujte si svoj účet na "{SITENAME}"
+
+Administrátor fóra uvalil na váš účet nútenú reaktiváciu. Váš účet je práve neaktívny.
+Nasledujte uvedené kroky pre jeho reaktiváciu.
+
+Prosíme ponechajte si tento email pre záznam. Informácie o vašom účte nasledujú:
+
+----------------------------
+Užívateľské meno: {USERNAME}
+----------------------------
+
+Vaše heslo bolo zašifrované v našej databáze. Pokiaľ by ste si nezapamätali vaše heslo, môžete zažiadať o nové, ktoré bude musieť byť reaktivované rovnako ako teraz tento účet.
+
+Prejdite na nasledujúci odkaz pre reaktiváciu vašeho účtu:
+
+{U_ACTIVATE}
+
+
+{EMAIL_SIG}

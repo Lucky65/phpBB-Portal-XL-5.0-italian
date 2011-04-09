@@ -1,0 +1,14 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+$lang = array_merge($lang, array(
+    'GLOBAL_ANNOUNCEMENTS'  => 'Global Announcements',
+	'STICKY'                => 'Stickies',
+));
+

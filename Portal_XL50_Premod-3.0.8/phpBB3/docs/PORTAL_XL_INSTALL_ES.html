@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML dir=ltr lang=en xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>phpBB3 Portal XL ?80? Install</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=content-type>
+<META content=text/css http-equiv=content-style-type>
+<META content=en http-equiv=content-language>
+<META content=no http-equiv=imagetoolbar>
+<META name=resource-type content=document>
+<META name=distribution content=global>
+<META name=copyright content="2008 Portal XL Group">
+<META name=keywords content="">
+<META name=description 
+content="phpBB3 Portal XL Installation and updating informations">
+<LINK 
+rel=stylesheet type=text/css 
+href="stylesheet.css" 
+media="screen, projection">
+<META name=GENERATOR content="MSHTML 8.00.6001.18812">
+<style>
+<!--
+.almost_half_cell {
+	margin:15px 0 5px 5px
+}
+.long_text {
+	font-size:13px;
+	line-height:1.7em
+}
+#result_box {
+	vertical-align:top;
+	margin-bottom:5px
+}
+-->
+</style>
+</HEAD>
+<BODY style="MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px" id=phpbb class=section-docs>
+<DIV id=wrap><A accessKey=t id=top name=top></A>
+  <DIV id=page-header>
+    <DIV class=headerbar>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV id=doc-description><A id=logo href="index.php"><IMG alt="" src="site_logo.gif"></A>
+          <H1>Portal XL Instalar en phpBB 3.0.8</H1>
+          <P>Portal XL instalación y actualización información</P>
+          <P style="DISPLAY: none">&nbsp;</P>
+        </DIV>
+        <DIV style="WIDTH: 100%" id=doc-description><span style="width: 100%;"><span style="float: right; margin-right: 5px;"><a href="PORTAL_XL_INSTALL.html" title="English"><span style="color:#FFF;">English</span></a> - <a href="PORTAL_XL_INSTALL_DE.html" title="German"><span style="color:#FFF;">German</span></a> - <a href="PORTAL_XL_INSTALL_EL.html" title="Greek"><span style="color:#FFF;">Greek</span></a> - <a href="PORTAL_XL_INSTALL_ES.html" title="Spanish"><span style="color:#FFF;">Spanish</span></a> - <a href="PORTAL_XL_INSTALL_IT.html" title="Italian"><span style="color:#FFF;">Italian</span></a> - <a href="PORTAL_XL_INSTALL_NL.html" title="Dutch"><span style="color:#FFF;">Dutch</span></a></span></span></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+  </DIV>
+  <A 
+name=start_here></A>
+  <DIV id=page-body>
+    <!-- BEGIN DOCUMENT -->
+    <P><STRONG>Lea este documento completamente antes de continuar con la 
+      instalación o actualización.</STRONG></P>
+    <P>Este documento le guiará a través de los conceptos básicos sobre la 
+      instalación, actualización y convertir el software del foro.</P>
+    <BLOCKQUOTE>
+      <P>Antes de continuar asegúrese de usar de un software FTP confiable con el 
+        fin de evitar que archivos dañados o parcialmente cargados. Si estás usando Firefox 
+        instalar el 
+        Add-On <A href="https://addons.mozilla.org/nl/firefox/addon/684">FireFTP</A>, 
+        de lo contrario recomiendo <A 
+  href="http://www.ipswitchft.com/resources/evaluation.asp">WS_FTP</A> por 
+        confiable FTP transferencias. </P>
+    </BLOCKQUOTE>
+    <H1>Instalar</H1>
+    <DIV class="paragraph menu">
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <OL>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#quickinstall"> Instalación rápida</A></LI>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#require"> Requisitos</A></LI>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#install"> Nueva instalación</A></LI>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#update"> Actualizar una versión anterior</A>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#portal_remove"> Quitar 
+              Portal XL 5.0</A>
+            <LI> <A 
+  href="PORTAL_XL_INSTALL.html#disclaimer"> Descargo de responsabilidad</A></LI>
+          </OL>
+        </DIV>
+        <SPAN 
+class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <HR>
+    <A name=quickinstall></A>
+    <H2>1. Instalación rápida</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P>Si usted tiene conocimiento básico del uso de FTP y está seguro de su 
+            servicio de hosting o servidor se ejecutará phpBB3 Portal XL puede utilizar 
+            estos pasos para comenzar a trabajar rápidamente.</P>
+          <OL>
+            <LI>Tener una phpBB 3.0.8 instalado, o un 3.0.7 actualizado a 3.0.8 ya (lo 
+              puede conseguir en @ <A href="http://www.phpbb.com/downloads/" 
+  target=_blank>phpbb.com</A>)!</LI>
+            <LI>Descomprimir el <STRONG>Portal_XL50_Premod-3.0.8.rar</STRONG> archivo a un 
+              directorio local en el sistema.</LI>
+            <LI>Cargar todos los archivos contenidos en el directorio <STRONG>\phpbb3\</STRONG> de este archivo (conservar la estructura de directorios) para una web 
+              directorio accesible en su servidor o cuenta de alojamiento.</LI>
+            <LI>Compruebe si el archivo <STRONG>config.php</STRONG> esta en su foro 
+              directorio principal si es capaz de escribir todos los (777/755).</LI>
+            <LI>Cambiar los permisos en los siguientes directorios (777/755 o -rwxrwxrwx 
+              dentro de su cliente FTP): <CODE><STRONG>/cache</STRONG></CODE>, <CODE><STRONG>/store</STRONG></CODE>, <CODE><STRONG>/files</STRONG></CODE>, <CODE><STRONG>/images/avatars/upload</STRONG></CODE>, <CODE><STRONG>/dl_mod/thumbs</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/dl_mod/downloads</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/gallery/images</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/phpbb_seo/cache</STRONG></CODE>, <CODE><STRONG>/gym_sitemaps/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/images</STRONG></CODE>, <CODE><STRONG>/arcade</STRONG></CODE>, <CODE><STRONG>/arcade/gamedata</STRONG></CODE>, <CODE><STRONG>/arcade/games</STRONG></CODE>, <CODE><STRONG>/arcade/install</STRONG></CODE> y por lo menos <CODE>/images/counter/ip.txt</CODE>.</LI>
+            <LI>Usando su navegador web visite el lugar que coloco phpBB3 Portal XL con la 
+              adición de install_portal/ o navegar directamente a install_portal/index.php, 
+              por ejemplo 
+              http://www.mydomain.com/phpBB3/install_portal/index.php etc.</LI>
+            <LI>Haga clic en la pestaña "<STRONG>Install Basic</STRONG>&quot; para instalar el 
+              portal básico primero siguiendo los pasos determinados. <span id="result_box" class="long_text"> <span style="background-color: #ebeff9" title="Do not log in through the portal before all steps heve been done!" closure_hashCode_9oj3dt="52"> no se conecte</span></span> a través del portal antes de que se ha hecho 
+              todos los pasos! La secuencia de comandos de instalación le guiará a través 
+              de todos los pasos necesarios.</LI>
+            <LI>Vaya a /<STRONG>convert_timezones.php</STRONG>, por ejemplo 
+              http://www.mydomain.com/phpBB3/<STRONG>convert_timezones.php</STRONG> para 
+              convertir todos los usuarios zonas horarias en el nuevo formato. Quitar ese 
+              archivo cuando haya terminado!</LI>
+            <LI>phpBB3 portal XL ahora debería estar disponible.</LI>
+          </OL>
+          <BR>
+          <P>Si experimentado problemas o no saben cómo proceder con cualquiera de los 
+            pasos anteriores por favor, lea el resto de este documento o consulte actualizar 
+            caché.</P>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <HR>
+    <A name=require></A>
+    <H2>2. Requisitos</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P>phpBB3 portal XL tiene unos requisitos que deben cumplirse antes de poder 
+            instalar y utilizarlo.</P>
+          <UL>
+            <LI>Un servidor web o cuenta de hospedaje web se ejecuta en cualquier sistema 
+              operativo con soporte para PHPUn sistema de base de datos SQL:
+              <UL>
+                <LI>MySQL 3.23 o superior (MySQLi suportado)</LI>
+              </UL>
+            </LI>
+            <LI><STRONG>PHP 4.3.3+ (&gt;=4.3.3, &gt;4.4.x, &gt;5.x.x, &gt;6.0-dev 
+              (compatible))</STRONG> con soporte de la base de datos que pretende utilizar.</LI>
+            <LI>getimagesize() necesidad de que se habilite la función.</LI>
+            <LI>Opcionalmente, la presencia de los siguientes módulos en PHP proporcionan 
+              acceso a funciones adicionales.
+              <UL>
+                <LI>zlib C<span class="dct-tt">ompresión</span> ssoporte</LI>
+                <LI>Remoto FTP soporte</LI>
+                <LI>XML soporte</LI>
+                <LI>GD Ssoporte</LI>
+                <LI>Exif Ssoporte</LI>
+                <LI>Curl Ssoporte</LI>
+              </UL>
+            </LI>
+          </UL>
+          <P>Si su servidor o cuenta de hospedaje no cumple los requisitos anteriores nos 
+            tememos phpBB3 Portal XL no es para ti.</P>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <HR>
+    <A name=install></A>
+    <H2>3. Nueva instalación de phpBB3 Portal XL 5.0</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P>Usted ha descargado uno de los dos paquetes y su elección determina lo que 
+            debe hacer, en este caso Portal XL5.0 Premod. <STRONG>Tenga en cuenta</STRONG>: 
+            Que antes de la actualización que en gran medida recomendamos hacer una copia de 
+            seguridad completa de su base de datos y archivos existentes phpBB3! Si no estás 
+            seguro de cómo lograr esto, por favor pida asesoramiento a su proveedor de 
+            hospedaje. <STRONG>ATENCIÓN!</STRONG> Si su ex phpBB3 o la configuración del 
+            portal XL se modificó por mods distintos de aquellos que vienen con portal XL 
+            5.0 ~ Premod, se perderá todos esos cambios!</P>
+          <A 
+name=install_full></A>
+          <H3>3. Portal XL 5.0 Premod paquete</H3>
+          <P><STRONG>Nota</STRONG>: antes de proceder, y si está utilizando otro idioma 
+            que se enumeran a continuación, copie el archivos \language\en\mods\portal_xl_install.php 
+            en el directorio correspondiente de su idioma instalado para que el texto (en 
+            inglés) disponible si bajo \languages\xx\ ningún archivo correspondiente está 
+            disponible.
+          <P>Idiomas admitidos en este paquete:<BR>
+            German (de - Du)<BR>
+            Greek 
+            (el)<BR>
+            English (en)<BR>
+            English US en_us)<BR>
+            Italian (it)<BR>
+            Dutch (nl) </P>
+          <P>Pasos para hacer:<BR>
+            - Obtenga su propia copia reciente de phpBB 3.0.x en <A 
+href="http://www.phpbb.com/downloads/" target=_blank>phpbb.com</A> Si no se ha 
+            instalado todavía. Si instala proceder <A 
+href="PORTAL_XL_INSTALL.html#creating_portal"> aquí</A><BR>
+            - Desempaquetar phpBB 3.0.x a un directorio temporal<BR>
+            - Cargar la 
+            carpeta \phpBB3\ a raíz de su Foro<BR>
+            - Por ejemplo, vaya a 
+            http://your-domain/install/ y el instalador se activará<BR>
+            - Eliminar carpeta 
+            /install/ cuando la instalación está lista</P>
+          <P><A name=creating_portal></A></P>
+          <P>Los próximos pasos serán la creación de su XL 5.0 Premod.</P>
+          <UL>
+            <LI>Tienen un phpBB 3.0.8 instalado, o un 3.0.7 actualizado a 3.0.8 ya (lo 
+              puede conseguir en @ <A href="http://www.phpbb.com/downloads/" 
+  target=_blank>phpbb.com</A>)!</LI>
+            <LI>Descomprimir el <STRONG>Portal_XL50_Premod-3.0.8.rar</STRONG> archivo a un 
+              directorio local en el sistema.</LI>
+            <LI>Cargar todos los archivos contenidos en el directorio <STRONG>\phpbb3\</STRONG> de este archivo (conservar la estructura de directorios) para una web 
+              directorio accesible en su servidor o cuenta de alojamiento.</LI>
+            <LI>Compruebe si el archivo <STRONG>config.php</STRONG> esta en su foro 
+              directorio principal si es capaz de escribir todos los (777/755).</LI>
+            <LI>Change the permissions on the following directories to be write able by 
+              all (777/755 or -rwxrwxrwx within your FTP Client): <CODE><STRONG>/images/avatars/upload</STRONG></CODE>, <CODE><STRONG>/dl_mod/thumbs</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/dl_mod/downloads</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/gallery/images</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/phpbb_seo/cache</STRONG></CODE>, <CODE><STRONG>/gym_sitemaps/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/images</STRONG></CODE>, <CODE><STRONG>/arcade</STRONG></CODE>, <CODE><STRONG>/arcade/gamedata</STRONG></CODE>, <CODE><STRONG>/arcade/games</STRONG></CODE>, <CODE><STRONG>/arcade/install</STRONG></CODE> y por lo menos <CODE>/images/counter/ip.txt</CODE>.</LI>
+            <LI>Usando su navegador web visite el lugar que coloco phpBB3 Portal XL con la 
+              adición de install_portal/ o navegar directamente a install_portal/index.php, 
+              por ejemplo 
+              http://www.mydomain.com/phpBB3/install_portal/index.php etc.</LI>
+            <LI>Haga clic en la pestaña "<STRONG>Install Basic</STRONG>&quot; para instalar el 
+              portal básico primero siguiendo los pasos determinados. <span id="result_box0" class="long_text"> <span style="background-color: #ebeff9" title="Do not log in through the portal before all steps heve been done!" closure_hashCode_9oj3dt="52"> no se conecte</span></span> a través del portal antes de que se ha hecho 
+              todos los pasos! La secuencia de comandos de instalación le guiará a través 
+              de todos los pasos necesarios.</LI>
+            <LI>Vaya a /<STRONG>convert_timezones.php</STRONG>, por ejemplo 
+              http://www.mydomain.com/phpBB3/<STRONG>convert_timezones.php</STRONG> para 
+              convertir todos los usuarios zonas horarias en el nuevo formato. Quitar ese 
+              archivo cuando haya terminado!</LI>
+            <LI>phpBB3 portal XL ahora debería estar disponible.</LI>
+          </UL>
+          <P>Optional:</P>
+          <UL>
+            <LI><STRONG>-</STRONG> Instalar predefinidos bbcode en base de datos, 
+              seleccione la pestaña 
+              "<STRONG>CUSTOM BBCODE</STRONG>"</LI>
+          </UL>
+          <P><A name=refresh_cache></A></P>
+          <P>- Después de la instalación entrar en ACP y hacer todos los pasos a 
+            continuación:</P>
+          <P>- Etiqueta Styles -&gt; Style componentes -&gt; Templates -&gt; prosilver -&gt; 
+            Actualizar<BR>
+            - Etiqueta Styles -&gt; Style componentes -&gt; Themes -&gt; prosilver 
+            -&gt; Actualizar<BR>
+            - Etiqueta Styles -&gt; Style componentes -&gt; Imagesets -&gt; 
+            prosilver -&gt; Actualizar<BR>
+            - General Etiqueta -&gt; En la pantalla principal -&gt; 
+            Purgar la memoria caché<BR>
+            - Actualizar su caché de navegadores</P>
+          <P>Listo!</P>
+          <P>PS: visita nuestro nuevo estilo Demo/Descargar de Portal XL 5.0 ~ Premod aware <A 
+href="http://www.portalxl.nl/stylespremod/" 
+target=_blank>styles</A><BR>
+            Diviértete con Portal XL 5.0 ~ Premod ~ Su sistema 
+            de portal loco para locos phpBB 3.0.x</P>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <HR>
+    <A name=update></A>
+    <H2>4. Actualizar una versión anterior de phpBB3 Portal XL 5.0</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P>Si estás utilizando una versión estable de phpBB3 portal XL actualizar a esta 
+            versión es sencillo. Si ha descargado uno de los dos paquetes y la elección 
+            determina lo que necesita para hacer, en este caso Portal XL 5.0 Premod.</P>
+          <P><STRONG>Tenga en cuenta</STRONG>: Que antes de la actualización que en gran 
+            medida recomendamos hacer una copia de seguridad completa de su base de datos y 
+            archivos existentes phpBB3! Si no estás seguro de cómo lograr esto, por favor 
+            pida asesoramiento a su proveedor de hospedaje.</P>
+          <P><STRONG>ATENCIÓN!</STRONG> Si su ex phpBB3 o la configuración del portal XL 
+            se modificó por mods distintos de aquellos que vienen con portal XL 5.0 ~ Premod, 
+            se perderá todos esos cambios!</P>
+          <P><A name=update_full></A></P>
+          <H3>4. Portal XL 5.0 Premod paquete</H3>
+          <P><STRONG>Nota</STRONG>: antes de proceder, y si está utilizando otro idioma 
+            que se enumeran a continuación, copie el archivos \language\en\mods\portal_xl_install.php 
+            en el directorio correspondiente de su idioma instalado para que el texto (en 
+            inglés) disponible si bajo \languages\xx\ ningún archivo correspondiente está 
+            disponible.
+          <P>Idiomas admitidos en este paquete:<BR>
+            German (de - Du)<BR>
+            Greek 
+            (el)<BR>
+            English (en)<BR>
+            English US en_us)<BR>
+            Italian (it)<BR>
+            Dutch (nl) </P>
+          <P>Pasos para hacer::<BR>
+            Sólo es necesario si no está ya utilizando una reciente phpBB 
+            3.0.x. Si instala proceder <A 
+href="PORTAL_XL_INSTALL.html#update_portal"> aquí</A><BR>
+          <UL>
+            <LI>Tienen un phpBB 3.0.8 instalado, o un 3.0.7 actualizado a 3.0.8 ya (lo 
+              puede conseguir en @ <A href="http://www.phpbb.com/downloads/" 
+  target=_blank>phpbb.com</A>)!</LI>
+            <LI>Desempaquetar phpBB 3.0.x a un directorio temporal.</LI>
+            <LI>Cargar / sobrescribir la carpeta phpBB3 a raíz de su foro (Portal se 
+              pierde).</LI>
+            <LI>Por ejemplo, vaya a. http://your-domain/install/database_update.php y 
+              ejecute el script de actualización.</LI>
+            <LI>Eliminar carpeta /install/.</LI>
+            <LI>Cambie los permisos en los siguientes directorios para ser capaz de 
+              escribir por todos los&nbsp; (777/755 o -rwxrwxrwx dentro de su FTP Cliente): <CODE><STRONG>/cache</STRONG></CODE>, <CODE><STRONG>/store</STRONG></CODE>, <CODE><STRONG>/files</STRONG></CODE>, <CODE><STRONG>/images/avatars/upload</STRONG></CODE>, <CODE><STRONG>/dl_mod/thumbs</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/dl_mod/downloads</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/gallery/images</STRONG> y todas sus subcarpetas</CODE>, <CODE><STRONG>/phpbb_seo/cache</STRONG></CODE>, <CODE><STRONG>/gym_sitemaps/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/cache</STRONG></CODE>, <CODE><STRONG>/mods/toplist_mod/images</STRONG></CODE>, <CODE><STRONG>/arcade</STRONG></CODE>, <CODE><STRONG>/arcade/gamedata</STRONG></CODE>, <CODE><STRONG>/arcade/games</STRONG></CODE>, <CODE><STRONG>/arcade/install</STRONG></CODE> y por lo menos <CODE>/images/counter/ip.txt</CODE>.</LI>
+            <LI>Compruebe si el archivo <STRONG>config.php</STRONG> esta en su foro 
+              directorio principal si es capaz de escribir todos los (777/755).</LI>
+          </UL>
+          <P><A id=update_portal name=update_portal></A></P>
+          <P></A>Los próximos pasos va a volver a crear su portal.</P>
+          <HR>
+          <DIV style="BACKGROUND-COLOR: #ffc">
+            <P style="MARGIN: 10px"><A id=update_plain 
+name=update_plain></A><BR>
+              <STRONG><SPAN style="COLOR: #ff0000">ATENCIÓN!</SPAN> Para el uso con un portal existente sólo XL 5,0 Plain 0,2</STRONG>!<BR>
+              Para que 
+              el último código de núcleo funcione correctamente algunos pasos esenciales son 
+              necesarios para el seguimiento en su sitio de ejecución en primer lugar.<BR>
+            <OL>
+              <LI>Eliminar directorio <STRONG>\portal\</STRONG> y todos los directorios por 
+                debajo de su directorio principal del Foro</LI>
+              <LI>Eliminar el directorio <STRONG>\language\en\mods\</STRONG> todos los 
+                archivos con el nombre <STRONG>portal_xl*.php</STRONG> y <STRONG>acp_portal_xl*.php</STRONG>, en el 
+                directorio <STRONG>\adm\style\portal_xl\</STRONG> todos los archivos con el 
+                nombre <STRONG>acp_portal*.html</STRONG>.</LI>
+              <LI>Eliminar (temporal, si surgen problemas) \language\xx\ Si otros idiomas 
+                que 
+                \en\ se instalan. Paquetes de idiomas para Portal XL 5.0 Plain posible no 
+                funcionará con el Premod version, Sin embargo, los fundamentos son idénticos</LI>
+            </OL>
+            <BR>
+            Aplicando el portal:<BR>
+            <OL>
+              <LI>Desempaquete el archivo <STRONG>Portal_XL50_Premod-3.0.8.rar</STRONG> a un 
+                directorio temporal</LI>
+              <LI>Copia/carga/sobrescribir todo el contenido (conservar la estructura de 
+                directorios) desde el directorio del paquete <STRONG>\phpbb3\</STRONG> por 
+                ejemplo, a tu foro raíz. <STRONG>\public_html\</STRONG> y asegúrese de que todo está en el lugar.</LI>
+              <LI>Vaya a <STRONG>/install_portal/index.php</STRONG> para iniciar el script 
+                de instalación y seleccione la pestaña "<STRONG>Upgrade to Premod</STRONG>&quot; 
+                siguiendo los pasos determinados. No se conecte a través del portal antes de 
+                que se ha hecho todos tener pasos! La secuencia de comandos de instalación 
+                le guiará a través de todos los pasos necesarios.</LI>
+              <LI>Eliminar o cambiar el nombre de directorios <STRONG>\install_arcade\</STRONG>, <STRONG>\install_gallery\</STRONG> y <STRONG>\install_portal\</STRONG>. 
+                Quitar el archivo /blog/<STRONG>database.php</STRONG>.</LI>
+              <LI>Vaya a /<STRONG>convert_timezones.php</STRONG>, por ejemplo 
+                http://www.mydomain.com/phpBB3/<STRONG>convert_timezones.php</STRONG> para 
+                convertir todas las zonas horarias de usuario en el nuevo formato. Quitar 
+                ese archivo cuando haya terminado!</LI>
+            </OL>
+            <P></P>
+            <BR>
+          </DIV>
+          <HR>
+          <DIV style="BACKGROUND-COLOR: #fcc">
+            <P style="MARGIN: 10px"><A id=update_premod 
+name=update_premod></A><BR>
+              <STRONG><SPAN 
+style="COLOR: #ff0000">ATENTIÓN!</SPAN> Para su uso con una existente sólo Portal XL 5.0 Premod 0.2</STRONG>!<BR>
+              Para que el último código de núcleo funcione correctamente algunos pasos 
+              esenciales son necesarios para el seguimiento en su sitio de ejecución en primer 
+              lugar.<BR>
+            <OL>
+              <LI>Eliminar directorio <STRONG>\portal\</STRONG> y todos los directorios por 
+                debajo de su directorio principal del Foro.</LI>
+              <LI>Eliminar el directorio <STRONG>\language\en\mods\</STRONG> todos los 
+                archivos con el nombre <STRONG>portal_xl*.php</STRONG> and <STRONG>acp_portal_xl*.php</STRONG>, en el 
+                directorio <STRONG>\adm\style\portal_xl\</STRONG> todos los archivos con el 
+                nombre <STRONG>acp_portal*.html</STRONG>.</LI>
+              <LI>Eliminará todo el contenido en el directorio <STRONG>\styles\prosilver\template\portal\*.*</STRONG></LI>
+              <LI>Eliminará todo el contenido en el directorio <STRONG>\styles\subsilver2\template\portal\*.*</STRONG></LI>
+            </OL>
+            <BR>
+            Aplicando 
+            el portal:<BR>
+            <OL>
+              <LI>Desempaquete el archivo <STRONG>Portal_XL50_Premod-3.0.8.rar</STRONG> a un 
+                directorio temporal</LI>
+              <LI>Copia/carga/sobrescribir todo el contenido (conservar la estructura de 
+                directorios) desde el directorio del paquete <STRONG>\phpbb3\</STRONG> por 
+                ejemplo, a tu foro raíz. <STRONG>\public_html\</STRONG> y asegúrese de que todo está en el lugar.</LI>
+              <LI>Vaya a <STRONG>/install_portal/index.php</STRONG> para iniciar el script 
+                de instalación y seleccione la pestaña "<STRONG>Update to latest</STRONG>" 
+                para actualizar&nbsp; la base de datos del portal.</LI>
+              <LI>Vaya a <STRONG>/install_arcade/index.php</STRONG> para iniciar la 
+                instalación de Arcade.</LI>
+              <LI>Vaya a <STRONG>/install_gallery/index.phppara iniciar la instalación de la 
+                Galería</STRONG>.</LI>
+              <LI>Vaya a <STRONG>/blog/database.php</STRONG> para iniciar la instalación de 
+                usuario de blog Mod..</LI>
+              <LI>Quitar o cambiar el nombre de los directorios <STRONG>\install_arcade\</STRONG>, <STRONG>\install_gallery\</STRONG> y <STRONG>\install_portal\</STRONG>. 
+                Eliminar archivo /blog/<STRONG>database.php</STRONG>.</LI>
+              <LI>Vaya a /<STRONG>convert_timezones.php</STRONG>, por ejemplo, 
+                http://www.mydomain.com/phpBB3/<STRONG>convert_timezones.php</STRONG> para 
+                convertir todas las zonas horarias de usuario en el nuevo formato. Quitar 
+                ese archivo cuando haya terminado!</LI>
+            </OL>
+            <BR>
+            <STRONG><SPAN style="COLOR: #ff0000">ATENTIÓN!</SPAN> Si 
+            phpBB3 SEO está activo en su sitio:</STRONG>
+            <UL>
+              <LI><STRONG>-</STRONG> En el directorio <STRONG>/phpbb_seo/cache/</STRONG>,copia 
+                de seguridad de su archivo de configuración existente de SEO <STRONG>phpbb_cache.php</STRONG> o 
+                quitar ese archivo de la carpeta del paquete /root/phpbb_seo/cache/ antes de 
+                cargar nada.</LI>
+              <LI><STRONG>-</STRONG> En el directorio <STRONG>/root/</STRONG> de su foro, el 
+                archivo de copia de seguridad existentes <STRONG>.htaccess</STRONG> o quitar 
+                ese archivo de la carpeta del paquete /root/ antes de cargar nada.</LI>
+              <LI><STRONG>-</STRONG> En el directorio <STRONG>/root/</STRONG> de su foro, el 
+                archivo de copia de seguridad existentes <STRONG>config.php</STRONG> antes 
+                de cargar nada.</LI>
+            </UL>
+            <BR>
+            <STRONG><SPAN style="COLOR: #ff0000">ATENTIÓN!</SPAN> La primera vez que instale modificaciones de terceros. Todos estos pasos son 
+            necesarios para el buen funcionamiento de Portal XL 5.0 Premod! Siga los pasos 
+            dados en el procedimiento de instalación con exactitud para evitar errores:</STRONG>
+            <UL>
+              <LI><strong><span style="color: #FF0000">Paso</span><SPAN style="COLOR: #ff0000"> 1 phpBB Arcade:</SPAN></strong> Con esta opción, es posible instalar por primera vez phpBB Arcade.</LI>
+              <LI><strong><span style="color: #FF0000">Paso</span><SPAN style="COLOR: #ff0000"> 2 phpBB Gallery:</SPAN></strong> Con esta opción, es posible instalar por primera vez phpBB Gallery.</LI>
+              <LI><strong><span style="color: #FF0000">Paso</span><SPAN style="COLOR: #ff0000"> 3 phpBB User Blog 
+                Mod:</SPAN></strong> Con esta opción, es posible instalar por primera vez phpBB User Blog Mod.</LI>
+            </UL>
+            <BR>
+          </DIV>
+          <HR>
+          <P>&nbsp;Después de la instalación entrar en ACP y hacer todos los pasos a 
+            continuación:</P>
+          <P>- Etiqueta Styles -&gt; Style componentes -&gt; Templates -&gt; prosilver -&gt; 
+            Actualizar<BR>
+            - Etiqueta Styles -&gt; Style componentes -&gt; Themes -&gt; prosilver 
+            -&gt; Actualizar<BR>
+            - Etiqueta Styles -&gt; Style componentes -&gt; Imagesets -&gt; 
+            prosilver -&gt; Actualizar<BR>
+            - General Etiqueta -&gt; En la pantalla principal -&gt; 
+            Purgar la memoria caché<BR>
+            - Actualizar su caché de navegadores</P>
+          <P>Listo!</P>
+          <P>PS: visita nuestro nuevo estilo Demo/Descargar de Portal XL 5.0 ~ Premod aware <A 
+href="http://www.portalxl.nl/stylespremod/" 
+target=_blank>styles</A><BR>
+            Diviértete con Portal XL 5.0 ~ Premod ~ Su sistema 
+            de portal loco para locos phpBB 3.0.x</P>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <HR>
+    <A name=portal_remove></A>
+    <H2>5. Remover Portal XL 5.0</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P><A name=portal_remove></A></P>
+          <P>Para remover Portal XL 5.0 Premod completamente sin dejar ningún residuo:</P>
+          <UL>
+            <LI>Inicie el script de instalación y seleccione la pestaña&nbsp; "<STRONG>REMOVER 
+              PORTAL</STRONG>". <BR>
+              <BR>
+              Esta acción eliminará todas Portal XL Premod 
+              relacionadas y descargar registros de base de datos mod incluidos los 
+              cambios realizados a phpBB3 en tablas predeterminadas, tales como módulos, 
+              grupos, BBCodes personalizados, usuarios, etc Después de este procedimiento 
+              usted tendrá un claro phpBB 3.0.x base de datos con tablas de base de datos 
+              y las entradas de blog del usuario, fotos y Arcade (esta base de datos de 
+              las entradas nunca son tocados por el portal de la secuencia de comandos de 
+              instalación). Para quitar las tablas usar los scripts de instalación de 
+              estos mods por favor. <BR>
+              <BR>
+              El próximo paso será eliminar todos los 
+              archivos en el directorio principal de su foro, EXCEPTO archivo <STRONG>config.php</STRONG> (este archivo es muy importante para conectar a su 
+              base de datos). Si tiene archivos adjuntos dejar directorio<STRONG> /files/</STRONG> intacto. Si usted tiene otros extras colocado como iconos, sonrisas, avatares, 
+              imágenes comprobar en este rango, etc. Tienen un nuevo phpBB 3.0.x 
+              distribución, por un lado, eliminar el archivo <STRONG>config.php</STRONG> y 
+              carpeta <STRONG>\install\</STRONG> de ese paquete. Cargar el paquete fresco a su espacio de foro, listos.</LI>
+          </UL>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <A 
+name=convert></A>
+    <HR>
+    <A name=disclaimer></A>
+    <H2>6. Derechos de autor y descargo de responsabilidad</H2>
+    <DIV class=paragraph>
+      <DIV class=inner><SPAN class=corners-top><SPAN></SPAN></SPAN>
+        <DIV class=content>
+          <P>Esta aplicación es un software de código abierto publicado bajo <A 
+href="http://opensource.org/licenses/lgpl-3.0.html">GPL</A>. Por favor, consulte 
+            el código fuente y el directorio docs para más detalles. Este paquete y su 
+            contenido son Copyright (c) 2007, 2009 <A href="http://www.portalxl.nl/forum/" 
+target=_blank>Portal XL Group</A>. Todos los derechos reservados. Registrados 
+            bajo la licencia Creative Commons <A href="http://creativecommons.org/licenses/by-nc-sa/3.0/" 
+target=_blank>Attribution-NonCommercial-ShareAlike 3.0</A> licencia</P>
+        </DIV>
+        <DIV class=back2top> <A class=top 
+href="PORTAL_XL_INSTALL.html#wrap"> Volver al principio</A></DIV>
+        <SPAN class=corners-bottom><SPAN></SPAN></SPAN></DIV>
+    </DIV>
+    <!-- END DOCUMENT -->
+    <DIV id=page-footer>
+      <DIV class=version>&nbsp;</DIV>
+    </DIV>
+  </DIV>
+</DIV>
+<DIV><A accessKey=z id=bottom name=bottom></A></DIV>
+</BODY>
+</HTML>

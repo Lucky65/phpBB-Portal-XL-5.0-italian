@@ -1,0 +1,37 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<h2>{L_DMV_SEARCH}</h2>
+<p>{SEARCH_RESULTS}</p>
+<br />
+<!-- BEGIN results -->
+	<!-- IF results.S_FIRST_ROW -->
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<th width="40%">{L_DMV_TITLE}</th>
+				<th width="40%" align="center">{L_DMV_FROM}</th>
+				<th width="20%" align="center">{L_DMV_DURATION}</th>
+			</tr>
+	<!-- ENDIF -->
+			<tr class="<!-- IF results.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+				<td>&nbsp;<a href="{results.U_SHOW_VIDEO}" class="topictitle">{results.TITLE}</a></td>
+				<td align="center">{results.SINGER}</td>
+				<td align="center">{results.DURATION}</td>
+			</tr>
+	<!-- IF results.S_LAST_ROW -->
+		</table>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+	<!-- IF results.S_ROW_COUNT == 0 -->
+		<br />
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<td class="row3" align="center"><strong>{NO_RESULTS}</strong></td>
+			</tr>
+		</table>
+		<br />
+	<!-- ENDIF -->
+<!-- END results -->
+<br />
+<a href="{RETURN_MAIN}">{L_DMV_RETURN_MAIN}</a>
+<br /><br />
+<!-- INCLUDE dm_video/video_footer.html -->

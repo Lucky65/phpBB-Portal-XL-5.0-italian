@@ -1,0 +1,23 @@
+/*****[PORTAL XL 5.0 PLAIN: LEGGIMI]*************************************
+ Questo file contiene ISTRUZIONI PER L'INSTALLAZIONE MANUALE DI PORTAL XL
+ VERSIONE PLAIN (BASE).
+ ************************************************************************\
+
+ ========================================================================
+                   PORTAL XL 5.0 PLAIN 0.2  VERSIONE BASE
+ =======================================================================
+
+
+Portal XL Plain installazione manuale
+Per evitatare errori, eseguite sul vostro phpmyadmin i rispetttivi file sql 
+secondo quest'ordine:
+
+
+1) install_portal_xl50_db_schema.sql
+2) install_portal_xl50_db_schema_data.sql
+
+N.B. Queste istruzioni sono valide solo per la versione Portal XL Plain in Italiano
+
+Eseguire install_portal_xl50_db_modules.sql solo se non avete altre mods installate.
+
+

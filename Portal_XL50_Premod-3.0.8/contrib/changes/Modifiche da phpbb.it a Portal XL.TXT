@@ -1,0 +1,970 @@
+Queste sono solo le modifiche dei language modificati da phpbb.it a portal xl, vanno aggiunti comunque i language delle MODS.
+
+Apri language/it/common.php
+
+Cerca:
+
+'-12'   => '[UTC -12] Isola Baker',
+
+Aggiungi prima:
+
+'-19'	=> '[UTC - 199] Pluto',
+
+Cerca:
+
+'14'   => '[UTC +14] Isole della linea'
+
+Sostituisci con:
+
+'14'   => '[UTC +14] Isole della linea',
+'19'	=> '[UTC + 199] Mercury'
+
+Cerca:
+
+?>
+
+Aggiungi prima:
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Database Mods',
+	
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Clicca qui per ridimensionare!',
+));
+
+// Event Calendar
+$lang = array_merge($lang, array(
+	'CALENDAR'		=> 'Calendario',
+	// minical short day names
+	'mini_datetime'	=> array(
+		  'Su'		=> 'Do',
+		  'Mo'		=> 'Lu',
+		  'Tu'		=> 'Ma',
+		  'We'		=> 'Me',
+		  'Th'		=> 'Gi',
+		  'Fr'		=> 'Ve',
+		  'Sa'		=> 'Sa',
+	),
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Contatore visite',
+	'COUNTER_STARTDATE' => 'Visite dal %s',
+	'HITS_PER_DAY'		=> 'Maggiori visite giorno',
+	'HITS_PER_HOUR'		=> 'Maggiori visite ora',
+	'HITS_PER_MONTH'	=> 'Maggiori visite mese',
+	'HITS_PER_USER'		=> 'Maggiori visite utente',
+	'HITS_PER_WEEK'		=> 'Maggiori visite settimana',
+	'HITS_PER_YEAR'		=> 'Maggiori visite anno',
+	'IP_TRACKING_NO' 	=> '[Nessun IP monitorato]',
+	'IP_TRACKING_YES' 	=> '[Monitoraggio IP]',
+	'TRANSLATION_INFO' 	=> 'Traduzione Italiana PhpBB <a href="http://www.phpbb.it/">phpBB.it</a> - Per Portal XL <a href="http://www.portalxl.eu/">portalxl.eu</a>'
+	
+));
+
+// Knowledge Base
+$lang = array_merge($lang, array(
+	'KNOWLEDGE_BASE'	=> 'Guida Base',
+	'KBASE'				=> 'Guida Base',
+));
+
+// Anti Bot Question
+$lang = array_merge($lang, array(
+	'AB_QUESTION_EXPLAIN'	=> 'Per la protezione contro lo spam, rispondi alla domanda di cui sopra.',
+));
+
+// start Thank Post MOD
+$lang = array_merge($lang, array(
+	'REMOVE_THANKS'			=> 'Elimina il ringraziamento a ',
+	'THANK_POST1'			=> 'Ringrazia ',
+	'THANK_POST2'			=> ' per questo messaggio',
+	'THANK_TEXT_1'			=> '',
+	'THANK_TEXT_2'			=> 'Grazie a',
+	'THANK_TEXT_2pl'		=> 'Grazie a',
+	'THANK_GENDER_F'		=> 'da parte di',
+	'THANK_GENDER_M'		=> 'da parte di',
+	'THANK_GENDER_U'		=> 'da parte di',
+	'RECEIVED'				=> 'Ricevuti',
+	'THANKS'				=> 'ringraziamenti',
+	'GIVEN'					=> 'Fatti',
+	'TP_UPDATED'			=> 'Il tuo messaggio è stato aggiornato!',
+));
+// end Thank Post MOD
+
+// Posts per day
+$lang = array_merge($lang, array(
+	'POSTS_PER_DAY_OTHER'	=> 'Messaggi per giorno <strong>%.2f</strong>',
+	'POSTS_PER_DAY_ZERO'	=> 'Messaggi per giorno <strong>nessuno</strong>',
+));
+
+// Announcements Centre
+$lang = array_merge($lang, array(
+	'ANNOUNCEMENT_TITLE_GUESTS'		=> 'Annunci locali ospiti',
+	'ANNOUNCEMENT_TITLE'			=> 'Annunci locali sito',
+));
+
+// Portal FAQ
+$lang = array_merge($lang, array(
+	'FAQ_PORTAL'				=> 'FAQ Portale',
+	'FAQ_PORTAL_EXPLAIN'		=> 'Portale Risposte alle Domande Frequenti',
+));
+
+// Rules page
+$lang = array_merge($lang, array(
+	'RULES_PAGE'				=> 'Regole Forum',
+	'RULES'						=> 'Regole',
+));
+
+// Similar Topics 1.0.0
+$lang = array_merge($lang, array(
+	'SIMILAR_TOPICS'			=> 'Argomenti simili',
+));
+
+/*
+ * Welcome PM on First Login (WPM)
+ * By DualFusion
+ */
+$lang = array_merge($lang, array(
+	'ACP_WELCOME_PM'		=> 'Messaggio di benvenuto al primo login',
+	'LOG_CONFIG_WELCOME_PM'	=> '<strong>Configurazione messaggio di benvenuto</strong>',
+));
+/* End WPM */
+
+//-- mod : Contact board administration ------------------------------------------------------------
+//-- add
+$lang = array_merge($lang, array(
+	'CONTACT_BOARD_ADMIN'		=> 'Contatta amministratore del forum',
+	'CONTACT_BOARD_ADMIN_SHORT'	=> 'Contattaci',
+));
+//-- fin mod : Contact board administration --------------------------------------------------------
+
+// start mod view or mark unread posts
+$lang = array_merge($lang, array(
+	'LOGIN_EXPLAIN_VIEWUNREADS'	=> 'Devi essere loggato per vedere la lista dei messaggi non letti',
+	'MARK_PM_UNREAD'			=> 'Segna messaggi come non letti',
+	'MARK_POST_UNREAD'			=> 'Segna messaggio come non letto',
+	'NO_UNREADS'				=> 'Non risultano messaggi non letti',
+	'PM_MARKED_UNREAD'			=> 'Messaggi privati segnati come non letti',
+	'POST_MARKED_UNREAD'		=> 'Messaggio segnato come non letto',
+	'RETURN_INBOX'				=> 'Ritorna alla casella messaggi',
+	'VIEW_UNREAD_PMS'			=> 'Vedi messaggi non letti',
+	'VIEW_UNREADS'				=> 'Vedi messaggi non letti',
+));
+// end mod view or mark unread posts
+
+// Automatic DST 1.0.6
+$lang = array_merge($lang, array(
+	'AUTOMATIC'						=> 'Automatica',
+));
+// Character Countdown
+$lang = array_merge($lang, array(
+   'CHARACTERS_COUNT_DOWN'         => 'Caratteri scritti:',
+));
+
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN - TITLE
+$lang['Page'] = 'Pagina ';
+// www.phpBB-SEO.com SEO TOOLKIT END - TITLE
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN -> GYM Sitemaps
+$lang = array_merge($lang, array(
+	'GYM_LINKS' => 'Links',
+	'GYM_LINK' => 'Link',
+	'GYM_RSS_SLIDE_START' => 'Inizio scroller',
+	'GYM_RSS_SLIDE_STOP' => 'Fine scroller',
+	'GYM_RSS_SOURCE' => 'Fonte',
+));
+// www.phpBB-SEO.com SEO TOOLKIT END -> GYM Sitemaps
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN - Related Topics
+$lang['RELATED_TOPICS'] = 'Argomenti correlati';
+// www.phpBB-SEO.com SEO TOOLKIT END - Related Topics
+
+// Radio Mod
+$lang = array_merge($lang, array(
+	'RADIO' => 'Radio',
+));
+
+// phpbb Calendar Version 0.1.0
+$lang = array_merge($lang, array(
+	'VIEWING_CALENDAR'			=> 'Guarda il calendario',
+	'VIEWING_CALENDAR_DAY'		=> 'Guarda il calendario del giorno',
+	'VIEWING_CALENDAR_EVENT'	=> 'Guarda evento del calendario',
+	'VIEWING_CALENDAR_MONTH'	=> 'Guarda il calendario del mese',
+	'VIEWING_CALENDAR_WEEK'		=> 'Guarda il calendario della settimana',
+	'EDITING_CALENDAR_EVENT'	=> 'Modificato evento del calendario',
+	'CREATING_CALENDAR_EVENT'	=> 'Creato evento del calendario',
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'COUNTRY'			=> 'Nazione',
+	'COUNTRY_FLAGS'		=> 'Bandiera nazionale',
+	'TOO_SHORT_FLAG'	=> 'Devi selezionare la bandiera della tua nazione',
+	'GROUP_FLAG'		=> 'Bandiera nazionale gruppo',
+	'SELECT_FLAG'		=> 'Seleziona la tua bandiera nazionale',
+	'SORT_FLAG'			=> 'Bandiera nazionale',
+	'USER_FLAG'			=> 'Bandiera nazionale utente',
+));
+
+// -- Gender MOD 1.0.1
+$lang = array_merge($lang, array(
+	'GENDER'			=> 'Sesso',
+	'GENDER_EXPLAIN'	=> 'Inserisci il tuo genere sessuale.',
+	'GENDER_X'			=> 'Non specificato',
+	'GENDER_M'			=> 'Maschio',
+	'GENDER_F'			=> 'Femmina',
+));
+
+// Google Search
+$lang = array_merge($lang, array(
+	'SEARCH_GOOGLE' 	=> 'Ricerca con Google?',
+));
+
+// phpBB AJAX Chat
+$lang = array_merge($lang, array(
+	'SHOUTBOX'		=> 'Chat',
+	'CHAT_LABEL'	=> 'In Chat',
+	'CHAT_TITLE'	=> 'Online',
+	'CHAT_WINDOW'	=> 'Finestra chat',
+));
+
+// AdvancedBlockMOD 1.0.3						
+$lang = array_merge($lang, array(
+	'WRONG_TIMEZONE'	=> 'Hai inserito un fuso orario non corretto. Sei pregato di restare sulla Terra!',
+));
+
+// Mod_Share_On by JesusADS
+$lang = array_merge($lang, array(
+	'SHARE_ON'				=> 'Condividi su ...',
+	'SHARE_FACEBOOK'		=> 'Facebook',
+	'SHARE_TWITTER'			=> 'Twitter',
+	'SHARE_ORKUT'			=> 'Orkut',
+	'SHARE_DIGG'			=> 'Digg',
+	'SHARE_MYSPACE'			=> 'MySpace',
+	'SHARE_DELICIOUS'		=> 'Delicious',
+	'SHARE_TECHNORATI'		=> 'Technorati',
+
+	'SHARE_ON_FACEBOOK'		=> 'Condividi su Facebook',
+	'SHARE_ON_TWITTER'		=> 'Condividi su Twitter',
+	'SHARE_ON_ORKUT'		=> 'Condividi su Orkut',
+	'SHARE_ON_DIGG'			=> 'Condividi su Digg',
+	'SHARE_ON_MYSPACE'		=> 'Condividi su MySpace',
+	'SHARE_ON_DELICIOUS'	=> 'Condividi su Delicious',
+	'SHARE_ON_TECHNORATI'	=> 'Condividi su Technorati',
+));
+
+// Toplist MOD 2.0.0RC3						
+$lang = array_merge($lang, array(
+    'VIEWING_TOPLIST'       => 'Vedi Top List',
+));
+
+
+Apri language/it/mcp.php
+
+Cerca:
+
+'LOGVIEW_VIEWFORUM'			=> 'Leggi forum',
+
+Aggiungi dopo:
+
+	// AdvancedBlockMOD 1.0.3						
+	'LOGVIEW_DNSBLLOOKUP'		=> 'Blocca blacklist',
+    // AdvancedBlockMOD 1.0.3						
+
+
+Apri language/it/help_faq.php
+
+Cerca:
+
+$help = array(
+
+Aggiungi sopra:
+
+/*
+* The following global is needed by Download MOD to display icons in the help texts
+*/
+global $user, $phpbb_root_path;
+
+
+
+Cerca:
+
+array( 
+      0 => 'Come faccio a trovare i miei allegati?', 
+      1 => 'Per trovare la lista degli allegati da te caricati, vai nel tuo Pannello di Controllo Utente, e segui i collegamenti alla sezione degli allegati.' 
+   ), 
+
+Aggiungi dopo:
+
+array( 
+      0 => '--', 
+	1 => 'Downloads'
+	),
+	array(
+	0 => 'Dove posso trovare i miei downloads?',
+	1 => 'Il link per il download si trova nel menu del forum e del portale, questo il link diretto: [<a href="' . append_sid("{$phpbb_root_path}downloads.$phpEx") . '">Downloads</a>]'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_blue') . '?',
+	1 => 'I motivi potrebbero essere diversi, ad esempio il traffico globale configurato dall’amministratore ha superato il limite previsto per questo mese.'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_red') . '?',
+	1 => 'Questo può accadere perchè:<br />- Il download è stato bloccato dall’amministratore.<br />- L’utente non è loggato ed il download è consentito solo agli utenti registrati.<br />- L’utente non ha abbastanza traffico per scaricare questo file.<br />- L’amministratore ha inserito un numero minimo messaggi, e l’utente non ha superato il numero minimo.<br />- Il traffico limite per questo file è stato completamente usato.'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_grey') . '?',
+	1 => 'Risorsa esterna. Il download è conservato su un server esterno. Anche se il download ' . $user->img('dl_green') . '. si trova su un server diverso sarà comunque trattato come traffico globale dell’utente, e se si è superato il limite non è possibile scaricare.'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_white') . '?',
+	1 => ' Il traffico globale dell’utente non è diminuito. Solo gli utenti registrati possono scaricare liberamente. Devi diminuire il traffico globale.'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_yellow') . '?',
+	1 => 'Il download è possibile con restrizioni. Il download è riservato agli utenti registrati. La dimensione del file è subordinato anche dalla dimensione del traffico complessivo scaricato.'
+	),
+	array(
+	0 => 'Che significa'. $user->img('dl_green') . '?',
+	1 => 'Libero download. Il download è consentito senza restrizioni. Il file può essere scaricato anche dagli ospiti. Non è necessario essere loggato. Il tuo traffico non è diminuito e dovrà scendere per poter scaricare i downloads.'
+	),
+	array(
+	0 => 'Perchè non riesco a scaricare qualsiasi tipo di file?',
+	1 => 'Questo può accadere per molte ragioni, leggi le prime due faqs' . $user->img('dl_blue') . ' e ' . $user->img('dl_red')
+	),
+	array(
+	0 => 'Come e quando ricevo nuovo traffico per il mio account?',
+	1 => 'Dopo il primo accesso l’utente riceve la data di registrazione. Ogni giorno prima di un mese, l’utente deve inserire un download e il traffico verrà ripristinato. Chiedi al tuo amministratore come ottenere più traffico.'
+	),
+	array(
+	0 => 'Vorrei scaricare più file, ma non ho nessun traffico',
+	1 => 'In questo caso chiedi all’amministratore. Puoi scaricare solo se l’amministratore deciderà di incrementare il traffico utente prima che l’account venga ripristinato automaticamente il prossimo mese.'
+	),
+	array(
+	0 => 'Come posso votare i download?',
+	1 => 'In ogni categoria di download o nella visualizzazione dei dettagli troverai una sezione per il voto.<br />Ogni click su "Vota" generato dagli utenti totalizzerà da 1 punto (cattivo) a 10 punti (molto buono). Puoi votare un download quando vuoi.'
+	),
+	
+	
+Apri language/it/memberlist.php
+
+Cerca:
+
+?>
+
+Sostituisci con:
+
+// -- User achievements 0.0.2
+$lang = array_merge($lang, array(
+	'ACHIEVE'				=> 'Archivio utente',
+	'40_POSTS'				=> 'Raggiunti 40 messaggi',
+	'80_POSTS'				=> 'Raggiunti 80 messaggi',
+	'160_POSTS'				=> 'Raggiunti 160 messaggi',
+	'240_POSTS'				=> 'Raggiunti 240 messaggi',
+	'480_POSTS'				=> 'Raggiunti 480 messaggi',
+	'600_POSTS'				=> 'Raggiunti 600 messaggi',
+	'1000_POSTS'			=> 'Raggiunti 1000 messaggi',
+	'2000_POSTS'			=> 'Raggiunti 2000 messaggi',
+	'3000_POSTS'			=> 'Raggiunti 3000 messaggi',
+	'TOPIC_VIEWS_500'		=> 'Ha creato un argomento con oltre 500 visite',
+	'TOPIC_VIEWS_1000'		=> 'Ha creato un argomento con oltre 1000 visite',
+	'TOPIC_VIEWS_10000'		=> 'Ha creato un argomento con oltre 1000 visite',
+	'TOPIC_REPLIES_25'		=> 'Ha creato un argomento con oltre 25 risposte',
+	'TOPIC_REPLIES_50'		=> 'Ha creato un argomento con oltre 50 risposte',
+	'TOPIC_REPLIES_100'		=> 'Ha creato un argomento con oltre 100 risposte',	
+	'TOPIC_REPLIES_500'		=> 'Ha creato un argomento con oltre 500 risposte',	
+	'HAS_ATTACHED'			=> 'Ha inviato un  file',
+	'HAS_POLL'				=> 'Ha creato un sondaggio',
+	'UP_AVATAR'				=> 'Ha creato un avatar',
+	'FRIEND_5'				=> 'Raggiunti 5 amici',
+	'FRIEND_10'				=> 'Raggiunti 10 amici',
+	'FRIEND_20'				=> 'Raggiunti 20 amici',
+	'FRIEND_50'				=> 'Raggiunti 50 amici',
+	'JOIN_30'				=> 'E’ registrato da 30 giorni',
+	'JOIN_60'				=> 'E’ registrato da 60 giorni',
+	'JOIN_365'				=> 'E’ registrato da un anno',
+	'POST_PER_DAY_5'		=> '5+ messaggi per giorno',
+	'POST_PER_DAY_10'		=> '10+ messaggi per giorno',
+	'POST_PER_DAY_20'		=> '20+ messaggi per giorno',
+	'VOTED_POLL'			=> 'Ha votato ad un sondaggio',
+	'CREATED_TOPIC_10'		=> 'Ha creato 10 argomenti',
+	'CREATED_TOPIC_20'		=> 'Ha creato 20 argomenti',
+	'CREATED_TOPIC_50'		=> 'Ha creato 50 argomenti',
+	'TOTAL_REACH'			=> 'totale raggiunto',
+	'TROPHY'				=> 'archivio trofei',
+	'TOTAL_POST_REACH'		=> 'Obiettivi messaggi raggiunti :',
+	'TOPIC_CREATE'			=> 'Obiettivi raggiunti di creazione argomenti :',
+	'TOPIC_VIEW'			=> 'Obiettivi raggiunti argomenti visti :',
+	'TOPIC_REPLIES'			=> 'Obiettivi raggiunti riposte ad argomenti :',
+	'RANDOM_GOALS'			=> 'Totale obiettivi casuali raggiunti :',
+	'MEMBER_GOALS'			=> 'Totale obiettivi raggiunti utenti per giorno:',
+	'FRIEND_GOALS'			=> 'Totale obiettivi raggiunti amici :',
+	'JOIN_GOALS'			=> 'Totale obiettivi raggiunti argomenti per giorno :',
+	'NONE_YET'				=> '<strong>Questo utente non ha raggiunto il minimo di 10 obiettivi per ottenere un trofeo!</strong>',
+));
+
+// Friend list on member view by DaMysterious
+$lang = array_merge($lang, array(
+	'LIST_FRIEND'     		=> '1 amico',
+	'LIST_FRIENDS'			=> '%d amici',
+	'FRIEND_LIST'			=> 'Lista amici',
+	'FRIEND_AVATAR'			=> 'Avatar',
+	'FRIEND_COUNTRY'		=> 'Nazione',
+	'ONLINE_FRIENDS'		=> 'Amici on-line',
+	'OFFLINE_FRIENDS'		=> 'Amici off-line',
+	'VIEW_ALL'				=> 'Vedi tutto',
+	'NO_FRIEND'				=> 'Nessun utente selezionato!',
+	'TOTAL_FRIENDS'			=> 'Totale amici',
+));
+
+?>
+
+Apri language/it/ucp.php
+
+Cerca:
+
+?>
+
+Sostituisci con:
+
+// Anti Bot Question
+$lang = array_merge($lang, array(
+	'AB_QUESTION_ERROR'	=> 'La risposta alla domanda Anti-Bot non è corretta, controlla la risposta e prova ancora.',
+	'AB_NO_ANSWER' => 'Nessuna domanda/risposta Anti-Bot inserita.',
+));
+	
+
+	// phpbb Calendar Version 0.1.0
+$lang = array_merge($lang, array(
+	'DISPLAY_EVENTS_DAYCOUNT' => 'Quanti giorni nel futuro vuoi visualizzare?',
+	'UCP_MAIN_CALENDAR_MYEVENTS' => 'Gestione eventi',
+	'UCP_MAIN_CALENDAR_REGISTRATION'=> 'Gestione registrazione eventi',
+));
+
+?>
+
+Apri language/it/viewforum.php
+
+Cerca:
+
+?>
+
+Sostituisci con:
+
+$lang = array_merge($lang, array(
+    'GLOBAL_ANNOUNCEMENTS'  => 'Annunci Globali',
+	'STICKY'                => 'Importanti',
+));
+
+?>
+
+Apri language/it/acp/users.php
+
+Cerca:
+
+'RETAIN_POSTS'			=> 'Trattieni messaggi',
+
+Sostituisci con:
+
+	'RETAIN_POSTS'			=> 'Trattieni messaggi &amp; voci blog',
+    'DELETE_BLOGS'          => 'Cancella voci blogs',
+    'DELETE_POSTS_AND_BLOGS'=> 'Cancella messaggi &amp; voci blog',
+	
+
+Apri language/it/acp/common.php
+
+Cerca:
+
+?>
+
+Aggiungi prima:
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portale',
+   	'ACP_CAT_PORTAL'           				=> 'Portale',
+   	'ACP_PORTAL'           					=> 'Portale',
+   	'ACP_PORTAL_ADMIN'           			=> 'Generale',
+   	'ACP_PORTAL_INFO'           			=> 'Generale',
+    'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Annunci',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'News',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Messaggi recenti',
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Paroliere',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Allegati',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Ultimi utenti',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Sondaggi',
+    'ACP_PORTAL_BOTS_INFO'                  => 'Visite Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Maggiori autori',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Banners casuali',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Benvenuto',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Meteo',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Info',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Messaggio scorrevole',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Gestione Portale',
+
+	// Portal XL portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Blocchi portale',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Blocchi e pagine portale',
+	'ACP_PORTAL_BLOCKS'						=> 'Blocchi portale',
+	'ACP_MANAGE_BLOCKS'						=> 'Gestione blocchi portale',
+
+	// Portal XL index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Indice blocchi',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Indice blocchi',
+	'ACP_PORTAL_INDEX_BLOCKS'				=> 'Indice blocchi',
+	'ACP_PORTAL_BLOCKS_INDEX'				=> 'Indice blocchi',
+	'ACP_MANAGE_INDEX_BLOCKS'				=> 'Gestione blocchi forum',
+
+	// Portal XL portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Menu',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Menu',
+	'ACP_PORTAL_MENUS'						=> 'Menu',
+	'ACP_MANAGE_MENUS'						=> 'Gestione menu',
+
+	// Portal XL portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Citazioni',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Citazioni',
+	'ACP_PORTAL_QUOTES'						=> 'Citazioni',
+	'ACP_MANAGE_QUOTES'						=> 'Gestione citazioni',
+
+	// Portal XL portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Gestione banners',
+	'ACP_MANAGE_BANNERS'					=> 'Gestione banners 88x31',
+
+	// Portal XL portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners orizzontali',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners orizzontali e verticali',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners orizzontali',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Gestione banners 400x60',
+
+	// Portal XL portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners verticali',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners verticali',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners verticali',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Gestione Banners 130x600',
+
+	// Portal XL portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Links',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Links',
+	'ACP_PORTAL_LINKS'							=> 'Links',
+	'ACP_MANAGE_LINKS'							=> 'Gestione Links',
+
+	// Portal XL portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mods',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mods',
+	'ACP_PORTAL_MODS'							=> 'Mods',
+	'ACP_MANAGE_MODS'							=> 'Gestione Mods',
+
+	// Portal XL portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Pubblicità forum',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Pubblicità forum',
+	'ACP_PORTAL_ADDS'							=> 'Pubblicità forum',
+	'ACP_MANAGE_ADDS'							=> 'Gestione pubblicità',
+
+	// Portal XL portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Pagine portale',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Pagine portale',
+	'ACP_PORTAL_PAGES'							=> 'Pagine portale',
+	'ACP_MANAGE_PAGES'							=> 'Gestione pagine portale',
+
+	// Portal XL portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Feeds portale',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Feeds portale',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Feeds portale',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Gestione Feeds',
+
+	// Portal XL portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Acronimi portale',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Acronimi portale',
+	'ACP_PORTAL_ACRONYMS'						=> 'Acronimi portale',
+	'ACP_MANAGE_ACRONYMS'						=> 'Gestione acronimi',
+
+	// Portal XL portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Impressioni portale',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Impressioni portale',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Impressioni portale',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Gestione impressioni',
+	   		
+	// Portal XL portal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portale generale salvato</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Annunci portale salvati</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>News portale salvate</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Messaggi recenti portale salvati</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Wordgraph portale salvato</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Salvata larghezza della colonna portale</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Paypal portale salvato</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Allegati portale salvati</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Utenti portale salvati</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Sondaggi portale salvati</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Visite bots portale salvate</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Maggiori autori portale salvati</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Random portale salvati</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Benvenuto portale salvato</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Meteo portale salvato</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Info portale salvato</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Indice forum portale salvato</strong>',
+  	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Messaggi scorrevoli portale salvati</strong>',
+  	'LOG_CONFIG_METATAGS'      		=> '<strong>Configurazione META tags salvata</strong>',  
+	
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>Portal XL installato</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>Portal XL disinstallato</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>Portal XL database aggiornato</strong>',
+
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'ACP_COUNTER_SETTINGS'	=> 'Configurazione contatore',
+	'COUNTER_STARTED'		=> 'Countatore iniziato',
+	'HITS_PER_DAY'			=> 'Maggiori visite per giorno',
+	'LOG_CONFIG_COUNTER'	=> '<strong>Configurazione contatore alterata</strong>',
+	'LOG_RESET_COUNTER'		=> '<strong>Contatore azzerato: azzerati data e valori</strong>',
+	'NUMBER_HITS'			=> 'Numero di visite',
+	'RESET_COUNTER'			=> 'Azzera contatore',
+	'RESET_COUNTER_CONFIRM'	=> 'Sei sicuro di voler azzerare il contatore?',
+	'RESET_COUNTER_EXPLAIN'	=> 'Azzera tutti dati del contatore: azzera data e totale visite.',
+));
+
+// phpbb Calendar
+$lang = array_merge($lang, array(
+    'ACP_CALENDAR'				=> 'Calendario',
+    'ACP_CALENDAR_SETTINGS'				=> 'Configurazione Calendario',
+    'ACP_CALENDAR_DELETE_EVENT_TYPE'	=> 'Cancella tipo evento',
+    'ACP_CALENDAR_ETYPES'				=> 'Gestione eventi del calendario',
+));
+
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN
+$lang = array_merge($lang, array(
+	'ACP_CAT_PHPBB_SEO' => 'phpBB SEO',
+	'ACP_MOD_REWRITE' => 'Configurazione URL Rewriting',
+	'ACP_PHPBB_SEO_CLASS' => 'Configurazione phpBB SEO',
+	'ACP_FORUM_URL' => 'Gestione URL Forum',
+	'ACP_HTACCESS' => '.htaccess',
+	'ACP_PREMOD_UPDATE' => '<h1>Annuncio versione</h1>
+	<p>Questo aggiornamento riguarda solo la versione premod, non quello relativo al core del phpBB.</p>
+	<p>Una nuova versione di phpBB SEO premod è disponibile : %1$s<br/>Visita<a href="%2$s" title="The release thread"><b>the release thread</b></a> e aggiorna la tua installazione.</p>',
+	'SEO_LOG_INSTALL_PHPBB_SEO' => '<strong>phpBB SEO mod rewrite installato (v%s)</strong>',
+	'SEO_LOG_INSTALL_PHPBB_SEO_FAIL' => '<strong>phpBB SEO mod rewrite installazione fallita</strong><br/>%s',
+	'SEO_LOG_UNINSTALL_PHPBB_SEO' => '<strong>phpBB SEO mod rewrite disinstallato (v%s)</strong>',
+	'SEO_LOG_UNINSTALL_PHPBB_SEO_FAIL' => '<strong>phpBB SEO mod rewrite disinstallazione fallita</strong><br/>%s',
+	'SEO_LOG_CONFIG_SETTINGS' => '<strong>Configurazione phpBB SEO Class alterata</strong>',
+	'SEO_LOG_CONFIG_FORUM_URL' => '<strong>URL Forum alterato</strong>',
+	'SEO_LOG_CONFIG_HTACCESS' => '<strong>Generato nuovo .htaccess</strong>',
+));
+// www.phpBB-SEO.com SEO TOOLKIT END
+
+//-- mod : Contact board administration ------------------------------------------------------------
+//-- add
+$lang = array_merge($lang, array(
+	'ACP_CONTACT_ADMIN_SETTINGS'	=> 'Contatto amministrazione Forum',
+	'LOG_CONFIG_CONTACT_ADMIN'		=> '<strong>Configurazione pagina contatti alterata</strong>',
+	'LOG_CONTACT_BOT_INVALID'		=> '<strong>Il contatto non è un valido user id: %s</strong>',
+	'LOG_CONTACT_FORUM_INVALID'		=> '<strong>Il contatto selezionato non è valido per :</strong><br />l’ID %1$s del Forum',
+	'LOG_CONTACT_NONE'				=> '<strong>Gli amministratori non permettono agli utenti di usare il modulo contatti via %1$s</strong>',
+));
+//-- fin mod : Contact board administration --------------------------------------------------------
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN -> GYM Sitemaps
+$lang = array_merge($lang, array(
+   'ACP_GYM_SITEMAPS' => 'GYM mappa sito e RSS',
+   'ACP_GYM_MAIN' => 'Configurazione principale',
+   'ACP_GYM_GOOGLE_MAIN' => 'Google Sitemaps',
+   'ACP_GYM_RSS_MAIN' => 'Feeds RSS',
+   'ACP_GYM_YAHOO_MAIN' => 'Yahoo! lista url',
+   'ACP_GYM_HTML_MAIN' => 'Mappa sito HTML',
+   'GYM_LOG_CONFIG_MAIN' => '<strong>Alterata mappa sito GYM &amp; configurazione RSS</strong><br/>&raquo; Configurazione principale',
+   'GYM_LOG_CONFIG_GOOGLE' => '<strong>Alterata mappa sito GYM &amp; configurazione RSS</strong><br/>&raquo; Google sitemaps',
+   'GYM_LOG_CONFIG_RSS' => '<strong>Alterata mappa sito GYM &amp; configurazione RSS</strong><br/>&raquo; Feeds RSS',
+   'GYM_LOG_CONFIG_HTML' => '<strong>Alterata mappa sito GYM &amp; configurazione RSS</strong><br/>&raquo; Mappe sito HTML',
+   'GYM_LOG_CONFIG_YAHOO' => '<strong>Alterata mappa sito GYM &amp; configurazione RSS</strong><br/>&raquo; Yahoo! list URL',
+   // Install Logs
+   'SEO_LOG_INSTALL_GYM_SITEMAPS' => '<strong>GYM mappa sito &amp; RSS V.%s Installata</strong>',
+   'SEO_LOG_INSTALL_GYM_SITEMAPS_FAIL' => '<strong>GYM mappa sito &amp; RSS installazione fallita</strong><br/>%s',
+   'SEO_LOG_UNINSTALL_GYM_SITEMAPS' => '<strong>GYM mappa sito &amp; RSS V.%s eliminata</strong>',
+   'SEO_LOG_UNINSTALL_GYM_SITEMAPS_FAIL' => '<strong>GYM mappa sito &amp; RSS eliminazione fallita</strong><br/>%s',
+   'SEO_LOG_UPDATE_GYM_SITEMAPS' => '<strong>Aggiornata GYM mappa sito &amp; RSS  V.%s</strong>',
+   'SEO_LOG_UPDATE_GYM_SITEMAPS_FAIL' => '<strong>GYM mappa sito &amp; RSS aggiornamento fallito</strong><br/>%s',
+));
+// www.phpBB-SEO.com SEO TOOLKIT END -> GYM Sitemaps
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'ACP_FLAG_SETTINGS'		=> 'Configurazione bandiere nazionali',
+	'ACP_FLAGS'				=> 'Bandiere nazionali',
+	'ACP_MANAGE_FLAGS'		=> 'Gestione bandiere nazionali',
+	'ACP_USER_FLAG'			=> 'Bandiere nazionali',
+	'ACP_USER_COUNTRY_FLAG'	=> 'Bandiera nazione',
+	'LOG_CONFIG_FLAG'		=> '<strong>Alterata configurazione bandiere nazionali</strong>',
+	'LOG_FLAG_ADDED'		=> '<strong>Aggiunta nuova bandiera nazionale</strong><br />» %1$s (%2$s)',
+	'LOG_FLAG_REMOVED'		=> '<strong>Eliminata bandiera nazionale</strong><br />» %1$s (%2$s)',
+	'LOG_FLAG_UPDATED'		=> '<strong>Aggiornata bandiera nazionale</strong><br />» %1$s (%2$s)',
+));
+
+// Friend list on member view by DaMysterious
+$lang = array_merge($lang, array(
+	'ACP_FRIEND_SETTINGS' 	=> 'Profilo amici',
+	'ACP_PROFILE_FRIENDS' 	=> 'Configurazione profilo amici',
+));
+
+/**
+* A copy of Handyman` s MOD version check, to view it on the overview
+*/
+$lang = array_merge($lang, array(
+	'ANNOUNCEMENT_TOPIC'	=> 'Annuncio versione',
+	'CURRENT_VERSION'		=> 'Versione attuale',
+	'DOWNLOAD_LATEST'		=> 'Download ultima versione',
+	'LATEST_VERSION'		=> 'Ultima versione',
+	'NO_INFO'				=> 'Nessuna informazione di versione, il server non può essere contattato',
+	'NOT_UP_TO_DATE'		=> '%s non aggiornato',
+	'RELEASE_ANNOUNCEMENT'	=> 'Argomento di annuncio',
+	'UP_TO_DATE'			=> '%s aggiornato',
+	'VERSION_CHECK'			=> 'Controllo versione',
+));
+
+// AdvancedBlockMOD 1.0.3						
+$lang = array_merge($lang, array(
+	'ACP_BLOCK_LOGS'			=> 'Log DNSBL',
+	'ACP_BLOCK_LOGS_EXPLAIN'	=> 'Elenca le azioni svolte tramite fuso orario e verifica ad esempio i DNS durante la registrazione degli utenti. Questo registro contiene informazioni che è possibile utilizzare per controllare la funzione DNSBL di controllo. Se si dispone di autorizzazioni appropriate è inoltre possibile azzerare singole operazioni o il registro nel suo insieme.<br /><strong> I diversi registri devono essere abilitati nelle impostazioni di protezione</strong>',
+	'ACP_DNSBL'					=> 'Configurazione DNSBL',
+
+	'LOG_CLEAR_BLOCK'			=> '<strong>Pulisci log blocco</strong>',
+	'LOG_DNSBL'					=> '<strong>Controllo utente per DNSBL.</strong><br />Per altre informazioni controlla le altre voci per lo stesso indirizzo IP.',
+	'LOG_DNSBL_ADD'				=> '<strong>Creata nuova voce Blacklist DNS</strong><br />» %s',
+	'LOG_DNSBL_DELETE'			=> '<strong>Cancellata voce Blacklist DNS</strong><br />» %s',
+	'LOG_DNSBL_EDIT'			=> '<strong>Modificati dettagli Blacklist DNS</strong><br />» %s',
+	'LOG_DNSBL_FOUND'			=> '<strong>Indirizzo IP di spammer riconosciuto da controllo DNSBL</strong><br />»Blacklist “<em>%s</em>”',
+	'LOG_DNSBL_MOVE_DOWN'		=> '<strong>Spostato Blacklist DNS</strong> %1$s <strong>vicino</strong> %2$s',
+	'LOG_DNSBL_MOVE_UP'			=> '<strong>Spostato Blacklist DNS</strong> %1$s <strong>verso</strong> %2$s',
+	'LOG_DNSBL_REGISTER'		=> '<strong>Utente bloccato durante la registrazione per controllo DNSBL.</strong><br />Per altre informazioni controlla le altre voci per lo stesso indirizzo IP.',
+	'LOG_DNSMX'					=> '<strong>Utente ed indirizzo e-mail bloccati durante il controllo di DNS dominio</strong><br />»Dominio “<em>%s</em>”',
+	'LOG_WRONG_TZ'				=> '<strong>Utente bloccato per controllo fuso orario.</strong><br />»Fuso orario “<em>%s</em>”',
+));
+
+// Log Entry Email on Birthday version 1.0.1b
+$lang = array_merge($lang, array(
+	'LOG_BIRTHDAY_EMAIL_SENT'		=> '<strong>Email Compleanno inviata a</strong><br />» %s',
+));
+
+// Log Entry Ajax Shoutbox
+$lang = array_merge($lang, array(
+	'LOG_AS_PURGED'		=> '<strong>Cancella log shoutbox</strong><br />» %s',
+));
+
+// Mod_Share_On by JesusADS module entry
+$lang = array_merge($lang, array(
+	'ACP_SHARE_ON'			=> 'Share On',
+	'ACP_SHARE_ON_SETTINGS'	=> 'Impostazioni Share On',
+
+));
+
+
+
+
+Apri language/it/acp/board.php
+
+Cerca:
+
+?>
+
+Sostituisci con:
+
+// Anti Bot Question
+$lang = array_merge($lang, array(
+	'AB_ANSWER'					=> 'Risposta Anti-Bot',
+	'AB_ANSWER_EXPLAIN'			=> 'Questa è la risposta per la domanda.',
+	'AB_ANSWER_2'				=> 'Seconda Risposta Anti-Bot',
+	'AB_ANSWER_2_EXPLAIN'		=> 'Qui puoi aggiungere una seconda domanda, una buona idea è usare una domanda che richiede una risposta numerica.',
+	'AB_QUESTION_MOD'			=> 'Domanda Anti-Bot',
+	'AB_QUESTION'				=> 'Domanda Anti-Bot',
+	'AB_QUESTION_EXPLAIN'		=> 'Questa è una domanda ad un utente non registrato.',
+	'ABQ_ENABLE'				=> 'Attiva domanda Anti-Bot',
+	'ABQ_ENABLE_EXPLAIN'		=> 'Attiva domanda Anti-Bot per gli utenti in registrazione.',
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'ACP_FLAG_SETTINGS_EXPLAIN'	=> 'Configurazione bandiere nazionali',
+	'FLAGS_PATH'				=> 'Percorso immagine bandiera nazionale',
+	'FLAGS_PATH_EXPLAIN'		=> 'Percorso nella tua directory phpBB es. <samp>images/flags</samp>',
+	'REQUIRE_FLAG' 				=> 'Campo richiesto per bandiera nazionale',
+	'REQUIRE_FLAG_EXPLAIN' 		=> 'Richiede agli utenti di selezionare le informazioni della bandiera nazionale.',
+));
+
+// Friend list on member view by DaMysterious
+$lang = array_merge($lang, array(
+	'ACP_PROFILE_FRIENDS'			=> 'Configurazione profilo amici',
+	'ACP_PROFILE_FRIENDS_EXPLAIN'	=> 'Configurazione profilo amici',
+	'ACP_FRIEND_SETTINGS'			=> 'Mod profilo amici',
+	'ACP_NUM_FRIENDS'				=> 'Numero di amici per pagina',
+	'ACP_NUM_FRIENDS_EXPLAIN'		=> 'Numero massimo di amici visualizzati',
+	'ACP_FRIENDS_AV_SIZE'			=> 'Dimensione avatar',
+	'ACP_FRIENDS_AV_SIZE_EXPLAIN'	=> 'La dimensione dell’avatar visualizzato deve essere compreso tra 20 e 100 pixel, è raccomandato il valore di 80 pixel',
+	'ACP_SC_AVATAR_EXPLAIN'			=> 'Esempio : 25 salva una dimensione di 25 pixel x 25 pixel <br/> Per disabilitare gli avatars seleziona questo valore a 0',
+	'TITLE_EXPLAIN'					=> 'Configurazione lista amici nella visualizzazione profilo.',
+));
+
+// AdvancedBlockMOD 1.0.3						
+$lang = array_merge($lang, array(
+	'CHECK_TZ'						=> 'Controllo configurazione fuso orario',
+	'CHECK_TZ_EXPLAIN'				=> 'Se abilitato il fuso orario utente viene verificato con i valori di non-terrestre di -19 e 19 durante la registrazione. Gli spammer spesso utilizzano la prima o l’ultima voce del menù a discesa. Se questa opzione è abilitata due valori strani si aggiungono all’inizio e alla fine del menù a tendina solo in registrazione.',
+	'LOG_CHECK_DNSBL'				=> 'Abilita blocco log per controllo DNSBL',
+	'LOG_CHECK_TZ'					=> 'Abilita blocco log per controllo fuso orario',
+	'LOG_EMAIL_CHECK_MX'			=> 'Abilita blocco log per controllo e-mail dominio valido record MX',
+
+));
+
+// Email on Birthday version 1.0.1b						
+$lang = array_merge($lang, array(
+	'BIRTHDAY_EMAILS'				=> 'Invia email Compleanno',
+	'BIRTHDAY_EMAILS_EXPLAIN'		=> 'Invia agli utenti una email di auguri per il loro Compleanno',
+));
+
+?>
+
+Cerca:
+
+'CHECK_DNSBL_EXPLAIN'			=> 'Se abilitato l’indirizzo IP di un utente viene controllato tramite il seguente servizio DNSBL nelle registrazioni e nei messaggi: <a href="http://spamcop.net">spamcop.net</a>, <a href="http://dsbl.org">dsbl.org</a> and <a href="http://www.spamhaus.org">www.spamhaus.org</a>. Questo controllo impiega tempo, a seconda della configurazione del server. Se vengono rilevati rallentamenti o falsi positivi si raccomanda di disabilitare questo controllo.',
+
+Sostituisci con:
+
+// AdvancedBlockMOD 1.0.3						
+	// 'CHECK_DNSBL_EXPLAIN'			=> 'Se abilitato l’indirizzo IP di un utente viene controllato tramite il seguente servizio DNSBL nelle registrazioni e nei messaggi: <a href="http://spamcop.net">spamcop.net</a>, <a href="http://dsbl.org">dsbl.org</a> and <a href="http://www.spamhaus.org">www.spamhaus.org</a>. Questo controllo impiega tempo, a seconda della configurazione del server. Se vengono rilevati rallentamenti o falsi positivi si raccomanda di disabilitare questo controllo.',
+	'CHECK_DNSBL_EXPLAIN'			=> 'Se abilitato l’indirizzo IP di un utente viene controllato tramite il seguente servizio DNSBL nelle registrazioni e nei messaggi. Questo controllo impiega tempo, a seconda della configurazione del server. Se vengono rilevati rallentamenti o falsi positivi si raccomanda di disabilitare questo controllo.',
+// AdvancedBlockMOD 1.0.3						
+	
+
+Apri language/it/acp/forums.php
+
+Cerca:
+
+	'UNLOCKED'			=> 'Sbloccato',
+	
+Prima aggiungi:
+
+//Support Ticket System MOD Beginn
+	'STS_ENABLE'		=> 'Attiva il supporto ticket',
+	//Support Ticket System MOD End
+	
+Apri language/it/acp/permissions_phpbb.php
+
+Cerca:
+
+	'user_group'	=> 'Utenti &amp; Gruppi',
+
+Aggiungi dopo:
+		
+	'downloads'		=> 'Download',	
+
+Cerca:
+
+'acl_a_search'		=> array('lang' => 'Può gestire ricerca e impostazioni', 'cat' => 'misc'),
+
+Aggiungi dopo:
+
+    'acl_a_pm_spy'      => array('lang' => 'Può leggere i messaggi privati di altri utenti', 'cat' => 'misc'),	
+));
+// Download MOD Permissions
+$lang = array_merge($lang, array(
+	'acl_a_dl_overview'		=> array('lang' => 'Può gestire la pagina iniziale', 'cat' => 'downloads'),
+	'acl_a_dl_config'		=> array('lang' => 'Può gestire la configurazione generale', 'cat' => 'downloads'),
+	'acl_a_dl_traffic'		=> array('lang' => 'Può gestire il traffico', 'cat' => 'downloads'),
+	'acl_a_dl_categories'	=> array('lang' => 'Può gestire le categorie', 'cat' => 'downloads'),
+	'acl_a_dl_files'		=> array('lang' => 'Può gestire i downloads', 'cat' => 'downloads'),
+	'acl_a_dl_permissions'	=> array('lang' => 'Può gestire i permessi', 'cat' => 'downloads'),
+	'acl_a_dl_stats'		=> array('lang' => 'Può leggere e gestire le statistiche', 'cat' => 'downloads'),
+	'acl_a_dl_banlist'		=> array('lang' => 'Può gestire la lista ban', 'cat' => 'downloads'),
+	'acl_a_dl_blacklist'	=> array('lang' => 'Può gestire l’estensione dei file non permessi', 'cat' => 'downloads'),
+	'acl_a_dl_toolbox'		=> array('lang' => 'Può usare il toolbox', 'cat' => 'downloads'),
+));
+
+// PM Spy mod
+$lang = array_merge($lang, array(
+	'acl_a_pm_spy'	=> array('lang'	=> 'Può gestire i messaggi privati degli utenti', 'cat' => 'misc'),
+));
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'acl_a_flags'	        => array('lang' => 'Può gestire le bandiere nazionali', 'cat' => 'user_group'),
+	'acl_a_country_flags'	=> array('lang' => 'Può gestire le bandiere nazionali', 'cat' => 'misc'),
+	
+
+
+
+Apri language/it/acp/styles.php
+
+Cerca:
+	
+?>
+
+Sostituisci con;
+
+// phpbb Calendar Version 0.1.0
+$lang = array_merge($lang, array(
+	'IMG_BUTTON_CALENDAR_NEW'	=> 'Nuovo Evento',
+	'IMG_BUTTON_CALENDAR_DAY'	=> 'Vista giorno',
+	'IMG_BUTTON_CALENDAR_WEEK'	=> 'Vista settimana',
+	'IMG_BUTTON_CALENDAR_MONTH'	=> 'Vista mese',
+	'IMG_ICON_CALENDAR_EDIT_ALL' => 'Modifica tutti i messaggi',
+	'IMG_ICON_CALENDAR_DELETE_ALL' => 'Cancella tutti i messaggi',
+));
+
+// AJAX checking
+$lang = array_merge($lang, array(
+	'IMG_ICON_AJAX_CHECKING'		=> 'Controllo AJAX',
+	'IMG_ICON_AJAX_TRUE'			=> 'AJAX attivato',
+	'IMG_ICON_AJAX_FALSE'			=> 'AJAX disattivato',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_1'	=> 'AJAX complessità password - Molto facile',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_2'	=> 'AJAX complessità - Facile',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_3'	=> 'AJAX complessità - Accettabile',
+	'IMG_ICON_AJAX_PASSWORD_STRENGTH_4'	=> 'AJAX complessità - Complessa',
+));
+// -- Gender MOD 1.0.1
+$lang = array_merge($lang, array(
+	'IMG_ICON_GENDER_X'	=> 'Sesso: non specificato',
+	'IMG_ICON_GENDER_M'	=> 'Sesso: Maschio',
+	'IMG_ICON_GENDER_F'	=> 'Sesso: Femminile',
+));
+// -- Gender MOD 1.0.1
+
+// Start DM Video
+$lang = array_merge($lang, array(
+	'IMG_BUTTON_COMMENT_NEW'	=> 'New comment',
+	'IMG_BUTTON_VIDEO_NEW'		=> 'New Video',
+));
+// Start DM Video
+$lang = array_merge($lang, array(
+   'IMG_BUTTON_COMMENT_NEW'   => 'Nuovo commento',
+   'IMG_BUTTON_VIDEO_NEW'     => 'Nuovo video',
+));
+// Start DM Video
+?>
+
+Apri language/it/posting.php
+
+Cerca:
+
+?>
+
+Aggiungi prima:
+
+// Extra bbcode definitions Portal XL
+$lang = array_merge($lang, array(
+	'BBCODE_TABLE_HELP'		  	=> 'Crea tabelle',
+	'BBCODE_FONTCOLOR_HELP'		=> 'Colore carattere',
+	'BBCODE_FONTSIZE_HELP'		=> 'Dimensione carattere',
+	'BBCODE_FONTFAMILY_HELP'	=> 'Tipo carattere',
+));

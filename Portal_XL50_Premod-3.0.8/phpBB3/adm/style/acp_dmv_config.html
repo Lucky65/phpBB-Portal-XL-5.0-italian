@@ -1,0 +1,103 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_DMV_CONFIG}</h1>
+<p>{L_ACP_DMV_CONFIG_EXPLAIN}</p>
+
+<form id="DM_VIDEO" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_DMV_CONFIG_MAIN_SETTINGS}</legend>
+		<dl>
+			<dt><label for="rows_per_page_acp">{L_DMV_CONFIG_ACP_PAGE}</label><br />{L_DMV_CONFIG_ACP_PAGE_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="video_page_acp" value="{ROWS_PER_PAGE_ACP}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="rows_per_page_user">{L_DMV_CONFIG_USER_PAGE}</label><br />{L_DMV_CONFIG_USER_PAGE_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="video_page_user" value="{ROWS_PER_PAGE_USER}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="rows_per_page_user">{L_DMV_CONFIG_COMMENT}</label><br />{L_DMV_CONFIG_COMMENT_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="video_page_comment" value="{ROWS_PER_PAGE_COMMENT}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="top_views">{L_DMV_CONFIG_TOP_VIEWS}</label><br />{L_DMV_CONFIG_TOP_VIEWS_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="top_views" value="{TOP_VIEWS}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="top_ratings">{L_DMV_CONFIG_TOP_RATE}</label><br />{L_DMV_CONFIG_TOP_RATE_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="top_ratings" value="{TOP_RATING}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="newest_videos">{L_DMV_CONFIG_NEWEST}</label><br />{L_DMV_CONFIG_NEWEST_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="5" name="newest_videos" value="{NEWEST_VIDEOS}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="copy_email">{L_DMV_CONFIG_COPY_EMAIL}</label><br />{L_DMV_CONFIG_COPY_EMAIL_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="255" size="50" name="copyright_email" value="{COPY_EMAIL}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="copy_show">{L_DMV_CONFIG_COPY_SHOW}</label><br />{L_DMV_CONFIG_COPY_SHOW_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="255" size="50" name="copyright_show" value="{COPY_SHOW}" /></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_DMV_CONFIG_PM_SETTINGS}</legend>
+		<dl>
+			<dt><label for="new_video_pm_from">{L_DMV_CONFIG_PM_FROM_ID}:</label><br /><span>{L_DMV_CONFIG_PM_FROM_ID_EX}</span></dt>
+			<dd><input class="post" type="text" maxlength="5" size="3" name="new_video_pm_from" value="{PM_FROM_ID}" /> ({USERNAME_FROM})</dd>
+		</dl>
+		<dl>
+			<dt><label for="new_video_pm_to">{L_DMV_CONFIG_PM_TO_ID}:</label><br /><span>{L_DMV_CONFIG_PM_TO_ID_EX}</span></dt>
+			<dd><input class="post" type="text" maxlength="5" size="3" name="new_video_pm_to" value="{PM_TO_ID}" /> ({USERNAME_TO})</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_DMV_CONFIG_ANNOUNCE_SETTINGS}</legend>
+		<dl>
+			<dt><label for="video_announce_enable">{L_DMV_CONFIG_ANNOUNCE_ENABLE}</label><br />{L_DMV_CONFIG_ANNOUNCE_ENABLE_EX}</dt>
+			<dd><input type="radio" class="radio" name="video_announce_enable" value="1" <!-- IF ANNOUNCE_ENABLE == 1 -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+				<input type="radio" class="radio" name="video_announce_enable" value="0" <!-- IF  ANNOUNCE_ENABLE == 0 -->checked="checked"<!-- ENDIF -->/> {L_NO}</dd>
+		</dl>
+		<dl>
+			<dt><label for="word">{L_DMV_CONFIG_ANNOUNCE_FORUM}</label><br />
+				<span>{L_DMV_CONFIG_ANNOUNCE_FORUM_EX}</span></dt>
+			<dd><select name="video_announce_forum_id">{ANNOUNCE_FORUM_LIST}</select></dd>
+		</dl>
+	</fieldset>
+
+	<!-- IF S_IN_UPS -->
+		<!-- IF not S_UPS_INACTIVE-->
+		<fieldset>
+			<legend>{L_DMV_CONFIG_POINTS_SETTINGS}</legend>
+			<p>{L_DMV_CONFIG_POINTS_EXPLAIN}</p>
+			<br />
+			<dl>
+				<dt><label for="video_points_enable">{L_DMV_CONFIG_POINTS_ENABLE}</label><br />{L_DMV_CONFIG_POINTS_ENABLE_EX}</dt>
+				<dd><input type="radio" class="radio" name="video_points_enable" value="1" <!-- IF POINTS_ENABLE == 1 -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+					<input type="radio" class="radio" name="video_points_enable" value="0" <!-- IF  POINTS_ENABLE == 0 -->checked="checked"<!-- ENDIF -->/> {L_NO}</dd>
+			</dl>
+			<dl>
+				<dt><label for="video_points_value">{L_DMV_CONFIG_POINTS_VALUE}:</label><br /><span>{L_DMV_CONFIG_POINTS_VALUE_EX}</span></dt>
+				<dd><input class="post" type="text" maxlength="4" size="4" name="video_points_value" value="{POINTS_VALUE}" /> {POINTS_NAME}</dd>
+			</dl>
+		</fieldset>
+		<!-- ELSE -->
+		<fieldset>
+			<legend>{L_DMV_CONFIG_POINTS_SETTINGS}</legend>
+			<p>{L_DMV_CONFIG_POINTS_INACTIVE}</p>
+		</fieldset>
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	
+	<fieldset class="submit-buttons">
+		<legend>{L_SUBMIT}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+			{S_FORM_TOKEN}
+		</p>
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

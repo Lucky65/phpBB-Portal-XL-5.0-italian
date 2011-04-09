@@ -1,0 +1,16 @@
+Subject: Ein neues Event wurde zum Kalender hinzugefügt
+
+Lieber {USERNAME},
+
+Das Event "{EVENT_SUBJECT}" wurde zum Kalender hinzugefügt.
+
+Um den Kalender zu sehen, besuche bitte folgenden Link:
+{U_CALENDAR}
+
+Um das Event zu sehen, besuche bitte folgenden Link:
+{U_EVENT}
+
+Wenn Du nicht mehr über neue Events im Kalender informiert werden möchtest, klicke bitte folgenden Link:
+{U_UNWATCH_CALENDAR}
+
+{EMAIL_SIG}

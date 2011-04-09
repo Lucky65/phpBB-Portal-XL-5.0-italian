@@ -1,0 +1,40 @@
+<h2>{L_DMV_NEWEST_VIDEOS}</h2>
+<!-- BEGIN newest -->
+	<!-- IF newest.S_FIRST_ROW -->
+	<div class="forabg">
+		<div class="inner"><span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl>
+						<dd class="dmv-title">{L_DMV_TITLE}</dd>
+						<dd class="dmv-singer">{L_DMV_FROM}</dd>
+						<dd class="dmv-views">{L_DMV_DURATION}</dd>
+						<dd class="dmv-views">{L_DMV_RATING_LIST}</dd>
+						<dd class="dmv-views">{L_DMV_VIDEO_VIEWS}</dd>
+						<dd class="dmv-lastpost">{L_DMV_AUTHOR}</dd>
+					</dl>
+				</li>
+			</ul>
+			<ul class="topiclist topics">
+	<!-- ENDIF -->
+				<li class="row<!-- IF newest.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+					<dl>
+						<dd class="dmv-title">&nbsp;<a href="{newest.U_SHOW_VIDEO}" class="topictitle">{newest.TITLE}</a></dd>
+						<dd class="dmv-singer">{newest.SINGER}</dd>
+						<dd class="dmv-views">{newest.DURATION}</dd>
+						<dd class="dmv-views">{newest.RATING}</dd>
+						<dd class="dmv-views">{newest.VIEWS}</dd>
+						<dd class="dmv-lastpost">
+							&nbsp;{L_POST_BY_AUTHOR} {newest.POST_AUTHOR_FULL}<br />
+							&nbsp;{L_POSTED_ON_DATE} {newest.POST_TIME}
+						</dd>
+					</dl>
+				</li>
+	<!-- IF newest.S_LAST_ROW -->
+			</ul>
+			<span class="corners-bottom"><span></span></span>
+		</div>
+	</div>
+	<!-- ENDIF -->
+<!-- END newest -->
+<br /><br />

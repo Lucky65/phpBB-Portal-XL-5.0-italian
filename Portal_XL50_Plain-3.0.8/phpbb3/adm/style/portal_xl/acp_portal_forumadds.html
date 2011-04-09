@@ -1,0 +1,117 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_ADDS}</legend>
+
+	<form id="acp_portal_adds" method="post" action="{U_ACTION}">
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_NEW_AD}</th>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_NAME}:</strong><br /><span>{L_ADDS_NAME_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="adds_name" type="text" id="adds_name" value="{ADDS_NAME}" size="41"  /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_CODE}:</strong><br /><span>{L_ADDS_CODE_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><textarea rows="9" name="adds_code" id="adds_code" cols="52">{ADDS_CODE}</textarea></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_FORUMS}:</strong><br /><span>{L_ADDS_FORUMS_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input name="adds_show_forums" type="text" id="adds_show_forums" value="{ADDS_SHOW_FORUMS}" size="41" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_FORUMS}:</strong><br /><span>{L_SHOW_IN_ALL_FORUMS}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%">
+        <input type="radio" class="radio" name="adds_show_all_forums" value="1" <!-- IF ADDS_FORUM_1 == "1" -->  checked="checked" <!-- ENDIF -->{ADDS_FORUM_1} /> {L_YES}&nbsp;
+		<input type="radio" class="radio" name="adds_show_all_forums" value="2" {ADDS_FORUM_2} /> {L_NO}&nbsp;</td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_ACTIVE}:</strong><br /><span>{L_ADDS_ACTIVE_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%">
+        <input type="radio" class="radio" name="adds_active" value="1" {ADDS_ACTIV_1} /> {L_YES}&nbsp;
+		<input type="radio" class="radio" name="adds_active" value="2" <!-- IF ADDS_ACTIV_2 == "2" -->  checked="checked" <!-- ENDIF --> {ADDS_ACTIV_2} /> {L_NO}&nbsp;
+		<input type="radio" class="radio" name="adds_active" value="3" {ADDS_ACTIV_3} /> {L_GUEST}</td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_VIEWS}:</strong><br /><span>{L_ADDS_VIEWS_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input type="text" name="adds_views" size="20" value="{ADDS_VIEWS}" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_ADDS_MAX_VIEWS}:</strong><br /><span>{L_ADDS_MAX_VIEWS_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%"><input type="text" name="adds_max_views" size="20" value="{ADDS_MAX_VIEWS}" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_POSITION}:</strong><br /><span>{L_POSITION_DESC}</span></td>
+		<td class="row2" style="font-size:11px; text-align:left;" width="60%">
+        <select size="1" name="adds_position">
+		<option value="1" <!-- IF ADDS_POSITION_1 == "1" -->  checked="checked" <!-- ENDIF --> {ADDS_POSITION_1}>{L_POSITION1}</option>
+		<option value="2" {ADDS_POSITION_2}>{L_POSITION2}</option>
+		<option value="3" {ADDS_POSITION_3}>{L_POSITION3}</option>
+		<option value="4" {ADDS_POSITION_4}>{L_POSITION4}</option>
+		</select></td>
+	</tr>
+    
+	</table>
+    
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_ADDS}" /></center>
+	</p>
+    
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+<form id="acp_portal_adds" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ADDS_IN_SYSTEM}</legend>
+  	<p>{L_ADDS_IN_SYSTEM_DESC}</p>
+    
+	<table cellspacing="1">
+	<tr>
+		<th>{L_ADDS_NAME}</th>
+		<th>{L_ADDS_ACTIVE}</th>
+		<th>{L_ADDS_ALL}</th>
+		<th>{L_ADDS_SHOW}</th>
+		<th>{L_ADDS_VIEWS}</th>
+		<th>{L_ADDS_MAX_VIEWS}</th>
+ 		<th>{L_POSITION}</th>
+       
+		<th>{L_ACTION}</th>
+	</tr>
+	<!-- BEGIN adds_desc -->
+		<!-- IF adds_desc.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align: center;">{adds_desc.ADDS_NAME}</td>
+		<td style="text-align: center;">{adds_desc.ADDS_ACTIVE} </td>
+		<td style="text-align: center;">{adds_desc.ADDS_SHOW_ALL_FORUMS} </td>
+		<td style="text-align: center;">{adds_desc.ADDS_SHOW_FORUMS} </td>
+		<td style="text-align: center;">{adds_desc.ADDS_VIEWS}</td>
+		<td style="text-align: center;">{adds_desc.ADDS_MAX_VIEWS}</td>
+		<td style="text-align: center;">{adds_desc.ADDS_POSITION}</td>
+		<td style="text-align: center;"><a href="{adds_desc.U_EDIT}">{ICON_EDIT}</a> <a href="{adds_desc.U_DELETE}">{ICON_DELETE}</a></td>
+	</tr>
+	<!-- END adds_desc -->
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_ADDS}" />
+	</p>
+    
+	</fieldset>
+
+</form>
+
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

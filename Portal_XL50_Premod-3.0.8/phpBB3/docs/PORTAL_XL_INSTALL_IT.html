@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2008 Portal XL Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="phpBB3 Portal XL informazioni di installazione e aggiornamento" />
+<title>phpBB3 Portal XL &bull; Installazione</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" /></head>
+<body id="phpbb" class="section-docs" style="margin-left: 50px; margin-right: 50px;">
+<div id="wrap"> <a id="top" name="top" accesskey="t"></a>
+  <div id="page-header">
+    <div class="headerbar">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div id="doc-description"> <a href="../index.php" id="logo"><img src="site_logo.gif" alt="" /></a>
+          <h1>Portal XL Installazione con phpBB 3.0.8</h1>
+          <p>Portal XL informazioni di installazione e aggiornamento</p>
+          <p style="display: none;"><a href="#start_here">Skip</a></p>
+        </div>
+        <div id="doc-description" style="width: 100%;">
+          <span style="float: right; margin-right: 5px;"><a href="PORTAL_XL_INSTALL.html" title="English"><span style="color:#FFF;">English</span></a> - <a href="PORTAL_XL_INSTALL_DE.html" title="German"><span style="color:#FFF;">German</span></a> - <a href="PORTAL_XL_INSTALL_EL.html" title="Greek"><span style="color:#FFF;">Greek</span></a> - <a href="PORTAL_XL_INSTALL_ES.html" title="Spanish"><span style="color:#FFF;">Spanish</span></a> - <a href="PORTAL_XL_INSTALL_IT.html" title="Italian"><span style="color:#FFF;">Italian</span></a> - <a href="PORTAL_XL_INSTALL_NL.html" title="Dutch"><span style="color:#FFF;">Dutch</span></a></span>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+  </div>
+  <a name="start_here"></a>
+  <div id="page-body">
+    <!-- BEGIN DOCUMENT -->
+    
+    <p><strong>Si prega di leggere questo documento completamente prima di procedere con l'installazione o l'aggiornamento.</strong></p>
+    <p>Questo documento vi guider&agrave; attraverso le fasi per l'installazione, l'aggiornamento e la conversione del software del forum.</p>
+    <blockquote>
+      <p>Prima di procedere assicuratevi di utilizzare un software FTP affidabile per
+        evitare file corrotti o parzialmente caricati. Se stai usando Firefox
+        installare l'Add-On <a href="https://addons.mozilla.org/nl/firefox/addon/684">FireFTP</a>, Altrimenti vi consiglio <a href="http://www.ipswitchft.com/resources/evaluation.asp">WS_FTP</a> affidabili per i trasferimenti FTP. </p>
+    </blockquote>
+    <h1>Installazione</h1>
+    <div class="paragraph menu">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <ol>
+            <li><a href="#quickinstall">Installazione rapida</a></li>
+            <li><a href="#require">Requisiti</a></li>
+            <li><a href="#install">Nuova installazione</a></li>
+            <li><a href="#update">Aggiornare una versione precedente di phpBB3 Portal XL</a> </li>
+            <li><a href="#portal_remove">Eliminare Portal XL 5.0</a> </li>
+            <li><a href="#disclaimer">Copyright</a></li>
+          </ol>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <hr />
+    <a name="quickinstall"></a>
+   <h2>1. Installazione rapida</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Se disponi di una conoscenza di base ad usare un client FTP &egrave; possibile utilizzare questa procedura per essere subito operativi.</p>
+          <ol>
+            <li>Decomprimi l'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> in una directory temporanea del tuo computer.</li>
+            <li>Carica tutti i file contenuti nella directory <strong>\phpBB3\</strong> dell'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> (mantenendo la struttura delle directory) in una directory web accessibile sul tuo server o account di hosting.</li>
+            <li>Modifica le autorizzazioni (chmods) per le seguenti directory affich&egrave; siano scrivibilii ( 777-rwxrwxrwx tramite il tuo  client FTP): <code><strong>/ cache</strong></code>, <code><strong>/ store</strong></code>, <code><strong>/ file</strong></code>, <code><strong>/ images / avatars / upload</strong></code>, <code><strong>/ dl_mod / thumbs</strong> e tutte le loro sottocartelle</code>, <code><strong>/ dl_mod / downloads</strong> e tutte le loro sottocartelle</code>, <code><strong>/ gallery / images</strong> e tutte le loro sottocartelle</code>, <code><strong>/ phpbb_seo / cache</strong></code>, <code><strong>/ gym_sitemaps / cache</strong></code>, <code><strong>/ mods / toplist_mod / cache</strong></code>, <code><strong>/ mods / toplist_mod / images</strong></code>, <code><strong>/ Arcade</strong></code>, <code><strong>/ arcade / gamedata</strong></code>, <code><strong>/ arcade / games</strong></code>, <code><strong>/ arcade / install</strong></code> e almeno <code>/ images / counter / ip.txt</code>.</li>
+            <li>Controlla se il tuo <strong>config.php</strong> &egrave; scrivibile da tutti (777-755).</li>
+            <li>Scrivi sulla barra del tuo browser  install_portal / preceduto dall'indirizzo del tuo sito ad esempio tuosito.it/install_portal/ index.php, oppure se il tuo forum phpbb 3.0.8 si trova in una sottodirectory ad esempio <b>\forum\ </b>&nbsp;scrivi ad esempio http://www.mydomain.com/forum/install_portal/index.php ecc</li>
+            <li>Clicca sulla scheda &quot;<b>I</b><strong><b>nstallazione  base</b></strong>&quot; per installare la versione base (Portal XL 5.0 Plain) e segui le  istruzioni fornite. Non eseguire il login, ricorda che hai i&nbsp;files della Premod!</li>
+            <li>Clicca sulla scheda &quot;<b>A</b><strong><b>ggiornamento a Premod</b></strong>&quot;, poi su &quot;<strong>Aggiornamento del database</strong>&quot;, Se l'aggiornamento &egrave; completato, puoi eseguire il login per accedere alla tua Portal  XL 5.0 Premod.</li>
+            <li>Loggati come amministratore (devi essere un founder) ed esegui sul tuo browser /<strong>convert_timezones.php</strong>, ad esempio http://tuosito/phpBB3/<strong>convert_timezones.php</strong> per convertire tutti gli utenti al nuovo formato del fuso orario. Elimina questo file quando hai finito!</li>
+           <li>phpBB3 Portal XL dovrebbe ora essere disponibile.</li>
+          </ol>
+          <br />
+          <p>Ora &egrave; il momento di modificare i permessi per tutti i mods. Loggati nel tuo ACP, vai nella scheda permessi, in Ruoli Admin / Ruoli Utenti / Ruoli Moderatori / Ruoli Forum... Definisci ora i permessi per i ruoli.</p>
+          <p>Se hai avuto problemi o non sai come procedere con una qualsiasi delle fasi di cui sopra, leggi il  resto di questo documento o vedi <a href="#refresh_cache">aggiornamento della cache</a>.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <hr />
+    <a name="require"></a>
+    <h2>2. Requisiti</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>phpBB3 Portal XL &egrave; dotato di alcuni requisiti che devono essere soddisfatti affinch&egrave; tu sia in grado di installare e utilizzare.</p>
+          <ul>
+            <li>Un server web o un account web hosting in esecuzione su qualsiasi sistema operativo principale, con supporto per PHP</li>
+            <li>Un sistema di database SQL:
+              <ul>
+                <li>MySQL 3.23 o superiore (MySQLi supportato)</li>
+              </ul>
+            </li>
+            <li><strong>PHP 4.3.3 + (&gt; = 4.3.3,&gt; 4.4.x,&gt; 5.xx,&gt; 6.0-dev (compatibile))</strong> con il supporto per il database che si intende utilizzare.</li>
+            <li>getimagesize () la funzione deve essere attivata.</li>
+            <li>Questo requisito &egrave; facoltativo e fornir&agrave; l'accesso a funzioni aggiuntive.
+              <ul>
+                <li>Compressione zlib</li>
+                <li>FTP remoto</li>
+                <li>Supporto XML</li>
+                <li>Supporo GD</li>
+                <li>Supporto Exif</li>
+                <li>Supporto Curl</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Se il tuo server o account di hosting non soddisfa i requisiti di cui sopra abbiamo paura phpBB3 Portal XL non &egrave; per voi.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <hr />
+    <a name="install"></a>
+    <h2>3. Nuova installazione di phpBB3 Portal XL 5.0</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Se hai scaricato uno dei pacchetti ora la tua  scelta determina ci&ograve; che devi fare, in questo caso Portal XL 5.0 Premod. <strong>Nota</strong>: Prima di aggiornare &egrave; altamente consigliabile  fare un <em>completo  backup del database e file esistenti phpBB3</em>! Se non sei sicuro di come raggiungere questo obiettivo  rivolgiti al tuo fornitore di hosting per un consiglio. <strong>ATTENZIONE</strong> Se il tuo ex phpBB3 Portal  XL &egrave; stato modificato da mods diversi da quelli che compresi dalla Portal XL 5.0 ~ Premod,  perderai tutte le modifiche dei tuoi mods!</p>
+          <a name="install_full"></a>
+          <h3>3. Portal XL 5.0 Premod</h3>
+          <p><strong>Nota</strong>: Prima di procedere e se utilizzi una lingua diversa, copia il file \language\it\mods\portal_xl_install.php nella 
+            directory corrispondente della tua lingua installata per avere il testo (in italiano) disponibile nel percorso \languages\xx\ 
+            e se nessun file &egrave disponibile.
+          <p>Le lingue supportate in questo pacchetto sono:<br />
+            Tedesco (de - Du)<br>
+            Greco (el)<br>
+            Inglese (en)<br>
+            Inglese US (en_us)<br>
+            Italiano (it)<br>
+            Olandese (NL) </p>
+          <p>Step da eseguire:<br />
+            - Scarica una copia recente di  phpBB 3.0.x da <a href="http://www.phpbb.it/download.html" target="_blank">phpbb.it</a> se non &egrave; gi&agrave; installato. Se installato procedi <a href="#creating_portal">qui</a><br>
+            - Scompatta phpBB 3.0.x in una directory temporanea<br>
+            - Caricare il contenuto della cartella phpBB3 nella root del tuo sito <br>
+            - Scrivi sul tuo browser ad esempio http://tuosito/install/ e prosegui con l'installazione<br>
+            - Elimina la cartella /install/ quando l'installazione &egrave; stata eseguita </p>
+          <p><a name="creating_portal"></a></p>
+          <p>Il prossimo passo sar&agrave; l'installazione della Portal XL 5.0 Premod.</p>
+          <ul>
+            <li>Decomprimi l'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> in una directory temporanea del tuo computer.</li>
+            <li>Carica tutti i file contenuti nella directory <strong>\phpBB3\</strong> dell'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> (mantenendo la struttura delle directory) in una directory web accessibile sul tuo server o account di hosting.</li>
+            <li>Modifica le autorizzazioni (chmods) per le seguenti directory affich&egrave; siano scrivibilii ( 777-rwxrwxrwx tramite il tuo  client FTP): <code><strong>/ cache</strong></code>, <code><strong>/ store</strong></code>, <code><strong>/ file</strong></code>, <code><strong>/ images / avatars / upload</strong></code>, <code><strong>/ dl_mod / thumbs</strong> e tutte le loro sottocartelle</code>, <code><strong>/ dl_mod / downloads</strong> e tutte le loro sottocartelle</code>, <code><strong>/ gallery / images</strong> e tutte le loro sottocartelle</code>, <code><strong>/ phpbb_seo / cache</strong></code>, <code><strong>/ gym_sitemaps / cache</strong></code>, <code><strong>/ mods / toplist_mod / cache</strong></code>, <code><strong>/ mods / toplist_mod / images</strong></code>, <code><strong>/ Arcade</strong></code>, <code><strong>/ arcade / gamedata</strong></code>, <code><strong>/ arcade / games</strong></code>, <code><strong>/ arcade / install</strong></code> e almeno <code>/ images / counter / ip.txt</code>.</li>
+            <li>Controlla se il tuo config.php &egrave; scrivibile da tutti (777-755).</li>
+            <li>Scrivi sulla barra del tuo browser  install_portal / preceduto dall'indirizzo del tuo sito ad esempio tuosito.it/install_portal/ index.php, oppure se il tuo forum phpbb 3.0.8 si trova in una sottodirectory ad esempio <b>\forum\ </b>&nbsp;scrivi ad esempio http://www.mydomain.com/forum/install_portal/index.php ecc</li>
+            <li>Clicca sulla scheda &quot;<b>I</b><strong><b>nstallazione  base</b></strong>&quot; per installare la versione base (Portal XL 5.0 Plain) e segui le  istruzioni fornite. Non eseguire il login, ricorda che hai i&nbsp;files della Premod! </li>
+            <li>Clicca sulla scheda &quot;<b>A</b><strong><b>ggiornamento a Premod</b></strong>&quot;, poi su &quot;<strong>Aggiornamento del database</strong>&quot;, Se l'aggiornamento &egrave; completato, puoi eseguire il login per accedere alla tua Portal  XL 5.0 Premod.</li>
+            <li>Loggati come amministratore (devi essere un founder) ed esegui sul tuo browser /<strong>convert_timezones.php</strong>, ad esempio http://tuosito/phpBB3/<strong>convert_timezones.php</strong> per convertire tutti gli utenti al nuovo formato del fuso orario. Elimina questo file quando hai finito!</li>
+            <li>phpBB3 Portal XL dovrebbe ora essere disponibile.</li>
+          </ul>
+          <br />
+   <p>Ora &egrave; il momento di modificare i permessi per tutti i mods. Loggati nel tuo ACP, vai nella scheda permessi, in Ruoli Admin / Ruoli Utenti / Ruoli Moderatori / Ruoli Forum... Definisci ora i permessi per i ruoli.</p>
+         <p>Opzionale:</p>
+          <ul>
+            <li><strong>-</strong> Installa i BBCodes predefiniti nel database, scegli la scheda &quot;<strong>BBCODE</strong>&quot;</li>
+          </ul>
+          <p><a name="refresh_cache"></a></p>
+          <p>- Dopo l'installazione, vai in  ACP ed esegui i&nbsp;seguenti passaggi per aggiornare la cache:</p>
+          <p>- Stili  -&gt; componenti Stile -&gt; Template -&gt; prosilver -&gt; Aggiorna<br>
+            - Stili  -&gt; componenti Stile -&gt; Temi -&gt; prosilver -&gt; Aggiorna<br>
+            - Stili  -&gt; componenti Stile -&gt; Imagesets -&gt; prosilver -&gt; Aggiorna<br>
+            - Scheda Generale -&gt; Nella schermata principale -&gt; Svuota la cache<br>
+            - Aggiorna la tua cache del browser</p>
+          <p>Fatto!</p>
+          <p>PS: visita o scarica i nostri stili demo per Portal XL 5.0 ~ Premod, li trovi <a href="http://www.portalxl.nl/stylespremod/" target="_blank">qui.</a><br />
+            Buon divertimento con Portal XL 5.0 ~  Premod il nostro folle pazzo sistema portale per phpBB 3.0.x</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <hr />
+    <a name="update"></a>
+    <h2>4. Aggiornare da una versione precedente di phpBB3 Portal XL</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Se hai scaricato uno dei pacchetti ora la tua  scelta determina ci&ograve; che devi fare, in questo caso Portal XL 5.0 Premod.</p> 
+          <p><strong>Nota</strong>: Prima di aggiornare &egrave; altamente consigliabile  fare un <em>completo backup del database e dei file esistenti di phpBB3</em>! Se non sei sicuro di come raggiungere questo obiettivo  rivolgiti al tuo fornitore di hosting per un consiglio. 
+          <p><strong>ATTENZIONE!</strong> Se il tuo ex phpBB3 Portal  XL &egrave; stato modificato da mods diversi da quelli che compresi dalla Portal XL 5.0 ~ Premod,  perderai tutte le modifiche dei tuoi mods!</p
+          <p><a name="update_full"></a></p>
+          <h3>4. Portale XL 5.0 Premod</h3>
+          <p><strong>Nota</strong>: Prima di procedere e se utilizzi una lingua diversa, copia il file \language\it\mods\portal_xl_install.php nella 
+            directory corrispondente della tua lingua installata per avere il testo (in italiano) disponibile nel percorso \languages\xx\ 
+            e se nessun file &egrave disponibile.
+          <p>Le lingue supportate in questo pacchetto sono:<br />
+            Tedesco (de - Du)<br>
+            Greco (el)<br>
+            Inglese (en)<br>
+            Inglese US (en_us)<br>
+            Italiano (it)<br>
+            Olandese (NL) </p>
+          <p>Step da eseguire: </p>
+            E' necessario solo se non usi una recente versione di phpBB 3.0.8. Se &egrave gi&agrave installata prosegui <a href="#update_plain">qui</a> per la versione Plain, o <a href="#update_premod">qui</a> per la versione Premod<br />
+          <ul>
+            <li>Scarica una recente  copia di  phpBB 3.0.x da <a href="http://www.phpbb.it/download.html" target="_blank">http://www.phpbb.it/downloads.html</a>!</li>
+            <li>Scompatta phpBB 3.0.x in una directory temporanea.</li>
+            <li>Elimina il file config.php dalla cartella /phpBB3/ del pacchetto.</li>
+            <li>Carica/sovrascrivi il contenuto della cartella phpBB3 nella root del tuo sito (il portale &egrave; perduto)</li>
+            <li>Esegui sul tuo sito ad esempio... http://tuosito<strong>/install/database_update.php</strong> per aggiornare alla versione pi&ugrave recente di phpBB.</li>
+		    <li>Elimina la cartella /install/.</li>
+            <li>Modifica le autorizzazioni (chmods) per le seguenti directory affich&egrave; siano scrivibilii ( 777-rwxrwxrwx tramite il tuo  client FTP): <code><strong>/ cache</strong></code>, <code><strong>/ store</strong></code>, <code><strong>/ file</strong></code>, <code><strong>/ images / avatars / upload</strong></code>, <code><strong>/ dl_mod / thumbs</strong> e tutte le loro sottocartelle</code>, <code><strong>/ dl_mod / downloads</strong> e tutte le loro sottocartelle</code>, <code><strong>/ gallery / images</strong> e tutte le loro sottocartelle</code>, <code><strong>/ phpbb_seo / cache</strong></code>, <code><strong>/ gym_sitemaps / cache</strong></code>, <code><strong>/ mods / toplist_mod / cache</strong></code>, <code><strong>/ mods / toplist_mod / images</strong></code>, <code><strong>/ Arcade</strong></code>, <code><strong>/ arcade / gamedata</strong></code>, <code><strong>/ arcade / games</strong></code>, <code><strong>/ arcade / install</strong></code> e almeno <code>/ images / counter / ip.txt</code>.</li>
+            <li>Controlla se il tuo <strong>config.php</strong> &egrave; scrivibile da tutti (777-755).</li>
+         </ul>
+          <p><a name="update_portal" id="update_portal"></a></p>
+          <p></a>Il prossimo passo sar&agrave; creare nuovamente il portale.</p>
+          
+          <hr />
+          <div style="background-color: #FFC;">
+          <div style="margin: 10px 10px;">
+            <p>
+            <a name="update_plain" id="update_plain"></a>
+            <br /><strong><span style="color:#FF0000;">ATTENZIONE!</span> Da utilizzare con un portale esistente XL 5.0 Plain</strong>!<br />
+			Per avere l'ultima versione del codice di base e affinch&egrave; funzioni tutto correttamente sono necessari alcuni passaggi.<br />
+            <ol>
+              <li>Elimina  la directory <strong>\portal\</strong> e tutte le sotto directory.</li>
+              <li>Elimina la  directory <strong>\language\it\mods\</strong> tutti i file di nome <strong>portal_xl *. php</strong> e <strong>acp_portal_xl *. php</strong>, nella directory <strong>\adm\portal_xl\style\</strong> tutti i file di nome <strong>acp_portal *. html</strong>.</li>
+              <li>Elimina (temporaneamente in caso di problemi) tutti i&nbsp;file di lingua \language\xx\ se hai installato lingue diverse da \it\ . I pacchetti di lingua potrebbero non funzionare per la versione Premod, la base per&ograve; &egrave; identica.</li>
+            </ol>
+            <br>Mods di terze parti:<br>
+            <ol>
+              <li>Decomprimi l'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> in una directory temporanea</li>
+              <li>Copia / carica / sovrascrivi tutti i contenuti (mantenendo la struttura delle directory) dalla directory del pacchetto <strong>\ phpBB3 \</strong> ad esempio nella root forum. <strong>\ public_html \.</strong></li>
+              <li>Modifica i permessi delle seguenti directories affinch&egrave siano scrivibili (777/755 o -rwxrwxrwx con il tuo client FTP): <code><strong>/cache</strong></code>, <code><strong>/store</strong></code>, <code><strong>/files</strong></code>, <code><strong>/images/avatars/upload</strong></code>, <code><strong>/dl_mod/thumbs</strong> e tutte le sotto cartelle</code>, <code><strong>/dl_mod/downloads</strong> e tutte le sotto cartelle</code>, <code><strong>/gallery/images</strong> e tutte le sotto cartelle</code>, <code><strong>/phpbb_seo/cache</strong></code>, <code><strong>/gym_sitemaps/cache</strong></code>, <code><strong>/mods/toplist_mod/cache</strong></code>, <code><strong>/mods/toplist_mod/images</strong></code>, <code><strong>/arcade</strong></code>, <code><strong>/arcade/gamedata</strong></code>, <code><strong>/arcade/games</strong></code>, <code><strong>/arcade/install</strong></code> e infine <code>/images/counter/ip.txt</code>.</li>
+			  <li>Controlla se il tuo <strong>config.php</strong> &egrave; scrivibile da tutti (777-755).</li>
+			  <li>Scrivi sulla barra del tuo browser <strong>/install_portal/index.php</strong> per avviare lo script di installazione e scegli la scheda &quot;<b>Aggiornamento a Premod</b>&quot;, segui le istruzioni fornite. Non eseguire il login, ricordati di eseguire tutti gli step! Lo script di installazione ti guider&agrave; in tutte le procedure.</li>
+              <li>Elimina o rinomina le directory <strong>install_arcade</strong>, <strong>install_gallery</strong> e <strong>install_portal</strong>. Elimina il file /blog/<strong>database.php</strong>.</li>
+              <li>Loggati come amministratore (devi essere un founder) ed esegui sul tuo browser /<strong>convert_timezones.php</strong>, ad esempio http://tuosito/phpBB3/<strong>convert_timezones.php</strong> per convertire tutti gli utenti al nuovo formato del fuso orario. Elimina questo file quando hai finito!</li>
+              <li>Fatto! Ora puoi visitare il tuo pannello di controllo amministrativo.</li>
+           </ol>
+            </p>
+           <br />
+          <p>Ora &egrave; il momento di modificare i permessi per tutti i mods. Loggati nel tuo ACP, vai nella scheda permessi, in Ruoli Admin / Ruoli Utenti / Ruoli Moderatori / Ruoli Forum... Definisci ora i permessi per i ruoli.</p>
+          <br />
+         </div>
+         </div>
+          
+          <hr />
+          <div style="background-color: #FCC;">
+           <div style="margin: 10px 10px;">
+           <p>
+             <a name="update_premod" id="update_premod"></a>
+           <br /><strong><span style="color:#FF0000;">ATTENZIONE!</span> Da utilizzare con un portale esistente XL 5.0 Premod</strong>!<br />
+              Per avere l'ultima versione del codice di base e affinch&egrave; funzioni tutto correttamente sono necessari alcuni passaggi.<br />
+            <ol>
+              <li>Elimina la directory <strong>\portal\</strong> e tutte le sotto directory.</li>
+              <li>Elimina la directory <strong>\language\it\mods\</strong> e tutti i file di nome <strong>portal_xl *. php</strong> - <strong>acp_portal_xl *. php</strong>, nella directory <strong>\ adm \ portal_xl \ style \</strong> tutti i file di nome <strong>acp_portal *. html</strong>.</li>
+              <li>Elimina tutto il contenuto nella directory <strong>\styles\prosilver\template\portal\ *.*</strong></li>
+              <li>Elimina tutto il contenuto nella directory <strong>\styles\subsilver2\template\portal\ *.*</strong></li>
+            </ol>
+            <br>Mods di terze parti:<br>
+            <ol>
+               <li>Decomprimi l'archivio <strong>Portal_XL50_Premod-3.0.8.rar</strong> in una directory temporanea</li>
+              <li>Copia / Carica / sovrascrivi tutti i contenuti (mantenendo la struttura delle directory) dalla directory di pacchetto <strong>\ phpBB3 \</strong> ad esempio nella root del tuo forum.<strong>\ public_html \</strong> .</li>
+              <li>Modifica i permessi delle seguente directories affinch&egrave; siano scrivibili (777/755 o -rwxrwxrwx con il tuo client FTP): <code><strong>/cache</strong></code>, <code><strong>/store</strong></code>, <code><strong>/files</strong></code>, <code><strong>/images/avatars/upload</strong></code>, <code><strong>/dl_mod/thumbs</strong> e tutte le sotto cartelle</code>, <code><strong>/dl_mod/downloads</strong> e tutte le sotto cartelle</code>, <code><strong>/gallery/images</strong> e tutte le sotto cartelle</code>, <code><strong>/phpbb_seo/cache</strong></code>, <code><strong>/gym_sitemaps/cache</strong></code>, <code><strong>/mods/toplist_mod/cache</strong></code>, <code><strong>/mods/toplist_mod/images</strong></code>, <code><strong>/arcade</strong></code>, <code><strong>/arcade/gamedata</strong></code>, <code><strong>/arcade/games</strong></code>, <code><strong>/arcade/install</strong></code> e infine <code>/images/counter/ip.txt</code>.</li>
+             <li>Controlla se il tuo <strong>config.php</strong> &egrave; scrivibile da tutti (777-755).</li>
+			 <li>Loggati in amministrazione del tuo forum.</li>
+              <li>Scrivi sulla barra del tuo browser <strong>/install_portal/index.php</strong> per avviare lo script di installazione e scegli la scheda &quot;<strong>Aggiornamento Versione</strong>&quot; per aggiornare il database del portale.</li>
+              <li>Scrivi sulla barra del tuo browser <strong>/install_arcade/index.php</strong> per avviare l'installazione del mod Arcade.</li>
+              <li><strike>Scrivi sulla barra del tuo browser <strong>/install_gallery/index.php</strong> per avviare l'installazione della Gallery.</STRIKE> (non &egrave necessario per la Premod 0.2), non andare in ACP.</li>
+              <li>Scrivi sulla barra del tuo browser <strong>/blog/database.php</strong> per avviare lo script di installazione del Mod blog utente.</li>
+              <li>Loggati come amministratore (devi essere un founder) ed esegui sul tuo browser /<strong>convert_timezones.php</strong>, ad esempio http://tuosito/phpBB3/<strong>convert_timezones.php</strong> per convertire tutti gli utenti al nuovo formato del fuso orario. Elimina questo file quando hai finito!</li>
+			  <li>Elimina  o rinomina le directory <strong>install_arcade</strong>, <strong>install_gallery</strong> e <strong>install_portal</strong>. Elimina il  file /blog/<strong>database.php</strong>.</li>
+              <li>Fatto! Ora puoi visitare il tuo pannello di controllo amministrativo.</li>
+           </ol>
+            <br />
+            <strong><span style="color:#FF0000;">ATTENZIONE!</span> Se phpBB3 SEO &egrave; attivo sul tuo sito:</strong>
+            <ul>
+              <li><strong>-</strong> Nella directory <strong>/ phpbb_seo / cache /</strong>, fai un backup del file di installazione SEO esistenti <strong>phpbb_cache.php</strong> o elimina dalla root del pacchetto / phpbb_seo / cache / prima di caricare qualsiasi cosa.</li>
+              <li><strong>-</strong> Nella directory <strong>/ root /</strong> del tuo forum, fai un backup del file esistente <strong>. htaccess</strong> e elimina il file dal pacchtto che hai scaricato.</li>
+              <li><strong>-</strong> Nella directory <strong>/ root /</strong> del tuo forum, fai un  backup del file esistente <strong>config.php</strong> prima di caricare i file.</li>
+            </ul>
+           <br />
+          <p>Ora &egrave; il momento di modificare i permessi per tutti i mods. Loggati nel tuo ACP, vai nella scheda permessi, in Ruoli Admin / Ruoli Utenti / Ruoli Moderatori / Ruoli Forum... Definisci ora i permessi per i ruoli.</p>
+          <br />
+          </div>
+         </div>
+         
+          <hr />
+          <p>- Dopo l'installazione, vai in  ACP ed esegui i&nbsp;seguenti passaggi per aggiornare la cache:</p>
+          <p>- Stili  -&gt; componenti Stile -&gt; Template -&gt; prosilver -&gt; Aggiorna<br>
+            - Stili  -&gt; componenti Stile -&gt; Temi -&gt; prosilver -&gt; Aggiorna<br>
+            - Stili  -&gt; componenti Stile -&gt; Imagesets -&gt; prosilver -&gt; Aggiorna<br>
+            - Scheda Generale -&gt; Nella schermata principale -&gt; Svuota la cache<br>
+            - Aggiorna la tua cache del browser</p>
+          <p>Fatto!</p>
+          <p>PS: visita o scarica i nostri stili demo per Portal XL 5.0 ~ Premod, li trovi <a href="http://www.portalxl.nl/stylespremod/" target="_blank">qui.</a><br />
+            Buon divertimento con Portal XL 5.0 ~  Premod il nostro folle pazzo sistema portale per phpBB 3.0.x</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <hr />
+    <a name="portal_remove"></a>
+    <h2>5. Eliminare Portal XL 5.0</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p><a name="portal_remove"></a></p>
+          <p>Per eliminare  Portal XL 5,0 Premod completamente senza lasciare alcun residuo:</p>
+          <ul>
+            <li>Avvia lo script di installazione e scegliere sulla scheda &quot;<b>ELIMINA PORTALE</b>&quot;. <br>
+              <br />
+              Questa azione rimuover&agrave; tutti i dati dal database, con l'eliminazione del portale il tuo forum diventer&agrave; come una versione normale di phpBB. L'eliminazione del portale non rimuove i mods di terze parti, se vuoi eliminarli devi utilizzare lo script di installazione di ogni mod.<br />
+              <br />
+              Il prossimo passo sar&agrave; quello di eliminare tutti i file all'interno del tuo forum directory principale, tranne il  file <strong>config.php</strong> (questo file &egrave; molto importante per la connessione al database). Se vuoi conservare gli allegati non eliminare la directory <strong>/files/, </strong>lo stesso per le icone, in tal caso non eliminare la cartella <b>/images/</b>, se vuoi conservare avatars, icone, ranks., ecc. Scarica una versione recente di phpBB 3.0.x, elimina il file il file <strong>config.php</strong> e la cartella <strong>\install\</strong> dal pacchetto e sovrascivi l'intero contenuto sul tuo sito.</li>
+          </ul>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <a name="convert"></a>
+    <hr />
+    <a name="disclaimer"></a>
+    <h2>6. Copyright e liberatoria legale</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Questa applicazione &egrave; un software open source rilasciato sotto la <a href="http://opensource.org/licenses/lgpl-3.0.html">GPL</a>. Si prega di consultare il codice sorgente e la directory di documentazione per maggiori dettagli. Questo pacchetto ei suoi contenuti sono Copyright (c) 2007, 2009, 2010, 2011 <a href="http://www.portalxl.nl/forum/" target="_blank">Portal XL Group</a>. La traduzione in italiano, comprendente tutti i languages, ivi compresi la traduzione del database, le eventuali modifiche al codice sorgente&nbsp;e tutti i documenti allegati, sono Copyright (c) 2009 - 2010 - 2011 <a href="http://www.portalxl.eu" target="_blank">Portal XL Italia</a>. Tutti i diritti riservati. Sotto licenza Creative Commons<strong> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target=_blank>Attribution-NonCommercial-ShareAlike 3.0</A>.</strong></p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Torna in alto</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    
+    <!-- END DOCUMENT -->
+    <div id="page-footer">
+      <div class="version">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<div> <a id="bottom" name="bottom" accesskey="z"></a> </div>
+</body>
+</html>

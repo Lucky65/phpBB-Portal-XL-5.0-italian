@@ -1,0 +1,13 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+	'UNLOCKED'			=> 'Unlocked',
+
+#
+#-----[ After ADD ]---------------------------------------------
+#
+
+	//Support Ticket System MOD Beginn
+    'STS_ENABLE'        => 'Aktiviere den Supportticketassistenten',
+	//Support Ticket System MOD End
+	

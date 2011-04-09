@@ -1,0 +1,35 @@
+Cerca:
+
+?>
+
+Aggiungi prima:
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Database Mods',
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Clicca qui per ridimensionare!',
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Contatore visite',
+	'COUNTER_STARTDATE' => 'Visite dal %s',
+	'HITS_PER_DAY'		=> 'Maggiori visite giorno',
+	'HITS_PER_HOUR'		=> 'Maggiori visite ora',
+	'HITS_PER_MONTH'	=> 'Maggiori visite mese',
+	'HITS_PER_USER'		=> 'Maggiori visite utente',
+	'HITS_PER_WEEK'		=> 'Maggiori visite settimana',
+	'HITS_PER_YEAR'		=> 'Maggiori visite anno',
+	'IP_TRACKING_NO' 	=> '[Nessun IP monitorato]',
+	'IP_TRACKING_YES' 	=> '[Monitoraggio IP]',
+	'TRANSLATION_INFO' 	=> 'Traduzione Italiana PhpBB <a href="http://www.phpbb.it/">phpBB.it</a> - Per Portal XL <a href="http://www.portalxl.eu/">portalxl.eu</a>'
+	
+));

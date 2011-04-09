@@ -1,0 +1,35 @@
+<!-- IF S_UCATS -->
+<!-- BEGIN maincat -->
+
+<!-- IF CLASSIC_INDEX -->
+	<!-- INCLUDE kb/kb_index_clasic.html -->
+<!-- ELSE -->
+	<!-- INCLUDE kb/kb_index_modern.html -->
+<!-- ENDIF -->
+
+<!-- END maincat -->
+<!-- ENDIF -->
+
+<table class="tablebg" cellspacing="1" width="100%">
+<tr>
+    <th>&nbsp;</td>
+    <th>{L_LATEST_TOPICS}</td>
+    <th>{L_VIEWED}</td>
+    <th>{L_RELASED}</td>
+</tr>
+<!-- BEGIN article_row -->
+<tr>
+    <td class="<!-- IF article_row.S_ROW_COUNT is not even -->row1<!-- ELSE -->row2<!-- ENDIF -->" width="30" align="center" style="background-image: url({T_IMAGESET_PATH}/topic_read.gif); background-repeat: no-repeat;">&nbsp;</td>
+    <td class="<!-- IF article_row.S_ROW_COUNT is not even -->row1<!-- ELSE -->row2<!-- ENDIF -->" style="float: {S_CONTENT_FLOW_BEGIN};"><a href="{article_row.U_ARTICLE}" class="topictitle">{article_row.TITLE}</a><br />{article_row.DESCRIPTION}</td>
+    <td class="<!-- IF article_row.S_ROW_COUNT is not even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{article_row.HITS}</td>
+    <td class="<!-- IF article_row.S_ROW_COUNT is not even -->row1<!-- ELSE -->row2<!-- ENDIF -->" style="float: {S_CONTENT_FLOW_BEGIN};">{article_row.TIME}<br />{L_FROM} {article_row.AUTHOR_FULL}</td>
+</tr>
+<!-- END article_row -->
+</table>
+<br />
+
+<table cellspacing="1" width="100%">
+<tr>
+	<td align="center" class="row1">[ <a href="{U_KB}">{L_BACK_KB}</a> ]</td>
+</tr>
+</table>

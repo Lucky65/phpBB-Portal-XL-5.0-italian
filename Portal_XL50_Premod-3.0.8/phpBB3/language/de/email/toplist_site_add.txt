@@ -1,0 +1,9 @@
+Subject: {FORUM_NAME} Toplist site added!
+
+Dear {USERNAME},
+
+Thanks you for adding "{TOPLIST_SITE_NAME}" to our toplist over at {FORUM_NAME}. The next step is to add the provided code to your site. The board administrator might have enabled automated code checks on your site, this will automaticly disable your site if the code isn't found. To prevent this make sure the code is publicly available on your site on the URL you provided as your site url.
+
+{TOPLIST_SITE_CODE}
+
+{EMAIL_SIG}

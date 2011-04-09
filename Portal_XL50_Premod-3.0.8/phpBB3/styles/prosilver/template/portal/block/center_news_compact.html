@@ -1,0 +1,68 @@
+<!-- BEGIN news_compact_row -->
+
+<!-- IF news_compact_row.S_NO_TOPICS -->
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="2">{L_NO_NEWS}</td>
+</tr>-->  
+  <tr class="row1">
+    <td valign="top" align="center"><span class="gensmall"><strong>{L_NO_NEWS}</strong></span></td>
+  </tr>
+</table>
+<br clear="all" />
+<!-- ELSE -->	
+
+<table class="tablebg" cellspacing="1" width="100%">
+  <!--<tr>
+	<th colspan="2">{L_NEWS}</td>
+</tr>-->
+  <tr style="text-transform: capitalize;">
+    <td class="cat" valign="top">
+      <div class="leftside" style="float: left;">
+	  	<h4><a name="news={news_compact_row.NEWS_ID}"></a><!-- IF news_compact_row.S_UNREAD_INFO -->{NEWEST_POST_IMG}<!-- ELSE -->{READ_POST_IMG}<!-- ENDIF --> {news_compact_row.ATTACH_ICON_IMG}<!-- IF news_compact_row.S_POLL --> <strong>{L_POLL}: </strong><!-- ENDIF -->
+        <img src="{T_THEME_PATH}/images/arrow_right.gif" /> 
+        <a href="{news_compact_row.U_VIEW_COMMENTS}" title="{news_compact_row.TITLE}"><strong>{news_compact_row.TITLE}</strong></a>      
+        <img src="{T_THEME_PATH}/images/arrow_left.gif" /></h4></div>       
+      <div class="rightside" style="float: right;">
+        <a href="#" onclick="return doCollapseExpand('news_compact_row{news_compact_row.NEWS_ID}','btn-news_compact_row{news_compact_row.NEWS_ID}')"> 
+        <img src="{T_THEME_PATH}/images/arrow_user_down.gif" alt="{L_INFORMATION}" title="{L_INFORMATION}" height="12" width="12" name="btn-news_compact_row{news_compact_row.NEWS_ID}" /></a>&nbsp;
+      </div>
+    </td>
+  </tr>
+  <tr class="row1">
+    <td valign="top">
+      <div class="leftside" style="float: left;"> <span class="gensmall">{L_POSTED_BY}: {news_compact_row.IMG_POSTER_ICON}&nbsp;<strong><a href="{news_compact_row.U_USER_PROFILE}">{news_compact_row.POSTER}</a></strong>
+	  <!-- IF news_compact_row.FORUM_NAME --><br />{L_FORUM}: <strong><a href="{news_compact_row.U_VIEWFORUM}">{news_compact_row.FORUM_NAME}</a></strong><!-- ENDIF --></span> </div>
+      <div class="rightside" style="float: right;"> <span class="gensmall"><a href="{news_compact_row.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{news_compact_row.MINI_POST_IMG}</a>{news_compact_row.TIME}</span> </div>
+    </td>
+  </tr>
+  <tr class="row2" id="news_compact_row{news_compact_row.NEWS_ID}" style="margin: 10px 5px 10px 5px; display: none;">
+          <td align="left" valign="top" width="100%" class="genmed">
+          <div style="margin:5px;">{news_compact_row.TEXT}</div>
+              
+          <!-- IF news_compact_row.S_HAS_ATTACHMENTS -->
+          <br style="clear: both" />
+              <div class="attachwrapper"><div class="attachtitle">{L_ATTACHMENTS}:</div>
+              <!-- BEGIN attachment -->
+              <div class="attachcontent">{news_compact_row.attachment.DISPLAY_ATTACHMENT}</div>
+              <!-- END attachment -->
+              </div>
+          <!-- ENDIF -->
+          <!-- IF news_compact_row.S_DISPLAY_NOTICE -->
+            <div class="rules">{L_DOWNLOAD_NOTICE}</div>
+          <!-- ENDIF -->
+          <br style="clear: both" />
+                    
+        </td>
+  </tr>
+  <tr class="row1">
+    <td valign="top">
+      <div class="rightside" style="float: right;"> <span class="gensmall"><a href="#wrap" title="{L_BACK_TO_TOP}"><img src="{T_THEME_PATH}/images/top.gif" width="10" height="10" alt="{L_BACK_TO_TOP}" /></a></span> </div>
+      <div class="leftside" style="float: left;"> <span class="gensmall">{news_compact_row.OPEN}<a href="{news_compact_row.U_READ_FULL}" title="{news_compact_row.L_READ_FULL}">{news_compact_row.L_READ_FULL}</a>{news_compact_row.CLOSE} &nbsp;<a href="{news_compact_row.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{L_COMMENTS}: {news_compact_row.REPLIES}</a> &nbsp;&bull;&nbsp; <a href="{news_compact_row.U_POST_COMMENT}" title="{L_POST_REPLY}">{L_POST_REPLY}</a> &nbsp;&bull;&nbsp; {L_TOPIC_VIEWS}: {news_compact_row.TOPIC_VIEWS}</span> </div>
+    </td>
+  </tr>
+</table>
+
+<!-- ENDIF -->
+<!-- IF news_compact_row.S_NOT_LAST --><br /><!-- ENDIF -->
+<!-- END news_compact_row -->

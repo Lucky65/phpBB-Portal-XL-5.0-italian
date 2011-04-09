@@ -1,0 +1,67 @@
+<script type="text/javascript">
+// <![CDATA[
+   function openWin(mypage,myname,width,height) {
+	  var nn = myname ? myname : 'New_window';
+	  var w = width ? width : 800;
+	  var h = height ? height : 600;
+	  var lp = (screen.width) ? (screen.width-w)/2 : 0;
+	  var tp = (screen.height) ? (screen.height-h)/2 : 0;
+	  var settings = 'height='+h+',width='+w+',top='+tp+',left='+lp+',scrollbars=no,resizable=yes';
+	  win = window.open(mypage,nn,settings);
+   }
+// ]]>
+</script>
+	
+<style type='text/css'>
+#ajaxChatContent {
+	margin: 0px auto;
+	margin-top: 10px;
+	min-width: 60%;
+	padding: 0px 20px 0 20px;
+	width: 90%;
+}
+#ajaxChatContent #ajaxChatChatList {
+	background-color: #ECF1F3;
+	font-size: 1.2em;
+	font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+	color: #28313F;
+	border: inset 1px #666;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	height: 120px;
+	overflow: auto;
+}
+#ajaxChatInputFieldContainer {
+    margin: 10px 0px 10px 0px;
+}
+#ajaxChatInputFieldContainer #ajaxChatInputField {
+	background-color: #ECF1F3;
+	color: #28313F;
+	border: inset 1px #666;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#ajaxChatContent .rowEven {
+	background-color: #ECF3F7;
+}
+#ajaxChatContent .rowOdd {
+	background-color: #e1ebf2;
+}
+</style>
+    
+<table class="tablebg" width="100%" cellspacing="1">
+<!-- <tr>
+        <th><h4>{L_SHOUTBOX}</h4></td>
+    </tr>
+ -->    
+    <tr>
+        <td class="row1" valign="top" width="100%">
+        <div style="font-size: 1.0em; margin-bottom: 10px;">{SHOUTBOX}</div>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" align="center">
+  		<span><a href="{CHAT_LINK}" title="{CHAT_TITLE}">{CHAT_LABEL}</a>&nbsp;&#8226;&nbsp;<a href="javascript:void(0)" onClick="window.open('{ROOT_PATH}chat/', 'standaloneflash','width=800,height=600'); return false;" title="{CHAT_TITLE}" rel="nofollow">{L_CHAT_WINDOW}</a></span>
+        </td>
+    </tr>
+</table>

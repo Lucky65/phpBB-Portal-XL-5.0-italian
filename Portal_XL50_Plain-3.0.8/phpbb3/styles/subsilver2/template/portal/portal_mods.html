@@ -1,0 +1,68 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2><a href="{U_PORTAL_MODS}">{PAGE_TITLE}</a></h2>
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th width="25%" >{L_MOD_TITLE}</th>
+		<th width="9%">{L_MOD_VERSION}</th>
+		<th>{L_MOD_DESC}</th>
+		<th width="10%">{L_MOD_AUTHOR}</th>
+		<th colspan="2" width="11%">{L_MOD_URL}</th>
+	</tr>
+		<!-- BEGIN portal_mods -->
+
+	<!-- IF portal_mods.S_ROW_COUNT is even --><tr class="row2"><!-- ELSE -->	<tr class="row1"><!-- ENDIF -->
+		<td class="genmed" align="left">&nbsp;{portal_mods.MOD_TITLE}&nbsp;</td>
+		<td class="genmed" align="left" >&nbsp;{portal_mods.MOD_VERSION}&nbsp;{portal_mods.MOD_VERSION_TYPE}&nbsp;</td>
+		<td class="genmed" align="left">{portal_mods.MOD_DESC}</td>
+		<td class="genmed" align="left">{portal_mods.MOD_AUTHOR}</td>
+		<td class="genmed" align="center"><!-- IF portal_mods.MOD_URL --><a href="{portal_mods.MOD_URL}" target="_blank"><img src="{portal_mods.MOD_URL_IMG}" title="{L_VISIT_WEBSITE}: {portal_mods.MOD_URL}" /></a><!-- ENDIF --></td>
+		<td class="genmed" align="center"><!-- IF portal_mods.MOD_DOWNLOAD_URL --><a href="{portal_mods.MOD_DOWNLOAD_URL}" target="_blank"><img src="{portal_mods.MOD_DOWNLOAD_IMG}" title="{L_DOWNLOAD_MOD}: {portal_mods.MOD_DOWNLOAD_URL}" /></a><!-- ENDIF --></td>
+	</tr>
+		<!-- END portal_mods -->
+  <tr>
+    <td class="cat" colspan="6" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+  </tr>
+</table>
+	
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+<form id="portal_mods" method="post" action="{S_TOPIC_ACTION}">
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:left;"><!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF --></td>
+    <td style="text-align:right;"><!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF --></td>
+  </tr>
+</table>
+</form>
+<hr />
+<!-- ENDIF -->
+
+<!-- IF PAGINATION -->
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:right;">
+<div class="breadcrumbs" style="margin: 0px 0px 5px 0px;">
+ [ {TOTAL_MODS} ]
+<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --><a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+    
+    </td>
+  </tr>
+</table>
+	
+<!-- INCLUDE breadcrumbs.html -->
+	
+	<br clear="all" />
+	<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+	<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

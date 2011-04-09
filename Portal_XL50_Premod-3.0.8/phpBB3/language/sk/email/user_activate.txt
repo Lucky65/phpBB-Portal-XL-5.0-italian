@@ -1,0 +1,9 @@
+Subject: Aktivácia Vášho účtu
+
+Vážený/á {USERNAME},
+
+Váš účet na “{SITENAME}” bol deaktivovaný, pravdepodobne na základe zmien vykonaných vo Vašom profile. Aktiváciu uskutočníte návštevou nasledujúceho odkazu:
+
+{U_ACTIVATE}
+
+{EMAIL_SIG}

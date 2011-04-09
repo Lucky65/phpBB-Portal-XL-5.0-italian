@@ -1,0 +1,106 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<script type="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=600,height=280');
+return false;
+}
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function popup2(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=505,height=500');
+return false;
+}
+//-->
+</script>
+<h2>{L_DMV_SHOW_VIDEO}: {VIDEO_TITLE}</h2>
+<p>{L_DMV_SHOW_VIDEO_EXPLAIN}</p>
+<br  />
+
+<form id="postform" method="post" action="{S_ACTION}">
+<div class="forabg">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="icon">
+						<dd>{VIDEO_TITLE} {L_DMV_FROM} {VIDEO_SINGER}</dd>
+					</dl>
+				</li>
+	        </ul>
+			<ul class="topiclist forums">
+				<li>
+					<dl>
+						<dd style="width: 49%; text-align: center;">
+							<ul>
+								<li>
+									<div style="float: right;">
+									<!-- IF S_DELETE_VIDEO or S_EDIT_VIDEO or S_REPORT_VIDEO -->
+									<ul class="profile-icons">
+										<!-- IF S_EDIT_VIDEO --><li class="edit-icon"><a href="{U_EDIT_VIDEO}" title="{L_DMV_EDIT_VIDEO}"><span>{L_DMV_EDIT_VIDEO}</span></a></li><!-- ENDIF -->
+										<!-- IF S_DELETE_VIDEO --><li class="delete-icon"><a href="{U_DELETE_VIDEO}" title="{L_DMV_DELETE_VIDEO}"><span>{L_DMV_DELETE_VIDEO}</span></a></li><!-- ENDIF -->
+										<!-- IF S_REPORT_VIDEO --><li class="report-icon"><a href="{U_REPORT_VIDEO}" title="{L_DMV_REPORT_VIDEO}"><span>{L_DMV_REPORT_VIDEO}</span></a></li><!-- ENDIF -->
+									</ul>
+									<!-- ENDIF -->
+									</div>
+									<br />
+								</li>
+								<li>
+									<span style="float: center;">
+									<br /><br />
+										{VIDEO_URL}
+										<br /><br />
+									</span>
+								</li>
+								<li>
+									{L_DMV_AUTHOR}: <strong>{VIDEO_ADDED_BY}</strong> {L_DMV_ON} {VIDEO_TIME}<br />
+									{VIDEO_CLICKS}
+									<br /><br />
+									{VIDEO_RATING_IMG}<br />
+									<!-- IF S_HAS_PERM_RATE -->
+										<a href="{U_RATE_VIDEO}" onclick="return popup(this, 'rating')">{L_DMV_RATING}</a>
+										<br /><br />
+									<!-- ENDIF -->
+									<!-- IF S_SHOW_COMMENTS -->
+									{L_DMV_COMMENT}: <a href="{U_COMMENT_VIDEO}">{CC}</a><br /><br />
+									<!-- ENDIF -->
+									<a href="{U_SHOW_POPUP}" onclick="return popup2(this, 'showpopup')">{L_DMV_SHOW_POPUP}</a>
+									<br /><br />
+								</li>
+							</ul>
+						</dd>
+						<dd style="width: 49%; text-align: center;">
+							<ul>
+								<li>
+									<span style="float: center;"><br /><img src="{VIDEO_IMAGE}" alt=""></img><br /><br />{VIDEO_SONGTEXT}<br /><br /></span>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+</form>
+
+<p></p><p><a href="{U_BACK_CAT}" class="left-box {S_CONTENT_FLOW_BEGIN}" accesskey="r">{L_RETURN_TO} {VIDEO_CAT_NAME}</a></p>
+<br />
+<!-- INCLUDE dm_video/video_footer.html -->

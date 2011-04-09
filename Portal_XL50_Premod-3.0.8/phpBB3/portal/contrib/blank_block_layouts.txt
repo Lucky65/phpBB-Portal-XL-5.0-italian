@@ -1,0 +1,253 @@
+Blabk block layouts prosilver based
+
+
+<div id="tabs">
+	<ul>
+         <li class="activetab"><a href="{U_PORTAL}" title="{L_PORTAL}"><span>{L_PORTAL}</span></a></li>
+         <li class="activetab"><a href="{U_INDEX}" title="{L_FORUM}"><span>{L_FORUM}</span></a></li>               
+ 		 <li class="activetab"><a href="{U_CHAT}" title="{L_CHAT}"><span>{L_CHAT}</span></a></li>
+	</ul>
+</div>
+
+
+
+<div id="tabs">
+	<ul>
+		<li class="activetab"><a href="{t_block1.U_TITLE}"><span>{t_block1.L_TITLE}</span></a></li>
+	</ul>
+</div>
+
+<div class="panel bg3">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<div style="width: 100%;">
+		 
+         { CONTENT HERE }
+		 
+	</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+
+
+
+
+<div class="forabg" style="margin-top:5px;">
+  <div class="inner"> <span class="corners-top"><span></span></span>
+    <ul class="topiclist">
+      <li class="header">
+        <dl>
+          <dt>{ TITLE HERE }</dt>
+        </dl>
+      </li>
+    </ul>
+    <ul class="topiclist forums">
+      <li style="padding-right:1px;">
+        <dl>
+          <dd class="posts_portal">
+		 
+         { CONTENT HERE }
+		 
+		  </dd>
+        </dl>
+      </li>
+    </ul>
+    <span class="corners-bottom"><span></span></span> </div>
+</div>
+
+
+
+
+
+<div class="forabg" style="margin-top:5px;">
+  <div class="inner"> <span class="corners-top"><span></span></span>
+    <ul class="topiclist">
+      <li class="header">
+        <dl>
+          <dt>{L_WELCOME}</dt>
+        </dl>
+      </li>
+    </ul>
+    <ul class="topiclist forums">
+      <li style="padding-right:100px;" class="row">
+        <dl class="icon">
+          <dd class="posts_portal">
+		 
+         { CONTENT HERE }
+		 
+		  </dt>
+        </dl>
+      </li>
+    </ul>
+    <span class="corners-bottom"><span></span></span></div>
+</div>
+<br clear="all" />
+
+
+
+
+
+<div class="navbar">
+  <div class="inner"><span class="corners-top"><span></span></span> 
+		 
+         { CONTENT HERE }
+		 
+  <span class="corners-bottom"><span></span></span></div>
+</div>
+
+
+
+
+
+<hr class="dashed" />
+
+<h3>sample block design</h3>
+
+<div class="navbar">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h5>{L_ANNOUNCMENTS}</h5>
+		 
+         { CONTENT HERE }
+		 
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="panel">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h3>{ TITLE HERE }</h3>
+		 
+         { CONTENT HERE }
+		 
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="panel">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h3>{ TITLE HERE }</h3>
+		 
+         { CONTENT HERE }
+		 
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="panel">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h3>{ TITLE HERE }</h3>
+		 
+         { CONTENT HERE }
+		 
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="panel">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+         <h3>{ TITLE HERE }</h3>
+         
+      <ul class="linklist">
+         <li>
+           { CONTENT HERE } left side 
+         </li>
+         <li class="rightside">
+           { CONTENT HERE } right side
+         </li>
+      </ul>
+         
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="navbar">
+   <div class="inner"><span class="corners-top"><span></span></span>
+		 
+         { CONTENT HERE }
+		 
+   <span class="corners-bottom"><span></span></span></div>
+</div>
+<br clear="all" />
+
+
+
+
+<div class="forabg">
+   <div class="inner">
+      <span class="corners-top"><span></span></span>
+      <ul class="topiclist">
+         <li class="header"><dl><dt>{ TITLE HERE }</dt></dl></li>
+      </ul>
+      <ul class="topiclist forums">
+         <li style="padding-right:5px;"><dl>
+            <dd class="posts_portal">
+		 
+         { CONTENT HERE }
+		 
+            </dd>
+         </dl></li>
+      </ul>
+      <span class="corners-bottom"><span></span></span>
+   </div>
+</div>
+
+
+<hr class="dashed" />
+
+
+
+<div class="portlet">
+  <div class="navbar">
+    <div class="inner"> <span class="corners-top"><span></span></span>
+      <div class="portlet_topper"> <a href="#" class="toggle">{L_RND_MEMBER}</a> </div>
+      <div class="portlet_content">
+		 
+         { CONTENT HERE }
+		 
+      </div>
+      <span class="corners-bottom"><span></span></span> </div>
+  </div>
+</div>
+
+
+
+<div class="navbar">
+  <div class="inner"> <span class="corners-top"><span></span></span>
+        <dl>
+          <dt><h5>{L_WELCOME}</h5></dt>
+        </dl>
+        <dl>
+          <dd class="posts_portal">
+		 
+         { CONTENT HERE }
+		 
+		  </dd>
+        </dl>
+    <span class="corners-bottom"><span></span></span> </div>
+</div>
+<br clear="all" />
+

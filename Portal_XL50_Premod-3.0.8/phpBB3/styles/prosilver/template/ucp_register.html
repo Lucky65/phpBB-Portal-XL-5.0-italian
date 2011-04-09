@@ -1,0 +1,194 @@
+<!-- INCLUDE overall_header.html -->
+
+<script type="text/javascript">
+// <![CDATA[
+	/**
+	* Change language
+	*/
+	function change_language(lang_iso)
+	{
+		document.forms['register'].change_lang.value = lang_iso;
+		document.forms['register'].submit.click();
+	}
+
+	/**
+	* Change country flags
+	*/
+	function update_flag(newflag)
+	{
+		document.getElementById('flag_image').src = (newflag) ? "{FLAGS_PATH}/" + encodeURI(newflag) : "./images/spacer.gif";
+	}
+	
+	<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_REFRESH -->
+	onload_functions.push('apply_onkeypress_event()');
+	<!-- ENDIF -->
+
+	/**
+	* Some functions for the AJAX checker
+	*/
+	function createRequestObject() {
+	    var ro;
+	    var browser = navigator.appName;
+	    if(browser == "Microsoft Internet Explorer"){
+	        ro = new ActiveXObject("Microsoft.XMLHTTP");
+	    } else {
+	        ro = new XMLHttpRequest();
+	    }
+	    return ro;
+	}
+	
+	var http = createRequestObject();
+	
+	function sndReq(mode, valuename1, value1, valuename2, value2) {
+		// Show that the request is running
+		if (mode == 'usernamecheck' && document.getElementById('username').value != ''){
+			document.getElementById('usernamecheck').innerHTML = '{AJAX_CHECKING_IMG}&nbsp;{L_AJAX_CHECKING_USERNAME}';
+		} else if (mode == 'passwordcheck' && document.getElementById('new_password').value != '' && document.getElementById('password_confirm').value != '') {
+			document.getElementById('passwordcheck').innerHTML = '{AJAX_CHECKING_IMG}&nbsp;{L_AJAX_CHECKING_PASSWORD}';
+		} else if (mode == 'emailcheck' && document.getElementById('email').value != '' && document.getElementById('email_confirm').value != '') {
+			document.getElementById('emailcheck').innerHTML = '{AJAX_CHECKING_IMG}&nbsp;{L_AJAX_CHECKING_EMAIL}';
+		} else {
+			return false;
+		}
+		
+		// Make the request
+	    http.open('get', '{AJAX_CHECKS_FILE}?mode='+mode+'&'+valuename1+'='+value1+'&'+valuename2+'='+value2);
+	    http.onreadystatechange = handleResponse;
+	    http.send(null);
+	}
+	
+	function handleResponse() {
+	    if(http.readyState == 4){
+	        var response = http.responseText;
+	        var update = new Array();
+	
+	        if(response.indexOf('|' != -1)) {
+	            update = response.split('|');
+	            document.getElementById(update[0]).innerHTML = update[1];
+	        }
+	    }
+	}
+	
+// ]]>
+</script>
+
+<form method="post" action="{S_UCP_ACTION}" id="register">
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<h2>{SITENAME} - {L_REGISTRATION}</h2>
+
+	<fieldset class="fields2">
+	<!-- IF ERROR --><dl><dd class="error">{ERROR}</dd></dl><!-- ENDIF -->
+	<!-- IF L_REG_COND -->
+		<dl><dd><strong>{L_REG_COND}</strong></dd></dl>
+	<!-- ENDIF -->
+	<dl>
+		<dt><label for="username">{L_USERNAME}:</label><br /><span>{L_USERNAME_EXPLAIN}</span></dt>
+		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="inputbox autowidth" title="{L_USERNAME}" onblur="sndReq('usernamecheck', 'username', this.value, 'ignore', 'ignore')" /><span id="usernamecheck"></span></dd>
+	</dl>
+	<dl>
+		<dt><label for="email">{L_EMAIL_ADDRESS}:</label></dt>
+		<dd><input type="text" tabindex="2" name="email" id="email" size="25" maxlength="100" value="{EMAIL}" class="inputbox autowidth" title="{L_EMAIL_ADDRESS}" onblur="sndReq('emailcheck', 'email1', this.value, 'email2', document.getElementById('email_confirm').value)" /><span id="emailcheck"></span></dd>
+	</dl>
+	<dl>
+		<dt><label for="email_confirm">{L_CONFIRM_EMAIL}:</label></dt>
+		<dd><input type="text" tabindex="3" name="email_confirm" id="email_confirm" size="25" maxlength="100" value="{EMAIL_CONFIRM}" class="inputbox autowidth" title="{L_CONFIRM_EMAIL}" onblur="sndReq('emailcheck', 'email1', document.getElementById('email').value, 'email2', this.value)" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="new_password">{L_PASSWORD}:</label><br /><span>{L_PASSWORD_EXPLAIN}</span></dt>
+		<dd><input type="password" tabindex="4" name="new_password" id="new_password" size="25" value="{PASSWORD}" class="inputbox autowidth" title="{L_NEW_PASSWORD}" onblur="sndReq('passwordcheck', 'password1', this.value, 'password2', document.getElementById('password_confirm').value)" /><span id="passwordcheck"></span></dd>
+	</dl>
+	<dl>
+		<dt><label for="password_confirm">{L_CONFIRM_PASSWORD}:</label></dt>
+		<dd><input type="password" tabindex="5" name="password_confirm" id="password_confirm" size="25" value="{PASSWORD_CONFIRM}" class="inputbox autowidth" title="{L_CONFIRM_PASSWORD}" onblur="sndReq('passwordcheck', 'password1', document.getElementById('new_password').value, 'password2', this.value)"/></dd>
+	</dl>
+    <!-- IF S_BIRTHDAYS_ENABLED -->
+    <dl>
+        <dt><label for="bday_day">{L_BIRTHDAY}: *</label><br /><span>{L_BIRTHDAY_EXPLAIN}</span></dt>
+        <dd>
+            <label for="bday_day">{L_DAY}: <select name="bday_day" id="bday_day" style="width: 4em;">{S_BIRTHDAY_DAY_OPTIONS}</select></label> 
+            <label for="bday_month">{L_MONTH}: <select name="bday_month" id="bday_month" style="width: 4em;">{S_BIRTHDAY_MONTH_OPTIONS}</select></label> 
+            <label for="bday_year">{L_YEAR}: <select name="bday_year" id="bday_year" style="width: 6em;">{S_BIRTHDAY_YEAR_OPTIONS}</select></label>
+        </dd>
+    </dl>
+    <!-- ENDIF -->
+    <dl>
+      <dt><label for="gender_x">{L_GENDER}: *</label><br /><span>{L_GENDER_EXPLAIN}</span></dt>
+      <dd>
+         <label for="gender_m"><input type="radio" name="gender" id="gender_m" value="{GENDER_M}"<!-- IF S_GENDER_M --> checked="checked"<!-- ENDIF --> /> {L_GENDER_M}</label>
+         <label for="gender_f"><input type="radio" name="gender" id="gender_f" value="{GENDER_F}"<!-- IF S_GENDER_F --> checked="checked"<!-- ENDIF --> /> {L_GENDER_F}</label>
+         <label for="gender_x"><input type="radio" name="gender" id="gender_x" value="{GENDER_X}"<!-- IF S_GENDER_X --> checked="checked"<!-- ENDIF --> /> {L_GENDER_X}</label>
+      </dd>
+    </dl>
+	<!-- IF S_ABQ_CODE -->
+	<dl>
+		<dt><label for="AB_Question">{L_AB_QUESTION}: *</label><br /><span>{L_AB_QUESTION_EXPLAIN}</span></dt>
+		<dd><input type="text" tabindex="6" name="AB_Question" id="AB_Question" size="25" maxlength="255" value="{AB_QUESTION}" class="inputbox autowidth" title="{L_AB_QUESTION}" /></dd>
+	</dl>
+	<!-- ENDIF -->
+    
+	<hr />
+
+	<dl>
+		<dt><label for="lang">{L_LANGUAGE}:</label></dt>
+		<dd><select name="lang" id="lang" onchange="change_language(this.value); return false;" tabindex="6" title="{L_LANGUAGE}">{S_LANG_OPTIONS}</select></dd>
+	</dl>
+	<dl>
+		<dt><label for="country_flag">{L_COUNTRY}: <!-- IF S_FLAG_REQUIRE --> *<!-- ENDIF --></label></dt>
+		<dd><select name="country_flag" onchange="update_flag(this.options[selectedIndex].id);">{S_FLAG_OPTIONS}</select> <img src="{FLAG_IMAGE}" id="flag_image" alt="" /></dd>
+	</dl>    
+	<dl>
+		<dt><label for="tz">{L_TIMEZONE}:</label></dt>
+		<dd><select name="tz" id="tz" tabindex="7" class="autowidth">{S_TZ_OPTIONS}</select></dd>
+	</dl>
+	<!-- IF .profile_fields -->
+		<dl><dd><strong>{L_ITEMS_REQUIRED}</strong></dd></dl>
+
+	<!-- BEGIN profile_fields -->
+		<dl>
+			<dt><label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>{profile_fields.LANG_NAME}:<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF --></label>
+			<!-- IF profile_fields.LANG_EXPLAIN --><br /><span>{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF -->
+			<!-- IF profile_fields.ERROR --><br /><span class="error">{profile_fields.ERROR}</span><!-- ENDIF --></dt>
+			<dd>{profile_fields.FIELD}</dd>
+		</dl>
+	<!-- END profile_fields -->
+	<!-- ENDIF -->
+
+	</fieldset>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- IF CAPTCHA_TEMPLATE -->
+	<!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
+	<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+<!-- ENDIF -->
+
+<!-- IF S_COPPA -->
+
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<h4>{L_COPPA_COMPLIANCE}</h4>
+
+	<p>{L_COPPA_EXPLAIN}</p>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<fieldset class="submit-buttons">
+		{S_HIDDEN_FIELDS}
+		<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp;
+		<input type="submit" tabindex="9" name="submit" id="submit" value="{L_SUBMIT}" class="button1 default-submit-action" />
+		{S_FORM_TOKEN}
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

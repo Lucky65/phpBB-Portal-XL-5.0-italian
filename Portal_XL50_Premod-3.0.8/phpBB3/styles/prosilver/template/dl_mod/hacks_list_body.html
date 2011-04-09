@@ -1,0 +1,61 @@
+<!-- INCLUDE overall_header.html -->
+
+	<br />
+
+	<h2>{PAGE_NAME}</h2>
+
+	<ul class="linklist">
+		<li class="rightside pagination">
+			<span>{PAGINATION}</span>
+		</li>
+	</ul>
+
+	<div class="forabg">
+
+		<div class="inner"><span class="corners-top"><span></span></span>
+		<ul class="topiclist">
+			<li class="header">
+				<dl>
+					<dd class="info">{L_NAME}</dd>
+					<dd class="info">{L_DL_DESCRIPTION}</dd>
+					<dd class="option">{L_DL_HACK_AUTHOR}</dd>
+					<dd class="option">&nbsp;</dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist topics">
+		<!-- BEGIN listrow -->
+			<li class="row<!-- IF listrow.S_ROW_COUNT is even --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+				<dl>
+					<dd class="info"><b>{listrow.HACK_NAME}</b></dd>
+					<dd class="info"><u>{listrow.CAT_NAME}</u><br />{listrow.HACK_DESCRIPTION}</dd>
+					<dd class="option">{listrow.HACK_AUTHOR}</dd>
+					<dd class="option">{listrow.HACK_AUTHOR_WEBSITE}<!-- IF listrow.HACK_AUTHOR_WEBSITE && listrow.HACK_DL_URL --><br /><!-- ENDIF -->{listrow.HACK_DL_URL}</dd>
+				</dl>
+			</li>
+		<!-- END listrow -->
+		</ul>
+		
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<form action="{S_FORM_ACTION}" method="post" name="hacklist">
+
+	<fieldset class="display-options">
+			<label>{L_SORT_BY}</label> <label>{S_SORT_BY}</label> <label>{L_ORDER}</label> <label>{S_ORDER}</label>
+			<label><input type="submit" class="button2" value="{L_GO}" /></label>
+	</fieldset>
+
+	</form>
+
+	<hr />
+
+	<ul class="linklist">
+		<li class="rightside pagination">
+			<span>{PAGINATION}</span>
+		</li>
+	</ul>
+
+<!-- INCLUDE jumpbox.html -->
+
+<!-- INCLUDE overall_footer.html -->

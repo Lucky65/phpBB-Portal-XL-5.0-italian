@@ -1,0 +1,53 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_STATISTICS}</td>
+</tr>-->
+<!-- IF S_USER_LOGGED_IN -->
+<tr>
+	<td class="row2"><strong>{L_ST_NEW}</strong></td>
+</tr>
+<tr>
+	<td class="row1">
+            {L_ST_NEW_POSTS} <strong>{S_NEW_POSTS}</strong><br />
+            {L_ST_NEW_TOPICS} <strong>{S_NEW_TOPIC}</strong><br />
+            {L_ST_NEW_ANNS} <strong>{S_NEW_ANN}</strong><br />
+            {L_ST_NEW_STICKYS} <strong>{S_NEW_SCT}</strong><br /><br />
+	</td>
+</tr>
+<!-- ENDIF -->
+<tr>
+	<td class="row2"><strong>{L_ST_TOP}</strong></td>
+</tr>
+<tr>
+	<td class="row1">
+            {L_ST_TOT_POSTS} <strong>{S_TOT_POSTS}</strong><br />
+            {L_ST_TOT_TOPICS} <strong>{S_TOT_TOPICS}</strong><br />
+            {L_ST_TOP_ANNS} <strong>{S_ANN}</strong><br />
+            {L_ST_TOP_STICKYS} <strong>{S_SCT}</strong><br />
+            {L_ST_TOT_ATTACH} <strong>{S_TOT_ATTACH}</strong><br />
+            {L_ST_TOT_ATTACH_SIZE} <strong>{S_TOT_ATTACH_SIZE}</strong><br />
+            {L_ST_TOT_ACRONYM} <strong>{S_TOT_ACRONYMS}</strong><br />
+			<hr align="left" width="85%" />
+			{TOPICS_PER_DAY}<br />
+			{POSTS_PER_DAY}<br />
+			{USERS_PER_DAY}<br />
+			{TOPICS_PER_USER}<br />
+			{POSTS_PER_USER}<br />
+			{POSTS_PER_TOPIC}<br />
+			{L_ST_TOT_ACTIVE_POSTERS}: <strong>{S_TOT_ACTIVE_USERS}</strong><br /><br />
+			<hr align="left" width="85%" />
+            {L_ST_PORTAL_STARTDATE} <strong>{PORTAL_STARTDATE}</strong><br />
+            {L_ST_TOT_VISIT} <strong>{VISIT_COUNTER}</strong><br />
+            {L_ST_LAT_VISIT} <strong>{VISIT_IP}</strong><br /><br />
+			<hr align="left" width="85%" />
+            {TOTAL_USERS}<br /><br />
+			<hr align="left" width="85%" />
+			{TOTAL_USERS_LASTVISIT}<br /><br />
+            {LASTVISIT_USER_LIST}<br />
+            <!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><br /><br /><!-- ENDIF -->
+	</td>
+</tr>
+<tr>
+	<td class="row1">{NEWEST_USER}</td>
+</tr>
+</table>

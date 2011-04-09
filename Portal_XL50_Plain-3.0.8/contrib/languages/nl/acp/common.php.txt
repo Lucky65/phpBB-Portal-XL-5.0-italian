@@ -1,0 +1,175 @@
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portaal',
+   	'ACP_CAT_PORTAL'           				=> 'Portaal',
+   	'ACP_PORTAL'           					=> 'Portaal',
+   	'ACP_PORTAL_ADMIN'           			=> 'Algemneen',
+   	'ACP_PORTAL_INFO'           			=> 'Algemneen',	
+    'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Mededelingen',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'Niews',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Recente onderwerpen',	
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Woordspelerijen',
+    'ACP_PORTAL_COLLUMN_WIDTH_INFO' 		=> 'Kolomwijdte',
+   	'ACP_PORTAL_SWITCHES_INFO'      		=> 'Blokschakelaars',
+    'ACP_PORTAL_OTHER_INFO'         		=> 'Diverse instellingen',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',	
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Bijlagen',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Laatst geregistreed',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Rondvragen',	
+    'ACP_PORTAL_BOTS_INFO'                  => 'Bezoeken van Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Meeste Plaatser',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Willekeurige banners',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Welkom',
+    'ACP_PORTAL_SHOUTBOX_INFO'				=> 'Chatbox',
+    'ACP_PORTAL_MINICALENDAR_INFO'			=> 'Mini kalender',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Weer',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Syndicaatsvorming',
+    'ACP_PORTAL_INDEX_INFO'			        => 'Index/Viewforum/Viewtopic',
+    'ACP_PORTAL_MEDIA_INFO'                 => 'Mediaspeler',
+    'ACP_PORTAL_GALLERY_INFO'               => 'Fotoalbum',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Scrollbericht',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Portaalbeheer',
+
+	// Portal XL portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Portaal Blokken',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Portaal Blokken',
+	'ACP_PORTAL_BLOCKS'						=> 'Portaal Blokken',
+	'ACP_MANAGE_BLOCKS'						=> 'Beheer Portaal Blokken',
+
+	// Portal XL index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Index Blokken',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Index Blokken',
+	'ACP_PORTAL_INDEX_BLOCKS'				=> 'Index Blokken',
+	'ACP_MANAGE_INDEX_BLOCKS'				=> 'Beheer Index Blokken',
+
+	// Portal XL portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Menus',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Menus',
+	'ACP_PORTAL_MENUS'						=> 'Menus',
+	'ACP_MANAGE_MENUS'						=> 'Beheer Menus',
+		
+	// Portal XL portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Quotes',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Quotations',
+	'ACP_PORTAL_QUOTES'						=> 'Quotes',
+	'ACP_MANAGE_QUOTES'						=> 'Beheer Quotes',
+		
+	// Portal XL portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Beheer Banners',
+	'ACP_MANAGE_BANNERS'					=> 'Beheer Banners 88x31',
+		
+	// Portal XL portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners horizontal',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners horizontal 400x60',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners horizontal',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Beheer Banners 400x60',
+
+	// Portal XL portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners vertical',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners vertical 130x600',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners vertical',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Beheer Banners 130x600',
+
+	// Portal XL portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Links',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Links',
+	'ACP_PORTAL_LINKS'							=> 'Links',
+	'ACP_MANAGE_LINKS'							=> 'Beheer Links',
+		
+	// Portal XL portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mod\'s',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mod\'s',
+	'ACP_PORTAL_MODS'							=> 'Mod\'s',
+	'ACP_MANAGE_MODS'							=> 'Beheer Mod\'s',
+		
+	// Portal XL portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Forum Ad\'s',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Forum Ad\'s',
+	'ACP_PORTAL_ADDS'							=> 'Forum Ad\'s',
+	'ACP_MANAGE_ADDS'							=> 'Beheer Forum Ad\'s',
+		
+	// Portal XL portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Portaal Paginas',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Portaal Paginas',
+	'ACP_PORTAL_PAGES'							=> 'Portaal Paginas',
+	'ACP_MANAGE_PAGES'							=> 'Beheer Portaal Paginas',
+		
+	// Portal XL portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Portaal News Feeds',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Portaal News Feeds',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Portaal News Feeds',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Beheer News Feeds',
+		
+	// Portal XL portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Portaal Acroniemen',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Portaal Acroniemen',
+	'ACP_PORTAL_ACRONYMS'						=> 'Portaal Acroniemen',
+	'ACP_MANAGE_ACRONYMS'						=> 'Beheer Acroniemen',
+		
+	// Portal XL portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Portaal Colofoon',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Portaal Colofoon',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Portaal Colofoon',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Beheer Colofoon',
+		
+	// Portal XL portal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portaal algemeen opgeslagen</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Portaal advertenties opgeslagen</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>Portaal nieuws opgeslagen</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Portaal recent topics opgeslagen</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Portaal woordspelerijen opgeslagen</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Portaal column breedte opgeslagen</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Portaal paypal opgeslagen</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Portaal bijlages opgeslagen</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Portaal leden opgeslagen</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Portaal rondvraag opgeslagen</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Portaal bezoeken van bots opgeslagen</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Portaal meeste plaatser opgeslagen</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Portaal willekeurig opgeslagen</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Portaal welkomopgeslagen</strong>',
+	'LOG_CONFIG_MINICALENDAR'	    => '<strong>Portaal minikalender opgeslagen</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Portaal weer opgeslagen</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Portaal syndicaatsvorming opgeslagen</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Portaal board/viewtopic index opgeslagen</strong>',
+	'LOG_CONFIG_OTHER'	    		=> '<strong>Portaal diversen settings opgeslagen</strong>',
+  	'LOG_CONFIG_MEDIAPLAYER'        => '<strong>Portaal media speler opgeslagen</strong>',
+  	'LOG_CONFIG_PICTUREGALLERY'     => '<strong>Portaal foto album opgeslagen</strong>',
+  	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Portaal scrollbericht opgeslagen</strong>',
+	
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>Portaal XL ge&iuml;nstalleerd</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>Portaal XL verwijderd</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>Portaal XL datase update</strong>',
+	
+));
+  
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'ACP_COUNTER_SETTINGS'	=> 'Teller instellingen',
+	'COUNTER_STARTED'		=> 'Teller gestart op',
+	'HITS_PER_DAY'			=> 'Hits per dag',
+	'LOG_CONFIG_COUNTER'	=> '<strong>Teller instellingen gewijzigd</strong>',
+	'LOG_RESET_COUNTER'		=> '<strong>Geresete teller: gestart op datum tijd en hits waarde</strong>',
+	'NUMBER_HITS'			=> 'Aantal van de hits',
+	'RESET_COUNTER'			=> 'Reset teller',
+	'RESET_COUNTER_CONFIRM'	=> 'Ben je er zeker van deze waarden van de teller te resetten?',
+	'RESET_COUNTER_EXPLAIN'	=> 'Reset alle gegevens van de teller: gestart op datum tijd en totale hits.',
+));
+

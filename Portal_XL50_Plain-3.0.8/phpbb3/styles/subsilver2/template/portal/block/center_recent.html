@@ -1,0 +1,126 @@
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$("#center_recent").tabs({
+		event		: 'mouseover',
+		selected	: 0
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+.center_recent { padding: 2px; zoom: 1; }
+.center_recent ul { margin: 0; }
+
+.center_recent-content {
+	min-height: 3px;
+	overflow: hidden;
+	line-height: 14px;
+}
+
+.center_recent-content th {
+	font-weight: normal;
+	font-size: 10px;
+	font-style: italic;
+	padding-bottom: 2px;
+}
+
+.center_recent-topictitle {
+	font-weight: bold;
+}
+
+.center_recent h5 {
+	font-weight: normal;
+	font-size: 10px;
+}
+
+.center_recent-content td, .center_recent-content span {
+	font-weight: normal;
+	font-size: 10px;
+}
+
+.center_recent li a {
+	font-size: 10px;
+}
+</style>
+
+<div class="center_recent" id="center_recent">
+ <!-- tabs -->
+    <ul>
+        <li><a href="#center_recent-1">{L_RECENT_TOPIC}</a></li>
+        <li><a href="#center_recent-2">{L_RECENT_HOT_TOPIC}</a></li>
+        <li><a href="#center_recent-3">{L_RECENT_ANN}</a></li>
+    </ul>    
+ <!-- tabs -->
+ <!-- tab containers -->
+	<div class="center_recent-content" id="center_recent-1">
+        <h5><strong>{L_RECENT_TOPIC}</strong></h5>
+
+        <table class="tablebg" cellspacing="1" width="100%">
+          <tr class="cat">
+            <td>{L_POSTED_BY}&nbsp;</td>
+            <td>{L_TOPIC_TITLE}&nbsp;</td>
+            <td>{L_COMMENTS}&nbsp;</td>
+            <td>{L_TOPIC_VIEWS}&nbsp;</td>
+            <td>{L_LAST_REPLIED}&nbsp;</td>
+          </tr>
+          <!-- BEGIN latest_topics -->
+          <tr>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><img src="{T_THEME_PATH}/images/arrow_user_select.gif" alt="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" title="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" height="10" width="10" name="latest_topics1" /> <span class="gensmall"><a href="{latest_topics.U_USERNAME}">{latest_topics.USERNAME}</a></span></td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{latest_topics.MINI_POST_IMG}<a onmouseover="show_preview('{L_POSTED}: {latest_topics.FIRST_POST_TIME}', '{latest_topics.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{latest_topics.U_VIEW_TOPIC}" title="{latest_topics.FULL_TITLE}"><span class="center_recent-topictitle">{latest_topics.TITLE}</span></a></td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_topics.OPEN} <a href="{latest_topics.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{latest_topics.REPLIES}</a> {latest_topics.CLOSE}</td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_topics.OPEN} {latest_topics.TOPIC_VIEWS} {latest_topics.CLOSE}</td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><span class="gensmall">{L_BY}&nbsp;<a href="{latest_topics.U_LAST_POSTER_NAME}" title="{L_ON}&nbsp;{latest_topics.LAST_POST_TIME}">{latest_topics.LAST_POSTER_NAME}</a></span></td>
+          </tr>
+          <!-- END latest_topics -->
+        </table>
+
+   </div>
+   <div class="center_recent-content" id="center_recent-2">
+        <h5><strong>{L_RECENT_HOT_TOPIC}</strong></h5>
+
+        <table class="tablebg" cellspacing="1" width="100%">
+          <tr class="cat">
+            <td>{L_POSTED_BY}&nbsp;</td>
+            <td>{L_TOPIC_TITLE}&nbsp;</td>
+            <td>{L_COMMENTS}&nbsp;</td>
+            <td>{L_TOPIC_VIEWS}&nbsp;</td>
+            <td>{L_LAST_REPLIED}&nbsp;</td>
+          </tr>
+          <!-- BEGIN latest_hot_topics -->
+          <tr>
+            <td class="<!-- IF latest_hot_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><img src="{T_THEME_PATH}/images/arrow_user_select.gif" alt="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" title="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" height="10" width="10" name="latest_topics1" /> <span class="gensmall"><a href="{latest_hot_topics.U_USERNAME}" title="{L_ON}&nbsp;{latest_hot_topics.TOPIC_TIME}">{latest_hot_topics.USERNAME}</a></span></td>
+            <td class="<!-- IF latest_hot_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{latest_hot_topics.MINI_POST_IMG}<a onmouseover="show_preview('{L_POSTED}: {latest_hot_topics.FIRST_POST_TIME}', '{latest_hot_topics.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{latest_hot_topics.U_VIEW_TOPIC}" title="{latest_hot_topics.FULL_TITLE}"><span class="center_recent-topictitle">{latest_hot_topics.TITLE}</span></a></td>
+            <td class="<!-- IF latest_hot_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_hot_topics.OPEN} <a href="{latest_hot_topics.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{latest_hot_topics.REPLIES}</a> {latest_hot_topics.CLOSE} </td>
+            <td class="<!-- IF latest_hot_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_hot_topics.OPEN} {latest_hot_topics.TOPIC_VIEWS} {latest_hot_topics.CLOSE} </td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><span class="gensmall">{L_BY}&nbsp;<a href="{latest_hot_topics.U_LAST_POSTER_NAME}" title="{L_ON}&nbsp;{latest_hot_topics.LAST_POST_TIME}">{latest_hot_topics.LAST_POSTER_NAME}</a></span> </td>
+          </tr>
+          <!-- END latest_hot_topics -->
+        </table>
+            
+   </div>
+   <div class="center_recent-content" id="center_recent-3">
+        <h5><strong>{L_RECENT_ANN}</strong></h5>
+    
+        <table class="tablebg" cellspacing="1" width="100%">
+          <tr class="cat">
+            <td>{L_POSTED_BY}&nbsp;</td>
+            <td>{L_TOPIC_TITLE}&nbsp;</td>
+            <td>{L_COMMENTS}&nbsp;</td>
+            <td>{L_TOPIC_VIEWS}&nbsp;</td>
+            <td>{L_LAST_REPLIED}&nbsp;</td>
+          </tr>
+          <!-- BEGIN latest_announcments -->
+          <tr class="row1">
+            <td class="<!-- IF latest_announcments.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><img src="{T_THEME_PATH}/images/arrow_user_select.gif" alt="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" title="{L_ON}&nbsp;{latest_topics.TOPIC_TIME}" height="10" width="10" name="latest_topics1" /> <span class="gensmall"><a href="{latest_announcments.U_USERNAME}" title="{L_ON}&nbsp;{latest_announcments.TOPIC_TIME}">{latest_announcments.USERNAME}</a></span></td>
+            <td class="<!-- IF latest_announcments.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">{latest_announcments.MINI_POST_IMG}<a onmouseover="show_preview('{L_POSTED}: {latest_announcments.FIRST_POST_TIME}', '{latest_announcments.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{latest_announcments.U_VIEW_TOPIC}" title="{latest_announcments.FULL_TITLE}"><span class="center_recent-topictitle">{latest_announcments.TITLE}</span></a></td>
+            <td class="<!-- IF latest_announcments.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_announcments.OPEN} <a href="{latest_announcments.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{latest_announcments.REPLIES}</a> {latest_announcments.CLOSE} </td>
+            <td class="<!-- IF latest_announcments.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center">{latest_announcments.OPEN} {latest_announcments.TOPIC_VIEWS} {latest_announcments.CLOSE} </td>
+            <td class="<!-- IF latest_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><span class="gensmall">{L_BY}&nbsp;<a href="{latest_announcments.U_LAST_POSTER_NAME}" title="{L_ON}&nbsp;{latest_announcments.LAST_POST_TIME}">{latest_announcments.LAST_POSTER_NAME}</a></span> </td>
+          </tr>
+          <!-- END latest_announcments -->
+        </table>
+
+   </div>
+ <!-- tab containers -->
+</div>

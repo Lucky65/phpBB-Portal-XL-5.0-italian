@@ -1,0 +1,7 @@
+Subject: Buon Compleanno {USERNAME}! 
+
+Dear {USERNAME},
+
+Ti facciamo i nostri migliori auguri per il tuo compleanno, speriamo sia per te un giorno memorabile !!
+
+{EMAIL_SIG}

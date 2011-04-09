@@ -1,0 +1,99 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th>{L_POLL}</td>
+</tr> -->
+<tr>
+	<td class="row1" align="center">
+
+<!-- IF S_HAS_POLL -->
+    <!-- BEGIN poll -->
+        <!-- IF poll.S_CAN_VOTE --><form method="post" action="{poll.S_POLL_ACTION}"><!-- ENDIF -->
+  
+   <table cellspacing="0" cellpadding="2" width="100%" align="center">
+    <tr>
+      <td align="center"><h4>{poll.POLL_QUESTION}</h4><br />
+        <span class="gensmall">{poll.L_POLL_LENGTH}<!-- IF poll.S_CAN_VOTE and poll.L_POLL_LENGTH --><br /><!-- ENDIF -->
+        <!-- IF poll.S_CAN_VOTE -->{poll.L_MAX_VOTES}<!-- ENDIF --></span></td>
+    </tr>
+    
+    <!-- IF poll.S_POLL_HAS_OPTIONS -->
+    <!-- BEGIN poll_option -->
+    <tr>
+      <td class="row1">
+        <div class="<!-- IF poll_option.POLL_OPTION_VOTED -->voted<!-- ENDIF -->"<!-- IF poll_option.POLL_OPTION_VOTED --> title="{L_POLL_VOTED_OPTION}"<!-- ENDIF -->>
+            <!-- IF poll.S_CAN_VOTE -->
+            <label for="poll_{poll.TOPIC_ID}_vote_{poll.poll_option.POLL_OPTION_ID}">{poll.poll_option.POLL_OPTION_CAPTION}</label>
+            <!-- ELSE -->
+            <span class="topictitle">{poll.poll_option.POLL_OPTION_CAPTION}</span>
+            <!-- ENDIF -->
+        </div>
+      </td>
+    </tr>
+        <!-- IF poll.S_CAN_VOTE -->
+    <tr>
+      <td class="row1">
+        <div style="width: auto; text-align: center; float: left;">
+          <!-- IF poll.S_IS_MULTI_CHOICE -->
+          <input type="checkbox" name="vote_id[]" id="poll_{poll.TOPIC_ID}_vote_{poll.poll_option.POLL_OPTION_ID}" value="{poll.poll_option.POLL_OPTION_ID}"
+          <!-- IF poll.poll_option.POLL_OPTION_VOTED --> checked="checked" <!-- ENDIF --> />
+          <!-- ELSE -->
+          <input type="radio" name="vote_id[]" id="poll_{poll.TOPIC_ID}_vote_{poll.poll_option.POLL_OPTION_ID}" value="{poll.poll_option.POLL_OPTION_ID}"
+          <!-- IF poll.poll_option.POLL_OPTION_VOTED --> checked="checked" <!-- ENDIF --> />
+          <!-- ENDIF -->
+        </div>
+      </td>
+    </tr>
+        <!-- ENDIF -->
+        <!-- IF poll.S_DISPLAY_RESULTS -->
+    <tr>
+      <td class="row1">
+        <div class="resultbar" style="width: 75%; float: right;">
+          <div class="<!-- IF poll_option.POLL_OPTION_PCT < 20 -->pollbar1<!-- ELSEIF poll_option.POLL_OPTION_PCT < 40 -->pollbar2<!-- ELSEIF poll_option.POLL_OPTION_PCT < 60 -->pollbar3<!-- ELSEIF poll_option.POLL_OPTION_PCT < 80 -->pollbar4<!-- ELSE -->pollbar5<!-- ENDIF -->" style="width:{poll_option.POLL_OPTION_PERCENT};">{poll_option.POLL_OPTION_RESULT}</div>
+          <!-- IF poll.poll_option.POLL_OPTION_RESULT == 0 -->
+          {L_NO_VOTES}
+          <!-- ELSE -->
+          {poll.poll_option.POLL_OPTION_PERCENT}
+          <!-- ENDIF -->
+        </div>
+      </td>
+    </tr>
+        <!-- ENDIF -->
+    <!-- END poll_option -->
+    <!-- ELSE -->
+    <tr>
+      <td class="row1" align="center">{L_NO_OPTIONS}<br /></td>
+    </tr>
+    <!-- ENDIF -->
+    
+    <!-- IF poll.S_DISPLAY_RESULTS -->
+    <tr>
+      <td class="row1" align="center">{L_TOTAL_VOTES} : {poll.TOTAL_VOTES}<br /></td>
+    </tr>
+    <!-- ENDIF -->
+    
+    <!-- IF poll.S_CAN_VOTE -->
+    <tr>
+      <td class="row1" align="center"><br /><input type="submit" name="update" value="{L_SUBMIT_VOTE}" class="button1" /></td>
+    </tr>
+    <!-- ENDIF -->
+    
+    <tr>
+      <td class="row1" align="center"><br /><a href="{poll.U_VIEW_TOPIC}">{L_VIEW_TOPIC}</a><hr /></td>
+    </tr>
+  </table>
+
+          <!-- IF poll.S_CAN_VOTE -->{poll.S_HIDDEN_FIELDS}<!-- ENDIF -->
+      <!-- IF poll.S_CAN_VOTE --></form><!-- ENDIF -->
+  <!-- END poll -->
+  
+  <!-- ELSE -->
+  <table cellspacing="0" cellpadding="2" border="0" align="center">
+    <tr>
+        <td class="row1"><strong>{L_NO_POLL}</strong></td>
+    </tr>
+  </table>
+  <!-- ENDIF -->
+		
+	</td>
+  </tr>
+</table>

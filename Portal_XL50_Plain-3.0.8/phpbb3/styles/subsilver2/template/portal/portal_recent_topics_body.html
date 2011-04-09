@@ -1,0 +1,79 @@
+<!-- INCLUDE overall_header.html -->
+	
+<form name="form" method="get" action="{FORM_ACTION}">
+<table cellspacing="1" width="100%" align="center">
+  <tr>
+        <td align="center"><h2>{L_RECENT_SHOWING_POSTS} <em>{STATUS}</em></h2></td>
+  </tr>
+  <tr>
+        <td align="center"><span class="gensmall">{L_RECENT_SELECT_MODE}
+                                                  [ <a href="{FORM_ACTION}?mode=today">{L_RECENT_TODAY}</a> ]
+                                                  [ <a href="{FORM_ACTION}?mode=yesterday">{L_RECENT_YESTERDAY}</a> ]
+                                                  [ <a href="{FORM_ACTION}?mode=last24">{L_RECENT_LAST24}</a> ]
+                                                  [ <a href="{FORM_ACTION}?mode=lastweek">{L_RECENT_LASTWEEK}</a> ]
+                                                  [ {L_RECENT_LAST} <input type="hidden" name="mode" value="lastXdays" />
+                                                                   <input type="text" name="amount_days" size="2" value="{AMOUNT_DAYS}" maxlength="3" class="post" />
+                                                                   <a href="javascript:document.form.submit();">{L_RECENT_DAYS}</a> ]</span></td>
+  </tr>
+</table></form>
+
+
+<table class="tablebg" cellspacing="1" width="100%">
+  <tr>
+        <th colspan="5">{L_RECENT_TOPICS}</th>
+  </tr>
+ <!-- BEGIN recent -->
+  <tr> 
+        <td class="<!-- IF recent.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="center" valign="middle">{recent.TOPIC_FOLDER_IMG}</td>
+        <td class="<!-- IF recent.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" nowrap="nowrap"><span class="topictitle">{recent.NEWEST_IMG}{recent.TOPIC_TYPE} <a onmouseover="show_preview('{L_POSTED}: {recent.FIRST_POST_TIME}', '{recent.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{recent.U_VIEW_TOPIC}" class="topictitle" title="{recent.TOPIC_TITLE}">{recent.TOPIC_TITLE}</a></span>
+                                                                                       <span class="gensmall">{recent.GOTO_PAGE}<br />{recent.FIRST_TIME}{recent.FIRST_AUTHOR}</span></td>
+        <td class="<!-- IF recent.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" width="10%" align="left"><span class="postdetails">&nbsp;{recent.L_REPLIES}: {recent.REPLIES}
+                                                                                                   <br />&nbsp;{recent.L_VIEWS}: {recent.VIEWS}</span></td>
+        <td class="<!-- IF recent.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" width="25%" nowrap="nowrap">&nbsp;<span class="genmed"><a href="{recent.U_VIEW_FORUM}" class="genmed">{recent.FORUM_NAME}</span></td>
+        <td class="<!-- IF recent.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" align="right" width="20%" nowrap="nowrap"><span class="gensmall"> {recent.LAST_URL} {recent.LAST_TIME}&nbsp;&nbsp;
+                                                                                                                             <br />{recent.LAST_AUTHOR}</span>&nbsp;&nbsp;</td>
+  </tr>
+  <!-- END recent -->
+  <!-- BEGIN switch_no_topics -->
+  <tr>
+        <td colspan="5" class="row1" align="center" height="28"><span class="gen"><i>{L_NO_TOPICS}</i></span></td>
+  </tr>
+  <!-- END switch_no_topics -->
+  <tr>
+    <td class="cat" colspan="5" height="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="1" /></td>
+  </tr>
+</table>
+    
+
+<table width="100%" cellspacing="1">
+  <tr>
+	<td valign="bottom">
+    
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+	<form id="attachment_index" method="post" action="{S_TOPIC_ACTION}">
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
+		<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
+	</fieldset>
+	</form>
+	<hr />
+<!-- ENDIF -->
+
+<!-- BEGIN recentpgn -->
+<!-- IF recentpgn.PAGINATION -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{recentpgn.TOTAL_RECENT_TOPICS}
+<!-- IF recentpgn.PAGE_NUMBER --><!-- IF recentpgn.PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{recentpgn.PAGE_NUMBER}</a> &bull; <span>{recentpgn.PAGINATION}</span><!-- ELSE --> &bull; {recentpgn.PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+<!-- END recentpgn -->
+
+    </td>
+  </tr>
+</table>
+
+	<br clear="all" />
+	<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+	<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,12 @@
+Oggetto: Report Bug assegnato su {SITENAME}
+
+Ciao {USERNAME},
+
+hai ricevuto questa email come notifica di un report bug su {SITENAME}.
+Per maggiori dettagli sul report segui questo link:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

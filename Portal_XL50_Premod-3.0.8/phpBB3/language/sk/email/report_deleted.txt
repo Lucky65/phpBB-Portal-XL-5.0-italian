@@ -1,0 +1,7 @@
+Subject: Hlásenie zmazané — "{PM_SUBJECT}"
+
+Vážený/á {USERNAME},
+
+Hlásenie o správe "{PM_SUBJECT}", které ste odeslali na "{SITENAME}" bolo odstranené moderátorom.
+
+{EMAIL_SIG}

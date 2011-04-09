@@ -1,0 +1,12 @@
+Subject: Foutive Download
+
+Hallo {USERNAME},
+
+Je hebt deze mail ontvangen, omdat {REPORTER} een download heeft gerapporteerd als foutief op {SITENAME}.
+Gebruik de onderstaande link om de foutive download te bekijken:
+
+---------------------------
+{U_DOWNLOAD}
+---------------------------
+
+{BOARD_EMAIL}

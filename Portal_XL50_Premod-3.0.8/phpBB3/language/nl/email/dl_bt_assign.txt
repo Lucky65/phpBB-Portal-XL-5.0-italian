@@ -1,0 +1,12 @@
+Subject: Bug rapport toegewezen op {SITENAME}
+
+Hallo {USERNAME},
+
+Je ontvangt deze mail, omdat een bug rapport op {SITENAME} is toegewezen aan jou om aan te werken.
+Je kunt de onderstaande link bezoeken voor meer informatie over dit bug rapport:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

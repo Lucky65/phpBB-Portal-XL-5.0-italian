@@ -1,0 +1,39 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<h2><a href="{U_VIDEO_CAT}">{CAT_NAME}</a></h2>
+
+<!-- IF CAT_DESC -->
+	<p>
+		<!-- NOTE: remove the style="display: none" when you want to have the cat description on the forum body -->
+		<!-- IF CAT_DESC --><span style="display: none">{CAT_DESC}<br /></span><!-- ENDIF -->
+	</p>
+<!-- ENDIF -->
+
+<!-- INCLUDE dm_video/catlist_body.html -->
+
+<!-- IF S_USER_LOGGED_IN -->
+	<div class="topic-actions">
+		<div class="buttons">
+			<div class="video-icon"><a href="{U_POST_NEW_VIDEO}" accesskey="n" title="{L_DMV_POST_VIDEO}"><span></span>{L_DMV_POST_VIDEO}</a></div>
+		</div>
+	</div>
+<!-- ENDIF -->
+
+<!-- IF PAGINATION or TOTAL_VIDEOS -->
+<div class="pagination">
+	{TOTAL_VIDEOS}<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+<div class="clear"></div>
+<br />
+
+<!-- INCLUDE dm_video/video_list_body.html -->
+<!-- IF PAGINATION or TOTAL_VIDEOS -->
+<div class="pagination">
+	{TOTAL_VIDEOS}<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+<div class="clear"></div>
+<br />
+
+<!-- INCLUDE dm_video/video_footer.html -->

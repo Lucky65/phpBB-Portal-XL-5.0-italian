@@ -1,0 +1,120 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<!-- IF S_EDIT_DISPLAY -->
+<h1>{L_TITLE_PARTNERS}</h1>
+<p>{L_TITLE_PARTNERS_EXPLAIN}</p>
+
+<form id="acp_portal_banners" method="post" action="{U_ACTION_SAVE_DISPLAY}">
+<fieldset>
+	<legend>{L_PORTAL_PARTNERS_DISPLAY}</legend>
+    
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_PARTNERS_DISPLAY_VALUE}</th>
+	</tr>
+	<tr>
+		<td class="row1" style="font-size:11px;" valign="top"><strong>{L_PORTAL_PARTNERS_DISPLAY_VALUE}:</strong><br /><span>{L_PORTAL_PARTNERS_DISPLAY_EXPLAIN}</span></td>    
+   		<td class="row2" style="font-size:11px;" valign="top" width="50%"><input name="portal_partners_display_value" type="text" id="portal_partners_display_value" value="{DISPLAY_VALUE}" size="10" /></td>
+	</tr>
+	<tr>		
+   		<td class="row2" style="font-size:11px;" colspan="2">  
+		<input type="hidden" name="action" value="savedisplay" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_CANCEL}" /></center>
+        </td>
+ 	</tr>
+	</table>
+</form>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF not S_EDIT_DISPLAY  -->	
+
+<h1>{L_TITLE_PARTNERS}</h1>
+<p>{L_TITLE_PARTNERS_EXPLAIN}</p>
+
+<fieldset>
+	<legend>{L_PORTAL_PARTNERS_DISPLAY}</legend>
+	<table cellspacing="1">
+	<tr>
+		<th><center>{L_PORTAL_PARTNERS_DISPLAY_VALUE}</center></th>
+		<th><center>{L_ACTION}</center></th>		
+	</tr>
+	<!-- BEGIN portal_partners_display_value -->
+	<tr>
+		<td style="text-align: center;">{portal_partners_display_value.DISPLAY_VALUE}</td>
+		<td style="text-align: center;"><a href="{portal_partners_display_value.U_EDIT_DISPLAY}">{ICON_EDIT}</a></td>
+	</tr>
+	<!-- END portal_partners_display_value -->
+	</table>
+</fieldset>
+<!-- ENDIF -->
+
+
+<!-- IF S_EDIT -->
+<form id="acp_portal_banners" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_PORTAL_PARTNERS_DISPLAY}</legend>
+
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_PARTNERS_EDIT_HEADER}</th>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_PARTNERS_URL}:</strong><br /><span>{L_PARTNERS_URL_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="partners_url" type="text" id="partners_url" value="{PARTNERS_URL}" size="80" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_PARTNERS_IMG}:</strong><br /><span>{L_PARTNERS_IMG_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="partners_img" type="text" id="partners_img" value="{PARTNERS_IMG}" size="80" /></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_PARTNERS_DESCRIPTION}:</strong><br /><span>{L_PARTNERS_DESCRIPTION_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="partners_description" type="text" id="partners_description" value="{PARTNERS_DESCRIPTION}" size="80" /></td>
+	</tr>
+	</table>
+
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_PARTNERS}" /></center>
+	</p>
+    
+	</fieldset>
+</form>
+
+<!-- ELSE -->
+
+  <form id="acp_portal_banners" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_PARTNERS_EXPLAIN}</legend>
+  
+	<table cellspacing="1">
+	<tr>
+		<th width="150">{L_PARTNERS_LOGO}</th>    
+		<th>{L_PARTNERS_URL}</th>
+		<th>{L_PARTNERS_DESCRIPTION}</th>		
+		<th>{L_ACTION}</th>
+	</tr>
+	<!-- BEGIN partners -->
+		<!-- IF partners.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align:center;">{partners.PARTNERS_IMG}</td>
+		<td style="text-align:left;"><a href="{partners.PARTNERS_URL}" target="_blank">{partners.PARTNERS_URL}</a></td>
+		<td style="text-align:left;">{partners.PARTNERS_DESCRIPTION}</td>		
+		<td style="text-align:center;"><a href="{partners.U_EDIT}">{ICON_EDIT}</a> <a href="{partners.U_DELETE}">{ICON_DELETE}</a></td>
+	</tr>
+	<!-- END partners -->
+	</table>
+
+	<p align="right">
+		<br><input class="button2" name="add" type="submit" value="{L_ADD_PARTNERS}" />
+	</p>
+</fieldset>
+</form>
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

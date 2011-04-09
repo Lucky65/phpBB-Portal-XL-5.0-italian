@@ -1,0 +1,71 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// -- User achievements 0.0.2
+$lang = array_merge($lang, array(
+	'ACHIEVE'            	=> 'Benutzerleistungen',
+	'40_POSTS'            	=> 'Erreichte 40 Beitr&auml;ge',
+	'80_POSTS'            	=> 'Erreichte 80 Beitr&auml;ge',
+	'160_POSTS'            	=> 'Erreichte 160 Beitr&auml;ge',
+	'240_POSTS'            	=> 'Erreichte 240 Beitr&auml;ge',
+	'480_POSTS'            	=> 'Erreichte 480 Beitr&auml;ge',
+	'600_POSTS'            	=> 'Erreichte 600 Beitr&auml;ge',
+	'1000_POSTS'         	=> 'Erreichte 1000 Beitr&auml;ge',
+	'2000_POSTS'         	=> 'Erreichte 2000 Beitr&auml;ge',
+	'3000_POSTS'         	=> 'Erreichte &uuml;ber 3000 Beitr&auml;ge',
+	'TOPIC_VIEWS_500'      	=> 'Machte ein Thema mit &uuml;ber 500 Sichtungen',
+	'TOPIC_VIEWS_1000'      => 'Machte ein Thema mit &uuml;ber 1000 Sichtungen',
+	'TOPIC_VIEWS_10000'     => 'Machte ein Thema mit &uuml;ber 10000 Sichtungen',
+	'TOPIC_REPLIES_25'      => 'Machte ein Thema mit &uuml;ber 25 Antworten',
+	'TOPIC_REPLIES_50'      => 'Machte ein Thema mit &uuml;ber 50 Antworten',
+	'TOPIC_REPLIES_100'     => 'Machte ein Thema mit &uuml;ber 100 Antworten',
+	'TOPIC_REPLIES_500'     => 'Machte ein Thema mit &uuml;ber 500 Antworten',
+	'HAS_ATTACHED'         	=> 'Lud eine Datei hoch',
+	'HAS_POLL'            	=> 'Machte eine Abstimmung',
+	'UP_AVATAR'            	=> 'Besitzt einen Avatar',
+	'FRIEND_5'            	=> 'Erreichte 5 Freunde',
+	'FRIEND_10'            	=> 'Erreichte 10 Freunde',
+	'FRIEND_20'            	=> 'Erreichte 20 Freunde',
+	'FRIEND_50'            	=> 'Erreichte 50 Freunde',
+	'JOIN_30'            	=> 'War mindestens f&uuml;r 30 Tag',
+	'JOIN_60'            	=> 'War mindestens f&uuml;r 60 Tag',
+	'JOIN_365'            	=> 'War mindestens f&uuml;r ein Jahr',
+	'POST_PER_DAY_5'      	=> 'Postete 5+ mal am Tag',
+	'POST_PER_DAY_10'      	=> 'Postete 10+ mal am Tag',
+	'POST_PER_DAY_20'      	=> 'Postete 20+ mal am Tag',
+	'VOTED_POLL'         	=> 'W&auml;hlte bei einer Abstimmung',
+	'CREATED_TOPIC_10'      => 'Erstellte 10 Themen',
+	'CREATED_TOPIC_20'      => 'Erstellte 20 Themen',
+	'CREATED_TOPIC_50'      => 'Erstellte 50 Themen',
+	'TOTAL_REACH'         	=> 'total erreicht',
+	'TROPHY'            	=> 'Leistungstroph&auml;en',
+	'TOTAL_POST_REACH'      => 'Total Betragsziele erreicht :',
+	'TOPIC_CREATE'         	=> 'Themen Erstellungsziele erreicht :',
+	'TOPIC_VIEW'         	=> 'Themen Betrachtungsziele erreicht :',
+	'TOPIC_REPLIES'         => 'Themen Antwortziele erreicht :',
+	'RANDOM_GOALS'         	=> 'Total Wahlweiseziele erreicht :',
+	'MEMBER_GOALS'         	=> 'Total Mitgliederziele erreicht :',
+	'FRIEND_GOALS'         	=> 'Total Freundeziele erreicht :',
+	'JOIN_GOALS'         	=> 'Total Beitr&auml;ge pro Tag Ziele erreicht :',
+	'NONE_YET'            	=> '<strong>Dieser Benutzer erreichte nicht das Minimum bei 10 Zielen um eine Troph&auml;e zu erreichen!</strong>',
+ ));
+
+// Friend list on member view by DaMysterious
+$lang = array_merge($lang, array(
+	'LIST_FRIEND'     		=> '1 friend',
+	'LIST_FRIENDS'			=> '%d friends',
+	'FRIEND_LIST'			=> 'Friend list',
+	'FRIEND_AVATAR'			=> 'Avatar',
+	'FRIEND_COUNTRY'		=> 'Country',
+	'ONLINE_FRIENDS'		=> 'Friends on-line',
+	'OFFLINE_FRIENDS'		=> 'Friends off-line',
+	'VIEW_ALL'				=> 'View all',
+	'NO_FRIEND'				=> 'No user selected!',
+	'TOTAL_FRIENDS'			=> 'Total friends',
+));

@@ -1,0 +1,12 @@
+Subject: Ein Event wurde im Kalender verändert
+
+Lieber {USERNAME},
+
+Das Event "{EVENT_SUBJECT}" wurde im Kalender bearbeitet.
+Um das Event zu sehen, besuche bitte folgenden Link:
+{U_EVENT}
+
+Wenn Du nicht mehr über neue Events im Kalender informiert werden möchtest, klicke bitte folgenden Link:
+{U_UNWATCH_CALENDAR}
+
+{EMAIL_SIG}

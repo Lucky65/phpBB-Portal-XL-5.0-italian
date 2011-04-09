@@ -1,0 +1,109 @@
+<!-- BEGIN news_index_row -->
+
+<!-- IF news_index_row.S_NO_TOPICS -->
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="2">{L_NO_NEWS}</td>
+</tr>-->  
+  <tr class="row1">
+    <td valign="top" align="center"><span class="gensmall"><strong>{L_NO_NEWS}</strong></span></td>
+  </tr>
+</table>
+<br clear="all" />
+<!-- ELSE -->	
+
+<b class="news1_top"></b><b class="news2_top"></b><b class="news3_top"></b><b class="news4_top"></b>
+	<div class="news_head">
+    
+	   <a name="newspage"></a><a name="newstop"></a>
+       <a name="newstop={news_index_row.NEWS_ID}"></a>
+       <a name="news={news_index_row.NEWS_ID}#newstop={news_index_row.NEWS_ID}"></a>
+       
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td align="{S_CONTENT_FLOW_BEGIN}" class="topictitle"><h4><!-- IF news_index_row.S_UNREAD_INFO --><a href="{news_index_row.U_VIEW_UNREAD}">{NEWEST_POST_IMG}</a><!-- ELSE --><a href="{news_index_row.U_LAST_COMMENTS}">{READ_POST_IMG}</a><!-- ENDIF --> {news_index_row.ATTACH_ICON_IMG} <!-- IF news_index_row.S_POLL --><strong>{L_POLL}: </strong><!-- ENDIF --><!-- IF news_index_row.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{news_index_row.TOPIC_ICON_IMG}" width="{news_index_row.TOPIC_ICON_IMG_WIDTH}" height="{news_index_row.TOPIC_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="{news_index_row.U_VIEW_COMMENTS}"><strong>{news_index_row.TITLE}</strong></a></h4></td>
+        </tr>
+      </table>
+      
+	</div>
+<div class="news_box">
+    <div>
+
+<table class="tablebg" cellspacing="1" width="100%">
+  <!--<tr>
+	<th colspan="2">{L_NEWS}</td>
+</tr>-->
+  <tr>
+    <td class="row2" valign="middle" align="center" height="16"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr class="row1">
+          <td valign="top" align="{S_CONTENT_FLOW_BEGIN}">
+		    <div class="leftside" style="float: left;"> <span class="gensmall">{L_POSTED_BY}: {news_index_row.IMG_POSTER_ICON}&nbsp;<strong><a href="{news_index_row.U_USER_PROFILE}">{news_index_row.POSTER}</a></strong>
+            <!-- IF news_index_row.FORUM_NAME --><br />{L_FORUM}: <strong><a href="{news_index_row.U_VIEWFORUM}">{news_index_row.FORUM_NAME}</a></strong><!-- ELSE --> &nbsp;&bull;&nbsp; {L_IMPORTANT_NEWS}<!-- ENDIF --></span> </div>
+      		<div class="rightside" style="float: right;"> <span class="gensmall"><a href="{news_index_row.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{news_index_row.MINI_POST_IMG}</a>{news_index_row.TIME}</span> </div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td class="row1" valign="top" width="100%"><table width="100%" cellpadding="2" cellspacing="1" border="0">
+        <tr>
+          <td align="{S_CONTENT_FLOW_BEGIN}" valign="top" class="genmed">
+          
+			<table width="100%" cellspacing="1">
+				<tr valign="middle">
+					<td class="row1" align="center"><a href="{news_index_row.U_VIEW_COMMENTS}" title="{news_index_row.TITLE}">{news_index_row.TOPIC_FOLDER_IMG}</a></td>
+				</tr>
+			</table>
+          
+          </td>
+          <td align="{S_CONTENT_FLOW_BEGIN}" valign="top" width="100%" class="genmed">
+          <div style="margin:5px;">{news_index_row.TEXT}</div>
+              
+            <!-- IF news_index_row.S_HAS_ATTACHMENTS -->
+            <br style="clear: both" />
+                <div class="attachwrapper"><div class="attachtitle">{L_ATTACHMENTS}:</div>
+                <!-- BEGIN attachment -->
+                <div class="attachcontent">{news_index_row.attachment.DISPLAY_ATTACHMENT}</div>
+                <!-- END attachment -->
+                </div>
+            <!-- ENDIF -->
+            <!-- IF news_index_row.S_DISPLAY_NOTICE -->
+              <div class="rules">{L_DOWNLOAD_NOTICE}</div>
+            <!-- ENDIF -->
+            <br style="clear: both" />
+
+          </td>
+        </tr>
+      </table></td>
+  <tr>
+    <td class="row2" valign="middle" align="center" height="16"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr class="row1">
+          <td valign="top"><div class="rightside" style="float: right;"> <span class="gensmall"><a href="#wrap" title="{L_BACK_TO_TOP}"><img src="{T_THEME_PATH}/images/top.gif" width="11" height="11" alt="{L_BACK_TO_TOP}" /></a></span> </div>
+            <div class="leftside" style="float: left;"> <span class="gensmall">{news_index_row.OPEN}<a href="{news_index_row.U_READ_FULL}">{news_index_row.L_READ_FULL}</a>{news_index_row.CLOSE} &nbsp;<a href="{news_index_row.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}">{L_COMMENTS}: {news_index_row.REPLIES}</a> &nbsp;&bull;&nbsp; <a href="{news_index_row.U_POST_COMMENT}" title="{L_POST_REPLY}">{L_POST_REPLY}</a> &nbsp;&bull;&nbsp; {L_TOPIC_VIEWS}: {news_index_row.TOPIC_VIEWS}</span> </div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+    
+    </div>
+</div>
+<b class="news4_bottom"></b><b class="news3_bottom"></b><b class="news2_bottom"></b><b class="news1_top"></b>
+
+<!-- ENDIF -->
+<!-- IF news_index_row.S_NOT_LAST --><br style="clear: both;" /><!-- ENDIF -->
+<!-- END news_index_row --><br style="clear: both;" />
+
+<table width="100%" cellspacing="1">
+  <tr>
+	<td valign="bottom">
+
+<!-- IF NEWS_PAGE_NUMBER -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{L_TOTAL_NEWS} {NEWS_TOTAL_NEWS}
+<!-- IF NEWS_PAGINATION --> &bull; {NEWS_PAGE_NUMBER} 
+<p><span>{NEWS_PAGINATION}</span><!-- ELSE --> &bull; {NEWS_PAGE_NUMBER}<!-- ENDIF --></p>
+</div>
+<!-- ENDIF -->
+
+    </td>
+  </tr>
+</table>

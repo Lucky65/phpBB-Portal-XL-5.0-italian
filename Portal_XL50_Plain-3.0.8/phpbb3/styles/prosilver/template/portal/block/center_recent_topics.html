@@ -1,0 +1,67 @@
+<table width="100%" class="tablebg" cellspacing="1">
+  <tr height="18">
+    <th width="15">&nbsp;</th>
+    <th width="250">{L_TOPIC_TITLE}&nbsp;</th>
+    <th width="250">{L_LAST_REPLIED}&nbsp;</th>
+    <th width="50">{L_FORUM}&nbsp;</th>
+  </tr>
+  <!-- BEGIN recent_topics -->
+  <tr>
+    <td width="15" valign="middle" align="center" class="<!-- IF recent_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+    
+          <table width="100%" border="0" cellspacing="0">
+            <tr>
+              <td width="100%">
+                <!-- IF recent_topics.TOPIC_ICON_IMG -->
+                <img src="{T_ICONS_PATH}{recent_topics.TOPIC_ICON_IMG}" height="{recent_topics.TOPIC_ICON_IMG_HEIGHT}" width="{recent_topics.TOPIC_ICON_IMG_WIDTH}" alt="" />&nbsp;
+                <!-- ELSE -->
+                <img src="{T_THEME_PATH}/images/spacer.gif" height="1" width="1" alt="" />&nbsp;
+                <!-- ENDIF -->
+              </td>
+            </tr>
+          </table>
+          
+    </td>
+    <td valign="top" class="<!-- IF recent_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+    
+        <table width="100%" border="0" cellspacing="0">
+            <tr>
+                <td>
+                <span class="gensmall">{recent_topics.MINI_POST_IMG}<a onmouseover="show_preview('{L_POSTED}: {recent_topics.FIRST_POST_TIME}', '{recent_topics.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{recent_topics.U_VIEW_TOPIC}" title="{L_VIEW_TOPIC}"><em><strong>{recent_topics.TITLE}</strong></em></a>
+                <br />{L_BY} <a href="{recent_topics.U_USERNAME}">{recent_topics.USERNAME}</a>
+                <br />{L_ON} {recent_topics.FIRST_POST_TIME}
+                <br />{L_TOPIC_VIEWS}:&nbsp;{recent_topics.TOPIC_VIEWS}</span>
+                </td>
+            </tr>
+        </table>
+    
+    </td>
+    <td valign="top" class="<!-- IF recent_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+    
+        <table width="100%" border="0" cellspacing="0">
+            <tr>
+                <td>
+                <span class="gensmall">{recent_topics.NEWEST_POST_IMG}<a href="{recent_topics.U_LAST_COMMENTS}" title="{L_VIEW_COMMENTS}"><em><strong>{recent_topics.LAST_TITLE}</strong></em></a>
+                <br />{L_BY} <a href="{recent_topics.U_LAST_POSTER_NAME}">{recent_topics.LAST_POSTER_NAME}</a>
+                <br />{L_ON} {recent_topics.LAST_POST_TIME}
+                <br />{L_COMMENTS}:&nbsp;{recent_topics.REPLIES}</span>
+                </td>
+            </tr>
+        </table>
+        
+    </td>
+    <td valign="middle" align="center" class="<!-- IF recent_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+    
+          <table width="100%" border="0" cellspacing="0">
+            <tr>
+              <td align="center"><a href="{recent_topics.U_FORUM}"><img src="{recent_topics.TOPIC_FOLDER_IMG_SRC}" alt="{recent_topics.FORUM_NAME}" title="{recent_topics.FORUM_NAME}" /></a></td>
+            </tr>
+          </table>
+          
+    </td>
+  </tr>
+  <tr class="<!-- IF recent_topics.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+    <td colspan="4" align="center"><!-- IF recent_topics.S_NOT_LAST --><hr align="center" width="80%" /><!-- ENDIF --></td>
+  </tr>
+  <!-- END recent_topics -->
+</table>

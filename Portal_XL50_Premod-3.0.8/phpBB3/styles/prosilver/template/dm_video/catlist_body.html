@@ -1,0 +1,48 @@
+<br />
+<!-- BEGIN catrow -->
+	<!-- IF catrow.S_FIRST_ROW -->
+		<div class="forabg">
+			<div class="inner"><span class="corners-top"><span></span></span>
+				<ul class="topiclist">
+					<li class="header">
+						<dl class="icon">
+							<dt><!-- IF CAT_NAME -->{CAT_NAME}<!-- ELSE -->{L_DMV_CAT_NAME}<!-- ENDIF --></dt>
+							<dd class="topics">{L_DMV_COUNT}</dd>
+							<dd class="lastpost"><span>{L_DMV_LAST_VIDEO}</span></dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="topiclist forums">
+	<!-- ENDIF -->
+					<li class="row">
+						<dl class="icon" style="background-image: url({catrow.CAT_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
+							<dt>
+								<!-- IF catrow.FORUM_IMAGE --><span class="forum-image">{catrow.FORUM_IMAGE}</span><!-- ENDIF -->
+								<a href="{catrow.U_DMV_CAT}" class="forumtitle">{catrow.DMV_CAT_NAME}</a><br />
+								{catrow.DMV_CAT_DESC}
+								<!-- IF forumrow.MODERATORS -->
+									<br /><strong>{forumrow.L_MODERATOR_STR}:</strong> {forumrow.MODERATORS}
+								<!-- ENDIF -->
+								<br /><br />
+								{catrow.SUBCATS}
+								<br /><br />
+							</dt>
+							<dd class="topics">{catrow.NUMBER_VIDEOS} <dfn>{L_TOPICS}</dfn></dd>
+							<dd class="lastpost">
+								<!-- IF catrow.LAST_VIDEO -->
+									&nbsp;{catrow.U_LAST_VIDEO}<br />
+									&nbsp;{catrow.LAST_POSTER_FULL}<br />
+									&nbsp;{catrow.LAST_VIDEO_TIME}
+								<!-- ELSE -->
+									<span style="font-weight: bold;">{L_DMV_NO_VIDEOS}</span>
+								<!-- ENDIF -->
+							</dd>
+						</dl>
+					</li>
+	<!-- IF catrow.S_LAST_ROW -->
+				</ul>
+				<span class="corners-bottom"><span></span></span>
+			</div>
+		</div>
+	<!-- ENDIF -->
+<!-- END catrow-->

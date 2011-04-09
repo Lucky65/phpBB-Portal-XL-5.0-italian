@@ -1,0 +1,124 @@
+<h1>{L_TRAFFIC}</h1>
+
+<form action="{S_PROFILE_ACTION_USER}" method="post" id="user_traffic">
+
+<fieldset>
+
+	<legend>{L_USER_EXPLAIN}</legend>
+
+	<dl>
+		<dt><label>{L_USERNAME}</label></dt>
+		<dd><input type="text" name="username" size="20" maxlength="32" value="" /></dd>
+	</dl>
+	<dl>
+		<dt><label>{L_USER_TITLE}</label></dt>
+		<dd><input type="text" name="user_traffic" size="20" maxlength="40" />&nbsp;{S_USER_SINGLE_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_FUNCTION}</label></dt>
+		<dd><label><input type="radio" class="radio" name="func" value="add" checked="checked"/>&nbsp;{L_ADD}</label><label><input type="radio" class="radio" name="func" value="set" />&nbsp;{L_SET}</label></dd>
+	</dl>
+
+</fieldset>
+
+<fieldset class="quick">
+	<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" class="button2" />
+	{S_FORM_TOKEN}
+</fieldset>
+
+</form>
+
+<form action="{S_PROFILE_ACTION_ALL}" method="post" id="all_traffic">
+
+<fieldset>
+
+	<legend>{L_ALL_USERS_EXPLAIN}</legend>
+
+	<dl>
+		<dt><label>{L_ALL_USERS_TITLE}</label></dt>
+		<dd><input type="text" name="all_traffic" size="20" maxlength="40" />&nbsp;{S_USER_ALL_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_FUNCTION}</label></dt>
+		<dd><label><input type="radio" class="radio" name="func" value="add" checked="checked"/>&nbsp;{L_ADD}</label><label><input type="radio" class="radio" name="func" value="set"/>&nbsp;{L_SET}</label></dd>
+	</dl>
+
+</fieldset>
+
+<fieldset class="quick">
+	<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" class="button2" />
+	{S_FORM_TOKEN}
+</fieldset>
+
+</form>
+
+<!-- IF S_GROUP_BLOCK -->
+<form action="{S_PROFILE_ACTION_GROUP}" method="post" id="group_traffic">
+
+<fieldset>
+
+	<legend>{L_USERGROUP_EXPLAIN}</legend>
+
+	<dl>
+		<dt><label>{L_USERGROUP}</label></dt>
+		<dd>{S_GROUP_SELECT}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_USERGROUP_TITLE}</label></dt>
+		<dd><input type="text" class="post" name="group_traffic" size="20" maxlength="40" />&nbsp;{S_USER_GROUP_RANGE}</dd>
+	</dl>
+	<dl>
+		<dt><label>{L_FUNCTION}</label></dt>
+		<dd><label><input type="radio" class="radio" name="func" value="add" checked="checked"/>&nbsp;{L_ADD}</label><label><input type="radio" class="radio" name="func" value="set"/>&nbsp;{L_SET}</label></dd>
+	</dl>
+
+</fieldset>
+
+<fieldset class="quick">
+	<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" class="button2" />
+	{S_FORM_TOKEN}
+</fieldset>
+
+</form>
+<!-- ENDIF -->
+
+<br />
+
+<h1>{L_CONFIGURATION_TITLE}</h1>
+
+<p>{L_CONFIGURATION_EXPLAIN}</p>
+
+<form action="{S_CONFIG_ACTION}" method="post" id="auto_traffic">
+
+<fieldset>
+
+	<legend>{L_USER_WITHOUT_GROUP}</legend>
+
+	<dl>
+		<dt><label>{L_USER_DL_AUTO_TRAFFIC}</label></dt>
+		<dd><input name="user_dl_auto_traffic" type="text" size="10" maxlength="50" value="{USER_DL_AUTO_TRAFFIC}" />&nbsp;{S_USER_DATA_RANGE}</dd>
+	</dl>
+
+</fieldset>
+
+<!-- IF S_GROUP_BLOCK -->
+<fieldset>
+
+	<legend>{L_GROUP_DL_AUTO_TRAFFIC}</legend>
+
+	<!-- BEGIN group_row -->
+	<dl>
+		<dt><label>{group_row.GROUP_NAME}</label></dt>
+		<dd><input name="group_dl_auto_traffic[{group_row.GROUP_ID}]" type="text" size="10" maxlength="50" value="{group_row.GROUP_DL_AUTO_TRAFFIC}" />&nbsp;{group_row.S_GROUP_DATA_RANGE}</dd>
+	</dl>
+	<!-- END group_row -->
+
+</fieldset>
+
+<fieldset class="quick">
+	<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" class="button2" />
+	{S_FORM_TOKEN}
+</fieldset>
+<!-- ENDIF -->
+
+</form>

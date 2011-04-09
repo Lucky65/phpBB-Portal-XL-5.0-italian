@@ -1,0 +1,56 @@
+<!-- INCLUDE install_header.html -->
+
+<!-- IF S_NOT_INSTALLED -->
+
+	<h1>{TITLE}</h1>
+
+	<p>{BODY}</p>
+
+<!-- ELSE -->
+
+	<form id="install_convert" method="post" action="{U_ACTION}">
+
+	<h1>{TITLE}</h1>
+
+	<p>{BODY}</p>
+    
+    <!-- IF .checks -->
+        <fieldset>
+    
+        <!-- BEGIN checks -->
+          <!-- IF checks.S_LEGEND -->
+            <fieldset>
+              <legend>{checks.LEGEND}</legend>
+              <!-- IF checks.LEGEND_EXPLAIN --><p>{checks.LEGEND_EXPLAIN}</p><!-- ENDIF -->
+              <!-- ELSE -->
+              <dl>
+                <dt>{checks.TITLE}<!-- IF checks.S_EXPLAIN --><br /><span class="explain">{checks.TITLE_EXPLAIN}</span><!-- ENDIF --></dt>
+                <dd>{checks.RESULT}</dd>
+              </dl>
+            </fieldset>
+          <!-- ENDIF -->
+        <!-- END checks -->
+    
+        </fieldset>
+    <!-- ENDIF -->
+
+	<!-- IF L_SUBMIT -->
+		<fieldset class="submit-buttons">
+			<!-- IF L_SUBMIT --><input class="button1" type="submit" id="submit" onclick="this.className = 'button1 disabled';" onsubmit="this.disabled = 'disabled';" name="submit" value="{L_SUBMIT}" /><!-- ENDIF -->
+		</fieldset>
+	<!-- ENDIF -->
+
+	<!-- IF .update_procedure -->
+	<hr />
+	<!-- ENDIF -->
+	
+	<!-- BEGIN update_procedure -->
+	<p><label>{update_procedure.TITLE}</label><span class="small">{update_procedure.BODY}</span></p>
+	<!-- END update_procedure -->
+
+	{S_HIDDEN_FIELDS}
+
+	</form>
+<!-- ENDIF -->
+
+<!-- INCLUDE install_footer.html -->

@@ -1,0 +1,78 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_RANKS_TITLE}</h2>
+   
+<table class="tablebg" width="100%" cellspacing="1">
+<thead>
+    <tr>
+      <th>{L_RANK_IMAGE}</th>
+      <th>{L_RANK_TITLE}</th>
+      <th>{L_RANK_MIN}</th>   
+    </tr>
+</thead>
+<tbody>
+<!-- IF .rank -->
+
+    <!-- BEGIN rank -->
+    <tr class="<!-- IF rank.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+        <td<!-- IF not rank.U_EDIT_RANK --> style="text-align:center;"<!-- ENDIF -->><!-- IF rank.U_EDIT_RANK --><a href="{rank.U_EDIT_RANK}" title="{L_RANK_EDIT}">{ICON_EDIT}</a> &nbsp; &nbsp; <!-- ENDIF --><!-- IF rank.RANK_IMAGE --><img src="{rank.RANK_IMAGE}" title="{rank.RANK_TITLE}" alt="{rank.RANK_TITLE}" /><!-- ENDIF --></td>
+        <td style="text-align:center;">{rank.RANK_TITLE}</td>
+        <td style="text-align:center;">{rank.RANK_MIN}</td>
+    </tr>
+    <!-- END rank -->
+   </tbody>
+</table>
+
+<!-- ELSE -->
+   </tbody>
+</table>
+
+<table class="tablebg" width="100%" cellspacing="1">
+   <tr>
+      <td class="row1"><div class="content"><strong>{L_NO_RANKS}</strong></div></td>
+  </tr>
+</table>
+<br />
+<!-- ENDIF -->
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+<form id="portal_smiles" method="post" action="{S_TOPIC_ACTION}">
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:left;"><!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF --></td>
+    <td style="text-align:right;"><!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF --></td>
+  </tr>
+</table>
+</form>
+<hr />
+<!-- ENDIF -->
+
+<!-- IF PAGINATION -->
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:right;">
+<div class="breadcrumbs" style="margin: 0px 0px 5px 0px;">
+ [ {TOTAL_RANKS} ]
+<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --><a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->
+    
+    </td>
+  </tr>
+</table>
+	
+<!-- INCLUDE breadcrumbs.html -->
+	
+	<br clear="all" />
+	<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+	<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

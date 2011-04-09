@@ -1,0 +1,12 @@
+Subject: Príspevok zamietnutý — “{POST_SUBJECT}”
+
+Vážený/á {USERNAME},
+
+Obdržali ste túto správu, pretože Váš príspevok “{POST_SUBJECT}” na “{SITENAME}” bol moderátorom, či administrátorom zamietnutý.
+
+Nasleduje dôvod zamietnutia Vášho príspevku:
+
+{REASON}
+
+
+{EMAIL_SIG}

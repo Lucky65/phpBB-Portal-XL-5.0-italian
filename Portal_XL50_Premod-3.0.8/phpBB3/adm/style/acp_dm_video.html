@@ -1,0 +1,113 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_MODE_SETUP -->
+<!-- ENDIF -->
+
+<!-- IF S_MODE_MANAGE -->
+<h1>{L_ACP_DMV_MANAGE_CATEGORIES}</h1>
+<p>{L_DMV_CAT_SELECT}</p>
+
+<p><strong>{NAVIGATION}<!-- IF U_EDIT --> [<a href="{U_EDIT}">{L_EDIT}</a> | <a href="{U_DELETE}">{L_DELETE}</a>]<!-- ENDIF --></strong></p>
+	<!-- IF .catrow -->
+		<table cellspacing="1">
+			<col class="row1" /><col class="row1" /><col class="row2" />
+			<tbody>
+			<!-- BEGIN catrow -->
+				<tr>
+					<td style="width: 5%; text-align: center;">{catrow.FOLDER_IMAGE}</td>
+					<td>
+						<strong><a href="{catrow.U_CAT}">{catrow.CAT_NAME}</a></strong>
+						<!-- IF catrow.CAT_DESCRIPTION --><br /><span>{catrow.CAT_DESCRIPTION}</span><!-- ENDIF -->
+						<!-- IF catrow.SUBCATS --><br /><br /><span>{L_DMV_SUB_CATS}: {catrow.SUBCATS}</span><!-- ENDIF -->
+					</td>
+					<td style="vertical-align: top; width: 100px; text-align: right; white-space: nowrap;">
+						<!-- IF catrow.S_FIRST_ROW && not catrow.S_LAST_ROW -->
+							{ICON_MOVE_UP_DISABLED}
+							<a href="{catrow.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a>
+						<!-- ELSEIF not catrow.S_FIRST_ROW && not catrow.S_LAST_ROW-->
+							<a href="{catrow.U_MOVE_UP}">{ICON_MOVE_UP}</a>
+							<a href="{catrow.U_MOVE_DOWN}">{ICON_MOVE_DOWN}</a>
+						<!-- ELSEIF catrow.S_LAST_ROW && not catrow.S_FIRST_ROW -->
+							<a href="{catrow.U_MOVE_UP}">{ICON_MOVE_UP}</a>
+							{ICON_MOVE_DOWN_DISABLED}
+						<!-- ELSE -->
+							{ICON_MOVE_UP_DISABLED}
+							{ICON_MOVE_DOWN_DISABLED}
+						<!-- ENDIF -->
+						<a href="{catrow.U_EDIT}">{ICON_EDIT}</a>
+						<a href="{catrow.U_DELETE}">{ICON_DELETE}</a>
+					</td>
+				</tr>
+			<!-- END catrow -->
+			</tbody>
+		</table>
+	<!-- ENDIF -->
+	<form id="dm_video" method="post" action="{S_ACTION}">
+		<fieldset class="quick">
+			<input class="button2" name="addforum" type="submit" value="{L_DMV_DM_VIDEO_ACP_CATSN}" />
+			{S_FORM_TOKEN}
+		</fieldset>
+	</form>
+<!-- ENDIF -->
+
+
+<!-- IF S_MODE_CREATE -->
+<h1>{L_DMV_DM_VIDEO_ACP_CATSN}</h1>
+<p>{L_DMV_CAT_NEW}</p>
+<br />
+<!-- ENDIF -->
+<!-- IF S_MODE_EDIT -->
+<h1>{L_DMV_DM_VIDEO_ACP_CATSE}</h1>
+<p>{L_DMV_CAT_EDIT}</p>
+<br />
+<!-- ENDIF -->
+<!-- IF S_MODE_CREATE or S_MODE_EDIT -->
+<form id="acp_dm_video" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend><!-- IF S_MODE_CREATE -->{L_DMV_DM_VIDEO_ACP_CATSN}<!-- ELSE -->{L_DMV_DM_VIDEO_ACP_CATSE}<!-- ENDIF --></legend>
+		<!-- IF ERROR_MSG -->
+			<div class="errorbox">
+				<h3>{L_WARNING}</h3>
+				<p>{ERROR_MSG}</p>
+			</div>
+		<!-- ENDIF -->
+		<dl>
+			<dt><label for="parent">{L_DMV_NEW_CAT_PARENT}:</label></dt>
+			<dd><select id="parent" name="parent_id"><option value="0"<!-- IF not S_ALBUM_PARENT_ID --> selected="selected"<!-- ENDIF -->>{L_DMV_NO_PARENT}</option>{S_PARENT_OPTIONS}</select></dd>
+		</dl>
+		<dl>
+			<dt><label for="cat_name">{L_DMV_NEW_CAT_NAME}:</label></dt>
+			<dd><input class="text" type="text" id="cat_name" value="{CAT_NAME}" name="cat_name" maxlength="255" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="cat_desc">{L_DMV_NEW_CAT_DESC}:</label><br /><span>{L_DMV_NEW_CAT_DESC_EXPLAIN}</span></dt>
+			<dd><textarea id="cat_desc" name="cat_desc" rows="5" cols="45">{CAT_DESC}</textarea></dd>
+		<dd><label><input type="checkbox" class="radio" name="desc_parse_bbcode"<!-- IF S_DESC_BBCODE_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_BBCODE}</label>
+			<label><input type="checkbox" class="radio" name="desc_parse_smilies"<!-- IF S_DESC_SMILIES_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_SMILIES}</label>
+			<label><input type="checkbox" class="radio" name="desc_parse_urls"<!-- IF S_DESC_URLS_CHECKED --> checked="checked"<!-- ENDIF --> /> {L_PARSE_URLS}</label></dd>
+		</dl>
+
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- ENDIF -->
+
+<!-- IF S_MODE_DELETE -->
+<form id="acp_dm_video" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_CONFIRM}</legend>
+		<dl>
+			{DM_VIDEO_DELETE}
+		</dl>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_YES}" />&nbsp;
+			<!-- <input class="button2" type="reset" id="reset" name="reset" value="{L_NO}" /> -->
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- ENDIF -->
+<!-- INCLUDE overall_footer.html -->

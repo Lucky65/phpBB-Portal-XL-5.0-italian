@@ -1,0 +1,49 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th style="text-align:left;" colspan="2">{L_ARCADE_GAME_STATS}</td>
+</tr>-->
+<tr>
+	<td class="row1" align="center">
+    
+    <!-- BEGIN high_scorerow_no -->
+    <table cellspacing="1" width="100%">
+      <tr>
+        <td class="row1" align="center"><span class="gensmall">{high_scorerow_no.LOGIN_VIEWARCADE}</span></td>
+      </tr>
+    </table>
+    <!-- END high_scorerow_no -->
+    
+    <!-- IF S_USER_STATS -->
+    <table cellspacing="1" width="100%">
+      <tr>
+          <th style="text-align: center;">{L_ARCADE_RANK}</th>
+          <th style="text-align: center;">{L_USERNAME}</th>
+          <th style="text-align: center;">{L_ARCADE_GAME}</th>
+          <th style="text-align: center;">{L_ARCADE_SCORE}</th>
+          <th style="text-align: center; width: 30%;">{L_ARCADE_COMMENT}</th>
+          <th style="text-align: center;">{L_ARCADE_DATE}</th>
+          <th style="text-align: center;">{L_ARCADE_CHAMPION_PLAYED}</th>
+          <th style="text-align: center;">{L_ARCADE_STATS_TOTAL}</th>
+      </tr>
+      <!-- BEGIN high_scorerow -->
+      <tr>
+      
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.POS}</td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.USERNAME}</td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;"><a href="{high_scorerow.U_GAME_PLAY}"><img src="{high_scorerow.GAME_IMAGE}" height="15" width="15" alt="{high_scorerow.GAME_NAME}" title="{high_scorerow.GAME_NAME}" /></a></td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.SCORE}</td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center; width: 30%;"><div style="overflow: auto; min-height: 3em; height:auto !important; height:3em;">{high_scorerow.COMMENT}</div></td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.DATE}</td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.TOTAL_PLAYS}</td>
+          <td class="<!-- IF high_scorerow.S_ROW_COUNT is even -->row2<!-- ELSE -->row1<!-- ENDIF -->" style="text-align: center;">{high_scorerow.TOTAL_TIME}</td>
+      </tr>
+      <!-- END high_scorerow -->
+    </table>
+    <!-- ENDIF -->
+        
+    </td>
+</tr>
+<tr>
+	<td class="row1" align="center"><a href="{U_ARCADE}" title="{L_ARCADE_EXPLAIN}">{L_ARCADE}</a></td>
+</tr>
+</table>

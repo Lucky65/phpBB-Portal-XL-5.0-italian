@@ -1,0 +1,53 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<form method="post" action="{U_ACTION}" />
+<input type="hidden" name="id" value="{ID}" />
+
+<!-- IF S_DMV_NEW_VIDEOS and U_ACP -->
+<div id="new_message" class="rules">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_INFORMATION}:</strong> <a href="{U_DMV_NEW_VIDEOS}">{L_DMV_NEW_VIDEOS}</a>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+<br />
+
+<!-- IF S_DMV_REPORTED_VIDEOS and U_ACP -->
+<div id="reported_message" class="rules">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<strong>{L_INFORMATION}:</strong> <a href="{U_DMV_REPORTED_VIDEOS}">{L_DMV_REPORTED_VIDEOS}</a>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- ENDIF -->
+<br />
+
+<p><a href="{U_TOPTEN_HITS}">{TOPTEN_HITS}</a> | <a href="{U_TOPTEN_RATE}">{TOPTEN_RATING}</a> <!-- IF S_RANDOM_EXIST -->| <a href="{U_SHOW_RANDOM}">{L_DMV_RANDOM_VIDEO}</a> <!-- ENDIF -->| <a href="{U_SHOW_ALL}">{L_DMV_ALL_VIDEOS}</a></p>
+
+<div class="forabg">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<ul class="topiclist">
+				<li class="header">
+					<dl>
+						<dd>{L_DMV_SEARCH}</dd>
+					</dl>
+				</li>
+	        </ul>
+			<ul class="topiclist forums">
+				<li>
+					<dl>
+						<dd style="width: 100%; text-align: center;">
+							<br />
+							<strong>&nbsp;&nbsp;{L_DMV_SEARCH_STRING}:&nbsp;&nbsp; </strong>
+							<input type="text" name="search_string" size="52" value="{VIDEO_TITLE}" />&nbsp;&nbsp;
+							<input class="button1" id="submit" name="submit" value="{L_GO}" type="submit" />&nbsp;<br /><br /></dd>
+					</dl>
+				</li>
+			</ul>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+
+<!-- INCLUDE dm_video/newest_body.html -->
+<!-- INCLUDE dm_video/catlist_body.html -->
+<!-- INCLUDE dm_video/video_footer.html -->

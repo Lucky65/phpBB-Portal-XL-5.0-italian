@@ -1,0 +1,72 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--	<tr>
+		<th>&nbsp;{L_USER_INFO}</span></th>
+	</tr>
+ -->	<tr class="row1">
+		<td>
+			<div align="center">
+				<h4><a href="{U_VIEW_PROFILE}"><!-- IF USER_COLOR --><span style="color: {USER_COLOR}; font-weight: bold;"><!-- ELSE --><span><!-- ENDIF -->{USERNAME}</span></a></h4><br />
+				<a href="{U_PROFILE}"><!-- IF USER_AVATAR -->{USER_AVATAR} <!-- ELSE -->{NO_USER_AVATAR}<!-- ENDIF --></a>
+				<!-- IF RANK_TITLE --><br /><span class="gensmall">{RANK_TITLE}</span><!-- ENDIF -->
+				<!-- IF RANK_IMG --><br />{RANK_IMG}<!-- ENDIF -->
+			</div><hr />
+		</td>
+	</tr>
+<tr>
+	<td class="row1">
+		<div align="center">{LAST_VISIT_DATE}.&nbsp;{S_TIMEZONE}</div><br />
+	</td>
+</tr>
+<!-- IF S_DISPLAY_SEARCH -->
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_NEW_SEARCH}'">&bull; <a href="{U_NEW_SEARCH}" title="{L_NEW_SEARCH}">{L_NEW_SEARCH}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SELF_SEARCH}'">&bull; <a href="{U_SELF_SEARCH}" title="{L_SELF_SEARCH}">{L_SELF_SEARCH}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UNANSWERED_SEARCH}'">&bull; <a href="{U_UNANSWERED_SEARCH}" title="{L_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_ACTIVE_TOPICS_SEARCH}'">&bull; <a href="{U_ACTIVE_TOPICS_SEARCH}" title="{L_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SEARCH_UNREAD}'"><!-- IF S_INC_UNREAD_LINK --><!-- IF S_EXISTS_UNREADS -->&bull; <a href="{U_SEARCH_UNREAD}" title="{L_VIEW_UNREADS}">{L_VIEW_UNREADS}</a><!-- ELSE --> &bull; <a href="{U_SEARCH_UNREAD}" title="{L_NO_UNREADS}">{L_NO_UNREADS}</a><!-- ENDIF --><!-- ENDIF --></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF S_DISPLAY_PM -->
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_PRIVATEMSGS}'">&bull; <a href="{U_PRIVATEMSGS}" title="{PRIVATE_MESSAGE_INFO}">{PRIVATE_MESSAGE_INFO}</a></td>
+</tr>
+<!-- ENDIF -->
+<tr>
+	<td class="row1">&nbsp;</td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UM_BOOKMARKS}'">&bull; <a href="{U_UM_BOOKMARKS}" title="{L_UM_BOOKMARKS}">{L_UM_BOOKMARKS}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UM_MAIN_SUBSCRIBED}'">&bull; <a href="{U_UM_MAIN_SUBSCRIBED}" title="{L_UM_MAIN_SUBSCRIBED}">{L_UM_MAIN_SUBSCRIBED}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_USERNAME}'">&bull; <a href="{U_USERNAME}" title="{L_READ_PROFILE}">{L_READ_PROFILE}</a></td>
+</tr>
+<tr>
+	<td class="row1">&nbsp;</td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_DELETE_COOKIES}'">&bull; <a href="{U_DELETE_COOKIES}" title="{L_DELETE_COOKIES}">{L_DELETE_COOKIES}</a></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_DELETE_COOKIES}'"><!-- IF not S_IS_BOT and U_MARK_FORUMS -->&bull; <a href="{U_MARK_FORUMS}" accesskey="m" title="{L_MARK_FORUMS_READ}">{L_MARK_FORUMS_READ}</a><!-- ENDIF --></td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_RULES}'">&bull; <a href="{U_RULES}" accesskey="m" title="{L_FORUM_RULES}">{L_FORUM_RULES}</a></td>
+</tr>
+<tr>
+	<td class="row1">&nbsp;</td>
+</tr>
+<tr>
+	<td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_LOGIN_LOGOUT}'" align="center"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></td>
+</tr>
+</table>

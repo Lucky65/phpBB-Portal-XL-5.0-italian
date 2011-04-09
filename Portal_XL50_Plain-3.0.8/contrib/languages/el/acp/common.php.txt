@@ -1,0 +1,198 @@
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+
+/*
+* PlusXL 5.0 related language definitions
+*/
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portal',
+   	'ACP_CAT_PORTAL'           				=> 'Portal',
+   	'ACP_PORTAL'           					=> 'Portal',
+   	'ACP_PORTAL_ADMIN'           			=> 'Γενικά',
+   	'ACP_PORTAL_INFO'           			=> 'Γενικά',
+  	'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Ανακοινώσεις',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'Νέα',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Πρόσφατα θέματα',
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Wordgraph',
+    'ACP_PORTAL_COLLUMN_WIDTH_INFO' 		=> 'Πλάτος στηλών',
+   	'ACP_PORTAL_SWITCHES_INFO'      		=> 'Block Διακόπτης ',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Συνημμένα',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Τελευταία μέλη',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Ψηφοφορίες',
+    'ACP_PORTAL_BOTS_INFO'                  => 'Επισκέψεις Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Κορυφαίοι Συγγραφείς',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Τυχαία Banners',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Καλώς ήρθατε',
+    'ACP_PORTAL_SHOUTBOX_INFO'				=> 'Παράθυρο Ομιλίας',
+    'ACP_PORTAL_MINICALENDAR_INFO'			=> 'Ημερολόγιο',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Καιρός',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Δημοσιεύσεις',
+	'ACP_PORTAL_MEDIA_INFO'                 => 'Media Player',
+    'ACP_PORTAL_GALLERY_INFO'               => 'Γκαλερί εικόνων',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Κυλιώμενο μήνυμα',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Διαχείριση Portal',
+
+	// PlusXL 5.0 portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Portal Blocks',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Portal Blocks',
+	'ACP_PORTAL_BLOCKS'						=> 'Portal Blocks',
+	'ACP_MANAGE_BLOCKS'						=> 'Διαχείριση Portal Blocks',
+
+	// PlusXL 5.0 index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Ευρετήριο Blocks',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Ευρετήριο Blocks',
+	  'ACP_PORTAL_INDEX_BLOCKS'				=> 'Ευρετήριο Blocks',
+	  'ACP_MANAGE_INDEX_BLOCKS'				=> 'Διαχείριση ευρετηρίου  Blocks',
+
+	// PlusXL 5.0 portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Μενού',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Μενού',
+	'ACP_PORTAL_MENUS'						=> 'Μενού',
+	'ACP_MANAGE_MENUS'						=> 'Διαχείριση Μενού',
+
+	// PlusXL 5.0 portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Παραθέσεις',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Παραθέσεις',
+	'ACP_PORTAL_QUOTES'						=> 'Παραθέσεις',
+	'ACP_MANAGE_QUOTES'						=> 'Διαχείριση παραθέσεων',
+
+	// PlusXL 5.0 portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Διαχείριση Banners',
+    'ACP_MANAGE_BANNERS'					=> 'Διαχείριση Banners 88x31',
+
+	// PlusXL 5.0 portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners οριζόντια',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners οριζόντια 400x60',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners οριζόντια',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Διαχείριση Banners 400x60',
+
+	// PlusXL 5.0 portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners κάθετα',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners κάθετα 130x600',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners κάθετα',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Διαχείριση Banners 130x600',
+
+	// PlusXL 5.0 portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Σύνδεσμοι',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Σύνδεσμοι',
+	'ACP_PORTAL_LINKS'							=> 'Σύνδεσμοι',
+	'ACP_MANAGE_LINKS'							=> 'Διαχείριση συνδέσμων',
+
+	// PlusXL 5.0 portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mods',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mods',
+	'ACP_PORTAL_MODS'							=> 'Mods',
+	'ACP_MANAGE_MODS'							=> 'Διαχείριση Mods',
+
+	// PlusXL 5.0 portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Διαφημίσεις Δ. Συζήτησης',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Διαφημίσεις  Δ. Συζήτησης',
+	'ACP_PORTAL_ADDS'							=> 'Διαφημίσεις Δ. Συζήτησης',
+	'ACP_MANAGE_ADDS'							=> 'Διαχείριση Διαφημίσεων Δ. Συζήτησης',
+
+	// PlusXL 5.0 portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Σελίδες Portal',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Σελίδες Portal',
+	'ACP_PORTAL_PAGES'							=> 'Σελίδες Portal',
+	'ACP_MANAGE_PAGES'							=> 'Διαχείριση Σελίδων Portal',
+
+	// PlusXL 5.0 portal filebase //
+   	'ACP_PORTAL_CAT_FILEBASE'           		=> 'Αρχεία Portal',
+   	'ACP_PORTAL_ADMIN_FILEBASE'         		=> 'Αρχεία Portal',
+	'ACP_PORTAL_FILEBASE'						=> 'Αρχεία Portal',
+	'ACP_MANAGE_FILEBASE'						=> 'Διαχείριση Αρχείων Portal',
+    'ACP_PORTAL_FILEBASE_ADMIN_SETTINGS'        => 'Ρυθμίσεις Αρχείων',
+    'ACP_PORTAL_FILEBASE_ADMIN_CATEGORYS'       => 'Κατηγορίες Αρχείων',
+    'ACP_PORTAL_FILEBASE_ADMIN_FILES'        	=> 'Αρχεία',
+    'ACP_PORTAL_FILEBASE_ADMIN_USERFIELDS'      => 'Έξτρα πεδία Αρχείων',
+	'ACP_FILEBASE'								=> 'Αρχεία',
+	'CATEGORYS'									=> 'Κατηγορίες',
+	'FILEBASE'									=> 'Αρχεία',
+	'FILES'										=> 'Αρχεία',
+	'USERFIELDS'								=> 'Έξτρα πεδία Αρχείων',
+
+	// PlusXL 5.0 portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Portal News Feeds',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Portal News Feeds',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Portal News Feeds',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Διαχείριση News Feeds',
+
+
+	// PlusXL 5.0 portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Portal Ακρώνυμα',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Portal Ακρώνυμα',
+	'ACP_PORTAL_ACRONYMS'						=> 'Portal Ακρώνυμα',
+	'ACP_MANAGE_ACRONYMS'						=> 'Διαχείριση Ακρωνύμων',
+
+	// PlusXL 5.0 portal acronyms //
+   	'ACP_PORTAL_CAT_KB'           				=> 'Portal Βάση Γνώσεων',
+   	'ACP_PORTAL_ADMIN_KB'         				=> 'Portal Βάση Γνώσεων',
+	'ACP_PORTAL_KB'								=> 'Portal Βάση Γνώσεων',
+	'ACP_MANAGE_KB'								=> 'Manage Knowledge Base',
+	'ACP_PORTAL_ADMIN_KB_MAIN'					=> 'KB Κύριες κατηγορίες',
+	'ACP_PORTAL_ADMIN_KB_SUB'					=> 'KB Υπό-κατηγορίες',
+
+
+	// PlusXL 5.0 portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Portal Imprint',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Portal Imprint',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Portal Imprint',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Manage Imprint',
+
+	// PlusXL 5.0p ortal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portal γενικά saved</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Portal ανακοινώσεις saved</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>Portal νέα αποθηκεύτηκαν</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Portal πρόσφατα θέματα saved</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Portal wordgraph saved</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Portal πλάτος στηλών  saved</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Portal paypal saved</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Portal αποθήκευση ανακοινώσεων</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Portal μέλη saved</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Portal αποθήκευση δημοψηφίσματος</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Portal επισκέψεις bots saved</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Portal κορυφαίοι συγγραφείς saved</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Portal τυχαίο
+
+
+ saved</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Portal καλώς ήρθατε saved</strong>',
+	'LOG_CONFIG_SHOUTBOX'			=> '<strong>Portal δωμάτιο συνομιλίας saved</strong>',
+	'LOG_CONFIG_MINICALENDAR'	    => '<strong>Portal ημερολόγιο saved</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Portal αποθήκευση καιρού</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Portal αποθήκευση sydication</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Portal κοινότητα/αποθήκευση προβολή θέματος ευρετήριο</strong>',
+	'LOG_CONFIG_OTHER'	    		=> '<strong>Portal άλλες ρυθμίσεις saved</strong>',
+ 	'LOG_CONFIG_MEDIAPLAYER'        => '<strong>Portal media player αποθήκευση</strong>',
+	'LOG_CONFIG_PICTUREGALLERY'     => '<strong>Portal αποθήκευση γκαλερί εικόνων</strong>',
+	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Portal κυλιώμενο μήνυμα αποθηκεύτηκε </strong>',
+
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>PlusXL 5.0 installed</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>PlusXL 5.0 uninstalled</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>PlusXL 5.0 datase update</strong>',
+));
+
+    // Animate Digits IP Tracking Counter
+    $lang = array_merge($lang, array(
+       'ACP_COUNTER_SETTINGS'   => 'Ρυθμίσεις μετρητή',
+       'COUNTER_STARTED'      => 'Εκκίνηση μετρητή',
+       'HITS_PER_DAY'         => 'Πατήματα ανά ημέρα',
+       'LOG_CONFIG_COUNTER'   => '<strong>Εναλλακτικές ρυθμίσεις μετρητή</strong>',
+       'LOG_RESET_COUNTER'      => '<strong>Επαναφορά μετρητή: αρχικός  χρόνος ημερομηνίας και τιμή πατημάτων </strong>',
+       'NUMBER_HITS'         => 'Αριθμός πατημάτων',
+       'RESET_COUNTER'         => 'Επαναφορά μετρητή',
+       'RESET_COUNTER_CONFIRM'   => 'Είστε βέβαιοι ότι εσείς επιθυμείτε να επαναφέρετε όλα τα στοιχεία του μετρητή?',
+       'RESET_COUNTER_EXPLAIN'   => 'Επαναφορά όλων των στοιχεία του μετρητή: αρχικός χρόνος ημερομηνίας και συνολικά πατήματα.',
+    ));

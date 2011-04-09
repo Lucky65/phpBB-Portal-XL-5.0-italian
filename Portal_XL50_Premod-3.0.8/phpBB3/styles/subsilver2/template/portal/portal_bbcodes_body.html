@@ -1,0 +1,113 @@
+<!-- DEFINE $PORTALXL = 'portal' -->
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_BBCODES_TITLE}</h2>
+   
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+         <div class="pagination" align="{S_CONTENT_FLOW_BEGIN}">
+            <strong style="font-size: 0.95em;">
+            <a href="{S_MODE_ACTION}&amp;first_char=">{L_ALL}</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=a#bbcodelist">A</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=b#bbcodelist">B</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=c#bbcodelist">C</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=d#bbcodelist">D</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=e#bbcodelist">E</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=f#bbcodelist">F</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=g#bbcodelist">G</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=h#bbcodelist">H</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=i#bbcodelist">I</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=j#bbcodelist">J</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=k#bbcodelist">K</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=l#bbcodelist">L</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=m#bbcodelist">M</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=n#bbcodelist">N</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=o#bbcodelist">O</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=p#bbcodelist">P</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=q#bbcodelist">Q</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=r#bbcodelist">R</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=s#bbcodelist">S</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=t#bbcodelist">T</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=u#bbcodelist">U</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=v#bbcodelist">V</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=w#bbcodelist">W</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=x#bbcodelist">X</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=y#bbcodelist">Y</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=z#bbcodelist">Z</a>&nbsp;
+            <a href="{S_MODE_ACTION}&amp;first_char=other">#</a>
+            </strong>
+         </div>
+    </td>
+    <td valign="top">
+         <!-- IF PAGINATION or TOTAL_BBCODES -->
+         <div class="pagination" align="{S_CONTENT_FLOW_END}">
+            [ {TOTAL_BBCODES} ]
+            <!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF -->
+         </div>
+         <!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+
+<table class="table1" cellspacing="1" id="bbcodelist" width="100%">
+<thead>
+    <tr>
+       <th class="table1" style="text-align:center;"><a href="{U_SORT_BBCODE_CODE}#bbcodelist">{L_BBCODE_CODE}</a></th>
+       <th class="table1" style="text-align:center;"><a href="{U_SORT_BBCODE_HELP}#bbcodelist">{L_BBCODE_HELP}</a></th>
+       <th class="table1" style="text-align:center;"><a href="{U_SORT_BBCODE_TPL}#bbcodelist">{L_BBCODE_TPL}</a></th>
+       <th class="table1" style="text-align:center;">{L_BBCODE_ICON}</th>
+       <th class="table1" style="text-align:center;">{L_BBCODE_DISPLAY}</th>
+    </tr>
+</thead>
+<tbody>
+<!-- IF .bbcodes -->
+
+    <!-- BEGIN bbcodes -->
+    <tr class="<!-- IF bbcodes.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+        <td style="text-align:center;"><textarea type="text" tabindex="1" cols="10%" wrap="soft" class="inputbox autowidth" style="overflow:hidden; height:100px; font-size:11px; border: 1px solid #999; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;" onclick="this.focus();this.select();" />{bbcodes.BBCODE_CODE}</textarea></td>
+        <td style="text-align:center;"><textarea type="text" tabindex="1" cols="20%" wrap="soft" class="inputbox autowidth" style="overflow:hidden; height:100px; font-size:11px; border: 1px solid #999; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;" onclick="this.focus();this.select();" />{bbcodes.BBCODE_HELP}</textarea></td>
+        <td style="text-align:center;"><textarea type="text" tabindex="1" cols="50%" wrap="soft" class="inputbox autowidth" style="height:100px; border: 1px solid #999; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;" onclick="this.focus();this.select();" />{bbcodes.BBCODE_TPL}</textarea></td>
+        <td style="text-align:center;">{bbcodes.BBCODE_ICON}</td>
+        <td style="text-align:center;">{bbcodes.BBCODE_DISPLAY}</td>
+    </tr>
+    <!-- END bbcodes -->
+</tbody>
+</table>
+
+<!-- ELSE -->
+   <tr class="row1">
+      <td colspan="5"><strong>{L_NO_BBCODES}</strong></td>
+   </tr>
+   </tbody>
+</table>
+<br />
+<!-- ENDIF -->
+
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:right;">
+
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+	<form id="portal_bbcodes" method="post" action="{S_TOPIC_ACTION}">
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
+		<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
+	</fieldset>
+	</form>
+	<hr />
+<!-- ENDIF -->
+
+<!-- IF PAGINATION -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+ [ {TOTAL_BBCODES} ]
+<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --><a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+    
+    </td>
+  </tr>
+</table>
+    
+<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+<!-- INCLUDE overall_footer.html -->

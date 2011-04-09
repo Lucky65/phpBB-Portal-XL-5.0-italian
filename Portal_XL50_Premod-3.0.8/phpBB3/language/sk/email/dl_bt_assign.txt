@@ -1,0 +1,12 @@
+Subject: Priradená je Správa o Chybe na "{SITENAME}"
+
+Ahoj {USERNAME},
+
+Dostal si tento meil nakoľko správa o chybe  bola priradená k "{SITENAME}".
+Pre viac detailov o tejto správe klikni na túto linku:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

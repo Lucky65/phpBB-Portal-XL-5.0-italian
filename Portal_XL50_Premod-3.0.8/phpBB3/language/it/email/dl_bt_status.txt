@@ -1,0 +1,16 @@
+Oggetto: Nuovo stato per Bug Report su {SITENAME}
+
+Ciao {USERNAME},
+
+hai ricevuto questa email come notifica sul cambiamento del bug report {REPORT_TITLE} su {SITENAME}.
+Nuovo stato: {STATUS}.
+
+{STATUS_TEXT}
+
+Per maggiori dettagli segui questo link:
+
+{U_BUG_REPORT}
+
+----------------------------
+
+{BOARD_EMAIL}

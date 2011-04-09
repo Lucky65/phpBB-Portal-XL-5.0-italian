@@ -1,0 +1,455 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+		'-12'	=> '[UTC - 12] Baker Island Time',
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+		'-19'	=> '[UTC - 199] Pluto Time',
+
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+		'14'	=> '[UTC + 14] Line Island Time',
+
+#
+#-----[ AFTER ADD ]---------------------------------------------
+#
+
+		'19'	=> '[UTC + 199] Mercury Time',
+
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Mods Database',	
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Click here to view full size of this image!',
+));
+
+// Event Calendar
+$lang = array_merge($lang, array(
+	'CALENDAR'		=> 'Calendar',
+	// minical short day names	
+	'mini_datetime'	=> array(
+		  'Su'		=> 'Su',
+		  'Mo'		=> 'Mo',
+		  'Tu'		=> 'Tu',
+		  'We'		=> 'We',
+		  'Th'		=> 'Th',
+		  'Fr'		=> 'Fr',
+		  'Sa'		=> 'Sa',
+	),
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Visit counter',
+	'COUNTER_STARTDATE' => 'Counted from %s',
+	'HITS_PER_DAY'		=> 'Hits per day',
+	'HITS_PER_HOUR'		=> 'Hits per hour',
+	'HITS_PER_MONTH'	=> 'Hits per month',
+	'HITS_PER_USER'		=> 'Hits per user',
+	'HITS_PER_WEEK'		=> 'Hits per week',
+	'HITS_PER_YEAR'		=> 'Hits per year',
+	'IP_TRACKING_NO' 	=> '[No IP Tracking]',
+	'IP_TRACKING_YES' 	=> '[IP Tracking]',
+));
+
+// Knowledge Base
+$lang = array_merge($lang, array(
+	'KNOWLEDGE_BASE'	=> 'Knowledge Base',
+	'KBASE'				=> 'Knowledge Base',
+));
+
+// Anti Bot Question
+$lang = array_merge($lang, array(
+	'AB_QUESTION_EXPLAIN'	=> 'For protection against spam, Answer the above question.',
+));
+
+// start Thank Post MOD
+$lang = array_merge($lang, array(
+	'REMOVE_THANKS'			=> 'Remove your thanks for ',
+	'THANK_POST1'			=> 'Thank ',
+	'THANK_POST2'			=> '\'s post',
+	'THANK_TEXT_1'			=> 'The following',
+	'THANK_TEXT_2'			=> 'user would like to thank',
+	'THANK_TEXT_2pl'		=> 'users would like to thank',
+	'THANK_GENDER_F'		=> 'for her post',
+	'THANK_GENDER_M'		=> 'for his post',
+	'THANK_GENDER_U'		=> 'for his or her post',
+	'RECEIVED'				=> 'Received',
+	'THANKS'				=> 'thanks',
+	'GIVEN'					=> 'Given',
+	'TP_UPDATED'			=> 'Your Thank Post MOD installation has been updated!',
+));
+// end Thank Post MOD
+
+// Posts per day
+$lang = array_merge($lang, array(
+	'POSTS_PER_DAY_OTHER'	=> 'Posts per day <strong>%.2f</strong>',
+	'POSTS_PER_DAY_ZERO'	=> 'Posts per day <strong>None</strong>',
+));
+
+// Announcements Centre
+$lang = array_merge($lang, array(
+	'ANNOUNCEMENT_TITLE_GUESTS'		=> 'Guest Announcements local',
+	'ANNOUNCEMENT_TITLE'			=> 'Site Announcements local',
+));
+
+// Portal FAQ
+$lang = array_merge($lang, array(
+	'FAQ_PORTAL'				=> 'Portal FAQ',
+	'FAQ_PORTAL_EXPLAIN'		=> 'Portal Frequently Asked Questions',
+));
+
+// Rules page
+$lang = array_merge($lang, array(
+	'RULES_PAGE'				=> 'Board Rules',
+	'RULES'						=> 'Rules',
+));
+
+// Similar Topics 1.0.0
+$lang = array_merge($lang, array(
+	'SIMILAR_TOPICS'			=> 'Similar topics',
+));
+
+/*
+ * Welcome PM on First Login (WPM)
+ * By DualFusion
+ */
+$lang = array_merge($lang, array(
+	'ACP_WELCOME_PM'		=> 'Welcome PM on First Login',
+	'LOG_CONFIG_WELCOME_PM'	=> '<strong>Altered Welcome PM settings</strong>',
+));
+/* End WPM */
+
+//-- mod : Contact board administration ------------------------------------------------------------
+//-- add
+$lang = array_merge($lang, array(
+	'CONTACT_BOARD_ADMIN'		=> 'Contact board administration',
+	'CONTACT_BOARD_ADMIN_SHORT'	=> 'Contact',
+));
+//-- fin mod : Contact board administration --------------------------------------------------------
+
+// start mod view or mark unread posts
+$lang = array_merge($lang, array(
+	'LOGIN_EXPLAIN_VIEWUNREADS'	=> 'You must be logged in to view your unread post list',
+	'MARK_PM_UNREAD'			=> 'Mark pm as unread',
+	'MARK_POST_UNREAD'			=> 'Mark post as unread',
+	'NO_UNREADS'				=> 'You have no unread posts',
+	'PM_MARKED_UNREAD'			=> 'Private message marked as unread',
+	'POST_MARKED_UNREAD'		=> 'Post marked as unread',
+	'RETURN_INBOX'				=> 'Return to pm inbox',
+	'VIEW_UNREAD_PMS'			=> 'View unread pms',
+	'VIEW_UNREADS'				=> 'View unread posts',
+));
+// end mod view or mark unread posts
+
+
+// Automatic DST 1.0.6
+$lang = array_merge($lang, array(
+	'AUTOMATIC'						=> 'Automatic',
+));
+
+// Character Countdown
+$lang = array_merge($lang, array(
+	'CHARACTERS_COUNT_DOWN'			=> 'Characters typed:',
+));
+
+// Toplist MOD Version 2.0.0-RC2
+$lang = array_merge($lang, array(
+	'TOPLIST_EDIT' 										=> 'Edit',
+	'TOPLIST_DELETE' 									=> 'Delete',
+	'TOPLIST_RANK' 										=> 'Rank',
+	'TOPLIST_SITE' 										=> 'Site',
+	'TOPLIST_HITS_IN' 									=> 'In',
+	'TOPLIST_HITS_OUT' 									=> 'Out',
+	'TOPLIST_HITS_IMG' 									=> 'Image',
+	'TOPLIST' 											=> 'Toplist',
+	'TOPLIST_SQL_ERROR' 								=> 'Error executing SQL query.',
+	'TOPLIST_EDIT_WEBSITE' 								=> 'Edit Website',
+	'TOPLIST_ADD_WEBSITE' 								=> 'Add Website',
+	'TOPLIST_NAME' 										=> 'Name:',
+	'TOPLIST_INFO' 										=> 'Info:',
+	'TOPLIST_SITE_URL' 									=>'Site URL:',
+	'TOPLIST_BANNER_URL' 								=> 'Banner URL:',
+	'TOPLIST_RESEND_HTML' 								=> 'E-mail me the HTML code again:',
+	'TOPLIST_DISPLAYS_IMAGES' 							=> 'Display Images:',
+	'TOPLIST_TOPLIST' 									=> 'Toplist',
+	'TOPLIST_NO_ID' 									=> 'No ID found!',
+	'TOPLIST_NO_AUTH' 									=> 'I\'m sorry but you are not authorized to do this.',
+	'TOPLIST_EDIT_DONE' 								=> 'Your site has ben updated.<br />It can take up to 60 secconds before the edits to the site are visible in the toplist due to caching.',
+	'TOPLIST_DID_RESEND' 								=> 'The html code for the toplist has been resend to your email as requested.',
+	'TOPLIST_SITE_VIEW' 								=> 'Site information',
+	'TOPLIST_PROCEED_TO_SITE' 							=> 'Continue to this site >>>',
+	'TOPLIST_EDIT_SITES' 								=> 'Edit sites',
+	'TOPLIST_ADD_SITES' 								=> 'Add site',
+	'TOPLIST_LOGIN_EXP' 								=> 'You must be loggedin to continue.',
+	'TOPLIST_ADD_DONE' 									=> 'Your site has been added.<br />The toplist code have have to place on your website, as stated below is also email to your email address.<br />Please place the following HTML code on your site so visitors can vote for you site!<br /><textarea name="textarea" cols="150" rows="2">%s</textarea>',
+	'TOPLIST_ADD_DONE_EMAIL' 							=> "Hello %1\$s,\n\nYour site '%2\$s' has been added to the toplist succesfully. Please place the following HTML code on your site so visitors can vote for you site!\n%3\$s\n%4\$s\n",
+	'TOPLIST_DELETE_DONE' 								=> "Your site has been successfully deleted.<br />It can take up to 60 secconds before the site has completely disapeard from the toplist due to caching.",
+	'TOPLIST_CONFIRM_DELETE' 							=> 'Delete site',
+	'TOPLIST_CONFIRM_COMMENT_DELETE' 					=> 'Are you sure you want to delete this comment?',
+	'TOPLIST_CONFIRM_DELETE_CONFIRM' 					=> 'Are you realy sure you want to delete this site? Once it has been deleted it can\'t be taken back!',
+	'TOPLIST_COMMENT_NOT_DELETED' 						=> 'Comment hasn\'t been deleted!',
+	'TOPLIST_COMMENT_DELETED' 							=> 'Comment has been deleted!',
+	'TOPLIST_NOT_RATED_YET' 							=> 'Not rated yet.',
+	'TOPLIST_RATING_COLL' 								=> 'Rating',
+	'TOPLIST_BAD_AUTH' 									=> 'Bad authentication hash!',
+	'TOPLIST_RATING_DONE' 								=> 'Rating successfull.',
+	'TOPLIST_ALLREADY_RATED' 							=> 'You allready rated this site.',
+	'TOPLIST_DISABLED' 									=> 'The board admin has disabled the Toplist on this board.',
+	'TOPLIST_DISABLED_RATING' 							=> 'The board admin has disabled rating of sites on the Toplist on this board.',
+	'TOPLIST_ADD_SITE' 									=> 'Add site',
+	'TOPLIST_PREVIEW' 									=> 'Preview (<a href="http://www.thumbshots.org" target="_blank" title="Thumbnails by Thumbshots.org">by Thumbshots.org</a>)',
+	'TOPLIST_RATE_THIS_SITE' 							=> 'Rate this site',
+	'TOPLIST_NO_SITES_IN_TOPLIST' 						=> 'No sites in toplist.',
+	'TOPLIST_NO_COMMENTS' 								=> 'No comments found. Feel free to post one!',
+	'TOPLIST_SITE_OF_THE_MOMENT' 						=> 'Site of the moment',
+	'TOPLIST_CHECK_CODE' 								=> 'Check code on site',
+	'TOPLIST_ADMIN_TOPLIST_SETTINGS' 					=> 'Toplist Settings',
+	'TOPLIST_ADMIN_ENABLE_TOPLIST' 						=> 'Enable Toplist',
+	'TOPLIST_ADMIN_ENABLE_TOPLIST_EXPLAIN' 				=> 'Enables or disables the entire toplist. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist">this page</a>. Make sure you\'ve checked it before enabling this mod!!!',
+	'TOPLIST_ADMIN_ENABLE_RATINGS' 						=> 'Enable Ratings',
+	'TOPLIST_ADMIN_ENABLE_RATINGS_EXPLAIN' 				=> 'Enables or disables the rating system within toplist. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Rating">this page</a>.',
+	'TOPLIST_ADMIN_ENABLE_COMMENTS' 					=> 'Enable Comments',
+	'TOPLIST_ADMIN_ENABLE_COMMENTS_EXPLAIN' 			=> 'Enables or disables the comments on sites. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Comments">this page</a>.',
+	'TOPLIST_ADMIN_ENABLE_SITE_THUMBNAILS' 				=> 'Enable Site Thumbnails',
+	'TOPLIST_ADMIN_ENABLE_SITE_THUMBNAILS_EXPLAIN' 		=> 'Enables or disables the thumbnails of sites. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Thumbnails">this page</a>.',
+	'TOPLIST_ADMIN_ENABLE_PAGENATION' 					=> 'Enable Pagenation',
+	'TOPLIST_ADMIN_ENABLE_PAGENATION_EXPLAIN' 			=> 'Enables or disables the pagenation to spread the list over more then 2 pages. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pagenation">this page</a>.',
+	'TOPLIST_ADMIN_SITES_PER_PAGE' 						=> 'Sites Per Page',
+	'TOPLIST_ADMIN_SITES_PER_PAGE_EXPLAIN' 				=> 'Number sites per page for pagenation. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pagenation">this page</a>.',
+	'TOPLIST_ADMIN_ANTI_FLOOD_WAIT_TIME' 				=> 'Anti-Flood wait time',
+	'TOPLIST_ADMIN_ANTI_FLOOD_WAIT_TIME_EXPLAIN' 		=> 'A visitor can\'t generate a \'hit\' within the number of secconds entered below when he allready generated one.<br /><i>Note: Entering text or 0 will result in disabling of the anti-flood mechanism!!! For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Anti_Flood">this page</a>.',
+	'TOPLIST_ADMIN_ENABLE_HITS_IN' 						=> 'Enable Hits In',
+	'TOPLIST_ADMIN_ENABLE_HITS_OUT' 					=> 'Enable Hits Out',
+	'TOPLIST_ADMIN_ENABLE_HITS_IMAGE' 					=> 'Enable Image Hits',
+	'TOPLIST_ADMIN_ENABLE_PR' 							=> 'Enable Google Pagerank',
+	'TOPLIST_ADMIN_ENABLE_REFRESH' 						=> 'Enable List Refresh',
+	'TOPLIST_ADMIN_ENABLE_REFRESH_EXPLAIN' 				=> 'Refresh the Toplist once in a while',
+	'TOPLIST_ADMIN_REFRESH_TIME' 						=> 'List Refresh Timer (In Secconds)',
+	'TOPLIST_ADMIN_REFRESH_TIME_EXPLAIN' 				=> 'Time in secconds between refreshes',
+	'TOPLIST_ADMIN_ENABLE_ALEXA' 						=> 'Enable Alexa Rank',
+	'TOPLIST_ADMIN_ENABLE_HITS_IN_EXPLAIN' 				=> 'Proccess and display in hits.',
+	'TOPLIST_ADMIN_ENABLE_HITS_OUT_EXPLAIN' 			=> 'Proccess and display out hits.',
+	'TOPLIST_ADMIN_ENABLE_HITS_IMAGE_EXPLAIN' 			=> 'Proccess and display image views.',
+	'TOPLIST_ADMIN_ENABLE_PR_EXPLAIN' 					=> 'Proccess Google Pagerank.',
+	'TOPLIST_ADMIN_ENABLE_ALEXA_EXPLAIN' 				=> 'Proccess Alexa Rank.',
+	'TOPLIST_ADMIN_BANNER_WIDTH' 						=> 'Maximum Banner Width',
+	'TOPLIST_ADMIN_BANNER_HEIGHT' 						=> 'Maximum Banner Height',
+	'TOPLIST_ADMIN_BANNER_RESIZE' 						=> 'Resize Banner',
+	'TOPLIST_ADMIN_BANNER_WIDTH_EXPLAIN' 				=> 'Maximum banner width if the banner is bigger then this value it will be resized or not displayed depending on the banner resize settings. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Banner_Resize">this page</a>.',
+	'TOPLIST_ADMIN_BANNER_HEIGHT_EXPLAIN' 				=> 'Maximum banner height if the banner is bigger then this value it will be resized or not displayed depending on the banner resize settings. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Banner_Resize">this page</a>.',
+	'TOPLIST_ADMIN_BANNER_RESIZE_EXPLAIN' 				=> 'Resize banner if the width or height of the banner is more then the maximum specified below. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Banner_Resize">this page</a>.',
+	'TOPLIST_ADMIN_IN_HITS_WEIGHT' 						=> 'In Hits Weight',
+	'TOPLIST_ADMIN_OUT_HITS_WEIGHT' 					=> 'Out Hits Weight',
+	'TOPLIST_ADMIN_IMG_HITS_WEIGHT' 					=> 'Image Shows Weight',
+	'TOPLIST_ADMIN_RATING_WEIGHT' 						=> 'Rating Weight',
+	'TOPLIST_ADMIN_PR_WEIGHT' 							=> 'Google Pagerank Weight',
+	'TOPLIST_ADMIN_ALEXA_WEIGHT' 						=> 'Alexa Rank Weight',
+	'TOPLIST_ADMIN_IN_HITS_WEIGHT_EXPLAIN' 				=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_OUT_HITS_WEIGHT_EXPLAIN' 			=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_IMG_HITS_WEIGHT_EXPLAIN' 			=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_RATING_WEIGHT_EXPLAIN' 				=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_PR_WEIGHT_EXPLAIN' 					=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_ALEXA_WEIGHT_EXPLAIN' 				=> 'Changing this settings allows you to tweak with the order in which sites are displayed. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_MOD_Weight">this page</a>.',
+	'TOPLIST_ADMIN_SITE_OF_THE_MOMENT' 					=> 'Site of the Moment',
+	'TOPLIST_ADMIN_SITE_OF_THE_MOMENT_LENGTH' 			=> 'Site of the Moment Length',
+	'TOPLIST_ADMIN_SITE_OF_THE_MOMENT_EXPLAIN' 			=> 'Shows a random picked website on top of the toplist featuring as Site of the Moment. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Site_of_the_Moment">this page</a>.',
+	'TOPLIST_ADMIN_SITE_OF_THE_MOMENT_LENGTH_EXPLAIN' 	=> 'Amount of time (in seconds) the site of the moment is shown.',
+	'TOPLIST_ADMIN_IMAGE_CACHE_DAYS' 					=> 'Image Cache Time (in days)',
+	'TOPLIST_ADMIN_IMAGE_CACHE_DAYS_EXPLAIN' 			=> 'The duration images are cached for. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Cache">this page</a>.',
+	'TOPLIST_ADMIN_CHECK_CODE' 							=> 'Check code on listed sites',
+	'TOPLIST_ADMIN_CHECK_CODE_EXPLAIN' 					=> 'Enables the remote checking of the toplist code on the listed site. This to ensure that the listed are giving you a link back. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Code_Check">this page</a>.',
+	'TOPLIST_ADMIN_CHECK_CODE_TIME' 					=> 'Time interval for check code cron',
+	'TOPLIST_ADMIN_CHECK_CODE_TIME_EXPLAIN' 			=> 'Enables the remote checking of the toplist code on the listed site. This to ensure that the listed are giving you a link back. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Code_Check">this page</a>.',
+	'TOPLIST_EDIT_ERROR' 								=> 'Make sure you fill this field out correctly.',
+	'TOPLIST_EDIT_ERROR_SITE' 							=> 'You cannot add the same site twice.',
+	'TOPLIST_ADMIN_ENABLE_CACHE' 						=> 'Enable SQL Cache',
+	'TOPLIST_ADMIN_ENABLE_CACHE_EXPLAIN' 				=> 'Caches several heavy SQL queries. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Cache">this page</a>',
+	'TOPLIST_ADMIN_ENABLE_CACHE_TIME' 					=> 'Enable SQL Cache Length',
+	'TOPLIST_ADMIN_ENABLE_CACHE_TIME_EXPLAIN' 			=> 'The length in secconds to cache a SQL query. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Cache">this page</a>',
+	'TOPLIST_ADMIN_ENABLE_CACHE_CLEAR' 					=> 'Enable SQL Cache Clear',
+	'TOPLIST_ADMIN_ENABLE_CACHE_CLEAR_EXPLAIN' 			=> 'When enabled clears cache for the updated tables. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Cache">this page</a>',
+    'ACP_TOPLIST' 										=> 'Toplist MOD',
+    'ACP_TOPLIST_SETTINGS' 								=> 'Configuration',
+    'ACP_TOPLIST_SETTINGS_EXPLAIN' 						=> 'Here you can determine the basic operation of your toplist, site it up wisely and beware of cheaters!',
+    'ACP_TOPLIST_POINTSMODS' 							=> 'Points Mods',
+    'ACP_TOPLIST_BASIC' 								=> 'Basic',
+    'ACP_TOPLIST_CACHE' 								=> 'Cache',
+    'ACP_TOPLIST_ANTICHEAT' 							=> 'Anti-Cheat',
+    'ACP_TOPLIST_WEIGHT' 								=> 'Weight',
+    'ACP_TOPLIST_SITEOFTHEMOMENT' 						=> 'Site of the Moment',
+    'ACP_TOPLIST_BANNERRESIZE' 							=> 'Banner Resize',
+    'TOPLIST_ADMIN_POINTS_ENABLE' 						=> 'Enabled Points Mod Support',
+    'TOPLIST_ADMIN_POINTS_PER_ADD' 						=> 'Amount per Added site',
+    'TOPLIST_ADMIN_POINTS_PER_EDIT' 					=> 'Amount per site Edit',
+    'TOPLIST_ADMIN_POINTS_PER_IMG_HIT_VISITOR' 			=> 'Amount per image hit (visitor)',
+    'TOPLIST_ADMIN_POINTS_PER_IN_HIT_VISITOR' 			=> 'Amount per in hit (visitor)',
+    'TOPLIST_ADMIN_POINTS_PER_OUT_HIT_VISITOR' 			=> 'Amount per out hit (visitor)',
+    'TOPLIST_ADMIN_POINTS_PER_IMG_HIT_OWNER' 			=> 'Amount per image hit (owner)',
+    'TOPLIST_ADMIN_POINTS_PER_IN_HIT_OWNER' 			=> 'Amount per in hit (owner)',
+    'TOPLIST_ADMIN_POINTS_PER_OUT_HIT_OWNER' 			=> 'Amount per out hit (owner)',
+    'TOPLIST_ADMIN_POINTS_PER_RATE' 					=> 'Amount per rate',
+    'TOPLIST_ADMIN_POINTS_PER_COMMENT' 					=> 'Amount per comment',
+    'TOPLIST_ADMIN_POINTS_ENABLE_EXPLAIN' 				=> 'Enables awarding of points for certain actions',
+    'TOPLIST_ADMIN_POINTS_PER_ADD_EXPLAIN' 				=> 'Adds the specified amount of points for adding a site. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_EDIT_EXPLAIN' 			=> 'Adds the specified amount of points for editing a site. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_IMG_HIT_VISITOR_EXPLAIN' 	=> 'Adds the specified amount of points per image hit for the specific site to the site visitor. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_IN_HIT_VISITOR_EXPLAIN' 	=> 'Adds the specified amount of points per in hit for the specific site to the site visitor. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_OUT_HIT_VISITOR_EXPLAIN' 	=> 'Adds the specified amount of points per out hit for the specific site to the site visitor. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_IMG_HIT_OWNER_EXPLAIN' 	=> 'Adds the specified amount of points per image hit for the specific site to the site owner. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_IN_HIT_OWNER_EXPLAIN' 	=> 'Adds the specified amount of points per in hit for the specific site to the site owner. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_OUT_HIT_OWNER_EXPLAIN' 	=> 'Adds the specified amount of points per out hit for the specific site to the site owner. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_RATE_EXPLAIN' 			=> 'Adds the specified amount of points for rating a site. Please note that points are only awarded the first time someone rates the specific site. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_POINTS_PER_COMMENT_EXPLAIN' 			=> 'Adds the specified amount of points for commenting a site. For more information check <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Pointsmods">this page</a>',
+    'TOPLIST_ADMIN_SITE_OF_THE_MOMENT_INDEX' 			=> 'Site of the Moment on the Index',
+    'TOPLIST_ADMIN_SITE_OF_THE_MOMENT_INDEX_EXPLAIN' 	=> 'Shows the site of the moment on the index of the forums. For more information check out <a href="http://wiki.wyrihaximus.net/wiki/PhpBB_Toplist_Site_of_the_Moment">this page</a>.',
+    'TOPLIST_VOTE_FOR_SITE' 							=> 'Vote for this site',
+    'TOPLIST_ADMIN_CREDITS' 							=> 'Show Credits',
+    'TOPLIST_ADMIN_CREDITS_EXPLAIN' 					=> 'Show credits on pages where the Toplist MOD has been loaded.',
+    'TOPLIST_VERSION_CHECK' 							=> 'Version Check',
+    'TOPLIST_VERSION_CHECK_EXPLAIN' 					=> 'Checks to see if the version of the Toplist MOD you are currently running is up to date.',
+    'TOPLIST_VERSION_UP_TO_DATE_ACP' 					=> 'Toplist MOD Up to date',
+    'TOPLIST_VERSION_NOT_UP_TO_DATE_ACP' 				=> 'Toplist MOD Up not to date',
+    'TOPLIST_CURRENT_VERSION' 							=> 'Current Installed Version',
+    'TOPLIST_LATEST_VERSION' 							=> 'Latest Available Version',
+    'TOPLIST_UPDATE_INSTRUCTIONS_INCOMPLETE' 			=> '
+		<h1>Incomplete update detected</h1>
+		<p>phpBB detected an incomplete automatic update. Please make sure you followed every step within the automatic update tool. Below you will find the link again, or go directly to your install directory.</p>
+	',
+    'TOPLIST_UPDATE_INSTRUCTIONS' 						=> '
+		<h1>Release announcement</h1>
+		<p>Please read <a href="%1$s" title="%1$s"><strong>the release announcement for the latest version</strong></a> before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
+		<br />
+		<h1>How to update your installation with the Automatic Update Package</h1>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
+		<ul style="margin-left: 20px; font-size: 1.1em;">
+			<li>Go to the <a href="%1$s" title="%1$s"><strong>the release announcement</strong></a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
+		</ul>
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%2$s" title="%2$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
+		<br />
+		You will then be guided through the update process. You will be notified once the update is complete.
+		</p>
+	',
+));
+
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN -> GYM Sitemaps
+$lang = array_merge($lang, array(
+	'GYM_LINKS' => 'Links',
+	'GYM_LINK' => 'Link',
+	'GYM_RSS_SLIDE_START' => 'Start scroller',
+	'GYM_RSS_SLIDE_STOP' => 'Stop scroller',
+	'GYM_RSS_SOURCE' => 'Source',
+));
+// www.phpBB-SEO.com SEO TOOLKIT END -> GYM Sitemaps
+// www.phpBB-SEO.com SEO TOOLKIT BEGIN - Related Topics
+$lang['RELATED_TOPICS'] = 'Related topics';
+// www.phpBB-SEO.com SEO TOOLKIT END - Related Topics
+
+// Radio Mod
+$lang = array_merge($lang, array(
+	'RADIO' => 'Radio',
+));
+
+
+// phpbb Calendar Version 0.1.0
+$lang = array_merge($lang, array(
+	'VIEWING_CALENDAR'			=> 'Viewing calendar',
+	'VIEWING_CALENDAR_DAY'		=> 'Viewing calendar day',
+	'VIEWING_CALENDAR_EVENT'	=> 'Viewing calendar event',
+	'VIEWING_CALENDAR_MONTH'	=> 'Viewing calendar month',
+	'VIEWING_CALENDAR_WEEK'		=> 'Viewing calendar week',
+	'EDITING_CALENDAR_EVENT'	=> 'Editing calendar event',
+	'CREATING_CALENDAR_EVENT'	=> 'Creating calendar event',
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'COUNTRY'			=> 'Country',
+	'COUNTRY_FLAGS'		=> 'Country flags',
+	'TOO_SHORT_FLAG'	=> 'You must select your country flag',
+	'GROUP_FLAG'		=> 'Group country flag',
+	'SELECT_FLAG'		=> 'Select your country flag',
+	'SORT_FLAG'			=> 'Country flag',
+	'USER_FLAG'			=> 'User country flag',
+));
+
+// -- Gender MOD 1.0.1
+$lang = array_merge($lang, array(
+	'GENDER'			=> 'Gender',
+	'GENDER_EXPLAIN'	=> 'Please enter your gender here.',
+	'GENDER_X'			=> 'None specified',
+	'GENDER_M'			=> 'Male',
+	'GENDER_F'			=> 'Female',
+));
+
+// Google Search
+$lang = array_merge($lang, array(
+	'SEARCH_GOOGLE' 	=> 'Google search?',
+));
+
+// phpBB AJAX Chat
+$lang = array_merge($lang, array(
+	'SHOUTBOX'		=> 'Chatbox',
+	'CHAT_LABEL'	=> 'In Chatbox',
+	'CHAT_TITLE'	=> 'Online',
+	'CHAT_WINDOW'	=> 'Chatbox Windowed',
+));
+
+// AdvancedBlockMOD 1.0.3						
+$lang = array_merge($lang, array(
+	'WRONG_TIMEZONE'	=> 'You entered an incorrect timezone. Please stay on earth!',
+));
+
+// Mod_Share_On by JesusADS
+$lang = array_merge($lang, array(
+	'SHARE_ON'				=> 'Share on ...',
+	'SHARE_FACEBOOK'		=> 'Facebook',
+	'SHARE_TWITTER'			=> 'Twitter',
+	'SHARE_ORKUT'			=> 'Orkut',
+	'SHARE_DIGG'			=> 'Digg',
+	'SHARE_MYSPACE'			=> 'MySpace',
+	'SHARE_DELICIOUS'		=> 'Delicious',
+	'SHARE_TECHNORATI'		=> 'Technorati',
+
+	'SHARE_ON_FACEBOOK'		=> 'Share on Facebook',
+	'SHARE_ON_TWITTER'		=> 'Share on Twitter',
+	'SHARE_ON_ORKUT'		=> 'Share on Orkut',
+	'SHARE_ON_DIGG'			=> 'Share on Digg',
+	'SHARE_ON_MYSPACE'		=> 'Share on MySpace',
+	'SHARE_ON_DELICIOUS'	=> 'Share on Delicious',
+	'SHARE_ON_TECHNORATI'	=> 'Share on Technorati',
+));
+
+// Toplist MOD 2.0.0RC3						
+$lang = array_merge($lang, array(
+    'VIEWING_TOPLIST'       => 'Viewing the Top Sites',
+));
+
+
+

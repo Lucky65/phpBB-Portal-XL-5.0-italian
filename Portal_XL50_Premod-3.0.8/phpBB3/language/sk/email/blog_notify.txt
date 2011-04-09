@@ -1,0 +1,10 @@
+Subject: {SUBJECT}
+
+Hello {TO_USERNAME},
+
+Toto je automaticky odoslaná správa z Uživateľského Blogu ktorá vám oznamuje, že {BY_USERNAME} v zadaní {NAME} cez {TYPE} pridal príspevok.  Ak chcete skontrolovať toto zadanie kliknite na nasledujúci odkaz:
+{U_VIEW}
+
+Ak si už viac neprajete dostávať oznámenia, kliknite na nasledujúci odkaz:
+
+{U_UNSUBSCRIBE}

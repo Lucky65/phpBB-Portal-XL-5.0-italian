@@ -1,0 +1,38 @@
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal mods database
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Mods Databank',	
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Klik hier om de volledige grootte van het plaatje te bekijken!',
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'COUNTER' 			=> 'Bezoeken teller',
+	'COUNTER_STARTDATE' => 'Telling vanaf %s',
+	'HITS_PER_DAY'		=> 'Bezoeken per dag',
+	'HITS_PER_HOUR'		=> 'Bezoeken per uur',
+	'HITS_PER_MONTH'	=> 'Bezoeken per maand',
+	'HITS_PER_USER'		=> 'Bezoeken per gebruiker',
+	'HITS_PER_WEEK'		=> 'Bezoeken per week',
+	'HITS_PER_YEAR'		=> 'Bezoeken per jaar',
+	'IP_TRACKING_NO' 	=> '[Geen IP controle]',
+	'IP_TRACKING_YES' 	=> '[IP controle]',
+));
+

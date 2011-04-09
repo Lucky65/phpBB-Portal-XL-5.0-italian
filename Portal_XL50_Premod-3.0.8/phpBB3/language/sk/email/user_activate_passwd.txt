@@ -1,0 +1,17 @@
+Subject: Aktivácia nového hesla
+
+Vážený/á {USERNAME}
+
+Obdržali ste túto správu, pretože ste (Vy, alebo niekto vydávajúci sa za Vás) požiadali o poslanie nového hesla pre Váš účet na “{SITENAME}”. Ak ste o zmenu hesla nežiadali, prosím, považujte túto správu za bezpredmetnú. Ak túto správu obdržiavate neustále, kontaktujte administrátora fóra.
+
+Ak si prajete pužívať nové heslo, musíte ho aktivovať. Aktiváciu vykonáte návštevou nasledujúceho odkazu.
+
+{U_ACTIVATE}
+
+Ak aktivácia prebehne úspešne, budete sa môct prihlásiť použitím nového hesla:
+
+Heslo: {PASSWORD}
+
+Samozrejme, že heslo si môžete sami zmeniť na stránke Vášho profilu. Pri akýchkoľvek ťažkostiach, neváhajte a kontaktujte administrátora fóra.
+
+{EMAIL_SIG}

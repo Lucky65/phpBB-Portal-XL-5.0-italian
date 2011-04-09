@@ -1,0 +1,222 @@
+<script>
+function doCollapseExpand(id,img){
+	var b = document.getElementById(id);
+		if (b.style.display=='none'){
+		b.style.display='';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_up.gif'; 
+} else {
+		b.style.display='none';
+	document.images[img].src='{T_THEME_PATH}/images/arrow_user_down.gif';
+} return false; }
+</script>
+
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<table class="tablebg" cellspacing="1" width="100%">
+<!-- IF RANK_TITLE -->
+<tr>
+    <td class="row1" colspan="2" align="center"><span class="gensmall">{RANK_TITLE}</span></td>
+</tr>
+<!-- ENDIF -->
+<!-- IF RANK_IMG -->
+<tr>
+    <td class="row1" colspan="2" align="center">{RANK_IMG}</td>
+</tr>
+<!-- ENDIF -->
+<!-- IF USER_AVATAR -->
+<tr>
+    <td class="row1" colspan="2" align="center"><a href="{U_PROFILE}">{USER_AVATAR}</a></td>
+</tr>
+<!-- ELSE -->
+<tr>
+    <td class="row1" colspan="2" align="center">{NO_USER_AVATAR}</td>
+</tr>
+<!-- ENDIF -->
+<tr>
+    <td class="row1" colspan="2" align="center"><span class="gensmall">{LAST_VISIT_DATE}</span></td>
+</tr>
+    <td class="row1" colspan="2">
+
+    <!-- IF U_ACP -->
+    <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+        <tr>
+            <td class="row1" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('box4','btn4')">
+            <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btn4" /></a></td>
+            <td align="left" class="row1">{L_ADMIN}</td>
+        </tr>
+    </table>
+    <table id="box4" style="display:none; margin-bottom:5px;" class="tablebg" cellspacing="1" width="100%">
+        <tr>
+            <td class="row2">{L_ACPANEL}</td>
+        </tr>
+        <tr>
+               <td align="left" class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_ACP}'">
+               <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_ACP}">{L_ACP}</a></td>
+        </tr>
+        <tr>
+            <td class="row2">{L_GROUPS_INFO}</td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_EDITMEMBERSHIP}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_EDITMEMBERSHIP}" title="{L_EDITMEMBERSHIP}">{L_EDITMEMBERSHIP}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_MANAGEGROUPS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_MANAGEGROUPS}" title="{L_MANAGEGROUPS}">{L_MANAGEGROUPS}</a></td>
+        </tr>
+    </table>
+    <!-- ENDIF -->
+
+    <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+        <tr>
+            <td class="row1" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('box3','btn3')">
+            <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btn3" /></a></td>
+               <td align="left" class="row1">{L_PROFILE_INFO}</td>
+        </tr>
+    </table>
+    <table id="box3" style="display:none; margin-bottom:5px;" class="tablebg" cellspacing="1" width="100%">
+        <tr>
+            <td class="row2">{L_OVERVIEW_INFO}</td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='U_FRONTPAGE'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_FRONTPAGE}" title="{L_FRONTPAGE}">{L_FRONTPAGE}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='U_BOOKMARKS'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_BOOKMARKS}" title="{L_BOOKMARKS}">{L_BOOKMARKS}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SUBSCRIBED}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SUBSCRIBED}" title="{L_SUBSCRIPTION}">{L_SUBSCRIPTION}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_DRAFTS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_DRAFTS}" title="{L_DRAFTS}">{L_DRAFTS}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_ATTACHMENTS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_ATTACHMENTS}" title="{L_ATTACHMENTS}">{L_ATTACHMENTS}</a></td>
+        </tr>
+        <tr>
+            <td class="row2">{L_READ_PROFILE}</td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UPROFILE}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_UPROFILE}" title="{L_UPROFILE}">{L_UPROFILE}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SIGNATURE}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SIGNATURE}" title="{L_SIGNATURE}">{L_SIGNATURE}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_AVATAR}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_AVATAR}" title="{L_AVATAR}">{L_AVATAR}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_ACCOUNT}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_ACCOUNT}" title="{L_ACCOUNT}">{L_ACCOUNT}</a></td>
+        </tr>
+        <tr>
+            <td class="row2">{L_CHANGING_PREFERENCES}</td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_GLOBALSETTINGS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_GLOBALSETTINGS}" title="{L_GLOBALSETTINGS}">{L_GLOBALSETTINGS}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_POSTINDEFAULT}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_POSTINDEFAULT}" title="{L_POSTINDEFAULT}">{L_POSTINDEFAULT}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_DISPLAYOPTIONS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_DISPLAYOPTIONS}" title="{L_DISPLAYOPTIONS}">{L_DISPLAYOPTIONS}</a></td>
+        </tr>
+        <tr>
+            <td class="row2">{L_FRIENDS_FOES}</td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_MANAGEFRIENDS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_MANAGEFRIENDS}" title="{L_MANAGEFRIENDS}">{L_MANAGEFRIENDS}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_MANAGEFOES}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_MANAGEFOES}" title="{L_MANAGEFOES}">{L_MANAGEFOES}</a></td>
+        </tr>
+    </table>
+
+    <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+        <tr>
+            <td class="row1" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('box1','btn1')">
+            <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btn1" /></a></td>
+               <td align="left" class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_NEW_SEARCH}'">{L_POST_TOPIC_INFO}<br /><a href="{U_NEW_SEARCH}" title="{L_NEW_SEARCH}">{L_NEW_SEARCH}</a></td>
+        </tr>
+    </table>
+    <table id="box1" style="display:none; margin-bottom:5px;" class="tablebg" cellspacing="1" width="100%">
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SELF_SEARCH}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SELF_SEARCH}" title="{L_SELF_SEARCH}">{L_SELF_SEARCH}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UNANSWERED_SEARCH}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_UNANSWERED_SEARCH}" title="{L_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_ACTIVE_TOPICS_SEARCH}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_ACTIVE_TOPICS_SEARCH}" title="{L_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></td>
+        </tr>
+        <!-- IF S_INC_UNREAD_LINK -->
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SEARCH_UNREAD}'">
+            <!-- IF S_EXISTS_UNREADS --><img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SEARCH_UNREAD}">{L_VIEW_UNREADS}</a><!-- ELSE --><img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SEARCH_UNREAD}" title="{L_NO_UNREADS}">{L_NO_UNREADS}</a><!-- ENDIF --></td>
+        </tr>
+        <!-- ENDIF -->
+    </table>
+
+    <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+        <tr>
+            <td class="row1" width="15" height="15" align="center" valign="middle"><a href="#" onclick="return doCollapseExpand('box2','btn2')">
+            <img src="{T_THEME_PATH}/images/arrow_user_down.gif" height="11" width="11" name="btn2" /></a></td>
+               <td align="left" class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_PRIVATEMSGS}'"><!-- IF S_DISPLAY_PM -->{L_PRIVATE_MESSAGES}<br /><a href="{U_PRIVATEMSGS}" title="{PRIVATE_MESSAGE_INFO}">{PRIVATE_MESSAGE_INFO}</a><!-- ENDIF --></td>
+        </tr>
+    </table>
+    <table id="box2" style="display:none; margin-bottom:5px;" class="tablebg" cellspacing="1" width="100%">
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_COMPOSEPMMESSAGESG}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_COMPOSEPMMESSAGESG}" title="{L_COMPOSEPMMESSAGESG}">{L_COMPOSEPMMESSAGESG}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_MANAGEPMDRAFTS}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_MANAGEPMDRAFTS}" title="{L_MANAGEPMDRAFTS}">{L_MANAGEPMDRAFTS}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_INBOX}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_INBOX}" title="{L_INBOX}">{L_INBOX}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_OUTBOX}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_OUTBOX}" title="{L_OUTBOX}">{L_OUTBOX}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_SENDMESSAGEBOX}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_SENDMESSAGEBOX}" title="{L_SENDMESSAGEBOX}">{L_SENDMESSAGEBOX}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_UNREADMESSAGES}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_UNREADMESSAGES}" title="{L_UNREADMESSAGES}">{L_UNREADMESSAGES}</a></td>
+        </tr>
+        <tr>
+            <td class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_RULEFOLDERSETTING}'">
+            <img src="{T_THEME_PATH}/images/arrow_user_select.gif" height="10" width="10" /> <a href="{U_RULEFOLDERSETTING}" title="{L_RULEFOLDERSETTING}">{L_RULEFOLDERSETTING}</a></td>
+        </tr>
+    </table>
+    
+    <table class="tablebg" cellspacing="1" width="100%" style="margin-bottom:5px;">
+        <tr>
+            <td class="row1" width="15" height="15" align="center" valign="middle"><img src="{T_THEME_PATH}/images/arrow_user_right.gif" height="11" width="11" /></td>
+               <td align="left" class="row1" onmouseover="this.className='row2'" onmouseout="this.className='row1'" onclick="location.href='{U_LOGIN_LOGOUT}'"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l">{L_LOGIN_LOGOUT}</a></td>
+        </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<!-- ENDIF -->

@@ -1,0 +1,44 @@
+<!-- BEGIN videolistrow -->
+	<!-- IF videolistrow.S_FIRST_ROW -->
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<th width="40%">{L_DMV_TITLE}</th>
+				<th width="15%" align="center">{L_DMV_FROM}</th>
+				<th width="10%" align="center">{L_DMV_DURATION}</th>
+				<th width="10%" align="center">{L_DMV_RATING_LIST}</th>
+				<th width="10%" align="center">{L_DMV_VIDEO_VIEWS}</th>
+				<th width="15%">{L_DMV_AUTHOR}</th>
+			</tr>
+	<!-- ENDIF -->
+			<tr class="<!-- IF videolistrow.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->">
+				<td>&nbsp;<a href="{videolistrow.U_SHOW_VIDEO}" class="topictitle">{videolistrow.VIDEO_TITLE}</a></td>
+				<td align="center">{videolistrow.VIDEO_SINGER}</td>
+				<td align="center">{videolistrow.VIDEO_DURATION}</td>
+				<td align="center">{videolistrow.VIDEO_RATING_IMG}</td>
+				<td align="center">{videolistrow.VIDEO_CLICKS}</td>
+				<td>
+						&nbsp;{L_POST_BY_AUTHOR} {videolistrow.POST_AUTHOR_FULL}<br />
+						&nbsp;{L_POSTED_ON_DATE} {videolistrow.VIDEO_TIME}<br />
+				</td>
+			</tr>
+	<!-- IF videolistrow.S_LAST_ROW -->
+		</table>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+	<!-- IF videolistrow.S_ROW_COUNT == 0 -->
+		<br />
+		<table class="tablebg" cellspacing="1" width="100%">
+			<tr>
+				<td class="row3" align="center"><strong>{L_DMV_NO_VIDEOS_IN_CAT}</strong></td>
+			</tr>
+		</table>
+		<br />
+	<!-- ENDIF -->
+<!-- END videolistrow -->
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<td class="cat" colspan="{S_COLS}" align="center" height="28">
+			<form action="{S_VIDEO_ACTION}" method="post"><span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" name="sort" value="{L_GO}" /></form>
+		</td>
+	</tr>
+</table>

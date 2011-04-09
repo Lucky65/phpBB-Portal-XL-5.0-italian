@@ -1,0 +1,44 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+		'user_group'	=> 'Users &amp; Groups',
+
+#-----[ AFTER ADD ]-----------------------------------------------------
+#
+
+		'downloads'		=> 'Download Panel',		
+
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// Download MOD Permissions
+$lang = array_merge($lang, array(
+   'acl_a_dl_overview'      => array('lang' => 'Kann die Startseite sehen', 'cat' => 'downloads'),
+   'acl_a_dl_config'      => array('lang' => 'Kann die allgemeinen Konfigurationen editieren', 'cat' => 'downloads'),
+   'acl_a_dl_traffic'      => array('lang' => 'Kann den Traffic verwalten', 'cat' => 'downloads'),
+   'acl_a_dl_categories'   => array('lang' => 'Kann die Kategorien verwalten', 'cat' => 'downloads'),
+   'acl_a_dl_files'      => array('lang' => 'Kann die Downloads verwalten', 'cat' => 'downloads'),
+   'acl_a_dl_permissions'   => array('lang' => 'Kann die Berechtigungen editieren', 'cat' => 'downloads'),
+   'acl_a_dl_stats'      => array('lang' => 'Kann die Statistik sehen und verwalten', 'cat' => 'downloads'),
+   'acl_a_dl_banlist'      => array('lang' => 'Kann die Bannlist verwalten', 'cat' => 'downloads'),
+   'acl_a_dl_blacklist'   => array('lang' => 'Kann die Liste der verwaisten Dateianh&auml;nge editieren', 'cat' => 'downloads'),
+   'acl_a_dl_toolbox'      => array('lang' => 'Kann die Toolbox benutzen', 'cat' => 'downloads'),
+   'acl_a_dl_fields'		=> array('lang' => 'Can manage user defined fields', 'cat' => 'downloads'),   
+));
+
+// PM Spy mod
+$lang = array_merge($lang, array(
+   'acl_a_pm_spy'   => array('lang'   => 'Kann User PN’s sehen', 'cat' => 'misc'),
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+   'acl_a_flags'   => array('lang' => 'Kann Landesflaggen sehen', 'cat' => 'user_group'),
+   'acl_a_country_flags'   => array('lang' => 'Can manage country flags', 'cat' => 'misc'),	
+));

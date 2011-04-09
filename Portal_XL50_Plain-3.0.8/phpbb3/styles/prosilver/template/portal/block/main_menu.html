@@ -1,0 +1,16 @@
+<table class="tablebg" cellspacing="1" width="100%">
+  <!--  <tr>
+    <th colspan="1">{L_MENU}</th>
+  </tr>-->
+  <!-- BEGIN portal_menu_row -->
+  <tr>
+    <td class="<!-- IF portal_menu_row.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->"><span>{portal_menu_row.PORTAL_MENU_ICON}&nbsp;<a href="{portal_menu_row.U_PORTAL_MENU_LINK}" <!-- IF portal_menu_row.S_PORTAL_MENU_OPEN == "1" -->target="_blank"<!-- ENDIF --> title="{portal_menu_row.PORTAL_MENU_NAME}">{portal_menu_row.PORTAL_MENU_NAME}</a></span></td>
+  </tr>
+  <!-- END portal_menu_row -->
+  <!-- IF U_ACP -->
+  <tr>
+    <td class="row1"><hr align="left" width="85%" />
+      &nbsp;<a class="icon-members" href="{U_ACP}" title="{L_ACP}">{L_ACP}</a></span></td>
+  </tr>
+  <!-- ENDIF -->
+</table>

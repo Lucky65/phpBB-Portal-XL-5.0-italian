@@ -1,0 +1,81 @@
+		<table class="tablebg" cellspacing="1" width="100%" cellpadding="0" border="0">
+			<thead>
+				<tr>
+					<th class="name">
+						{L_TOPLIST_SITE_OF_THE_MOMENT}: {SITE_OF_THE_MOMENT_SITE_NAME}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr class="row1">
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<!-- BEGIN site_of_the_moment_whois_sc -->
+							<td valign="top">
+								<table class="tablebg" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td>
+											<a href='{SITE_OF_THE_MOMENT_U_URL}'>
+												<img src='{site_of_the_moment_whois_sc.WHOIS_SC_IMAGE}' border='0' onload='if (this.width>50) this.border=1' alt='' style='border: black sold 1px' />
+											</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- END site_of_the_moment_whois_sc -->
+							<!-- IF RATING_ENABLED -->
+							<td valign="top">
+								<p class="gensmall">
+									<div id="rating_{SITE_OF_THE_MOMENT_ID}"><img src="./mods/toplist_mod/images/rating/{SITE_OF_THE_MOMENT_RATING}" border="0" /></div>
+								</p>
+								<!-- BEGIN canrate -->
+								<p class="gensmall">
+									<form action="{canrate.RATE_ACTION}" method="POST" name="rate_form_{SITE_OF_THE_MOMENT_ID}">
+										<input type="hidden" name="id" value="SITE_OF_THE_MOMENT_{SITE_OF_THE_MOMENT_ID}" />
+										<select name="rating" onchange="handle_rate_submit_{SITE_OF_THE_MOMENT_ID}(this)">
+											<option value="0" SELECTED>{L_TOPLIST_RATE_THIS_SITE}</option>
+											<option value="5">5</option>
+											<option value="4">4</option>
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+										</select>
+										<noscript>
+											<br /><input type="submit" value="Rate!" />
+										</noscript>
+									</form>
+									<script type="text/javascript">
+									function handle_rate_submit_{SITE_OF_THE_MOMENT_ID}(select_field)
+									{
+										if(select_field.value==0)
+										{
+											return false;
+										}
+										new Ajax.Request('{canrate.RATE_ACTION}',
+										{
+											method:'post',
+											parameters: {ajax: 1, id: {SITE_OF_THE_MOMENT_ID}, rating: select_field.value},
+											onSuccess: function(transport){
+												document.getElementById('rating_{SITE_OF_THE_MOMENT_ID}').innerHTML = '{L_TOPLIST_RATING_UPDATED}';
+												setTimeout(function(){
+													document.getElementById('rating_{SITE_OF_THE_MOMENT_ID}').innerHTML = '<img src="./mods/toplist_mod/images/rating/' + transport.responseText + '.gif" border="0" />';
+												},2000);
+											},
+											onFailure: function(){ document.rate_form_{SITE_OF_THE_MOMENT_ID}.submit(); }
+										});
+									}
+									</script>
+								</p>
+								<!-- END canrate -->
+							</td>
+							<!-- ENDIF -->
+							<td valign="top">
+								<a class="forumlink" href="{SITE_OF_THE_MOMENT_U_URL}">{SITE_OF_THE_MOMENT_SITE_INFO}</a><br /><br /><a class="forumlink" href="{SITE_OF_THE_MOMENT_U_URL}"><img border="0" src="{SITE_OF_THE_MOMENT_SITE_BANNER}" /></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</tbody>
+		</table>

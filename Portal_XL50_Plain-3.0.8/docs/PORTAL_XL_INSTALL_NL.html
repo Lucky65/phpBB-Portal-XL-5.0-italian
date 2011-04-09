@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2009 Portal XL Group" />
+<meta name="keywords" content="" />
+<meta name="description" content="phpBB3 Portal XL Installation and updating informations" />
+<title>phpBB3 Portal XL &bull; Installatie</title>
+<link href="stylesheet.css" rel="stylesheet" type="text/css" media="screen, projection" />
+</head>
+<body id="phpbb" class="section-docs" style="margin-left: 50px; margin-right: 50px;">
+<div id="wrap"> <a id="top" name="top" accesskey="t"></a>
+  <div id="page-header">
+    <div class="headerbar">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div id="doc-description"> <a href="../index.php" id="logo"><img src="site_logo.gif" alt="" /></a>
+          <h1>Portal XL Install</h1>
+          <p>Portal XL  Installatie- en update- informatie</p>
+          <p style="display: none;"><a href="#start_here">Skip</a></p>
+        </div>
+        <div id="doc-description" style="width: 100%;">
+          <span style="float: right; margin-right: 5px;"><a href="PORTAL_XL_INSTALL.html" title="English"><span style="color:#FFF;">English</span></a> - <a href="PORTAL_XL_INSTALL_DE.html" title="German"><span style="color:#FFF;">German</span></a> - <a href="PORTAL_XL_INSTALL_EL.html" title="Greek"><span style="color:#FFF;">Greek</span></a> - <a href="PORTAL_XL_INSTALL_IT.html" title="Italian"><span style="color:#FFF;">Italian</span></a> - <a href="PORTAL_XL_INSTALL_NL.html" title="Dutch"><span style="color:#FFF;">Dutch</span></a></span>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+  </div>
+  <a name="start_here"></a>
+  <div id="page-body">
+    <!-- BEGIN DOCUMENT -->
+    <p><strong>Lees  dit document alstublieft volledig alvorens door te gaan met installatie of bijwerken.</strong></p>
+    <p>Dit document zal met U door de basiskennis van het installeren, bijwerken en converteren van de portaalsoftware lopen.</p>
+    <h1>Install</h1>
+    <div class="paragraph menu">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <ol>
+            <li><a href="#quickinstall">Snelle installatie</a></li>
+            <li><a href="#require">Vereisten</a></li>
+            <li><a href="#install">Nieuwe installatie</a></li>
+            <li><a href="#update">Bijwerken van een vorige versie van Portal XL</a>
+            <li><a href="#disclaimer">Algemene voorwaarden</a></li>
+          </ol>
+        </div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="quickinstall"></a>
+    <h2>1. Snelle installatie</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Indien U basiskennis van FTP gebruik hebt en deze dienst voor U beschikbaar is kunt U deze stappen volgen om snel met Portal XL aan de slag te kunnen. </p>
+          <ol>
+            <li>Pak het bestand  Portal_XL50_Plain-3.0.8.rar uit naar een  map op Uw systeem.</li>
+            <li>Upload alle bestanden uit de map  \root\ van het  archieve (behoud de mapstructuur) naar een via het web toegankelijke map  op uw server.</li>
+            <li>Wijzig de toegangsrechten voor bestanden en mappen  naar  (777 of -rwxrwxrwx middels Uw FTP client):<br />
+              <code>store/</code>, <code>cache/</code>, <code>files/</code>, <code>images/upload/avartars/</code>, <code>/config.php</code> en <code>/images/counter/ip.txt</code>.</li>
+            <li>Surf met Uw webbrowser naar de locatie waar de bestanden van het  phpBB3 Portal XL te vinden zullen zijn met als aanvulling  install/ of roep install/index.php direct op, zoals b.v.b. http://www.mydomain.com/phpBB3/install/index.php, http://www.mydomain.com/forum/install/index.php enz.</li>
+            <li>Klik op de <em>INSTALL </em>ruiter, volg de stappen die verschijnen.</li>
+            <li>phpBB3 Portal XL zal hierna beschikbaar zijn voor gebruik.</li>
+          </ol>
+          <p>Indien U problemen ervaart of niet weet hoe door te gaan met de opgesomde stappen lees alstublieft het overige van dit document of  zie <a href="#refresh_cache">verversen cache</a>.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Naar boven</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="require"></a>
+    <h2>2. Vereisten</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>phpBB3 Portal XL heeft enkele vereisten die moeten worden vervult alvorens U kunt doorgaan met het installeren en gebruiken.</p>
+          <ul>
+            <li>Een webserver of web hosting account met ondersteuning voor PHP</li>
+            <li>Een SQL database systeem:
+              <ul>
+                <li>MySQL 3.23 of hoger (MySQLi ondersteunt)</li>
+              </ul>
+            </li>
+            <li><strong>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatibel))</strong> met ondersteuning voor de databank die U van plant bent te gebruiken.</li>
+            <li>getimagesize() functie dient te zijn geactiveerd.</li>
+            <li>Deze optionele functies of  modules binne PHP zullen toegevoegde opties mogelijk maken, ze zijn echter niet verplicht.
+              <ul>
+                <li>zlib Compressie ondersteuning</li>
+                <li>Remote FTP ondersteuning</li>
+                <li>XML ondersteuning</li>
+                <li>Imagemagick ondersteuning</li>
+                <li>GD ondersteuning</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Indien Uw server of account niet aan deze minimale vereisten voldoet  zijn wij bang dat phpbb3 Portal XL niet voor u geschikt is.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Naar boven</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="install"></a>
+    <h2>3. Nieuwe installatie</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>U zult een van twee beschikbare portaal pakketten gedownload  hebben en uw keuze stelt vast wat u moet doen, in dit geval Portal XL 5.0  Plain. <strong>Merk op</strong>: wij raden ten zeerste aan dat U een volledige back-up van Uw  databank en aanwezige phpbb3 bestanden maakt alvorens door te gaan! Indien u  onzeker bent hoe dit te bereiken vraag Uw systeembeheerder om advies. <strong>ATTENTIE</strong>!  Mocht Uw bestaande phpBB3 of Portal XL set-up gewijzigd zijn door modificaties  anders dan diegene die Portal XL 5.0 ~ Plain gebruikt, zullen deze door  installatie van het portaal verloren gaan!</p>
+          <p><strong>Merk op</strong>: gebruikt U een andere taal dan Engels is het aan te  bevelen om het bestand \language\en\acp\portal_xl_install.php naar de  corresponderende map van Uw geïnstalleerde taal te kopiëren om de installatie  tekst (in Engels) beschikbaar te hebben mits er onder \languages\xx\ geen  corresponderend bestand aanwezig mocht zijn. Dit om foutmeldingen tijdens een  meertalige configuratie/installatie te voorkomen.</p>
+          <a name="install_full"></a>
+          <h3>3. Portal XL 5.0 Plain</h3>
+          <p><br />
+            Benodigde stappen:<br />
+          </p>
+          <p>- Download Uw eigen kopie phpBB 3.0.x van <a href="http://www.phpbb.com/downloads/" target="_blank">phpbb.com</a> mits nog niet gedaan. Mits ge&iuml;nstallerd ga <a href="#creating_portal">hier</a> verder<br />
+            - Pak phpBB 3.0.x uit naar een tijdelijke map<br />
+            - Upload de map  phpBB3 naar Uw  forum root<br />
+            - Browse naar b.v.b. http://your-domain/install/ en het installatie script zal opstarten<br />
+            - Verwijder de map  /install/ als de installatie af is gesloten</p>
+          <p><a name="creating_portal"></a></p>
+          <p>De volgende stappen zullen het portaal installeren.</p>
+          <p>- Pak archief Portal_XL50_Plain-3.0.8.rar uit naar een tijdelijke map<br />
+            - Upload alle bestanden van het  archief (behoud de mapstructuur)  uit de map <strong>\root\</strong> naar Uw  forum root en vergewis U dat alles op zijn plaats is.<br />
+            - Browse naar \install\index.php, klik op de <em>INSTALL </em>ruiter, volg de stappen die verschijnen.</p>
+          <p><a name="refresh_cache"></a></p>
+          <p>- Na  installatie ga naar het  ACP en voer de stappen hieronder uit:</p>
+          <p>- Tab Styles -&gt; Style components -&gt; Templates -&gt; prosilver -&gt; Verversen<br />
+            - Tab Styles -&gt; Style components -&gt; Themes -&gt; prosilver -&gt; Verversen<br />
+            - Tab Styles -&gt; Style components -&gt; Imagesets -&gt; prosilver -&gt; Verversen<br />
+            - General Tab -&gt; In main screen -&gt; Purge the cache<br />
+            - Ververs Uw  browsers cache</p>
+          <p>Klaar!</p>
+          <p>PS: bezoek ons NIEUWE style Demo/Download voor Portal XL 5.0 ~ Plain <a href="http://www.portalxl.nl/stylesplain/" target="_blank">styles</a><br />
+            Veel plezier met  Portal XL 5.0 ~ Plain ~ Uw te gekke en krankzinige portaal  systeem voor  phpBB 3.0.x</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Naar boven</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="update"></a>
+    <h2>4. Bijwerken van een vorige versie van Portal XL</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>U zult een van twee beschikbare portaal pakketten gedownload  hebben en uw keuze stelt vast wat u moet doen, in dit geval Portal XL 5.0  Plain. <strong>Merk op</strong>: wij raden ten zeerste aan dat U een volledige back-up van Uw  databank en aanwezige phpbb3 bestanden maakt alvorens door te gaan! Indien u  onzeker bent hoe dit te bereiken vraag Uw systeembeheerder om advies. <strong>ATTENTIE</strong>!  Mocht Uw bestaande phpBB3 of Portal XL set-up gewijzigd zijn door modificaties  anders dan diegene die Portal XL 5.0 ~ Plain gebruikt, zullen deze door  installatie van het portaal verloren gaan!</p>
+          <p><strong>Merk op</strong>: gebruikt U een andere taal dan Engels is het aan te  bevelen om het bestand \language\en\acp\portal_xl_install.php naar de  corresponderende map van Uw geïnstalleerde taal te kopiëren om de installatie  tekst (in Engels) beschikbaar te hebben mits er onder \languages\xx\ geen  corresponderend bestand aanwezig mocht zijn. Dit om foutmeldingen tijdens een  meertalige configuratie/installatie te voorkomen.</p>
+          <p><a name="update_full"></a></p>
+          <h3>4. Portal XL 5.0 Plain</h3>
+          <p><br />
+            Benodigde stappen:<br />
+          </p>
+          <p>Enkel nodig als er nog geen recente  phpBB 3.0.x in gebruik is. Mits ge&iuml;nstallerd ga <a href="#update_portal">hier</a> verder.<br />
+            <br />
+            - Download Uw eigen kopie phpBB 3.0.x van <a href="http://www.phpbb.com/downloads/" target="_blank">phpbb.com</a> mits nog niet gedaan.<br />
+            - Pak phpBB 3.0.x uit naar een tijdelijke map<br />
+            - Verwijder bestand  config.php uit de map  /phpBB3/ van het paket<br />
+            - Upload/vervang de map phpBB3 naar Uw  forum root (portaal is nu verwijderd)<br />
+            - Browse naar b.v.b. http://your-domain/install/database_update.php en het update script zal opstarten<br />
+            - Verwijder de map  /install/ als de installatie af is gesloten</p>
+          <p><a name="update_portal" id="update_portal"></a></p>
+          <p></a>De volgende stappen zullen het portaal installeren.</p>
+          <p><strong>ATTENTIE</strong>!<br />
+            To update to this version properly some essential steps are needed to follow up at your running site.<br />
+            These steps are neccessary to delete ALL files which are not in use anymore from on Portal XL 5.0 ~ Plain or which where moved.<br />
+            Don't forget the steps below or you will be surprised by a mess if you'r using the block management at later stage (wrong blocks, dubble blocks, wrong block layout etc.).<br />
+            - REMOVE directory /portal/* from your root<br />
+            - REMOVE <em>for this release </em>in \language\en\<strong>portal.php</strong>, in \language\en\acp\<strong>portal_*.php</strong>, in \language\en\mods\<strong>average_statistics.php</strong>, in \adm\style\<strong>acp_portal*.html</strong> (all those files where moved into a different place).</p>
+          <p>- unpack archive Portal_XL50_Plain-3.0.8.rar to a temporary directory<br />
+            - copy/uload all content  (retaining the directory structure) from the package directory <strong>\root\</strong> to your forum root and be sure all is in place.<br />
+            - <strike>browse to \install\index.php to start the installation script and choose tab &quot;Update&quot;</STRIKE> (no database changes for Plain 0.2).</p>
+          <p><a name="refresh_cache"></a></p>
+          <p>- Na  installatie ga naar het  ACP en voer de stappen hieronder uit:</p>
+          <p>- Tab Styles -&gt; Style components -&gt; Templates -&gt; prosilver -&gt; Verversen<br />
+            - Tab Styles -&gt; Style components -&gt; Themes -&gt; prosilver -&gt; Verversen<br />
+            - Tab Styles -&gt; Style components -&gt; Imagesets -&gt; prosilver -&gt; Verversen<br />
+            - General Tab -&gt; In main screen -&gt; Purge the cache<br />
+            - Ververs Uw browsers cache</p>
+          <p>Ready!</p>
+          <p>PS: bezoek ons NIEUWE style Demo/Download voor Portal XL 5.0 ~ Plain <a href="http://www.portalxl.nl/stylesplain/" target="_blank">styles</a><br />
+            Veel plezier met  Portal XL 5.0 ~ Plain ~ Uw te gekke en krankzinige portaal  systeem voor  phpBB 3.0.x</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Naar boven</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <hr />
+    <a name="convert"></a>
+    <hr />
+    <a name="disclaimer"></a>
+    <h2>7. Copyright en algemene voorwaarden</h2>
+    <div class="paragraph">
+      <div class="inner"><span class="corners-top"><span></span></span>
+        <div class="content">
+          <p>Deze toepassing is opensource software en valt onder het <a href="http://opensource.org/licenses/gpl-license.php">GPL</a>. Lees alstublieft de broncode en de documentatie voor meer details. Dit pakket en zijn inhoud zijn Copyright (c) 2007, 2008 <a href="http://www.portalxl.nl/forum/" target="_blank">Portal XL Group</a>, alle rechten voorbehouden.</p>
+        </div>
+        <div class="back2top"><a href="#wrap" class="top">Naar boven</a></div>
+        <span class="corners-bottom"><span></span></span></div>
+    </div>
+    <!-- END DOCUMENT -->
+    <div id="page-footer">
+      <div class="version">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<div> <a id="bottom" name="bottom" accesskey="z"></a> </div>
+</body>
+</html>

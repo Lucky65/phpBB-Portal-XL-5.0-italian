@@ -1,0 +1,51 @@
+<!-- INCLUDE overall_header.html -->
+
+	<table width="100%" cellspacing="1" cellpadding="3" border="0" align="center" class="table1">
+	<thead>
+	<tr>
+		<th>{L_USERNAME}</th>
+		<th>{L_DL_COMMENT}</th>
+		<th>{L_OPTIONS}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN comment_row -->
+	<tr>
+		<td class="row<!-- IF searchresults.S_ROW_COUNT is even -->1<!-- ELSE -->2<!-- ENDIF -->">
+					<label>{comment_row.POSTER}</label><br /><span class="small">{comment_row.POST_TIME}</span></td>
+		<td class="row<!-- IF searchresults.S_ROW_COUNT is even -->1<!-- ELSE -->2<!-- ENDIF -->"><span class="postdetails">{comment_row.MESSAGE}<!-- IF comment_row.EDITED_BY --></span><hr /><span class="small"><!-- ENDIF -->{comment_row.EDITED_BY}</span></td>
+		<td class="row<!-- IF searchresults.S_ROW_COUNT is even -->1<!-- ELSE -->2<!-- ENDIF -->">
+			<!-- BEGIN action_button -->
+			<a href="{comment_row.U_EDIT_COMMENT}">{L_EDIT_POST}</a>&nbsp;&bull;&nbsp;<a href="{comment_row.U_DELETE_COMMENT}">{L_DELETE_POST}</a>
+			<!-- END action_button -->
+		</td>
+	</tr>
+	<!-- END comment_row -->
+	</tbody>
+	</table>
+
+	<!-- IF S_COMMENT_BUTTON -->
+	<form action="{S_FORM_ACTION}" method="post" id="comments_view">
+
+	<p align="right">
+		<input type="submit" name="post" value="{L_POST_COMMENT}" class="btnlite" />
+	</p>
+	
+	{S_HIDDEN_FIELDS}
+
+	</form>
+	<!-- ENDIF -->
+	
+	<!-- IF PAGINATION -->
+	<table width="100%" cellpadding="3" cellspacing="1" border="0" class="table1">	
+	<tr>
+		<td align="right">{L_GOTO_PAGE}: {PAGINATION}</td>
+	</tr>
+	</table>
+	<!-- ENDIF -->
+
+<br />
+
+<!-- INCLUDE dl_mod/dl_footer.html -->
+
+<!-- INCLUDE overall_footer.html -->

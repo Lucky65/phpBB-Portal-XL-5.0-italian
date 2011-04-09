@@ -1,0 +1,21 @@
+Subject: Vitajte na “{SITENAME}”
+
+{WELCOME_MSG}
+
+Prosím Vás, ponechajte si tento email pre budúcu potrebu. Údaje o Vašom účte sú nasledovné:
+
+----------------------------
+Uživateľ: {USERNAME}
+
+
+Adresa fóra: {U_BOARD}
+----------------------------
+
+Váš účet momentálne nie je aktívny a bude musieť byť schválený administrátorom. Ďalším emailom budete o tom informovaný.
+
+
+Prosíme nezabudnite, že vaše heslo je zašifrované a nebudeme Vám ho môcť preposlať. V prípade, že zabudnete Vaše heslo, môžete požiadať o nové, ktoré bude aktivované rovnakým spôsobom ako tento účet.
+
+Ďakujeme Vám za registráciu.
+
+{EMAIL_SIG}

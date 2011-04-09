@@ -1,0 +1,70 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.marquee.min.js'></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+  $("#marquee-center_gallery_rondom_scroll").marquee({
+		showSpeed: 850,
+		scrollSpeed: 20,
+		pauseSpeed: 5000,
+		pauseOnHover: true,
+		fxEasingShow: "swing",
+		/* define the class statements */
+		cssShowing: "marquee-center-gallery-rondom-scroll"
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+ul.marquee-center-gallery-rondom-scroll {
+	display: block;
+	height: 180px;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	width: 96%;
+}
+
+ul.marquee-center-gallery-rondom-scroll li {
+	display: block;
+	position: absolute;
+	top: -999em;
+	white-space: nowrap;
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="1">{L_RANDOM_PIC}</td>
+</tr>-->
+  <!-- BEGIN no_pics -->
+  <tr>
+    <td class="row1" align="center" colspan="{S_COLS}" height="50"><span class="gen">{L_NO_PICS}</span></td>
+  </tr>
+  <!-- END no_pics -->
+  <tr>
+    <td class="bg2" valign="top" style="border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+
+        <ul id="marquee-center_gallery_rondom_scroll" class="marquee-center-gallery-rondom-scroll">
+            <li>
+            <table width="100%" cellpadding="2" cellspacing="5" border="0" class="forumline">
+                <tr>
+              <!-- BEGIN image_random_scroll_col -->
+                    <td align="center" style="height: {S_THUMBNAIL_SIZE}px; overflow: hidden; border: 1px solid #CCC; padding: 5px; min-height: 1em; -moz-border-radius: 5px; -webkit-border-radius: 5px;" class="bg1">
+                     <a href="{image_random_scroll_col.U_PIC}">{image_random_scroll_col.THUMBNAIL}</a>
+                    </td>
+                <!-- END image_random_scroll_col -->
+               </tr>
+            </table>
+            </li>
+        </ul>
+
+      </td>
+  </tr>
+  <tr>
+	<td colspan="{S_COLS}" class="cat" align="center"><span class="gensmall">[ <a href="{U_GALLERY_MOD}" title="{L_GALLERY}" target="_self">{L_GALLERY}</a> ]</span></td>
+  </tr>
+</table>
+
+
+

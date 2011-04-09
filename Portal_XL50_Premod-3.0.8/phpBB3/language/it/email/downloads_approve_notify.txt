@@ -1,0 +1,18 @@
+Oggetto: Nuovo download
+
+Ciao {USERNAME},
+
+ricevi questo messaggio come notifica di un nuovo o modificato download su {SITENAME} nella categoria {CATEGORY}:
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Se vuoi approvarlo clicca sul seguente link:
+
+{U_APPROVE}
+
+Ricorda che puoi scegliere di non ricevere le notifiche relative ai nuovi o modificati downloads modificando le impostazioni del tuo profilo.
+
+{BOARD_EMAIL}

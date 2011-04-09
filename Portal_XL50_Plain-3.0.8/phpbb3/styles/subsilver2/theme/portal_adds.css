@@ -1,0 +1,820 @@
+/*  
+    --------------------------------------------------------------
+* @name portal_adds.css
+* @package phpBB3 Portal XL
+* @version $Id: portal_adds.css,v 1.4 2010/08/07 damysterious Exp $
+*
+* @copyright (c) 2007, 2009 Portal XL Group
+* @license http://opensource.org/licenses/gpl-2.0.php The GNU General Public License (GPL)
+    --------------------------------------------------------------
+*/
+
+/* Misc layout styles
+---------------------------------------- */
+/* column[1-2] styles are containers for two column layouts 
+   Also see tweaks.css */
+.column1 {
+	float: left;
+	clear: left;
+	width: 49%;
+}
+
+.column2 {
+	float: right;
+	clear: right;
+	width: 49%;
+}
+
+/*  
+.row1, .row2, .row3 {
+filter:alpha(opacity=50);
+-moz-opacity: 0.5; 
+opacity: 0.5;
+-khtml-opacity: 0.5;
+}
+*/
+
+a {
+	outline: none;
+}
+
+select {
+	font-size: 9px;
+	font-weight: normal;
+	padding: 1px;
+}
+
+h5{
+	/* Portal block titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	font-size: 1.1em;
+}
+
+h6 {
+	/* Forum and topic list titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	color: #115098;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 1.05em;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	padding-bottom: 2px;
+}
+
+div#portal_container{
+	border: 0px solid #ccc;
+}
+
+div#toolTip {
+	position: absolute;
+	z-index: 1000;
+	width: auto;
+	background: #FFFFFF;
+	border: 1px solid #BFC1CF;
+	text-align: center;
+	padding: 5px;
+	min-height: 1em;
+}
+
+div#toolTip p {
+	margin: 0px;
+	padding: 0px;
+	color: #28313F;
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.acronym, .acronym a:link {
+	border-bottom: 1px #BD5121 dashed;
+	color: #459B37;
+	cursor: help;
+	font-style: italic;
+}
+
+.subforum.read {  
+	background: url(images/icon_post_target.gif) center left no-repeat;  
+    padding-left: 12px;  
+ }  
+.subforum.unread {  
+    background: url(images/icon_post_target_unread.gif) center left no-repeat;  
+   	padding-left: 12px;  
+}  
+
+.row-post-bottom {
+	background: #FFF;
+	border: 1px solid #A9B8C2;
+	min-height: 10px;
+	vertical-align: middle;
+	line-height: 1.2em;
+	white-space: nowrap;
+	padding: 1px
+}
+
+.postbody-block {
+	font-family: "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-size: 1.0em;
+	line-height: 1.1em;
+}
+
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+dl.extra-box {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	font-size: 1em; 
+	display: block;
+	height: 77px;
+	width: 210px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+dl.extra-box dd a {
+	color: #FFFFFF !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding-left: 10px;
+	padding-right: 50px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dd.fileformat { padding-left: 10px; padding-top: 5px; }
+
+dl.extra-box dd.fileformat label { font-size: 1.1em; color: #FFF; }
+
+dl.extra-box dt a {
+	color: #333333 !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding: 10px 0 5px 10px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dt a:hover { font-size: 1.1em; color: #000000 !important; text-decoration: none; }
+
+dl.extra-box-images {
+	font-size: 1em; 
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 5px;
+}
+
+dl.text dt { font-weight: bold; font-size: 1em; margin-top: 1.1em; }
+
+dl.text, ul.download-update { font-size: 1em; }
+
+/* Menu  listing */
+ul.menu { border-top: 1px solid #FFFFFF; list-style: none; }
+
+ul.menu li {
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0;
+	padding: 5px 0 4px 0;
+}
+
+ul.menu li.last { border-bottom: none; }
+
+.head1 { font-size: 1.1em; padding: 10px 0 0 10px; }
+
+.head2 { font-size: 1.1em; padding: 15px 0 0 5px; }
+
+/* Extras column */
+#extras {
+	font-size: 1em; 
+	float: right;
+	margin: 0px;
+	text-align: left;
+	width: 215px;
+}
+
+dl.linkblue {
+	background-image: url("images/bg_link_blue.png");
+}
+
+dl.linkred {
+	background-image: url("images/bg_link_red.png");
+}
+
+dl.download {
+	background-image: url("images/bg_download_blue.png");
+}
+	
+dl.download2 {
+	background-image: url("images/bg_download_orange.png");
+}
+
+dl.downloadr {
+	background-image: url("images/bg_download_green.png");
+}
+
+dl.downloadred {
+	background-image: url("images/bg_download_red.png");
+}
+	
+dl.downloadb {
+	background-image: url("images/bg_download_green.png");
+}
+
+dl.download-contrib {
+	background-image: url("images/bg_download_orange.png");
+}
+
+div.mini-panel {
+	font-size: 1em; 
+	color: #333333;
+	background-color: #ebebeb;
+	margin-bottom: 5px;
+	padding: 0 5px;
+	width: 200px;
+	float: right;
+}
+
+div.mini-panel h3 {
+	font-size: 1em; 
+	color: #333333;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+}
+
+div.mini-panel p { font-size: 1em; margin: 3px 0; }
+
+div.mini-panel span.corners-top, div.mini-panel span.corners-bottom { margin: 0 -10px; }
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+
+/* CSS Inner Round Corners center portal pages inner block background
+----------------------------------------*/
+.xldown1_top, .xldown2_top, .xldown3_top, .xldown4_top, .xldown2_bottom, .xldown3_bottom, .xldown4_bottom{font-size:1px; overflow:hidden; display:block;}
+.xldown1_top {height:1px; background:#aaa; margin:0 5px;}
+.xldown2_top, .xldown2_bottom {height:1px; background: white; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.xldown3_top, .xldown3_bottom {height:1px; background: white; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.xldown4_top, .xldown4_bottom {height:2px; background: white; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.xldown2_bottom, .xldown3_bottom, .xldown4_bottom {background: white;}
+.xldown_head {background: white; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.xldown_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.xldown_box {background: white; border-right:1px solid #888; border-left:1px solid #888;}
+.xldown_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+ 
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.announce1_top, .announce2_top, .announce3_top, .announce4_top, .announce2_bottom, .announce3_bottom, .announce4_bottom{font-size:1px; overflow:hidden; display:block;}
+.announce1_top {height:1px; background:#aaa; margin:0 5px;}
+.announce2_top, .announce2_bottom {height:1px; background: #A3C5C7; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.announce3_top, .announce3_bottom {height:1px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.announce4_top, .announce4_bottom {height:2px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.announce2_bottom, .announce3_bottom, .announce4_bottom {background: #E1ECE1;}
+.announce_head {background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.announce_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.announce_box {background: #E1ECE1; border-right:1px solid #888; border-left:1px solid #888;}
+.announce_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center news block
+----------------------------------------*/
+.news1_top, .news2_top, .news3_top, .news4_top, .news2_bottom, .news3_bottom, .news4_bottom{font-size:1px; overflow:hidden; display:block;}
+.news1_top {height:1px; background:#aaa; margin:0 5px;}
+.news2_top, .news2_bottom {height:1px; background: #F0E68C; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.news3_top, .news3_bottom {height:1px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.news4_top, .news4_bottom {height:2px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.news2_bottom, .news3_bottom, .news4_bottom {background: #FFFCE8;}
+.news_head {background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.news_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.news_box {background: #FFFCE8; border-right:1px solid #888; border-left:1px solid #888;}
+.news_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center news compact block
+----------------------------------------*/
+.news_compact1_top, .news_compact2_top, .news_compact3_top, .news_compact4_top, .news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom{font-size:1px; overflow:hidden; display:block;}
+.news_compact1_top {height:1px; background:#aaa; margin:0 5px;}
+.news_compact2_top, .news_compact2_bottom {height:1px; background: #89B2D2; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.news_compact3_top, .news_compact3_bottom {height:1px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.news_compact4_top, .news_compact4_bottom {height:2px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom {background: #FFFFF0;}
+.news_compact_head {background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.news_compact_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.news_compact_box {background: #FFFFF0; border-right:1px solid #888; border-left:1px solid #888;}
+.news_compact_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.attach1_top, .attach2_top, .attach3_top, .attach4_top, .attach2_bottom, .attach3_bottom, .attach4_bottom{font-size:1px; overflow:hidden; display:block;}
+.attach1_top {height:1px; background:#aaa; margin:0 5px;}
+.attach2_top, .attach2_bottom {height:1px; background: #E9E8CD; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.attach3_top, .attach3_bottom {height:1px; background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.attach4_top, .attach4_bottom {height:2px; background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.attach2_bottom, .attach3_bottom, .attach4_bottom {background: #F1F1E0;}
+.attach_head {background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.attach_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.attach_box {background: #F1F1E0; border-right:1px solid #888; border-left:1px solid #888;}
+.attach_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest_topics block
+----------------------------------------*/
+.latest_topics1_top, .latest_topics2_top, .latest_topics3_top, .latest_topics4_top, .latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest_topics1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest_topics2_top, .latest_topics2_bottom {height:1px; background: #F0E68C; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest_topics3_top, .latest_topics3_bottom {height:1px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest_topics4_top, .latest_topics4_bottom {height:2px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom {background: #FFFCE8;}
+.latest_topics_head {background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_topics_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_topics_box {background: #FFFCE8; border-right:1px solid #888; border-left:1px solid #888;}
+.latest_topics_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest_hot block
+----------------------------------------*/
+.latest_hot1_top, .latest_hot2_top, .latest_hot3_top, .latest_hot4_top, .latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest_hot1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest_hot2_top, .latest_hot2_bottom {height:1px; background: #89B2D2; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest_hot3_top, .latest_hot3_bottom {height:1px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest_hot4_top, .latest_hot4_bottom {height:2px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom {background: #F1F1E0;}
+.latest_hot_head {background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_hot_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_hot_box {background: #F1F1E0; border-right:1px solid #888; border-left:1px solid #888;}
+.latest_hot_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest block
+----------------------------------------*/
+.latest1_top, .latest2_top, .latest3_top, .latest4_top, .latest2_bottom, .latest3_bottom, .latest4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest2_top, .latest2_bottom {height:1px; background: #A3C5C7; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest3_top, .latest3_bottom {height:1px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest4_top, .latest4_bottom {height:2px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest2_bottom, .latest3_bottom, .latest4_bottom {background: #E1ECE1;}
+.latest_head {background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_box {background: #E1ECE1; border-right:1px solid #888; border-left:1px solid #888;}
+
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+   
+/* - white - */
+div.white {
+	background-color: #FFFFFF;
+	font-size: 11px;
+	color: black;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.white a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+div.white th {
+	color: black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.white h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: black;
+}
+
+div.white p {
+	font-size: 11px;
+	color: black;
+}
+
+/* - green - */
+div.green {
+	background-color: #8fbca6;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.green a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.green th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.green h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.green p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - blue - */
+div.blue {
+	background-color: #6495ed;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.blue a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.blue th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.blue h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.blue p {
+	font-size: 11px;
+	color: white;
+}
+
+/* - darkgreen - */
+div.darkgreen {
+	background-color: #C6DDC6;
+	color: #669966;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.darkgreen a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #669966;
+}
+
+div.darkgreen th {
+	color: #669966;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.darkgreen h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #669966;
+}
+
+div.darkgreen p {
+	font-size: 11px;
+	color: #669966;
+}
+
+/* - brown - */
+div.brown {
+	background-color: #ECD9C8;
+	color: #9C6834;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.brown a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.brown th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.brown h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.brown p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - khaki - */
+div.khaki {
+	background-color: #F0E68C;
+	color: Black;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.khaki a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.khaki th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.khaki h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.khaki p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - yellow - */
+div.yellow {
+	background-color: #FFFFCE;
+	color: Black;
+	font-size: 11px;;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.yellow a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.yellow th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.yellow h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.yellow p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - orange - */
+div.orange {
+	background-color: #ff8c00;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.orange a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.orange th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.orange h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.orange p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - red - */
+div.red {
+	background-color: #C30;
+	color: #FFFFFF;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.red a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+div.red th {
+	color: #FFFFFF;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.red h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #FFFFFF;
+}
+
+div.red p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+/* - gray - */
+div.gray {
+	background-color: #dcdcdc;
+	color: #464646;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.gray a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #464646;
+}
+
+div.gray th {
+	color: #464646;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.gray h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #464646;
+}
+
+div.gray p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+.attachbox {
+	background-color: #FAFAFA;
+	border-color: #A9B8C2;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	color: #4B5C77;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 10px 5px 0 5px;
+	padding: 4px;
+	width: 95%;
+}
+
+.attachcontent {
+	background: #FAFAFA;
+	border: 1px solid #A9B8C2;
+	color: #4B5C77;
+	font: 0.85em normal Verdana, "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	margin: 2px 0px 0px 5px;
+	padding: 5px;
+	width: 95%;
+}
+
+.attachtitle {
+	background: #FFFFF0 url('images/bbc_zip.gif') no-repeat right;
+	border: 1px solid #A9B8C2;
+	margin: 10px 5px 0 5px;
+	color: #333333;
+	font: 1.0em normal Verdana, "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	margin: 5px 0px 0px 5px;
+	padding: 5px;
+	width: 95%;
+}
+
+.attachwrapper {
+	background: #FFFFF0;
+	border: solid 1px #A9B8C2;
+	clear: both;
+	margin: 5px 5px;
+	width: 95%;
+}
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+   
+

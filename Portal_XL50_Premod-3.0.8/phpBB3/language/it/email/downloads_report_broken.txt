@@ -1,0 +1,13 @@
+Oggetto: Download interrotto
+
+Ciao {USERNAME},
+
+ricevi questa email da {REPORTER} come notifica di un download interrotto su {SITENAME}.
+Usa il seguente link per controllare il report:
+
+---------------------------
+{U_DOWNLOAD}
+{REPORT_NOTIFY_TEXT}
+---------------------------
+
+{BOARD_EMAIL}

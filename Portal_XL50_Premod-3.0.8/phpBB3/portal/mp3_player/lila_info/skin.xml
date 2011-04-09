@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<movie width="200" height="55" framerate="31" version="7">
+	
+	<frame>
+		
+		<library>
+			
+			<clip id="previous0" import="library/previous0.png" />
+			<clip id="previous1" import="library/previous1.png" />
+			<clip id="play0" import="library/play0.png" />
+			<clip id="play1" import="library/play1.png" />
+			<clip id="pause0" import="library/pause0.png" />
+			<clip id="pause1" import="library/pause1.png" />
+			<clip id="stop0" import="library/stop0.png" />
+			<clip id="stop1" import="library/stop1.png" />
+			<clip id="next0" import="library/next0.png" />
+			<clip id="next1" import="library/next1.png" />
+			<clip id="loadprogress0" import="library/loadprogress0.png" />
+			<clip id="loadprogress1" import="library/loadprogress1.png" />
+			<clip id="playprogress0" import="library/playprogress0.png" />
+			<clip id="playprogress1" import="library/playprogress1.png" />
+			<clip id="volumebar" import="library/volumebar.png" />
+			<clip id="volume0" import="library/volume0.png" />
+			<clip id="volume1" import="library/volume1.png" />
+			<clip id="background" import="library/background.png" />
+			<clip id="foreground" import="library/foreground.png" />
+			<font id="emffFont" import="library/VeraMono.ttf" />
+			
+			<clip id="previous">
+				<frame name="_up">
+					<place id="previous0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="previous1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			<clip id="play">
+				<frame name="_up">
+					<place id="play0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="play1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			<clip id="pause">
+				<frame name="_up">
+					<place id="pause0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="pause1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			<clip id="stop">
+				<frame name="_up">
+					<place id="stop0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="stop1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			<clip id="next">
+				<frame name="_up">
+					<place id="next0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="next1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			
+			
+			<clip id="playprogress">
+				<frame name="_up">
+					<place id="playprogress0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="playprogress1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			<clip id="volume">
+				<frame name="_up">
+					<place id="volume0" depth="1" />
+					<stop />
+				</frame>
+				<frame name="_over">
+					<place id="volume1" depth="1" />
+					<stop />
+				</frame>
+			</clip>
+			
+			
+			
+		</library>
+		
+		<place id="background" name="backgroundMC" x="0" y="0" depth="0" />
+		
+		
+		
+		<place id="loadprogress0" name="loadprogress0MC" x="10" y="23" depth="1" />
+		<place id="loadprogress1" name="loadprogressMC" x="11" y="24" depth="2" />
+		<place id="volumebar" name="volumebarMC" x="129" y="40" depth="3" />
+		
+		<place id="previous" name="previousMC" x="10" y="34" depth="4" />
+		<place id="play" name="playMC" x="33" y="34" depth="5" />
+		<place id="pause" name="pauseMC" x="56" y="34" depth="6" />
+		<place id="stop" name="stopMC" x="79" y="34" depth="7" />
+		<place id="next" name="nextMC" x="102" y="34" depth="8" />
+		
+		<place id="volume" name="volumeMC" x="176" y="37" depth="9" />
+		<place id="playprogress" name="playprogressMC" x="10" y="21" depth="10" />
+		
+		
+		
+		<place id="foreground" name="foregroundMC" x="0" y="0" depth="100" />
+		
+	</frame>
+	
+</movie>

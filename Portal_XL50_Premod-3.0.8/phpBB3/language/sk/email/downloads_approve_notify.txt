@@ -1,0 +1,18 @@
+Subject: Nový Download
+
+Ahoj {USERNAME},
+
+Dostal si tento meil kvôli novému alebo editovanému downloadu "{SITENAME}" v kategórii "{CATEGORY}" ktorý musí byť schválený:
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Ak chceš schváliť toto zadanie klikni na nasledujúci link:
+
+{U_APPROVE}
+
+Toto upozorňovanie o nových alebo editovaných downloadoch si môžeš vždy zmeniť prestavením zadaní v tvojom profile Downloady.
+
+{BOARD_EMAIL}

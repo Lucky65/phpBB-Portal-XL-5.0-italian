@@ -1,0 +1,21 @@
+Subject: Promemoria da "{SITENAME}"! 
+
+Caro {USERNAME},
+
+Ti stiamo scrivendo perche' abbiamo notato che hai registrato un account su {SITENAME} poco tempo fa.
+
+Sebbene il tuo account sia attivo, ci risulta che non sia ancora stato eseguito il primo accesso.
+
+Qui sotto troverai per tua utilita' e convenienza i riferimenti all'utenza ed all'indirizzo del forum.
+----------------------------
+ Utente: {USERNAME}
+ Password: *
+
+ Indirizzo: {U_BOARD}
+----------------------------
+
+* Prego notare che la password e' stata criptata nel nostro database e non ci e' possibile recuperarla. Se hai dimenticato la password puoi richiederne una nuova che sara' attivata come hai gia' fatto per la precedente.
+
+Ti aspettiamo quanto prima su {SITENAME}.
+
+{EMAIL_SIG}

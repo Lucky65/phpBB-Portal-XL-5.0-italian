@@ -1,0 +1,49 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<tr>
+    <th colspan="2" align="center"><h6>{L_ARCADE_LEADERS}</h6></th>
+</tr>
+<tr>
+    <td class="row1" colspan="2" valign="top">
+        <!-- IF .arcade_leaders -->
+        <div align="center" style="margin: 4px; font-size: 10px;">				
+            <!-- BEGIN arcade_leaders -->
+                <!-- IF arcade_leaders.ARCADE_LEADERS_ACTUAL_RANK <= 3 --><div style="float: left; width: {ARCADE_LEADERS_WIDTH}%"><!-- ENDIF --><!-- IF arcade_leaders.ARCADE_LEADERS_IMAGE --><img src="{arcade_leaders.ARCADE_LEADERS_IMAGE}" alt="{arcade_leaders.ARCADE_LEADERS_IMAGE_ALT}" style="vertical-align: middle;" /><br /><!-- ENDIF -->&nbsp;&nbsp;{arcade_leaders.ARCADE_LEADERS_RANK}:&nbsp;{arcade_leaders.ARCADE_LEADERS}&nbsp;({arcade_leaders.VICTORIES})<!-- IF arcade_leaders.ARCADE_LEADERS_ACTUAL_RANK <= 3 --></div><!-- ELSE --><br /><!-- ENDIF --><!-- IF arcade_leaders.ARCADE_LEADERS_ACTUAL_RANK == 3 and not arcade_leaders.S_LAST_ROW --><br style="clear:both" /><!-- ENDIF -->
+            <!-- END arcade_leaders -->
+        </div>
+        <br style="clear:both" />			
+        <!-- ENDIF -->
+    </td>
+<tr>
+<tr>
+    <td class="row1">&nbsp;</td>
+</tr>
+<tr>
+    <th width="40%" align="center"><h6>{L_ARCADE_NEWEST_GAMES}</h6></th>
+    <th align="center"><h6>{L_ARCADE_LATEST_HIGHSCORES}</h6></th>
+</tr>
+<tr>
+    <td class="row1" valign="top">
+        <!-- BEGIN newest_games -->
+            <p style="margin: 4px; font-size: 10px;"><!-- IF newest_games.GAME_IMAGE --><a href="{newest_games.U_GAME_PLAY}"><img src="{newest_games.GAME_IMAGE}" alt="{newest_games.GAME_NAME}" width="20" height="20" style="vertical-align: middle;" /></a><!-- ENDIF -->&nbsp;<a href="{newest_games.U_GAME_PLAY}">{newest_games.GAME_NAME}</a></p>
+        <!-- BEGINELSE -->
+            <p style="text-align: center;">{L_ARCADE_NO_GAMES}</p>
+        <!-- END newest_games -->	
+    </td>
+    <td class="row1" valign="top">
+        <div align="left">
+            <!-- IF .latest_scores -->
+            <ul>
+                <!-- BEGIN latest_scores -->
+                <li><p style="font-size: 10px;"><span>{latest_scores.HEADING_CHAMP_SCORE}</span> {latest_scores.HEADING_CHAMP}</p></li>
+                <!-- END latest_scores -->
+            </ul>
+            <!-- ELSE -->
+                <p style="text-align: center;">{L_ARCADE_NO_LATEST_HIGHSCORES}</p>
+            <!-- ENDIF -->
+        </div>
+    </td>
+</tr>
+<tr>
+	<td class="row1" colspan="2" align="center"><a href="{U_ARCADE}" title="{L_ARCADE_EXPLAIN}">{L_ARCADE}</a></td>
+</tr>
+</table>

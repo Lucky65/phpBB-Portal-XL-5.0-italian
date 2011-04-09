@@ -1,0 +1,16 @@
+Subject: Bola pridaná nová udalosť do kalendára
+
+Hello {USERNAME},
+
+Udalosť "{EVENT_SUBJECT}" bola pridaná nová udalosť do kalendára.
+
+Ak chcete aby som zobrazil kalendár, kliknite na nasledujúci odkaz:
+{U_CALENDAR}
+
+Ak chcete aby som zobrazil túto udalosť, kliknite na nasledujúci odkaz:
+{U_EVENT}
+
+Ak si už neželáte dostávať maily o novinkách kliknite na nasledujúci odkaz:
+{U_UNWATCH_CALENDAR}
+
+{EMAIL_SIG}

@@ -1,0 +1,1114 @@
+/*  
+    --------------------------------------------------------------
+* @name portal_adds.css
+* @package phpBB3 Portal XL
+* @version $Id: portal_adds.css,v 1.3 2009/05/19 18:12:35 damysterious Exp $
+*
+* @copyright (c) 2007, 2009 Portal XL Group
+* @license http://opensource.org/licenses/gpl-2.0.php The GNU General Public License (GPL)
+    --------------------------------------------------------------
+*/
+
+/* Misc layout styles
+---------------------------------------- */
+/* column[1-2] styles are containers for two column layouts 
+   Also see tweaks.css */
+.column1 {
+	float: left;
+	clear: left;
+	width: 49%;
+}
+
+.column2 {
+	float: right;
+	clear: right;
+	width: 49%;
+}
+
+/* added mods changes */
+.rtl .icon-download, .rtl .icon-hacklist, .rtl .icon-tracker, .rtl .icon-gallery, .rtl .icon-toplist {
+	background-position: 100% 50%;
+	padding: 1px 17px 0 0;
+}
+
+.icon-contact, .icon-download, .icon-hacklist, .icon-tracker, .icon-toplist {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding: 1px 0 0 17px;
+}
+
+.icon-contact					{ background-image: url('images/icon_contact.gif'); }
+.icon-download					{ background-image: url('images/icon_dl.gif'); }
+.icon-hacklist					{ background-image: url('images/icon_hl.gif'); }
+.icon-tracker					{ background-image: url('images/icon_bt.gif'); }
+.icon-kb						{ background-image: url('images/icon_kb.gif'); }
+.icon-toplist					{ background-image: url('images/icon_toplist.gif'); }
+
+/* GYM Sitemaps & RSS - www.phpbb-seo.com */
+div.gymsublist {
+	display:block;
+	position:relative;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:10px;
+	padding-right:0;
+	margin:0;
+}
+div.gymsublist ul {
+	display:block;
+	position:relative;
+	height:1%;
+	padding-left:30px;
+}
+div.gymsublist ul li {
+	display:block;
+	position:relative;
+	line-height:18px;
+	font-size:11px;
+}
+/* GYM Sitemaps & RSS - www.phpbb-seo.com */
+
+/* added mods changes */
+
+/*  
+.row1, .row2, .row3 {
+filter:alpha(opacity=50);
+-moz-opacity: 0.5; 
+opacity: 0.5;
+-khtml-opacity: 0.5;
+}
+*/
+
+a {
+outline: none;
+}
+
+select {
+	font-size: 9px;
+	font-weight: normal;
+	padding: 1px;
+}
+
+h5{
+	/* Portal block titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	font-size: 1.1em;
+}
+
+h6 {
+	/* Forum and topic list titles */
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, Sans-serif;
+	color: #115098;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 1.05em;
+	margin-top: 5px;
+	margin-bottom: 3px;
+	padding-bottom: 2px;
+}
+
+div#portal_container{
+	border: 0px solid #ccc;
+}
+
+div#toolTip {
+	position: absolute;
+	z-index: 1000;
+	width: auto;
+	background: #FFFFFF;
+	border: 1px solid #BFC1CF;
+	text-align: center;
+	padding: 5px;
+	min-height: 1em;
+}
+
+div#toolTip p {
+	margin: 0px;
+	padding: 0px;
+	color: #28313F;
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.acronym, .acronym a:link {
+	border-bottom: 1px #BD5121 dashed;
+	color: #459B37;
+	cursor: help;
+	font-style: italic;
+}
+
+.subforum.read {  
+	background: url(images/icon_post_target.gif) center left no-repeat;  
+    padding-left: 12px;  
+ }  
+.subforum.unread {  
+    background: url(images/icon_post_target_unread.gif) center left no-repeat;  
+   	padding-left: 12px;  
+}  
+
+.row-post-bottom {
+	background: #FFF;
+	border: 1px solid #A9B8C2;
+	min-height: 10px;
+	vertical-align: middle;
+	line-height: 1.2em;
+	white-space: nowrap;
+	padding: 1px
+}
+
+.postbody-block {
+	font-family: "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	font-size: 1.0em;
+	line-height: 1.1em;
+}
+
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+dl.extra-box {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	font-size: 1em; 
+	display: block;
+	height: 77px;
+	width: 210px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+dl.extra-box dd a {
+	color: #FFFFFF !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding-left: 10px;
+	padding-right: 50px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dd.fileformat { padding-left: 10px; padding-top: 5px; }
+
+dl.extra-box dd.fileformat label { font-size: 1.1em; color: #FFF; }
+
+dl.extra-box dt a {
+	color: #333333 !important;
+	display: block;
+	font-weight: bold;
+	font-size: 1em; 
+	padding: 10px 0 5px 10px;
+	text-decoration: none !important;
+}
+
+dl.extra-box dt a:hover { font-size: 1.1em; color: #000000 !important; text-decoration: none; }
+
+dl.extra-box-images {
+	font-size: 1em; 
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 5px;
+}
+
+dl.text dt { font-weight: bold; font-size: 1em; margin-top: 1.1em; }
+
+dl.text, ul.download-update { font-size: 1em; }
+
+/* Menu  listing */
+ul.menu { border-top: 1px solid #FFFFFF; list-style: none; }
+
+ul.menu li {
+	border-bottom: 1px solid #CCCCCC;
+	margin: 0;
+	padding: 5px 0 4px 0;
+}
+
+ul.menu li.last { border-bottom: none; }
+
+.head1 { font-size: 1.1em; padding: 10px 0 0 10px; }
+
+.head2 { font-size: 1.1em; padding: 15px 0 0 5px; }
+
+/* Extras column */
+#extras {
+	font-size: 1em; 
+	float: right;
+	margin: 0px;
+	text-align: left;
+	width: 215px;
+}
+
+dl.linkblue {
+	background-image: url("{T_THEME_PATH}/images/bg_link_blue.png");
+}
+
+dl.linkred {
+	background-image: url("{T_THEME_PATH}/images/bg_link_red.png");
+}
+
+dl.download {
+	background-image: url("{T_THEME_PATH}/images/bg_download_blue.png");
+}
+	
+dl.download2 {
+	background-image: url("{T_THEME_PATH}/images/bg_download_orange.png");
+}
+
+dl.downloadr {
+	background-image: url("{T_THEME_PATH}/images/bg_download_green.png");
+}
+
+dl.downloadred {
+	background-image: url("{T_THEME_PATH}/images/bg_download_red.png");
+}
+	
+dl.downloadb {
+	background-image: url("{T_THEME_PATH}/images/bg_download_green.png");
+}
+
+dl.download-contrib {
+	background-image: url("{T_THEME_PATH}/images/bg_download_orange.png");
+}
+
+div.mini-panel {
+	font-size: 1em; 
+	color: #333333;
+	background-color: #ebebeb;
+	margin-bottom: 5px;
+	padding: 0 5px;
+	width: 200px;
+	float: right;
+}
+
+div.mini-panel h3 {
+	font-size: 1em; 
+	color: #333333;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+}
+
+div.mini-panel p { font-size: 1em; margin: 3px 0; }
+
+div.mini-panel span.corners-top, div.mini-panel span.corners-bottom { margin: 0 -10px; }
+/* --------------------------------------------------------------
+   special tags own use
+   -------------------------------------------------------------- */
+
+/* CSS Inner Round Corners center portal pages inner block background
+----------------------------------------*/
+.xldown1_top, .xldown2_top, .xldown3_top, .xldown4_top, .xldown2_bottom, .xldown3_bottom, .xldown4_bottom{font-size:1px; overflow:hidden; display:block;}
+.xldown1_top {height:1px; background:#aaa; margin:0 5px;}
+.xldown2_top, .xldown2_bottom {height:1px; background: white; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.xldown3_top, .xldown3_bottom {height:1px; background: white; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.xldown4_top, .xldown4_bottom {height:2px; background: white; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.xldown2_bottom, .xldown3_bottom, .xldown4_bottom {background: white;}
+.xldown_head {background: white; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.xldown_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.xldown_box {background: white; border-right:1px solid #888; border-left:1px solid #888;}
+.xldown_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+ 
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.announce1_top, .announce2_top, .announce3_top, .announce4_top, .announce2_bottom, .announce3_bottom, .announce4_bottom{font-size:1px; overflow:hidden; display:block;}
+.announce1_top {height:1px; background:#aaa; margin:0 5px;}
+.announce2_top, .announce2_bottom {height:1px; background: #A3C5C7; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.announce3_top, .announce3_bottom {height:1px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.announce4_top, .announce4_bottom {height:2px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.announce2_bottom, .announce3_bottom, .announce4_bottom {background: #E1ECE1;}
+.announce_head {background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.announce_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.announce_box {background: #E1ECE1; border-right:1px solid #888; border-left:1px solid #888;}
+.announce_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center news block
+----------------------------------------*/
+.news1_top, .news2_top, .news3_top, .news4_top, .news2_bottom, .news3_bottom, .news4_bottom{font-size:1px; overflow:hidden; display:block;}
+.news1_top {height:1px; background:#aaa; margin:0 5px;}
+.news2_top, .news2_bottom {height:1px; background: #F0E68C; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.news3_top, .news3_bottom {height:1px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.news4_top, .news4_bottom {height:2px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.news2_bottom, .news3_bottom, .news4_bottom {background: #FFFCE8;}
+.news_head {background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.news_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.news_box {background: #FFFCE8; border-right:1px solid #888; border-left:1px solid #888;}
+.news_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center news compact block
+----------------------------------------*/
+.news_compact1_top, .news_compact2_top, .news_compact3_top, .news_compact4_top, .news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom{font-size:1px; overflow:hidden; display:block;}
+.news_compact1_top {height:1px; background:#aaa; margin:0 5px;}
+.news_compact2_top, .news_compact2_bottom {height:1px; background: #89B2D2; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.news_compact3_top, .news_compact3_bottom {height:1px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.news_compact4_top, .news_compact4_bottom {height:2px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.news_compact2_bottom, .news_compact3_bottom, .news_compact4_bottom {background: #FFFFF0;}
+.news_compact_head {background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.news_compact_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.news_compact_box {background: #FFFFF0; border-right:1px solid #888; border-left:1px solid #888;}
+.news_compact_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center announcement block
+----------------------------------------*/
+.attach1_top, .attach2_top, .attach3_top, .attach4_top, .attach2_bottom, .attach3_bottom, .attach4_bottom{font-size:1px; overflow:hidden; display:block;}
+.attach1_top {height:1px; background:#aaa; margin:0 5px;}
+.attach2_top, .attach2_bottom {height:1px; background: #E9E8CD; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.attach3_top, .attach3_bottom {height:1px; background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.attach4_top, .attach4_bottom {height:2px; background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.attach2_bottom, .attach3_bottom, .attach4_bottom {background: #F1F1E0;}
+.attach_head {background: #E9E8CD; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.attach_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.attach_box {background: #F1F1E0; border-right:1px solid #888; border-left:1px solid #888;}
+.attach_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest_topics block
+----------------------------------------*/
+.latest_topics1_top, .latest_topics2_top, .latest_topics3_top, .latest_topics4_top, .latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest_topics1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest_topics2_top, .latest_topics2_bottom {height:1px; background: #F0E68C; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest_topics3_top, .latest_topics3_bottom {height:1px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest_topics4_top, .latest_topics4_bottom {height:2px; background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest_topics2_bottom, .latest_topics3_bottom, .latest_topics4_bottom {background: #FFFCE8;}
+.latest_topics_head {background: #F0E68C; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_topics_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_topics_box {background: #FFFCE8; border-right:1px solid #888; border-left:1px solid #888;}
+.latest_topics_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest_hot block
+----------------------------------------*/
+.latest_hot1_top, .latest_hot2_top, .latest_hot3_top, .latest_hot4_top, .latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest_hot1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest_hot2_top, .latest_hot2_bottom {height:1px; background: #89B2D2; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest_hot3_top, .latest_hot3_bottom {height:1px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest_hot4_top, .latest_hot4_bottom {height:2px; background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest_hot2_bottom, .latest_hot3_bottom, .latest_hot4_bottom {background: #F1F1E0;}
+.latest_hot_head {background: #89B2D2; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_hot_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_hot_box {background: #F1F1E0; border-right:1px solid #888; border-left:1px solid #888;}
+.latest_hot_box div {margin: 0px 5px 0px 5px; line-height: 1.5em;}
+
+/* CSS Inner Round Corners center recent latest block
+----------------------------------------*/
+.latest1_top, .latest2_top, .latest3_top, .latest4_top, .latest2_bottom, .latest3_bottom, .latest4_bottom{font-size:1px; overflow:hidden; display:block;}
+.latest1_top {height:1px; background:#aaa; margin:0 5px;}
+.latest2_top, .latest2_bottom {height:1px; background: #A3C5C7; border-right:2px solid #aaa; border-left:2px solid #aaa; margin:0 3px;}
+.latest3_top, .latest3_bottom {height:1px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 2px;}
+.latest4_top, .latest4_bottom {height:2px; background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa; margin:0 1px;}
+.latest2_bottom, .latest3_bottom, .latest4_bottom {background: #E1ECE1;}
+.latest_head {background: #A3C5C7; border-right:1px solid #aaa; border-left:1px solid #aaa;}
+.latest_head h4 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.latest_box {background: #E1ECE1; border-right:1px solid #888; border-left:1px solid #888;}
+
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+   
+/* - white - */
+div.white {
+	background-color: #FFFFFF;
+	font-size: 11px;
+	color: black;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.white a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+div.white th {
+	color: black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.white h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: black;
+}
+
+div.white p {
+	font-size: 11px;
+	color: black;
+}
+
+/* - green - */
+div.green {
+	background-color: #8fbca6;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.green a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.green th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.green h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.green p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - blue - */
+div.blue {
+	background-color: #6495ed;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.blue a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.blue th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.blue h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.blue p {
+	font-size: 11px;
+	color: white;
+}
+
+/* - darkgreen - */
+div.darkgreen {
+	background-color: #C6DDC6;
+	color: #669966;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.darkgreen a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #669966;
+}
+
+div.darkgreen th {
+	color: #669966;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.darkgreen h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #669966;
+}
+
+div.darkgreen p {
+	font-size: 11px;
+	color: #669966;
+}
+
+/* - brown - */
+div.brown {
+	background-color: #ECD9C8;
+	color: #9C6834;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.brown a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.brown th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.brown h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.brown p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - khaki - */
+div.khaki {
+	background-color: #F0E68C;
+	color: Black;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.khaki a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.khaki th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.khaki h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.khaki p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - yellow - */
+div.yellow {
+	background-color: #FFFFCE;
+	color: Black;
+	font-size: 11px;;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.yellow a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: Black;
+}
+
+div.yellow th {
+	color: Black;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.yellow h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: Black;
+}
+
+div.yellow p {
+	font-size: 11px;
+	color: Black;
+}
+
+/* - orange - */
+div.orange {
+	background-color: #ff8c00;
+	color: white;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.orange a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+}
+
+div.orange th {
+	color: white;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.orange h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: white;
+}
+
+div.orange p {
+	font-size: 11px;
+	color: white;	
+}
+
+/* - red - */
+div.red {
+	background-color: #C30;
+	color: #FFFFFF;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.red a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+div.red th {
+	color: #FFFFFF;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.red h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #FFFFFF;
+}
+
+div.red p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+/* - gray - */
+div.gray {
+	background-color: #dcdcdc;
+	color: #464646;
+	font-size: 11px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 5px;
+	border: 1px double #708090;
+	min-height: 1em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.gray a {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	color: #464646;
+}
+
+div.gray th {
+	color: #464646;
+	font-size: 11px;
+	font-style: normal;
+	margin: 5px 0 5px 0;
+}
+
+div.gray h3 {
+	border-bottom: 1px solid #c0d8cc;
+	margin: 0;
+	padding: 5px 0 4px 0;
+	font-size: 11px;
+	text-align: left; 
+	color: #464646;
+}
+
+div.gray p {
+	font-size: 11px;
+	color: #FFFFFF;
+}
+/* --------------------------------------------------------------
+   additional Markup Styles
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+.attachbox {
+	background-color: #FAFAFA;
+	border-color: #A9B8C2;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	color: #4B5C77;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 10px 5px 0 5px;
+	padding: 4px;
+	width: 95%;
+}
+
+.attachcontent {
+	background: #FAFAFA;
+	border: 1px solid #A9B8C2;
+	color: #4B5C77;
+	font: 0.85em normal Verdana, "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	margin: 2px 0px 0px 5px;
+	padding: 5px;
+	width: 95%;
+}
+
+.attachtitle {
+	background: #FFFFF0 url('images/bbc_zip.gif') no-repeat right;
+	border: 1px solid #A9B8C2;
+	margin: 10px 5px 0 5px;
+	color: #333333;
+	font: 1.0em normal Verdana, "Lucida Grande", "Trebuchet MS", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	margin: 5px 0px 0px 5px;
+	padding: 5px;
+	width: 95%;
+}
+
+.attachwrapper {
+	background: #FFFFF0 url("/images/archive.png") center left no-repeat;
+	border: solid 1px #A9B8C2;
+	clear: both;
+	margin: 5px 5px;
+	padding-left: 55px;
+	width: 95%;
+}
+/* --------------------------------------------------------------
+   Attachment Box in news/announcemnt
+   -------------------------------------------------------------- */
+   
+/* --------------------------------------------------------------
+   phpbb Calendar Version 0.1.0
+   -------------------------------------------------------------- */
+/* uses border-top-color = .bg3/.row3 background-color
+ (the line between events in the month display) */
+hr.hrCal { border-top-color: #cadceb; }
+
+table.table_minical {
+	voice-family: "\"}\""; /* Tantek hack */
+	voice-family: inherit;
+	width: 99%; /* IE < 6 browsers */
+	width: 100%;
+}
+
+/* uses background-color of .bg1/.row1
+   uses border-top-color = .forumbg background-color
+   (used to display events in calendar day view) */ 
+table.table1 tbody td.bg1_calDay {
+	background-color: #ECECEC;
+	border-top-color: #12A3EB;
+	padding-bottom: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 10px;
+}
+
+/* uses background-color of .bg1/.row1
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg1_calMon {
+	background-color: #ECECEC;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+}
+
+/* uses background-color of .bg2/.row2
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg2_calMon {
+	background-color: #DCE1E5;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+}
+
+/* uses background-color of .bg3/.row3
+   uses border-top-color = .forumbg background-color
+   (used to display negative space in calendar day view) */ 
+table.table1 tbody td.bg3_calDay { background-color: #C0C8D0; border-top-color: #12A3EB; }
+
+/* uses background-color of .bg3/.row3
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg3_calMon {
+	background-color: #C0C8D0;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+}
+
+/* uses background-color of .bg3/.row3
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg3_calMonH{ background-color: #C0C8D0; font-size: 10px; }
+
+/* uses background-color of .bg4/.bg4 for subsilver2 is defined below
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg4_calMonH{ background-color: #75a9d7; font-size: 10px; }
+
+/* colours of bg2 = row2, bg3 = row3, bg4 is just slightly darker then bg3 
+  (used in subsilver2's calendar headers and hardcoded in function_calendar.php for prosilver only,
+   expecially important for the minical portal block) */
+.bg1, .bg1 a:link { background-color: #ECECEC; font-weight: bold; }
+.bg2, .bg2 a:link { background-color: #DCE1E5; font-weight: bold; }
+.bg3, .bg3 a:link { background-color: #C0C8D0; font-weight: bold; }
+.bg4, .bg4 a:link { background-color: #75a9d7; font-weight: bold; }
+
+/* uses color from h1
+   (calendar header previous and next links) */
+.calH1 { color: #FFFFFF; font-size: 200%; font-weight: bold; }
+
+/* The from and to times take up a lot of 
+  space in the calendar display.
+  Use this to shrink them */
+.smCalText{ font-size:85%; }
+
+ul.profile-icons li.edit-all-icon	{ width: {IMG_ICON_CALENDAR_EDIT_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_EDIT_ALL_HEIGHT}px; }
+ul.profile-icons li.delete-all-icon	{ width: {IMG_ICON_CALENDAR_DELETE_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_DELETE_ALL_HEIGHT}px; }
+
+.edit-all-icon, .edit-all-icon a			{ background-image: url("{T_IMAGESET_LANG_PATH}/icon_calendar_edit_all.gif"); }
+.delete-all-icon, .delete-all-icon a			{ background-image: url("{T_IMAGESET_LANG_PATH}/icon_calendar_delete_all.gif"); }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span    { background: transparent none 0 0 no-repeat; }
+.calendar-day-icon span    { background: transparent none 0 0 no-repeat; }
+.calendar-week-icon span   { background: transparent none 0 0 no-repeat; }
+.calendar-month-icon span  { background: transparent none 0 0 no-repeat; }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+   
+   Note the "text-align: left" was added because there were a few instances where the icons were cut in half... 
+   adding the text align property helps reserve enough space to fully display the icon.
+*/
+.buttons div.calendar-new-icon		{ width: 16px; height: 16px; text-align: left; float: left; margin: 2px 0 2px 2px; }
+.buttons div.calendar-day-icon		{ width: 16px; height: 16px; text-align: left; float: left; margin: 2px 0 2px 2px; }
+.buttons div.calendar-week-icon		{ width: 16px; height: 16px; text-align: left; float: left; margin: 2px 0 2px 2px; }
+.buttons div.calendar-month-icon	{ width: 16px; height: 16px; text-align: left; float: left; margin: 2px 0 2px 2px; }
+
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span 	{ background-image: url("{T_IMAGESET_LANG_PATH}/calendar_new_star_icon.gif"); float: left; margin-left: 5px; background-repeat: no-repeat;}
+.calendar-day-icon span     { background-image: url("{T_IMAGESET_LANG_PATH}/calendar_day_icon.gif"); float: left; margin-left: 5px; background-repeat: no-repeat;}
+.calendar-week-icon span    { background-image: url("{T_IMAGESET_LANG_PATH}/calendar_week_icon.gif"); float: left; margin-left: 5px; background-repeat: no-repeat;}
+.calendar-month-icon span   { background-image: url("{T_IMAGESET_LANG_PATH}/calendar_month_icon.gif"); float: left; margin-left: 5px; background-repeat: no-repeat;}
+/* --------------------------------------------------------------
+   phpbb Calendar Version 0.1.0
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   additional added custom bbcode css
+   -------------------------------------------------------------- */
+table.stoker {
+	background-color: #ffffe0;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	color: #fff;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: auto;
+}
+
+table.stoker td {
+	background-color: #CCC;
+	border: 1px #fff solid;
+	color: #000;
+	padding: 4px 20px 4px 20px;
+	text-align: left;
+}
+
+table.stoker td.headline {
+	background-color: #007901;
+	border-bottom: 2px #fff solid;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 4px;
+	text-align: center;
+}
+
+table.stoker td.headline:hover {
+	background-color: #005501;
+	color: #fff;
+	text-decoration: none;
+}
+
+table.stoker td:hover {
+	background-color: #556b2f;
+	color: #FFF;
+	text-decoration: underline;
+}
+/* --------------------------------------------------------------
+   additional added custom bbcode css
+   -------------------------------------------------------------- */
+   
+/* --------------------------------------------------------------
+   Guest Hide BBCode MOD version 1.4.0 of 14.04.2009
+   -------------------------------------------------------------- */
+
+/* FOR USER */
+.HideBlockA {
+  background-color: #FFFFCC;
+  border: 2px dotted #DEDEDE;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* FOR GUEST */
+.HideBlockB {
+  background-color: #F2F2F2;
+  border: 2px dotted #DEDEDE;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* LINE */
+hr.HideBlockLine {
+  margin: 3px 0px 3px 0px;
+  height: 2px;
+  background-color: #DEDEDE;
+  border-width: 0px;
+  color: #DEDEDE; /* IE6 fix */
+}
+/* --------------------------------------------------------------
+   Guest Hide BBCode MOD version 1.4.0 of 14.04.2009
+   -------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+   Arcade tooltip copyright (c) 2008 http://www.JeffRusso.net
+   -------------------------------------------------------------- */
+a.tooltip {
+	font-weight: bold;
+	position: relative;
+	text-decoration: none;
+}
+
+a.tooltip span {
+	position: absolute;
+	font-weight: normal;
+	border: 1px solid black;
+	background-color: #ECECEC;
+	padding: 10px;		
+	color: black;
+	width: 225px;
+	margin-top: 18px;
+	left: -9999em;
+}
+
+a.tooltip:hover {
+	visibility: visible;
+	z-index: 100;
+}
+
+a.tooltip:hover span, a.tooltip:focus span {
+	left: 60px;
+	text-decoration: none;
+}
+
+a.tooltip span.aheader {
+	width: 200px;
+}
+/* --------------------------------------------------------------
+   Arcade tooltip copyright (c) 2008 http://www.JeffRusso.net
+   -------------------------------------------------------------- */

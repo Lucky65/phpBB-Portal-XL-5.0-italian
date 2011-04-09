@@ -1,0 +1,26 @@
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="2">{L_IMPORTANT_NEWS}</td>
+</tr>-->
+<!-- BEGIN topicrow -->
+		<tr>
+		<td class="row1" width="25" align="center" valign="top">{topicrow.TOPIC_FOLDER_IMG}&nbsp;</td>
+		<td class="row1" width="100%">
+			<div class="topictitle"><!-- IF topicrow.S_UNREAD --><a href="{topicrow.U_NEWEST_POST}">{topicrow.NEWEST_POST_IMG}</a> <!-- ENDIF -->{topicrow.ATTACH_ICON_IMG} <a href="{topicrow.U_VIEW_TOPIC}">{topicrow.TOPIC_TITLE}</a></div>
+            <div class="gensmall">{topicrow.GOTO_PAGE}</div>
+			<div class="topicdetails">{topicrow.LAST_POST_TIME}<br />
+			<!-- IF topicrow.U_LAST_POST_AUTHOR -->
+			<a href="{topicrow.U_LAST_POST_AUTHOR}" <!-- IF topicrow.LAST_POST_AUTHOR_COLOUR --> style="color: {topicrow.LAST_POST_AUTHOR_COLOUR}"<!-- ENDIF -->>{topicrow.LAST_POST_AUTHOR}</a>
+			<!-- ELSE -->
+			{topicrow.LAST_POST_AUTHOR}
+			<!-- ENDIF -->
+			<a href="{topicrow.U_LAST_POST}">{topicrow.LAST_POST_IMG}</a>
+			</div>
+		</td>
+	</tr>
+<!-- BEGINELSE -->
+	<tr class="row1">
+		<td align="center" colspan="3">{L_NO_IMPORTANT_NEWS}</td>
+	</tr>
+<!-- END topicrow -->
+	</table>

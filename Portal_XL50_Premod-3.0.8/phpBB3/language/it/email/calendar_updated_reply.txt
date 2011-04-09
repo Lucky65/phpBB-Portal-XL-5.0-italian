@@ -1,0 +1,14 @@
+Subject: Risposta ad aggiornamento evento
+
+Ciao {USERNAME},
+
+Una nuova risposta ad aggiornamento evento avente come oggetto "{EVENT_SUBJECT}" aggiunta nel calendario.
+
+Per vedere il calendario visita il seguente link:
+{U_CALENDAR}, invece per vedere gli eventi visita il seguente link:
+{U_EVENT}
+
+Se non desideri piu' ricevere email per questi eventi clicca qui:
+{U_UNWATCH_CALENDAR}
+
+{EMAIL_SIG}

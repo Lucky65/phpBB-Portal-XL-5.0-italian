@@ -1,0 +1,13 @@
+Subject: Mededeling betreffende nieuwe afbeelding — „{ALBUM_NAME}“
+
+Hallo {USERNAME},
+
+Je krijgt deze notificatie omdat je je op fotoalbum "{ALBUM_NAME}" op "{SITENAME}" geabonneerd hebt. Er is een nieuwe foto ("{IMAGE_NAME}") in dit album geplaatst sinds je vorige bezoek. Je kunt de volgende link gebruiken om het fotoalbum te bekijken.
+
+{U_ALBUM}
+
+Als je je abonnement op dit fotoalbum wilt stoppen klik dan op de "Stop abonnement op album" link in het bovengenoemde forum of klik op de volgende link:
+
+{U_STOP_WATCHING_ALBUM}
+
+{EMAIL_SIG}

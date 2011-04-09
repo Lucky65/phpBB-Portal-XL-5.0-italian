@@ -1,0 +1,21 @@
+Subject: Erinnerung von "{SITENAME}"! 
+
+Hallo {USERNAME},
+
+Wir haben festgestellt, dass du vor einiger Zeit ein Benutzerkonto auf {SITENAME} registriert hast.
+
+Obwohl dein Benutzerkonto aktiviert ist, hast du dich noch nicht im Forum eingeloggt. 
+
+Hier findest du nochmal deine Benutzerdaten und die Board-URL.
+----------------------------
+Username: {USERNAME}
+Password: *
+
+Board URL: {U_BOARD}
+----------------------------
+
+* Bitte beachte, dass dein Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls du dein Passwort vergessen haben solltest, kannst du ein neues anfordern, das dann auf die gleiche Weise wie dein Benutzerkonto aktiviert wird.
+
+Wir freuen uns, dich bald auf {SITENAME} zu sehen.
+
+{EMAIL_SIG}

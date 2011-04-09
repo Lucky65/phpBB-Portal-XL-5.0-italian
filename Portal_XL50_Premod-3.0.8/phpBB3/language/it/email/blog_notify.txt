@@ -1,0 +1,10 @@
+Oggetto: {SUBJECT}
+
+Ciao {TO_USERNAME},
+
+Questo messaggio automatico inviato dalla mod blog utente ti notifica di un nuovo {TYPE} detto {NAME} e creato da {BY_USERNAME}.  Puoi vedere il blog qui:
+{U_VIEW}
+
+Se non vuoi ricevere queste notifiche clicca sul link per eliminare la tua sottoscrizione:
+
+{U_UNSUBSCRIBE}

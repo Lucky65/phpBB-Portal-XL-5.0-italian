@@ -1,0 +1,73 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+		<div><a href="{U_BACK}" style="float: right">&laquo; {L_BACK}</a></div>
+
+<h1>{L_TITLE}</h1>
+<p>{L_TITLE_EXPLAIN}</p>
+
+<!-- IF S_EDIT -->
+<fieldset>
+	<legend>{L_PORTAL_QUOTES_EDIT_HEADER}</legend>
+	<form id="acp_portal_quotes" method="post" action="{U_ACTION}">
+	<table cellspacing="1">
+	<tr> 
+	  <th colspan="2">{L_PORTAL_QUOTES_EDIT_HEADER}</th>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_QUOTE_INFO}:</strong><br /><span>{L_QUOTE_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;" width="60%"><textarea name="quote" cols="60" rows="15" id="quote">{QUOTE}</textarea></td>
+	</tr>
+	<tr>		
+   		<td class="row1" style="font-size:10px;" valign="top"><strong>{L_AUTHOR_INFO}:</strong><br /><span>{L_AUTHOR_EXPLAIN}</span></td>
+		<td class="row2" style="font-size:10px; text-align:left;"><input name="author" type="text" id="author" value="{AUTHOR}" size="45" /></td>
+	</tr>
+	</table>
+    
+	<p class="submit-buttons">
+		<input type="hidden" name="action" value="save" /><center>
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET_QUOTE}" /></center>
+	</p>
+    
+	</form>
+	</fieldset>
+
+<!-- ELSE -->
+
+<form id="acp_portal_quotes" method="post" action="{U_ACTION}">
+<fieldset>
+	<legend>{L_ACP_QUOTE_EXPLAIN}</legend>
+    
+	<table cellspacing="1">
+	<thead>
+	<tr>
+
+		<th>{L_QUOTE}</th>
+		<th>{L_AUTHOR}</th>
+		<th>{L_ACTION}</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN quote -->
+		<!-- IF quote.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+		<td style="text-align:left;">{quote.QUOTE}</td>
+		<td style="text-align:left;">{quote.AUTHOR}</td>
+		<td style="text-align:center;"><a href="{quote.U_EDIT}">{ICON_EDIT}</a> <a href="{quote.U_DELETE}">{ICON_DELETE}</a></td>
+	</tr>
+	<!-- END quote -->
+	</tbody>
+	</table>
+
+	<p align="right">
+		<br /><input class="button2" name="add" type="submit" value="{L_ADD_QUOTE}" />
+	</p>
+    
+	</fieldset>
+
+</form>
+
+<!-- ENDIF -->
+
+<!-- INCLUDE overall_footer.html -->

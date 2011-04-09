@@ -1,0 +1,91 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.dock.js'></script>
+
+<style type='text/css'>
+.dock {
+	position: relative; 
+	height: 50px; 
+	text-align: center;
+}
+.dock-container {
+	position: absolute;
+	height: 50px;
+	padding-left: 20px;
+	z-index: 100;
+}
+a.dock-item {
+	display: block;
+	width: 40px;
+	color: #000;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+}
+.dock-item img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+.dock-item span {
+	display: none; 
+	padding-left: 20px;
+}
+</style>
+				
+<table class="tablebg" cellspacing="1" width="100%">
+  <tr>
+    <td align="center" class="row1">
+                		
+<div class="dock" id="dock">
+  <div class="dock-container">
+    
+    <a class="dock-item" href="{U_PORTAL}"><img src="portal/images/dockmenu/columbia_blue.png" title="{L_PORTAL}" /></a> 
+    <a class="dock-item" href="{U_INDEX}"><img src="portal/images/dockmenu/control_panel.png" title="{L_INDEX}" /></a> 
+    <a class="dock-item" href="{U_FAQ}"><img src="portal/images/dockmenu/help.png" title="{L_FAQ}" /></a> 
+    <a class="dock-item" href="ucp.php?mode=terms"><img src="portal/images/dockmenu/internet_shortcut.png" title="{L_M_TERMS}" /></a> 
+    <!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) --><a class="dock-item" href="{U_SEARCH}"><img src="portal/images/dockmenu/hard_drive.png" title="{L_SEARCH}" /></a> <!-- ENDIF -->
+    <!-- IF U_PORTAL_PAGES --><a class="dock-item" href="{U_PORTAL_PAGES}"><img src="portal/images/dockmenu/style.png" title="{L_PAGES_LIST_TITLE}" /></a> <!-- ENDIF --> 
+    <!-- IF U_MEDIA_PLAYER --><a class="dock-item" href="{U_MEDIA_PLAYER}"><img src="portal/images/dockmenu/my_music.png" title="{L_MEDIA_PLAYER}" /></a> <!-- ENDIF -->
+    <!-- IF U_KB --><a class="dock-item" href="{U_KB}"><img src="portal/images/dockmenu/about.png" title="{L_KNOWLEDGE_BASE}" /></a> <!-- ENDIF -->
+    
+    <!-- IF not S_USER_LOGGED_IN --><a class="dock-item" href="{U_TEAM}"><img src="portal/images/dockmenu/recycle_bin_full.png" title="{L_THE_TEAM}" /></a> 
+    <!-- ELSE --><a class="dock-item" href="{U_TEAM}"><img src="portal/images/dockmenu/recycle_bin.png" title="{L_THE_TEAM}" /></a> <!-- ENDIF -->
+    
+    <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+    <a class="dock-item" href="{U_PROFILE}"><img src="portal/images/dockmenu/options.png" title="{L_PROFILE}" />
+    <!-- IF S_DISPLAY_PM --><a class="dock-item" href="{U_PRIVATEMSGS}"><img src="portal/images/dockmenu/my_documents.png" title="{PRIVATE_MESSAGE_INFO}" /></a> <!-- ENDIF -->
+    <a class="dock-item" href="{U_MEMBERLIST}"><img src="portal/images/dockmenu/my_computer.png" title="{L_MEMBERLIST}" /></a> 
+    <!-- ENDIF -->
+    
+    <a class="dock-item" href="{U_LOGIN_LOGOUT}"><img src="portal/images/dockmenu/my_network_places.png" title="{L_LOGIN_LOGOUT}" /></a> 
+    <!-- IF not S_USER_LOGGED_IN --><a class="dock-item" href="{U_REGISTER}"><img src="portal/images/dockmenu/icons.png" title="{L_REGISTER}" /></a> <!-- ENDIF -->
+            				
+  </div> 
+</div>
+			
+     </td>
+  </tr>
+</table>
+
+<!--dock menu JS options -->
+<script type="text/javascript">
+	
+	$(document).ready(
+		function()
+		{
+			$('#dock').Fisheye(
+				{
+					maxWidth: 50,
+					items: 'a',
+					itemsText: 'span',
+					container: '.dock-container',
+					itemWidth: 40,
+					proximity: 90,
+					halign : 'center'
+				}
+			)
+		}
+	);
+
+</script>

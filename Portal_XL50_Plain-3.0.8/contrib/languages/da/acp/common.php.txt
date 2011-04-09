@@ -1,0 +1,163 @@
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+	'PORTAL'								=> 'Portal',
+   	'ACP_CAT_PORTAL'           				=> 'Portal',
+   	'ACP_PORTAL'           					=> 'Portal',
+   	'ACP_PORTAL_ADMIN'           			=> 'General',
+   	'ACP_PORTAL_INFO'           			=> 'General',	
+    'ACP_PORTAL_ANNOUNCE_INFO'  			=> 'Announcements',
+    'ACP_PORTAL_NEWS_INFO'      			=> 'News',
+   	'ACP_PORTAL_RECENT_INFO'    			=> 'Recent Topics',	
+   	'ACP_PORTAL_WORDGRAPH_INFO'				=> 'Wordgraph',
+    'ACP_PORTAL_PAYPAL_INFO'        		=> 'Paypal',	
+    'ACP_PORTAL_ATTACHMENTS_NUMBER_INFO'    => 'Attachments',
+    'ACP_PORTAL_MEMBERS_INFO'               => 'Latest Members',
+    'ACP_PORTAL_POLLS_INFO'                 => 'Polls',	
+    'ACP_PORTAL_BOTS_INFO'                  => 'Visiting Bots',
+    'ACP_PORTAL_MOST_POSTER_INFO'           => 'Most Poster',
+    'ACP_PORTAL_RANDOM_INFO'                => 'Random Banners',
+    'ACP_PORTAL_WELCOME_INFO'               => 'Welcome',
+    'ACP_PORTAL_WEATHER_INFO'			    => 'Weather',
+    'ACP_PORTAL_SYNDICATE_INFO'			    => 'Syndication',
+    'ACP_PORTAL_SCROLL_MESSAGE_INFO'        => 'Scroll Message',
+    'ACP_PORTAL_METATAGS_INFO'        		=> 'Meta Tags',
+	'ACP_MANAGE_PORTAL'						=> 'Manage Portal',
+
+	// Portal XL portal blocks //
+   	'ACP_PORTAL_CAT_BLOCKS'           		=> 'Portal Blocks',
+   	'ACP_PORTAL_ADMIN_BLOCKS'           	=> 'Portal Blocks',
+	'ACP_PORTAL_BLOCKS'						=> 'Portal Blocks',
+	'ACP_MANAGE_BLOCKS'						=> 'Manage Portal Blocks',
+
+	// Portal XL index/viewtopic blocks //
+   	'ACP_PORTAL_INDEX_CAT_BLOCKS'           => 'Index Blocks',
+   	'ACP_PORTAL_INDEX_ADMIN_BLOCKS'         => 'Index Blocks',
+	'ACP_PORTAL_INDEX_BLOCKS'				=> 'Index Blocks',
+	'ACP_MANAGE_INDEX_BLOCKS'				=> 'Manage Index Blocks',
+
+	// Portal XL portal menu //
+   	'ACP_PORTAL_CAT_MENUS'           		=> 'Menus',
+   	'ACP_PORTAL_ADMIN_MENUS'           		=> 'Menus',
+	'ACP_PORTAL_MENUS'						=> 'Menus',
+	'ACP_MANAGE_MENUS'						=> 'Manage Menus',
+		
+	// Portal XL portal quotes //
+   	'ACP_PORTAL_CAT_QUOTES'           		=> 'Quotes',
+   	'ACP_PORTAL_ADMIN_QUOTES'           	=> 'Quotations',
+	'ACP_PORTAL_QUOTES'						=> 'Quotes',
+	'ACP_MANAGE_QUOTES'						=> 'Manage Quotes',
+		
+	// Portal XL portal partners //
+   	'ACP_PORTAL_CAT_BANNERS'          		=> 'Banners',
+   	'ACP_PORTAL_ADMIN_BANNERS'           	=> 'Banners 88x31',
+	'ACP_PORTAL_BANNERS'					=> 'Manage Banners',
+	'ACP_MANAGE_BANNERS'					=> 'Manage Banners 88x31',
+		
+	// Portal XL portal banners horizontal //
+   	'ACP_PORTAL_CAT_BANNERS_HO'          		=> 'Banners horizontal',
+   	'ACP_PORTAL_ADMIN_BANNERS_HO'           	=> 'Banners horizontal 400x60',
+	'ACP_PORTAL_BANNERS_HO'						=> 'Banners horizontal',
+	'ACP_MANAGE_BANNERS_HO'						=> 'Manage Banners 400x60',
+
+	// Portal XL portal banners vertical //
+   	'ACP_PORTAL_CAT_BANNERS_VE'          		=> 'Banners vertical',
+   	'ACP_PORTAL_ADMIN_BANNERS_VE'           	=> 'Banners vertical 130x600',
+	'ACP_PORTAL_BANNERS_VE'						=> 'Banners vertical',
+	'ACP_MANAGE_BANNERS_VE'						=> 'Manage Banners 130x600',
+
+	// Portal XL portal links //
+   	'ACP_PORTAL_CAT_LINKS'           			=> 'Links',
+   	'ACP_PORTAL_ADMIN_LINKS'           			=> 'Links',
+	'ACP_PORTAL_LINKS'							=> 'Links',
+	'ACP_MANAGE_LINKS'							=> 'Manage Links',
+		
+	// Portal XL portal mods //
+   	'ACP_PORTAL_CAT_MODS'           			=> 'Mod\'s',
+   	'ACP_PORTAL_ADMIN_MODS'         			=> 'Mod\'s',
+	'ACP_PORTAL_MODS'							=> 'Mod\'s',
+	'ACP_MANAGE_MODS'							=> 'Manage Mod\'s',
+		
+	// Portal XL portal adds //
+   	'ACP_PORTAL_CAT_ADDS'           			=> 'Forum Ad\'s',
+   	'ACP_PORTAL_ADMIN_ADDS'         			=> 'Forum Ad\'s',
+	'ACP_PORTAL_ADDS'							=> 'Forum Ad\'s',
+	'ACP_MANAGE_ADDS'							=> 'Manage Forum Ad\'s',
+		
+	// Portal XL portal pages //
+   	'ACP_PORTAL_CAT_PAGES'           			=> 'Portal Pages',
+   	'ACP_PORTAL_ADMIN_PAGES'         			=> 'Portal Pages',
+	'ACP_PORTAL_PAGES'							=> 'Portal Pages',
+	'ACP_MANAGE_PAGES'							=> 'Manage Portal Pages',
+		
+	// Portal XL portal newsfeeds //
+   	'ACP_PORTAL_CAT_NEWSFEEDS'           		=> 'Portal News Feeds',
+   	'ACP_PORTAL_ADMIN_NEWSFEEDS'         		=> 'Portal News Feeds',
+	'ACP_PORTAL_NEWSFEEDS'						=> 'Portal News Feeds',
+	'ACP_MANAGE_NEWSFEEDS'						=> 'Manage News Feeds',
+		
+	// Portal XL portal acronyms //
+   	'ACP_PORTAL_CAT_ACRONYMS'           		=> 'Portal Acronyms',
+   	'ACP_PORTAL_ADMIN_ACRONYMS'         		=> 'Portal Acronyms',
+	'ACP_PORTAL_ACRONYMS'						=> 'Portal Acronyms',
+	'ACP_MANAGE_ACRONYMS'						=> 'Manage Acronyms',
+		
+	// Portal XL portal impressum //
+   	'ACP_PORTAL_CAT_IMPRESSUM'           		=> 'Portal Imprint',
+   	'ACP_PORTAL_ADMIN_IMPRESSUM'         		=> 'Portal Imprint',
+	'ACP_PORTAL_IMPRESSUM'						=> 'Portal Imprint',
+	'ACP_MANAGE_IMPRESSUM'						=> 'Manage Imprint',
+		
+	// Portal XL portal log entries
+	'LOG_CONFIG_PORTAL'				=> '<strong>Portal general saved</strong>',
+	'LOG_CONFIG_ANNOUNCEMENTS'		=> '<strong>Portal announcements saved</strong>',
+	'LOG_CONFIG_NEWS'				=> '<strong>Portal news saved</strong>',
+	'LOG_CONFIG_RECENT'				=> '<strong>Portal recent topics saved</strong>',
+	'LOG_CONFIG_WORDGRAPH'			=> '<strong>Portal wordgraph saved</strong>',
+	'LOG_CONFIG_COLLUMN'			=> '<strong>Portal column width saved</strong>',
+	'LOG_CONFIG_PAYPAL'				=> '<strong>Portal paypal saved</strong>',
+	'LOG_CONFIG_ATTACHMENTS'		=> '<strong>Portal attachments saved</strong>',
+	'LOG_CONFIG_MEMBERS'			=> '<strong>Portal members saved</strong>',
+	'LOG_CONFIG_POLLS'				=> '<strong>Portal poll saved</strong>',
+	'LOG_CONFIG_BOTS'				=> '<strong>Portal visiting bots saved</strong>',
+	'LOG_CONFIG_POSTER'				=> '<strong>Portal most poster saved</strong>',
+	'LOG_CONFIG_RANDOM'				=> '<strong>Portal random saved</strong>',
+	'LOG_CONFIG_WELCOME'			=> '<strong>Portal welcome saved</strong>',
+	'LOG_CONFIG_WEATHER'	    	=> '<strong>Portal weather saved</strong>',
+	'LOG_CONFIG_SYNDICATE'	    	=> '<strong>Portal sydication saved</strong>',
+	'LOG_CONFIG_PLUXLINDEX'	    	=> '<strong>Portal board/viewtopic index saved</strong>',
+  	'LOG_CONFIG_SCROLLMESSAGE'      => '<strong>Portal scroll message saved</strong>',
+  	'LOG_CONFIG_METATAGS'      		=> '<strong>Portal META tags settings saved</strong>',
+
+	// installation logging
+	'PORTAL_LOG_INSTALL_PORTAL'	=> '<strong>Portal XL installed</strong>',
+	'PORTAL_LOG_UNINSTALL_PORTAL'	=> '<strong>Portal XL uninstalled</strong>',
+	'PORTAL_LOG_UPDATE_PORTAL'	=> '<strong>Portal XL datase update</strong>',
+	
+));
+  
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+	'ACP_COUNTER_SETTINGS'	=> 'Counter settings',
+	'COUNTER_STARTED'		=> 'Counter started',
+	'HITS_PER_DAY'			=> 'Hits per day',
+	'LOG_CONFIG_COUNTER'	=> '<strong>Altered counter settings</strong>',
+	'LOG_RESET_COUNTER'		=> '<strong>Reseted counter: started date time and hits value</strong>',
+	'NUMBER_HITS'			=> 'Number of hits',
+	'RESET_COUNTER'			=> 'Reset counter',
+	'RESET_COUNTER_CONFIRM'	=> 'Are you sure you wish to reset all data of the counter?',
+	'RESET_COUNTER_EXPLAIN'	=> 'Reset all data of the counter: started date time and total hits.',
+));

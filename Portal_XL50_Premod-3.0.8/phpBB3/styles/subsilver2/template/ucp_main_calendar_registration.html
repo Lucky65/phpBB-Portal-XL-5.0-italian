@@ -1,0 +1,33 @@
+<!-- INCLUDE ucp_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+		<form method="post" action="{U_COUNT_ACTION}" name="count_form" id="count_form">
+		{L_DISPLAY_EVENTS_DAYCOUNT} <input type="number" name="daycount" id="daycount" value="{DAYCOUNT}">
+		<input type="submit" name="post" value="{L_SUBMIT}" class="button1" />
+		</form><br />
+		<!-- IF .events -->
+			<tr>
+						<th>{L_UPCOMING_EVENTS}</th>
+						<th style="width:16%">{L_COL_WILL_ATTEND}</th>
+						<th style="width:16%">{L_INVITE_INFO}</th>
+			</tr>
+			
+			<!-- BEGIN events -->
+					<!-- IF events.VALUE != 1 -->
+					<tr class="row2">
+						<td class="row2"<!-- IF events.IMAGE --> style="background-image: url({events.IMAGE}); background-repeat: no-repeat;"<!-- ENDIF -->>
+								<a href="{events.EVENT_URL}" title="<!-- IF events.ETYPE_DISPLAY_NAME -->{events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{events.FULL_SUBJECT}">
+									<span style="<!-- IF events.COLOR -->color:#{events.COLOR};<!-- ENDIF --> font-weight: bold;">
+										<!-- IF events.ETYPE_DISPLAY_NAME -->{events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->{events.SUBJECT}</span><br /><!-- IF events.ALL_DAY -->{L_ALL_DAY} {events.START_TIME}<!-- ELSE -->{events.START_TIME} {L_TO_TIME} {events.END_TIME}<!-- ENDIF --></a>
+										<br />{events.POSTER}
+								</td>
+								<td style="width:16%; padding-left:5px;" class="lastpost">{events.VALUE_TXT}<!-- IF events.HEADCOUNT > 1 --> ({events.HEADCOUNT})<!-- ENDIF --></td>
+								<td style="width:16%; padding-left:5px;" class="lastpost">{events.INVITED}</td>
+					</tr>
+					<!-- ENDIF -->
+			<!-- END events -->
+			
+		<!-- ENDIF -->
+
+</table>
+<!-- INCLUDE ucp_footer.html -->

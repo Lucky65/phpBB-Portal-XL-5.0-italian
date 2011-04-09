@@ -1,0 +1,42 @@
+<!-- DEFINE $PORTALXL = 'dm_video' -->
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_DMV_NEW_VIDEOS and U_ACP -->
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<td class="row4">
+			<strong>{L_INFORMATION}:</strong> <a href="{U_DMV_NEW_VIDEOS}">{L_DMV_NEW_VIDEOS}</a>
+			<br />
+		</td>
+	</tr>
+</table>
+<br />
+<!-- ENDIF -->
+<!-- IF S_DMV_REPORTED_VIDEOS and U_ACP -->
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<td class="row4">
+			<strong>{L_INFORMATION}:</strong> <a href="{U_DMV_REPORTED_VIDEOS}">{L_DMV_REPORTED_VIDEOS}</a>
+			<br />
+		</td>
+	</tr>
+</table>
+<br />
+<!-- ENDIF -->
+<br />
+<a href="{U_TOPTEN_HITS}">{TOPTEN_HITS}</a> | <a href="{U_TOPTEN_RATE}">{TOPTEN_RATING}</a> <!-- IF S_RANDOM_EXIST -->| <a href="{U_SHOW_RANDOM}">{L_DMV_RANDOM_VIDEO}</a> <!-- ENDIF -->| <a href="{U_SHOW_ALL}">{L_DMV_ALL_VIDEOS}</a><br /><br />
+<form method="post" action="{U_ACTION}">
+<input type="hidden" name="id" value="{ID}" />
+<table class="tablebg" cellspacing="1" width="100%">
+	<tr>
+		<td class="row1" align="left">
+			<strong>&nbsp;&nbsp;{L_DMV_SEARCH}:&nbsp;&nbsp;</strong>
+			<input type="text" name="search_string" size="52" value="{VIDEO_TITLE}" />&nbsp;&nbsp;
+			<input class="button1" id="submit" name="submit" value="{L_GO}" type="submit" />
+		</td>
+	</tr>
+</table>
+</form>
+<br /><br />
+<!-- INCLUDE dm_video/newest_body.html -->
+<!-- INCLUDE dm_video/catlist_body.html -->
+<!-- INCLUDE dm_video/video_footer.html -->

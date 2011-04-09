@@ -1,0 +1,9 @@
+Subject: Toplist mod security update!
+
+Dear {USERNAME},
+
+There is a security update for the Toplist mod that your {FORUM_NAME} is using. It's highly reccomended that you update to the latest version to keep your board secure. For more information please check {UPDATE_URL} for more information on version {VERSION}.
+
+P.S. All administrators of {FORUM_NAME} recieve this email.
+
+{EMAIL_SIG}

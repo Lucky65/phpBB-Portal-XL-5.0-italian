@@ -1,0 +1,71 @@
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$("#most_poster-accordion").accordion({
+		collapsible : true,
+		header		: 'h5',
+		active      : 0,
+		autoHeight	: false,
+		icons: {
+			header: 'ui-icon-circle-arrow-e',
+			headerSelected: 'ui-icon-circle-arrow-s'
+		}
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+.most_poster-accordion-content {
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 1.6em;
+	font-size: 10px;
+}
+
+.most_poster-accordion-content th {
+	font-weight: normal;
+	font-style: italic;
+	padding-bottom: 2px;
+}
+
+.most_poster-accordion-topictitle {
+	font-weight: bold;
+}
+
+#most_poster-accordion h5 {
+	font-weight: normal;
+	font-size: 11px;
+}
+</style>
+
+<div id="most_poster-accordionResizer">
+    <div id="most_poster-accordion">
+    
+    <!-- BEGIN most_poster -->
+    <h5><a href="{most_poster.U_USERNAME}"><span<!-- IF most_poster.USERNAME_COLOR -->{most_poster.USERNAME_COLOR}<!-- ENDIF -->>{most_poster.USERNAME}</span></a></h5>
+    <div class="most_poster-accordion-content">
+    
+    <table class="tablebg" cellspacing="1" width="100%">
+    <!--<tr>
+        <th colspan="2">{L_MOST_POSTER}</td>
+    </tr>-->
+    <tr>
+        <td class="row3" align="left" nowrap="nowrap"><span class="gensmall"><strong>{L_USERNAME}</strong></span></td>
+        <td class="row3" align="right" nowrap="nowrap"><span class="gensmall"><strong>{L_POSTS}</strong></span></td>
+    </tr>
+    <!-- IF most_poster.S_ROW_COUNT is even --><tr class="row2"><!-- ELSE -->	<tr class="row1"><!-- ENDIF -->
+        <td class="gensmall" align="left" valign="middle">
+        {most_poster.POSTER_AV} 
+        <!-- IF FLAG_IMG -->{most_poster.FLAG_IMG}<!-- ENDIF --> <br /> 
+        <strong><a href="{most_poster.U_USERNAME}"><span<!-- IF most_poster.USERNAME_COLOR -->{most_poster.USERNAME_COLOR}<!-- ENDIF -->>{most_poster.USERNAME}</span></a></strong> <br /> 
+        <!-- IF most_poster.U_WWW --><a href="{most_poster.U_WWW}" title="{L_VISIT_WEBSITE}: {most_poster.U_WWW}"><span>{L_WEBSITE}</span></a><!-- ENDIF --> <br /> 
+        <hr width="85%"></td>
+        <td class="gensmall" align="right" nowrap="nowrap" valign="middle"><a href="{most_poster.S_SEARCH_ACTION}">{most_poster.POSTER_POSTS}</a></td>
+    </tr>
+    </table>
+    
+    </div>
+    <!-- END most_poster -->
+
+    </div>
+</div>

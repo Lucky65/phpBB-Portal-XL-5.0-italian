@@ -1,0 +1,58 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<th>{L_CRAWLER_LINKS}: {TOTALWORDS}</th>
+	</tr>
+	<tr>
+ 		<td align="center" class="row1">
+			<!-- BEGIN linkrow -->
+			<span class="gensmall">
+            <a href="{linkrow.U_LINK1}" alt="{linkrow.WORD1} " title="{linkrow.WORD1} ">{linkrow.WORD1}</a> -
+			<a href="{linkrow.U_LINK2}" alt="{linkrow.WORD2}" title="{linkrow.WORD2}">{linkrow.WORD2}</a> -
+			<a href="{linkrow.U_LINK3}" alt="{linkrow.WORD3}" title="{linkrow.WORD3}">{linkrow.WORD3}</a> -
+			<a href="{linkrow.U_LINK4}" alt="{linkrow.WORD4}" title="{linkrow.WORD4}">{linkrow.WORD4}</a> -
+			<a href="{linkrow.U_LINK5}" alt="{linkrow.WORD5}" title="{linkrow.WORD5}">{linkrow.WORD5}</a> -
+			<a href="{linkrow.U_LINK6}" alt="{linkrow.WORD6}" title="{linkrow.WORD6}">{linkrow.WORD6}</a> -
+			<a href="{linkrow.U_LINK7}" alt="{linkrow.WORD7}" title="{linkrow.WORD7}">{linkrow.WORD7}</a> -
+			<a href="{linkrow.U_LINK8}" alt="{linkrow.WORD8}" title="{linkrow.WORD8}">{linkrow.WORD8}</a> -
+			<a href="{linkrow.U_LINK9}" alt="{linkrow.WORD9}" title="{linkrow.WORD9}">{linkrow.WORD9}</a> -
+			<a href="{linkrow.U_LINK10}" alt="{linkrow.WORD10}" title="{linkrow.WORD10}">{linkrow.WORD10}</a></span>
+			<!-- END linkrow -->
+		</td>
+	</tr>
+  <tr>
+    <td class="cat" colspan="1" height="1"><img src="{T_THEME_PATH}/images/spacer.gif" alt="" width="1" height="1" /></td>
+  </tr>
+</table>
+
+<table class="tablebg" width="100%" cellspacing="1">
+  <tr>
+	<td align="left" class="row1">
+<!-- IF S_NUM_POSTS > 1 or PREVIOUS_PAGE -->
+	<form id="google_linker" method="post" action="{S_TOPIC_ACTION}">
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<!-- IF PREVIOUS_PAGE --><a href="{PREVIOUS_PAGE}" class="left-box {S_CONTENT_FLOW_BEGIN}">{L_PREVIOUS}</a><!-- ENDIF -->
+		<!-- IF NEXT_PAGE --><a href="{NEXT_PAGE}" class="right-box {S_CONTENT_FLOW_END}">{L_NEXT}</a><!-- ENDIF -->
+	</fieldset>
+	</form>
+	<hr />
+<!-- ENDIF -->
+
+<!-- IF PAGINATION -->
+<div class="pagination" style="margin: 0px 0px 5px 0px;">
+{L_CRAWLER_LINKS_TOTAL}: {TOTALWORDS}
+<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}">{PAGE_NUMBER}</a> &bull; <span>{PAGINATION}</span><!-- ELSE --> &bull; {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+</div>
+<!-- ENDIF -->
+    </td>
+  </tr>
+</table>
+	
+<!-- INCLUDE breadcrumbs.html -->
+	
+	<br clear="all" />
+	<div align="{S_CONTENT_FLOW_END}"><!-- INCLUDE jumpbox.html --></div>	
+	<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,12 @@
+Subject: {SUBJECT}
+
+Hello {ADM_USERNAME},
+
+Uživateľ "{USERNAME}" kontaktného meilu "{USER_EMAIL}" z IP adresy "{USER_IP}" v "{DATE}" reagoval na "{REASON}" a odoslal nasledujúcu správu:
+
+{MESSAGE}
+
+Použil kontaktný formulár z fóra stránky "{SITENAME}".
+
+
+{EMAIL_SIG}

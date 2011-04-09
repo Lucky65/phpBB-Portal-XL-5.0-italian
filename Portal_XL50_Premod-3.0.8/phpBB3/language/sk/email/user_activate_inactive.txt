@@ -1,0 +1,7 @@
+Subject: Váš účet bol deaktivovaný
+
+Vážený/á {USERNAME},
+
+Váš účet na “{SITENAME}” bol deaktivovaný, pravdepodobne na základe zmien vykonaných vo Vašom profile. Pokiaľ Vám administrátor fóra Váš účet opäť neaktivuje, nebudete sa môcť prihlásiť. Akonáhle bude Váš účet aktivovaný, održíte ďalšiu správu.
+
+{EMAIL_SIG}

@@ -1,0 +1,79 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.marquee.min.js'></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+  $("#marquee-arcade_top_games").marquee({
+		yScroll: "top",
+		scrollSpeed: 10,
+		pauseSpeed: 2500,
+		pauseOnHover: true,
+		loop: -1,
+		fxEasingShow: "swing",
+		// define the class statements
+		cssShowing: "marquee-arcade_top_games"
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+ul.marquee-arcade_top_games {
+	display: block;
+	height: 200px;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	margin: 1px;
+}
+
+ul.marquee-arcade_top_games li {
+	display: block;
+	position: absolute;
+	top: -999em;
+	width: 100%;
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th style="text-align:left;" colspan="2">{L_ARCADE_LEADERS}</td>
+</tr>-->
+<tr>
+    <td class="row1" align="center" valign="top">
+    
+    <!-- BEGIN top_games_no -->
+    <table cellspacing="1" width="100%">
+      <tr>
+        <td class="row1" align="center"><span class="gensmall">{top_games_no.LOGIN_VIEWARCADE}</span></td>
+      </tr>
+    </table>
+    <!-- END top_games_no -->
+
+    <ul id="marquee-arcade_top_games" class="marquee-arcade_top_games">
+     <!-- BEGIN top_games -->
+        <li>
+        <table width="100%" cellpadding="2" cellspacing="5" class="forumline">
+          <tr>
+            <td width="100%" style="overflow: hidden;" class="row2">
+             <span class="gensmall">
+                <strong>{L_ARCADE_USER_INFO}</strong>: <!-- IF top_games.GAME_USER_AV -->{top_games.GAME_USER_AV}<!-- ENDIF --> 
+                <a href="{top_games.U_GAME_USER}">{top_games.GAME_USER}</a>
+                <!-- IF top_games.FLAG_IMG --><strong>{L_COUNTRY}</strong>: {top_games.FLAG_IMG}<!-- ENDIF -->, 
+                <strong>{L_ARCADE_GAME}</strong>: <a href="{top_games.U_GAME_PLAY}"><img src="{top_games.GAME_IMAGE}" height="15" width="15" alt="{top_games.GAME_NAME}" title="{top_games.GAME_NAME}" /></a>,
+                <strong>{L_ARCADE_LAST_PLAY_TITLE}</strong>: {top_games.SCORE_DATE},
+                <strong>{L_ARCADE_SCORES}</strong>: {top_games.GAME_SCORE}.
+                {top_games.GAME_DOWNLOAD}
+            </span>
+            </td>
+          </tr>
+        </table>
+      </li>
+    <!-- END top_games -->
+   </ul>
+   
+    </td>
+</tr>
+<tr>
+	<td class="row1" align="center"><a href="{U_ARCADE}" title="{L_ARCADE_EXPLAIN}">{L_ARCADE}</a></td>
+</tr>
+</table>

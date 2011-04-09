@@ -1,0 +1,293 @@
+<!-- INCLUDE overall_header.html -->
+<script src="mods/toplist_mod/prototype.js" type="text/javascript"></script>
+<script src="mods/toplist_mod/scriptaculous.js" type="text/javascript"></script>
+<div class="forumbg">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<table class="table1" cellspacing="0" width="100%" cellpadding="0" border="0">
+			<thead>
+				<tr>
+					<th class="name">
+						{SITE_NAME}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr class="bg2">
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<!-- BEGIN whois_sc -->
+							<td valign="top">
+								<table class="tablebg" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td>
+											<a id="proceedtositelinkfirst" href='{U_URL_SEO}' target="_blank">
+												<img src='{whois_sc.WHOIS_SC_IMAGE}' border='0' onload='if (this.width>50) this.border=1' alt='' style='border: black sold 1px' />
+											</a>
+											<script>
+												document.getElementById('proceedtositelinkfirst').href = '{U_URL}';
+											</script>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- END whois_sc -->
+							<!-- IF RATING_ENABLED -->
+							<td valign="top">
+								<p class="gensmall">
+									<div id="rating_{ID}"><img src="./mods/toplist_mod/images/rating/{RATING}" border="0" /></div>
+								</p>
+								<!-- BEGIN canrate -->
+								<p class="gensmall">
+									<form action="{canrate.RATE_ACTION}" method="POST" name="rate_form_{ID}">
+										<input type="hidden" name="id" value="{ID}" />
+										<select name="rating" onchange="handle_rate_submit_{ID}(this)">
+											<option value="0" SELECTED>{L_TOPLIST_RATE_THIS_SITE}</option>
+											<option value="5">5</option>
+											<option value="4">4</option>
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+										</select>
+										<noscript>
+											<br /><input type="submit" value="Rate!" />
+										</noscript>
+									</form>
+									<script type="text/javascript">
+									function handle_rate_submit_{ID}(select_field)
+									{
+										if(select_field.value==0)
+										{
+											return false;
+										};
+										new Ajax.Request('{canrate.RATE_ACTION}',
+										{
+											method:'post',
+											parameters: {ajax: 1, id: {ID}, rating: select_field.value},
+											onSuccess: function(transport){
+												document.getElementById('rating_{ID}').innerHTML = '{L_TOPLIST_RATING_UPDATED}';
+												setTimeout(function(){
+													document.getElementById('rating_{ID}').innerHTML = '<img src="./mods/toplist_mod/images/rating/' + transport.responseText + '.gif" border="0" />';
+												},2000);
+											},
+											onFailure: function(){ document.rate_form_{ID}.submit(); }
+										});
+									}
+									</script>
+								</p>
+								<!-- END canrate -->
+							</td>
+							<!-- ENDIF -->
+							<td valign="top">
+								{SITE_INFO}<br /><br /><img border="0" src="{SITE_BANNER}" />
+								<h1>
+									<a id="proceedtositelinkseccond" href="{U_URL_SEO}" <!-- IF S_OUT -->target="_blank"<!-- ENDIF -->>
+                                        <!-- IF S_OUT -->
+										{L_TOPLIST_PROCEED_TO_SITE}
+                                        <!-- ELSE -->
+                                        {L_TOPLIST_VOTE_FOR_SITE}
+                                        <!-- ENDIF -->
+									</a>
+									<script>
+										document.getElementById('proceedtositelinkseccond').href = '{U_URL}';
+									</script>
+								</h1>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- IF COMMENTS_ENABLED -->
+<!-- BEGIN postrow -->
+	<div id="p{postrow.POST_ID}" class="post <!-- IF postrow.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF postrow.S_ONLINE --> online<!-- ENDIF -->">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			<!-- IF postrow.S_IGNORE_POST -->
+				<div class="ignore">{postrow.L_IGNORE_POST}</div>
+			<!-- ELSE -->
+
+		<!-- IF not S_IS_BOT -->
+			<!-- IF postrow.U_QUOTE or postrow.U_INFO or postrow.U_DELETE or postrow.U_EDIT -->
+				<ul class="profile-icons">
+					<!-- IF postrow.AU_EDIT --><li class="edit-icon"><a href="{postrow.U_EDIT}" title="{L_EDIT_POST}"><span>{L_EDIT_POST}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_DELETE --><li class="delete-icon"><a href="{postrow.U_DELETE}" title="{L_DELETE_POST}"><span>{L_DELETE_POST}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_QUOTE --><li class="quote-icon"><a href="javascript:void(0);" onclick="javascript:document.getElementById('message').value = document.getElementById('message').value + decode64('{postrow.U_QUOTE}');document.getElementById('message').focus()" title="{L_REPLY_WITH_QUOTE}"><span>{L_REPLY_WITH_QUOTE}</span></a></li><!-- ENDIF -->
+				</ul>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+
+			<h3 <!-- IF postrow.S_FIRST_ROW -->class="first"<!-- ENDIF -->><!-- IF postrow.POST_ICON_IMG --><img src="{T_ICONS_PATH}{postrow.POST_ICON_IMG}" width="{postrow.POST_ICON_IMG_WIDTH}" height="{postrow.POST_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="#p{postrow.POST_ID}">{postrow.POST_SUBJECT}</a></h3>
+			<p class="author"><!-- IF S_IS_BOT -->{postrow.MINI_POST_IMG}<!-- ELSE --><a href="{postrow.U_MINI_POST}">{postrow.MINI_POST_IMG}</a><!-- ENDIF -->{L_POST_BY_AUTHOR} <strong>{postrow.POST_AUTHOR_FULL}</strong> {L_POSTED_ON_DATE} {postrow.POST_DATE} </p>
+
+			<div class="content">{postrow.MESSAGE}</div>
+
+			<!-- IF postrow.S_HAS_ATTACHMENTS -->
+				<dl class="attachbox">
+					<dt>{L_ATTACHMENTS}</dt>
+					<!-- BEGIN attachment -->
+						<dd>{postrow.attachment.DISPLAY_ATTACHMENT}</dd>
+					<!-- END attachment -->
+				</dl>
+			<!-- ENDIF -->
+
+			<!-- IF postrow.S_DISPLAY_NOTICE --><div class="rules">{L_DOWNLOAD_NOTICE}</div><!-- ENDIF -->
+			<!-- IF postrow.EDITED_MESSAGE or postrow.EDIT_REASON -->
+				<div class="notice">{postrow.EDITED_MESSAGE}
+					<!-- IF postrow.EDIT_REASON --><br /><strong>{L_REASON}:</strong> <em>{postrow.EDIT_REASON}</em><!-- ENDIF -->
+				</div>
+			<!-- ENDIF -->
+
+			<!-- IF postrow.BUMPED_MESSAGE --><div class="notice">{postrow.BUMPED_MESSAGE}</div><!-- ENDIF -->
+			<!-- IF postrow.SIGNATURE --><div id="sig{postrow.POST_ID}" class="signature">{postrow.SIGNATURE}</div><!-- ENDIF -->
+		<!-- ENDIF -->
+
+		</div>
+
+		<!-- IF not postrow.S_IGNORE_POST -->
+			<dl class="postprofile" id="profile{postrow.POST_ID}">
+			<dt>
+				<!-- IF postrow.POSTER_AVATAR -->
+					<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{postrow.POSTER_AVATAR}</a><!-- ELSE -->{postrow.POSTER_AVATAR}<!-- ENDIF --><br />
+				<!-- ENDIF -->
+				<!-- IF not postrow.U_POST_AUTHOR --><strong>{postrow.POST_AUTHOR_FULL}</strong><!-- ELSE -->{postrow.POST_AUTHOR_FULL}<!-- ENDIF -->
+			</dt>
+
+			<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG --><dd>{postrow.RANK_TITLE}<!-- IF postrow.RANK_TITLE and postrow.RANK_IMG --><br /><!-- ENDIF -->{postrow.RANK_IMG}</dd><!-- ENDIF -->
+
+		<dd>&nbsp;</dd>
+
+		<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
+		<!-- IF postrow.POSTER_JOINED --><dd><strong>{L_JOINED}:</strong> {postrow.POSTER_JOINED}</dd><!-- ENDIF -->
+		<!-- IF postrow.POSTER_FROM --><dd><strong>{L_LOCATION}:</strong> {postrow.POSTER_FROM}</dd><!-- ENDIF -->
+
+		<!-- IF postrow.S_PROFILE_FIELD1 -->
+			<!-- Use a construct like this to include admin defined profile fields. Replace FIELD1 with the name of your field. -->
+			<dd><strong>{postrow.PROFILE_FIELD1_NAME}:</strong> {postrow.PROFILE_FIELD1_VALUE}</dd>
+		<!-- ENDIF -->
+
+		<!-- BEGIN custom_fields -->
+			<dd><strong>{postrow.custom_fields.PROFILE_FIELD_NAME}:</strong> {postrow.custom_fields.PROFILE_FIELD_VALUE}</dd>
+		<!-- END custom_fields -->
+
+		<!-- IF not S_IS_BOT -->
+		<!-- IF postrow.U_PM or postrow.U_EMAIL or postrow.U_WWW or postrow.U_MSN or postrow.U_ICQ or postrow.U_YIM or postrow.U_AIM -->
+			<dd>
+				<ul class="profile-icons">
+					<!-- IF postrow.U_PM --><li class="pm-icon"><a href="{postrow.U_PM}" title="{L_PRIVATE_MESSAGE}"><span>{L_PRIVATE_MESSAGE}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_EMAIL --><li class="email-icon"><a href="{postrow.U_EMAIL}" title="{L_EMAIL}"><span>{L_EMAIL}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_WWW --><li class="web-icon"><a href="{postrow.U_WWW}" title="{L_VISIT_WEBSITE}: {postrow.U_WWW}"><span>{L_WEBSITE}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_MSN --><li class="msnm-icon"><a href="{postrow.U_MSN}" onclick="popup(this.href, 550, 320); return false;" title="{L_MSNM}"><span>{L_MSNM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_ICQ --><li class="icq-icon"><a href="{postrow.U_ICQ}" onclick="popup(this.href, 550, 320); return false;" title="{L_ICQ}"><span>{L_ICQ}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_YIM --><li class="yahoo-icon"><a href="{postrow.U_YIM}" onclick="popup(this.href, 780, 550); return false;" title="{L_YIM}"><span>{L_YIM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_AIM --><li class="aim-icon"><a href="{postrow.U_AIM}" onclick="popup(this.href, 550, 320); return false;" title="{L_AIM}"><span>{L_AIM}</span></a></li><!-- ENDIF -->
+					<!-- IF postrow.U_JABBER --><li class="jabber-icon"><a href="{postrow.U_JABBER}" onclick="popup(this.href, 550, 320); return false;" title="{L_JABBER}"><span>{L_JABBER}</span></a></li><!-- ENDIF -->
+				</ul>
+			</dd>
+		<!-- ENDIF -->
+		<!-- ENDIF -->
+
+		</dl>
+	<!-- ENDIF -->
+
+		<div class="back2top"><a href="#wrap" class="top" title="{L_BACK_TO_TOP}">{L_BACK_TO_TOP}</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+<!-- END postrow -->
+<!-- BEGIN nopostrow -->
+<tr> 
+	<td class="spaceRow" colspan="2" height="1"><center>No comments found, go post some!</center></td>
+</tr>
+<!-- END nopostrow -->
+<!-- IF S_USER_LOGGED_IN -->
+	<form action="{U_TOPLIST_POST_COMMENT}" method="POST">
+	<div class="panel" id="postingbox">
+		<div class="inner"><span class="corners-top"><span></span></span>
+		
+		<h3>{L_TOPLIST_POST_COMMENT}</h3>
+	
+		<fieldset class="fields1">	
+			<dl style="clear: left;">
+			<dt><label for="subject">{L_TOPLIST_SUBJECT}</label></dt>
+			<dd><input type="text" name="subject" id="subject" size="45" maxlength="64" tabindex="2" value="Re: {SITE_NAME}" class="inputbox autowidth" /></dd>
+		</dl>
+	
+		<div id="smiley-box">
+			<!-- IF S_SMILIES_ALLOWED and .smiley -->
+				<strong>{L_SMILIES}</strong><br />
+				<!-- BEGIN smiley -->
+					<a href="#" onclick="insert_text('{smiley.A_SMILEY_CODE}', true); return false;"><img src="{smiley.SMILEY_IMG}" width="{smiley.SMILEY_WIDTH}" height="{smiley.SMILEY_HEIGHT}" alt="{smiley.SMILEY_CODE}" title="{smiley.SMILEY_DESC}" /></a>
+				<!-- END smiley -->
+			<!-- ENDIF -->
+			<!-- IF S_SHOW_SMILEY_LINK and S_SMILIES_ALLOWED-->
+				<br /><a href="{U_MORE_SMILIES}" onclick="popup(this.href, 300, 350, '_phpbbsmilies'); return false;">{L_MORE_SMILIES}</a>
+			<!-- ENDIF -->
+	
+			<!-- IF BBCODE_STATUS -->
+			<!-- IF .smiley --><hr /><!-- ENDIF -->
+			{BBCODE_STATUS}<br />
+			<!-- IF S_BBCODE_ALLOWED -->
+				{IMG_STATUS}<br />
+				{FLASH_STATUS}<br />
+				{URL_STATUS}<br />
+				{SMILIES_STATUS}
+			<!-- ENDIF -->
+			<!-- ENDIF -->
+		</div>
+	
+		<div id="message-box">
+	
+			<textarea name="message" id="message" rows="15" cols="76" tabindex="3" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);" class="inputbox"></textarea>
+		</div>
+		<input class="button2" name="postcomment" type="submit" value="Comment!" /> <!-- <input class="button2" name="previewcomment" type="submit" value="Preview!" /> -->
+	</fieldset>
+	
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	</form>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<script type="text/javascript">
+<!--
+var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+function decode64(input) {
+   var output = "";
+   var chr1, chr2, chr3;
+   var enc1, enc2, enc3, enc4;
+   var i = 0;
+
+   // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+   input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+   do {
+      enc1 = keyStr.indexOf(input.charAt(i++));
+      enc2 = keyStr.indexOf(input.charAt(i++));
+      enc3 = keyStr.indexOf(input.charAt(i++));
+      enc4 = keyStr.indexOf(input.charAt(i++));
+
+      chr1 = (enc1 << 2) | (enc2 >> 4);
+      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+      chr3 = ((enc3 & 3) << 6) | enc4;
+
+      output = output + String.fromCharCode(chr1);
+
+      if (enc3 != 64) {
+         output = output + String.fromCharCode(chr2);
+      }
+      if (enc4 != 64) {
+         output = output + String.fromCharCode(chr3);
+      }
+   } while (i < input.length);
+
+   return output;
+}
+//-->
+</script>
+<!-- INCLUDE overall_footer.html -->

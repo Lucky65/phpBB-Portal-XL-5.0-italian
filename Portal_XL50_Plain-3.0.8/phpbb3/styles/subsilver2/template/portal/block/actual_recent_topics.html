@@ -1,0 +1,63 @@
+<script type='text/javascript' src='{T_TEMPLATE_PATH}/portal/src/jquery.marquee.min.js'></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+  $("#marquee-actual_recent_topics").marquee({
+		yScroll: "top",
+		scrollSpeed: 10,
+		pauseSpeed: 2500,
+		pauseOnHover: true,
+		loop: -1,
+		fxEasingShow: "swing",
+		// define the class statements
+		cssShowing: "marquee-actual-recent-topics"
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+ul.marquee-actual-recent-topics {
+	display: block;
+	height: 110px;
+	line-height: 1;
+	list-style: none;
+	overflow: hidden;
+	position: relative;
+	margin: 1px;
+}
+
+ul.marquee-actual-recent-topics li {
+	display: block;
+	position: absolute;
+	top: -999em;
+	width: 100%;
+}
+</style>
+
+<table class="tablebg" cellspacing="1" width="100%">
+<!--<tr>
+	<th colspan="1">{L_RECENT_ACTUAL_TOPIC}</td>
+</tr>--> 
+ <tr>
+    <td class="row1" align="center" valign="top">
+    
+        <ul id="marquee-actual_recent_topics" class="marquee-actual-recent-topics">
+		<!-- BEGIN actual_topics -->
+            <li>
+           <table width="100%" cellpadding="2" cellspacing="5" class="forumline">
+                <tr>
+                    <td width="100%" style="overflow: hidden;" class="row2">
+                    <span>{actual_topics.MINI_POST_IMG}{actual_topics.S_POSTTIME}
+                    <a onmouseover="show_preview('{L_POSTED}: {actual_topics.FIRST_POST_TIME}', '{actual_topics.FIRST_POST_RESULT}')" onmouseout="close_preview()" href="{actual_topics.U_TITLE}" ><br />
+                    <b>{actual_topics.L_TITLE}</b></a><br />
+                    {L_POSTED_BY}: <a href="{actual_topics.U_POSTER}" >{actual_topics.S_POSTER}</a></span><br />
+                </td>
+              </tr>
+            </table>
+            </li>
+		<!-- END actual_topics -->
+        </ul>
+        
+    </td>
+  </tr>
+</table>

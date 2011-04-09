@@ -1,0 +1,21 @@
+Subject: Zweite Erinnerung von "{SITENAME}"! 
+
+Hallo {USERNAME},
+
+Wir haben dir kürzlich eine Mail bezüglich deiner Teilnahme/Aktivität auf {SITENAME} geschrieben.
+
+Leider hat es seit dieser Mail keine Veränderung von deiner Seite bezüglich der Aktivität gegeben. Wir möchten dich darauf aufmerksam machen, dass wir es in Betracht ziehen, dein Benutzerkonto zu löschen, da du anscheinend nicht mehr an der Community von {SITENAME} interessiert bist.
+
+Falls du nur deine Login-Daten vergessen hast, findest du sie hier:
+----------------------------
+Username: {USERNAME}
+Password: *
+
+Board URL: {U_BOARD}
+----------------------------
+
+* Bitte beachte, dass dein Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls du dein Passwort vergessen haben solltest, kannst du ein neues anfordern, das dann auf die gleiche Weise wie dein Benutzerkonto aktiviert wird.
+
+Wir würden uns über deine baldige Beteiligung auf {SITENAME} sehr freuen.
+
+{EMAIL_SIG}

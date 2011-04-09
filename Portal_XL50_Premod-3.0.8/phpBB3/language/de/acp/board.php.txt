@@ -1,0 +1,74 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+	'CHECK_DNSBL_EXPLAIN'			=> 'Wenn aktiviert, wird die IP-Adresse des Benutzers bei der Registrierung und bei der Beitragserstellung gegen folgende DNSBL-Dienste gepr&uuml;ft: <a href="http://spamcop.net">spamcop.net</a> und <a href="http://www.spamhaus.org">www.spamhaus.org</a>. Diese Pr&uuml;fung kann, abh&auml;ngig von der Serverkonfiguration, etwas Zeit in Anspruch nehmen. Wenn Verz&ouml;gerungen oder zu viele falsche Ablehnungen beobachtet werden, sollte diese Pr&uuml;fung deaktiviert werden.',
+
+#
+#-----[ REPLACE WITH ]---------------------------------------------
+#
+
+// AdvancedBlockMOD 1.0.3						
+	// 'CHECK_DNSBL_EXPLAIN'			=> 'Wenn aktiviert, wird die IP-Adresse des Benutzers bei der Registrierung und bei der Beitragserstellung gegen folgende DNSBL-Dienste geprüft: <a href="http://spamcop.net">spamcop.net</a> und <a href="http://www.spamhaus.org">www.spamhaus.org</a>. Diese Prüfung kann, abhängig von der Serverkonfiguration, etwas Zeit in Anspruch nehmen. Wenn Verzögerungen oder zu viele falsche Ablehnungen beobachtet werden, sollte diese Prüfung deaktiviert werden.',
+	'CHECK_DNSBL_EXPLAIN'			=> 'Wenn aktiviert, wird die IP-Adresse des Benutzers bei der Registrierung und bei der Beitragserstellung gegen DNSBL-Dienste geprüft. Diese Prüfung kann, abhängig von der Serverkonfiguration, etwas Zeit in Anspruch nehmen. Wenn Verzögerungen oder zu viele falsche Ablehnungen beobachtet werden, sollte diese Prüfung deaktiviert werden.',
+// AdvancedBlockMOD 1.0.3						
+					
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE ADD ]---------------------------------------------
+#
+
+// Anti Bot Question
+$lang = array_merge($lang, array(
+	'AB_ANSWER'					=> 'Anti-Bot Answer',
+	'AB_ANSWER_EXPLAIN'			=> 'This is the main answer for the question.',
+	'AB_ANSWER_2'				=> 'Anti-Bot Answer Two',
+	'AB_ANSWER_2_EXPLAIN'		=> 'Here you can add a second answer, a good idea if using a question that requires a numerical answer.',
+	'AB_QUESTION_MOD'			=> 'Anti-Bot Question',
+	'AB_QUESTION'				=> 'Anti-Bot Question',
+	'AB_QUESTION_EXPLAIN'		=> 'This is the question a user must answer to register.',
+	'ABQ_ENABLE'				=> 'Enable Anti-Bot Question',
+	'ABQ_ENABLE_EXPLAIN'		=> 'Enable the Anti-Bot question for registering.',
+));
+
+// Country Flags Version 3.0.6
+$lang = array_merge($lang, array(
+	'ACP_FLAG_SETTINGS_EXPLAIN'	=> 'Country flag settings',
+	'FLAGS_PATH'				=> 'Country flag images path',
+	'FLAGS_PATH_EXPLAIN'		=> 'Path under your phpBB root directory, e.g. <samp>images/flags</samp>',
+	'REQUIRE_FLAG' 				=> 'Require country flag field',
+	'REQUIRE_FLAG_EXPLAIN' 		=> 'Require users must select country flag information when new register.',
+));
+
+// Friend list on member view by DaMysterious
+$lang = array_merge($lang, array(
+	'ACP_PROFILE_FRIENDS'			=> 'Profile friends settings',
+	'ACP_PROFILE_FRIENDS_EXPLAIN'	=> 'Profile friends settings',
+	'ACP_FRIEND_SETTINGS'			=> 'Profile friends mod',
+	'ACP_NUM_FRIENDS'				=> 'Number of friends per page',
+	'ACP_NUM_FRIENDS_EXPLAIN'		=> 'Maximum number of friends to display on each page',
+	'ACP_FRIENDS_AV_SIZE'			=> 'Avatar size',
+	'ACP_FRIENDS_AV_SIZE_EXPLAIN'	=> 'Avatar size to display should be between 20 - 100 pixel, recommended value 80 pixel',
+	'ACP_SC_AVATAR_EXPLAIN'			=> 'Example : 25 would put the size at 25 pixel x 25 pixel <br/> To disable avatars set this to 0',
+	'TITLE_EXPLAIN'					=> 'Settings for the friend list on member view.',
+));
+
+// AdvancedBlockMOD 1.0.3						
+$lang = array_merge($lang, array(
+	'CHECK_TZ'						=> 'Zeitzone auf ungültige Zone prüfen',
+	'CHECK_TZ_EXPLAIN'				=> 'Wenn aktiviert, wird bei der Registrierung die Zeitzone des Benutzers auf außerirdische Zeitzonen mit den Werten -19 und +19 überprüft. Spammer benutzen oft die ersten oder letzten Optionen aus einem Dropdown-Menü. Ist diese Option aktiviert, werden während der Benutzerregistrierung am Anfang und am Ende des Dropdown-Menüs zwei unsinnige Werte angefügt.',
+	'LOG_CHECK_DNSBL'				=> 'Aktiviere Blockprotokoll für DNSBL-Überprüfung',
+	'LOG_CHECK_TZ'					=> 'Aktiviere Blockprotokoll für Zeitzonen-Überprüfung',
+	'LOG_EMAIL_CHECK_MX'			=> 'Aktiviere Blockprotokoll für DNS MX-Überprüfung',
+));
+
+// Email on Birthday version 1.0.1b						
+$lang = array_merge($lang, array(
+	'BIRTHDAY_EMAILS'				=> 'Send Birthday email',
+	'BIRTHDAY_EMAILS_EXPLAIN'		=> 'Sends a birthday email on the users birthday',
+));
+

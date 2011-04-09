@@ -1,0 +1,12 @@
+#-----[ FIND ]-----------------------------------------------------
+#
+
+	'LOGVIEW_VIEWFORUM'			=> 'Forum anzeigen',
+
+#
+#-----[ AFTER ADD ]---------------------------------------------
+#
+
+// AdvancedBlockMOD 1.0.3						
+	'LOGVIEW_DNSBLLOOKUP'		=> 'Blacklist-Eintrag überprüfen',
+// AdvancedBlockMOD 1.0.3						

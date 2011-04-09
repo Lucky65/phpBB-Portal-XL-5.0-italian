@@ -1,0 +1,18 @@
+Subject: Gewijzigde Download
+
+Hallo {USERNAME},
+
+Je hebt deze mail ontvangen, omdat de volgende download op {SITENAME} in de categorie "{CATEGORY}" is gewijzigt:
+
+---------------------------
+{DOWNLOAD}
+{DESCRIPTION}
+---------------------------
+
+Als je de download wilt bekijken gebruik dan de volgende link:
+
+{U_CATEGORY}
+
+Als je deze mail niet meer wilt ontvangen kun je dit aangeven in de download details of in je download profiel.
+
+{BOARD_EMAIL}

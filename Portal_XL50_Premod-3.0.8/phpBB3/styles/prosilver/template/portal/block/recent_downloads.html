@@ -1,0 +1,68 @@
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function (){
+	$("#recent_dl-accordion").accordion({
+		collapsible : true,
+		header		: 'h5',
+		active      : 0,
+		autoHeight	: false,
+		icons: {
+			header: 'ui-icon-circle-arrow-e',
+			headerSelected: 'ui-icon-circle-arrow-s'
+		}
+	});
+});
+// ]]>
+</script>
+<style type='text/css'>
+.recent_dl-accordion-content {
+	min-height: 3em;
+	overflow: hidden;
+	line-height: 1.6em;
+	font-size: 10px;
+}
+
+.recent_dl-accordion-content th {
+	font-weight: normal;
+	font-style: italic;
+	padding-bottom: 2px;
+}
+
+.recent_dl-accordion-topictitle {
+	font-weight: bold;
+}
+
+#recent_dl-accordion h5 {
+	font-weight: normal;
+	font-size: 11px;
+}
+</style>
+
+<div id="recent_dl-accordionResizer">
+    <div id="recent_dl-accordion">
+    
+<!-- IF .recent_dl -->
+<!-- BEGIN recent_dl -->
+<h5><a href="{recent_dl.U_DL_DETAIL}">{recent_dl.TITLE}</a></h5>
+<div class="recent_dl-accordion-content">
+
+    <table class="tablebg" cellspacing="1" width="100%">
+    <!--<tr>
+        <th colspan="1">{L_DOWNLOADS}</th>
+      </tr>-->
+      <tr class="<!-- IF recent_dl.S_ROW_COUNT is even -->row1<!-- ELSE -->row2<!-- ENDIF -->" >
+        <td valign="top">
+        {L_DL_FILE_NAME}: <!-- IF recent_dl.MINI_IMG -->{recent_dl.MINI_IMG}&nbsp;<!-- ENDIF --><a href="{recent_dl.U_DL_DETAIL}" title="{recent_dl.FULL_TITLE}"><strong>{recent_dl.TITLE}</strong></a><br /><span class="recent_dl-accordion-topictitle">{L_DL_FILE_DESCRIPTION}: {recent_dl.LONG_DESCRIPTION}</span><br />
+        {L_DL_FILE_SIZE}: {recent_dl.FILE_SIZE}<br />
+        {recent_dl.L_KLICKS} / {recent_dl.L_OVERALL_KLICKS}: {recent_dl.FILE_KLICKS} / {recent_dl.FILE_OVERALL_KLICKS}<br />
+        {recent_dl.L_CATEGORY}: [ <!-- IF recent_dl.U_CAT_LINK --><a href="{recent_dl.U_CAT_LINK}" class="gensmall">{recent_dl.CAT_NAME}</a><!-- ELSE -->{recent_dl.CAT_NAME}<!-- ENDIF --> ]<br />
+        </td>
+      </tr>
+    </table>
+
+</div>
+<!-- END recent_dl -->
+<!-- ENDIF -->
+
+    </div>
+</div>

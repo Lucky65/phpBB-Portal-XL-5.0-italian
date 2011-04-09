@@ -1,0 +1,119 @@
+<!-- INCLUDE overall_header.html -->
+</br />
+<div class="panel" id="postingbox">
+<div class="inner"><span class="corners-top"><span></span></span>
+<form action="{ACTION}" method="post">
+<fieldset class="fields1">
+	<h3><!-- BEGIN toplist_edit -->
+	{L_TOPLIST_EDIT_WEBSITE}
+	<!-- END toplist_edit -->
+	<!-- BEGIN toplist_add -->
+	{L_TOPLIST_ADD_WEBSITE}
+	<!-- END toplist_add --></h3>
+	<dl style="clear: left;">
+		<dt><label for="site_name">{L_TOPLIST_NAME}:</label></dt>
+		<dd><!-- BEGIN toplist_name_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_name_error --><input type="text" name="site_name" id="site_name" size="90" maxlength="255" tabindex="1" value="{NAME}" class="inputbox autowidth" /></dd>
+	</dl>
+	<dl style="clear: left;">
+		<dt><label for="site_info">{L_TOPLIST_INFO}:</label></dt>
+		<dd><!-- BEGIN toplist_info_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_info_error --><div id="site_info-box">
+		<textarea name="site_info" id="site_info" rows="15" cols="76" tabindex="2" class="inputbox">{INFO}</textarea>
+	</div></dd></dl>
+	<dl style="clear: left;">
+		<dt><label for="site_link">{L_TOPLIST_SITE_URL}:</label></dt>
+		<dd><!-- BEGIN toplist_url_error --><p class="error">{L_TOPLIST_EDIT_ERROR}</p><!-- END toplist_url_error --><!-- BEGIN toplist_url_exists_error --><p class="error">{L_TOPLIST_EDIT_ERROR_SITE}</p><!-- END toplist_url_exists_error --><input type="text" name="site_link" id="site_link" size="90" maxlength="255" tabindex="3" value="{LINK}" class="inputbox autowidth" /></dd>
+	</dl>
+	<dl style="clear: left;">
+		<dt><label for="site_name">{L_TOPLIST_BANNER_URL}:</label></dt>
+		<dd><input type="text" name="site_banner" id="site_banner" size="90" maxlength="255" tabindex="4" value="{BANNER}" class="inputbox autowidth" /></dd>
+	</dl>
+	</fieldset>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<div class="panel bg2">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<fieldset class="submit-buttons">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" tabindex="5" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" tabindex="5" value="{L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<div id="tabs">
+	<ul>
+		<li id="plain-image-panel-tab" class="activetab"><a href="#tabs" onclick="subPanels('plain-image-panel'); return false;"><span>{L_TOPLIST_PLAIN}</span></a></li>
+		<!-- BEGIN gd_installed --><li id="gd-lib-options-panel-tab"><a href="#tabs" onclick="subPanels('gd-lib-options-panel'); return false;"><span>{L_TOPLIST_GD_OPTIONS}</span></a></li><!-- END gd_installed -->
+	</ul>
+</div>
+<div class="panel bg3" id="plain-image-panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<fieldset class="fields1">
+<!-- BEGIN toplist_image_error -->
+			<dl>
+				<dt></dt>
+				<dd><p class="error">{L_TOPLIST_EDIT_ERROR}</p></dd>
+			</dl>
+<!-- END toplist_image_error -->
+			<!-- BEGIN image -->
+			<dl>
+				<dt><input type="radio" name="image" value="{image.FILENAME}" {image.SELECTED}/></dt>
+				<dd class="row2"><img border="0" src="{image.URL}" alt="" /></dd>
+			</dl>
+			<!-- END image -->
+		</fieldset>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<div class="panel bg3" id="gd-lib-options-panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<fieldset class="fields2">
+			<!-- BEGIN gdimage -->
+			<dl>
+				<dt><input type="radio" name="image" value="SimpleGD:{gdimage.FILENAME}" {image.SELECTED}/></dt>
+				<dd class="row2"><img border="0" src="{gdimage.URL}" alt="" /></dd>
+			</dl>
+			<!-- END gdimage -->
+		</fieldset>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- BEGIN toplist_edit -->
+<div class="panel" id="postingbox">
+<div class="inner"><span class="corners-top"><span></span></span>
+	<dl style="clear: left;">
+		<dt><label for="code_info">{L_TOPLIST_CODE_DP}</label></dt>
+		<dd><div id="code_info-box">
+		<textarea name="code_info" id="code_info" rows="2" cols="76" tabindex="2" class="inputbox"><a href="{CODE_BASE}mods/toplist_mod/dload.php?id={CODE_ID}"><img src="{CODE_BASE}mods/toplist_mod/image.php?id={CODE_ID}" style="border:0px;" /></a></textarea>
+	</div></dd></dl>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- END toplist_edit -->
+<div class="panel bg2">
+	<div class="inner"><span class="corners-top"><span></span></span>
+	<fieldset class="submit-buttons">
+                <!-- BEGIN toplist_edit -->
+                <input class="button2" type="submit" tabindex="5" value="{L_TOPLIST_EDIT_WEBSITE}" />
+                <!-- END toplist_edit -->
+                <!-- BEGIN toplist_add -->
+                <input class="button2" type="submit" tabindex="5" value="{L_TOPLIST_ADD_WEBSITE}" />
+                <!-- END toplist_add -->
+	</fieldset>
+
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+</form>
+<script type="text/javascript">
+// <![CDATA[
+	var panels = new Array('plain-image-panel'
+	<!-- BEGIN gd_installed -->
+	, 'gd-lib-options-panel'
+	<!-- END gd_installed -->
+	);
+	var show_panel = 'plain-image-panel';
+	subPanels(show_panel);
+// ]]>
+</script>
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,38 @@
+#
+#-----[ FIND ]-----------------------------------------------------
+#
+
+?>
+
+#
+#-----[ BEFORE, ADD ]------------------------------------------
+#
+
+/*
+* Portal XL related language definitions
+*/
+
+// Portal
+$lang = array_merge($lang, array(
+    'PORTAL_MODS'			=> 'Mods Βάση δεδομένων',	
+));
+
+// [img] Resize Width Images
+$lang = array_merge($lang, array(
+	'IMG_CLICK_HERE'	=> 'Πατήστε πάνω για να δείτε την εικόνα σε πλήρες μέγεθος!',
+));
+
+// Animate Digits IP Tracking Counter
+$lang = array_merge($lang, array(
+   'COUNTER'          => 'Μετρητής Επισκέψων',
+   'COUNTER_STARTDATE' => 'Μέτρηση από %s',
+   'HITS_PER_DAY'      => 'Πατήματα ανά ημέρα',
+   'HITS_PER_HOUR'      => 'Πατήματα ανά ώρα',
+   'HITS_PER_MONTH'   => 'Πατήματα ανά μήνα',
+   'HITS_PER_USER'      => 'Πατήματα ανά μέλος',
+   'HITS_PER_WEEK'      => 'Πατήματα ανά εβδομάδα',
+   'HITS_PER_YEAR'      => 'Πατήματα  ανά χρόνο',
+   'IP_TRACKING_NO'    => '[Χωρίς παρακολούθηση ΙP]',
+   'IP_TRACKING_YES'    => '[Παρακολούθηση IP ]',
+));
+

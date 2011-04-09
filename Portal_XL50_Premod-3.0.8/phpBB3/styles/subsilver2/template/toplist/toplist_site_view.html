@@ -1,0 +1,259 @@
+<!-- INCLUDE overall_header.html -->
+<script src="mods/toplist_mod/prototype.js" type="text/javascript"></script>
+<script src="mods/toplist_mod/scriptaculous.js" type="text/javascript"></script>
+<div class="forumbg">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<table class="tablebg" cellspacing="0" width="100%" cellpadding="0" border="0">
+			<thead>
+				<tr>
+					<th class="name">
+						{SITE_NAME}
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr class="row1">
+				<td>
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<!-- BEGIN whois_sc -->
+							<td valign="top">
+								<table class="tablebg" cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td>
+											<a id="proceedtositelinkfirst" href='{U_URL_SEO}' target="_blank">
+												<img src='{whois_sc.WHOIS_SC_IMAGE}' border='0' onload='if (this.width>50) this.border=1' alt='' style='border: black sold 1px' />
+											</a>
+											<script>
+												document.getElementById('proceedtositelinkfirst').href = '{U_URL}';
+											</script>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- END whois_sc -->
+							<!-- IF RATING_ENABLED -->
+							<td valign="top">
+								<p class="gensmall">
+									<div id="rating_{ID}"><img src="./mods/toplist_mod/images/rating/{RATING}" border="0" /></div>
+								</p>
+								<!-- BEGIN canrate -->
+								<p class="gensmall">
+									<form action="{canrate.RATE_ACTION}" method="POST" name="rate_form_{ID}">
+										<input type="hidden" name="id" value="{ID}" />
+										<select name="rating" onchange="handle_rate_submit_{ID}(this)">
+											<option value="0" SELECTED>{L_TOPLIST_RATE_THIS_SITE}</option>
+											<option value="5">5</option>
+											<option value="4">4</option>
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+										</select>
+										<noscript>
+											<br /><input type="submit" value="Rate!" />
+										</noscript>
+									</form>
+									<script type="text/javascript">
+									function handle_rate_submit_{ID}(select_field)
+									{
+										if(select_field.value==0)
+										{
+											return false;
+										};
+										new Ajax.Request('{canrate.RATE_ACTION}',
+										{
+											method:'post',
+											parameters: {ajax: 1, id: {ID}, rating: select_field.value},
+											onSuccess: function(transport){
+												document.getElementById('rating_{ID}').innerHTML = '{L_TOPLIST_RATING_UPDATED}';
+												setTimeout(function(){
+													document.getElementById('rating_{ID}').innerHTML = '<img src="./mods/toplist_mod/images/rating/' + transport.responseText + '.gif" border="0" />';
+												},2000);
+											},
+											onFailure: function(){ document.rate_form_{ID}.submit(); }
+										});
+									}
+									</script>
+								</p>
+								<!-- END canrate -->
+							</td>
+							<!-- ENDIF -->
+							<td valign="top">
+								{SITE_INFO}<br /><br /><img border="0" src="{SITE_BANNER}" />
+								<h1>
+									<a id="proceedtositelinkseccond" href="{U_URL_SEO}" <!-- IF S_OUT -->target="_blank"<!-- ENDIF -->>
+                                        <!-- IF S_OUT -->
+										{L_TOPLIST_PROCEED_TO_SITE}
+                                        <!-- ELSE -->
+                                        {L_TOPLIST_VOTE_FOR_SITE}
+                                        <!-- ENDIF -->
+									</a>
+									<script>
+										document.getElementById('proceedtositelinkseccond').href = '{U_URL}';
+									</script>
+								</h1>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+<!-- IF COMMENTS_ENABLED -->
+<!-- BEGIN postrow -->
+	<table class="tablebg" width="100%" cellspacing="1">
+	<!-- IF postrow.S_FIRST_ROW -->
+		<tr>
+			<th>{L_AUTHOR}</th>
+			<th>{L_MESSAGE}</th>
+		</tr>
+	<!-- ENDIF -->
+	<!-- IF postrow.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+
+			<td align="center" valign="middle">
+				<!-- IF postrow.S_FIRST_UNREAD --><a name="unread"></a><!-- ENDIF --><a name="p{postrow.POST_ID}"></a>
+				<b class="postauthor"<!-- IF postrow.POST_AUTHOR_COLOUR --> style="color: {postrow.POST_AUTHOR_COLOUR}"<!-- ENDIF -->>{postrow.POST_AUTHOR}</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				<!-- IF postrow.POST_ICON_IMG -->
+					<td><img src="{T_ICONS_PATH}{postrow.POST_ICON_IMG}" width="{postrow.POST_ICON_IMG_WIDTH}" height="{postrow.POST_ICON_IMG_HEIGHT}" alt="" title="" /></td>
+				<!-- ENDIF -->
+					<td class="gensmall" width="100%"><div style="float: {S_CONTENT_FLOW_BEGIN};">&nbsp;<b>{L_POST_SUBJECT}:</b> {postrow.POST_SUBJECT}</div><div style="float: {S_CONTENT_FLOW_END};"><!-- IF S_IS_BOT -->{postrow.MINI_POST_IMG}<!-- ELSE --><a href="{postrow.U_MINI_POST}">{postrow.MINI_POST_IMG}</a><!-- ENDIF --><b>{L_POSTED}:</b> {postrow.POST_DATE}&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<!-- IF postrow.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			<!-- IF postrow.ONLINE_IMG -->
+				<tr>
+					<td>{postrow.ONLINE_IMG}</td>
+				</tr>
+			<!-- ENDIF -->
+			<!-- IF postrow.RANK_TITLE -->
+				<tr>
+					<td class="postdetails">{postrow.RANK_TITLE}</td>
+				</tr>
+			<!-- ENDIF -->
+			<!-- IF postrow.RANK_IMG -->
+				<tr>
+					<td>{postrow.RANK_IMG}</td>
+				</tr>
+			<!-- ENDIF -->
+			<!-- IF postrow.POSTER_AVATAR -->
+				<tr>
+					<td>{postrow.POSTER_AVATAR}</td>
+				</tr>
+			<!-- ENDIF -->
+				</table>
+
+				<span class="postdetails">
+					<!-- IF postrow.POSTER_JOINED --><br /><b>{L_JOINED}:</b> {postrow.POSTER_JOINED}<!-- ENDIF -->
+					<!-- IF postrow.POSTER_POSTS != '' --><br /><b>{L_POSTS}:</b> {postrow.POSTER_POSTS}<!-- ENDIF -->
+					<!-- IF postrow.POSTER_FROM --><br /><b>{L_LOCATION}:</b> {postrow.POSTER_FROM}<!-- ENDIF -->
+				</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+
+						<div class="postbody">{postrow.MESSAGE}</div>
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="{S_CONTENT_FLOW_END}">
+							<!-- IF not S_IS_BOT -->
+                                                                <!-- IF postrow.AU_EDIT --><a href="{postrow.U_EDIT}">{EDIT_IMG}</a><!-- ENDIF -->
+                                                                <!-- IF postrow.U_DELETE --><a href="{postrow.U_DELETE}">{DELETE_IMG}</a><!-- ENDIF -->
+							<!-- ENDIF -->
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<!-- IF postrow.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+
+			<td class="profile"><strong><a href="#wrapheader">{L_BACK_TO_TOP}</a></strong></td>
+			<td><div class="gensmall" style="float: {S_CONTENT_FLOW_BEGIN};">&nbsp;<!-- IF postrow.U_PROFILE --><a href="{postrow.U_PROFILE}">{PROFILE_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_PM --><a href="{postrow.U_PM}">{PM_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_EMAIL --><a href="{postrow.U_EMAIL}">{EMAIL_IMG}</a> <!-- ENDIF -->&nbsp;</div> <div class="gensmall" style="float: {S_CONTENT_FLOW_END};"><!-- IF not S_IS_BOT --><!-- IF postrow.U_EDIT --><a href="{postrow.U_EDIT}">{EDIT_IMG}</a> <!-- ENDIF --> <!-- IF postrow.U_QUOTE --><a href="{postrow.U_QUOTE}">{QUOTE_IMG}</a> <!-- ENDIF --> <!-- ENDIF -->&nbsp;</div></td>
+	<!-- ENDIF -->
+		</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+<!-- END postrow -->
+<!-- BEGIN nopostrow -->
+<tr> 
+	<td class="spaceRow" colspan="2" height="1"><center>No comments found, go post some!</center></td>
+</tr>
+<!-- END nopostrow -->
+<!-- IF S_USER_LOGGED_IN -->
+<br />
+	<form action="{U_TOPLIST_POST_COMMENT}" method="POST">
+            <table class="tablebg" width="100%" cellspacing="1">
+                <thead><tr><th colspan="2">{L_TOPLIST_POST_COMMENT}</th></tr></thead>
+                <tr class="row1">
+                    <td>{L_TOPLIST_SUBJECT}</td>
+                    <td><input type="text" name="subject" id="subject" size="45" maxlength="64" tabindex="2" value="Re: {SITE_NAME}" class="inputbox autowidth" /></td>
+		</tr>
+                <tr class="row2">
+                    <td>{L_TOPLIST_MESSAGE}</td>
+                    <td><textarea name="message" id="message" rows="15" cols="76" tabindex="3" class="inputbox"></textarea></td>
+                </tr>
+                <tr class="cat">
+                    <td colspan="100%"><input class="button2" name="postcomment" type="submit" value="Comment!" /> <!-- <input class="button2" name="previewcomment" type="submit" value="Preview!" /> --></td>
+                </tr>
+            </table>
+	</form>
+<!-- ENDIF -->
+<script type="text/javascript">
+<!--
+var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+function decode64(input) {
+   var output = "";
+   var chr1, chr2, chr3;
+   var enc1, enc2, enc3, enc4;
+   var i = 0;
+
+   // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+   input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+   do {
+      enc1 = keyStr.indexOf(input.charAt(i++));
+      enc2 = keyStr.indexOf(input.charAt(i++));
+      enc3 = keyStr.indexOf(input.charAt(i++));
+      enc4 = keyStr.indexOf(input.charAt(i++));
+
+      chr1 = (enc1 << 2) | (enc2 >> 4);
+      chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+      chr3 = ((enc3 & 3) << 6) | enc4;
+
+      output = output + String.fromCharCode(chr1);
+
+      if (enc3 != 64) {
+         output = output + String.fromCharCode(chr2);
+      }
+      if (enc4 != 64) {
+         output = output + String.fromCharCode(chr3);
+      }
+   } while (i < input.length);
+
+   return output;
+}
+//-->
+</script>
+<!-- INCLUDE overall_footer.html -->

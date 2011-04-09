@@ -1,0 +1,33 @@
+<!-- BEGIN catrow -->
+	<!-- IF catrow.S_FIRST_ROW -->
+	<table class="tablebg" cellspacing="1" width="100%">
+		<tr>
+			<th colspan="2" width="60%">&nbsp;{L_DMV_CAT_NAME}&nbsp;</th>
+			<th width="10%">&nbsp;{L_DMV_COUNT}&nbsp;</th>
+			<th width="30%">&nbsp;{L_DMV_LAST_VIDEO}&nbsp;</th>
+		</tr>
+	<!-- ENDIF -->
+		<tr>
+			<td class="row1" width="5%" align="center"><img src="{catrow.CAT_FOLDER_IMG_SRC}" alt="" /></td>
+			<td class="row1"><a href="{catrow.U_DMV_CAT}" class="forumlink">{catrow.DMV_CAT_NAME}</a>
+			<p class="forumdesc">{catrow.DMV_CAT_DESC}</p>
+			<!-- IF forumrow.MODERATORS -->
+				<p class="forumdesc"><strong>{forumrow.L_MODERATOR_STR}:</strong> {forumrow.MODERATORS}</p>
+			<!-- ENDIF -->
+			<p class="forumdesc">{catrow.SUBCATS}</p></td>
+					<td class="row2" align="center"><p class="topicdetails">{catrow.NUMBER_VIDEOS}</p></td>
+					<td class="row2" nowrap="nowrap">
+						<!-- IF catrow.LAST_VIDEO -->
+							<p class="topicdetails">&nbsp;{catrow.U_LAST_VIDEO}<br />
+								&nbsp;{catrow.LAST_POSTER_FULL}<br />
+								&nbsp;{catrow.LAST_VIDEO_TIME}
+							</p>
+						<!-- ELSE -->
+							<p class="topicdetails"><span style="font-weight: bold;">{L_DMV_NO_VIDEOS}</span></p>
+						<!-- ENDIF -->
+					</td>
+		</tr>
+	<!-- IF catrow.S_LAST_ROW -->
+	</table>
+	<!-- ENDIF -->
+<!-- END catrow-->

@@ -1,0 +1,86 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+<h1>{L_TOPLIST_VERSION_CHECK}</h1>
+
+<p>{L_TOPLIST_VERSION_CHECK_EXPLAIN}</p>
+
+<!-- IF S_UP_TO_DATE and S_UP_TO_DATE_AUTO -->
+    <div class="successbox">
+        <p>{L_TOPLIST_VERSION_UP_TO_DATE_ACP}</p>
+    </div>
+<!-- ELSE -->
+    <div class="errorbox">
+        <p>{L_TOPLIST_VERSION_NOT_UP_TO_DATE_ACP}</p>
+    </div>
+<!-- ENDIF -->
+
+<fieldset>
+    <legend></legend>
+<dl>
+    <dt><label>{L_TOPLIST_CURRENT_VERSION}</label></dt>
+    <dd><strong><!-- IF S_UP_TO_DATE and not S_UP_TO_DATE_AUTO -->{TOPLIST_AUTO_VERSION}<!-- ELSE -->{TOPLIST_CURRENT_VERSION}<!-- ENDIF --></strong></dd>
+</dl>
+<dl>
+    <dt><label>{L_TOPLIST_LATEST_VERSION}</label></dt>
+    <dd><strong>{TOPLIST_LATEST_VERSION}</strong></dd>
+</dl>
+</fieldset>
+
+<!-- IF S_UP_TO_DATE and not S_UP_TO_DATE_AUTO -->
+    {L_TOPLIST_UPDATE_INSTRUCTIONS_INCOMPLETE}
+    <br /><br />
+    {UPDATE_INSTRUCTIONS}
+    <br /><br />
+<!-- ENDIF -->
+<!-- IF not S_UP_TO_DATE -->
+    {UPDATE_INSTRUCTIONS}
+    <br /><br />
+<!-- ENDIF -->
+
+<!-- IF S_ERROR -->
+	<div class="errorbox">
+		<h3>{L_WARNING}</h3>
+		<p>{ERROR_MSG}</p>
+	</div>
+<!-- ENDIF -->
+
+<h1>{L_TITLE}</h1>
+
+<p>{L_TITLE_EXPLAIN}</p>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+
+<!-- BEGIN options -->
+	<!-- IF options.S_LEGEND -->
+		<!-- IF not options.S_FIRST_ROW -->
+			</fieldset>
+		<!-- ENDIF -->
+		<fieldset>
+			<legend>{options.LEGEND}</legend>
+	<!-- ELSE -->
+
+		<dl>
+			<dt><label for="{options.KEY}">{options.TITLE}:</label><!-- IF options.S_EXPLAIN --><br /><span>{options.TITLE_EXPLAIN}</span><!-- ENDIF --></dt>
+			<dd>{options.CONTENT}</dd>
+		</dl>
+
+	<!-- ENDIF -->
+<!-- END options -->
+
+<!-- IF S_AUTH -->
+	<!-- BEGIN auth_tpl -->
+		{auth_tpl.TPL}
+	<!-- END auth_tpl -->
+<!-- ENDIF -->
+
+	<p class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+	</p>
+	{S_FORM_TOKEN}
+</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,12 @@
+Subject: Téma zamietnuta — “{TOPIC_TITLE}”
+
+Vážený/á {USERNAME},
+
+Obdržali ste túto správu, pretože Vami založená téma “{TOPIC_TITLE}” na “{SITENAME}” bola moderátorom, či administrátorom zamietnuta.
+
+Nasleduje dôvod zamietnutia Vašej témy:
+
+{REASON}
+
+
+{EMAIL_SIG}

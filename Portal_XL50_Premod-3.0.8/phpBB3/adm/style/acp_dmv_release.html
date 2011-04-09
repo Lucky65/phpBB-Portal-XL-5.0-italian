@@ -1,0 +1,34 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_DMV_RELEASE}</h1>
+
+<p>{L_ACP_DMV_RELEASE_EXPLAIN}</p>
+
+<table cellspacing="1" style="clear:both;">
+	<thead>
+		<tr>
+			<th style="text-align: center;">{L_DMV_TITLE}</th>
+			<th style="text-align: center;">{L_DMV_SINGER}</th>
+	        <th style="text-align: center;">{L_DMV_USERNAME}</th>
+	        <th style="text-align: center;">{L_DMV_APPROVAL}</th>
+			<th style="text-align: center;">{L_ACTION}</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN videos -->
+		<!-- IF videos.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+			<td style="width: 30%;"><strong><a href="{videos.U_VIDEO_PLAY}" onclick="window.open(this.href); return false;">{videos.TITLE}</a></strong></td>
+			<td style="width: 30%;">{videos.SINGER} </td>
+			<td style="width: 20%;">{videos.USERNAME} </td>
+	   		<td style="width: 10%;">{videos.APPROVAL}</td>
+			<td style="width: 10%;">&nbsp;<a href="{videos.U_EDIT}">{ICON_EDIT}</a> <a href="{videos.U_DEL}">{ICON_DELETE}</a>&nbsp;</td>
+		</tr>
+		<!-- BEGINELSE -->
+		<tr>
+			<td colspan="<!-- IF S_CLEAR_ALLOWED -->5<!-- ELSE -->4<!-- ENDIF -->">{L_DMV_NO_RELEASE}</td>
+		</tr>
+	<!-- END videos -->
+	</tbody>
+</table>
+
+<!-- INCLUDE overall_footer.html -->

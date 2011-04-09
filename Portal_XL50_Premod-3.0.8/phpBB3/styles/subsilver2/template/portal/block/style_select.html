@@ -1,0 +1,48 @@
+<table class="tablebg" cellspacing="1" width="100%">
+  <!--  <tr>
+    <th colspan="1">{L_BOARD_STYLE}</th>
+  </tr>-->
+  <tr>
+    <td class="row1" align="center"><span>{L_TOTAL_STYLES}: {S_TOTAL_STYLES}</span></td>
+  </tr>
+  <tr>
+    <td class="row1" align="center">
+		<script type="text/javascript">
+		// <![CDATA[
+		function jumpStyle(targ, selObj, restore)
+		{
+			eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+			if (restore) selObj.selectedIndex = 0;
+		}
+		// ]]>
+		</script>
+      <form method="get" action="{S_STYLE_ACTION}" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+        <div class="gensmall">
+        <select name="style_select" id="style_select" onchange="jumpStyle('parent',this,0)">{STYLE_SELECT}</select>
+        </div>
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td class="row1" align="center"><span>{L_TOTAL_LANGUAGE}: {S_TOTAL_LANGUAGE}</span></td>
+  </tr>
+  <tr>
+    <td class="row1" align="center">
+		<script type="text/javascript">
+		// <![CDATA[
+		function jumpLang(targ, selObj, restore)
+		{
+			eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+			if (restore) selObj.selectedIndex = 0;
+		}
+		// ]]>
+		</script>
+      <form method="get" action="{S_LANGUAGE_ACTION}" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+        <div class="gensmall">
+        <select name="lang_select" id="lang_select" onchange="jumpLang('parent',this,0)">{LANGUAGE_SELECT}</select>
+        </div>
+      </form>
+    </td>
+  </tr>
+</table>
+<br clear="all" />
