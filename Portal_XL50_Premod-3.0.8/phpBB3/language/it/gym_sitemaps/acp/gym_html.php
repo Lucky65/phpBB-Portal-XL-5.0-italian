@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: gym_html.php 204 2009-12-20 12:04:51Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2010 luckylab.eu - translated for portal xl on 2010/03/16
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */
@@ -85,7 +85,7 @@ $lang = array_merge($lang, array(
 	'HTML_SITE_DESC' => 'Descrizione sito',
 	'HTML_SITE_DESC_EXPLAIN' => 'La descrizione del sito viene mostrato nelle mappe del sito e nelle nuove pagine. Il valore di default è il nome del sito.',
 	'HTML_LOGO_URL' => 'Logo sito',
-	'HTML_LOGO_URL_EXPLAIN' => 'TIl file immagine usato come logo del sito nei feeds RSS, è localizzato nella directory gym_sitemaps/images/.',
+	'HTML_LOGO_URL_EXPLAIN' => 'Il file immagine usato come logo del sito nei feeds RSS, è localizzato nella directory gym_sitemaps/images/.',
 	'HTML_URL' => 'Url HTML',
 	'HTML_URL_EXPLAIN' => 'Devi aggiungere l’URL completo del tuo file map.php, es http://www.example.com/eventual_dir/ se map.php è installato in http://www.example.com/eventual_dir/.<br/>Questa opzione è utile quando phpBB non è installato nel dominio root e se desidi inserire il file il map.php file nella radice.',
 	'HTML_RSS_NEWS_URL' => 'Fonte principale pagina news RSS',
@@ -116,9 +116,9 @@ $lang = array_merge($lang, array(
 	'HTML_OPT_CACHE_TTL' => 'Durata opzionale colonna cache',
 	'HTML_OPT_CACHE_TTL_EXPLAIN' => 'Valore massimo espresso in ore per la colonna principale in cache prima che sarà aggiornata. Ogni file memorizzato nella cache sarà aggiornato ogni qualvolta qualcuno utilizzerà il browser dopo questa durata e avrà superato il limite.',
 	// Auth settings
-	'HTML_AUTH_SETTINGS' => 'Configurazione autorizzazioni',
-	'HTML_ALLOW_AUTH' => 'Autorizzazioni',
-	'HTML_ALLOW_AUTH_EXPLAIN' => 'Attiva le autorizzazioni per la mappa sito e le nuove pagine. Se attivato, gli utenti loggati saranno in grado di navigare nei contenuti per vedere gli oggetti privati, se hanno le dovute autorizzazioni.',
+	'HTML_AUTH_SETTINGS' => 'Configurazione permessi',
+	'HTML_ALLOW_AUTH' => 'Permessi',
+	'HTML_ALLOW_AUTH_EXPLAIN' => 'Attiva permessi per la mappa sito e le nuove pagine. Se attivato, gli utenti loggati saranno in grado di navigare nei contenuti per vedere gli oggetti privati, se hanno le dovute autorizzazioni.',
 	'HTML_ALLOW_NEWS' => 'Attiva news',
 	'HTML_ALLOW_NEWS_EXPLAIN' => 'Ogni modulo può avere una pagina di notizie con le ultime X voci con il loro contenuto, la pagina può essere filtrata. La pagina forum è generalmente una pagina visualizzata con i dieci ultimi argomenti ed i primi messaggi della raccolta provenienti da una selezione di forum pubblici o privati.',
 	'HTML_ALLOW_CAT_NEWS' => 'Attiva news categoria',

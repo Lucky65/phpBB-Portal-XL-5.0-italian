@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: gym_common.php 204 2009-12-20 12:04:51Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2010 luckylab.eu - translated for portal xl on 2010/03/16
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */
@@ -34,8 +34,8 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	// Main
 	'ALL' => 'Tutto',
-	'MAIN' => 'GYM mappa sito',
-	'MAIN_MAIN_RESET' => 'GYM opzioni mappa sito',
+	'MAIN' => 'Mappa sito GYM',
+	'MAIN_MAIN_RESET' => 'Opzioni mappa sito GYM',
 	'MAIN_MAIN_RESET_EXPLAIN' => 'Ripristina ai valori di default le opzioni principali',
 	// Linking setup
 	'GYM_LINKS_ACTIVATION' => 'Forum Linking',
@@ -52,9 +52,9 @@ $lang = array_merge($lang, array(
 	'GOOGLE_MAIN_RESET_EXPLAIN' => 'Ripristina ai valori di default le opzioni Google',
 	// RSS feeds
 	'RSS' => 'RSS',
-	'RSS_ALTERNATE' => 'RSS links previsiti',
-	'RSS_ALTERNATE_EXPLAIN' => 'Visualizza o meno RSS links previsti nella barra di navigazione del browser',
-	'RSS_LINKING_TYPE' => 'RSS tipi links',
+	'RSS_ALTERNATE' => 'Links RSS previsiti',
+	'RSS_ALTERNATE_EXPLAIN' => 'Visualizza o meno links RSS previsti nella barra di navigazione del browser',
+	'RSS_LINKING_TYPE' => 'Tipi links RSS',
 	'RSS_LINKING_TYPE_EXPLAIN' => 'Il tipo di feed visualizzato tra le pagine del forum.<br/>Può essere impostato come :<br/><b>&bull; News Feeds con o senza contenuto</b><br/>Le voci vengono visualizzate secondo l’ordine di creazione, con o senza contenuto,<br/><b>&bull; Feeds regolari con contenuto</b><br/>Le voci vengono visualizzate secondo l’ultima attività, con o senza contenuto.<br/>Questo riguarda solo il link mostrato, non i feeds effettivamente disponibili.',
 	'RSS_LINKING_NEWS' => 'Feeds news',
 	'RSS_LINKING_NEWS_DIGEST' => 'Feeds news con contenuto',
@@ -124,10 +124,10 @@ $lang = array_merge($lang, array(
 	'GYM_MODULE_INSTALL_EXPLAIN' => 'Quoi puoi attivare/disattivare il modulo %1$s.<br/>Se hai caricato un modulo, è necessario prima attivarlo, solo in tal caso l’applicazione sarà in grado di utilizzarlo. Se non vedi nessun nuovo modulo, prova ad aggiornare la cache in  ACP e in manutenzione.',
 
 	// Titles
-	'GYM_MAIN' => 'GYM configurazione mappa sito',
+	'GYM_MAIN' => 'Configurazione mappa sito GYM',
 	'GYM_MAIN_EXPLAIN' => 'Queste sono le impostazioni comuni a tutti i tipi di moduli.<br/> Esse possono essere applicate a tutti i tipi di uscite (html, RSS, mappe sito Google, Yahoo! lista url) e/o a tutti i moduli a seconda delle tue impostazioni.',
-	'MAIN_MAIN' => 'GYM panoramica mappa sito',
-	'MAIN_MAIN_EXPLAIN' => 'GYM mappa sito è il flessibile modulo per ottimizzare il tuo sito sui motori di ricerca. Ti permetterà di costruire: Mappe sito Google, RSS 2.0 feeds, Yahoo! Lista URL e mappa sito in html per il tuo forum, come per qualsiasi parte del tuo sito grazie alla sua modularità.<br/><br/> Ogni tipo di output (Google, RSS, html & Yahoo) può interagire con gli oggetti nella lista delle diverse applicazioni installate sul tuo sito (forum, album ecc ...) usando un modulo dedicato.<br/>Puoi attivare/disattivare i moduli usando il link di installazione in ACP. Ogni modulo ha la propria configurazione delle pagine.<br/><br/>Assicurati di controllare periodicamente l’%1$s, il supporto del modulo è previsto sul %2$s.<br/>Il supporto generale SEO e le discussioni sono disponibili su %3$s.<br/>%4$s<br/>Buon divertimento ;-)',
+	'MAIN_MAIN' => 'Panoramica mappa sito GYM',
+	'MAIN_MAIN_EXPLAIN' => 'Mappa sito GYM è il modulo per ottimizzare il tuo sito sui motori di ricerca. Ti permetterà di costruire: Mappe sito Google, RSS 2.0 feeds, Yahoo! Lista URL e mappa sito in html per il tuo forum, come per qualsiasi parte del tuo sito grazie alla sua modularità.<br/><br/> Ogni tipo di output (Google, RSS, html & Yahoo) può interagire con gli oggetti nella lista delle diverse applicazioni installate sul tuo sito (forum, album ecc ...) usando un modulo dedicato.<br/>Puoi attivare/disattivare i moduli usando il link di installazione in ACP. Ogni modulo ha la propria configurazione delle pagine.<br/><br/>Assicurati di controllare periodicamente l’%1$s, il supporto del modulo è previsto sul %2$s.<br/>Il supporto generale SEO e le discussioni sono disponibili su %3$s.<br/>%4$s<br/>Buon divertimento ;-)',
 
 	'GYM_GOOGLE' => 'Mappe sito Google',
 	'GYM_GOOGLE_EXPLAIN' => 'Queste sono le impostazioni comuni a tutte le mappe sito di Google. (forum, personalizzazioni ecc ...).<br/> Saranno applicate a tutte le sitemaps di Google e sovrascriveranno le tue impostazioni.',
@@ -213,7 +213,7 @@ $lang = array_merge($lang, array(
 	'GYM_LIMITUP_EXPLAIN' => 'Scegli qui il numero delle pagine a partire dalla prima all’ultima.',
 
 	'GYM_OVERRIDE' => 'Eredita impostazioni',
-	'GYM_OVERRIDE_EXPLAIN' => 'GYM mappa sito è molto moduulare. Ogni tipo di uscita (Google, RSS ...), utilizza i propri moduli di uscita corrispondente al tipo di prodotto da visualizzare. Per esempio, il primo modulo per tutti i tipi di produzione è il modulo Forum, elencando oggetti dal forum.<br/> Molte opzioni, come la riscrittura degli URL, la cache, la compressione gunzip ecc...., sono ripetute su diversi livelli della configurazione ACP. Questo permette di usare diverse impostazioni per la stessa opzione a seconda del tipo di uscita e il modulo di uscita. Ma può accadere che preferisci, per esempio, attivare gli URL di riscrittura su tutte le configurazioni delle mappe sito in una volta sola (tutte i tipi di uscita e tutti i moduli).<br/>Questo tipo di configurazione ti consentirà di fare per molti tipi di impostazioni. <br/>Il processo di eredità va dal livello più elevato delle impostazioni (configurazione principale) secondo il tipo di livello uscita (google, RSS....) e termina al più basso livello: i moduli di uscita (Forum, album....) sovrascriveranno le impostazioni e possono assumere tre valori: <br/><ul><li><b>Globale :</b> saranno utilizzate le impostazioni principali;<br></li><li><b>Tipo di uscita :</b> Il tipo di uscita saranno utilizzati per i suoi moduli;<br></li><li><b>Modulo :</b> Sarà usata la più bassa impostazione disponibile, ad esempio prima il modulo, e se non stabilito, il tipo di uscita e così via fino alle impostazioni globali se disponibili.</li></ul>',
+	'GYM_OVERRIDE_EXPLAIN' => 'Il modulo mappa sito GYM è molto moduulare. Ogni tipo di uscita (Google, RSS ...), utilizza i propri moduli di uscita corrispondente al tipo di prodotto da visualizzare. Per esempio, il primo modulo per tutti i tipi di produzione è il modulo Forum, elencando oggetti dal forum.<br/> Molte opzioni, come la riscrittura degli URL, la cache, la compressione gunzip ecc...., sono ripetute su diversi livelli della configurazione ACP. Questo permette di usare diverse impostazioni per la stessa opzione a seconda del tipo di uscita e il modulo di uscita. Ma può accadere che preferisci, per esempio, attivare gli URL di riscrittura su tutte le configurazioni delle mappe sito in una volta sola (tutte i tipi di uscita e tutti i moduli).<br/>Questo tipo di configurazione ti consentirà di fare per molti tipi di impostazioni. <br/>Il processo di eredità va dal livello più elevato delle impostazioni (configurazione principale) secondo il tipo di livello uscita (google, RSS....) e termina al più basso livello: i moduli di uscita (Forum, album....) sovrascriveranno le impostazioni e possono assumere tre valori: <br/><ul><li><b>Globale :</b> saranno utilizzate le impostazioni principali;<br></li><li><b>Tipo di uscita :</b> Il tipo di uscita saranno utilizzati per i suoi moduli;<br></li><li><b>Modulo :</b> Sarà usata la più bassa impostazione disponibile, ad esempio prima il modulo, e se non stabilito, il tipo di uscita e così via fino alle impostazioni globali se disponibili.</li></ul>',
 	'GYM_OVERRIDE_ON' => 'Attiva eredita impostazioni',
 	'GYM_OVERRIDE_ON_EXPLAIN' => 'Qui puoi attivare/disattivare la sovrascrittura ereditando le impostazioni. Disattivando l’impostazione prevarrà su tutti i "moduli".',
 	'GYM_OVERRIDE_MAIN' => 'Eredita impostazioni valori default',

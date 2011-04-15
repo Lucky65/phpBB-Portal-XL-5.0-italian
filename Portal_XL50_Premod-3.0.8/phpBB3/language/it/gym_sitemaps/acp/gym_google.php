@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: gym_google.php 204 2009-12-20 12:04:51Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2010 luckylab.eu - translated for portal xl on 2010/03/16
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */

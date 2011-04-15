@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: google_forum.php 112 2009-09-30 17:21:34Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2011 luckylab.eu - update translation for portal xl on 2011/01/01
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */
@@ -48,17 +48,17 @@ $lang = array_merge($lang, array(
 	'GOOGLE_FORUM_RESET' => 'Modulo mappe sito forum',
 	'GOOGLE_FORUM_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default.',
 	'GOOGLE_FORUM_MAIN_RESET' => 'Mappe forum',
-	'GOOGLE_FORUM_MAIN_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "mappe forum".',
+	'GOOGLE_FORUM_MAIN_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "mappe forum".',
 	'GOOGLE_FORUM_CACHE_RESET' => 'Cache mappe forum',
-	'GOOGLE_FORUM_CACHE_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "cache mappe forum".',
+	'GOOGLE_FORUM_CACHE_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "cache mappe forum".',
 	'GOOGLE_FORUM_MODREWRITE_RESET' => 'Mappe sito riscrittura URL (mod rewrite)',
-	'GOOGLE_FORUM_MODREWRITE_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "riscrittura URL mappe forum".',
+	'GOOGLE_FORUM_MODREWRITE_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "riscrittura URL mappe forum".',
 	'GOOGLE_FORUM_GZIP_RESET' => 'Mappe sito gunzip',
-	'GOOGLE_FORUM_GZIP_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "mappe forum gunzip".',
+	'GOOGLE_FORUM_GZIP_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "mappe forum gunzip".',
 	'GOOGLE_FORUM_LIMIT_RESET' => 'Limiti mappe sito',
-	'GOOGLE_FORUM_LIMIT_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "limiti mappe forum".',
+	'GOOGLE_FORUM_LIMIT_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "limiti mappe forum".',
 	'GOOGLE_FORUM_SORT_RESET' => 'Ordinamento mappe forum',
-	'GOOGLE_FORUM_SORT_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "ordinamento mappe forum".',
+	'GOOGLE_FORUM_SORT_RESET_EXPLAIN' => 'Ripristina tutte le opzioni ai valori di default in "ordinamento mappe forum".',
 	'GOOGLE_FORUM_PAGINATION_RESET' => 'Paginazione mappe forum',
 	'GOOGLE_FORUM_PAGINATION_RESET_EXPLAIN' => 'Ripristina tutte le opzioni di default in "paginazione mappe forum".',
 ));

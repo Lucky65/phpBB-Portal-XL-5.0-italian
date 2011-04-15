@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: google_xml.php 204 2009-12-20 12:04:51Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2010 luckylab.eu - translated for portal xl on 2010/03/16
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */
@@ -46,7 +46,7 @@ $lang = array_merge($lang, array(
 	'GOOGLE_XML_FORCE_LIMIT' => 'Forza limite',
 	'GOOGLE_XML_FORCE_LIMIT_EXPLAIN' => 'Puoi forzare il numero di URL che saranno visualizzati nella mappa.<br/><u>Nota :</u><br/>Questa opzione richiede una completa analisi sintattica del file sorgente, si consiglia di usare il caching quando è attivata.',
 	// Reset settings
-	'GOOGLE_XML_RESET' => 'Modulo XML mappa sito',
+	'GOOGLE_XML_RESET' => 'Modulo mappa sito XML',
 	'GOOGLE_XML_RESET_EXPLAIN' => 'Ripristina ai valori di default tutte le opzioni nella "configurazione mappa sito XML" scheda (principale) del modulo XML mappa sito.',
 	'GOOGLE_XML_MAIN_RESET' => 'Configurazione mappa sito XML',
 	'GOOGLE_XML_MAIN_RESET_EXPLAIN' => 'Ripristina ai valori di default tutte le opzioni nella "configurazione mappa sito XML" scheda (principale) del modulo XML mappa sito.',

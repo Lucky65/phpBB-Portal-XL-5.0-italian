@@ -4,7 +4,7 @@
 * @package phpBB SEO GYM Sitemaps
 * @version $Id: gym_rss.php 204 2009-12-20 12:04:51Z dcz $
 * @copyright (c) 2006 - 2009 www.phpbb-seo.com
-* @copyright (c) 2009, 2010 luckylab.eu - translated for portal xl on 2010/03/16
+* @copyright (c) 2009, 2011 portalxl.eu - update translation for portal xl on 2011/04/14
 * @license http://opensource.org/osi3.0/licenses/lgpl-license.php GNU Lesser General Public License
 *
 */
@@ -76,9 +76,9 @@ $lang = array_merge($lang, array(
 	'RSS_URL' => 'Feed URL',
 	'RSS_URL_EXPLAIN' => 'Inserire l’url completo del file gymrss.php, es. http://www.example.com/eventual_dir/ se gymrss.php è installato in http://www.example.com/eventual_dir/.<br/>Questa opzione è utile quando phpBB non è installato nella root del dominio e vuoi utilizzare il file gymrss.php nel livello root.',
 	// Auth settings
-	'RSS_AUTH_SETTINGS' => 'Configurazione autorizzazioni',
+	'RSS_AUTH_SETTINGS' => 'Configurazione permessi',
 	'RSS_ALLOW_AUTH' => 'Autorizzazioni',
-	'RSS_ALLOW_AUTH_EXPLAIN' => 'Attiva le autorizzazioni nel feed RSS. Se attivata, gli utenti registrati saranno in grado di navigare nei feeds privati e di visualizzare gli elementi dei forum privati, in generale, potranno accedere a questa funzione se disporranno delle dovute autorizzazioni.',
+	'RSS_ALLOW_AUTH_EXPLAIN' => 'Attiva permessi nei feed RSS. Se attivati, gli utenti registrati saranno in grado di navigare nei feeds privati e di visualizzare gli elementi dei forum privati, in generale, potranno accedere a questa funzione se disporranno delle dovute autorizzazioni.',
 	'RSS_CACHE_AUTH' => 'Cache feeds privati',
 	'RSS_CACHE_AUTH_EXPLAIN' => 'Puoi disabilitare la cache per i feeds privati.<br/> La cache dei feeds privati incrementa il numero di filesin cache;  questo non è un problema, ma puoi sempre decidere di usare la cache solo per i feeds pubblici.',
 	'RSS_NEWS_UPDATE' => 'Aggiornamento news feeds',
